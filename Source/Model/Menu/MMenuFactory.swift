@@ -7,9 +7,15 @@ extension MMenu
     private class func factoryItemsList() -> [MMenuItemProtocol]
     {
         let itemHome:MMenuItemHome = MMenuItemHome()
+        let itemCreate:MMenuItemCreate = MMenuItemCreate()
+        let itemPlans:MMenuItemPlans = MMenuItemPlans()
+        let itemSettings:MMenuItemSettings = MMenuItemSettings()
         
         let map:[MMenuItemProtocol] = [
-            itemHome]
+            itemHome,
+            itemCreate,
+            itemPlans,
+            itemSettings]
         
         return map
     }
