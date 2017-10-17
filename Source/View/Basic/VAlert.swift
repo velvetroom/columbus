@@ -1,0 +1,152 @@
+import UIKit
+
+final class VAlert:UIView
+{
+    private static let kHeight:CGFloat = 80
+    private weak var layoutTop:NSLayoutConstraint!
+    private weak var timer:Timer?
+    private let kAnimationDuration:TimeInterval = 0.25
+    private let kTimeOut:TimeInterval = 3.5
+    private let kFontSize:CGFloat = 16
+    private let kLabelTop:CGFloat = 20
+    private let kLabelMargin:CGFloat = 9
+    
+    class func messageFail(message:String)
+    {
+        VAlert.message(message:message, color:UIColor.colourFail)
+    }
+    
+    class func messageSuccess(message:String)
+    {
+        VAlert.message(message:message, color:UIColor.colourSuccess)
+    }
+    
+    private class func message(message:String, color:UIColor)
+    {
+        DispatchQueue.main.async
+        {
+            let alert:VAlert = VAlert(
+                message:message,
+                color:color)
+            
+            let rootView:UIView = UIApplication.shared.keyWindow!.rootViewController!.view
+            rootView.addSubview(alert)
+            
+            alert.layoutTop = NSLayoutConstraint.topToTop(
+                view:alert,
+                toView:rootView,
+                constant:-kHeight)
+            NSLayoutConstraint.equalsHorizontal(
+                view:alert,
+                toView:rootView)
+            NSLayoutConstraint.height(
+                view:alert,
+                constant:kHeight)
+            
+            rootView.layoutIfNeeded()
+            alert.animate(open:true)
+        }
+    }
+    
+    private convenience init(message:String, color:UIColor)
+    {
+        self.init()
+        clipsToBounds = true
+        backgroundColor = color
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        let label:UILabel = UILabel()
+        label.isUserInteractionEnabled = false
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.medium(size:kFontSize)
+        label.textColor = UIColor.white
+        label.textAlignment = NSTextAlignment.center
+        label.numberOfLines = 0
+        label.backgroundColor = UIColor.clear
+        label.text = message
+        
+        let button:UIButton = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor.clear
+        button.addTarget(
+            self,
+            action:#selector(selectorActionButton(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
+        addSubview(label)
+        addSubview(button)
+        
+        NSLayoutConstraint.topToTop(
+            view:label,
+            toView:self,
+            constant:kLabelTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:label,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
+            view:label,
+            toView:self,
+            margin:kLabelMargin)
+    }
+    
+    //MARK: selectors
+    
+    @objc
+    private func selectorActionButton(sender button:UIButton)
+    {
+        button.isUserInteractionEnabled = false
+        timer?.invalidate()
+        selectorAlertTimeOut(sender:timer)
+    }
+    
+    @objc
+    private func selectorAlertTimeOut(sender timer:Timer?)
+    {
+        timer?.invalidate()
+        animate(open:false)
+    }
+    
+    //MARK: private
+    
+    private func scheduleTimer()
+    {
+        self.timer = Timer.scheduledTimer(
+            timeInterval:kTimeOut,
+            target:self,
+            selector:#selector(selectorAlertTimeOut(sender:)),
+            userInfo:nil,
+            repeats:false)
+    }
+    
+    private func animate(open:Bool)
+    {
+        if open
+        {
+            layoutTop.constant = 0
+        }
+        else
+        {
+            layoutTop.constant = -VAlert.kHeight
+        }
+        
+        UIView.animate(
+            withDuration:kAnimationDuration,
+            animations:
+        { [weak self] in
+            
+            self?.superview?.layoutIfNeeded()
+            
+        })
+        { [weak self] (done:Bool) in
+        
+            if open
+            {
+                self?.scheduleTimer()
+            }
+            else
+            {
+                self?.removeFromSuperview()
+            }
+        }
+    }
+}
