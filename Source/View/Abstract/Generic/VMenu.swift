@@ -17,7 +17,7 @@ final class VMenu:UIView
         self.controller = controller
         
         let border:VBorder = VBorder(
-            colour:UIColor.colourBackgroundDark.withAlphaComponent(0.2))
+            colour:UIColor.colourBackgroundDark.withAlphaComponent(0.4))
         
         addSubview(border)
         
