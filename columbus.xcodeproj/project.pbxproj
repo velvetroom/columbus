@@ -78,6 +78,7 @@
 		DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F01F9668E400C1EF4A /* CSettings.swift */; };
 		DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F51F96697300C1EF4A /* MCreate.swift */; };
 		DAB2F8F81F96698F00C1EF4A /* MPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F71F96698F00C1EF4A /* MPlans.swift */; };
+		DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F91F9669B800C1EF4A /* MSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,7 @@
 		DAB2F8F01F9668E400C1EF4A /* CSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAB2F8F51F96697300C1EF4A /* MCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
 		DAB2F8F71F96698F00C1EF4A /* MPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlans.swift; sourceTree = "<group>"; };
+		DAB2F8F91F9669B800C1EF4A /* MSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +460,7 @@
 		DAB2F8F21F96691D00C1EF4A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				DAB2F8F91F9669B800C1EF4A /* MSettings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */,
 				DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */,
 				DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */,
+				DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */,
 				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
 				DA65ECF31F95E68700720673 /* Model.swift in Sources */,
 				DA65ECDE1F95E68700720673 /* ExtensionNotification.swift in Sources */,
