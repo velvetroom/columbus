@@ -1,6 +1,6 @@
 struct ArchSettings:Arch
 {
-    typealias V = VHome
-    typealias M = MHome
-    typealias C = CHome
+    typealias V = VSettings
+    typealias M = MSettings
+    typealias C = CSettings
 }
