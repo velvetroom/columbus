@@ -79,6 +79,7 @@
 		DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F51F96697300C1EF4A /* MCreate.swift */; };
 		DAB2F8F81F96698F00C1EF4A /* MPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F71F96698F00C1EF4A /* MPlans.swift */; };
 		DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F91F9669B800C1EF4A /* MSettings.swift */; };
+		DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +157,7 @@
 		DAB2F8F51F96697300C1EF4A /* MCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
 		DAB2F8F71F96698F00C1EF4A /* MPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlans.swift; sourceTree = "<group>"; };
 		DAB2F8F91F9669B800C1EF4A /* MSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
+		DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,8 +371,11 @@
 			isa = PBXGroup;
 			children = (
 				DA65EC8E1F95E68700720673 /* Abstract */,
-				DA65EC9A1F95E68700720673 /* Home */,
 				DA65ECAD1F95E68700720673 /* Basic */,
+				DA65EC9A1F95E68700720673 /* Home */,
+				DAB2F8FD1F966A0400C1EF4A /* Create */,
+				DAB2F8FC1F966A0400C1EF4A /* Plans */,
+				DAB2F8FB1F966A0300C1EF4A /* Settings */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +484,28 @@
 				DAB2F8F71F96698F00C1EF4A /* MPlans.swift */,
 			);
 			path = Plans;
+			sourceTree = "<group>";
+		};
+		DAB2F8FB1F966A0300C1EF4A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DAB2F8FC1F966A0400C1EF4A /* Plans */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plans;
+			sourceTree = "<group>";
+		};
+		DAB2F8FD1F966A0400C1EF4A /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */,
+			);
+			path = Create;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,6 +639,7 @@
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
 				DA65ECDD1F95E68700720673 /* ExtensionDictionary.swift in Sources */,
 				DA65ED011F95E68700720673 /* VMenuCell.swift in Sources */,
+				DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */,
 				DA65ECF41F95E68700720673 /* MHome.swift in Sources */,
 				DA65ECE81F95E68700720673 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA65ECF81F95E68700720673 /* MMenuOrder.swift in Sources */,
