@@ -82,6 +82,7 @@
 		DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */; };
 		DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9001F966A3A00C1EF4A /* VPlans.swift */; };
 		DAB2F9031F966A5600C1EF4A /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9021F966A5600C1EF4A /* VSettings.swift */; };
+		DADA41F61F96707000DD1FC4 /* MMenuItemCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +163,7 @@
 		DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 		DAB2F9001F966A3A00C1EF4A /* VPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlans.swift; sourceTree = "<group>"; };
 		DAB2F9021F966A5600C1EF4A /* VSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
+		DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemCreate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +369,7 @@
 				DA65EC8B1F95E68700720673 /* MMenuOrder.swift */,
 				DA65EC8C1F95E68700720673 /* MMenuItemProtocol.swift */,
 				DA65EC881F95E68700720673 /* MMenuItemHome.swift */,
+				DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */,
 				DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */,
 				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
+				DADA41F61F96707000DD1FC4 /* MMenuItemCreate.swift in Sources */,
 				DA65ECF31F95E68700720673 /* Model.swift in Sources */,
 				DA65ECDE1F95E68700720673 /* ExtensionNotification.swift in Sources */,
 				DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */,
