@@ -1,6 +1,6 @@
 struct ArchCreate:Arch
 {
-    typealias V = VHome
-    typealias M = MHome
-    typealias C = CHome
+    typealias V = VCreate
+    typealias M = MCreate
+    typealias C = CCreate
 }
