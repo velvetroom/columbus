@@ -88,6 +88,7 @@
 		DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */; };
 		DADA41FE1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */; };
 		DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */; };
+		DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADA42011F967CAB00DD1FC4 /* generic.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusProtocol.swift; sourceTree = "<group>"; };
 		DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusNeedsPermission.swift; sourceTree = "<group>"; };
 		DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusNeedsPermission.swift; sourceTree = "<group>"; };
+		DADA42011F967CAB00DD1FC4 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				DA65EC561F95E68600720673 /* spinner.xcassets */,
 				DA65ED3B1F95F74500720673 /* brand.xcassets */,
 				DA4F09C51F965B8B00AAE279 /* menu.xcassets */,
+				DADA42011F967CAB00DD1FC4 /* generic.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */,
 				DA65ED361F95E68700720673 /* LICENSE in Resources */,
 				DA65ED3A1F95EFF000720673 /* Design in Resources */,
+				DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */,
 				DA65ECD71F95E68700720673 /* LocalizableModel.strings in Resources */,
 				DA65ECD81F95E68700720673 /* infoPlist.strings in Resources */,
 			);
