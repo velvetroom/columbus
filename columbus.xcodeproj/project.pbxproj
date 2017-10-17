@@ -85,6 +85,7 @@
 		DADA41F61F96707000DD1FC4 /* MMenuItemCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */; };
 		DADA41F81F96709700DD1FC4 /* MMenuItemPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F71F96709700DD1FC4 /* MMenuItemPlans.swift */; };
 		DADA41FA1F9670C200DD1FC4 /* MMenuItemSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F91F9670C200DD1FC4 /* MMenuItemSettings.swift */; };
+		DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +169,7 @@
 		DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemCreate.swift; sourceTree = "<group>"; };
 		DADA41F71F96709700DD1FC4 /* MMenuItemPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemPlans.swift; sourceTree = "<group>"; };
 		DADA41F91F9670C200DD1FC4 /* MMenuItemSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemSettings.swift; sourceTree = "<group>"; };
+		DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,6 +489,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB2F8F51F96697300C1EF4A /* MCreate.swift */,
+				DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				DA65ED001F95E68700720673 /* VMenuCollection.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
 				DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */,
+				DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */,
 				DA65ED161F95E68700720673 /* VSpinner.swift in Sources */,
 				DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */,
 				DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */,
