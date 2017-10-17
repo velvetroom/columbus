@@ -72,6 +72,7 @@
 		DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED3B1F95F74500720673 /* brand.xcassets */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
+		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 		DA65ED3B1F95F74500720673 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
+		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 				DA65EC811F95E68600720673 /* ArchHome.swift */,
 				DA9E96061F9667DE00538374 /* ArchCreate.swift */,
 				DA9E96081F9667FF00538374 /* ArchPlans.swift */,
+				DA9E960A1F96681B00538374 /* ArchSettings.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				DA65ECE81F95E68700720673 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA65ECF81F95E68700720673 /* MMenuOrder.swift in Sources */,
 				DA65ECFD1F95E68700720673 /* ViewParentGesture.swift in Sources */,
+				DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */,
 				DA65ECEB1F95E68700720673 /* AppDelegate.swift in Sources */,
 				DA65ECEA1F95E68700720673 /* Controller.swift in Sources */,
 			);
