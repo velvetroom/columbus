@@ -67,6 +67,7 @@
 		DA65ED1E1F95E68700720673 /* VCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB81F95E68700720673 /* VCollection.swift */; };
 		DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB91F95E68700720673 /* VAlert.swift */; };
 		DA65ED361F95E68700720673 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DA65ECD31F95E68700720673 /* LICENSE */; };
+		DA65ED3A1F95EFF000720673 /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED391F95EFEF00720673 /* Design */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		DA65ECB91F95E68700720673 /* VAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAlert.swift; sourceTree = "<group>"; };
 		DA65ECD21F95E68700720673 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA65ECD31F95E68700720673 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DA65ED391F95EFEF00720673 /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +154,8 @@
 				DA65EC531F95E68600720673 /* README.md */,
 				DA65EC601F95E68600720673 /* Source */,
 				DA65EC541F95E68600720673 /* Assets */,
-				DA65EC521F95E68600720673 /* Design */,
 				DA65EC571F95E68600720673 /* Resources */,
+				DA65ED391F95EFEF00720673 /* Design */,
 				DA65EC3E1F95DFD700720673 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,13 +166,6 @@
 				DA65EC3D1F95DFD700720673 /* columbus.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		DA65EC521F95E68600720673 /* Design */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Design;
 			sourceTree = "<group>";
 		};
 		DA65EC541F95E68600720673 /* Assets */ = {
@@ -469,6 +464,7 @@
 				DA65ECD91F95E68700720673 /* LocalizableView.strings in Resources */,
 				DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */,
 				DA65ED361F95E68700720673 /* LICENSE in Resources */,
+				DA65ED3A1F95EFF000720673 /* Design in Resources */,
 				DA65ECD71F95E68700720673 /* LocalizableModel.strings in Resources */,
 				DA65ECD81F95E68700720673 /* infoPlist.strings in Resources */,
 			);
