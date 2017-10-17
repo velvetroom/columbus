@@ -70,6 +70,7 @@
 		DA65ED361F95E68700720673 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DA65ECD31F95E68700720673 /* LICENSE */; };
 		DA65ED3A1F95EFF000720673 /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED391F95EFEF00720673 /* Design */; };
 		DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED3B1F95F74500720673 /* brand.xcassets */; };
+		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		DA65ECD31F95E68700720673 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DA65ED391F95EFEF00720673 /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design; sourceTree = "<group>"; };
 		DA65ED3B1F95F74500720673 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
+		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,12 +199,12 @@
 		DA65EC601F95E68600720673 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DA65EC611F95E68600720673 /* CoreData */,
-				DA65EC671F95E68600720673 /* GenericExtensions */,
-				DA65EC751F95E68600720673 /* Controller */,
 				DA65EC7F1F95E68600720673 /* Architecture */,
+				DA65EC751F95E68600720673 /* Controller */,
 				DA65EC821F95E68600720673 /* Model */,
 				DA65EC8D1F95E68700720673 /* View */,
+				DA65EC611F95E68600720673 /* CoreData */,
+				DA65EC671F95E68600720673 /* GenericExtensions */,
 				DA65ECD21F95E68700720673 /* Info.plist */,
 			);
 			path = Source;
@@ -296,6 +298,7 @@
 			children = (
 				DA65EC801F95E68600720673 /* Arch.swift */,
 				DA65EC811F95E68600720673 /* ArchHome.swift */,
+				DA9E96061F9667DE00538374 /* ArchCreate.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				DA65ECE31F95E68700720673 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA65ECE11F95E68700720673 /* ExtensionFileManager.swift in Sources */,
 				DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */,
+				DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */,
 				DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */,
 				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
 				DA65ECF31F95E68700720673 /* Model.swift in Sources */,
