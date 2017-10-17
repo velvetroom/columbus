@@ -1,7 +1,7 @@
-extension MMenu
+enum MMenuOrder:Int
 {
-    enum Order:Int
-    {
-        case home
-    }
+    case settings
+    case home
+    case create
+    case plans
 }
