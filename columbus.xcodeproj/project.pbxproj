@@ -84,6 +84,7 @@
 		DAB2F9031F966A5600C1EF4A /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9021F966A5600C1EF4A /* VSettings.swift */; };
 		DADA41F61F96707000DD1FC4 /* MMenuItemCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */; };
 		DADA41F81F96709700DD1FC4 /* MMenuItemPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F71F96709700DD1FC4 /* MMenuItemPlans.swift */; };
+		DADA41FA1F9670C200DD1FC4 /* MMenuItemSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F91F9670C200DD1FC4 /* MMenuItemSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		DAB2F9021F966A5600C1EF4A /* VSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
 		DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemCreate.swift; sourceTree = "<group>"; };
 		DADA41F71F96709700DD1FC4 /* MMenuItemPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemPlans.swift; sourceTree = "<group>"; };
+		DADA41F91F9670C200DD1FC4 /* MMenuItemSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +375,7 @@
 				DA65EC881F95E68700720673 /* MMenuItemHome.swift */,
 				DADA41F51F96707000DD1FC4 /* MMenuItemCreate.swift */,
 				DADA41F71F96709700DD1FC4 /* MMenuItemPlans.swift */,
+				DADA41F91F9670C200DD1FC4 /* MMenuItemSettings.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				DA65ED031F95E68700720673 /* VHome.swift in Sources */,
 				DA65ED1C1F95E68700720673 /* VCollectionFlow.swift in Sources */,
 				DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */,
+				DADA41FA1F9670C200DD1FC4 /* MMenuItemSettings.swift in Sources */,
 				DA65ECF71F95E68700720673 /* MMenu.swift in Sources */,
 				DA65ECE51F95E68700720673 /* ExtensionData.swift in Sources */,
 				DA65ECF61F95E68700720673 /* MMenuFactory.swift in Sources */,
