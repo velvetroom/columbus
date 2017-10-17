@@ -11,5 +11,7 @@ final class MCreate:Model<ArchCreate>
     {
         let status:MCreateStatusProtocol = statusType.init()
         self.status = status
+        
+        view?.updateStatus()
     }
 }
