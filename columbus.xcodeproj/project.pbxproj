@@ -87,6 +87,7 @@
 		DADA41FA1F9670C200DD1FC4 /* MMenuItemSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41F91F9670C200DD1FC4 /* MMenuItemSettings.swift */; };
 		DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */; };
 		DADA41FE1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */; };
+		DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +173,7 @@
 		DADA41F91F9670C200DD1FC4 /* MMenuItemSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMenuItemSettings.swift; sourceTree = "<group>"; };
 		DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusProtocol.swift; sourceTree = "<group>"; };
 		DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusNeedsPermission.swift; sourceTree = "<group>"; };
+		DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusNeedsPermission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +527,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */,
+				DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				DA65ED1D1F95E68700720673 /* VPushBackground.swift in Sources */,
 				DA65ECE61F95E68700720673 /* ExtensionNSManagedObject.swift in Sources */,
 				DA65ECE41F95E68700720673 /* ExtensionUIFont.swift in Sources */,
+				DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */,
 				DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */,
 				DA65ED1B1F95E68700720673 /* VBlur.swift in Sources */,
 				DA65ED181F95E68700720673 /* VSliderBar.swift in Sources */,
