@@ -1,13 +1,14 @@
 import UIKit
 
-final class VCreateStatusNeedsPermission:View<ArchCreate>
+final class VCreateStatusNeedsPermission:
+    View<ArchCreate>
 {
     private let kImageTop:CGFloat = 200
     private let kImageHeight:CGFloat = 50
     private let kLabelTop:CGFloat = 5
     private let kLabelHeight:CGFloat = 90
-    private let kButtonTop:CGFloat = 40
-    private let kButtonHeight:CGFloat = 80
+    private let kButtonTop:CGFloat = 30
+    private let kButtonHeight:CGFloat = 64
     private let kFontSize:CGFloat = 18
     
     required init(controller:CCreate)

@@ -90,6 +90,7 @@
 		DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */; };
 		DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADA42011F967CAB00DD1FC4 /* generic.xcassets */; };
 		DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */; };
+		DADA42061F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +179,7 @@
 		DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusNeedsPermission.swift; sourceTree = "<group>"; };
 		DADA42011F967CAB00DD1FC4 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 		DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocation.swift; sourceTree = "<group>"; };
+		DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusNeedsPermissionContinue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,6 +536,7 @@
 			children = (
 				DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */,
 				DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */,
+				DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADA42061F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift in Sources */,
 				DA65ECFA1F95E68700720673 /* View.swift in Sources */,
 				DA65ED021F95E68700720673 /* VMenu.swift in Sources */,
 				DA65ED001F95E68700720673 /* VMenuCollection.swift in Sources */,
