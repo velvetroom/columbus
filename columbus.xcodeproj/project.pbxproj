@@ -362,11 +362,11 @@
 		DA65EC871F95E68700720673 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				DA65EC881F95E68700720673 /* MMenuItemHome.swift */,
 				DA65EC891F95E68700720673 /* MMenuFactory.swift */,
 				DA65EC8A1F95E68700720673 /* MMenu.swift */,
 				DA65EC8B1F95E68700720673 /* MMenuOrder.swift */,
 				DA65EC8C1F95E68700720673 /* MMenuItemProtocol.swift */,
+				DA65EC881F95E68700720673 /* MMenuItemHome.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";

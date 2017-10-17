@@ -2,9 +2,9 @@ import Foundation
 
 final class MMenu
 {
-    var selected:MMenu.Order
+    var selected:MMenuOrder
     let items:[MMenuItemProtocol]
-    private let kInitialSelected:MMenu.Order = MMenu.Order.home
+    private let kInitialSelected:MMenuOrder = MMenuOrder.home
     
     init()
     {

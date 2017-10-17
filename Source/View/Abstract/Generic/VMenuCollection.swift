@@ -126,7 +126,7 @@ extension VMenu:
         shouldSelectItemAt indexPath:IndexPath) -> Bool
     {
         let item:MMenuItemProtocol = modelAtIndex(index:indexPath)
-        let order:MMenu.Order = item.order
+        let order:MMenuOrder = item.order
         
         if order == controller.menu.selected
         {
