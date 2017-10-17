@@ -77,6 +77,7 @@
 		DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */; };
 		DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F01F9668E400C1EF4A /* CSettings.swift */; };
 		DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F51F96697300C1EF4A /* MCreate.swift */; };
+		DAB2F8F81F96698F00C1EF4A /* MPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F71F96698F00C1EF4A /* MPlans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +153,7 @@
 		DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPlans.swift; sourceTree = "<group>"; };
 		DAB2F8F01F9668E400C1EF4A /* CSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 		DAB2F8F51F96697300C1EF4A /* MCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
+		DAB2F8F71F96698F00C1EF4A /* MPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +473,7 @@
 		DAB2F8F41F96691D00C1EF4A /* Plans */ = {
 			isa = PBXGroup;
 			children = (
+				DAB2F8F71F96698F00C1EF4A /* MPlans.swift */,
 			);
 			path = Plans;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				DA65ECF41F95E68700720673 /* MHome.swift in Sources */,
 				DA65ECE81F95E68700720673 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA65ECF81F95E68700720673 /* MMenuOrder.swift in Sources */,
+				DAB2F8F81F96698F00C1EF4A /* MPlans.swift in Sources */,
 				DA65ECFD1F95E68700720673 /* ViewParentGesture.swift in Sources */,
 				DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */,
 				DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */,
