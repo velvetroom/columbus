@@ -73,6 +73,7 @@
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
+		DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
+		DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,9 @@
 			children = (
 				DA65EC761F95E68600720673 /* Abstract */,
 				DA65EC7D1F95E68600720673 /* Home */,
+				DAB2F8EA1F96687C00C1EF4A /* Create */,
+				DAB2F8E91F96687C00C1EF4A /* Plans */,
+				DAB2F8EB1F96687C00C1EF4A /* Settings */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -415,6 +420,28 @@
 			path = Basic;
 			sourceTree = "<group>";
 		};
+		DAB2F8E91F96687C00C1EF4A /* Plans */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plans;
+			sourceTree = "<group>";
+		};
+		DAB2F8EA1F96687C00C1EF4A /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		DAB2F8EB1F96687C00C1EF4A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,6 +536,7 @@
 				DA65ECE31F95E68700720673 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA65ECE11F95E68700720673 /* ExtensionFileManager.swift in Sources */,
 				DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */,
+				DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */,
 				DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */,
 				DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */,
 				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
