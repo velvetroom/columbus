@@ -68,6 +68,7 @@
 		DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB91F95E68700720673 /* VAlert.swift */; };
 		DA65ED361F95E68700720673 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DA65ECD31F95E68700720673 /* LICENSE */; };
 		DA65ED3A1F95EFF000720673 /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED391F95EFEF00720673 /* Design */; };
+		DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED3B1F95F74500720673 /* brand.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,7 @@
 		DA65ECD21F95E68700720673 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA65ECD31F95E68700720673 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DA65ED391F95EFEF00720673 /* Design */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design; sourceTree = "<group>"; };
+		DA65ED3B1F95F74500720673 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				DA65EC551F95E68600720673 /* LaunchScreen.storyboard */,
 				DA65EC561F95E68600720673 /* spinner.xcassets */,
+				DA65ED3B1F95F74500720673 /* brand.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA65ECD41F95E68700720673 /* README.md in Resources */,
+				DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */,
 				DA65ECD61F95E68700720673 /* spinner.xcassets in Resources */,
 				DA65ECDA1F95E68700720673 /* LocalizableController.strings in Resources */,
 				DA65ECD91F95E68700720673 /* LocalizableView.strings in Resources */,
@@ -684,6 +688,7 @@
 		DA65EC501F95DFD700720673 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
@@ -698,6 +703,7 @@
 		DA65EC511F95DFD700720673 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
