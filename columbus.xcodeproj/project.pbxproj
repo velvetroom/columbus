@@ -75,6 +75,7 @@
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
 		DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */; };
 		DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */; };
+		DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F01F9668E400C1EF4A /* CSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +149,7 @@
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
 		DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPlans.swift; sourceTree = "<group>"; };
+		DAB2F8F01F9668E400C1EF4A /* CSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +443,7 @@
 		DAB2F8EB1F96687C00C1EF4A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				DAB2F8F01F9668E400C1EF4A /* CSettings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				DA65ECE51F95E68700720673 /* ExtensionData.swift in Sources */,
 				DA65ECF61F95E68700720673 /* MMenuFactory.swift in Sources */,
 				DA65ECE21F95E68700720673 /* ExtensionURLResponse.swift in Sources */,
+				DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */,
 				DA65ED1D1F95E68700720673 /* VPushBackground.swift in Sources */,
 				DA65ECE61F95E68700720673 /* ExtensionNSManagedObject.swift in Sources */,
 				DA65ECE41F95E68700720673 /* ExtensionUIFont.swift in Sources */,
