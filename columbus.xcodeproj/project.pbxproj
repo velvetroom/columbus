@@ -81,6 +81,7 @@
 		DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F91F9669B800C1EF4A /* MSettings.swift */; };
 		DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */; };
 		DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9001F966A3A00C1EF4A /* VPlans.swift */; };
+		DAB2F9031F966A5600C1EF4A /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9021F966A5600C1EF4A /* VSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +161,7 @@
 		DAB2F8F91F9669B800C1EF4A /* MSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 		DAB2F9001F966A3A00C1EF4A /* VPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlans.swift; sourceTree = "<group>"; };
+		DAB2F9021F966A5600C1EF4A /* VSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,6 +493,7 @@
 		DAB2F8FB1F966A0300C1EF4A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				DAB2F9021F966A5600C1EF4A /* VSettings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				DA65ECE11F95E68700720673 /* ExtensionFileManager.swift in Sources */,
 				DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */,
 				DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */,
+				DAB2F9031F966A5600C1EF4A /* VSettings.swift in Sources */,
 				DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */,
 				DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */,
 				DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */,
