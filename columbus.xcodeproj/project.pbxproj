@@ -80,6 +80,7 @@
 		DAB2F8F81F96698F00C1EF4A /* MPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F71F96698F00C1EF4A /* MPlans.swift */; };
 		DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F91F9669B800C1EF4A /* MSettings.swift */; };
 		DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */; };
+		DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9001F966A3A00C1EF4A /* VPlans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +159,7 @@
 		DAB2F8F71F96698F00C1EF4A /* MPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlans.swift; sourceTree = "<group>"; };
 		DAB2F8F91F9669B800C1EF4A /* MSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettings.swift; sourceTree = "<group>"; };
 		DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
+		DAB2F9001F966A3A00C1EF4A /* VPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,6 +498,7 @@
 		DAB2F8FC1F966A0400C1EF4A /* Plans */ = {
 			isa = PBXGroup;
 			children = (
+				DAB2F9001F966A3A00C1EF4A /* VPlans.swift */,
 			);
 			path = Plans;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
 				DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */,
 				DA65ED161F95E68700720673 /* VSpinner.swift in Sources */,
+				DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */,
 				DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */,
 				DA65ECFF1F95E68700720673 /* ViewParentTransitions.swift in Sources */,
 				DA65ECF11F95E68700720673 /* Arch.swift in Sources */,
