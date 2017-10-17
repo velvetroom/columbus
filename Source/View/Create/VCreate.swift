@@ -38,7 +38,7 @@ final class VCreate:ViewMain
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.updateStatus()
+            self?.asyncUpdateStatus()
         }
     }
 }

@@ -89,6 +89,7 @@
 		DADA41FE1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */; };
 		DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */; };
 		DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADA42011F967CAB00DD1FC4 /* generic.xcassets */; };
+		DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -176,6 +177,7 @@
 		DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusNeedsPermission.swift; sourceTree = "<group>"; };
 		DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusNeedsPermission.swift; sourceTree = "<group>"; };
 		DADA42011F967CAB00DD1FC4 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
+		DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -498,6 +500,7 @@
 				DAB2F8F51F96697300C1EF4A /* MCreate.swift */,
 				DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */,
 				DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */,
+				DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				DA65ECF91F95E68700720673 /* MMenuItemProtocol.swift in Sources */,
 				DA65ECFB1F95E68700720673 /* ViewParent.swift in Sources */,
 				DA65ED151F95E68700720673 /* VBorder.swift in Sources */,
+				DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */,
 				DA65ECE01F95E68700720673 /* ExtensionCGImage.swift in Sources */,
 				DA65ED1E1F95E68700720673 /* VCollection.swift in Sources */,
 				DA65ED171F95E68700720673 /* VGradient.swift in Sources */,
