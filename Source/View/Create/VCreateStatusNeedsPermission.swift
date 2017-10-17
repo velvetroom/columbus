@@ -3,11 +3,10 @@ import UIKit
 final class VCreateStatusNeedsPermission:
     View<ArchCreate>
 {
-    private let kImageTop:CGFloat = 200
+    private let kImageTop:CGFloat = 210
     private let kImageHeight:CGFloat = 50
-    private let kLabelTop:CGFloat = 5
-    private let kLabelHeight:CGFloat = 90
-    private let kButtonTop:CGFloat = 30
+    private let kLabelHeight:CGFloat = 80
+    private let kButtonBottom:CGFloat = -90
     private let kButtonHeight:CGFloat = 64
     private let kFontSize:CGFloat = 18
     
@@ -45,8 +44,12 @@ final class VCreateStatusNeedsPermission:
         label.text = String.localizedView(
             key:"VCreateStatusNeedsPermission_label")
         
+        let button:VCreateStatusNeedsPermissionContinue = VCreateStatusNeedsPermissionContinue(
+            controller:controller)
+        
         addSubview(imageView)
         addSubview(label)
+        addSubview(button)
         
         NSLayoutConstraint.topToTop(
             view:imageView,
@@ -61,13 +64,23 @@ final class VCreateStatusNeedsPermission:
         
         NSLayoutConstraint.topToBottom(
             view:label,
-            toView:imageView,
-            constant:kLabelTop)
+            toView:imageView)
         NSLayoutConstraint.height(
             view:label,
             constant:kLabelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:button,
+            toView:self,
+            constant:kButtonBottom)
+        NSLayoutConstraint.height(
+            view:button,
+            constant:kButtonHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:button,
             toView:self)
     }
 }
