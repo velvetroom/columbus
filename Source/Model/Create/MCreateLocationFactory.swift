@@ -11,9 +11,9 @@ extension MCreate
         let map:[CLAuthorizationStatus:
             MCreateLocationStrategyProtocol.Type] = [
                 CLAuthorizationStatus.authorizedAlways:
-                    MCreateLocationStrategyGranted.self,
+                    MCreateLocationStrategyReady.self,
                 CLAuthorizationStatus.authorizedWhenInUse:
-                    MCreateLocationStrategyGranted.self,
+                    MCreateLocationStrategyReady.self,
                 CLAuthorizationStatus.notDetermined:
                     MCreateLocationStrategyUnknown.self,
                 CLAuthorizationStatus.restricted:
