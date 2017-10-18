@@ -12,6 +12,7 @@
 		DA0447FF1F97484500BA2D45 /* MCreateStatusDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0447FE1F97484500BA2D45 /* MCreateStatusDenied.swift */; };
 		DA0448011F97553100BA2D45 /* MCreateLocationStrategyReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448001F97553100BA2D45 /* MCreateLocationStrategyReady.swift */; };
 		DA0448031F97557600BA2D45 /* MCreateStatusReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448021F97557600BA2D45 /* MCreateStatusReady.swift */; };
+		DA0448051F97559A00BA2D45 /* VCreateStatusReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */; };
 		DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4F09C51F965B8B00AAE279 /* menu.xcassets */; };
 		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
@@ -108,6 +109,7 @@
 		DA0447FE1F97484500BA2D45 /* MCreateStatusDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusDenied.swift; sourceTree = "<group>"; };
 		DA0448001F97553100BA2D45 /* MCreateLocationStrategyReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyReady.swift; sourceTree = "<group>"; };
 		DA0448021F97557600BA2D45 /* MCreateStatusReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusReady.swift; sourceTree = "<group>"; };
+		DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReady.swift; sourceTree = "<group>"; };
 		DA4F09C51F965B8B00AAE279 /* menu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = menu.xcassets; sourceTree = "<group>"; };
 		DA65EC3D1F95DFD700720673 /* columbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = columbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65EC531F95E68600720673 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 				DADA41FF1F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift */,
 				DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */,
 				DA0447FC1F9747B800BA2D45 /* VCreateStatusDenied.swift */,
+				DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				DA65ED1E1F95E68700720673 /* VCollection.swift in Sources */,
 				DA65ED171F95E68700720673 /* VGradient.swift in Sources */,
 				DA65ECFC1F95E68700720673 /* ViewProtocol.swift in Sources */,
+				DA0448051F97559A00BA2D45 /* VCreateStatusReady.swift in Sources */,
 				DA65ECDF1F95E68700720673 /* ExtensionUIColor.swift in Sources */,
 				DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */,
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
