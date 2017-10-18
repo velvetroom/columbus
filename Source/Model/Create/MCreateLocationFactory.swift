@@ -45,13 +45,12 @@ extension MCreate
     
     //MARK: internal
     
-    class func factoryLocationStrategy(
-        status:CLAuthorizationStatus) -> MCreateLocationStrategyProtocol
+    class func factoryLocationStrategy() -> MCreateLocationStrategyProtocol.Type
     {
+        let status:CLAuthorizationStatus = CLLocationManager.authorizationStatus()
         let strategyType:MCreateLocationStrategyProtocol.Type = locationStrategyType(
             status:status)
-        let strategy:MCreateLocationStrategyProtocol = strategyType.init()
         
-        return strategy
+        return strategyType
     }
 }

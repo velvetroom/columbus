@@ -3,6 +3,7 @@ import Foundation
 final class MCreate:Model<ArchCreate>
 {
     private(set) var status:MCreateStatusProtocol?
+    private(set) var locationStrategy:MCreateLocationStrategyProtocol?
     
     //MARK: internal
     
@@ -13,5 +14,14 @@ final class MCreate:Model<ArchCreate>
         self.status = status
         
         view?.updateStatus()
+    }
+    
+    func changeLocationStrategy(
+        locationStrategyType:MCreateLocationStrategyProtocol.Type)
+    {
+        let locationStrategy:MCreateLocationStrategyProtocol = locationStrategyType.init()
+        self.locationStrategy = locationStrategy
+        
+        locationStrategy.nextStep(model:self)
     }
 }

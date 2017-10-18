@@ -7,6 +7,8 @@ extension MCreate
     
     func startLocation()
     {
-        let status:CLAuthorizationStatus = CLLocationManager.authorizationStatus()
+        let locationStrategyType:MCreateLocationStrategyProtocol.Type = MCreate.factoryLocationStrategy()
+        changeLocationStrategy(
+            locationStrategyType:locationStrategyType)
     }
 }
