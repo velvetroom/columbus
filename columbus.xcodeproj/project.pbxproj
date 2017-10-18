@@ -103,6 +103,7 @@
 		DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DADA42011F967CAB00DD1FC4 /* generic.xcassets */; };
 		DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */; };
 		DADA42061F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */; };
+		DAEF388D1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +205,7 @@
 		DADA42011F967CAB00DD1FC4 /* generic.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = generic.xcassets; sourceTree = "<group>"; };
 		DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocation.swift; sourceTree = "<group>"; };
 		DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusNeedsPermissionContinue.swift; sourceTree = "<group>"; };
+		DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -571,6 +573,7 @@
 				DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */,
 				DA0447FC1F9747B800BA2D45 /* VCreateStatusDenied.swift */,
 				DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */,
+				DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */,
 				DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */,
 				DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */,
 			);
@@ -717,6 +720,7 @@
 				DA65ECFB1F95E68700720673 /* ViewParent.swift in Sources */,
 				DA65ED151F95E68700720673 /* VBorder.swift in Sources */,
 				DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */,
+				DAEF388D1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift in Sources */,
 				DA65ECE01F95E68700720673 /* ExtensionCGImage.swift in Sources */,
 				DA65ED1E1F95E68700720673 /* VCollection.swift in Sources */,
 				DA65ED171F95E68700720673 /* VGradient.swift in Sources */,
