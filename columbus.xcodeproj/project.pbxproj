@@ -15,6 +15,7 @@
 		DA0448051F97559A00BA2D45 /* VCreateStatusReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */; };
 		DA0448071F9756CF00BA2D45 /* VCreateStatusReadyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */; };
 		DA0448091F9756D700BA2D45 /* VCreateStatusReadyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */; };
+		DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */; };
 		DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4F09C51F965B8B00AAE279 /* menu.xcassets */; };
 		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
@@ -117,6 +118,7 @@
 		DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReady.swift; sourceTree = "<group>"; };
 		DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMap.swift; sourceTree = "<group>"; };
 		DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBar.swift; sourceTree = "<group>"; };
+		DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = map.xcassets; sourceTree = "<group>"; };
 		DA4F09C51F965B8B00AAE279 /* menu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = menu.xcassets; sourceTree = "<group>"; };
 		DA65EC3D1F95DFD700720673 /* columbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = columbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65EC531F95E68600720673 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				DA65ED3B1F95F74500720673 /* brand.xcassets */,
 				DA4F09C51F965B8B00AAE279 /* menu.xcassets */,
 				DADA42011F967CAB00DD1FC4 /* generic.xcassets */,
+				DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */,
+				DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */,
 				DA0447FB1F973D3D00BA2D45 /* InfoPlist.strings in Resources */,
 				DA65ECD41F95E68700720673 /* README.md in Resources */,
 				DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */,
