@@ -5,17 +5,17 @@ extension VCreateStatusReadyBar
     //MARK: private
     
     private func animate(
-        height:CGFloat,
+        top:CGFloat,
         completion:(() -> ())?)
     {
-        layoutHeight.constant = height
+        layoutTop.constant = top
         
         UIView.animate(
             withDuration:kAnimationDuration,
             animations:
             { [weak self] in
                 
-                self?.layoutIfNeeded()
+                self?.superview?.layoutIfNeeded()
             })
         { (done:Bool) in
             
@@ -27,7 +27,7 @@ extension VCreateStatusReadyBar
     
     func animateStart()
     {
-        animate(height:kMaxHeight)
+        animate(top:0)
         { [weak self] in
             
             self?.controller.lightStatusBar()
@@ -36,11 +36,11 @@ extension VCreateStatusReadyBar
     
     func animateFullMap()
     {
-        animate(height:kMinHeight, completion:nil)
+        animate(top:kMinTop, completion:nil)
     }
     
     func animateSmallMap()
     {
-        animate(height:kMaxHeight, completion:nil)
+        animate(top:0, completion:nil)
     }
 }

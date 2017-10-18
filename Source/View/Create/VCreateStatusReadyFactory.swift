@@ -6,7 +6,9 @@ extension VCreateStatusReady
     
     private func animateStart()
     {
-        DispatchQueue.main.async
+        DispatchQueue.main.asyncAfter(
+            deadline:
+            DispatchTime.now() + kWaitForAnimation)
         { [weak self] in
             
             self?.viewBar.animateStart()
@@ -27,11 +29,13 @@ extension VCreateStatusReady
         addSubview(viewMap)
         addSubview(viewBar)
         
-        NSLayoutConstraint.topToTop(
+        viewBar.layoutTop = NSLayoutConstraint.topToTop(
             view:viewBar,
-            toView:self)
-        viewBar.layoutHeight = NSLayoutConstraint.height(
-            view:viewBar)
+            toView:self,
+            constant:-viewBar.kHeight)
+        NSLayoutConstraint.height(
+            view:viewBar,
+            constant:viewBar.kHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)
