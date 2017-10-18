@@ -75,6 +75,7 @@
 		DA78BB341F971A3000A7C280 /* MCreateLocationStrategyGranted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */; };
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
 		DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */; };
+		DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -169,6 +170,7 @@
 		DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyGranted.swift; sourceTree = "<group>"; };
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
 		DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationFactory.swift; sourceTree = "<group>"; };
+		DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationDelegate.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 				DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */,
 				DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */,
 				DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */,
+				DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */,
 				DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */,
 				DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */,
 				DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */,
@@ -639,6 +642,7 @@
 				DADA42061F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift in Sources */,
 				DA65ECFA1F95E68700720673 /* View.swift in Sources */,
 				DA65ED021F95E68700720673 /* VMenu.swift in Sources */,
+				DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */,
 				DA65ED001F95E68700720673 /* VMenuCollection.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
 				DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */,
