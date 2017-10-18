@@ -1,2 +1,4 @@
 "VCreateStatusNeedsPermission_label"="Need your location\nto start navigating";
 "VCreateStatusNeedsPermissionContinue_button"="Continue";
+"VCreateStatusDenied_title"="Location access denied";
+"VCreateStatusDenied_descr"="\nEnable access to your location\non your device's settings\nin the Columbus section";
