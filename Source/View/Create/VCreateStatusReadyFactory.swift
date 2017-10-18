@@ -2,6 +2,17 @@ import UIKit
 
 extension VCreateStatusReady
 {
+    //MARK: private
+    
+    private func animateStart()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.viewBar.animateStart()
+        }
+    }
+    
     //MARK: internal
     
     func factoryViews()
@@ -20,8 +31,7 @@ extension VCreateStatusReady
             view:viewBar,
             toView:self)
         viewBar.layoutHeight = NSLayoutConstraint.height(
-            view:viewBar,
-            constant:viewBar.kMaxHeight)
+            view:viewBar)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)
@@ -36,5 +46,7 @@ extension VCreateStatusReady
         NSLayoutConstraint.equalsHorizontal(
             view:viewMap,
             toView:self)
+        
+        animateStart()
     }
 }

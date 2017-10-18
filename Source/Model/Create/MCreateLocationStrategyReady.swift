@@ -6,16 +6,5 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     {
         model.changeStatus(
             statusType:MCreateStatusReady.self)
-        
-        guard
-        
-            let controller:CCreate = model.view?.controller as? CCreate
-        
-        else
-        {
-            return
-        }
-        
-        controller.lightStatusBar()
     }
 }
