@@ -41,6 +41,22 @@ class Controller<A>:UIViewController where A.M:Model<A>
         }
     }
     
+    override var preferredStatusBarStyle:UIStatusBarStyle
+    {
+        get
+        {
+            return UIStatusBarStyle.default
+        }
+    }
+    
+    override var prefersStatusBarHidden:Bool
+    {
+        get
+        {
+            return false
+        }
+    }
+    
     override func loadView()
     {
         let view:A.V = A.V(controller:self)
@@ -69,15 +85,5 @@ class Controller<A>:UIViewController where A.M:Model<A>
         {
             automaticallyAdjustsScrollViewInsets = false
         }
-    }
-    
-    override var preferredStatusBarStyle:UIStatusBarStyle
-    {
-        return UIStatusBarStyle.default
-    }
-    
-    override var prefersStatusBarHidden:Bool
-    {
-        return false
     }
 }

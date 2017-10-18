@@ -3,8 +3,8 @@ import UIKit
 final class VCreateStatusReady:View<ArchCreate>
 {
     weak var viewMap:VCreateStatusReadyMap!
+    weak var viewBar:VCreateStatusReadyBar!
     let kBottom:CGFloat = -50
-    let kRoutePreviewWidth:CGFloat = 80
     
     required init(controller:CCreate)
     {
