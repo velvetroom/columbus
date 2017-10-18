@@ -74,6 +74,7 @@
 		DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */; };
 		DA78BB341F971A3000A7C280 /* MCreateLocationStrategyGranted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */; };
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
+		DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -167,6 +168,7 @@
 		DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
 		DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyGranted.swift; sourceTree = "<group>"; };
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
+		DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationFactory.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */,
 				DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */,
 				DADA42031F9680AE00DD1FC4 /* MCreateLocation.swift */,
+				DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */,
 				DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */,
 				DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */,
 				DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */,
@@ -696,6 +699,7 @@
 				DA65ECDF1F95E68700720673 /* ExtensionUIColor.swift in Sources */,
 				DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */,
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
+				DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */,
 				DA65ECDD1F95E68700720673 /* ExtensionDictionary.swift in Sources */,
 				DA65ED011F95E68700720673 /* VMenuCell.swift in Sources */,
 				DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */,
