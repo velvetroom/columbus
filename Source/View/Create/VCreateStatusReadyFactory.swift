@@ -2,19 +2,6 @@ import UIKit
 
 extension VCreateStatusReady
 {
-    //MARK: private
-    
-    private func animateStart()
-    {
-        DispatchQueue.main.asyncAfter(
-            deadline:
-            DispatchTime.now() + kWaitForAnimation)
-        { [weak self] in
-            
-            self?.viewBar.animateStart()
-        }
-    }
-    
     //MARK: internal
     
     func factoryViews()
@@ -23,10 +10,15 @@ extension VCreateStatusReady
             controller:controller)
         self.viewBar = viewBar
         
+        let viewMapMenu:VCreateStatusReadyMapMenu = VCreateStatusReadyMapMenu(
+            controller:controller)
+        self.viewMapMenu = viewMapMenu
+        
         let viewMap:VCreateStatusReadyMap = VCreateStatusReadyMap()
         self.viewMap = viewMap
         
         addSubview(viewMap)
+        addSubview(viewMapMenu)
         addSubview(viewBar)
         
         viewBar.layoutTop = NSLayoutConstraint.topToTop(
@@ -51,6 +43,14 @@ extension VCreateStatusReady
             view:viewMap,
             toView:self)
         
-        animateStart()
+        NSLayoutConstraint.equalsVertical(
+            view:viewMapMenu,
+            toView:viewMapMenu)
+        NSLayoutConstraint.width(
+            view:viewMapMenu,
+            constant:kMapMenuWidth)
+        NSLayoutConstraint.rightToRight(
+            view:viewMapMenu,
+            toView:self)
     }
 }
