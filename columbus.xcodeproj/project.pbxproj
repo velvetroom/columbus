@@ -105,6 +105,7 @@
 		DADA42061F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */; };
 		DAEF388D1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */; };
 		DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */; };
+		DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +209,7 @@
 		DADA42051F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusNeedsPermissionContinue.swift; sourceTree = "<group>"; };
 		DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyFactory.swift; sourceTree = "<group>"; };
 		DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarFactory.swift; sourceTree = "<group>"; };
+		DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -579,6 +581,7 @@
 				DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */,
 				DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */,
 				DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */,
+				DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */,
 				DA0448071F9756CF00BA2D45 /* VCreateStatusReadyMap.swift in Sources */,
 				DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */,
+				DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */,
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
 				DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */,
 				DA0448091F9756D700BA2D45 /* VCreateStatusReadyBar.swift in Sources */,
