@@ -72,7 +72,7 @@ final class VCreateStatusNeedsPermissionContinue:
     @objc
     private func selectorButton(sender button:UIButton)
     {
-        
+        controller.model.locationDelegate.askAuthorization()
     }
 }
 

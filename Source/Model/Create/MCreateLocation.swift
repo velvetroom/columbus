@@ -4,7 +4,7 @@ extension MCreate
 {
     //MARK: internal
     
-    func startLocation()
+    func checkAuthorization()
     {
         let locationStrategyType:MCreateLocationStrategyProtocol.Type = MCreate.factoryLocationStrategy()
         changeLocationStrategy(

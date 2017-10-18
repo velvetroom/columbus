@@ -2,8 +2,23 @@ import Foundation
 
 final class MCreate:Model<ArchCreate>
 {
+    let locationDelegate:MCreateLocationDelegate
     private(set) var status:MCreateStatusProtocol?
     private(set) var locationStrategy:MCreateLocationStrategyProtocol?
+    
+    required init()
+    {
+        locationDelegate = MCreateLocationDelegate()
+        
+        super.init()
+        
+        locationDelegate.model = self
+    }
+    
+    deinit
+    {
+        locationDelegate.clean()
+    }
     
     //MARK: internal
     

@@ -6,6 +6,6 @@ final class CCreate:Controller<ArchCreate>
     {
         super.viewDidLoad()
         
-        model.startLocation()
+        model.checkAuthorization()
     }
 }
