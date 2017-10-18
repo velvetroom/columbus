@@ -1,4 +1,5 @@
 import Foundation
+import CoreLocation
 
 extension MCreate
 {
@@ -6,7 +7,6 @@ extension MCreate
     
     func startLocation()
     {
-        changeStatus(
-            statusType:MCreateStatusNeedsPermision.self)
+        let status:CLAuthorizationStatus = CLLocationManager.authorizationStatus()
     }
 }
