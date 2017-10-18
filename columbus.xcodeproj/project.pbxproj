@@ -10,6 +10,7 @@
 		DA0447FB1F973D3D00BA2D45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA0447F91F973D3D00BA2D45 /* InfoPlist.strings */; };
 		DA0447FD1F9747B800BA2D45 /* VCreateStatusDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0447FC1F9747B800BA2D45 /* VCreateStatusDenied.swift */; };
 		DA0447FF1F97484500BA2D45 /* MCreateStatusDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0447FE1F97484500BA2D45 /* MCreateStatusDenied.swift */; };
+		DA0448011F97553100BA2D45 /* MCreateLocationStrategyReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448001F97553100BA2D45 /* MCreateLocationStrategyReady.swift */; };
 		DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4F09C51F965B8B00AAE279 /* menu.xcassets */; };
 		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
@@ -74,7 +75,6 @@
 		DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED3B1F95F74500720673 /* brand.xcassets */; };
 		DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */; };
 		DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */; };
-		DA78BB341F971A3000A7C280 /* MCreateLocationStrategyGranted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */; };
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
 		DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */; };
 		DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */; };
@@ -105,6 +105,7 @@
 		DA0447FA1F973D3D00BA2D45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA0447FC1F9747B800BA2D45 /* VCreateStatusDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusDenied.swift; sourceTree = "<group>"; };
 		DA0447FE1F97484500BA2D45 /* MCreateStatusDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusDenied.swift; sourceTree = "<group>"; };
+		DA0448001F97553100BA2D45 /* MCreateLocationStrategyReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyReady.swift; sourceTree = "<group>"; };
 		DA4F09C51F965B8B00AAE279 /* menu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = menu.xcassets; sourceTree = "<group>"; };
 		DA65EC3D1F95DFD700720673 /* columbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = columbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65EC531F95E68600720673 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 		DA65ED3B1F95F74500720673 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
 		DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyProtocol.swift; sourceTree = "<group>"; };
 		DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
-		DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyGranted.swift; sourceTree = "<group>"; };
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
 		DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationFactory.swift; sourceTree = "<group>"; };
 		DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationDelegate.swift; sourceTree = "<group>"; };
@@ -524,8 +524,8 @@
 				DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */,
 				DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */,
 				DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */,
-				DA78BB331F971A3000A7C280 /* MCreateLocationStrategyGranted.swift */,
 				DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */,
+				DA0448001F97553100BA2D45 /* MCreateLocationStrategyReady.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -669,12 +669,12 @@
 				DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */,
 				DADA41F81F96709700DD1FC4 /* MMenuItemPlans.swift in Sources */,
 				DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */,
+				DA0448011F97553100BA2D45 /* MCreateLocationStrategyReady.swift in Sources */,
 				DA0447FD1F9747B800BA2D45 /* VCreateStatusDenied.swift in Sources */,
 				DAB2F9031F966A5600C1EF4A /* VSettings.swift in Sources */,
 				DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */,
 				DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */,
 				DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */,
-				DA78BB341F971A3000A7C280 /* MCreateLocationStrategyGranted.swift in Sources */,
 				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
 				DADA41F61F96707000DD1FC4 /* MMenuItemCreate.swift in Sources */,
 				DA65ECF31F95E68700720673 /* Model.swift in Sources */,
