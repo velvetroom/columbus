@@ -75,6 +75,19 @@ final class VCreateStatusReadyMapMenu:VCollection<
         return cell
     }
     
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        super.collectionView(
+            collectionView,
+            didSelectItemAt:indexPath)
+        
+        let item:MCreateMapMenuProtocol = modelAtIndex(
+            index:indexPath)
+        controller.menuItemSelected(item:item)
+    }
+    
     //MARK: private
     
     private func modelAtIndex(index:IndexPath) -> MCreateMapMenuProtocol

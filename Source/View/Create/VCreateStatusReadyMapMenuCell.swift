@@ -4,7 +4,7 @@ final class VCreateStatusReadyMapMenuCell:
     UICollectionViewCell
 {
     private weak var icon:UIImageView!
-    private let kAlphaSelected:CGFloat = 0.4
+    private let kAlphaSelected:CGFloat = 0.6
     private let kAlphaNotSelected:CGFloat = 1
     
     override init(frame:CGRect)

@@ -3,5 +3,5 @@ import UIKit
 struct MCreateMapStatusExpanded:MCreateMapStatusProtocol
 {
     let menuItems:[MCreateMapMenuProtocol] = factoryMenuItems()
-    let barTop:CGFloat = 0
+    let barTop:CGFloat = VCreateStatusReadyBar.kMinTop
 }
