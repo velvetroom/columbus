@@ -100,8 +100,7 @@ final class VCreateStatusError:View<ArchCreate>
     {
         guard
             
-            let status:MCreateStatusError = controller.model.status as? MCreateStatusError,
-            let message:String = status.message
+            let status:MCreateStatusErrorProtocol = controller.model.status as? MCreateStatusErrorProtocol
         
         else
         {
@@ -114,7 +113,7 @@ final class VCreateStatusError:View<ArchCreate>
             NSAttributedStringKey.foregroundColor:
                 UIColor.colourBackgroundDark]
         let attributedString:NSAttributedString = NSAttributedString(
-            string:message,
+            string:status.message,
             attributes:attributes)
         
         return attributedString
