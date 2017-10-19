@@ -2,6 +2,6 @@ import UIKit
 
 protocol MCreateMapStatusProtocol
 {
-    var menu:[MCreateMapMenuProtocol] { get }
+    var menuItems:[MCreateMapMenuProtocol] { get }
     var barTop:CGFloat { get }
 }

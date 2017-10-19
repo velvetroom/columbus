@@ -2,9 +2,11 @@ import UIKit
 
 extension VCreateStatusReadyBar
 {
-    //MARK: private
+    static let kMinTop:CGFloat = -310
     
-    private func animate(
+    //MARK: internal
+    
+    func animate(
         top:CGFloat,
         completion:(() -> ())?)
     {
@@ -13,17 +15,15 @@ extension VCreateStatusReadyBar
         UIView.animate(
             withDuration:kAnimationDuration,
             animations:
-            { [weak self] in
-                
-                self?.superview?.layoutIfNeeded()
-            })
+        { [weak self] in
+            
+            self?.superview?.layoutIfNeeded()
+        })
         { (done:Bool) in
             
             completion?()
         }
     }
-    
-    //MARK: internal
     
     func animateStart()
     {
@@ -32,15 +32,5 @@ extension VCreateStatusReadyBar
             
             self?.controller.lightStatusBar()
         }
-    }
-    
-    func animateFullMap()
-    {
-        animate(top:kMinTop, completion:nil)
-    }
-    
-    func animateSmallMap()
-    {
-        animate(top:0, completion:nil)
     }
 }
