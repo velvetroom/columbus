@@ -585,7 +585,6 @@
 			isa = PBXGroup;
 			children = (
 				DAB2F8F51F96697300C1EF4A /* MCreate.swift */,
-				DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */,
 				DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */,
 				DADA41FD1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift */,
 				DA0447FE1F97484500BA2D45 /* MCreateStatusDenied.swift */,
@@ -609,6 +608,7 @@
 				DA6AC1781F98FE7E004D6707 /* MCreateMapMenuUser.swift */,
 				DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */,
 				DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */,
+				DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";

@@ -3,6 +3,7 @@ import Foundation
 final class MCreate:Model<ArchCreate>
 {
     let locationDelegate:MCreateLocationDelegate
+    private(set) var plan:MCreatePlan?
     private(set) var status:MCreateStatusProtocol?
     private(set) var mapStatus:MCreateMapStatusProtocol?
     private(set) var locationStrategy:MCreateLocationStrategyProtocol?
