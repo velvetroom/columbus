@@ -6,12 +6,24 @@ final class VCreateStatusReadyMapMenu:VCollection<
 {
     weak var layoutHeight:NSLayoutConstraint!
     private var cellSize:CGSize?
+    private let kCollectionTop:CGFloat = 6
+    private let kCellHeight:CGFloat = 58
     
     required init(controller:CCreate)
     {
         super.init(controller:controller)
+        alpha = 0
         collectionView.isScrollEnabled = false
         collectionView.bounces = false
+        
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.sectionInset = UIEdgeInsets(
+                top:kCollectionTop,
+                left:0,
+                bottom:0,
+                right:0)
+        }
     }
     
     required init?(coder:NSCoder)
@@ -33,7 +45,7 @@ final class VCreateStatusReadyMapMenu:VCollection<
             let width:CGFloat = collectionView.bounds.width
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:width)
+                height:kCellHeight)
             self.cellSize = cellSize
             
             return cellSize
@@ -55,8 +67,8 @@ final class VCreateStatusReadyMapMenu:VCollection<
             return 0
         }
         
-        let width:CGFloat = collectionView.bounds.width
-        let totalHeight:CGFloat = CGFloat(count) * width
+        let cellsHeight:CGFloat = CGFloat(count) * kCellHeight
+        let totalHeight:CGFloat = cellsHeight + kCollectionTop
         layoutHeight.constant = totalHeight
         
         return count

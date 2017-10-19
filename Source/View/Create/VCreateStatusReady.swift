@@ -31,7 +31,16 @@ final class VCreateStatusReady:View<ArchCreate>
             DispatchTime.now() + kWaitForAnimation)
         { [weak self] in
             
-            self?.viewBar.animateStart()
+            self?.asyncAnimateStart()
+        }
+    }
+    
+    private func asyncAnimateStart()
+    {
+        viewBar.animate(top:0)
+        { [weak self] in
+            
+            self?.controller.lightStatusBar()
         }
     }
 }

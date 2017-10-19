@@ -24,13 +24,4 @@ extension VCreateStatusReadyBar
             completion?()
         }
     }
-    
-    func animateStart()
-    {
-        animate(top:0)
-        { [weak self] in
-            
-            self?.controller.lightStatusBar()
-        }
-    }
 }
