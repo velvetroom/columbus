@@ -21,6 +21,7 @@
 		DA2EE56B1F98AD6C00488A07 /* MCreateMapStatusExpandedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE56A1F98AD6C00488A07 /* MCreateMapStatusExpandedFactory.swift */; };
 		DA2EE56D1F98AE9900488A07 /* MCreateMapStatusContracted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE56C1F98AE9900488A07 /* MCreateMapStatusContracted.swift */; };
 		DA2EE56F1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE56E1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift */; };
+		DA2EE5711F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5701F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift */; };
 		DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */; };
 		DA4E5AFF1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */; };
 		DA4E5B011F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E5B001F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift */; };
@@ -134,6 +135,7 @@
 		DA2EE56A1F98AD6C00488A07 /* MCreateMapStatusExpandedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusExpandedFactory.swift; sourceTree = "<group>"; };
 		DA2EE56C1F98AE9900488A07 /* MCreateMapStatusContracted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusContracted.swift; sourceTree = "<group>"; };
 		DA2EE56E1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusContractedFactory.swift; sourceTree = "<group>"; };
+		DA2EE5701F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuProtocolDefault.swift; sourceTree = "<group>"; };
 		DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = map.xcassets; sourceTree = "<group>"; };
 		DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapMenu.swift; sourceTree = "<group>"; };
 		DA4E5B001F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapMenuCell.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 				DA2EE56C1F98AE9900488A07 /* MCreateMapStatusContracted.swift */,
 				DA2EE56E1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift */,
 				DA4E5B021F97DB6600B7BE3E /* MCreateMapMenuProtocol.swift */,
+				DA2EE5701F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift */,
 				DA4E5B041F97DDCA00B7BE3E /* MCreateMapMenuExpand.swift */,
 				DA2EE5641F98A9A500488A07 /* MCreateMapMenuContract.swift */,
 			);
@@ -763,6 +766,7 @@
 				DA65ED1B1F95E68700720673 /* VBlur.swift in Sources */,
 				DA65ED181F95E68700720673 /* VSliderBar.swift in Sources */,
 				DA65ECFE1F95E68700720673 /* ViewMain.swift in Sources */,
+				DA2EE5711F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift in Sources */,
 				DA65ECF91F95E68700720673 /* MMenuItemProtocol.swift in Sources */,
 				DA65ECFB1F95E68700720673 /* ViewParent.swift in Sources */,
 				DA65ED151F95E68700720673 /* VBorder.swift in Sources */,
