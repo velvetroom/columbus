@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="DPlan" representedClassName="DPlan" syncable="YES" codeGenerationType="class"/>
+    <entity name="DPlan" representedClassName="DPlan" syncable="YES" codeGenerationType="class">
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stops" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DPlanStop" inverseName="plan" inverseEntity="DPlanStop" syncable="YES"/>
+    </entity>
+    <entity name="DPlanStop" representedClassName="DPlanStop" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="destinationTravel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DPlanTravel" inverseName="destination" inverseEntity="DPlanTravel" syncable="YES"/>
+        <relationship name="originTravel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DPlanTravel" inverseName="origin" inverseEntity="DPlanTravel" syncable="YES"/>
+        <relationship name="plan" maxCount="1" deletionRule="Nullify" destinationEntity="DPlan" inverseName="stops" inverseEntity="DPlan" syncable="YES"/>
+    </entity>
+    <entity name="DPlanTravel" representedClassName="DPlanTravel" syncable="YES" codeGenerationType="class">
+        <attribute name="distance" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="duration" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rawMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="destination" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="destinationTravel" inverseEntity="DPlanStop" syncable="YES"/>
+        <relationship name="origin" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="originTravel" inverseEntity="DPlanStop" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="DPlan" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="DPlan" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="DPlanStop" positionX="-54" positionY="0" width="128" height="30"/>
+        <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="30"/>
     </elements>
 </model>
