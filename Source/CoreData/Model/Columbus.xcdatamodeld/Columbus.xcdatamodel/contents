@@ -3,6 +3,7 @@
     <entity name="DPlan" representedClassName="DPlan" syncable="YES" codeGenerationType="class">
         <attribute name="created" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="stops" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DPlanStop" inverseName="plan" inverseEntity="DPlanStop" syncable="YES"/>
     </entity>
     <entity name="DPlanStop" representedClassName="DPlanStop" syncable="YES" codeGenerationType="class">
@@ -22,7 +23,7 @@
         <relationship name="origin" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="originTravel" inverseEntity="DPlanStop" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DPlan" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="DPlan" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="DPlanStop" positionX="-54" positionY="0" width="128" height="30"/>
         <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="30"/>
     </elements>
