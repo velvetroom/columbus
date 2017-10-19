@@ -104,6 +104,7 @@
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
+		DAA5B4891F99369E00F9121C /* DPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B4881F99369E00F9121C /* DPlan.swift */; };
 		DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */; };
 		DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */; };
 		DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F01F9668E400C1EF4A /* CSettings.swift */; };
@@ -227,6 +228,7 @@
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
+		DAA5B4881F99369E00F9121C /* DPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlan.swift; sourceTree = "<group>"; };
 		DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPlans.swift; sourceTree = "<group>"; };
 		DAB2F8F01F9668E400C1EF4A /* CSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 		DAA5B4871F99365D00F9121C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DAA5B4881F99369E00F9121C /* DPlan.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				DA65ECDB1F95E68700720673 /* DatabaseFactory.swift in Sources */,
 				DA65ECF01F95E68700720673 /* CHome.swift in Sources */,
 				DA65ECE31F95E68700720673 /* ExtensionNSLayoutConstraint.swift in Sources */,
+				DAA5B4891F99369E00F9121C /* DPlan.swift in Sources */,
 				DA0448031F97557600BA2D45 /* MCreateStatusReady.swift in Sources */,
 				DA65ECE11F95E68700720673 /* ExtensionFileManager.swift in Sources */,
 				DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */,
