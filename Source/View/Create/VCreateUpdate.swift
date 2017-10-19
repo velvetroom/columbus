@@ -4,7 +4,7 @@ extension VCreate
 {
     //MARK: private
     
-    private func asyncUpdateMapMenu()
+    private func asyncUpdateMapMenu(barTop:CGFloat)
     {
         guard
         
@@ -16,16 +16,19 @@ extension VCreate
         }
         
         view.viewMapMenu.collectionView.reloadData()
+        view.viewBar.animate(
+            top:barTop,
+            completion:nil)
     }
     
     //MARK: internal
     
-    func updateMapMenu()
+    func updateMapMenu(barTop:CGFloat)
     {
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncUpdateMapMenu()
+            self?.asyncUpdateMapMenu(barTop:barTop)
         }
     }
 }
