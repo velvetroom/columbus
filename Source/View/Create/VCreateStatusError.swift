@@ -5,8 +5,8 @@ final class VCreateStatusError:View<ArchCreate>
     private let kImageTop:CGFloat = 210
     private let kImageHeight:CGFloat = 50
     private let kLabelHeight:CGFloat = 150
-    private let kFontSizeTitle:CGFloat = 18
-    private let kFontSizeDescr:CGFloat = 15
+    private let kFontSizeTitle:CGFloat = 22
+    private let kFontSizeDescr:CGFloat = 14
     
     required init(controller:CCreate)
     {
@@ -109,7 +109,7 @@ final class VCreateStatusError:View<ArchCreate>
         
         let attributes:[NSAttributedStringKey:Any] = [
             NSAttributedStringKey.font:
-                UIFont.light(size:kFontSizeDescr),
+                UIFont.regular(size:kFontSizeDescr),
             NSAttributedStringKey.foregroundColor:
                 UIColor.colourBackgroundDark]
         let attributedString:NSAttributedString = NSAttributedString(
