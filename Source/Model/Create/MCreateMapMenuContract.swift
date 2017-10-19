@@ -1,6 +1,6 @@
 import UIKit
 
-final class MCreateMapMenuExpand:MCreateMapMenuProtocol
+final class MCreateMapMenuContract:MCreateMapMenuProtocol
 {
     let icon:UIImage = #imageLiteral(resourceName: "assetMapButton")
     
