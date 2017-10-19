@@ -1,9 +1,9 @@
 import UIKit
 
-final class MCreateMapMenuStop:MCreateMapMenuProtocol
+final class MCreateMapMenuDone:MCreateMapMenuProtocol
 {
     let statusType:MCreateMapStatusProtocol.Type? = nil
-    let icon:UIImage = #imageLiteral(resourceName: "assetMapButtonStop")
+    let icon:UIImage = #imageLiteral(resourceName: "assetMapButtonDone")
     
     func selected(controller:CCreate)
     {
