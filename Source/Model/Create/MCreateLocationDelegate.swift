@@ -40,7 +40,6 @@ final class MCreateLocationDelegate:
     func clean()
     {
         locationManager?.delegate = nil
-        locationManager?.stopUpdatingLocation()
     }
     
     //MARK: locationManager delegate

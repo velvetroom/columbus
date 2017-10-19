@@ -1,12 +1,16 @@
 import MapKit
 
-final class VCreateStatusReadyMap:MKMapView
+final class VCreateStatusReadyMap:
+    MKMapView,
+    MKMapViewDelegate
 {
+    private var shouldUpdate:Bool
     private let span:MKCoordinateSpan
     private let kSpanSize:CLLocationDegrees = 0.03
     
     init()
     {
+        shouldUpdate = true
         span = MKCoordinateSpan(
             latitudeDelta:kSpanSize,
             longitudeDelta:kSpanSize)
@@ -25,6 +29,7 @@ final class VCreateStatusReadyMap:MKMapView
         showsScale = true
         showsTraffic = false
         showsUserLocation = true
+        delegate = self
     }
     
     required init?(coder:NSCoder)
@@ -45,11 +50,36 @@ final class VCreateStatusReadyMap:MKMapView
             return
         }
         
+        centerLocation(locationCoordinate:userCoordinated)
+        selectAnnotation(userLocation, animated:true)
+    }
+    
+    func centerLocation(locationCoordinate:CLLocationCoordinate2D)
+    {
         let region:MKCoordinateRegion = MKCoordinateRegionMake(
-            userCoordinated,
+            locationCoordinate,
             span)
         
         setRegion(region, animated:true)
-        selectAnnotation(userLocation, animated:true)
+    }
+    
+    //MARK: mapview delegate
+    
+    func mapView(
+        _ mapView:MKMapView,
+        didUpdate userLocation:MKUserLocation)
+    {
+        guard
+            
+            shouldUpdate
+        
+        else
+        {
+            return
+        }
+        
+        shouldUpdate = false
+        centerLocation(
+            locationCoordinate:userLocation.coordinate)
     }
 }
