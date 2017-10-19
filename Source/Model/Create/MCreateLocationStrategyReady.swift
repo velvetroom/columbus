@@ -7,32 +7,56 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     func nextStep(model:MCreate)
     {
         self.model = model
-        startDatabase()
+        startPlan()
     }
     
     //MARK: private
     
-    private func startDatabase()
+    private func startPlan()
     {
-        error()
-    }
-    
-    private func createPlan()
-    {
+        guard
         
+            let database:Database = Database(bundle:nil)
+        
+        else
+        {
+            databaseError()
+            
+            return
+        }
+        
+        database.create
+        { [weak self] (coredataPlan:DPlan) in
+            
+            let modelPlan:MCreatePlan = MCreatePlan(
+                database:database,
+                plan:coredataPlan)
+            
+            self?.planReady(plan:modelPlan)
+        }
     }
     
-    private func error()
+    private func databaseError()
     {
         model?.changeStatus(
             statusType:MCreateStatusErrorDatabase.self)
     }
     
-    private func planReady()
+    private func planReady(plan:MCreatePlan)
     {
-        model?.changeMapStatus(
+        guard
+            
+            let model:MCreate = self.model
+        
+        else
+        {
+            return
+        }
+        
+        model.plan = plan
+        model.changeMapStatus(
             statusType:MCreateMapStatusContracted.self)
-        model?.changeStatus(
+        model.changeStatus(
             statusType:MCreateStatusReady.self)
     }
 }
