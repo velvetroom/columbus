@@ -6,7 +6,7 @@ final class VCreateStatusReady:View<ArchCreate>
     weak var viewMap:VCreateStatusReadyMap!
     weak var viewMapMenu:VCreateStatusReadyMapMenu!
     let kBottom:CGFloat = -50
-    let kMapMenuWidth:CGFloat = 80
+    let kMapMenuWidth:CGFloat = 70
     private let kWaitForAnimation:TimeInterval = 1.4
     
     required init(controller:CCreate)
