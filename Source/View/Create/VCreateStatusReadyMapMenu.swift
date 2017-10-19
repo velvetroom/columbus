@@ -4,6 +4,7 @@ final class VCreateStatusReadyMapMenu:VCollection<
     ArchCreate,
     VCreateStatusReadyMapMenuCell>
 {
+    weak var layoutHeight:NSLayoutConstraint!
     private var cellSize:CGSize?
     
     required init(controller:CCreate)
@@ -53,6 +54,10 @@ final class VCreateStatusReadyMapMenu:VCollection<
         {
             return 0
         }
+        
+        let width:CGFloat = collectionView.bounds.width
+        let totalHeight:CGFloat = CGFloat(count) * width
+        layoutHeight.constant = totalHeight
         
         return count
     }

@@ -43,9 +43,11 @@ extension VCreateStatusReady
             view:viewMap,
             toView:self)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
             view:viewMapMenu,
             toView:viewMap)
+        viewMapMenu.layoutHeight = NSLayoutConstraint.height(
+            view:viewMapMenu)
         NSLayoutConstraint.width(
             view:viewMapMenu,
             constant:kMapMenuWidth)
