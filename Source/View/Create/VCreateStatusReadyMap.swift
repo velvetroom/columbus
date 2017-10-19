@@ -3,7 +3,7 @@ import MapKit
 final class VCreateStatusReadyMap:MKMapView
 {
     private let span:MKCoordinateSpan
-    private let kSpanSize:CLLocationDegrees = 0.01
+    private let kSpanSize:CLLocationDegrees = 0.03
     
     init()
     {
