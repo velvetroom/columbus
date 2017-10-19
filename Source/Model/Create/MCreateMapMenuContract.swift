@@ -1,7 +1,7 @@
 import UIKit
 
-struct MCreateMapMenuContract:MCreateMapMenuProtocol
+final class MCreateMapMenuContract:MCreateMapMenuProtocol
 {
-    let statusType:MCreateMapStatusProtocol.Type = MCreateMapStatusContracted.self
+    let statusType:MCreateMapStatusProtocol.Type? = MCreateMapStatusContracted.self
     let icon:UIImage = #imageLiteral(resourceName: "assetMapButton")
 }
