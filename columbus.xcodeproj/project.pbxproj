@@ -324,8 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				DA65EC621F95E68600720673 /* Manager */,
-				DA65EC651F95E68600720673 /* Object */,
 				DA65EC661F95E68600720673 /* Model */,
+				DAA5B4871F99365D00F9121C /* Entities */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -337,13 +337,6 @@
 				DA65EC641F95E68600720673 /* Database.swift */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		DA65EC651F95E68600720673 /* Object */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Object;
 			sourceTree = "<group>";
 		};
 		DA65EC661F95E68600720673 /* Model */ = {
@@ -532,6 +525,13 @@
 				DA65ECB91F95E68700720673 /* VAlert.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		DAA5B4871F99365D00F9121C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		DAB2F8E91F96687C00C1EF4A /* Plans */ = {
