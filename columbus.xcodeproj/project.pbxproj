@@ -17,6 +17,7 @@
 		DA0448091F9756D700BA2D45 /* VCreateStatusReadyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */; };
 		DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */; };
 		DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */; };
+		DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E821F9928C4000240F2 /* Columbus.xcdatamodeld */; };
 		DA2EE5651F98A9A500488A07 /* MCreateMapMenuContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5641F98A9A500488A07 /* MCreateMapMenuContract.swift */; };
 		DA2EE5671F98ABA200488A07 /* MCreateMapStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5661F98ABA200488A07 /* MCreateMapStatusProtocol.swift */; };
 		DA2EE5691F98AC4400488A07 /* MCreateMapStatusExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5681F98AC4400488A07 /* MCreateMapStatusExpanded.swift */; };
@@ -137,6 +138,7 @@
 		DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBar.swift; sourceTree = "<group>"; };
 		DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuStop.swift; sourceTree = "<group>"; };
 		DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuDone.swift; sourceTree = "<group>"; };
+		DA0A5E831F9928C4000240F2 /* Columbus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Columbus.xcdatamodel; sourceTree = "<group>"; };
 		DA2EE5641F98A9A500488A07 /* MCreateMapMenuContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuContract.swift; sourceTree = "<group>"; };
 		DA2EE5661F98ABA200488A07 /* MCreateMapStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusProtocol.swift; sourceTree = "<group>"; };
 		DA2EE5681F98AC4400488A07 /* MCreateMapStatusExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusExpanded.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 		DA65EC661F95E68600720673 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA0A5E821F9928C4000240F2 /* Columbus.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				DA0447FF1F97484500BA2D45 /* MCreateStatusDenied.swift in Sources */,
 				DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */,
 				DA65ECE71F95E68700720673 /* ExtensionString.swift in Sources */,
+				DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */,
 				DA65ED191F95E68700720673 /* VSlider.swift in Sources */,
 				DA65ED031F95E68700720673 /* VHome.swift in Sources */,
 				DA65ED1C1F95E68700720673 /* VCollectionFlow.swift in Sources */,
@@ -1029,6 +1033,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA0A5E821F9928C4000240F2 /* Columbus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA0A5E831F9928C4000240F2 /* Columbus.xcdatamodel */,
+			);
+			currentVersion = DA0A5E831F9928C4000240F2 /* Columbus.xcdatamodel */;
+			path = Columbus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DA65EC351F95DFD700720673 /* Project object */;
 }
