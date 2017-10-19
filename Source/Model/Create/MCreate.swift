@@ -4,6 +4,7 @@ final class MCreate:Model<ArchCreate>
 {
     let locationDelegate:MCreateLocationDelegate
     private(set) var status:MCreateStatusProtocol?
+    private(set) var mapStatus:MCreateMapStatusProtocol?
     private(set) var locationStrategy:MCreateLocationStrategyProtocol?
     
     required init()
@@ -29,6 +30,13 @@ final class MCreate:Model<ArchCreate>
         self.status = status
         
         view?.updateStatus()
+    }
+    
+    func changeMapStatus(
+        statusType:MCreateMapStatusProtocol.Type)
+    {
+        let status:MCreateMapStatusProtocol = statusType.init()
+        self.status = status
     }
     
     func changeLocationStrategy(

@@ -2,7 +2,7 @@ import UIKit
 
 final class VCreate:ViewMain
 {
-    private weak var view:View<ArchCreate>?
+    private(set) weak var view:View<ArchCreate>?
     
     //MARK: private
     
