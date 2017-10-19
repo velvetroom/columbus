@@ -7,9 +7,11 @@ extension MCreateMapStatusExpanded
     static func factoryMenuItems() -> [MCreateMapMenuProtocol]
     {
         let itemContract:MCreateMapMenuContract = MCreateMapMenuContract()
+        let itemUser:MCreateMapMenuUser = MCreateMapMenuUser()
         
         let items:[MCreateMapMenuProtocol] = [
-            itemContract]
+            itemContract,
+            itemUser]
         
         return items
     }
