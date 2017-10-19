@@ -41,6 +41,7 @@ final class VCreateStatusReady:View<ArchCreate>
         { [weak self] in
             
             self?.controller.lightStatusBar()
+            self?.viewMapMenu.animateShow()
         }
     }
 }

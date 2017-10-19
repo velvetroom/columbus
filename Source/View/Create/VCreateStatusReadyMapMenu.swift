@@ -5,6 +5,7 @@ final class VCreateStatusReadyMapMenu:VCollection<
     VCreateStatusReadyMapMenuCell>
 {
     weak var layoutHeight:NSLayoutConstraint!
+    let kAnimationDuration:TimeInterval = 0.3
     private var cellSize:CGSize?
     private let kCollectionTop:CGFloat = 6
     private let kCellHeight:CGFloat = 58
