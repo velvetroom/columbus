@@ -8,10 +8,12 @@ extension MCreateMapStatusContracted
     {
         let itemExpand:MCreateMapMenuExpand = MCreateMapMenuExpand()
         let itemUser:MCreateMapMenuUser = MCreateMapMenuUser()
+        let itemStop:MCreateMapMenuStop = MCreateMapMenuStop()
         
         let items:[MCreateMapMenuProtocol] = [
             itemExpand,
-            itemUser]
+            itemUser,
+            itemStop]
         
         return items
     }
