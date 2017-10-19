@@ -40,4 +40,43 @@ final class VCreateStatusReadyMapMenu:VCollection<
         
         return cellSize
     }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        numberOfItemsInSection section:Int) -> Int
+    {
+        guard
+        
+            let count:Int = controller.model.mapStatus?.menuItems.count
+        
+        else
+        {
+            return 0
+        }
+        
+        return count
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:MCreateMapMenuProtocol = modelAtIndex(
+            index:indexPath)
+        let cell:VCreateStatusReadyMapMenuCell = cellAtIndex(
+            indexPath:indexPath)
+        cell.config(model:item)
+        
+        return cell
+    }
+    
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> MCreateMapMenuProtocol
+    {
+        let item:MCreateMapMenuProtocol = controller.model.mapStatus!.menuItems[
+            index.item]
+        
+        return item
+    }
 }

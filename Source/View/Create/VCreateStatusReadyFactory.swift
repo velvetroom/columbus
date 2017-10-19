@@ -45,7 +45,7 @@ extension VCreateStatusReady
         
         NSLayoutConstraint.equalsVertical(
             view:viewMapMenu,
-            toView:viewMapMenu)
+            toView:viewMap)
         NSLayoutConstraint.width(
             view:viewMapMenu,
             constant:kMapMenuWidth)
