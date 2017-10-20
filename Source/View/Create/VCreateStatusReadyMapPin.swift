@@ -6,6 +6,7 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
     private let centerImageDragging:CGPoint
     private let kImageOffsetY:CGFloat = -17
     private let kImageDragginOffsetY:CGFloat = 24
+    private let kAnimationDuration:TimeInterval = 0.3
     
     init(stop:DPlanStop)
     {
@@ -62,12 +63,28 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
             state:newDragState)
         self.dragState = dragState
         
-        UIView.animate(withDuration:1) {
-            self.hover()
+        guard
+        
+            animated
+        
+        else
+        {
+            return
         }
+        
+        animateHover()
     }
     
     //MARK: private
+    
+    private func animateHover()
+    {
+        UIView.animate(withDuration:kAnimationDuration)
+        { [weak self] in
+            
+            self?.hover()
+        }
+    }
     
     private func hover()
     {
@@ -89,7 +106,5 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
             
             centerOffset = centerImage
         }
-        
-        print("frame \(self.frame)")
     }
 }
