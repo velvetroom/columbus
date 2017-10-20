@@ -21,6 +21,7 @@
 		DA13F6521F99C4C800DF92F5 /* DPlanStopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6511F99C4C800DF92F5 /* DPlanStopAnnotation.swift */; };
 		DA13F6541F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */; };
 		DA13F6561F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6551F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift */; };
+		DA13F6581F9A064600DF92F5 /* ExtensionMKAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */; };
 		DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */; };
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
@@ -153,6 +154,7 @@
 		DA13F6511F99C4C800DF92F5 /* DPlanStopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanStopAnnotation.swift; sourceTree = "<group>"; };
 		DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapDelegate.swift; sourceTree = "<group>"; };
 		DA13F6551F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapPin.swift; sourceTree = "<group>"; };
+		DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMKAnnotationView.swift; sourceTree = "<group>"; };
 		DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusError.swift; sourceTree = "<group>"; };
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				DA65EC721F95E68600720673 /* ExtensionString.swift */,
 				DA65EC731F95E68600720673 /* ExtensionUICollectionReusableView.swift */,
 				DA65EC741F95E68600720673 /* ExtensionURL.swift */,
+				DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */,
 			);
 			path = GenericExtensions;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */,
 				DAEF388D1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift in Sources */,
 				DA65ECE01F95E68700720673 /* ExtensionCGImage.swift in Sources */,
+				DA13F6581F9A064600DF92F5 /* ExtensionMKAnnotationView.swift in Sources */,
 				DA65ED1E1F95E68700720673 /* VCollection.swift in Sources */,
 				DA65ED171F95E68700720673 /* VGradient.swift in Sources */,
 				DA65ECFC1F95E68700720673 /* ViewProtocol.swift in Sources */,
