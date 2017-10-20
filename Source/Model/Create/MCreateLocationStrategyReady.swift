@@ -4,12 +4,6 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
 {
     private weak var model:MCreate?
     
-    func nextStep(model:MCreate)
-    {
-        self.model = model
-        startPlan()
-    }
-    
     //MARK: private
     
     private func startPlan()
@@ -68,5 +62,13 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
             statusType:MCreateMapStatusContracted.self)
         model.changeStatus(
             statusType:MCreateStatusReady.self)
+    }
+    
+    //MARK: internal
+    
+    func nextStep(model:MCreate)
+    {
+        self.model = model
+        startPlan()
     }
 }

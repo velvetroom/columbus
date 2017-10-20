@@ -18,18 +18,20 @@ final class MCreateLocationStrategyDenied:MCreateLocationStrategyProtocol
         NotificationCenter.default.removeObserver(self)
     }
     
-    func nextStep(model:MCreate)
-    {
-        self.model = model
-        model.changeStatus(
-            statusType:MCreateStatusDenied.self)
-    }
-    
     //MARK: selectors
     
     @objc
     private func selectorBecameActive(sender notification:Notification)
     {
         model?.checkAuthorization()
+    }
+    
+    //MARK: internal
+    
+    func nextStep(model:MCreate)
+    {
+        self.model = model
+        model.changeStatus(
+            statusType:MCreateStatusDenied.self)
     }
 }
