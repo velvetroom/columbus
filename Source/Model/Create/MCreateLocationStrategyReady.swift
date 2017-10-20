@@ -28,7 +28,17 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
         database.create
         { [weak self] (coredataPlan:DPlan) in
             
+            guard
+                
+                let model:MCreate = self?.model
+            
+            else
+            {
+                return
+            }
+            
             let modelPlan:MCreatePlan = MCreatePlan(
+                model:model,
                 database:database,
                 plan:coredataPlan)
             
