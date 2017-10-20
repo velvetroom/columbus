@@ -2,21 +2,27 @@ import MapKit
 
 final class VCreateStatusReadyMapPin:MKAnnotationView
 {
-    private let kImageOffsetY:CGFloat = -22
+    private let centerImage:CGPoint
+    private let centerImageDragging:CGPoint
+    private let kImageOffsetY:CGFloat = -17
+    private let kImageDragginOffsetY:CGFloat = 24
     
     init(stop:DPlanStop)
     {
         let reuseIdentifier:String = VCreateStatusReadyMapPin.reusableIdentifier
+        
+        centerImage = CGPoint(
+            x:0,
+            y:kImageOffsetY)
+        centerImageDragging = CGPoint(
+            x:0,
+            y:kImageDragginOffsetY)
         
         super.init(
             annotation:stop,
             reuseIdentifier:reuseIdentifier)
         
         isDraggable = true
-        
-        centerOffset = CGPoint(
-            x:0,
-            y:kImageOffsetY)
     }
     
     required init?(coder:NSCoder)
@@ -56,7 +62,9 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
             state:newDragState)
         self.dragState = dragState
         
-        hover()
+        UIView.animate(withDuration:1) {
+            self.hover()
+        }
     }
     
     //MARK: private
@@ -66,14 +74,22 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
         if dragState == MKAnnotationViewDragState.dragging
         {
             image = #imageLiteral(resourceName: "assetMapAnnotationDragging")
-        }
-        else if isSelected || isHighlighted
-        {
-            image = #imageLiteral(resourceName: "assetMapAnnotationSelected")
+            centerOffset = centerImageDragging
         }
         else
         {
-            image = #imageLiteral(resourceName: "assetMapAnnotation")
+            if isSelected || isHighlighted
+            {
+                image = #imageLiteral(resourceName: "assetMapAnnotationSelected")
+            }
+            else
+            {
+                image = #imageLiteral(resourceName: "assetMapAnnotation")
+            }
+            
+            centerOffset = centerImage
         }
+        
+        print("frame \(self.frame)")
     }
 }
