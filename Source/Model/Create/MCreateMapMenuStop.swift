@@ -8,6 +8,14 @@ final class MCreateMapMenuStop:MCreateMapMenuProtocol
     
     //MARK: private
     
+    private func addStop(
+        controller:CCreate,
+        coordinate:CLLocationCoordinate2D)
+    {
+        controller.model.plan?.addStop(
+            coordinate:coordinate)
+    }
+    
     //MARK: internal
     
     func selected(controller:CCreate)
@@ -23,6 +31,13 @@ final class MCreateMapMenuStop:MCreateMapMenuProtocol
         
         let coordinate:CLLocationCoordinate2D = view.viewMap.coordinateAtCentre()
         
-        
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.addStop(
+                controller:controller,
+                coordinate:coordinate)
+        }
     }
 }

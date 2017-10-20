@@ -2,7 +2,7 @@ import Foundation
 
 final class MCreatePlan
 {
-    private weak var model:MCreate?
+    private(set) weak var model:MCreate?
     let database:Database
     let plan:DPlan
     
@@ -15,6 +15,4 @@ final class MCreatePlan
         self.database = database
         self.plan = plan
     }
-    
-    //MARK: internal
 }
