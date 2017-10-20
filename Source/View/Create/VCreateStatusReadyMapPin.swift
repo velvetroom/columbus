@@ -2,7 +2,7 @@ import MapKit
 
 final class VCreateStatusReadyMapPin:MKAnnotationView
 {
-    private let kImageOffsetY:CGFloat = -17
+    private let kImageOffsetY:CGFloat = -22
     
     init(stop:DPlanStop)
     {
@@ -11,6 +11,8 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
         super.init(
             annotation:stop,
             reuseIdentifier:reuseIdentifier)
+        
+        isDraggable = true
         
         centerOffset = CGPoint(
             x:0,
@@ -46,11 +48,26 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
         }
     }
     
+    override func setDragState(
+        _ newDragState:MKAnnotationViewDragState,
+        animated:Bool)
+    {
+        let dragState:MKAnnotationViewDragState = VCreateStatusReadyMapPin.factoryDragState(
+            state:newDragState)
+        self.dragState = dragState
+        
+        hover()
+    }
+    
     //MARK: private
     
     private func hover()
     {
-        if isSelected || isHighlighted
+        if dragState == MKAnnotationViewDragState.dragging
+        {
+            image = #imageLiteral(resourceName: "assetMapAnnotationDragging")
+        }
+        else if isSelected || isHighlighted
         {
             image = #imageLiteral(resourceName: "assetMapAnnotationSelected")
         }
