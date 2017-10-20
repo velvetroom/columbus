@@ -3,7 +3,7 @@ import MapKit
 final class VCreateStatusReadyMap:MKMapView
 {
     var shouldUpdate:Bool
-    private let span:MKCoordinateSpan
+    let span:MKCoordinateSpan
     private let kSpanSize:CLLocationDegrees = 0.03
     
     init()
@@ -33,31 +33,5 @@ final class VCreateStatusReadyMap:MKMapView
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    //MARK: internal
-    
-    func centreUser()
-    {
-        guard
-            
-            let userCoordinated:CLLocationCoordinate2D = userLocation.location?.coordinate
-            
-        else
-        {
-            return
-        }
-        
-        centerLocation(locationCoordinate:userCoordinated)
-        selectAnnotation(userLocation, animated:true)
-    }
-    
-    func centerLocation(locationCoordinate:CLLocationCoordinate2D)
-    {
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(
-            locationCoordinate,
-            span)
-        
-        setRegion(region, animated:true)
     }
 }

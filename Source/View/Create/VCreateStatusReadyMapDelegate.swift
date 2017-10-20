@@ -18,8 +18,7 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         }
         
         shouldUpdate = false
-        centerLocation(
-            locationCoordinate:userLocation.coordinate)
+        centreCoordinate(coordinate:userLocation.coordinate)
     }
     
     func mapView(
