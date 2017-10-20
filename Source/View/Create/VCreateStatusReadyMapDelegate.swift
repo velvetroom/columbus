@@ -28,13 +28,29 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
     {
         guard
         
-            let annotation:DPlanStop = annotation as? DPlanStop
+            let stop:DPlanStop = annotation as? DPlanStop
         
         else
         {
             return nil
         }
         
-        return nil
+        guard
+        
+            let view:VCreateStatusReadyMapPin = mapView.dequeueReusableAnnotationView(
+                withIdentifier:
+                VCreateStatusReadyMapPin.reusableIdentifier) as? VCreateStatusReadyMapPin
+        
+        else
+        {
+            let view:VCreateStatusReadyMapPin = VCreateStatusReadyMapPin(
+                stop:stop)
+            
+            return view
+        }
+        
+        view.annotation = stop
+        
+        return view
     }
 }
