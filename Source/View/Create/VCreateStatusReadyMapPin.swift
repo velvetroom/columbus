@@ -2,7 +2,7 @@ import MapKit
 
 final class VCreateStatusReadyMapPin:MKAnnotationView
 {
-    private let kImageOffsetY:CGFloat = -20
+    private let kImageOffsetY:CGFloat = -17
     
     init(stop:DPlanStop)
     {
