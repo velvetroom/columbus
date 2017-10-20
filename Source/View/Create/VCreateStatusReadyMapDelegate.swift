@@ -21,4 +21,20 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         centerLocation(
             locationCoordinate:userLocation.coordinate)
     }
+    
+    func mapView(
+        _ mapView:MKMapView,
+        viewFor annotation:MKAnnotation) -> MKAnnotationView?
+    {
+        guard
+        
+            let annotation:DPlanStop = annotation as? DPlanStop
+        
+        else
+        {
+            return nil
+        }
+        
+        return nil
+    }
 }
