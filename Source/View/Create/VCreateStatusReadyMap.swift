@@ -1,10 +1,8 @@
 import MapKit
 
-final class VCreateStatusReadyMap:
-    MKMapView,
-    MKMapViewDelegate
+final class VCreateStatusReadyMap:MKMapView
 {
-    private var shouldUpdate:Bool
+    var shouldUpdate:Bool
     private let span:MKCoordinateSpan
     private let kSpanSize:CLLocationDegrees = 0.03
     
@@ -61,25 +59,5 @@ final class VCreateStatusReadyMap:
             span)
         
         setRegion(region, animated:true)
-    }
-    
-    //MARK: mapview delegate
-    
-    func mapView(
-        _ mapView:MKMapView,
-        didUpdate userLocation:MKUserLocation)
-    {
-        guard
-            
-            shouldUpdate
-        
-        else
-        {
-            return
-        }
-        
-        shouldUpdate = false
-        centerLocation(
-            locationCoordinate:userLocation.coordinate)
     }
 }

@@ -19,6 +19,7 @@
 		DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */; };
 		DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E821F9928C4000240F2 /* Columbus.xcdatamodeld */; };
 		DA13F6521F99C4C800DF92F5 /* DPlanStopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6511F99C4C800DF92F5 /* DPlanStopAnnotation.swift */; };
+		DA13F6541F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */; };
 		DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */; };
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
@@ -149,6 +150,7 @@
 		DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuDone.swift; sourceTree = "<group>"; };
 		DA0A5E831F9928C4000240F2 /* Columbus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Columbus.xcdatamodel; sourceTree = "<group>"; };
 		DA13F6511F99C4C800DF92F5 /* DPlanStopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanStopAnnotation.swift; sourceTree = "<group>"; };
+		DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapDelegate.swift; sourceTree = "<group>"; };
 		DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusError.swift; sourceTree = "<group>"; };
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 				DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */,
 				DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */,
 				DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */,
+				DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */,
 				DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */,
 				DA6AC17C1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift */,
 				DA4E5B001F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift */,
@@ -771,6 +774,7 @@
 				DA2EE5731F98B46C00488A07 /* VCreateUpdate.swift in Sources */,
 				DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */,
 				DA65ECFF1F95E68700720673 /* ViewParentTransitions.swift in Sources */,
+				DA13F6541F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift in Sources */,
 				DA65ECF11F95E68700720673 /* Arch.swift in Sources */,
 				DA65ECDC1F95E68700720673 /* Database.swift in Sources */,
 				DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */,
