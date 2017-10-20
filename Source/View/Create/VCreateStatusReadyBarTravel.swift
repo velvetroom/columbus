@@ -1,6 +1,9 @@
 import UIKit
 
-final class VCreateStatusReadyBarTravel:VCollection
+final class VCreateStatusReadyBarTravel:
+    VCollection<
+    ArchCreate,
+    VCreateStatusReadyBarTravelCell>
 {
     
 }
