@@ -37,6 +37,7 @@
 		DA2EE5711F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5701F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift */; };
 		DA2EE5731F98B46C00488A07 /* VCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5721F98B46C00488A07 /* VCreateUpdate.swift */; };
 		DA2EE5771F98C53800488A07 /* CCreateMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5761F98C53800488A07 /* CCreateMap.swift */; };
+		DA3495EF1F9ABB0400D75252 /* VCreateStatusReadyBarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3495EE1F9ABB0400D75252 /* VCreateStatusReadyBarList.swift */; };
 		DA3AE88B1F9A5329008F5BA8 /* VCreateStatusReadyMapPinFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3AE88A1F9A5329008F5BA8 /* VCreateStatusReadyMapPinFactory.swift */; };
 		DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */; };
 		DA4E5AFF1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */; };
@@ -174,6 +175,7 @@
 		DA2EE5701F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuProtocolDefault.swift; sourceTree = "<group>"; };
 		DA2EE5721F98B46C00488A07 /* VCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateUpdate.swift; sourceTree = "<group>"; };
 		DA2EE5761F98C53800488A07 /* CCreateMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreateMap.swift; sourceTree = "<group>"; };
+		DA3495EE1F9ABB0400D75252 /* VCreateStatusReadyBarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarList.swift; sourceTree = "<group>"; };
 		DA3AE88A1F9A5329008F5BA8 /* VCreateStatusReadyMapPinFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapPinFactory.swift; sourceTree = "<group>"; };
 		DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = map.xcassets; sourceTree = "<group>"; };
 		DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapMenu.swift; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 				DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */,
 				DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */,
 				DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */,
+				DA3495EE1F9ABB0400D75252 /* VCreateStatusReadyBarList.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				DA65ECEB1F95E68700720673 /* AppDelegate.swift in Sources */,
 				DA2EE5651F98A9A500488A07 /* MCreateMapMenuContract.swift in Sources */,
 				DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */,
+				DA3495EF1F9ABB0400D75252 /* VCreateStatusReadyBarList.swift in Sources */,
 				DA65ECEA1F95E68700720673 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
