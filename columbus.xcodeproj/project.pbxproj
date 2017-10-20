@@ -22,6 +22,7 @@
 		DA13F6541F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */; };
 		DA13F6561F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6551F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift */; };
 		DA13F6581F9A064600DF92F5 /* ExtensionMKAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */; };
+		DA13F65A1F9A146200DF92F5 /* VCreateStatusReadyMapActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6591F9A146200DF92F5 /* VCreateStatusReadyMapActions.swift */; };
 		DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */; };
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
@@ -155,6 +156,7 @@
 		DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapDelegate.swift; sourceTree = "<group>"; };
 		DA13F6551F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapPin.swift; sourceTree = "<group>"; };
 		DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMKAnnotationView.swift; sourceTree = "<group>"; };
+		DA13F6591F9A146200DF92F5 /* VCreateStatusReadyMapActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapActions.swift; sourceTree = "<group>"; };
 		DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusError.swift; sourceTree = "<group>"; };
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 				DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */,
 				DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */,
 				DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */,
+				DA13F6591F9A146200DF92F5 /* VCreateStatusReadyMapActions.swift */,
 				DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */,
 				DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */,
 				DA6AC17C1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift */,
@@ -775,6 +778,7 @@
 				DA13F6521F99C4C800DF92F5 /* DPlanStopAnnotation.swift in Sources */,
 				DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */,
 				DA65ED161F95E68700720673 /* VSpinner.swift in Sources */,
+				DA13F65A1F9A146200DF92F5 /* VCreateStatusReadyMapActions.swift in Sources */,
 				DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */,
 				DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */,
 				DA2EE5731F98B46C00488A07 /* VCreateUpdate.swift in Sources */,
