@@ -1,6 +1,7 @@
 import UIKit
 
-final class VCreateStatusReadyBarStopsCell:UICollectionViewCell
+final class VCreateStatusReadyBarStopsCell:
+    UICollectionViewCell
 {
     
 }
