@@ -3,6 +3,7 @@ import UIKit
 final class VCreateStatusReadyBarStopsCell:
     UICollectionViewCell
 {
+    weak var viewField:VCreateStatusReadyBarStopsCellField!
     let kFieldLeft:CGFloat = 100
     let kRemoveWidth:CGFloat = 50
     let kFieldMarginVertical:CGFloat = 5
