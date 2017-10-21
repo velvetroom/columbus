@@ -2,6 +2,39 @@ import MapKit
 
 extension VCreateStatusReadyMap:MKMapViewDelegate
 {
+    //MARK: private
+    
+    private func viewForStop(
+        stop:DPlanStop) -> VCreateStatusReadyMapPin
+    {
+        guard
+            
+            let view:VCreateStatusReadyMapPin = dequeueReusableAnnotationView(
+                withIdentifier:
+                VCreateStatusReadyMapPin.reusableIdentifier) as? VCreateStatusReadyMapPin
+            
+        else
+        {
+            let view:VCreateStatusReadyMapPin = VCreateStatusReadyMapPin(
+                stop:stop)
+            
+            return view
+        }
+        
+        view.annotation = stop
+        
+        return view
+    }
+    
+    private func viewForUser(
+        annotation:MKAnnotation) -> MKAnnotationView?
+    {
+        let annotationView:MKAnnotationView? = view(
+            for:annotation)
+        
+        return annotationView
+    }
+    
     //MARK: internal
     
     func mapView(
@@ -18,7 +51,9 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         }
         
         shouldUpdate = false
-        centreCoordinate(coordinate:userLocation.coordinate)
+        centreCoordinate(
+            coordinate:userLocation.coordinate)
+        userLocation.title = nil
     }
     
     func mapView(
@@ -31,24 +66,14 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         
         else
         {
-            return nil
-        }
-        
-        guard
-        
-            let view:VCreateStatusReadyMapPin = mapView.dequeueReusableAnnotationView(
-                withIdentifier:
-                VCreateStatusReadyMapPin.reusableIdentifier) as? VCreateStatusReadyMapPin
-        
-        else
-        {
-            let view:VCreateStatusReadyMapPin = VCreateStatusReadyMapPin(
-                stop:stop)
+            let view:MKAnnotationView? = viewForUser(
+                annotation:annotation)
             
             return view
         }
         
-        view.annotation = stop
+        let view:VCreateStatusReadyMapPin = viewForStop(
+            stop:stop)
         
         return view
     }

@@ -16,7 +16,7 @@ extension VCreateStatusReadyMap
         }
         
         centreCoordinate(coordinate:coordinate)
-        selectAnnotation(userLocation, animated:true)
+        selectedAnnotations = []
     }
     
     func centreCoordinate(coordinate:CLLocationCoordinate2D)

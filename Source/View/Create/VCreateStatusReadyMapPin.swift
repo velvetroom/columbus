@@ -11,7 +11,7 @@ final class VCreateStatusReadyMapPin:MKAnnotationView
     init(stop:DPlanStop)
     {
         let reuseIdentifier:String = VCreateStatusReadyMapPin.reusableIdentifier
-        
+
         centerImage = CGPoint(
             x:0,
             y:kImageOffsetY)
