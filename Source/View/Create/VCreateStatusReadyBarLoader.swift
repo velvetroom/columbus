@@ -3,49 +3,22 @@ import UIKit
 final class VCreateStatusReadyBarLoader:
     View<ArchCreate>
 {
-    private weak var viewProgress:UIView!
-    private weak var layoutProgressWidth:NSLayoutConstraint!
+    weak var viewProgress:UIView!
+    weak var layoutProgressWidth:NSLayoutConstraint!
     private let dispatchQueue:DispatchQueue
     private let dispatchSemaphore:DispatchSemaphore
-    private let kQueueName:String = "iturbide.columbus.loader"
     private let kAnimationDuration:TimeInterval = 10
     private let kFadeDuration:TimeInterval = 0.3
     
     required init(controller:CCreate)
     {
-        dispatchQueue = DispatchQueue(
-            label:kQueueName,
-            qos:DispatchQoS.background,
-            attributes:DispatchQueue.Attributes(),
-            autoreleaseFrequency:
-            DispatchQueue.AutoreleaseFrequency.inherit,
-            target:DispatchQueue.global(
-                qos:DispatchQoS.QoSClass.background))
-        
-        dispatchSemaphore = DispatchSemaphore(
-            value:1)
+        dispatchQueue = VCreateStatusReadyBarLoader.factoryDispatchQueue()
+        dispatchSemaphore = VCreateStatusReadyBarLoader.factoryDispatchSemaphore()
         
         super.init(controller:controller)
         isUserInteractionEnabled = false
         
-        let viewProgress:UIView = UIView()
-        viewProgress.isUserInteractionEnabled = false
-        viewProgress.translatesAutoresizingMaskIntoConstraints = false
-        viewProgress.clipsToBounds = true
-        viewProgress.backgroundColor = UIColor(white:1, alpha:0.6)
-        viewProgress.alpha = 0
-        self.viewProgress = viewProgress
-        
-        addSubview(viewProgress)
-        
-        NSLayoutConstraint.equalsVertical(
-            view:viewProgress,
-            toView:self)
-        NSLayoutConstraint.leftToLeft(
-            view:viewProgress,
-            toView:self)
-        layoutProgressWidth = NSLayoutConstraint.width(
-            view:viewProgress)
+        factoryViews()
     }
     
     required init?(coder:NSCoder)
