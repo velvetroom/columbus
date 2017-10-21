@@ -29,6 +29,7 @@ extension DPlan
     {
         travel.origin = lastStop
         travel.destination = stop
+        stop.plan = self
         
         completion()
     }
@@ -40,17 +41,13 @@ extension DPlan
         stop:DPlanStop,
         completion:@escaping(() -> ()))
     {
-        defer
-        {
-            stop.plan = self
-        }
-        
         guard
         
             let lastStop:DPlanStop = stops?.lastObject as? DPlanStop
         
         else
         {
+            stop.plan = self
             completion()
             
             return

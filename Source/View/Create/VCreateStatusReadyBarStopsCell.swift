@@ -4,7 +4,7 @@ final class VCreateStatusReadyBarStopsCell:
     UICollectionViewCell
 {
     let kFieldLeft:CGFloat = 100
-    let kRemoveWidth:CGFloat = 80
+    let kRemoveWidth:CGFloat = 50
     let kFieldMarginVertical:CGFloat = 5
     
     override init(frame:CGRect)

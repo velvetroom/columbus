@@ -7,7 +7,7 @@ final class VCreateStatusReadyBarStops:
 {
     weak var viewTravel:VCreateStatusReadyBarTravel!
     private var cellSize:CGSize?
-    private let kCellHeight:CGFloat = 60
+    private let kCellHeight:CGFloat = 56
     
     required init(controller:CCreate)
     {

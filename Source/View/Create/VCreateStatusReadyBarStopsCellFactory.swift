@@ -9,10 +9,10 @@ extension VCreateStatusReadyBarStopsCell
         let buttonRemove:UIButton = UIButton()
         buttonRemove.translatesAutoresizingMaskIntoConstraints = false
         buttonRemove.setImage(
-            #imageLiteral(resourceName: "assetGenericDelete").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
+            #imageLiteral(resourceName: "assetGenericRemove").withRenderingMode(UIImageRenderingMode.alwaysOriginal),
             for:UIControlState.normal)
         buttonRemove.setImage(
-            #imageLiteral(resourceName: "assetGenericDelete").withRenderingMode(UIImageRenderingMode.alwaysTemplate),
+            #imageLiteral(resourceName: "assetGenericRemove").withRenderingMode(UIImageRenderingMode.alwaysTemplate),
             for:UIControlState.highlighted)
         buttonRemove.imageView!.clipsToBounds = true
         buttonRemove.imageView!.contentMode = UIViewContentMode.center
