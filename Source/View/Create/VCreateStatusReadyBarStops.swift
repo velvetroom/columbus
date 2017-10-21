@@ -8,11 +8,22 @@ final class VCreateStatusReadyBarStops:
     weak var viewTravel:VCreateStatusReadyBarTravel!
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 50
+    private let kInsetsTop:CGFloat = 10
+    private let kInsetsBottom:CGFloat = 6
     
     required init(controller:CCreate)
     {
         super.init(controller:controller)
         collectionView.alwaysBounceVertical = true
+        
+        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
+        {
+            flow.sectionInset = UIEdgeInsets(
+                top:kInsetsTop,
+                left:0,
+                bottom:kInsetsBottom,
+                right:0)
+        }
     }
     
     required init?(coder:NSCoder)

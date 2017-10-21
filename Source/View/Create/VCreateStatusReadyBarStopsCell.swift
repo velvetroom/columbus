@@ -6,7 +6,7 @@ final class VCreateStatusReadyBarStopsCell:
     weak var viewField:VCreateStatusReadyBarStopsCellField!
     let kFieldLeft:CGFloat = 100
     let kRemoveWidth:CGFloat = 50
-    let kFieldMarginVertical:CGFloat = 5
+    let kFieldMarginVertical:CGFloat = 2
     
     override init(frame:CGRect)
     {

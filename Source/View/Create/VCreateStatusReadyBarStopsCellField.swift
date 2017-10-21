@@ -5,9 +5,9 @@ final class VCreateStatusReadyBarStopsCellField:
 {
     private weak var label:UILabel!
     private let kCornerRadius:CGFloat = 4
-    private let kFontSize:CGFloat = 13
-    private let kLabelLeft:CGFloat = 6
-    private let kLabelRight:CGFloat = -3
+    private let kFontSize:CGFloat = 12
+    private let kLabelLeft:CGFloat = 12
+    private let kLabelRight:CGFloat = -9
     
     init()
     {
@@ -21,7 +21,7 @@ final class VCreateStatusReadyBarStopsCellField:
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clear
-        label.font = UIFont.regular(size:kFontSize)
+        label.font = UIFont.medium(size:kFontSize)
         label.numberOfLines = 1
         self.label = label
         
@@ -55,10 +55,12 @@ final class VCreateStatusReadyBarStopsCellField:
     func selected()
     {
         backgroundColor = UIColor.white
+        label.textColor = UIColor.colourBackgroundDark
     }
     
     func notSelected()
     {
         backgroundColor = UIColor(white:1, alpha:0.1)
+        label.textColor = UIColor.white
     }
 }
