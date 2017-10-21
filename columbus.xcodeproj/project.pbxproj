@@ -127,6 +127,7 @@
 		DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B48C1F99370200F9121C /* DPlanTravel.swift */; };
 		DAA5B48F1F99371C00F9121C /* DPlanTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B48E1F99371C00F9121C /* DPlanTravelMode.swift */; };
 		DAA5B4911F993B0B00F9121C /* MCreatePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */; };
+		DAB1C4C31F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */; };
 		DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */; };
 		DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */; };
 		DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F01F9668E400C1EF4A /* CSettings.swift */; };
@@ -273,6 +274,7 @@
 		DAA5B48C1F99370200F9121C /* DPlanTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravel.swift; sourceTree = "<group>"; };
 		DAA5B48E1F99371C00F9121C /* DPlanTravelMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravelMode.swift; sourceTree = "<group>"; };
 		DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlan.swift; sourceTree = "<group>"; };
+		DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsActions.swift; sourceTree = "<group>"; };
 		DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPlans.swift; sourceTree = "<group>"; };
 		DAB2F8F01F9668E400C1EF4A /* CSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
@@ -703,6 +705,7 @@
 				DA4BC9361F9AC44E00453655 /* VCreateStatusReadyBarActions.swift */,
 				DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */,
 				DA3495F21F9ABC3200D75252 /* VCreateStatusReadyBarStops.swift */,
+				DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */,
 				DA3495F41F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift */,
 				DA4BC93A1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift */,
 				DA4BC9381F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift */,
@@ -826,6 +829,7 @@
 				DA65ECE31F95E68700720673 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DAA5B4891F99369E00F9121C /* DPlan.swift in Sources */,
 				DA0448031F97557600BA2D45 /* MCreateStatusReady.swift in Sources */,
+				DAB1C4C31F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift in Sources */,
 				DA3495F51F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift in Sources */,
 				DA65ECE11F95E68700720673 /* ExtensionFileManager.swift in Sources */,
 				DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */,
