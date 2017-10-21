@@ -29,6 +29,7 @@ final class MCreateMapMenuStop:MCreateMapMenuProtocol
             return
         }
         
+        view.viewBar.viewLoader.loadProgress()
         let coordinate:CLLocationCoordinate2D = view.viewMap.coordinateAtCentre()
         
         DispatchQueue.global(

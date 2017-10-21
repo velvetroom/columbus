@@ -9,7 +9,8 @@ final class VCreateStatusReadyBar:View<ArchCreate>
     let kHeight:CGFloat = 330
     let kBorderHeight:CGFloat = 1
     let kContentTop:CGFloat = 20
-    let kContentBottom:CGFloat = -18
+    let kContentBottom:CGFloat = -20
+    let kLoaderHeight:CGFloat = 19
     let kTravelWidth:CGFloat = 80
     let kAnimationDuration:TimeInterval = 0.8
     
