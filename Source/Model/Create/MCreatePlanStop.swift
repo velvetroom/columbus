@@ -41,6 +41,7 @@ extension MCreatePlan
         }
         
         view.viewMap.addAnnotation(stop)
+        view.viewBar.reload()
     }
     
     

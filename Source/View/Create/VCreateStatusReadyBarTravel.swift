@@ -5,5 +5,15 @@ final class VCreateStatusReadyBarTravel:
     ArchCreate,
     VCreateStatusReadyBarTravelCell>
 {
+    required init(controller:CCreate)
+    {
+        super.init(controller:controller)
+        collectionView.isScrollEnabled = false
+        collectionView.bounces = false
+    }
     
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
 }
