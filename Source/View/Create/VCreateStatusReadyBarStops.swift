@@ -7,7 +7,7 @@ final class VCreateStatusReadyBarStops:
 {
     weak var viewTravel:VCreateStatusReadyBarTravel!
     private var cellSize:CGSize?
-    private let kCellHeight:CGFloat = 56
+    private let kCellHeight:CGFloat = 50
     
     required init(controller:CCreate)
     {
@@ -70,6 +70,12 @@ final class VCreateStatusReadyBarStops:
         cell.config(model:item)
         
         return cell
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
     }
     
     //MARK: private

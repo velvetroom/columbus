@@ -3,7 +3,7 @@ import UIKit
 final class VCreateStatusReadyBarStopsCellField:
     UIView
 {
-    private let kCornerRadius:CGFloat = 6
+    private let kCornerRadius:CGFloat = 4
     
     init()
     {
@@ -28,11 +28,11 @@ final class VCreateStatusReadyBarStopsCellField:
     
     func selected()
     {
-        backgroundColor = UIColor.colourFail
+        backgroundColor = UIColor.white
     }
     
     func notSelected()
     {
-        backgroundColor = UIColor(white:1, alpha:0.2)
+        backgroundColor = UIColor(white:1, alpha:0.1)
     }
 }

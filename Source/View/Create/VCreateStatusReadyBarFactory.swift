@@ -31,18 +31,26 @@ extension VCreateStatusReadyBar
             view:border,
             toView:self)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
             view:viewStops,
             toView:self,
-            margin:kContentMarginVertical)
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:viewStops,
+            toView:self,
+            constant:kContentBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:viewStops,
             toView:self)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
             view:viewTravel,
             toView:self,
-            margin: kContentMarginVertical)
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:viewTravel,
+            toView:self,
+            constant:kContentBottom)
         NSLayoutConstraint.leftToLeft(
             view:viewTravel,
             toView:self)
