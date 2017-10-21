@@ -127,6 +127,7 @@
 		DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B48C1F99370200F9121C /* DPlanTravel.swift */; };
 		DAA5B48F1F99371C00F9121C /* DPlanTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B48E1F99371C00F9121C /* DPlanTravelMode.swift */; };
 		DAA5B4911F993B0B00F9121C /* MCreatePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */; };
+		DAAFA9941F9B53A40097E0E0 /* MCreatePlanGeocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA9931F9B53A40097E0E0 /* MCreatePlanGeocode.swift */; };
 		DAB1C4C31F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */; };
 		DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */; };
 		DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */; };
@@ -274,6 +275,7 @@
 		DAA5B48C1F99370200F9121C /* DPlanTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravel.swift; sourceTree = "<group>"; };
 		DAA5B48E1F99371C00F9121C /* DPlanTravelMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravelMode.swift; sourceTree = "<group>"; };
 		DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlan.swift; sourceTree = "<group>"; };
+		DAAFA9931F9B53A40097E0E0 /* MCreatePlanGeocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanGeocode.swift; sourceTree = "<group>"; };
 		DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsActions.swift; sourceTree = "<group>"; };
 		DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPlans.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 				DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */,
 				DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */,
 				DA13F65B1F9A174D00DF92F5 /* MCreatePlanStop.swift */,
+				DAAFA9931F9B53A40097E0E0 /* MCreatePlanGeocode.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				DA2EE5691F98AC4400488A07 /* MCreateMapStatusExpanded.swift in Sources */,
 				DA65ED001F95E68700720673 /* VMenuCollection.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
+				DAAFA9941F9B53A40097E0E0 /* MCreatePlanGeocode.swift in Sources */,
 				DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */,
 				DADA41FE1F9679B700DD1FC4 /* MCreateStatusNeedsPermission.swift in Sources */,
 				DA2EE56D1F98AE9900488A07 /* MCreateMapStatusContracted.swift in Sources */,
