@@ -15,10 +15,12 @@ extension VCreate
             return
         }
         
-        view.viewMapMenu.collectionView.reloadData()
         view.viewBar.animate(
-            top:barTop,
-            completion:nil)
+            top:barTop)
+        { [weak view] in
+            
+            view?.viewMapMenu.collectionView.reloadData()
+        }
     }
     
     //MARK: internal
@@ -28,7 +30,8 @@ extension VCreate
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncUpdateMapMenu(barTop:barTop)
+            self?.asyncUpdateMapMenu(
+                barTop:barTop)
         }
     }
 }
