@@ -41,7 +41,9 @@ extension MCreatePlan
             return
         }
         
-        view.viewMap.addStop(stop:stop)
+        view.viewMap.addAnnotation(stop)
+        view.viewMap.centreAndSelect(
+            stop:stop)
     }
     
     private func selectLastStop()

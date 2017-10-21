@@ -4,10 +4,10 @@ extension VCreateStatusReadyMap
 {
     //MARK: internal
     
-    func addStop(stop:DPlanStop)
+    func centreAndSelect(stop:DPlanStop)
     {
-        addAnnotation(stop)
-        
+        centreCoordinate(
+            coordinate:stop.coordinate)
         selectAnnotation(
             stop,
             animated:true)
