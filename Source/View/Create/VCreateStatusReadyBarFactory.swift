@@ -17,7 +17,12 @@ extension VCreateStatusReadyBar
             controller:controller)
         self.viewTravel = viewTravel
         
+        let viewLoader:VCreateStatusReadyBarLoader = VCreateStatusReadyBarLoader(
+            controller:controller)
+        self.viewLoader = viewLoader
+        
         addSubview(border)
+        addSubview(viewLoader)
         addSubview(viewStops)
         addSubview(viewTravel)
         
@@ -29,6 +34,16 @@ extension VCreateStatusReadyBar
             constant:kBorderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewLoader,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewLoader,
+            constant:kContentBottom)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewLoader,
             toView:self)
         
         NSLayoutConstraint.topToTop(
