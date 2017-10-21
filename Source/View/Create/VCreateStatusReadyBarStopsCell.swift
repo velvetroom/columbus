@@ -21,4 +21,42 @@ final class VCreateStatusReadyBarStopsCell:
     {
         return nil
     }
+    
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    private func hover()
+    {
+        if isSelected || isHighlighted
+        {
+            viewField.selected()
+        }
+        else
+        {
+            viewField.notSelected()
+        }
+    }
+    
+    //MARK: internal
+    
+    func config(model:DPlanStop)
+    {
+        viewField.config(stop:model)
+        hover()
+    }
 }

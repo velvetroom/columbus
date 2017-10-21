@@ -58,4 +58,27 @@ final class VCreateStatusReadyBarStops:
         
         return count
     }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:DPlanStop = modelAtIndex(
+            index:indexPath)
+        let cell:VCreateStatusReadyBarStopsCell = cellAtIndex(
+            indexPath:indexPath)
+        cell.config(model:item)
+        
+        return cell
+    }
+    
+    //MARK: private
+    
+    private func modelAtIndex(index:IndexPath) -> DPlanStop
+    {
+        let item:DPlanStop = controller.model.plan!.plan.stops![
+            index.item] as! DPlanStop
+        
+        return item
+    }
 }
