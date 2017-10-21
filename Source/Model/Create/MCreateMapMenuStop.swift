@@ -5,6 +5,7 @@ final class MCreateMapMenuStop:MCreateMapMenuProtocol
 {
     let statusType:MCreateMapStatusProtocol.Type? = nil
     let icon:UIImage = #imageLiteral(resourceName: "assetMapButtonStop")
+    let iconSelected:UIImage = #imageLiteral(resourceName: "assetMapButtonStopSelected")
     
     //MARK: private
     

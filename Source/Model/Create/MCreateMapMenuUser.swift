@@ -4,6 +4,7 @@ final class MCreateMapMenuUser:MCreateMapMenuProtocol
 {
     let statusType:MCreateMapStatusProtocol.Type? = nil
     let icon:UIImage = #imageLiteral(resourceName: "assetMapButtonUser")
+    let iconSelected:UIImage = #imageLiteral(resourceName: "assetMapButtonUserSelected")
     
     //MARK: internal
     
