@@ -6,9 +6,25 @@ extension MCreatePlan
     //MARK: private
     
     private func addStop(
-        stop:DPlanStop,
+        name:String,
         coordinate:CLLocationCoordinate2D)
     {
+        database.create
+        { [weak self] (stop:DPlanStop) in
+            
+            self?.addStop(
+                stop:stop,
+                name:name,
+                coordinate:coordinate)
+        }
+    }
+    
+    private func addStop(
+        stop:DPlanStop,
+        name:String,
+        coordinate:CLLocationCoordinate2D)
+    {
+        stop.name = name
         stop.coordinate = coordinate
         
         plan.connect(
@@ -69,11 +85,26 @@ extension MCreatePlan
     
     func addStop(coordinate:CLLocationCoordinate2D)
     {
-        database.create
-        { [weak self] (stop:DPlanStop) in
+        let location:CLLocation = CLLocation(
+            latitude:coordinate.latitude,
+            longitude:coordinate.longitude)
+        
+        geocodeLocation(location:location)
+        { [weak self] (name:String?) in
+            
+            print("location name: \(name)")
+            
+            guard
+                
+                let name:String = name
+            
+            else
+            {
+                return
+            }
             
             self?.addStop(
-                stop:stop,
+                name:name,
                 coordinate:coordinate)
         }
     }
