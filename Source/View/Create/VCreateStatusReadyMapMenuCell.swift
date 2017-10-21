@@ -4,8 +4,8 @@ final class VCreateStatusReadyMapMenuCell:
     UICollectionViewCell
 {
     private weak var icon:UIImageView!
-    private let kAlphaSelected:CGFloat = 0.6
-    private let kAlphaNotSelected:CGFloat = 1
+    private weak var image:UIImage?
+    private weak var imageSelected:UIImage?
     
     override init(frame:CGRect)
     {
@@ -54,11 +54,11 @@ final class VCreateStatusReadyMapMenuCell:
     {
         if isSelected || isHighlighted
         {
-            icon.alpha = kAlphaSelected
+            icon.image = imageSelected
         }
         else
         {
-            icon.alpha = kAlphaNotSelected
+            icon.image = image
         }
     }
     
@@ -66,7 +66,8 @@ final class VCreateStatusReadyMapMenuCell:
     
     func config(model:MCreateMapMenuProtocol)
     {
-        icon.image = model.icon
+        image = model.icon
+        imageSelected = model.iconSelected
         hover()
     }
 }
