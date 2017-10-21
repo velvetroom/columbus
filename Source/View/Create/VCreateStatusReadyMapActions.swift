@@ -4,6 +4,15 @@ extension VCreateStatusReadyMap
 {
     //MARK: internal
     
+    func addStop(stop:DPlanStop)
+    {
+        addAnnotation(stop)
+        
+        selectAnnotation(
+            stop,
+            animated:true)
+    }
+    
     func centreUser()
     {
         guard

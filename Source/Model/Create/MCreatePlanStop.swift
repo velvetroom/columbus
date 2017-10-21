@@ -26,6 +26,7 @@ extension MCreatePlan
         { [weak self] in
             
             self?.addAnnotation(stop:stop)
+            self?.selectLastStop()
         }
     }
     
@@ -40,10 +41,27 @@ extension MCreatePlan
             return
         }
         
-        view.viewMap.addAnnotation(stop)
-        view.viewBar.reload()
+        view.viewMap.addStop(stop:stop)
     }
     
+    private func selectLastStop()
+    {
+        guard
+            
+            let view:VCreateStatusReady = model?.view?.view as? VCreateStatusReady,
+            let totalStops:Int = plan.stops?.count
+            
+        else
+        {
+            return
+        }
+        
+        let lastStop:Int = totalStops - 1
+        
+        view.viewBar.reload()
+        view.viewBar.viewStops.selectItem(
+            index:lastStop)
+    }
     
     //MARK: internal
     
