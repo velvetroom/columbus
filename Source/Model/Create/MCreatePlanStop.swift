@@ -92,8 +92,6 @@ extension MCreatePlan
         geocodeLocation(location:location)
         { [weak self] (name:String?) in
             
-            print("location name: \(name)")
-            
             guard
                 
                 let name:String = name

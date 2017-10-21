@@ -51,7 +51,7 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         }
         
         shouldUpdate = false
-        centreCoordinate(
+        centreCoordinateRegion(
             coordinate:userLocation.coordinate)
         userLocation.title = nil
     }

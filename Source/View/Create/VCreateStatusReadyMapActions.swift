@@ -6,8 +6,9 @@ extension VCreateStatusReadyMap
     
     func centreAndSelect(stop:DPlanStop)
     {
-        centreCoordinate(
-            coordinate:stop.coordinate)
+        setCenter(
+            stop.coordinate,
+            animated:true)
         selectAnnotation(
             stop,
             animated:true)
@@ -24,11 +25,12 @@ extension VCreateStatusReadyMap
             return
         }
         
-        centreCoordinate(coordinate:coordinate)
+        centreCoordinateRegion(coordinate:coordinate)
         selectedAnnotations = []
     }
     
-    func centreCoordinate(coordinate:CLLocationCoordinate2D)
+    func centreCoordinateRegion(
+        coordinate:CLLocationCoordinate2D)
     {
         let region:MKCoordinateRegion = MKCoordinateRegionMake(
             coordinate,
