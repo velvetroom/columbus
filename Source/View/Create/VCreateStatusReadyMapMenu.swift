@@ -110,14 +110,4 @@ final class VCreateStatusReadyMapMenu:VCollection<
                 scrollPosition:UICollectionViewScrollPosition())
         }
     }
-    
-    //MARK: private
-    
-    private func modelAtIndex(index:IndexPath) -> MCreateMapMenuProtocol
-    {
-        let item:MCreateMapMenuProtocol = controller.model.mapStatus!.menuItems[
-            index.item]
-        
-        return item
-    }
 }

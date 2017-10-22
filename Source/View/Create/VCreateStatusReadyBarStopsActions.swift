@@ -22,4 +22,18 @@ extension VCreateStatusReadyBarStops
             animated:true,
             scrollPosition:UICollectionViewScrollPosition())
     }
+    
+    func selectedCell(indexPath:IndexPath)
+    {
+        
+    }
+    
+    func modelAtIndex(
+        index:IndexPath) -> DPlanStop
+    {
+        let item:DPlanStop = controller.model.plan!.plan.stops![
+            index.item] as! DPlanStop
+        
+        return item
+    }
 }

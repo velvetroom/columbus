@@ -87,15 +87,6 @@ final class VCreateStatusReadyBarStops:
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-    }
-    
-    //MARK: private
-    
-    private func modelAtIndex(index:IndexPath) -> DPlanStop
-    {
-        let item:DPlanStop = controller.model.plan!.plan.stops![
-            index.item] as! DPlanStop
-        
-        return item
+        selectedCell(indexPath:indexPath)
     }
 }

@@ -53,6 +53,7 @@
 		DA4E5B031F97DB6600B7BE3E /* MCreateMapMenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E5B021F97DB6600B7BE3E /* MCreateMapMenuProtocol.swift */; };
 		DA4E5B051F97DDCA00B7BE3E /* MCreateMapMenuExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E5B041F97DDCA00B7BE3E /* MCreateMapMenuExpand.swift */; };
 		DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4F09C51F965B8B00AAE279 /* menu.xcassets */; };
+		DA570EA91F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA570EA81F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift */; };
 		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
 		DA65ECD61F95E68700720673 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC561F95E68600720673 /* spinner.xcassets */; };
@@ -202,6 +203,7 @@
 		DA4E5B021F97DB6600B7BE3E /* MCreateMapMenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuProtocol.swift; sourceTree = "<group>"; };
 		DA4E5B041F97DDCA00B7BE3E /* MCreateMapMenuExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuExpand.swift; sourceTree = "<group>"; };
 		DA4F09C51F965B8B00AAE279 /* menu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = menu.xcassets; sourceTree = "<group>"; };
+		DA570EA81F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapMenuActions.swift; sourceTree = "<group>"; };
 		DA65EC3D1F95DFD700720673 /* columbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = columbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65EC531F95E68600720673 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA65EC551F95E68600720673 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -705,6 +707,7 @@
 				DA13F6591F9A146200DF92F5 /* VCreateStatusReadyMapActions.swift */,
 				DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */,
 				DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */,
+				DA570EA81F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift */,
 				DA6AC17C1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift */,
 				DA4E5B001F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift */,
 				DA13F6551F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift */,
@@ -816,6 +819,7 @@
 				DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */,
 				DA2EE5691F98AC4400488A07 /* MCreateMapStatusExpanded.swift in Sources */,
 				DA65ED001F95E68700720673 /* VMenuCollection.swift in Sources */,
+				DA570EA91F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
 				DAAFA9941F9B53A40097E0E0 /* MCreatePlanGeocode.swift in Sources */,
 				DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */,
