@@ -4,47 +4,8 @@ extension VCreateStatusReadyBarStops
 {
     //MARK: private
     
-    private func shouldSelect(
-        indexPath:IndexPath) -> Bool
-    {
-        guard
-        
-            let selected:[
-            IndexPath] = collectionView.indexPathsForSelectedItems
-        
-        else
-        {
-            return true
-        }
-        
-        for itemSelected:IndexPath in selected
-        {
-            guard
-                
-                itemSelected == indexPath
-                
-            else
-            {
-                continue
-            }
-            
-            return false
-        }
-        
-        return true
-    }
-    
     private func selectItem(indexPath:IndexPath)
     {
-        guard
-            
-            shouldSelect(indexPath:indexPath)
-        
-        else
-        {
-            return
-        }
-        
         collectionView.selectItem(
             at:indexPath,
             animated:true,

@@ -41,4 +41,18 @@ extension VCreateStatusReadyMap
             view:view,
             annotation:annotation)
     }
+    
+    func deselectAnnotation()
+    {
+        guard
+            
+            let view:VCreateStatusReady = controller.model.view?.view as? VCreateStatusReady
+            
+        else
+        {
+            return
+        }
+        
+        view.viewBar.viewStops.deselectAll()
+    }
 }
