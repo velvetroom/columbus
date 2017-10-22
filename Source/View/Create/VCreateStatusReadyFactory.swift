@@ -14,7 +14,8 @@ extension VCreateStatusReady
             controller:controller)
         self.viewMapMenu = viewMapMenu
         
-        let viewMap:VCreateStatusReadyMap = VCreateStatusReadyMap()
+        let viewMap:VCreateStatusReadyMap = VCreateStatusReadyMap(
+            controller:controller)
         self.viewMap = viewMap
         
         addSubview(viewMap)

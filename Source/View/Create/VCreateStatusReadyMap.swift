@@ -2,11 +2,12 @@ import MapKit
 
 final class VCreateStatusReadyMap:MKMapView
 {
+    private(set) weak var controller:CCreate!
     var shouldUpdate:Bool
     let span:MKCoordinateSpan
     private let kSpanSize:CLLocationDegrees = 0.03
     
-    init()
+    init(controller:CCreate)
     {
         shouldUpdate = true
         span = MKCoordinateSpan(
@@ -29,6 +30,7 @@ final class VCreateStatusReadyMap:MKMapView
         showsUserLocation = true
         userTrackingMode = MKUserTrackingMode.follow
         delegate = self
+        self.controller = controller
     }
     
     required init?(coder:NSCoder)
