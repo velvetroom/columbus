@@ -4,7 +4,7 @@ extension VCreateStatusReadyBarStops
 {
     //MARK: private
     
-    private func isSelected(
+    private func shouldSelect(
         indexPath:IndexPath) -> Bool
     {
         guard
@@ -14,7 +14,7 @@ extension VCreateStatusReadyBarStops
         
         else
         {
-            return false
+            return true
         }
         
         for itemSelected:IndexPath in selected
@@ -28,17 +28,17 @@ extension VCreateStatusReadyBarStops
                 continue
             }
             
-            return true
+            return false
         }
         
-        return false
+        return true
     }
     
     private func selectItem(indexPath:IndexPath)
     {
         guard
             
-            !isSelected(indexPath:indexPath)
+            shouldSelect(indexPath:indexPath)
         
         else
         {
