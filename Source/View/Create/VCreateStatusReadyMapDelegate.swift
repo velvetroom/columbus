@@ -2,39 +2,6 @@ import MapKit
 
 extension VCreateStatusReadyMap:MKMapViewDelegate
 {
-    //MARK: private
-    
-    private func viewForStop(
-        stop:DPlanStop) -> VCreateStatusReadyMapPin
-    {
-        guard
-            
-            let view:VCreateStatusReadyMapPin = dequeueReusableAnnotationView(
-                withIdentifier:
-                VCreateStatusReadyMapPin.reusableIdentifier) as? VCreateStatusReadyMapPin
-            
-        else
-        {
-            let view:VCreateStatusReadyMapPin = VCreateStatusReadyMapPin(
-                stop:stop)
-            
-            return view
-        }
-        
-        view.annotation = stop
-        
-        return view
-    }
-    
-    private func viewForUser(
-        annotation:MKAnnotation) -> MKAnnotationView?
-    {
-        let annotationView:MKAnnotationView? = view(
-            for:annotation)
-        
-        return annotationView
-    }
-    
     //MARK: internal
     
     func mapView(
@@ -66,13 +33,13 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         
         else
         {
-            let view:MKAnnotationView? = viewForUser(
+            let view:MKAnnotationView? = factoryUser(
                 annotation:annotation)
             
             return view
         }
         
-        let view:VCreateStatusReadyMapPin = viewForStop(
+        let view:VCreateStatusReadyMapPin = factoryPin(
             stop:stop)
         
         return view
