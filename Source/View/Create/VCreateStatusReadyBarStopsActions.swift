@@ -4,47 +4,27 @@ extension VCreateStatusReadyBarStops
 {
     //MARK: internal
     
-    func selectItem(index:Int)
-    {
-        let indexPath:IndexPath = IndexPath(
-            item:index,
-            section:0)
-        collectionView.selectItem(
-            at:indexPath,
-            animated:true,
-            scrollPosition:UICollectionViewScrollPosition.centeredVertically)
-    }
-    
-    func deselectAll()
-    {
-        collectionView.selectItem(
-            at:nil,
-            animated:true,
-            scrollPosition:UICollectionViewScrollPosition())
-    }
-    
-    func selectedCell(indexPath:IndexPath)
+    func stopList() -> [DPlanStop]?
     {
         guard
-            
-            let view:VCreateStatusReady = controller.model.view?.view as? VCreateStatusReady
+        
+            let allStops:[
+            DPlanStop] = controller.model.plan?.plan.stops?.array as? [
+                DPlanStop]
         
         else
         {
-            return
+            return nil
         }
         
-        let stop:DPlanStop = modelAtIndex(
-            index:indexPath)
-        view.viewMap.centreAndSelect(
-            stop:stop)
+        return allStops
     }
     
     func modelAtIndex(
         index:IndexPath) -> DPlanStop
     {
-        let item:DPlanStop = controller.model.plan!.plan.stops![
-            index.item] as! DPlanStop
+        let stops:[DPlanStop] = stopList()!
+        let item:DPlanStop = stops[index.item]
         
         return item
     }

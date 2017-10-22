@@ -44,4 +44,11 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         
         return view
     }
+    
+    func mapView(
+        _ mapView:MKMapView,
+        didSelect view:MKAnnotationView)
+    {
+        selectedAnnotation(annotation:view)
+    }
 }
