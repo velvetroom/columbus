@@ -18,6 +18,8 @@ extension VCreateStatusReadyBarStops
             return
         }
         
-        cell.config(model:stop)
+        cell.config(
+            controller:controller,
+            model:stop)
     }
 }

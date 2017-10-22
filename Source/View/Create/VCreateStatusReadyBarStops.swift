@@ -80,7 +80,10 @@ final class VCreateStatusReadyBarStops:
             index:indexPath)
         let cell:VCreateStatusReadyBarStopsCell = cellAtIndex(
             indexPath:indexPath)
-        cell.config(model:item)
+        
+        cell.config(
+            controller:controller,
+            model:item)
         
         return cell
     }

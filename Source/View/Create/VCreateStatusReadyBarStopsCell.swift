@@ -4,6 +4,7 @@ final class VCreateStatusReadyBarStopsCell:
     UICollectionViewCell
 {
     weak var viewField:VCreateStatusReadyBarStopsCellField!
+    private(set) weak var controller:CCreate?
     private(set) weak var model:DPlanStop?
     let kFieldLeft:CGFloat = 100
     let kRemoveWidth:CGFloat = 50
@@ -55,9 +56,13 @@ final class VCreateStatusReadyBarStopsCell:
     
     //MARK: internal
     
-    func config(model:DPlanStop)
+    func config(
+        controller:CCreate,
+        model:DPlanStop)
     {
+        self.controller = controller
         self.model = model
+        
         viewField.config(stop:model)
         hover()
     }
