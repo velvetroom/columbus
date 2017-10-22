@@ -25,7 +25,19 @@ extension VCreateStatusReadyBarStops
     
     func selectedCell(indexPath:IndexPath)
     {
+        guard
+            
+            let view:VCreateStatusReady = controller.model.view?.view as? VCreateStatusReady
         
+        else
+        {
+            return
+        }
+        
+        let stop:DPlanStop = modelAtIndex(
+            index:indexPath)
+        view.viewMap.centreAndSelect(
+            stop:stop)
     }
     
     func modelAtIndex(
