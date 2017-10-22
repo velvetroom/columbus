@@ -17,6 +17,10 @@ extension VCreateStatusReadyBarStopsCell
         buttonRemove.imageView!.clipsToBounds = true
         buttonRemove.imageView!.contentMode = UIViewContentMode.center
         buttonRemove.imageView!.tintColor = UIColor.black
+        buttonRemove.addTarget(
+            self,
+            action:#selector(selectorRemove(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         let viewField:VCreateStatusReadyBarStopsCellField = VCreateStatusReadyBarStopsCellField()
         self.viewField = viewField
