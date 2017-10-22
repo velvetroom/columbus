@@ -81,13 +81,36 @@ extension MCreatePlan
             index:lastStop)
     }
     
+    private func updated(stop:DPlanStop)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncUpdated(stop:stop)
+        }
+    }
+    
+    private func asyncUpdated(stop:DPlanStop)
+    {
+        guard
+            
+            let view:VCreateStatusReady = model?.view?.view as? VCreateStatusReady
+            
+        else
+        {
+            return
+        }
+        
+        view.viewBar.viewStops.updateLocation(
+            stop:stop)
+    }
+    
     //MARK: internal
     
     func addStop(coordinate:CLLocationCoordinate2D)
     {
-        let location:CLLocation = CLLocation(
-            latitude:coordinate.latitude,
-            longitude:coordinate.longitude)
+        let location:CLLocation = MCreatePlan.factoryLocation(
+            coordinate:coordinate)
         
         geocodeLocation(location:location)
         { [weak self] (name:String?) in
@@ -104,6 +127,20 @@ extension MCreatePlan
             self?.addStop(
                 name:name,
                 coordinate:coordinate)
+        }
+    }
+    
+    func update(stop:DPlanStop)
+    {
+        let location:CLLocation = MCreatePlan.factoryLocation(
+            stop:stop)
+        
+        geocodeLocation(location:location)
+        { [weak self] (name:String?) in
+            
+            stop.name = name
+            
+            self?.updated(stop:stop)
         }
     }
 }

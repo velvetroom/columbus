@@ -16,21 +16,16 @@ extension VCreateStatusReadyBarStops
     
     func selectItem(index:Int)
     {
-        let currentItems:Int = collectionView.numberOfItems(
-            inSection:0)
-        
         guard
             
-            index <  currentItems
+            let indexPath:IndexPath = factoryIndexPath(
+                index:index)
         
         else
         {
             return
         }
         
-        let indexPath:IndexPath = IndexPath(
-            item:index,
-            section:0)
         selectItem(indexPath:indexPath)
     }
     
@@ -38,32 +33,15 @@ extension VCreateStatusReadyBarStops
     {
         guard
         
-            let stops:[DPlanStop] = stopList()
+            let indexPath:IndexPath = factoryIndexPath(
+                stop:stop)
         
         else
         {
             return
         }
         
-        var index:Int = 0
-        
-        for indexedStop:DPlanStop in stops
-        {
-            guard
-            
-                indexedStop === stop
-            
-            else
-            {
-                index += 1
-                
-                continue
-            }
-            
-            selectItem(index:index)
-            
-            break
-        }
+        selectItem(indexPath:indexPath)
     }
     
     func deselectAll()

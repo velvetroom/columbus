@@ -65,14 +65,8 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         didChange newState:MKAnnotationViewDragState,
         fromOldState oldState:MKAnnotationViewDragState)
     {
-        guard
-            
-            newState == MKAnnotationViewDragState.none
-        
-        else
-        {
-            return
-        }
-        
+        dragingChanged(
+            annotation:view,
+            state:newState)
     }
 }

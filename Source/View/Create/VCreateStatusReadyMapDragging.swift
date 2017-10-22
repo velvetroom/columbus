@@ -11,15 +11,19 @@ extension VCreateStatusReadyMap
         guard
             
             state == MKAnnotationViewDragState.none,
-            let stop:DPlanStop = annotation.annotation as? DPlanStop,
-            let view:VCreateStatusReady = controller.model.view?.view as? VCreateStatusReady
+            let stop:DPlanStop = annotation.annotation as? DPlanStop
             
         else
         {
             return
         }
         
-        view.viewBar.viewStops.updateLocation(
-            stop:stop)
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.controller.model.plan?.update(
+                stop:stop)
+        }
     }
 }
