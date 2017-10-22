@@ -1,6 +1,11 @@
 import UIKit
 
-extension VCreateStatusReadyBarStopsUpdate
+extension VCreateStatusReadyBarStops
 {
     //MARK: internal
+    
+    func updateLocation(stop:DPlanStop)
+    {
+        
+    }
 }

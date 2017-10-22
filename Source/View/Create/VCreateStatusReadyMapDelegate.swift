@@ -58,4 +58,21 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
     {
         deselectAnnotation()
     }
+    
+    func mapView(
+        _ mapView:MKMapView,
+        annotationView view:MKAnnotationView,
+        didChange newState:MKAnnotationViewDragState,
+        fromOldState oldState:MKAnnotationViewDragState)
+    {
+        guard
+            
+            newState == MKAnnotationViewDragState.none
+        
+        else
+        {
+            return
+        }
+        
+    }
 }
