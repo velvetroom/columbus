@@ -4,7 +4,7 @@ extension VCreateStatusReadyMap
 {
     //MARK: internal
     
-    func factoryStop(
+    func factoryPin(
         stop:DPlanStop) -> VCreateStatusReadyMapPin
     {
         guard
@@ -26,7 +26,7 @@ extension VCreateStatusReadyMap
         return view
     }
     
-    func factoryPin(
+    func factoryUser(
         annotation:MKAnnotation) -> MKAnnotationView?
     {
         let annotationView:MKAnnotationView? = view(
