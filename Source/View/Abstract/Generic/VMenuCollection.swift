@@ -5,28 +5,6 @@ extension VMenu:
     UICollectionViewDataSource,
     UICollectionViewDelegateFlowLayout
 {
-    //MARK: private
-    
-    private func modelAtIndex(index:IndexPath) -> MMenuItemProtocol
-    {
-        let item:MMenuItemProtocol = controller.menu.items[index.item]
-        
-        return item
-    }
-    
-    private func selectCurrent()
-    {
-        let indexSelected:Int = controller.menu.selected.rawValue
-        let indexPath:IndexPath = IndexPath(
-            item:indexSelected,
-            section:0)
-        
-        collectionView.selectItem(
-            at:indexPath,
-            animated:false,
-            scrollPosition:UICollectionViewScrollPosition())
-    }
-    
     //MARK: internal
     
     func factoryCollection()

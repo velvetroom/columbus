@@ -10,5 +10,6 @@ final class MCreateMapMenuDone:MCreateMapMenuProtocol
     
     func selected(controller:CCreate)
     {
+        controller.model.save()
     }
 }
