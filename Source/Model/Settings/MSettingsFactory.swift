@@ -7,6 +7,9 @@ extension MSettings
     class func factoryItems(
         settings:DSettings) -> [MSettingsProtocol]
     {
+        let items:[MSettingsProtocol] = [
+        ]
         
+        return items
     }
 }
