@@ -4,7 +4,7 @@ final class VSettingsBar:View<ArchSettings>
 {
     private let kTitleTop:CGFloat = 20
     private let kBorderHeight:CGFloat = 1
-    private let kFontSize:CGFloat = 15
+    private let kFontSize:CGFloat = 14
     
     required init(controller:CSettings)
     {
