@@ -128,6 +128,7 @@
 		DA7B65201F9E659C001CDC35 /* MCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B651F1F9E659C001CDC35 /* MCreateSave.swift */; };
 		DA7B65221F9E6873001CDC35 /* VMenuSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */; };
 		DA7B65241F9E6B5F001CDC35 /* VMenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */; };
+		DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -294,6 +295,7 @@
 		DA7B651F1F9E659C001CDC35 /* MCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSave.swift; sourceTree = "<group>"; };
 		DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuSynth.swift; sourceTree = "<group>"; };
 		DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuActions.swift; sourceTree = "<group>"; };
+		DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanSave.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -694,6 +696,7 @@
 				DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */,
 				DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */,
 				DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */,
+				DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */,
 				DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */,
 				DA13F65B1F9A174D00DF92F5 /* MCreatePlanStop.swift */,
 				DAD888FF1F9D2DBD000EC7FD /* MCreatePlanStopAdd.swift */,
@@ -990,6 +993,7 @@
 				DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */,
 				DA65ECF41F95E68700720673 /* MHome.swift in Sources */,
 				DAD888FC1F9D23E5000EC7FD /* VCreateStatusReadyBarStopsFactory.swift in Sources */,
+				DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */,
 				DA65ECE81F95E68700720673 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA65ECF81F95E68700720673 /* MMenuOrder.swift in Sources */,
 				DAB2F8F81F96698F00C1EF4A /* MPlans.swift in Sources */,
