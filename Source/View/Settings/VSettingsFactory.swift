@@ -11,6 +11,7 @@ extension VSettings
         
         let viewList:VSettingsList = VSettingsList(
             controller:controller)
+        self.viewList = viewList
         
         addSubview(viewList)
         addSubview(viewBar)

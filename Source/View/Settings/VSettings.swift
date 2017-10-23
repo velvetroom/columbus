@@ -2,6 +2,7 @@ import UIKit
 
 final class VSettings:ViewMain
 {
+    weak var viewList:VSettingsList!
     let kBarHeight:CGFloat = 64
     
     required init(controller:UIViewController)
@@ -23,5 +24,16 @@ final class VSettings:ViewMain
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: internal
+    
+    func settingsLoaded()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.viewList.collectionView.reloadData()
+        }
     }
 }
