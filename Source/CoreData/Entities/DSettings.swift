@@ -24,4 +24,11 @@ extension DSettings
             rawTravelMode = newValue.rawValue
         }
     }
+    
+    //MARK: internal
+    
+    func initialValues()
+    {
+        travelMode = DPlanTravelMode.walking
+    }
 }
