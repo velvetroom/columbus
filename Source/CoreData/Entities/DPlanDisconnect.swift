@@ -40,7 +40,27 @@ extension DPlan
         stop:DPlanStop,
         completion:@escaping(() -> ()))
     {
+        guard
+            
+            let previousStop:DPlanStop = stop.originTravel?.destination
+            
+        else
+        {
+            completion()
+            
+            return
+        }
         
+        database.create
+        { [weak self] (travel:DPlanTravel) in
+            
+            self?.newOrigin(
+                database:database,
+                stop:stop,
+                origin:previousStop,
+                travel:travel,
+                completion:completion)
+        }
     }
     
     private func newOrigin(
@@ -62,6 +82,24 @@ extension DPlan
             database:database,
             stop:stop,
             completion:completion)
+    }
+    
+    private func newDestination(
+        database:Database,
+        stop:DPlanStop,
+        destination:DPlanStop,
+        travel:DPlanTravel,
+        completion:@escaping(() -> ()))
+    {
+        travel.origin = stop
+        travel.destination = destination
+        
+        if let travelMode:DPlanTravelMode = stop.destinationTravel?.mode
+        {
+            travel.mode = travelMode
+        }
+        
+        completion()
     }
     
     //MARK: internal
