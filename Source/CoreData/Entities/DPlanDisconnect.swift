@@ -11,7 +11,7 @@ extension DPlan
     {
         guard
         
-            let previousStop:DPlanStop = stop.originTravel?.origin
+            let previousStop:DPlanStop = stop.destinationTravel?.origin
         
         else
         {
