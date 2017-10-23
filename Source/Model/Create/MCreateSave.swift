@@ -6,7 +6,11 @@ extension MCreate
     
     private func asyncSave()
     {
-        saveFinished()
+        plan?.save
+        { [weak self] in
+            
+            self?.saveFinished()
+        }
     }
     
     private func saveFinished()
