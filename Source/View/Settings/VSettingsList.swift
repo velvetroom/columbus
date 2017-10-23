@@ -1,6 +1,8 @@
 import UIKit
 
-final class VSettingsList:VCollection
+final class VSettingsList:VCollection<
+    ArchSettings,
+    VSettingsListCell>
 {
     
 }
