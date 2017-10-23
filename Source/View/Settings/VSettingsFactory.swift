@@ -9,6 +9,10 @@ extension VSettings
         let viewBar:VSettingsBar = VSettingsBar(
             controller:controller)
         
+        let viewList:VSettingsList = VSettingsList(
+            controller:controller)
+        
+        addSubview(viewList)
         addSubview(viewBar)
         
         NSLayoutConstraint.topToTop(
@@ -19,6 +23,10 @@ extension VSettings
             constant:kBarHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:viewList,
             toView:self)
     }
 }
