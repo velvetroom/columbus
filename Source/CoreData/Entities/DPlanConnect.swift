@@ -10,6 +10,8 @@ extension DPlan
         lastStop:DPlanStop,
         completion:@escaping(() -> ()))
     {
+        stop.plan = self
+        
         database.create
         { [weak self] (travel:DPlanTravel) in
             
@@ -29,7 +31,6 @@ extension DPlan
     {
         travel.origin = lastStop
         travel.destination = stop
-        stop.plan = self
         
         completion()
     }
