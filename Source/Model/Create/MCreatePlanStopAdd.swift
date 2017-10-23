@@ -32,6 +32,24 @@ extension MCreatePlan
             stop:stop)
         { [weak self] in
             
+            self?.configTravel(stop:stop)
+        }
+    }
+    
+    private func configTravel(stop:DPlanStop)
+    {
+        guard
+        
+            let travel:DPlanTravel = stop.destinationTravel
+        
+        else
+        {
+            return
+        }
+        
+        directions(travel:travel)
+        { [weak self] in
+            
             self?.stopAdded(stop:stop)
         }
     }
@@ -82,7 +100,7 @@ extension MCreatePlan
                 
                 let name:String = name
                 
-                else
+            else
             {
                 return
             }
