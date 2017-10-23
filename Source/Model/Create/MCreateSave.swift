@@ -22,17 +22,14 @@ extension MCreate
     {
         guard
         
-            let controller:CCreate = view?.controller as? CCreate,
-            let viewParent:ViewParent = controller.parentController?.view as? ViewParent
+            let controller:CCreate = view?.controller as? CCreate
         
         else
         {
             return
         }
         
-        let order:MMenuOrder = MMenuOrder.plans
-        viewParent.viewMenu.synthSelect(
-            order:order)
+        controller.moveToPlans()
     }
     
     //MARK: internal

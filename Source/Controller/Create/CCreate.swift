@@ -38,4 +38,20 @@ final class CCreate:Controller<ArchCreate>
         statusBarStyle = UIStatusBarStyle.lightContent
         setNeedsStatusBarAppearanceUpdate()
     }
+    
+    func moveToPlans()
+    {
+        guard
+            
+            let viewParent:ViewParent = parentController?.view as? ViewParent
+            
+        else
+        {
+            return
+        }
+        
+        let order:MMenuOrder = MMenuOrder.plans
+        viewParent.viewMenu.synthSelect(
+            order:order)
+    }
 }
