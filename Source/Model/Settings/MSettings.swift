@@ -15,10 +15,12 @@ final class MSettings:Model<ArchSettings>
     //MARK: private
     
     private func loadSettings(
-        settings:DSettings)
+        settings:DSettings,
+        database:Database)
     {
         items = MSettings.factoryItems(
-            settings:settings)
+            settings:settings,
+            database:database)
         
         view?.settingsLoaded()
     }
@@ -51,7 +53,8 @@ final class MSettings:Model<ArchSettings>
             }
             
             self?.loadSettings(
-                settings:settings)
+                settings:settings,
+                database:database)
         }
     }
 }

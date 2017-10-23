@@ -2,13 +2,33 @@ import Foundation
 
 extension MSettings
 {
+    //MARK: private
+    
+    private class func factoryItemTypes() -> [MSettingsProtocol.Type]
+    {
+        let types:[MSettingsProtocol.Type] = [
+            MSettingsTravelMode.self]
+        
+        return types
+    }
+    
     //MARK: internal
     
     class func factoryItems(
-        settings:DSettings) -> [MSettingsProtocol]
+        settings:DSettings,
+        database:Database) -> [MSettingsProtocol]
     {
-        let items:[MSettingsProtocol] = [
-        ]
+        let itemTypes:[MSettingsProtocol.Type] = factoryItemTypes()
+        var items:[MSettingsProtocol] = []
+        
+        for itemType:MSettingsProtocol.Type in itemTypes
+        {
+            let item:MSettingsProtocol = itemType.init(
+                settings:settings,
+                database:database)
+            
+            items.append(item)
+        }
         
         return items
     }
