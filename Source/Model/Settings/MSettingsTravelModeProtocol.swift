@@ -2,6 +2,6 @@ import UIKit
 
 protocol MSettingsTravelModeProtocol
 {
-    var icon:UIImage { get }
     var mode:DPlanTravelMode { get }
+    var icon:UIImage { get }
 }
