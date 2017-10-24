@@ -24,6 +24,8 @@ extension VSettingsListCellTravelModeList
             at:indexPath,
             animated:false,
             scrollPosition:UICollectionViewScrollPosition())
+        
+        updateSelector()
     }
     
     //MARK: internal
@@ -51,6 +53,31 @@ extension VSettingsListCellTravelModeList
         { [weak self] in
             
             self?.asyncSelectCurrent()
+        }
+    }
+    
+    func updateSelector()
+    {
+        guard
+        
+            let selected:IndexPath = collectionView.indexPathsForSelectedItems?.first,
+            let cell:UICollectionViewCell = collectionView.cellForItem(
+                at:selected)
+            
+        else
+        {
+            return
+        }
+        
+        let cellX:CGFloat = cell.center.x
+        let cellY:CGFloat = cell.center.y
+        layoutSelectorLeft.constant = cellX - selectorSize_2
+        layoutSelectorTop.constant = cellY - selectorSize_2
+        
+        UIView.animate(withDuration:kAnimationDuration)
+        { [weak self] in
+            
+            self?.layoutIfNeeded()
         }
     }
 }

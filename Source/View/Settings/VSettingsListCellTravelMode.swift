@@ -4,7 +4,7 @@ final class VSettingsListCellTravelMode:VSettingsListCell
 {
     private weak var model:MSettingsTravelMode?
     private weak var viewList:VSettingsListCellTravelModeList?
-    private let kLabelHeight:CGFloat = 80
+    private let kLabelHeight:CGFloat = 70
     private let kListBottom:CGFloat = -20
     
     override init(frame:CGRect)

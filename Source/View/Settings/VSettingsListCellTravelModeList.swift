@@ -6,11 +6,19 @@ final class VSettingsListCellTravelModeList:
     VSettingsListCellTravelModeListCell>
 {
     weak var model:MSettingsTravelMode?
+    weak var viewSelector:VSettingsListCellTravelModeListSelector!
+    weak var layoutSelectorLeft:NSLayoutConstraint!
+    weak var layoutSelectorTop:NSLayoutConstraint!
+    let selectorSize_2:CGFloat
+    let kSelectorSize:CGFloat = 60
+    let kAnimationDuration:TimeInterval = 0.3
     let kWaitToSelect:TimeInterval = 0.15
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
     {
+        selectorSize_2 = kSelectorSize / 2.0
+        
         super.init(controller:controller)
         config()
         selectCurrent()
@@ -122,5 +130,6 @@ final class VSettingsListCellTravelModeList:
         didSelectItemAt indexPath:IndexPath)
     {
         model?.selected(index:indexPath.item)
+        updateSelector()
     }
 }
