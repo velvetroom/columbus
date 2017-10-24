@@ -53,7 +53,9 @@ final class VSettingsList:VCollection<
             reusableIdentifier:item.reusableIdentifier,
             indexPath:indexPath)
         
-        cell.config(model:item)
+        cell.config(
+            controller:controller,
+            model:item)
         
         return cell
     }
