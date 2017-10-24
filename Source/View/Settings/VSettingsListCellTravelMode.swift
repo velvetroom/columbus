@@ -36,6 +36,7 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         self.model = model
         
         factoryList()
+        reloadList()
     }
     
     //MARK: private
@@ -49,8 +50,6 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         
         else
         {
-            self.viewList?.collectionView.reloadData()
-            
             return
         }
         
@@ -70,5 +69,19 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         NSLayoutConstraint.equalsHorizontal(
             view:viewList,
             toView:self)
+    }
+    
+    private func reloadList()
+    {
+        guard
+        
+            let model:MSettingsTravelMode = self.model
+        
+        else
+        {
+            return
+        }
+        
+        viewList?.reload(model:model)
     }
 }

@@ -5,5 +5,5 @@ final class VSettingsListCellTravelModeList:
     ArchSettings,
     VSettingsListCellTravelModeListCell>
 {
-    
+    weak var model:MSettingsTravelMode?
 }
