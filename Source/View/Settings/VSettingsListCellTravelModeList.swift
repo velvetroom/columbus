@@ -10,9 +10,9 @@ final class VSettingsListCellTravelModeList:
     weak var layoutSelectorLeft:NSLayoutConstraint!
     weak var layoutSelectorTop:NSLayoutConstraint!
     let selectorSize_2:CGFloat
-    let kSelectorSize:CGFloat = 60
-    let kAnimationDuration:TimeInterval = 0.3
-    let kWaitToSelect:TimeInterval = 0.15
+    let kSelectorSize:CGFloat = 50
+    let kAnimationDuration:TimeInterval = 0.2
+    let kWaitToSelect:TimeInterval = 0.1
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
