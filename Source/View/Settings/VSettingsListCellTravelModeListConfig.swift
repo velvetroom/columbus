@@ -14,12 +14,4 @@ extension VSettingsListCellTravelModeList
             flow.scrollDirection = UICollectionViewScrollDirection.horizontal
         }
     }
-    
-    func modelAtIndex(index:IndexPath) -> MSettingsTravelModeProtocol
-    {
-        let item:MSettingsTravelModeProtocol = model!.items[
-            index.item]
-        
-        return item
-    }
 }

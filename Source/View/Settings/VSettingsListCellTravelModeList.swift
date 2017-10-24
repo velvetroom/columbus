@@ -12,6 +12,7 @@ final class VSettingsListCellTravelModeList:
     {
         super.init(controller:controller)
         config()
+        selectCurrent()
     }
     
     required init?(coder:NSCoder)
