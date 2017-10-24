@@ -6,13 +6,14 @@ final class VSettingsListCellTravelModeList:
     VSettingsListCellTravelModeListCell>
 {
     weak var model:MSettingsTravelMode?
-    let kWaitToSelect:TimeInterval = 0.3
+    let kWaitToSelect:TimeInterval = 0.15
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
     {
         super.init(controller:controller)
         config()
+        selectCurrent()
     }
     
     required init?(coder:NSCoder)
@@ -120,6 +121,6 @@ final class VSettingsListCellTravelModeList:
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        
+        model?.selected(index:indexPath.item)
     }
 }

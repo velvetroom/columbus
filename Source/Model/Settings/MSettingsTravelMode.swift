@@ -20,4 +20,12 @@ final class MSettingsTravelMode:MSettingsProtocol
         indexMap = MSettingsTravelMode.factoryIndexMap(
             items:items)
     }
+    
+    //MARK: internal
+    
+    func selected(index:Int)
+    {
+        settings.travelMode = items[index].mode
+        database.save { }
+    }
 }
