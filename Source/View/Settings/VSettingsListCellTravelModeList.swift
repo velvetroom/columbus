@@ -6,13 +6,13 @@ final class VSettingsListCellTravelModeList:
     VSettingsListCellTravelModeListCell>
 {
     weak var model:MSettingsTravelMode?
+    let kWaitToSelect:TimeInterval = 0.3
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
     {
         super.init(controller:controller)
         config()
-        selectCurrent()
     }
     
     required init?(coder:NSCoder)
