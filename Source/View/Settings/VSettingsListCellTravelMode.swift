@@ -4,7 +4,8 @@ final class VSettingsListCellTravelMode:VSettingsListCell
 {
     private weak var model:MSettingsTravelMode?
     private weak var viewList:VSettingsListCellTravelModeList?
-    private let kTitleHeight:CGFloat = 50
+    private let kLabelHeight:CGFloat = 80
+    private let kListBottom:CGFloat = -20
     
     override init(frame:CGRect)
     {
@@ -62,10 +63,11 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         NSLayoutConstraint.topToTop(
             view:viewList,
             toView:self,
-            constant:kTitleHeight)
+            constant:kLabelHeight)
         NSLayoutConstraint.bottomToBottom(
             view:viewList,
-            toView:self)
+            toView:self,
+            constant:kListBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:viewList,
             toView:self)

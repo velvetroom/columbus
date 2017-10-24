@@ -22,7 +22,7 @@ final class VSettingsListCellTravelModeListCell:
         
         NSLayoutConstraint.equals(
             view:imageView,
-            toView:imageView)
+            toView:self)
     }
     
     required init?(coder:NSCoder)
