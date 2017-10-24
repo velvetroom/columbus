@@ -4,6 +4,7 @@ final class MSettings:Model<ArchSettings>
 {
     private(set) var items:[MSettingsProtocol]
     private var database:Database?
+    private var settings:DSettings?
     
     required init()
     {
@@ -18,6 +19,7 @@ final class MSettings:Model<ArchSettings>
         settings:DSettings,
         database:Database)
     {
+        self.settings = settings
         items = MSettings.factoryItems(
             settings:settings,
             database:database)
