@@ -14,4 +14,11 @@ final class VSettingsListCellTravelModeListCell:
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func config(model:MSettingsTravelModeProtocol)
+    {
+        
+    }
 }
