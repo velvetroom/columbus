@@ -14,9 +14,13 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         return nil
     }
     
-    override func config(model:MSettingsProtocol)
+    override func config(
+        controller:CSettings,
+        model:MSettingsProtocol)
     {
-        super.config(model:model)
+        super.config(
+            controller:controller,
+            model:model)
         
         guard
         

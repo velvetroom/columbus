@@ -2,6 +2,7 @@ import UIKit
 
 class VSettingsListCell:UICollectionViewCell
 {
+    private(set) weak var controller:CSettings?
     private let kBorderHeight:CGFloat = 1
     
     override init(frame:CGRect)
@@ -46,5 +47,10 @@ class VSettingsListCell:UICollectionViewCell
     
     //MARK: internal
     
-    func config(model:MSettingsProtocol) { }
+    func config(
+        controller:CSettings,
+        model:MSettingsProtocol)
+    {
+        self.controller = controller
+    }
 }
