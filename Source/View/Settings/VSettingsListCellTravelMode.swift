@@ -2,13 +2,17 @@ import UIKit
 
 final class VSettingsListCellTravelMode:VSettingsListCell
 {
+    weak var viewList:VSettingsListCellTravelModeList?
+    let kCaptionHeight:CGFloat = 90
+    let kCaptionLeft:CGFloat = 20
+    let kTitleFontSize:CGFloat = 16
+    let kDescrFontSize:CGFloat = 14
     private weak var model:MSettingsTravelMode?
-    private weak var viewList:VSettingsListCellTravelModeList?
-    private let kLabelHeight:CGFloat = 70
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
+        factoryCaption()
     }
     
     required init?(coder:NSCoder)
@@ -40,36 +44,6 @@ final class VSettingsListCellTravelMode:VSettingsListCell
     }
     
     //MARK: private
-    
-    private func factoryList()
-    {
-        guard
-        
-            self.viewList == nil,
-            let controller:CSettings = self.controller
-        
-        else
-        {
-            return
-        }
-        
-        let viewList:VSettingsListCellTravelModeList = VSettingsListCellTravelModeList(
-            controller:controller)
-        self.viewList = viewList
-        
-        addSubview(viewList)
-        
-        NSLayoutConstraint.topToTop(
-            view:viewList,
-            toView:self,
-            constant:kLabelHeight)
-        NSLayoutConstraint.bottomToBottom(
-            view:viewList,
-            toView:self)
-        NSLayoutConstraint.equalsHorizontal(
-            view:viewList,
-            toView:self)
-    }
     
     private func reloadList()
     {

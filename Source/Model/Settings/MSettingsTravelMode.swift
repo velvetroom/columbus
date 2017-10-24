@@ -3,7 +3,7 @@ import UIKit
 final class MSettingsTravelMode:MSettingsProtocol
 {
     let reusableIdentifier:String = VSettingsListCellTravelMode.reusableIdentifier
-    let cellHeight:CGFloat = 170
+    let cellHeight:CGFloat = 190
     let items:[MSettingsTravelModeProtocol]
     let indexMap:[DPlanTravelMode:Int]
     private(set) weak var settings:DSettings!

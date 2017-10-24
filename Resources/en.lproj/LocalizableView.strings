@@ -4,3 +4,5 @@ VCreateStatusDenied_title="Location access denied";
 VCreateStatusDenied_descr="\nEnable access to your location\non your device's settings\nin the Columbus section";
 VCreateStatusError_title="Error";
 VSettingsBar_labelTitle="Settings";
+VSettingsListCellTravelMode_title="Default traveling mode";
+VSettingsListCellTravelMode_descr="\nYou can change traveling mode\nwhen editing each Plan";
