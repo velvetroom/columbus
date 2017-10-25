@@ -79,20 +79,6 @@ extension MCreatePlan
         selectLastStop()
     }
     
-    private func addAnnotation(stop:DPlanStop)
-    {
-        guard
-            
-            let view:VCreateStatusReady = model?.view?.view as? VCreateStatusReady
-            
-        else
-        {
-            return
-        }
-        
-        view.viewMap.addStop(stop:stop)
-    }
-    
     //MARK: internal
     
     func addStop(coordinate:CLLocationCoordinate2D)

@@ -1,55 +1,26 @@
 import Foundation
-import CoreLocation
 
 extension MCreatePlan
 {
-    //MARK: private
-    
-    private func updated(stop:DPlanStop)
+    private var view:VCreateStatusReady?
     {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.asyncUpdated(stop:stop)
-        }
-    }
-    
-    private func asyncUpdated(stop:DPlanStop)
-    {
-        guard
-            
-            let view:VCreateStatusReady = model?.view?.view as? VCreateStatusReady
-            
-        else
+        get
         {
-            return
+            return model?.view?.view as? VCreateStatusReady
         }
-        
-        view.viewBar.viewStops.updateLocation(
-            stop:stop)
     }
     
     //MARK: internal
     
     func updateStops()
     {
-        guard
-            
-            let view:VCreateStatusReady = model?.view?.view as? VCreateStatusReady
-            
-        else
-        {
-            return
-        }
-        
-        view.viewBar.reload()
+        view?.viewBar.reload()
     }
     
     func selectLastStop()
     {
         guard
             
-            let view:VCreateStatusReady = model?.view?.view as? VCreateStatusReady,
             let totalStops:Int = plan.stops?.count
             
         else
@@ -58,21 +29,23 @@ extension MCreatePlan
         }
         
         let lastStop:Int = totalStops - 1
-        view.viewBar.viewStops.selectItem(
+        view?.viewBar.viewStops.selectItem(
             index:lastStop)
     }
     
-    func update(stop:DPlanStop)
+    func addAnnotation(stop:DPlanStop)
     {
-        let location:CLLocation = MCreatePlan.factoryLocation(
+        view?.viewMap.addStop(stop:stop)
+    }
+    
+    func removeAnnotation(stop:DPlanStop)
+    {
+        view?.viewMap.removeAnnotation(stop)
+    }
+    
+    func updated(stop:DPlanStop)
+    {
+        view?.viewBar.viewStops.updateLocation(
             stop:stop)
-        
-        geocodeLocation(location:location)
-        { [weak self] (name:String?) in
-            
-            stop.name = name
-            
-            self?.updated(stop:stop)
-        }
     }
 }
