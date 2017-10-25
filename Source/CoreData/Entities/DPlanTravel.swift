@@ -2,49 +2,11 @@ import Foundation
 
 extension DPlanTravel
 {
-    var status:DPlanTravelStatus
-    {
-        get
-        {
-            guard
-                
-                let status:DPlanTravelStatus = DPlanTravelStatus(
-                    rawValue:rawStatus)
-                
-            else
-            {
-                return DPlanTravelStatus.unknown
-            }
-            
-            return status
-        }
-        
-        set(newValue)
-        {
-            rawStatus = newValue.rawValue
-        }
-    }
+    //MARK: internal
     
-    var mode:DPlanTravelMode
+    func initialValues()
     {
-        get
-        {
-            guard
-            
-                let mode:DPlanTravelMode = DPlanTravelMode(
-                    rawValue:rawMode)
-            
-            else
-            {
-                return DPlanTravelMode.unknown
-            }
-            
-            return mode
-        }
-        
-        set(newValue)
-        {
-            rawMode = newValue.rawValue
-        }
+        status = DPlanTravelStatus.unknown
+        mode = DPlanTravelMode.unknown
     }
 }

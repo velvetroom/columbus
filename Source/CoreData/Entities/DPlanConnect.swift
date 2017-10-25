@@ -16,6 +16,8 @@ extension DPlan
         database.create
         { [weak self] (travel:DPlanTravel) in
             
+            travel.initialValues()
+            
             self?.connect(
                 settings:settings,
                 stop:stop,
