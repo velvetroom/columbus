@@ -41,6 +41,7 @@ extension MCreatePlan
     {
         travel.duration = route.expectedTravelTime
         travel.distance = Float(route.distance)
+        travel.route = route.polyline
         travel.status = DPlanTravelStatus.ready
         
         completion()

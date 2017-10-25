@@ -56,6 +56,8 @@ extension MCreatePlan
             return
         }
         
+        //self!.add(newPolyLine, level:MKOverlayLevel.aboveRoads)
+        
         factoryDirections(travel:travel)
         { [weak self] in
             
