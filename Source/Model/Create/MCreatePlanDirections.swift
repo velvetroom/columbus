@@ -21,7 +21,8 @@ extension MCreatePlan
             
             else
             {
-                
+                travel.status = DPlanTravelStatus.routeNotFound
+                completion()
                 
                 return
             }
@@ -40,6 +41,7 @@ extension MCreatePlan
     {
         travel.duration = route.expectedTravelTime
         travel.distance = Float(route.distance)
+        travel.status = DPlanTravelStatus.ready
         
         completion()
     }
