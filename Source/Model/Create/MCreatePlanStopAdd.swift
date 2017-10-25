@@ -54,7 +54,7 @@ extension MCreatePlan
             return
         }
         
-        directions(travel:travel)
+        factoryDirections(travel:travel)
         { [weak self] in
             
             self?.stopAdded(stop:stop)

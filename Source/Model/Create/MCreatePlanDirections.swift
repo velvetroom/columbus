@@ -3,45 +3,64 @@ import MapKit
 extension MCreatePlan
 {
     //MARK: private
-    
-    private func factoryRequest(
-        travel:DPlanTravel) -> MKDirectionsRequest?
+  
+    private func calculateDirections(
+        directions:MKDirections,
+        travel:DPlanTravel,
+        completion:@escaping(() -> ()))
     {
-        guard
-        
-            let origin:DPlanStop = travel.origin,
-            let destination:DPlanStop = travel.destination
-        
-        else
-        {
-            return nil
+        directions.calculate
+        { [weak self] (
+            response:MKDirectionsResponse?,
+            error:Error?) in
+            
+            guard
+            
+                error == nil,
+                let route:MKRoute = response?.routes.first
+            
+            else
+            {
+                return
+            }
+            
+            self?.calculateDirections(
+                route:route,
+                travel:travel,
+                completion:completion)
         }
-        
-        let itemOrigin:MKMapItem = factoryMapItem(
-            stop:origin)
-        let itemDestination:MKMapItem = factoryMapItem(
-            stop:destination)
-        
     }
     
-    private func factoryMapItem(
-        stop:DPlanStop) -> MKMapItem
+    private func calculateDirections(
+        route:MKRoute,
+        travel:DPlanTravel,
+        completion:@escaping(() -> ()))
     {
-        let placemark:MKPlacemark = MKPlacemark(
-            coordinate:stop.coordinate,
-            addressDictionary:nil)
-        let mapItem:MKMapItem = MKMapItem(
-            placemark:placemark)
+        travel.duration = route.expectedTravelTime
+        travel.distance = Float(route.distance)
         
-        return mapItem
+        completion()
     }
     
     //MARK: internal
     
-    func directions(
+    func factoryDirections(
         travel:DPlanTravel,
         completion:@escaping(() -> ()))
     {
+        guard
         
+            let directions:MKDirections = factoryDirections(
+                travel:travel)
+        
+        else
+        {
+            return
+        }
+        
+        calculateDirections(
+            directions:directions,
+            travel:travel,
+            completion:completion)
     }
 }
