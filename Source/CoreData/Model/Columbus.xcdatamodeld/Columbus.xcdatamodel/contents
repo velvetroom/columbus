@@ -16,9 +16,11 @@
         <relationship name="plan" maxCount="1" deletionRule="Nullify" destinationEntity="DPlan" inverseName="stops" inverseEntity="DPlan" syncable="YES"/>
     </entity>
     <entity name="DPlanTravel" representedClassName="DPlanTravel" syncable="YES" codeGenerationType="class">
-        <attribute name="distance" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="duration" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rawStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="route" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="destination" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="destinationTravel" inverseEntity="DPlanStop" syncable="YES"/>
         <relationship name="origin" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="originTravel" inverseEntity="DPlanStop" syncable="YES"/>
     </entity>
@@ -28,7 +30,7 @@
     <elements>
         <element name="DPlan" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="DPlanStop" positionX="-54" positionY="0" width="128" height="30"/>
-        <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="150"/>
         <element name="DSettings" positionX="-54" positionY="54" width="128" height="60"/>
     </elements>
 </model>
