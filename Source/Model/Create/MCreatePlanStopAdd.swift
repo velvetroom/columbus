@@ -7,6 +7,7 @@ extension MCreatePlan
     
     private func addStop(
         database:Database,
+        settings:DSettings,
         name:String,
         coordinate:CLLocationCoordinate2D)
     {
@@ -15,6 +16,7 @@ extension MCreatePlan
             
             self?.addStop(
                 database:database,
+                settings:settings,
                 stop:stop,
                 name:name,
                 coordinate:coordinate)
@@ -23,6 +25,7 @@ extension MCreatePlan
     
     private func addStop(
         database:Database,
+        settings:DSettings,
         stop:DPlanStop,
         name:String,
         coordinate:CLLocationCoordinate2D)
@@ -32,6 +35,7 @@ extension MCreatePlan
         
         plan.connect(
             database:database,
+            settings:settings,
             stop:stop)
         { [weak self] in
             
@@ -95,7 +99,8 @@ extension MCreatePlan
     {
         guard
             
-            let database:Database = model?.database
+            let database:Database = model?.database,
+            let settings:DSettings = model?.settings
         
         else
         {
@@ -119,6 +124,7 @@ extension MCreatePlan
             
             self?.addStop(
                 database:database,
+                settings:settings,
                 name:name,
                 coordinate:coordinate)
         }

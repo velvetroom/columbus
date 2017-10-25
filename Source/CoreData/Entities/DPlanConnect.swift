@@ -6,6 +6,7 @@ extension DPlan
     
     private func connect(
         database:Database,
+        settings:DSettings,
         stop:DPlanStop,
         lastStop:DPlanStop,
         completion:@escaping(() -> ()))
@@ -16,6 +17,7 @@ extension DPlan
         { [weak self] (travel:DPlanTravel) in
             
             self?.connect(
+                settings:settings,
                 stop:stop,
                 lastStop:lastStop,
                 travel:travel,
@@ -24,11 +26,13 @@ extension DPlan
     }
     
     private func connect(
+        settings:DSettings,
         stop:DPlanStop,
         lastStop:DPlanStop,
         travel:DPlanTravel,
         completion:@escaping(() -> ()))
     {
+        travel.mode = settings.travelMode
         travel.origin = lastStop
         travel.destination = stop
         
@@ -39,6 +43,7 @@ extension DPlan
     
     func connect(
         database:Database,
+        settings:DSettings,
         stop:DPlanStop,
         completion:@escaping(() -> ()))
     {
@@ -56,6 +61,7 @@ extension DPlan
         
         connect(
             database:database,
+            settings:settings,
             stop:stop,
             lastStop:lastStop,
             completion:completion)
