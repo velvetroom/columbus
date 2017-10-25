@@ -13,10 +13,10 @@ final class MCreate:Model<ArchCreate>
     required init()
     {
         locationDelegate = MCreateLocationDelegate()
-        factorySettings()
         
         super.init()
         
+        factorySettings()
         locationDelegate.model = self
     }
     

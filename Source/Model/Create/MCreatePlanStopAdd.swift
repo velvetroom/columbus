@@ -6,6 +6,7 @@ extension MCreatePlan
     //MARK: private
     
     private func addStop(
+        database:Database,
         name:String,
         coordinate:CLLocationCoordinate2D)
     {
@@ -13,6 +14,7 @@ extension MCreatePlan
         { [weak self] (stop:DPlanStop) in
             
             self?.addStop(
+                database:database,
                 stop:stop,
                 name:name,
                 coordinate:coordinate)
@@ -20,6 +22,7 @@ extension MCreatePlan
     }
     
     private func addStop(
+        database:Database,
         stop:DPlanStop,
         name:String,
         coordinate:CLLocationCoordinate2D)
@@ -90,6 +93,15 @@ extension MCreatePlan
     
     func addStop(coordinate:CLLocationCoordinate2D)
     {
+        guard
+            
+            let database:Database = model?.database
+        
+        else
+        {
+            return
+        }
+        
         let location:CLLocation = MCreatePlan.factoryLocation(
             coordinate:coordinate)
         
@@ -106,6 +118,7 @@ extension MCreatePlan
             }
             
             self?.addStop(
+                database:database,
                 name:name,
                 coordinate:coordinate)
         }

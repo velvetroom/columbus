@@ -2,7 +2,9 @@ import Foundation
 
 extension MCreatePlan
 {
-    private func removed(stop:DPlanStop)
+    private func removed(
+        database:Database,
+        stop:DPlanStop)
     {
         plan.disconnect(
             database:database,
@@ -41,10 +43,21 @@ extension MCreatePlan
     
     func remove(stop:DPlanStop)
     {
+        guard
+            
+            let database:Database = model?.database
+        
+        else
+        {
+            return
+        }
+        
         database.delete(data:stop)
         { [weak self] in
             
-            self?.removed(stop:stop)
+            self?.removed(
+                database:database,
+                stop:stop)
         }
     }
 }

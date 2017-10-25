@@ -6,19 +6,8 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     
     //MARK: private
     
-    private func startPlan()
+    private func startPlan(database:Database)
     {
-        guard
-        
-            let database:Database = Database(bundle:nil)
-        
-        else
-        {
-            databaseError()
-            
-            return
-        }
-        
         database.create
         { [weak self] (coredataPlan:DPlan) in
             
@@ -33,7 +22,6 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
             
             let modelPlan:MCreatePlan = MCreatePlan(
                 model:model,
-                database:database,
                 plan:coredataPlan)
             
             self?.planReady(plan:modelPlan)
@@ -69,6 +57,18 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     func nextStep(model:MCreate)
     {
         self.model = model
-        startPlan()
+        
+        guard
+            
+            let database:Database = model.database
+            
+        else
+        {
+            databaseError()
+            
+            return
+        }
+        
+        startPlan(database:database)
     }
 }

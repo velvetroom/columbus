@@ -6,7 +6,7 @@ extension MCreatePlan
     
     func save(completion:@escaping(() -> ()))
     {
-        database.save
+        model?.database?.save
         {
             completion()
         }
