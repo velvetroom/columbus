@@ -5,6 +5,9 @@ final class VCreateStatusReadyMap:MKMapView
     private(set) weak var controller:CCreate!
     var shouldUpdate:Bool
     let span:MKCoordinateSpan
+    let rendererStrokeColour:UIColor
+    let kRendererLineDash:[NSNumber] = [1, 10]
+    let kRendererWidth:CGFloat = 6
     private let kSpanSize:CLLocationDegrees = 0.03
     
     init(controller:CCreate)
@@ -13,6 +16,8 @@ final class VCreateStatusReadyMap:MKMapView
         span = MKCoordinateSpan(
             latitudeDelta:kSpanSize,
             longitudeDelta:kSpanSize)
+        rendererStrokeColour = UIColor.colourSuccess.withAlphaComponent(
+            0.6)
         
         super.init(frame:CGRect.zero)
         clipsToBounds = true

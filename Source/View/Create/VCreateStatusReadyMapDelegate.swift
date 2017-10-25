@@ -69,4 +69,14 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
             annotation:view,
             state:newState)
     }
+    
+    func mapView(
+        _ mapView:MKMapView,
+        rendererFor overlay:MKOverlay) -> MKOverlayRenderer
+    {
+        let renderer:MKOverlayRenderer = factoryRenderer(
+            overlay:overlay)
+        
+        return renderer
+    }
 }

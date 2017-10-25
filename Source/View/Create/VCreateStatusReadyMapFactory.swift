@@ -34,4 +34,27 @@ extension VCreateStatusReadyMap
         
         return annotationView
     }
+    
+    func factoryRenderer(
+        overlay:MKOverlay) -> MKOverlayRenderer
+    {
+        guard
+            
+            let polyline:MKPolyline = overlay as? MKPolyline
+        
+        else
+        {
+            let renderer:MKOverlayRenderer = MKOverlayRenderer()
+            
+            return renderer
+        }
+        
+        let renderer:MKPolylineRenderer = MKPolylineRenderer(
+            polyline:polyline)
+        renderer.lineWidth = kRendererWidth
+        renderer.strokeColor = rendererStrokeColour
+        renderer.lineDashPattern = kRendererLineDash
+        
+        return renderer
+    }
 }
