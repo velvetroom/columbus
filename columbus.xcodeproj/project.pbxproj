@@ -15,6 +15,7 @@
 		DA0448051F97559A00BA2D45 /* VCreateStatusReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */; };
 		DA0448071F9756CF00BA2D45 /* VCreateStatusReadyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */; };
 		DA0448091F9756D700BA2D45 /* VCreateStatusReadyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */; };
+		DA06799E1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06799D1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift */; };
 		DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */; };
 		DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */; };
 		DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E821F9928C4000240F2 /* Columbus.xcdatamodeld */; };
@@ -206,6 +207,7 @@
 		DA0448041F97559A00BA2D45 /* VCreateStatusReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReady.swift; sourceTree = "<group>"; };
 		DA0448061F9756CF00BA2D45 /* VCreateStatusReadyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMap.swift; sourceTree = "<group>"; };
 		DA0448081F9756D700BA2D45 /* VCreateStatusReadyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBar.swift; sourceTree = "<group>"; };
+		DA06799D1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravelModeFactory.swift; sourceTree = "<group>"; };
 		DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuStop.swift; sourceTree = "<group>"; };
 		DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuDone.swift; sourceTree = "<group>"; };
 		DA0A5E831F9928C4000240F2 /* Columbus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Columbus.xcdatamodel; sourceTree = "<group>"; };
@@ -681,6 +683,7 @@
 				DA13F6511F99C4C800DF92F5 /* DPlanStopAnnotation.swift */,
 				DAA5B48C1F99370200F9121C /* DPlanTravel.swift */,
 				DAA5B48E1F99371C00F9121C /* DPlanTravelMode.swift */,
+				DA06799D1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift */,
 				DAE184931F9EA44C00D29126 /* DSettings.swift */,
 			);
 			path = Entities;
@@ -1079,6 +1082,7 @@
 				DA65ECDF1F95E68700720673 /* ExtensionUIColor.swift in Sources */,
 				DA4E5B031F97DB6600B7BE3E /* MCreateMapMenuProtocol.swift in Sources */,
 				DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */,
+				DA06799E1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift in Sources */,
 				DAA5B4911F993B0B00F9121C /* MCreatePlan.swift in Sources */,
 				DA4BC9371F9AC44E00453655 /* VCreateStatusReadyBarActions.swift in Sources */,
 				DA0448071F9756CF00BA2D45 /* VCreateStatusReadyMap.swift in Sources */,
