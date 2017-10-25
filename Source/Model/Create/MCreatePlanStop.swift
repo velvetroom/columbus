@@ -1,4 +1,4 @@
-import Foundation
+import MapKit
 
 extension MCreatePlan
 {
@@ -47,5 +47,35 @@ extension MCreatePlan
     {
         view?.viewBar.viewStops.updateLocation(
             stop:stop)
+    }
+    
+    func removeTravel(travel:DPlanTravel)
+    {
+        guard
+            
+            let route:MKPolyline = travel.route
+        
+        else
+        {
+            return
+        }
+        
+        view?.viewMap.remove(
+            route)
+    }
+    
+    func addTravel(travel:DPlanTravel)
+    {
+        guard
+            
+            let route:MKPolyline = travel.route
+            
+        else
+        {
+            return
+        }
+        
+        view?.viewMap.addRoute(
+            travel:travel)
     }
 }

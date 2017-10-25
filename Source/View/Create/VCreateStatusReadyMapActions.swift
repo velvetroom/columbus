@@ -63,9 +63,23 @@ extension VCreateStatusReadyMap
             stop:stop)
         
         guard
+            
+            let travel:DPlanTravel = stop.destinationTravel
+            
+        else
+        {
+            return
+        }
         
-            let route:MKPolyline = stop.destinationTravel?.route
-        
+        addRoute(travel:travel)
+    }
+    
+    func addRoute(travel:DPlanTravel)
+    {
+        guard
+            
+            let route:MKPolyline = travel.route
+            
         else
         {
             return

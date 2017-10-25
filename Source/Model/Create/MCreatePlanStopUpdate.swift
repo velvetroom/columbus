@@ -18,9 +18,12 @@ extension MCreatePlan
             return
         }
         
+        asyncRemove(travel:travel)
+        
         factoryDirections(travel:travel)
         { [weak self] in
             
+            self?.asyncAdd(travel:travel)
             self?.configTravelDestination(
                 stop:stop)
         }
@@ -34,14 +37,17 @@ extension MCreatePlan
             
         else
         {
-            update(stop:stop)
+            asyncUpdate(stop:stop)
             
             return
         }
         
+        asyncRemove(travel:travel)
+        
         factoryDirections(travel:travel)
         { [weak self] in
             
+            self?.asyncAdd(travel:travel)
             self?.asyncUpdate(stop:stop)
         }
     }
@@ -52,6 +58,24 @@ extension MCreatePlan
         { [weak self] in
             
             self?.updated(stop:stop)
+        }
+    }
+    
+    private func asyncRemove(travel:DPlanTravel)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.removeTravel(travel:travel)
+        }
+    }
+    
+    private func asyncAdd(travel:DPlanTravel)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+                
+            self?.addTravel(travel:travel)
         }
     }
     
