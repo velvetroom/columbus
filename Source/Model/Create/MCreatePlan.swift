@@ -4,9 +4,9 @@ import CoreLocation
 final class MCreatePlan
 {
     var geocoder:CLGeocoder?
-    private(set) weak var model:MCreate?
     let database:Database
     let plan:DPlan
+    private(set) weak var model:MCreate?
     
     init(
         model:MCreate,

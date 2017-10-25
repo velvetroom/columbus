@@ -4,6 +4,8 @@ final class MCreate:Model<ArchCreate>
 {
     var plan:MCreatePlan?
     let locationDelegate:MCreateLocationDelegate
+    private(set) var database:Database?
+    private(set) var settings:DSettings?
     private(set) var status:MCreateStatusProtocol?
     private(set) var mapStatus:MCreateMapStatusProtocol?
     private(set) var locationStrategy:MCreateLocationStrategyProtocol?
