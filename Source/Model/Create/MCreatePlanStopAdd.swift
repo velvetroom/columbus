@@ -51,6 +51,8 @@ extension MCreatePlan
         
         else
         {
+            stopAdded(stop:stop)
+            
             return
         }
         

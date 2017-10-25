@@ -1,6 +1,6 @@
 import Foundation
 
-enum DPlanStatus:UInt16
+enum DPlanTravelStatus:Int16
 {
     case unknown
     case routeNotFound

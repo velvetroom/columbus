@@ -2,6 +2,29 @@ import Foundation
 
 extension DPlanTravel
 {
+    var status:DPlanTravelStatus
+    {
+        get
+        {
+            guard
+                
+                let status:DPlanTravelStatus = DPlanTravelStatus(
+                    rawValue:rawStatus)
+                
+            else
+            {
+                return DPlanTravelStatus.unknown
+            }
+            
+            return status
+        }
+        
+        set(newValue)
+        {
+            rawStatus = newValue.rawValue
+        }
+    }
+    
     var mode:DPlanTravelMode
     {
         get
