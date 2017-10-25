@@ -55,4 +55,24 @@ extension VCreateStatusReadyMap
         
         view.viewBar.viewStops.deselectAll()
     }
+    
+    func addStop(stop:DPlanStop)
+    {
+        addAnnotation(stop)
+        centreAndSelect(
+            stop:stop)
+        
+        guard
+        
+            let route:MKPolyline = stop.destinationTravel?.route
+        
+        else
+        {
+            return
+        }
+        
+        add(
+            route,
+            level:MKOverlayLevel.aboveRoads)
+    }
 }

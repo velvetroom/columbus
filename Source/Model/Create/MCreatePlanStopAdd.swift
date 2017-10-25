@@ -56,8 +56,6 @@ extension MCreatePlan
             return
         }
         
-        //self!.add(newPolyLine, level:MKOverlayLevel.aboveRoads)
-        
         factoryDirections(travel:travel)
         { [weak self] in
             
@@ -92,9 +90,7 @@ extension MCreatePlan
             return
         }
         
-        view.viewMap.addAnnotation(stop)
-        view.viewMap.centreAndSelect(
-            stop:stop)
+        view.viewMap.addStop(stop:stop)
     }
     
     //MARK: internal
