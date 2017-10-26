@@ -3,9 +3,7 @@ import UIKit
 final class VCreateStatusReadyBarStopsFooter:
     UICollectionReusableView
 {
-    weak var labelDistanceTitle:UILabel!
     weak var labelDistanceValue:UILabel!
-    weak var labelDurationTitle:UILabel!
     weak var labelDurationValue:UILabel!
     let kFontSize:CGFloat = 14
     let kTitleLeft:CGFloat = 10

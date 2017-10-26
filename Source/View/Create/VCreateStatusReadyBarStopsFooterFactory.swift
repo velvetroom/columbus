@@ -12,7 +12,8 @@ extension VCreateStatusReadyBarStopsFooter
         labelDistanceTitle.backgroundColor = UIColor.clear
         labelDistanceTitle.font = UIFont.medium(size:kFontSize)
         labelDistanceTitle.textColor = UIColor.white
-        self.labelDistanceTitle = labelDistanceTitle
+        labelDistanceTitle.text = String.localizedView(
+            key:"VCreateStatusReadyBarStopsFooter_labelDistanceTitle")
         
         let labelDistanceValue:UILabel = UILabel()
         labelDistanceValue.isUserInteractionEnabled = false
@@ -28,7 +29,8 @@ extension VCreateStatusReadyBarStopsFooter
         labelDurationTitle.backgroundColor = UIColor.clear
         labelDurationTitle.font = UIFont.medium(size:kFontSize)
         labelDurationTitle.textColor = UIColor.white
-        self.labelDurationTitle = labelDurationTitle
+        labelDurationTitle.text = String.localizedView(
+            key:"VCreateStatusReadyBarStopsFooter_labelDurationTitle")
         
         let labelDurationValue:UILabel = UILabel()
         labelDurationValue.isUserInteractionEnabled = false
