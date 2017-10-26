@@ -52,7 +52,7 @@ extension MCreatePlan
         travel:DPlanTravel,
         completion:@escaping(() -> ()))
     {
-        travel.cleanValues()
+        travel.cleanRoute()
         travel.status = DPlanTravelStatus.routeNotFound
         
         completion()

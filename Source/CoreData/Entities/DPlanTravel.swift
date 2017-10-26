@@ -37,7 +37,7 @@ extension DPlanTravel
     
     //MARK: internal
     
-    func cleanValues()
+    func cleanRoute()
     {
         distance = 0
         duration = 0
