@@ -92,7 +92,6 @@ class VCollection<A, Cell:UICollectionViewCell>:
     
     final func reusableAtIndex<P:UICollectionReusableView>(
         kind:String,
-        type:P.Type,
         indexPath:IndexPath) -> P
     {
         let reusable:P = collectionView.dequeueReusableSupplementaryView(
@@ -216,7 +215,6 @@ class VCollection<A, Cell:UICollectionViewCell>:
     {
         let reusable:UICollectionReusableView = reusableAtIndex(
             kind:kind,
-            type:UICollectionReusableView.self,
             indexPath:indexPath)
         
         return reusable
