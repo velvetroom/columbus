@@ -6,6 +6,8 @@ extension MCreatePlan
     
     func save(completion:@escaping(() -> ()))
     {
+        plan.updateTimestamp()
+        
         model?.database?.save
         {
             completion()
