@@ -25,9 +25,7 @@ extension DSettings
         }
     }
     
-    //MARK: internal
-    
-    func initialValues()
+    public override func awakeFromInsert()
     {
         travelMode = DPlanTravelMode.walking
     }

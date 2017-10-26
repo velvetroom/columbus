@@ -43,8 +43,6 @@ extension MHome
         database:Database,
         settings:DSettings)
     {
-        settings.initialValues()
-        
         database.save
         { [weak self] in
             
