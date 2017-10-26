@@ -18,10 +18,10 @@
     <entity name="DPlanTravel" representedClassName="DPlanTravel" syncable="YES" codeGenerationType="class">
         <attribute name="distance" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="duration" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="polyline" optional="YES" transient="YES" attributeType="Transformable" customClassName="MapKit.MKPolyline" syncable="YES"/>
         <attribute name="rawLocations" optional="YES" attributeType="Transformable" customClassName="CoreLocation.[CLLocation]" syncable="YES"/>
         <attribute name="rawMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="transientPolyline" optional="YES" transient="YES" attributeType="Transformable" customClassName="MapKit.MKPolyline" syncable="YES"/>
         <relationship name="destination" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="destinationTravel" inverseEntity="DPlanStop" syncable="YES"/>
         <relationship name="origin" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="originTravel" inverseEntity="DPlanStop" syncable="YES"/>
     </entity>

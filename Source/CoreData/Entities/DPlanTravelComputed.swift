@@ -47,4 +47,18 @@ extension DPlanTravel
             rawMode = newValue.rawValue
         }
     }
+    
+    var polyline:MKPolyline?
+    {
+        get
+        {
+            return transientPolyline
+        }
+        
+        set(newValue)
+        {
+            transientPolyline = newValue
+            rawLocations = newValue?.locations
+        }
+    }
 }
