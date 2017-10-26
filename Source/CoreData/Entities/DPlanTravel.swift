@@ -3,21 +3,22 @@ import MapKit
 
 extension DPlanTravel
 {
-    //MARK: internal
-    
-    func initialValues()
+    public override func awakeFromFetch()
     {
-        status = DPlanTravelStatus.unknown
-        mode = DPlanTravelMode.unknown
+        super.awakeFromFetch()
+        
+        loadPolyline()
     }
     
-    public override func didTurnIntoFault()
+    //MARK: private
+    
+    private func loadPolyline()
     {
         guard
-        
+            
             let rawLocations:[CLLocation] = self.rawLocations,
             transientPolyline == nil
-        
+            
         else
         {
             return
@@ -26,6 +27,14 @@ extension DPlanTravel
         let polyline:MKPolyline = MKPolyline(
             locations:rawLocations)
         transientPolyline = polyline
+    }
+    
+    //MARK: internal
+    
+    func initialValues()
+    {
+        status = DPlanTravelStatus.unknown
+        mode = DPlanTravelMode.unknown
     }
     
     func cleanValues()
