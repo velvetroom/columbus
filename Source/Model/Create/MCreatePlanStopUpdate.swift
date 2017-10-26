@@ -18,8 +18,6 @@ extension MCreatePlan
             return
         }
         
-        asyncRemove(travel:travel)
-        
         factoryDirections(travel:travel)
         { [weak self] in
             
@@ -42,8 +40,6 @@ extension MCreatePlan
             return
         }
         
-        asyncRemove(travel:travel)
-        
         factoryDirections(travel:travel)
         { [weak self] in
             
@@ -61,12 +57,12 @@ extension MCreatePlan
         }
     }
     
-    private func asyncRemove(travel:DPlanTravel)
+    private func asyncRemoveTravels(stop:DPlanStop)
     {
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.removeTravel(travel:travel)
+            self?.removeTravels(stop:stop)
         }
     }
     
@@ -85,12 +81,15 @@ extension MCreatePlan
     {
         let location:CLLocation = MCreatePlan.factoryLocation(
             stop:stop)
+
+        asyncRemoveTravels(
+            stop:stop)
         
         geocodeLocation(location:location)
         { [weak self] (name:String?) in
             
             stop.name = name
-            
+
             self?.configTravelOrigin(
                 stop:stop)
         }

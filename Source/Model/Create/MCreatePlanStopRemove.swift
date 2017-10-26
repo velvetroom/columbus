@@ -2,6 +2,26 @@ import Foundation
 
 extension MCreatePlan
 {
+    private func asyncRemove(stop:DPlanStop)
+    {
+        guard
+            
+            let database:Database = model?.database
+            
+        else
+        {
+            return
+        }
+        
+        database.delete(data:stop)
+        { [weak self] in
+            
+            self?.removed(
+                database:database,
+                stop:stop)
+        }
+    }
+    
     private func removed(
         database:Database,
         stop:DPlanStop)
@@ -20,7 +40,6 @@ extension MCreatePlan
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.removeAnnotation(stop:stop)
             self?.updateStops()
         }
     }
@@ -29,21 +48,13 @@ extension MCreatePlan
     
     func remove(stop:DPlanStop)
     {
-        guard
-            
-            let database:Database = model?.database
+        removeAnnotation(stop:stop)
         
-        else
-        {
-            return
-        }
-        
-        database.delete(data:stop)
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.removed(
-                database:database,
-                stop:stop)
+            self?.asyncRemove(stop:stop)
         }
     }
 }

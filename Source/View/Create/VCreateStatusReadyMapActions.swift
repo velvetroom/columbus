@@ -38,21 +38,6 @@ extension VCreateStatusReadyMap
             level:MKOverlayLevel.aboveRoads)
     }
     
-    func removeStop(stop:DPlanStop)
-    {
-        removeAnnotation(stop)
-        
-        if let origin:DPlanTravel = stop.originTravel
-        {
-            removeRoute(travel:origin)
-        }
-        
-        if let destination:DPlanTravel = stop.destinationTravel
-        {
-            removeRoute(travel:destination)
-        }
-    }
-    
     func removeRoute(travel:DPlanTravel)
     {
         guard

@@ -40,7 +40,9 @@ extension MCreatePlan
     
     func removeAnnotation(stop:DPlanStop)
     {
-        view?.viewMap.removeStop(stop)
+        view?.viewMap.removeAnnotation(stop)
+        
+        removeTravels(stop:stop)
     }
     
     func updated(stop:DPlanStop)
@@ -49,19 +51,22 @@ extension MCreatePlan
             stop:stop)
     }
     
-    func removeTravel(travel:DPlanTravel)
+    func removeTravels(stop:DPlanStop)
     {
-        guard
-            
-            let route:MKPolyline = travel.polyline
-        
-        else
+        if let origin:DPlanTravel = stop.originTravel
         {
-            return
+            removeTravel(travel:origin)
         }
         
-        view?.viewMap.remove(
-            route)
+        if let destination:DPlanTravel = stop.destinationTravel
+        {
+            removeTravel(travel:destination)
+        }
+    }
+    
+    func removeTravel(travel:DPlanTravel)
+    {
+        view?.viewMap.removeRoute(travel:travel)
     }
     
     func addTravel(travel:DPlanTravel)

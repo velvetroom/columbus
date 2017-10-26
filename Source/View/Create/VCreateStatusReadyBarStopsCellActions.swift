@@ -16,12 +16,7 @@ extension VCreateStatusReadyBarStopsCell
             return
         }
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.controller?.model.plan?.remove(
-                stop:model)
-        }
+        controller?.model.plan?.remove(
+            stop:model)
     }
 }
