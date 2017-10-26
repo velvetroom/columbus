@@ -11,6 +11,15 @@ final class VCreateStatusReadyBarStops:
     private let kInsetsTop:CGFloat = 10
     private let kInsetsBottom:CGFloat = 6
     
+    var model:[DPlanStop]?
+    {
+        get
+        {
+            return controller.model.plan?.plan.stops?.array as? [
+                DPlanStop]
+        }
+    }
+    
     required init(controller:CCreate)
     {
         super.init(controller:controller)
@@ -60,14 +69,14 @@ final class VCreateStatusReadyBarStops:
     {
         guard
         
-            let stops:[DPlanStop] = stopList()
+            let model:[DPlanStop] = self.model
         
         else
         {
             return 0
         }
         
-        let count:Int = stops.count
+        let count:Int = model.count
         
         return count
     }

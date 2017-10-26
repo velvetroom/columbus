@@ -25,7 +25,7 @@ extension VCreateStatusReadyBarStops
     {
         guard
             
-            let stops:[DPlanStop] = stopList()
+            let model:[DPlanStop] = self.model
             
         else
         {
@@ -34,7 +34,7 @@ extension VCreateStatusReadyBarStops
         
         var index:Int = 0
         
-        for indexedStop:DPlanStop in stops
+        for indexedStop:DPlanStop in model
         {
             guard
                 
