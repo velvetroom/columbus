@@ -7,8 +7,9 @@ final class VCreateStatusReadyBarStops:
 {
     weak var viewTravel:VCreateStatusReadyBarTravel!
     let kInsetsTop:CGFloat = 10
-    let kInsetsBottom:CGFloat = 6
     private var cellSize:CGSize?
+    private let footerSize:CGSize
+    private let kFooterHeight:CGFloat = 50
     private let kCellHeight:CGFloat = 50
     
     var model:[DPlanStop]?
@@ -20,8 +21,21 @@ final class VCreateStatusReadyBarStops:
         }
     }
     
+    var travel:[DPlanTravel]?
+    {
+        get
+        {
+            return controller.model.plan?.plan.travels?.array as? [
+                DPlanTravel]
+        }
+    }
+    
     required init(controller:CCreate)
     {
+        footerSize = CGSize(
+            width:0,
+            height:kFooterHeight)
+        
         super.init(controller:controller)
         config()
     }
@@ -35,6 +49,24 @@ final class VCreateStatusReadyBarStops:
         _ scrollView:UIScrollView)
     {
         viewTravel.collectionView.contentOffset = scrollView.contentOffset
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        referenceSizeForFooterInSection section:Int) -> CGSize
+    {
+        guard
+        
+            let count:Int = model?.count,
+            count > 0
+        
+        else
+        {
+            return CGSize.zero
+        }
+        
+        return footerSize
     }
     
     override func collectionView(
@@ -76,6 +108,19 @@ final class VCreateStatusReadyBarStops:
         viewTravel.collectionView.reloadData()
         
         return count
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        viewForSupplementaryElementOfKind kind:String,
+        at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let reusable:VCreateStatusReadyBarStopsFooter = reusableAtIndex(
+            kind:kind,
+            indexPath:indexPath)
+        reusable.config(model:travel!)
+        
+        return reusable
     }
     
     override func collectionView(

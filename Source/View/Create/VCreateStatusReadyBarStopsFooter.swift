@@ -9,7 +9,7 @@ final class VCreateStatusReadyBarStopsFooter:
     let kTitleLeft:CGFloat = 10
     let kTitleWidth:CGFloat = 100
     let kValueWidth:CGFloat = 200
-    let kDistanceTop:CGFloat = 20
+    let kDistanceTop:CGFloat = 10
     let kLabelHeight:CGFloat = 24
     
     override init(frame:CGRect)
@@ -22,5 +22,11 @@ final class VCreateStatusReadyBarStopsFooter:
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: internal
+    
+    func config(model:[DPlanTravel])
+    {
     }
 }
