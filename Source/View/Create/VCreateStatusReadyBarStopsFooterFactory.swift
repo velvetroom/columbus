@@ -47,7 +47,8 @@ extension VCreateStatusReadyBarStopsFooter
         
         NSLayoutConstraint.topToTop(
             view:labelDistanceTitle,
-            toView:self)
+            toView:self,
+            constant:kDistanceTop)
         NSLayoutConstraint.height(
             view:labelDistanceTitle,
             constant:kLabelHeight)
@@ -61,7 +62,8 @@ extension VCreateStatusReadyBarStopsFooter
         
         NSLayoutConstraint.topToTop(
             view:labelDistanceValue,
-            toView:self)
+            toView:self,
+            constant:kDistanceTop)
         NSLayoutConstraint.height(
             view:labelDistanceValue,
             constant:kLabelHeight)

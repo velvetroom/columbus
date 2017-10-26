@@ -9,7 +9,7 @@ final class VCreateStatusReadyBarStops:
     let kInsetsTop:CGFloat = 10
     private var cellSize:CGSize?
     private let footerSize:CGSize
-    private let kFooterHeight:CGFloat = 50
+    private let kFooterHeight:CGFloat = 80
     private let kCellHeight:CGFloat = 50
     
     var model:[DPlanStop]?
