@@ -15,7 +15,7 @@ extension VCreateStatusReadyBarTravelCell
         let imageView:UIImageView = UIImageView()
         imageView.isUserInteractionEnabled = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = UIViewContentMode.top
+        imageView.contentMode = UIViewContentMode.center
         imageView.clipsToBounds = true
         self.imageView = imageView
         

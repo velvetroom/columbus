@@ -5,7 +5,7 @@ final class VCreateStatusReadyBarTravel:
     ArchCreate,
     VCreateStatusReadyBarTravelCell>
 {
-    let kInsetsTop:CGFloat = 30
+    let kInsetsTop:CGFloat = 45
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 50
     
