@@ -1,6 +1,0 @@
-import MapKit
-
-extension MKPolyline
-{
-    
-}

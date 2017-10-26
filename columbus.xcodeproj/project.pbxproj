@@ -33,7 +33,6 @@
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
 		DA1AD3B21F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */; };
-		DA254DC61FA1C38B007B0732 /* ExtensionMKPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA254DC51FA1C38B007B0732 /* ExtensionMKPolyline.swift */; };
 		DA2EE5651F98A9A500488A07 /* MCreateMapMenuContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5641F98A9A500488A07 /* MCreateMapMenuContract.swift */; };
 		DA2EE5671F98ABA200488A07 /* MCreateMapStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5661F98ABA200488A07 /* MCreateMapStatusProtocol.swift */; };
 		DA2EE5691F98AC4400488A07 /* MCreateMapStatusExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5681F98AC4400488A07 /* MCreateMapStatusExpanded.swift */; };
@@ -230,7 +229,6 @@
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
 		DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeFactory.swift; sourceTree = "<group>"; };
-		DA254DC51FA1C38B007B0732 /* ExtensionMKPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMKPolyline.swift; sourceTree = "<group>"; };
 		DA2EE5641F98A9A500488A07 /* MCreateMapMenuContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuContract.swift; sourceTree = "<group>"; };
 		DA2EE5661F98ABA200488A07 /* MCreateMapStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusProtocol.swift; sourceTree = "<group>"; };
 		DA2EE5681F98AC4400488A07 /* MCreateMapStatusExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusExpanded.swift; sourceTree = "<group>"; };
@@ -516,7 +514,6 @@
 				DA65EC731F95E68600720673 /* ExtensionUICollectionReusableView.swift */,
 				DA65EC741F95E68600720673 /* ExtensionURL.swift */,
 				DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */,
-				DA254DC51FA1C38B007B0732 /* ExtensionMKPolyline.swift */,
 			);
 			path = GenericExtensions;
 			sourceTree = "<group>";
@@ -1087,7 +1084,6 @@
 				DA65ED151F95E68700720673 /* VBorder.swift in Sources */,
 				DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */,
 				DAEF388D1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift in Sources */,
-				DA254DC61FA1C38B007B0732 /* ExtensionMKPolyline.swift in Sources */,
 				DA65ECE01F95E68700720673 /* ExtensionCGImage.swift in Sources */,
 				DA525A021F9F7671004F8503 /* MSettingsTravelModeFactory.swift in Sources */,
 				DAE184921F9EA31200D29126 /* MSettingsFactory.swift in Sources */,
