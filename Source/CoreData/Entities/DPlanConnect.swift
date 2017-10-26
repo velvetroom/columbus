@@ -13,30 +13,15 @@ extension DPlan
     {
         stop.plan = self
         
-        database.create
-        { [weak self] (travel:DPlanTravel) in
+        factoryTravel(
+            database:database,
+            mode:settings.travelMode,
+            origin:lastStop,
+            destination:stop)
+        { (travel:DPlanTravel) in
             
-            self?.connect(
-                settings:settings,
-                stop:stop,
-                lastStop:lastStop,
-                travel:travel,
-                completion:completion)
+            completion()
         }
-    }
-    
-    private func connect(
-        settings:DSettings,
-        stop:DPlanStop,
-        lastStop:DPlanStop,
-        travel:DPlanTravel,
-        completion:@escaping(() -> ()))
-    {
-        travel.mode = settings.travelMode
-        travel.origin = lastStop
-        travel.destination = stop
-        
-        completion()
     }
     
     //MARK: internal

@@ -23,15 +23,12 @@ extension DPlan
             return
         }
         
-        database.create
-        { (travel:DPlanTravel) in
-            
-            travel.mode = destinationTravel.mode
-            travel.origin = previousStop
-            travel.destination = nextStop
-            
-            completion(travel)
-        }
+        factoryTravel(
+            database:database,
+            mode:destinationTravel.mode,
+            origin:previousStop,
+            destination:nextStop,
+            completion:completion)
     }
     
     //MARK: internal

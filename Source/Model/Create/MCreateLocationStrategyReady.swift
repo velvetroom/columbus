@@ -9,7 +9,7 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     private func startPlan(database:Database)
     {
         database.create
-        { [weak self] (coredataPlan:DPlan) in
+        { [weak self] (plan:DPlan) in
             
             guard
                 
@@ -22,7 +22,7 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
             
             let modelPlan:MCreatePlan = MCreatePlan(
                 model:model,
-                plan:coredataPlan)
+                plan:plan)
             
             self?.planReady(plan:modelPlan)
         }
