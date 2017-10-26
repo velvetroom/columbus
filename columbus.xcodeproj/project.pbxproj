@@ -151,6 +151,7 @@
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
+		DAA0B8031FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0B8021FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift */; };
 		DAA5B4891F99369E00F9121C /* DPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B4881F99369E00F9121C /* DPlan.swift */; };
 		DAA5B48B1F9936C000F9121C /* DPlanStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B48A1F9936C000F9121C /* DPlanStop.swift */; };
 		DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B48C1F99370200F9121C /* DPlanTravel.swift */; };
@@ -358,6 +359,7 @@
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
+		DAA0B8021FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsFooter.swift; sourceTree = "<group>"; };
 		DAA5B4881F99369E00F9121C /* DPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlan.swift; sourceTree = "<group>"; };
 		DAA5B48A1F9936C000F9121C /* DPlanStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanStop.swift; sourceTree = "<group>"; };
 		DAA5B48C1F99370200F9121C /* DPlanTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravel.swift; sourceTree = "<group>"; };
@@ -878,6 +880,7 @@
 				DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */,
 				DA570EAC1F9D076400C6F590 /* VCreateStatusReadyBarStopsSelection.swift */,
 				DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */,
+				DAA0B8021FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift */,
 				DA3495F41F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift */,
 				DA4BC93A1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift */,
 				DAD888FD1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift */,
@@ -1137,6 +1140,7 @@
 				DA4BC9371F9AC44E00453655 /* VCreateStatusReadyBarActions.swift in Sources */,
 				DA0448071F9756CF00BA2D45 /* VCreateStatusReadyMap.swift in Sources */,
 				DAA793501FA2436200791B99 /* DPlanFactory.swift in Sources */,
+				DAA0B8031FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift in Sources */,
 				DA5259FC1F9F7120004F8503 /* VSettingsListConfig.swift in Sources */,
 				DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */,
 				DA13F65C1F9A174D00DF92F5 /* MCreatePlanStop.swift in Sources */,
