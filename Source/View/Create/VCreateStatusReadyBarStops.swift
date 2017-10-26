@@ -12,24 +12,6 @@ final class VCreateStatusReadyBarStops:
     private let kFooterHeight:CGFloat = 80
     private let kCellHeight:CGFloat = 50
     
-    var model:[DPlanStop]?
-    {
-        get
-        {
-            return controller.model.plan?.plan.stops?.array as? [
-                DPlanStop]
-        }
-    }
-    
-    var travel:[DPlanTravel]?
-    {
-        get
-        {
-            return controller.model.plan?.plan.travels?.array as? [
-                DPlanTravel]
-        }
-    }
-    
     required init(controller:CCreate)
     {
         footerSize = CGSize(
