@@ -63,4 +63,26 @@ extension MCreatePlan
         
         return directions
     }
+    
+    func factoryCoordinates(
+        route:MKRoute) -> [CLLocationCoordinate2D]
+    {
+        var points:[CLLocationCoordinate2D] = []
+        let totalPoints:Int = route.polyline.pointCount
+        let pointer:UnsafeMutablePointer<CLLocationCoordinate2D> = UnsafeMutablePointer<CLLocationCoordinate2D>.allocate(
+            capacity:totalPoints)
+        
+        let range:NSRange = NSMakeRange(0, totalPoints)
+        route.polyline.getCoordinates(
+            pointer,
+            range:range)
+        
+        for index:Int in 0 ..< totalPoints
+        {
+            let location:CLLocationCoordinate2D = pointer[index]
+            points.append(location)
+        }
+        
+        return points
+    }
 }
