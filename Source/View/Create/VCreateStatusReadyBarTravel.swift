@@ -5,7 +5,7 @@ final class VCreateStatusReadyBarTravel:
     ArchCreate,
     VCreateStatusReadyBarTravelCell>
 {
-    let kInsetsTop:CGFloat = 45
+    let kHeaderHeight:CGFloat = 45
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 50
     
@@ -66,6 +66,18 @@ final class VCreateStatusReadyBarTravel:
         }
         
         return count
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        viewForSupplementaryElementOfKind kind:String,
+        at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let reusable:VCreateStatusReadyBarTravelHeader = reusableAtIndex(
+            kind:kind,
+            indexPath:indexPath)
+        
+        return reusable
     }
     
     override func collectionView(

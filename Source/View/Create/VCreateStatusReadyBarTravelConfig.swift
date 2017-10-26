@@ -9,13 +9,14 @@ extension VCreateStatusReadyBarTravel
         collectionView.isScrollEnabled = false
         collectionView.bounces = false
         
+        registerHeader(
+            header:VCreateStatusReadyBarTravelHeader.self)
+        
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            flow.sectionInset = UIEdgeInsets(
-                top:kInsetsTop,
-                left:0,
-                bottom:0,
-                right:0)
+            flow.headerReferenceSize = CGSize(
+                width:0,
+                height:kHeaderHeight)
         }
     }
 }
