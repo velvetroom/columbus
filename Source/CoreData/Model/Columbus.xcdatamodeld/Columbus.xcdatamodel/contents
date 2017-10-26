@@ -16,8 +16,8 @@
         <relationship name="plan" maxCount="1" deletionRule="Nullify" destinationEntity="DPlan" inverseName="stops" inverseEntity="DPlan" syncable="YES"/>
     </entity>
     <entity name="DPlanTravel" representedClassName="DPlanTravel" syncable="YES" codeGenerationType="class">
-        <attribute name="distance" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="duration" optional="YES" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="distance" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="duration" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="route" optional="YES" attributeType="Transformable" customClassName="MapKit.MKPolyline" syncable="YES"/>

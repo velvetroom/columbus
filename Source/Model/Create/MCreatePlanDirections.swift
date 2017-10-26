@@ -21,8 +21,9 @@ extension MCreatePlan
             
             else
             {
-                travel.status = DPlanTravelStatus.routeNotFound
-                completion()
+                self?.noRouteFound(
+                    travel:travel,
+                    completion:completion)
                 
                 return
             }
@@ -43,6 +44,16 @@ extension MCreatePlan
         travel.distance = Float(route.distance)
         travel.route = route.polyline
         travel.status = DPlanTravelStatus.ready
+        
+        completion()
+    }
+    
+    private func noRouteFound(
+        travel:DPlanTravel,
+        completion:@escaping(() -> ()))
+    {
+        travel.cleanValues()
+        travel.status = DPlanTravelStatus.routeNotFound
         
         completion()
     }

@@ -9,4 +9,11 @@ extension DPlanTravel
         status = DPlanTravelStatus.unknown
         mode = DPlanTravelMode.unknown
     }
+    
+    func cleanValues()
+    {
+        distance = 0
+        duration = 0
+        route = nil
+    }
 }
