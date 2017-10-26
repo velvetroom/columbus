@@ -5,8 +5,9 @@ final class VCreateStatusReadyBarTravel:
     ArchCreate,
     VCreateStatusReadyBarTravelCell>
 {
-    let kHeaderHeight:CGFloat = 45
+    private let kHeaderHeight:CGFloat = 45
     private var cellSize:CGSize?
+    private let headerSize:CGSize
     private let kCellHeight:CGFloat = 50
     
     var model:[DPlanTravel]?
@@ -20,6 +21,10 @@ final class VCreateStatusReadyBarTravel:
     
     required init(controller:CCreate)
     {
+        headerSize = CGSize(
+            width:0,
+            height:kHeaderHeight)
+        
         super.init(controller:controller)
         config()
     }
@@ -27,6 +32,24 @@ final class VCreateStatusReadyBarTravel:
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        referenceSizeForHeaderInSection section:Int) -> CGSize
+    {
+        guard
+        
+            let countStops:Int = controller.model.plan?.plan.stops?.count,
+            countStops > 0
+        
+        else
+        {
+            return CGSize.zero
+        }
+        
+        return headerSize
     }
     
     override func collectionView(

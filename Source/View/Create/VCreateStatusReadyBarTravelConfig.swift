@@ -11,12 +11,5 @@ extension VCreateStatusReadyBarTravel
         
         registerHeader(
             header:VCreateStatusReadyBarTravelHeader.self)
-        
-        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
-        {
-            flow.headerReferenceSize = CGSize(
-                width:0,
-                height:kHeaderHeight)
-        }
     }
 }
