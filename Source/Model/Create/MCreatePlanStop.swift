@@ -40,7 +40,7 @@ extension MCreatePlan
     
     func removeAnnotation(stop:DPlanStop)
     {
-        view?.viewMap.removeAnnotation(stop)
+        view?.viewMap.removeStop(stop)
     }
     
     func updated(stop:DPlanStop)
