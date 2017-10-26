@@ -7,7 +7,7 @@ extension DPlan
     private func reconnectOrigin(
         database:Database,
         stop:DPlanStop,
-        completion:@escaping(() -> ()))
+        completion:@escaping((DPlanTravel?) -> ()))
     {
         guard
         
@@ -18,7 +18,7 @@ extension DPlan
         
         else
         {
-            completion()
+            completion(nil)
             
             return
         }
@@ -30,7 +30,7 @@ extension DPlan
             travel.origin = previousStop
             travel.destination = nextStop
             
-            completion()
+            completion(travel)
         }
     }
     
@@ -39,7 +39,7 @@ extension DPlan
     func disconnect(
         database:Database,
         stop:DPlanStop,
-        completion:@escaping(() -> ()))
+        completion:@escaping((DPlanTravel?) -> ()))
     {
         stop.plan = nil
         

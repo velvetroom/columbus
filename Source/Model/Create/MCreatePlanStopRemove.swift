@@ -29,9 +29,43 @@ extension MCreatePlan
         plan.disconnect(
             database:database,
             stop:stop)
+        { [weak self] (travel:DPlanTravel?) in
+            
+            guard
+                
+                let travel:DPlanTravel = travel
+            
+            else
+            {
+                self?.removedDone(stop:stop)
+                
+                return
+            }
+            
+            self?.addNewTravel(
+                travel:travel,
+                stop:stop)
+        }
+    }
+    
+    private func addNewTravel(
+        travel:DPlanTravel,
+        stop:DPlanStop)
+    {
+        factoryDirections(travel:travel)
         { [weak self] in
             
+            self?.asyncAdd(travel:travel)
             self?.removedDone(stop:stop)
+        }
+    }
+    
+    private func asyncAdd(travel:DPlanTravel)
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.addTravel(travel:travel)
         }
     }
     
