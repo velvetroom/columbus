@@ -6,7 +6,7 @@ final class VCreateStatusReadyBarStopsCell:
     weak var viewField:VCreateStatusReadyBarStopsCellField!
     private(set) weak var controller:CCreate?
     private(set) weak var model:DPlanStop?
-    let kFieldLeft:CGFloat = 100
+    let kFieldLeft:CGFloat = 60
     let kRemoveWidth:CGFloat = 50
     let kFieldMarginVertical:CGFloat = 2
     

@@ -11,7 +11,7 @@ final class VCreateStatusReadyBar:View<ArchCreate>
     let kContentTop:CGFloat = 20
     let kContentBottom:CGFloat = -20
     let kLoaderHeight:CGFloat = 19
-    let kTravelWidth:CGFloat = 80
+    let kTravelWidth:CGFloat = 50
     let kAnimationDuration:TimeInterval = 0.4
     
     required init(controller:CCreate)
