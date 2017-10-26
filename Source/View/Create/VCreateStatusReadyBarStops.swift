@@ -60,14 +60,12 @@ final class VCreateStatusReadyBarStops:
     {
         guard
         
-            let model:[DPlanStop] = self.model
+            let count:Int = self.model?.count
         
         else
         {
             return 0
         }
-        
-        let count:Int = model.count
         
         return count
     }
