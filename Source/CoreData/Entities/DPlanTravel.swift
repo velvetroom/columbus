@@ -3,6 +3,12 @@ import MapKit
 
 extension DPlanTravel
 {
+    public override func awakeFromInsert()
+    {
+        status = DPlanTravelStatus.unknown
+        mode = DPlanTravelMode.unknown
+    }
+    
     public override func awakeFromFetch()
     {
         super.awakeFromFetch()
@@ -30,12 +36,6 @@ extension DPlanTravel
     }
     
     //MARK: internal
-    
-    func initialValues()
-    {
-        status = DPlanTravelStatus.unknown
-        mode = DPlanTravelMode.unknown
-    }
     
     func cleanValues()
     {
