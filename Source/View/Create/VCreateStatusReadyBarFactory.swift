@@ -9,13 +9,14 @@ extension VCreateStatusReadyBar
         let border:VBorder = VBorder(
             colour:UIColor(white:0, alpha:0.4))
         
-        let viewStops:VCreateStatusReadyBarStops = VCreateStatusReadyBarStops(
-            controller:controller)
-        self.viewStops = viewStops
-        
         let viewTravel:VCreateStatusReadyBarTravel = VCreateStatusReadyBarTravel(
             controller:controller)
         self.viewTravel = viewTravel
+        
+        let viewStops:VCreateStatusReadyBarStops = VCreateStatusReadyBarStops(
+            controller:controller)
+        viewStops.viewTravel = viewTravel
+        self.viewStops = viewStops
         
         let viewLoader:VCreateStatusReadyBarLoader = VCreateStatusReadyBarLoader(
             controller:controller)
