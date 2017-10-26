@@ -6,10 +6,10 @@ final class VCreateStatusReadyBarStops:
     VCreateStatusReadyBarStopsCell>
 {
     weak var viewTravel:VCreateStatusReadyBarTravel!
+    let kInsetsTop:CGFloat = 10
+    let kInsetsBottom:CGFloat = 6
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 50
-    private let kInsetsTop:CGFloat = 10
-    private let kInsetsBottom:CGFloat = 6
     
     var model:[DPlanStop]?
     {
@@ -23,16 +23,7 @@ final class VCreateStatusReadyBarStops:
     required init(controller:CCreate)
     {
         super.init(controller:controller)
-        collectionView.alwaysBounceVertical = true
-        
-        if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
-        {
-            flow.sectionInset = UIEdgeInsets(
-                top:kInsetsTop,
-                left:0,
-                bottom:kInsetsBottom,
-                right:0)
-        }
+        config()
     }
     
     required init?(coder:NSCoder)

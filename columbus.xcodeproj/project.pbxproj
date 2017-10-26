@@ -198,6 +198,7 @@
 		DAE184941F9EA44C00D29126 /* DSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE184931F9EA44C00D29126 /* DSettings.swift */; };
 		DAE184961F9EA4F100D29126 /* MHomeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE184951F9EA4F100D29126 /* MHomeSettings.swift */; };
 		DAE6998E1FA287CA00FFE6E3 /* VCreateStatusReadyBarTravelConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6998D1FA287CA00FFE6E3 /* VCreateStatusReadyBarTravelConfig.swift */; };
+		DAE699901FA2880A00FFE6E3 /* VCreateStatusReadyBarStopsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6998F1FA2880A00FFE6E3 /* VCreateStatusReadyBarStopsConfig.swift */; };
 		DAECA2DA1F9FCBA50051F757 /* MSettingsTravelModeCycling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAECA2D91F9FCBA50051F757 /* MSettingsTravelModeCycling.swift */; };
 		DAECA2DC1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAECA2DB1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift */; };
 		DAECA2DE1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAECA2DD1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift */; };
@@ -401,6 +402,7 @@
 		DAE184931F9EA44C00D29126 /* DSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSettings.swift; sourceTree = "<group>"; };
 		DAE184951F9EA4F100D29126 /* MHomeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeSettings.swift; sourceTree = "<group>"; };
 		DAE6998D1FA287CA00FFE6E3 /* VCreateStatusReadyBarTravelConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarTravelConfig.swift; sourceTree = "<group>"; };
+		DAE6998F1FA2880A00FFE6E3 /* VCreateStatusReadyBarStopsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsConfig.swift; sourceTree = "<group>"; };
 		DAECA2D91F9FCBA50051F757 /* MSettingsTravelModeCycling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsTravelModeCycling.swift; sourceTree = "<group>"; };
 		DAECA2DB1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsTravelModeTransit.swift; sourceTree = "<group>"; };
 		DAECA2DD1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsTravelModeWalking.swift; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 				DA4BC9361F9AC44E00453655 /* VCreateStatusReadyBarActions.swift */,
 				DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */,
 				DA3495F21F9ABC3200D75252 /* VCreateStatusReadyBarStops.swift */,
+				DAE6998F1FA2880A00FFE6E3 /* VCreateStatusReadyBarStopsConfig.swift */,
 				DAD888FB1F9D23E5000EC7FD /* VCreateStatusReadyBarStopsFactory.swift */,
 				DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */,
 				DA570EAC1F9D076400C6F590 /* VCreateStatusReadyBarStopsSelection.swift */,
@@ -1060,6 +1063,7 @@
 				DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */,
 				DADA41FA1F9670C200DD1FC4 /* MMenuItemSettings.swift in Sources */,
 				DA2EE5771F98C53800488A07 /* CCreateMap.swift in Sources */,
+				DAE699901FA2880A00FFE6E3 /* VCreateStatusReadyBarStopsConfig.swift in Sources */,
 				DA65ECF71F95E68700720673 /* MMenu.swift in Sources */,
 				DA65ECE51F95E68700720673 /* ExtensionData.swift in Sources */,
 				DA6AC17D1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift in Sources */,
