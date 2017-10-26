@@ -53,7 +53,7 @@ extension MCreatePlan
     {
         guard
             
-            let route:MKPolyline = travel.route
+            let route:MKPolyline = travel.polyline
         
         else
         {
@@ -65,16 +65,7 @@ extension MCreatePlan
     }
     
     func addTravel(travel:DPlanTravel)
-    {
-        guard
-            
-            let route:MKPolyline = travel.route
-            
-        else
-        {
-            return
-        }
-        
+    {        
         view?.viewMap.addRoute(
             travel:travel)
     }

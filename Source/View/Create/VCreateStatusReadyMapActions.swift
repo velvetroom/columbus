@@ -78,7 +78,7 @@ extension VCreateStatusReadyMap
     {
         guard
             
-            let route:MKPolyline = travel.route
+            let route:MKPolyline = travel.polyline
             
         else
         {

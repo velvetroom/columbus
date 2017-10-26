@@ -18,8 +18,9 @@
     <entity name="DPlanTravel" representedClassName="DPlanTravel" syncable="YES" codeGenerationType="class">
         <attribute name="distance" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="duration" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="polyline" optional="YES" transient="YES" attributeType="Transformable" customClassName="MapKit.MKPolyline" syncable="YES"/>
+        <attribute name="rawLocations" optional="YES" attributeType="Transformable" customClassName="CoreLocation.[CLLocation]" syncable="YES"/>
         <attribute name="rawMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="rawRoute" optional="YES" attributeType="Transformable" customClassName="MapKit.MKPolyline" syncable="YES"/>
         <attribute name="rawStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="destination" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="destinationTravel" inverseEntity="DPlanStop" syncable="YES"/>
         <relationship name="origin" maxCount="1" deletionRule="Nullify" destinationEntity="DPlanStop" inverseName="originTravel" inverseEntity="DPlanStop" syncable="YES"/>
@@ -30,7 +31,7 @@
     <elements>
         <element name="DPlan" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="DPlanStop" positionX="-54" positionY="0" width="128" height="30"/>
-        <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="150"/>
+        <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="165"/>
         <element name="DSettings" positionX="-54" positionY="54" width="128" height="60"/>
     </elements>
 </model>

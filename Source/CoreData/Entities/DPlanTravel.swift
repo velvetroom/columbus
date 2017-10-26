@@ -14,6 +14,6 @@ extension DPlanTravel
     {
         distance = 0
         duration = 0
-        route = nil
+        polyline = nil
     }
 }

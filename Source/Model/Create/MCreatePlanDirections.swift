@@ -40,9 +40,9 @@ extension MCreatePlan
         travel:DPlanTravel,
         completion:@escaping(() -> ()))
     {
+        travel.polyline = route.polyline
         travel.duration = route.expectedTravelTime
         travel.distance = Float(route.distance)
-        travel.route =
         travel.status = DPlanTravelStatus.ready
         
         completion()

@@ -12,6 +12,18 @@ final class MPlans:Model<ArchPlans>
         { (travels:[DPlanTravel]) in
             
             print("travels \(travels.count)")
+            
+            guard
+            
+                let first:DPlanTravel = travels.first
+            
+            else
+            {
+                return
+            }
+            
+            print(first)
+            print(first.polyline)
         }
     }
 }
