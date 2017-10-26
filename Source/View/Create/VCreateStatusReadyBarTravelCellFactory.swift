@@ -2,12 +2,29 @@ import UIKit
 
 extension VCreateStatusReadyBarTravelCell
 {
+    private static let kImageMap:[
+        DPlanTravelMode:UIImage] = [
+            DPlanTravelMode.walking:#imageLiteral(resourceName: "assetMapWalking"),
+            DPlanTravelMode.cycling:#imageLiteral(resourceName: "assetMapCycling"),
+            DPlanTravelMode.transit:#imageLiteral(resourceName: "assetMapTransit"),
+            DPlanTravelMode.driving:#imageLiteral(resourceName: "assetMapDriving")]
+    
     //MARK: internal
     
     class func factoryImage(
         mode:DPlanTravelMode) -> UIImage?
     {
-        return #imageLiteral(resourceName: "assetMapDriving").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        guard
+        
+            let image:UIImage = kImageMap[mode]
+        
+        else
+        {
+            return nil
+        }
+        
+        return image.withRenderingMode(
+            UIImageRenderingMode.alwaysTemplate)
     }
     
     func factoryViews()
