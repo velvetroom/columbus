@@ -17,8 +17,7 @@ final class VCreateStatusReadyBarTravel:
     required init(controller:CCreate)
     {
         super.init(controller:controller)
-        collectionView.isScrollEnabled = false
-        collectionView.bounces = false
+        config()
     }
     
     required init?(coder:NSCoder)
