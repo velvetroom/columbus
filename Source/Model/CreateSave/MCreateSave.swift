@@ -1,6 +1,6 @@
 import Foundation
 
-final class MCreateSave:Model
+final class MCreateSave:Model<ArchCreateSave>
 {
     
 }

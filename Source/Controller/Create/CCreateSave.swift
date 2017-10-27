@@ -1,6 +1,6 @@
 import Foundation
 
-final class CCreateSave:Controller
+final class CCreateSave:Controller<ArchCreateSave>
 {
     //MARK: internal
     
