@@ -23,6 +23,13 @@ final class CCreateSave:Controller<ArchCreateSave>
         }
     }
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        model.save()
+    }
+    
     //MARK: internal
     
     func moveToPlans()
@@ -37,8 +44,13 @@ final class CCreateSave:Controller<ArchCreateSave>
         }
         
         let order:MMenuOrder = MMenuOrder.plans
-        viewParent.viewMenu.synthSelect(
-            order:order)
+        
+        parentController?.pop(
+            vertical:ControllerParent.Vertical.bottom)
+        {
+            viewParent.viewMenu.synthSelect(
+                order:order)
+        }
     }
     
     func cancel()
