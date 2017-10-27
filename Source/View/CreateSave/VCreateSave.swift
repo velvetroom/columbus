@@ -3,11 +3,13 @@ import UIKit
 final class VCreateSave:ViewMain
 {
     weak var viewSpinner:VSpinner!
+    weak var layoutCancelLeft:NSLayoutConstraint!
     let kTitleBottom:CGFloat = -150
     let kTitleHeight:CGFloat = 24
-    let kButtonHeight:CGFloat = 50
+    let kCancelHeight:CGFloat = 50
+    let kCancelWidth:CGFloat = 120
     let kTitleFontSize:CGFloat = 16
-    let kButtonFontSize:CGFloat = 16
+    let kCancelFontSize:CGFloat = 16
     
     required init(controller:UIViewController)
     {
@@ -33,5 +35,23 @@ final class VCreateSave:ViewMain
     deinit
     {
         viewSpinner.stopAnimating()
+    }
+    
+    override func layoutSubviews()
+    {
+        let width:CGFloat = bounds.width
+        let remainWidth:CGFloat = width - kCancelWidth
+        let marginLeft:CGFloat = remainWidth / 2.0
+        layoutCancelLeft.constant = marginLeft
+        
+        super.layoutSubviews()
+    }
+    
+    //MARK: selectors
+    
+    @objc
+    func selectorCancel(sender button:UIButton)
+    {
+        
     }
 }
