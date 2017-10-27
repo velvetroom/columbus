@@ -185,6 +185,7 @@
 		DAD387221FA3E3B00031B9F8 /* MCreateSaveMapRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387211FA3E3B00031B9F8 /* MCreateSaveMapRange.swift */; };
 		DAD387241FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */; };
 		DAD387261FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */; };
+		DAD387281FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */; };
 		DAD888F61F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F51F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift */; };
 		DAD888F81F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */; };
 		DAD888FA1F9D2172000EC7FD /* MCreatePlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */; };
@@ -404,6 +405,7 @@
 		DAD387211FA3E3B00031B9F8 /* MCreateSaveMapRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapRange.swift; sourceTree = "<group>"; };
 		DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapRangeFactory.swift; sourceTree = "<group>"; };
 		DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapFactory.swift; sourceTree = "<group>"; };
+		DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveSnapshot.swift; sourceTree = "<group>"; };
 		DAD888F51F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapDragging.swift; sourceTree = "<group>"; };
 		DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsUpdate.swift; sourceTree = "<group>"; };
 		DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanFactory.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 			children = (
 				DA5B09451FA361380055E8F3 /* MCreateSave.swift */,
 				DABC26941FA39FA400746CDD /* MCreateSaveActions.swift */,
+				DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */,
 				DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */,
 				DAD387211FA3E3B00031B9F8 /* MCreateSaveMapRange.swift */,
 				DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */,
@@ -1040,6 +1043,7 @@
 				DA7B65221F9E6873001CDC35 /* VMenuSynth.swift in Sources */,
 				DA65ED001F95E68700720673 /* VMenuCollection.swift in Sources */,
 				DA570EA91F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift in Sources */,
+				DAD387281FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
 				DAAFA9941F9B53A40097E0E0 /* MCreatePlanGeocode.swift in Sources */,
 				DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */,
