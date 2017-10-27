@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 extension MCreateSave
 {
@@ -18,6 +18,20 @@ extension MCreateSave
             return
         }
         
+        MCreateSave.snapshots(
+            mapRange:mapRange)
+        { [weak self] (snapshots:[UIImage]) in
+            
+            self?.save(
+                plan:plan,
+                snapshots:snapshots)
+        }
+    }
+    
+    private func save(
+        plan:DPlan,
+        snapshots:[UIImage])
+    {
         
     }
     
