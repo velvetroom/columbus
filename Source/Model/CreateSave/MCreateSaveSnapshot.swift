@@ -8,7 +8,7 @@ extension MCreateSave
         mapRange:MCreateSaveMapRange,
         completion:@escaping(([UIImage]) -> ()))
     {
-        let options:MKMapSnapshotOptions = factorySnapshotOptions(
+        let options:[MKMapSnapshotOptions] = factorySnapshotOptions(
             mapRange:mapRange)
     }
 }
