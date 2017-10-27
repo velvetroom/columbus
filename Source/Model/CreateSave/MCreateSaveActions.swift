@@ -7,6 +7,17 @@ extension MCreateSave
     private func save(
         plan:DPlan)
     {
+        guard
+        
+            let stops:[DPlanStop] = plan.stops?.array as? [DPlanStop],
+            let mapRange:MCreateSaveMapRange = MCreateSave.factoryMapRange(
+                stops:stops)
+        
+        else
+        {
+            return
+        }
+        
         
     }
     
