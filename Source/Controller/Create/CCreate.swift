@@ -39,19 +39,11 @@ final class CCreate:Controller<ArchCreate>
         setNeedsStatusBarAppearanceUpdate()
     }
     
-    func moveToPlans()
+    func save()
     {
-        guard
-            
-            let viewParent:ViewParent = parentController?.view as? ViewParent
-            
-        else
-        {
-            return
-        }
-        
-        let order:MMenuOrder = MMenuOrder.plans
-        viewParent.viewMenu.synthSelect(
-            order:order)
+        let controller:CCreateSave = CCreateSave()
+        parentController?.push(
+            controller:controller,
+            vertical:ControllerParent.Vertical.bottom)
     }
 }
