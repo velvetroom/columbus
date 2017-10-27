@@ -2,6 +2,29 @@ import MapKit
 
 extension VCreateStatusReadyMap
 {
+    //MARK: private
+    
+    private func factoryRenderer(
+        mapTiler:VCreateStatusReadyMapTiler) -> MKOverlayRenderer
+    {
+        let tileRenderer:MKTileOverlayRenderer = MKTileOverlayRenderer(
+            tileOverlay:mapTiler)
+        
+        return tileRenderer
+    }
+    
+    private func factoryRenderer(
+        polyline:MKPolyline) -> MKOverlayRenderer
+    {
+        let renderer:MKPolylineRenderer = MKPolylineRenderer(
+            polyline:polyline)
+        renderer.lineWidth = kRendererWidth
+        renderer.strokeColor = rendererStrokeColour
+        renderer.lineDashPattern = kRendererLineDash
+        
+        return renderer
+    }
+    
     //MARK: internal
     
     func factoryPin(
@@ -38,22 +61,20 @@ extension VCreateStatusReadyMap
     func factoryRenderer(
         overlay:MKOverlay) -> MKOverlayRenderer
     {
-        guard
-            
-            let polyline:MKPolyline = overlay as? MKPolyline
+        let renderer:MKOverlayRenderer
         
+        if let polyline:MKPolyline = overlay as? MKPolyline
+        {
+            renderer = factoryRenderer(polyline:polyline)
+        }
+        else if let mapTiler:VCreateStatusReadyMapTiler = overlay as? VCreateStatusReadyMapTiler
+        {
+            renderer = factoryRenderer(mapTiler:mapTiler)
+        }
         else
         {
-            let renderer:MKOverlayRenderer = MKOverlayRenderer()
-            
-            return renderer
+            renderer = MKOverlayRenderer()
         }
-        
-        let renderer:MKPolylineRenderer = MKPolylineRenderer(
-            polyline:polyline)
-        renderer.lineWidth = kRendererWidth
-        renderer.strokeColor = rendererStrokeColour
-        renderer.lineDashPattern = kRendererLineDash
         
         return renderer
     }

@@ -3,6 +3,7 @@ import MapKit
 final class VCreateStatusReadyMap:MKMapView
 {
     private(set) weak var controller:CCreate!
+    private(set) weak var mapTiler:VCreateStatusReadyMapTiler!
     var shouldUpdate:Bool
     let span:MKCoordinateSpan
     let rendererStrokeColour:UIColor
@@ -36,10 +37,24 @@ final class VCreateStatusReadyMap:MKMapView
         userTrackingMode = MKUserTrackingMode.follow
         delegate = self
         self.controller = controller
+        
+        addTiler()
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: private
+    
+    private func addTiler()
+    {
+        let mapTiler:VCreateStatusReadyMapTiler = VCreateStatusReadyMapTiler()
+        self.mapTiler = mapTiler
+        
+        add(
+            mapTiler,
+            level:MKOverlayLevel.aboveLabels)
     }
 }

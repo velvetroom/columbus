@@ -79,12 +79,4 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         
         return renderer
     }
-    
-    func mapViewDidFinishRenderingMap(
-        _ mapView:MKMapView,
-        fullyRendered:Bool)
-    {
-        mapView.region
-        print("did finish tiles")
-    }
 }
