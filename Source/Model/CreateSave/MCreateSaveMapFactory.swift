@@ -28,9 +28,9 @@ extension MCreateSave
         for mapPoint:MKMapPoint in mapPoints
         {
             guard
-            
+                
                 mapRange == nil
-            
+                
             else
             {
                 mapRange = mapRange?.comparingMapPoint(
