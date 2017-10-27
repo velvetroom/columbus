@@ -27,4 +27,10 @@ final class CCreateSave:Controller<ArchCreateSave>
         viewParent.viewMenu.synthSelect(
             order:order)
     }
+    
+    func cancel()
+    {
+        parentController?.pop(
+            vertical:ControllerParent.Vertical.bottom)
+    }
 }

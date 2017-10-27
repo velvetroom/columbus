@@ -52,6 +52,15 @@ final class VCreateSave:ViewMain
     @objc
     func selectorCancel(sender button:UIButton)
     {
+        guard
         
+            let controller:CCreateSave = self.controller as? CCreateSave
+        
+        else
+        {
+            return
+        }
+        
+        controller.cancel()
     }
 }
