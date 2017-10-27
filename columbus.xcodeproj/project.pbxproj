@@ -76,6 +76,7 @@
 		DA5B093F1FA35EF00055E8F3 /* CCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B093E1FA35EF00055E8F3 /* CCreateSave.swift */; };
 		DA5B09411FA360D10055E8F3 /* ArchCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B09401FA360D10055E8F3 /* ArchCreateSave.swift */; };
 		DA5B09461FA361380055E8F3 /* MCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B09451FA361380055E8F3 /* MCreateSave.swift */; };
+		DA5B094C1FA362210055E8F3 /* VCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B094B1FA362210055E8F3 /* VCreateSave.swift */; };
 		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
 		DA65ECD61F95E68700720673 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC561F95E68600720673 /* spinner.xcassets */; };
@@ -287,6 +288,7 @@
 		DA5B093E1FA35EF00055E8F3 /* CCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreateSave.swift; sourceTree = "<group>"; };
 		DA5B09401FA360D10055E8F3 /* ArchCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateSave.swift; sourceTree = "<group>"; };
 		DA5B09451FA361380055E8F3 /* MCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSave.swift; sourceTree = "<group>"; };
+		DA5B094B1FA362210055E8F3 /* VCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSave.swift; sourceTree = "<group>"; };
 		DA65EC3D1F95DFD700720673 /* columbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = columbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65EC531F95E68600720673 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA65EC551F95E68600720673 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -445,6 +447,14 @@
 			isa = PBXGroup;
 			children = (
 				DA5B09451FA361380055E8F3 /* MCreateSave.swift */,
+			);
+			path = CreateSave;
+			sourceTree = "<group>";
+		};
+		DA5B094A1FA362050055E8F3 /* CreateSave */ = {
+			isa = PBXGroup;
+			children = (
+				DA5B094B1FA362210055E8F3 /* VCreateSave.swift */,
 			);
 			path = CreateSave;
 			sourceTree = "<group>";
@@ -656,6 +666,7 @@
 				DA65ECAD1F95E68700720673 /* Basic */,
 				DA65EC9A1F95E68700720673 /* Home */,
 				DAB2F8FD1F966A0400C1EF4A /* Create */,
+				DA5B094A1FA362050055E8F3 /* CreateSave */,
 				DAB2F8FC1F966A0400C1EF4A /* Plans */,
 				DAB2F8FB1F966A0300C1EF4A /* Settings */,
 			);
@@ -1023,6 +1034,7 @@
 				DA5B093F1FA35EF00055E8F3 /* CCreateSave.swift in Sources */,
 				DA2EE56D1F98AE9900488A07 /* MCreateMapStatusContracted.swift in Sources */,
 				DA13F6521F99C4C800DF92F5 /* DPlanStopAnnotation.swift in Sources */,
+				DA5B094C1FA362210055E8F3 /* VCreateSave.swift in Sources */,
 				DAECA2DE1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift in Sources */,
 				DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */,
 				DA65ED161F95E68700720673 /* VSpinner.swift in Sources */,
