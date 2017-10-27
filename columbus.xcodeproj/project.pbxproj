@@ -186,6 +186,7 @@
 		DAD387241FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */; };
 		DAD387261FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */; };
 		DAD387281FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */; };
+		DAD3872A1FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */; };
 		DAD888F61F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F51F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift */; };
 		DAD888F81F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */; };
 		DAD888FA1F9D2172000EC7FD /* MCreatePlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */; };
@@ -406,6 +407,7 @@
 		DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapRangeFactory.swift; sourceTree = "<group>"; };
 		DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapFactory.swift; sourceTree = "<group>"; };
 		DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveSnapshot.swift; sourceTree = "<group>"; };
+		DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveSnapshotFactory.swift; sourceTree = "<group>"; };
 		DAD888F51F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapDragging.swift; sourceTree = "<group>"; };
 		DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsUpdate.swift; sourceTree = "<group>"; };
 		DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanFactory.swift; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 				DA5B09451FA361380055E8F3 /* MCreateSave.swift */,
 				DABC26941FA39FA400746CDD /* MCreateSaveActions.swift */,
 				DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */,
+				DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */,
 				DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */,
 				DAD387211FA3E3B00031B9F8 /* MCreateSaveMapRange.swift */,
 				DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */,
@@ -1158,6 +1161,7 @@
 				DA65ECE41F95E68700720673 /* ExtensionUIFont.swift in Sources */,
 				DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */,
 				DA525A041F9F7713004F8503 /* VSettingsListCellTravelModeList.swift in Sources */,
+				DAD3872A1FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift in Sources */,
 				DA2EE5671F98ABA200488A07 /* MCreateMapStatusProtocol.swift in Sources */,
 				DAD888FA1F9D2172000EC7FD /* MCreatePlanFactory.swift in Sources */,
 				DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */,
