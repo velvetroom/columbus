@@ -6,10 +6,37 @@ final class MCreateMapMenuDone:MCreateMapMenuProtocol
     let icon:UIImage = #imageLiteral(resourceName: "assetMapButtonDone")
     let iconSelected:UIImage = #imageLiteral(resourceName: "assetMapButtonDoneSelected")
     
+    //MARK: private
+    
+    private func confirmDone(controller:CCreate)
+    {
+        controller.save()
+    }
+    
+    private func errorNotStops()
+    {
+        let message:String = String.localizedModel(
+            key:"MCreateMapMenuDone_noStops")
+        
+        VAlert.messageFail(message:message)
+    }
+    
     //MARK: internal
     
     func selected(controller:CCreate)
     {
-        controller.save()
+        guard
+        
+            let count:Int = controller.model.plan?.plan.stops?.count,
+            count > 0
+        
+        else
+        {
+            errorNotStops()
+            
+            return
+        }
+        
+        confirmDone(controller:controller)
     }
 }

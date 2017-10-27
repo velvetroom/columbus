@@ -3,3 +3,4 @@ MSettingsTravelModeDriving_title="Driving";
 MSettingsTravelModeCycling_title="Cycling";
 MSettingsTravelModeTransit_title="Transit";
 MSettingsTravelModeWalking_title="Walking";
+MCreateMapMenuDone_noStops="Plan has no Stops";
