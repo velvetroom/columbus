@@ -18,4 +18,21 @@ extension MCreateSaveMapRange
         
         return mapRange
     }
+    
+    func comparingMapPoint(
+        mapPoint:MKMapPoint) -> MCreateSaveMapRange
+    {
+        let minX:Double = min(self.minX, mapPoint.x)
+        let maxX:Double = max(self.maxX, mapPoint.x)
+        let minY:Double = min(self.minY, mapPoint.y)
+        let maxY:Double = max(self.maxY, mapPoint.y)
+        
+        let newRange:MCreateSaveMapRange = MCreateSaveMapRange(
+            minX:minX,
+            maxX:maxX,
+            minY:minY,
+            maxY:maxY)
+        
+        return newRange
+    }
 }

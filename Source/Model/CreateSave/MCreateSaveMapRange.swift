@@ -2,8 +2,8 @@ import Foundation
 
 struct MCreateSaveMapRange
 {
-    let minX:Double
-    let maxX:Double
-    let minY:Double
-    let maxY:Double
+    var minX:Double
+    var maxX:Double
+    var minY:Double
+    var maxY:Double
 }

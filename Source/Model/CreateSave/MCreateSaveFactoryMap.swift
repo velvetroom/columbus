@@ -20,6 +20,32 @@ extension MCreateSave
         return points
     }
     
+    private class func factoryMapRange(
+        mapPoints:[MKMapPoint]) -> MCreateSaveMapRange?
+    {
+        var mapRange:MCreateSaveMapRange?
+        
+        for mapPoint:MKMapPoint in mapPoints
+        {
+            guard
+            
+                mapRange == nil
+            
+            else
+            {
+                mapRange = mapRange?.comparingMapPoint(
+                    mapPoint:mapPoint)
+                
+                continue
+            }
+            
+            mapRange = MCreateSaveMapRange.fromMapPoint(
+                mapPoint:mapPoint)
+        }
+        
+        return mapRange
+    }
+    
     //MARK: internal
     
     class func factoryMapRange(
@@ -27,5 +53,9 @@ extension MCreateSave
     {
         let mapPoints:[MKMapPoint] = factoryMapPoints(
             stops:stops)
+        let mapRange:MCreateSaveMapRange? = factoryMapRange(
+            mapPoints:mapPoints)
+        
+        return mapRange
     }
 }
