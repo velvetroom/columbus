@@ -25,13 +25,6 @@ extension VCreateStatusReadyMap
             return
         }
         
-        print(" ---------- user location")
-        
-        let point:MKMapPoint = MKMapPointForCoordinate(coordinate)
-        print(point)
-        
-        print(" ---------- ")
-        
         centreCoordinateRegion(coordinate:coordinate)
         selectedAnnotations = []
     }
