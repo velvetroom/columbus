@@ -1,7 +1,15 @@
-import Foundation
+import UIKit
 
 final class CCreateSave:Controller<ArchCreateSave>
 {
+    override var preferredStatusBarStyle:UIStatusBarStyle
+    {
+        get
+        {
+            return UIStatusBarStyle.lightContent
+        }
+    }
+    
     //MARK: internal
     
     func moveToPlans()
