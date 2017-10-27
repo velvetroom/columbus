@@ -41,7 +41,7 @@ final class VCreateStatusReadyBarStops:
         guard
         
             let count:Int = model?.count,
-            count > 0
+            count > 1
         
         else
         {
