@@ -8,5 +8,5 @@ VSettingsListCellTravelMode_title="Default traveling mode";
 VSettingsListCellTravelMode_descr="\nYou can change traveling mode\nwhen editing each Plan";
 VCreateStatusReadyBarStopsFooter_labelDistanceTitle="Distance";
 VCreateStatusReadyBarStopsFooter_labelDurationTitle="Duration";
-VCreateSave_labelTitle="Saving Plan";
+VCreateSave_labelTitle="Saving";
 VCreateSave_buttonCancel="Cancel";

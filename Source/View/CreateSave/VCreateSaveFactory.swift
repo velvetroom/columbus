@@ -18,7 +18,7 @@ extension VCreateSave
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.regular(size:kTitleFontSize)
+        labelTitle.font = UIFont.medium(size:kTitleFontSize)
         labelTitle.textColor = UIColor.white
         labelTitle.text = String.localizedView(
             key:"VCreateSave_labelTitle")
@@ -58,7 +58,7 @@ extension VCreateSave
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self,
-            constant:kTitleHeight)
+            constant:kTitleBottom)
         NSLayoutConstraint.height(
             view:labelTitle,
             constant:kTitleHeight)
