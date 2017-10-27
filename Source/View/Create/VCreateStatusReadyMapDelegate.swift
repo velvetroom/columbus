@@ -84,6 +84,7 @@ extension VCreateStatusReadyMap:MKMapViewDelegate
         _ mapView:MKMapView,
         fullyRendered:Bool)
     {
+        mapView.region
         print("did finish tiles")
     }
 }
