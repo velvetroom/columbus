@@ -2,6 +2,19 @@ import UIKit
 
 final class CCreateSave:Controller<ArchCreateSave>
 {
+    init(database:Database, plan:DPlan)
+    {
+        super.init()
+        
+        model.database = database
+        model.plan = plan
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
     override var preferredStatusBarStyle:UIStatusBarStyle
     {
         get

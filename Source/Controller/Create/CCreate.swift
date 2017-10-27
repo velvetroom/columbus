@@ -41,7 +41,19 @@ final class CCreate:Controller<ArchCreate>
     
     func save()
     {
-        let controller:CCreateSave = CCreateSave()
+        guard
+            
+            let database:Database = model.database,
+            let plan:DPlan = model.plan?.plan
+        
+        else
+        {
+            return
+        }
+        
+        let controller:CCreateSave = CCreateSave(
+            database:database,
+            plan:plan)
         parentController?.push(
             controller:controller,
             vertical:ControllerParent.Vertical.bottom)
