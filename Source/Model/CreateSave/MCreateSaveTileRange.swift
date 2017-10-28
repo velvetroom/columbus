@@ -4,8 +4,8 @@ struct MCreateSaveTileRange
 {
     let tileSize:Double
     let zoom:Double
-    var minX:Double
-    var maxX:Double
-    var minY:Double
-    var maxY:Double
+    let minX:Double
+    let maxX:Double
+    let minY:Double
+    let maxY:Double
 }
