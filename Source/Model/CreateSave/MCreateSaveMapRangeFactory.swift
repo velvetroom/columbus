@@ -2,6 +2,17 @@ import MapKit
 
 extension MCreateSaveMapRange
 {
+    //MARK: private
+    
+    private func factoryPixelZoom(
+        zoom:Double) -> Double
+    {
+        let pixelZoomInt:Int = 1 << Int(zoom)
+        let pixelZoom:Double = Double(pixelZoomInt)
+        
+        return pixelZoom
+    }
+    
     //MARK: internal
     
     static func fromMapPoint(
@@ -39,8 +50,8 @@ extension MCreateSaveMapRange
     func factoryPixelRange(
         zoom:Double) -> MCreateSavePixelRange
     {
-        let pixelZoomInt:Int = 1 << Int(zoom)
-        let pixelZoom:Double = Double(pixelZoomInt)
+        let pixelZoom:Double = factoryPixelZoom(
+            zoom:zoom)
         
         let minX:Double = self.minX * pixelZoom
         let maxX:Double = self.maxX * pixelZoom
@@ -49,6 +60,7 @@ extension MCreateSaveMapRange
         
         let pixelRange:MCreateSavePixelRange = MCreateSavePixelRange(
             zoom:zoom,
+            pixelZoom:pixelZoom,
             minX:minX,
             maxX:maxX,
             minY:minY,
