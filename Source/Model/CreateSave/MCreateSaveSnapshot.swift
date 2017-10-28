@@ -65,10 +65,12 @@ extension MCreateSave
     
     class func snapshots(
         mapRange:MCreateSaveMapRange,
+        settings:DSettings,
         completion:@escaping(([UIImage]) -> ()))
     {
         let options:[MKMapSnapshotOptions] = factorySnapshotOptions(
-            mapRange:mapRange)
+            mapRange:mapRange,
+            settings:settings)
         let dispatchGroup:DispatchGroup = MCreateSave.factoryDispatchGroup()
         
         snapshots(

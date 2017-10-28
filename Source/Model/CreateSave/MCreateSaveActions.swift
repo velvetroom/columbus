@@ -5,7 +5,8 @@ extension MCreateSave
     //MARK: private
     
     private func save(
-        plan:DPlan)
+        plan:DPlan,
+        settings:DSettings)
     {
         guard
         
@@ -19,7 +20,8 @@ extension MCreateSave
         }
         
         MCreateSave.snapshots(
-            mapRange:mapRange)
+            mapRange:mapRange,
+            settings:settings)
         { [weak self] (snapshots:[UIImage]) in
             
             self?.save(
@@ -52,14 +54,17 @@ extension MCreateSave
             
             guard
                 
-                let plan:DPlan = self?.plan
+                let plan:DPlan = self?.plan,
+                let settings:DSettings = self?.settings
             
             else
             {
                 return
             }
             
-            self?.save(plan:plan)
+            self?.save(
+                plan:plan,
+                settings:settings)
         }
     }
 }

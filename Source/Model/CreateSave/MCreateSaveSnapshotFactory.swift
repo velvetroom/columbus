@@ -5,7 +5,8 @@ extension MCreateSave
     //MARK: internal
     
     class func factorySnapshotOptions(
-        mapRange:MCreateSaveMapRange) -> [MKMapSnapshotOptions]
+        mapRange:MCreateSaveMapRange,
+        settings:DSettings) -> [MKMapSnapshotOptions]
     {
         let mapRect:MKMapRect = mapRange.factoryMapRect()
         
