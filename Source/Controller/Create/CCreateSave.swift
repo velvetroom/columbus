@@ -2,12 +2,16 @@ import UIKit
 
 final class CCreateSave:Controller<ArchCreateSave>
 {
-    init(database:Database, plan:DPlan)
+    init(
+        database:Database,
+        plan:DPlan,
+        settings:DSettings)
     {
         super.init()
         
         model.database = database
         model.plan = plan
+        model.settings = settings
     }
     
     required init?(coder:NSCoder)

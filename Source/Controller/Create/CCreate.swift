@@ -44,7 +44,8 @@ final class CCreate:Controller<ArchCreate>
         guard
             
             let database:Database = model.database,
-            let plan:DPlan = model.plan?.plan
+            let plan:DPlan = model.plan?.plan,
+            let settings:DSettings = model.settings
         
         else
         {
@@ -53,7 +54,8 @@ final class CCreate:Controller<ArchCreate>
         
         let controller:CCreateSave = CCreateSave(
             database:database,
-            plan:plan)
+            plan:plan,
+            settings:settings)
         parentController?.push(
             controller:controller,
             vertical:ControllerParent.Vertical.bottom)
