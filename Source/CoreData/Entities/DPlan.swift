@@ -4,7 +4,7 @@ extension DPlan
 {
     public override func awakeFromNib()
     {
-        identifier = UUID().uuidString
+        identifier = UUID().uuidString 
     }
     
     //MARK: internal
