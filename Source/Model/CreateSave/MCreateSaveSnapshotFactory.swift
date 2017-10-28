@@ -2,6 +2,24 @@ import MapKit
 
 extension MCreateSave
 {
+    //MARK: private
+    
+    private func factoryOptions(
+        mapRange:MCreateSaveMapRange,
+        zoom:MCreateSaveZoomProtocol) -> [MKMapSnapshotOptions]
+    {
+        guard
+        
+            let firstZoom:MCreateSaveZoomProtocol = zoom.zoom.first
+        
+        else
+        {
+            return
+        }
+        
+        
+    }
+    
     //MARK: internal
     
     class func factorySnapshotOptions(
