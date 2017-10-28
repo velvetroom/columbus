@@ -8,6 +8,8 @@ extension MCreateSave
         mapRange:MCreateSaveMapRange,
         settings:DSettings) -> [MKMapSnapshotOptions]
     {
+        let zoom:MCreateSaveZoomProtocol = MCreateSaveZoomDefault.factoryZoom(
+            detailLevel:settings.detailLevel)
         let mapRect:MKMapRect = mapRange.factoryMapRect()
         
         let option:MKMapSnapshotOptions = MKMapSnapshotOptions()

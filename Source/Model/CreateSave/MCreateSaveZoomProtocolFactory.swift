@@ -34,7 +34,7 @@ extension MCreateSaveZoomProtocol
         
         else
         {
-            let zoom:MCreateSaveZoomMin = MCreateSaveZoomMin()
+            let zoom:MCreateSaveZoomDefault = MCreateSaveZoomDefault()
             
             return zoom
         }

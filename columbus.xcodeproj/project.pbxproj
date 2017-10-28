@@ -159,6 +159,7 @@
 		DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */; };
 		DA90B8FE1FA0D25900272ECA /* MCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */; };
 		DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */; };
+		DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -387,6 +388,7 @@
 		DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanSave.swift; sourceTree = "<group>"; };
 		DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateFactory.swift; sourceTree = "<group>"; };
 		DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomProtocolFactory.swift; sourceTree = "<group>"; };
+		DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomDefault.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 				DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */,
 				DA2944DD1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift */,
 				DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */,
+				DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */,
 				DA2944DF1FA4053500645DA4 /* MCreateSaveZoomMin.swift */,
 				DA2944E11FA4055F00645DA4 /* MCreateSaveZoomMedium.swift */,
 				DA2944E31FA4057600645DA4 /* MCreateSaveZoomMax.swift */,
@@ -1241,6 +1244,7 @@
 				DAE699921FA2892200FFE6E3 /* VCreateStatusReadyBarTravelActions.swift in Sources */,
 				DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */,
 				DA13F6561F9A057200DF92F5 /* VCreateStatusReadyMapPin.swift in Sources */,
+				DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */,
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
 				DA2EE56F1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift in Sources */,
 				DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */,
