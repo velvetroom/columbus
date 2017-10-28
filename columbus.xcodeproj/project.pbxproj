@@ -163,6 +163,7 @@
 		DA97DC7C1FA41760005A137F /* MCreateSaveTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */; };
 		DA97DC7E1FA41776005A137F /* MCreateSaveTileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7D1FA41776005A137F /* MCreateSaveTileFactory.swift */; };
 		DA97DC801FA418FE005A137F /* MCreateSaveRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */; };
+		DA97DC821FA41929005A137F /* MCreateSaveRenderTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC811FA41929005A137F /* MCreateSaveRenderTile.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -395,6 +396,7 @@
 		DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTile.swift; sourceTree = "<group>"; };
 		DA97DC7D1FA41776005A137F /* MCreateSaveTileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileFactory.swift; sourceTree = "<group>"; };
 		DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRender.swift; sourceTree = "<group>"; };
+		DA97DC811FA41929005A137F /* MCreateSaveRenderTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderTile.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 				DA2944E11FA4055F00645DA4 /* MCreateSaveZoomMedium.swift */,
 				DA2944E31FA4057600645DA4 /* MCreateSaveZoomMax.swift */,
 				DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */,
+				DA97DC811FA41929005A137F /* MCreateSaveRenderTile.swift */,
 			);
 			path = CreateSave;
 			sourceTree = "<group>";
@@ -1154,6 +1157,7 @@
 				DA740F931F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift in Sources */,
 				DABED9B41F9E99B000635E82 /* VSettingsList.swift in Sources */,
 				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
+				DA97DC821FA41929005A137F /* MCreateSaveRenderTile.swift in Sources */,
 				DADA41F61F96707000DD1FC4 /* MMenuItemCreate.swift in Sources */,
 				DA65ECF31F95E68700720673 /* Model.swift in Sources */,
 				DA65ECDE1F95E68700720673 /* ExtensionNotification.swift in Sources */,
