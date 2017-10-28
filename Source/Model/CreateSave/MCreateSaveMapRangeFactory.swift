@@ -35,18 +35,4 @@ extension MCreateSaveMapRange
         
         return newRange
     }
-    
-    func factoryMapRect() -> MKMapRect
-    {
-        let width:Double = maxX - minX
-        let height:Double = maxY - minY
-        
-        let mapRect:MKMapRect = MKMapRectMake(
-            minX,
-            minY,
-            width,
-            height)
-        
-        return mapRect
-    }
 }

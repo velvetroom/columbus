@@ -5,17 +5,45 @@ extension MCreateSave
     //MARK: private
     
     private class func snapshots(
-        dispatchGroup:DispatchGroup,
-        options:[MKMapSnapshotOptions],
-        completion:@escaping(([UIImage]) -> ()))
+        renders:[MCreateSaveRender],
+        completion:@escaping(([URL]) -> ()))
     {
-        var images:[UIImage] = []
+        var allUrls:[URL] = []
+        let dispatchGroup:DispatchGroup = MCreateSave.factoryDispatchGroup()
         
-        for option:MKMapSnapshotOptions in options
+        for render:MCreateSaveRender in renders
         {
             dispatchGroup.enter()
             
-            snapshot(option:option)
+            snapshots(render:render)
+            { (urls:[URL]) in
+                
+                allUrls.append(contentsOf:urls)
+                
+                dispatchGroup.leave()
+            }
+        }
+        
+        dispatchGroup.notify(
+            queue:DispatchQueue.global(
+                qos:DispatchQoS.QoSClass.background))
+        {
+            completion(allUrls)
+        }
+    }
+    
+    private class func snapshots(
+        render:MCreateSaveRender,
+        completion:@escaping(([URL]) -> ()))
+    {
+        var urls:[URL] = []
+        let dispatchGroup:DispatchGroup = MCreateSave.factoryDispatchGroup()
+        
+        for tile:MCreateSaveRenderTile in render.tiles
+        {
+            dispatchGroup.enter()
+            
+            snapshot(option:tile.options)
             { (image:UIImage?) in
                 
                 if let image:UIImage = image
@@ -31,7 +59,7 @@ extension MCreateSave
             queue:DispatchQueue.global(
                 qos:DispatchQoS.QoSClass.background))
         {
-            completion(images)
+            completion(urls)
         }
     }
     
@@ -66,16 +94,14 @@ extension MCreateSave
     class func snapshots(
         mapRange:MCreateSaveMapRange,
         settings:DSettings,
-        completion:@escaping(([UIImage]) -> ()))
+        completion:@escaping(([URL]) -> ()))
     {
-        let options:[MKMapSnapshotOptions] = factorySnapshotOptions(
+        let renders:[MCreateSaveRender] = factorySnapshotRender(
             mapRange:mapRange,
             settings:settings)
-        let dispatchGroup:DispatchGroup = MCreateSave.factoryDispatchGroup()
         
         snapshots(
-            dispatchGroup:dispatchGroup,
-            options:options,
+            renders:renders,
             completion:completion)
     }
 }

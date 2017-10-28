@@ -22,22 +22,22 @@ extension MCreateSave
         MCreateSave.snapshots(
             mapRange:mapRange,
             settings:settings)
-        { [weak self] (snapshots:[UIImage]) in
+        { [weak self] (urls:[URL]) in
             
             self?.save(
                 plan:plan,
-                snapshots:snapshots)
+                urls:urls)
         }
     }
     
     private func save(
         plan:DPlan,
-        snapshots:[UIImage])
+        urls:[URL])
     {
         DispatchQueue.main.async
         {
             let activity:UIActivityViewController = UIActivityViewController(
-                activityItems:snapshots,
+                activityItems:urls,
                 applicationActivities:nil)
             
             self.view?.controller.present(activity, animated:true, completion:nil)

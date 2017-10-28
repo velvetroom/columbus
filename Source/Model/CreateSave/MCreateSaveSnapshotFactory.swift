@@ -4,37 +4,41 @@ extension MCreateSave
 {
     //MARK: private
     
-    private func factoryOptions(
+    private class func factoryRender(
         mapRange:MCreateSaveMapRange,
-        zoom:MCreateSaveZoomProtocol) -> [MKMapSnapshotOptions]
+        zoom:MCreateSaveZoomProtocol) -> [MCreateSaveRender]
     {
         guard
         
-            let firstZoom:MCreateSaveZoomProtocol = zoom.zoom.first
+            let firstZoom:Double = zoom.zoom.first
         
         else
         {
-            return
+            return []
         }
         
+        let render:MCreateSaveRender = tiles(
+            mapRange:mapRange,
+            zoom:firstZoom)
         
+        let renders:[MCreateSaveRender] = [
+            render]
+        
+        return render
     }
     
     //MARK: internal
     
-    class func factorySnapshotOptions(
+    class func factorySnapshotRender(
         mapRange:MCreateSaveMapRange,
-        settings:DSettings) -> [MKMapSnapshotOptions]
+        settings:DSettings) -> [MCreateSaveRender]
     {
         let zoom:MCreateSaveZoomProtocol = MCreateSaveZoomDefault.factoryZoom(
             detailLevel:settings.detailLevel)
-        let mapRect:MKMapRect = mapRange.factoryMapRect()
         
-        let option:MKMapSnapshotOptions = MKMapSnapshotOptions()
-        option.mapRect = mapRect
-        
-        let options:[MKMapSnapshotOptions] = [
-            option]
+        let options:[MCreateSaveRender] = factoryRender(
+            mapRange:mapRange,
+            zoom:zoom)
         
         return options
     }
