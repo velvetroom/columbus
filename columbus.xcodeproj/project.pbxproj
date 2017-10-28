@@ -162,6 +162,7 @@
 		DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */; };
 		DA97DC7C1FA41760005A137F /* MCreateSaveTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */; };
 		DA97DC7E1FA41776005A137F /* MCreateSaveTileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7D1FA41776005A137F /* MCreateSaveTileFactory.swift */; };
+		DA97DC801FA418FE005A137F /* MCreateSaveRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -393,6 +394,7 @@
 		DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomDefault.swift; sourceTree = "<group>"; };
 		DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTile.swift; sourceTree = "<group>"; };
 		DA97DC7D1FA41776005A137F /* MCreateSaveTileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileFactory.swift; sourceTree = "<group>"; };
+		DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRender.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 				DA2944DF1FA4053500645DA4 /* MCreateSaveZoomMin.swift */,
 				DA2944E11FA4055F00645DA4 /* MCreateSaveZoomMedium.swift */,
 				DA2944E31FA4057600645DA4 /* MCreateSaveZoomMax.swift */,
+				DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */,
 			);
 			path = CreateSave;
 			sourceTree = "<group>";
@@ -1184,6 +1187,7 @@
 				DA2CC7F21FA1EE8600CF0DE1 /* DSettingsComputed.swift in Sources */,
 				DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */,
 				DA6AC1791F98FE7E004D6707 /* MCreateMapMenuUser.swift in Sources */,
+				DA97DC801FA418FE005A137F /* MCreateSaveRender.swift in Sources */,
 				DA7B65241F9E6B5F001CDC35 /* VMenuActions.swift in Sources */,
 				DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */,
 				DA5B09461FA361380055E8F3 /* MCreateSave.swift in Sources */,
