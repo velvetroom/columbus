@@ -15,9 +15,9 @@ extension MCreateSave
             
         else
         {
-            let er:LocalizedError = NSError(
+            let error:MError = MError.factoryNoImageData()
             
-            throw ""
+            throw error
         }
         
         try data.write(

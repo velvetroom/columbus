@@ -68,7 +68,11 @@ extension MCreateSave
             guard
             
                 error == nil,
-                let image:UIImage = snapshot?.image
+                let image:UIImage = snapshot?.image,
+                let url:URL = fileSave(
+                    directory:directory,
+                    name:tile.name,
+                    image:image)
             
             else
             {
@@ -77,7 +81,7 @@ extension MCreateSave
                 return
             }
             
-            completion(image)
+            completion(url)
         }
     }
     
