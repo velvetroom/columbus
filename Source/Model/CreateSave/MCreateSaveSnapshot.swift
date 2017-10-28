@@ -8,47 +8,19 @@ extension MCreateSave
         renders:[MCreateSaveRender],
         completion:@escaping(([URL]) -> ()))
     {
-        var allUrls:[URL] = []
+        var urls:[URL] = []
         let dispatchGroup:DispatchGroup = MCreateSave.factoryDispatchGroup()
         
         for render:MCreateSaveRender in renders
         {
-            dispatchGroup.enter()
-            
-            snapshots(render:render)
-            { (urls:[URL]) in
+            snapshots(
+                dispatchGroup:dispatchGroup,
+                render:render)
+            { (url:URL?) in
                 
-                allUrls.append(contentsOf:urls)
-                
-                dispatchGroup.leave()
-            }
-        }
-        
-        dispatchGroup.notify(
-            queue:DispatchQueue.global(
-                qos:DispatchQoS.QoSClass.background))
-        {
-            completion(allUrls)
-        }
-    }
-    
-    private class func snapshots(
-        render:MCreateSaveRender,
-        completion:@escaping(([URL]) -> ()))
-    {
-        var urls:[URL] = []
-        let dispatchGroup:DispatchGroup = MCreateSave.factoryDispatchGroup()
-        
-        for tile:MCreateSaveRenderTile in render.tiles
-        {
-            dispatchGroup.enter()
-            
-            snapshot(option:tile.options)
-            { (image:UIImage?) in
-                
-                if let image:UIImage = image
+                if let url:URL = url
                 {
-                    images.append(image)
+                    urls.append(url)
                 }
                 
                 dispatchGroup.leave()
@@ -63,12 +35,27 @@ extension MCreateSave
         }
     }
     
+    private class func snapshots(
+        dispatchGroup:DispatchGroup,
+        render:MCreateSaveRender,
+        completion:@escaping((URL?) -> ()))
+    {
+        for tile:MCreateSaveRenderTile in render.tiles
+        {
+            dispatchGroup.enter()
+            
+            snapshot(
+                tile:tile,
+                completion:completion)
+        }
+    }
+    
     private class func snapshot(
-        option:MKMapSnapshotOptions,
-        completion:@escaping((UIImage?) -> ()))
+        tile:MCreateSaveRenderTile,
+        completion:@escaping((URL?) -> ()))
     {
         let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
-            options:option)
+            options:tile.options)
         
         snapshotter.start
         { (snapshot:MKMapSnapshot?, error:Error?) in
