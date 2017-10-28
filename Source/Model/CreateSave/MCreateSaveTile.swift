@@ -8,7 +8,9 @@ extension MCreateSave
         mapRange:MCreateSaveMapRange,
         zoom:Double) -> MCreateSaveRender
     {
-        let pixelRange:MCreateSaveMapRange = mapRange.factoryPixelRange(
+        let pixelRange:MCreateSavePixelRange = mapRange.factoryPixelRange(
             zoom:zoom)
+        
+        
     }
 }

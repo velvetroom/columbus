@@ -37,7 +37,7 @@ extension MCreateSaveMapRange
     }
     
     func factoryPixelRange(
-        zoom:Double) -> MCreateSaveMapRange
+        zoom:Double) -> MCreateSavePixelRange
     {
         let pixelZoomInt:Int = 1 << Int(zoom)
         let pixelZoom:Double = Double(pixelZoomInt)
@@ -47,7 +47,8 @@ extension MCreateSaveMapRange
         let minY:Double = self.minY * pixelZoom
         let maxY:Double = self.maxY * pixelZoom
         
-        let pixelRange:MCreateSaveMapRange = MCreateSaveMapRange(
+        let pixelRange:MCreateSavePixelRange = MCreateSavePixelRange(
+            zoom:zoom,
             minX:minX,
             maxX:maxX,
             minY:minY,
