@@ -196,6 +196,7 @@
 		DABED9B41F9E99B000635E82 /* VSettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABED9B31F9E99B000635E82 /* VSettingsList.swift */; };
 		DACA5C9D1FA4323500B7BBC7 /* MCreateSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5C9C1FA4323500B7BBC7 /* MCreateSaveFile.swift */; };
 		DACA5CA01FA4397000B7BBC7 /* MError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5C9F1FA4397000B7BBC7 /* MError.swift */; };
+		DACA5CA21FA4398900B7BBC7 /* MErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5CA11FA4398900B7BBC7 /* MErrorFactory.swift */; };
 		DAD387221FA3E3B00031B9F8 /* MCreateSaveMapRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387211FA3E3B00031B9F8 /* MCreateSaveMapRange.swift */; };
 		DAD387241FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */; };
 		DAD387261FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */; };
@@ -431,6 +432,7 @@
 		DABED9B31F9E99B000635E82 /* VSettingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsList.swift; sourceTree = "<group>"; };
 		DACA5C9C1FA4323500B7BBC7 /* MCreateSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveFile.swift; sourceTree = "<group>"; };
 		DACA5C9F1FA4397000B7BBC7 /* MError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MError.swift; sourceTree = "<group>"; };
+		DACA5CA11FA4398900B7BBC7 /* MErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MErrorFactory.swift; sourceTree = "<group>"; };
 		DAD387211FA3E3B00031B9F8 /* MCreateSaveMapRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapRange.swift; sourceTree = "<group>"; };
 		DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapRangeFactory.swift; sourceTree = "<group>"; };
 		DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapFactory.swift; sourceTree = "<group>"; };
@@ -999,6 +1001,7 @@
 			isa = PBXGroup;
 			children = (
 				DACA5C9F1FA4397000B7BBC7 /* MError.swift */,
+				DACA5CA11FA4398900B7BBC7 /* MErrorFactory.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -1265,6 +1268,7 @@
 				DA06799E1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift in Sources */,
 				DA2944E01FA4053500645DA4 /* MCreateSaveZoomMin.swift in Sources */,
 				DAA5B4911F993B0B00F9121C /* MCreatePlan.swift in Sources */,
+				DACA5CA21FA4398900B7BBC7 /* MErrorFactory.swift in Sources */,
 				DAD387261FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift in Sources */,
 				DA4BC9371F9AC44E00453655 /* VCreateStatusReadyBarActions.swift in Sources */,
 				DA0448071F9756CF00BA2D45 /* VCreateStatusReadyMap.swift in Sources */,

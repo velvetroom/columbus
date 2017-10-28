@@ -4,3 +4,4 @@ MSettingsTravelModeCycling_title="Cycling";
 MSettingsTravelModeTransit_title="Transit";
 MSettingsTravelModeWalking_title="Walking";
 MCreateMapMenuDone_noStops="Plan has no Stops";
+MError_noImageData="Unable to get image data";

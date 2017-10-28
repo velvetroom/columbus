@@ -5,6 +5,7 @@ extension MCreateSave
     //MARK: private
     
     private class func snapshots(
+        directory:URL,
         renders:[MCreateSaveRender],
         completion:@escaping(([URL]) -> ()))
     {
@@ -15,6 +16,7 @@ extension MCreateSave
         {
             snapshots(
                 dispatchGroup:dispatchGroup,
+                directory:directory,
                 render:render)
             { (url:URL?) in
                 
@@ -37,6 +39,7 @@ extension MCreateSave
     
     private class func snapshots(
         dispatchGroup:DispatchGroup,
+        directory:URL,
         render:MCreateSaveRender,
         completion:@escaping((URL?) -> ()))
     {
@@ -45,12 +48,14 @@ extension MCreateSave
             dispatchGroup.enter()
             
             snapshot(
+                directory:directory,
                 tile:tile,
                 completion:completion)
         }
     }
     
     private class func snapshot(
+        directory:URL,
         tile:MCreateSaveRenderTile,
         completion:@escaping((URL?) -> ()))
     {
@@ -84,11 +89,22 @@ extension MCreateSave
         settings:DSettings,
         completion:@escaping(([URL]) -> ()))
     {
+        guard
+            
+            let directory:URL = factoryDirectory(
+                plan:plan)
+        
+        else
+        {
+            return
+        }
+        
         let renders:[MCreateSaveRender] = factorySnapshotRender(
             mapRange:mapRange,
             settings:settings)
         
         snapshots(
+            directory:directory,
             renders:renders,
             completion:completion)
     }
