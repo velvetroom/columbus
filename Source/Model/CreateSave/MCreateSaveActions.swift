@@ -32,7 +32,14 @@ extension MCreateSave
         plan:DPlan,
         snapshots:[UIImage])
     {
-        
+        DispatchQueue.main.async
+        {
+            let activity:UIActivityViewController = UIActivityViewController(
+                activityItems:snapshots,
+                applicationActivities:nil)
+            
+            self.view?.controller.present(activity, animated:true, completion:nil)
+        }
     }
     
     //MARK: internal
