@@ -20,6 +20,7 @@ extension MCreateSave
         }
         
         MCreateSave.snapshots(
+            plan:plan,
             mapRange:mapRange,
             settings:settings)
         { [weak self] (urls:[URL]) in

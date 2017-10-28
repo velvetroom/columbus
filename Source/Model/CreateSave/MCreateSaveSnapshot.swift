@@ -79,6 +79,7 @@ extension MCreateSave
     //MARK: internal
     
     class func snapshots(
+        plan:DPlan,
         mapRange:MCreateSaveMapRange,
         settings:DSettings,
         completion:@escaping(([URL]) -> ()))

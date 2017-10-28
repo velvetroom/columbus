@@ -42,4 +42,57 @@ extension MCreateSave
         
         return options
     }
+    
+    class func factoryDirectory(
+        plan:DPlan) -> URL
+    {
+        plan.objectID
+    }
+    
+    class func directory() -> URL?
+    {
+        guard
+            
+            let directory:String = directoryName()
+            
+            else
+        {
+            return nil
+        }
+        
+        let appDirectory:URL = FileManager.appDirectory
+        let projects:URL = appDirectory.appendingPathComponent(
+            directory)
+        
+        return projects
+    }
+    
+    @discardableResult class func createDirectory() -> URL?
+    {
+        guard
+            
+            let gifPath:URL = directory()
+            
+            else
+        {
+            return nil
+        }
+        
+        do
+        {
+            try FileManager.default.createDirectory(
+                at:gifPath,
+                withIntermediateDirectories:true,
+                attributes:nil)
+        }
+        catch
+        {
+            return nil
+        }
+        
+        let excludedPath:URL = URL.excludeFromBackup(
+            original:gifPath)
+        
+        return excludedPath
+    }
 }
