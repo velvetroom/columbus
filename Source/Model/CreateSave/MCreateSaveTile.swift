@@ -14,5 +14,10 @@ extension MCreateSave
             tileSize:kTileSize)
         let boundingTileRange:MCreateSaveTileRange = factoryBoundingTileRange(
             tileRange:tileRange)
+        
+        let render:MCreateSaveRender = tiles(
+            tileRange:boundingTileRange)
+        
+        return render
     }
 }
