@@ -24,4 +24,27 @@ extension DSettings
             rawTravelMode = newValue.rawValue
         }
     }
+    
+    var detailLevel:DSettingsDetailLevel
+    {
+        get
+        {
+            guard
+            
+                let detailLevel:DSettingsDetailLevel = DSettingsDetailLevel(
+                    rawValue:rawDetailLevel)
+            
+            else
+            {
+                return DSettingsDetailLevel.min
+            }
+            
+            return detailLevel
+        }
+        
+        set(newValue)
+        {
+            rawDetailLevel = newValue.rawValue
+        }
+    }
 }
