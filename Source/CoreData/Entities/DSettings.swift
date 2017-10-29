@@ -5,6 +5,6 @@ extension DSettings
     public override func awakeFromInsert()
     {
         travelMode = DPlanTravelMode.walking
-        detailLevel = DSettingsDetailLevel.min
+        detailLevel = DSettingsDetailLevel.medium
     }
 }

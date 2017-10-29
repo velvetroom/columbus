@@ -11,10 +11,6 @@ extension MCreateSave
         
         for stop:DPlanStop in stops
         {
-            let Warning:String = "mock up coordinate"
-            stop.latitude = 41.85
-            stop.longitude = -87.64999999999998
-            
             let mapPoint:MKMapPoint = MKMapPointForCoordinate(
                 stop.coordinate)
             
