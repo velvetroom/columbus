@@ -5,6 +5,7 @@
         <attribute name="identifier" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="activated" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DSettings" inverseName="activePlan" inverseEntity="DSettings" syncable="YES"/>
         <relationship name="stops" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DPlanStop" inverseName="plan" inverseEntity="DPlanStop" syncable="YES"/>
         <relationship name="travels" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DPlanTravel" inverseName="plan" inverseEntity="DPlanTravel" syncable="YES"/>
     </entity>
@@ -31,11 +32,12 @@
     <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
         <attribute name="rawDetailLevel" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawTravelMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="activePlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DPlan" inverseName="activated" inverseEntity="DPlan" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DPlan" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="DPlan" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="DPlanStop" positionX="-54" positionY="0" width="128" height="30"/>
         <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="180"/>
-        <element name="DSettings" positionX="-54" positionY="54" width="128" height="75"/>
+        <element name="DSettings" positionX="-54" positionY="54" width="128" height="90"/>
     </elements>
 </model>
