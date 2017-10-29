@@ -33,11 +33,11 @@ extension MCreateSave
         let minX:Double = factoryBoundingMin(
             min:tileRange.minX)
         let maxX:Double = factoryBoundingMax(
-            max:tileRange.minX)
+            max:tileRange.maxX)
         let minY:Double = factoryBoundingMin(
-            min:tileRange.minX)
+            min:tileRange.minY)
         let maxY:Double = factoryBoundingMax(
-            max:tileRange.minX)
+            max:tileRange.maxY)
         
         let boundingTileRange:MCreateSaveTileRange = MCreateSaveTileRange(
             tileSize:tileRange.tileSize,
