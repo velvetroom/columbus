@@ -2,6 +2,8 @@ import MapKit
 
 extension MCreateSave
 {
+    private static let kSnapshotTimeout:TimeInterval = 300
+    
     //MARK: private
     
     private class func snapshots(
@@ -31,14 +33,12 @@ extension MCreateSave
         
         print("save 2 4")
         
-        dispatchGroup.notify(
-            queue:DispatchQueue.global(
-                qos:DispatchQoS.QoSClass.background))
-        {
-            print("save 2 5")
-            
-            completion(urls)
-        }
+        let timeout:DispatchTime = DispatchTime.now() + kSnapshotTimeout
+        let _:DispatchTimeoutResult = dispatchGroup.wait(
+            timeout:timeout)
+        
+        print("save 2 5")
+        completion(urls)
     }
     
     private class func snapshots(
@@ -67,7 +67,7 @@ extension MCreateSave
     {
         let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
             options:tile.options)
-        
+
         snapshotter.start
         { (snapshot:MKMapSnapshot?, error:Error?) in
             
@@ -82,10 +82,14 @@ extension MCreateSave
             
             else
             {
+                print("save 2 7")
+                
                 completion(nil)
                 
                 return
             }
+            
+            print("save 2 6")
             
             completion(url)
         }
