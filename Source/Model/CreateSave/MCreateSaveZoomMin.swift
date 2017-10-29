@@ -3,7 +3,7 @@ import Foundation
 struct MCreateSaveZoomMin:MCreateSaveZoomProtocol
 {
     let zoom:[Double] = [
-        15,
+        14,//15
         17,
         19]
 }

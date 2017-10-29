@@ -7,7 +7,7 @@ extension MCreateSavePixelRange
     private func factoryTileSizeInMap(
         tileSize:Double) -> Double
     {
-        let sizeInMap:Double = pixelZoom * tileSize
+        let sizeInMap:Double = pixelZoom / tileSize
         
         return sizeInMap
     }
