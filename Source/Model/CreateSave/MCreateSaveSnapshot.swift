@@ -29,10 +29,14 @@ extension MCreateSave
             }
         }
         
+        print("save 2 4")
+        
         dispatchGroup.notify(
             queue:DispatchQueue.global(
                 qos:DispatchQoS.QoSClass.background))
         {
+            print("save 2 5")
+            
             completion(urls)
         }
     }
@@ -46,6 +50,8 @@ extension MCreateSave
         for tile:MCreateSaveRenderTile in render.tiles
         {
             dispatchGroup.enter()
+            
+            print("enter dispatch \(dispatchGroup)")
             
             snapshot(
                 directory:directory,
@@ -93,6 +99,8 @@ extension MCreateSave
         settings:DSettings,
         completion:@escaping(([URL]) -> ()))
     {
+        print("save 2 2")
+        
         guard
             
             let directory:URL = factoryDirectory(
@@ -102,6 +110,8 @@ extension MCreateSave
         {
             return
         }
+        
+        print("save 2 3")
         
         let renders:[MCreateSaveRender] = factorySnapshotRender(
             mapRange:mapRange,

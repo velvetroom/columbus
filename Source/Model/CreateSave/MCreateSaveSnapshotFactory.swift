@@ -14,7 +14,7 @@ extension MCreateSave
         {
             let render:MCreateSaveRender = tiles(
                 mapRange:mapRange,
-                zoom:firstZoom)
+                zoom:zoomLevel)
             
             renders.append(render)
         }

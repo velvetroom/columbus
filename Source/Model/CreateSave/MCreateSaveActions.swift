@@ -8,6 +8,8 @@ extension MCreateSave
         plan:DPlan,
         settings:DSettings)
     {
+        print("save 2")
+        
         guard
         
             let stops:[DPlanStop] = plan.stops?.array as? [DPlanStop],
@@ -35,8 +37,12 @@ extension MCreateSave
         plan:DPlan,
         urls:[URL])
     {
+        print("save 3")
+        
         DispatchQueue.main.async
         {
+            print("save 4")
+            
             let activity:UIActivityViewController = UIActivityViewController(
                 activityItems:urls,
                 applicationActivities:nil)
@@ -49,6 +55,8 @@ extension MCreateSave
     
     func save()
     {
+        print("---- start save")
+        
         DispatchQueue.global(
             qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
