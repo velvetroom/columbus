@@ -29,26 +29,51 @@ extension MCreateSave
             
             self?.save(
                 plan:plan,
+                settings:settings,
                 urls:urls)
         }
     }
     
     private func save(
         plan:DPlan,
+        settings:DSettings,
         urls:[URL])
     {
+        plan.updateTimestamp()
+        settings.activePlan = plan
+        
         print("save 3")
         
-        DispatchQueue.main.async
-        {
+        database?.save
+        { [weak self] in
+            
             print("save 4")
             
-            let activity:UIActivityViewController = UIActivityViewController(
-                activityItems:urls,
-                applicationActivities:nil)
-            
-            self.view?.controller.present(activity, animated:true, completion:nil)
+            self?.saveDone()
         }
+    }
+    
+    private func saveDone()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncSaveDone()
+        }
+    }
+    
+    private func asyncSaveDone()
+    {
+        guard
+        
+            let controller:CCreateSave = view?.controller as? CCreateSave
+        
+        else
+        {
+            return
+        }
+        
+        controller.moveToPlans()
     }
     
     //MARK: internal
