@@ -52,11 +52,12 @@ extension MCreateSaveMapRange
     {
         let pixelZoom:Double = factoryPixelZoom(
             zoom:zoom)
+        let pixelTranslated:Double = pixelZoom / MCreateSave.kAppleToGoogleMaps
         
-        let minX:Double = self.minX * pixelZoom
-        let maxX:Double = self.maxX * pixelZoom
-        let minY:Double = self.minY * pixelZoom
-        let maxY:Double = self.maxY * pixelZoom
+        let minX:Double = self.minX * pixelTranslated
+        let maxX:Double = self.maxX * pixelTranslated
+        let minY:Double = self.minY * pixelTranslated
+        let maxY:Double = self.maxY * pixelTranslated
         
         let pixelRange:MCreateSavePixelRange = MCreateSavePixelRange(
             zoom:zoom,
