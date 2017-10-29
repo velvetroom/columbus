@@ -2,7 +2,7 @@ import Foundation
 
 extension DPlan
 {
-    public override func awakeFromNib()
+    public override func awakeFromInsert()
     {
         identifier = UUID().uuidString 
     }
