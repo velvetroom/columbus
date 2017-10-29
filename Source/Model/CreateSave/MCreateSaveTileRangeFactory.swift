@@ -34,7 +34,51 @@ extension MCreateSaveTileRange
         indexX:Int,
         indexY:Int) -> MCreateSaveRenderTile
     {
+        let name:String = factoryName(
+            indexX:indexX,
+            indexY:indexY)
+        let options:MKMapSnapshotOptions = factoryOptions(
+            indexX:indexX,
+            indexY:indexY)
         
+        let tile:MCreateSaveRenderTile = MCreateSaveRenderTile(
+            x:indexY,
+            y:indexY,
+            name:name,
+            options:options)
+        
+        return tile
+    }
+    
+    private func factoryOptions(
+        indexX:Int,
+        indexY:Int) -> MKMapSnapshotOptions
+    {
+        let mapRect:MKMapRect = factoryMapRect(
+            indexX:indexX,
+            indexY:indexY)
+        
+        let options:MKMapSnapshotOptions = MKMapSnapshotOptions()
+        options.mapRect = mapRect
+        
+        return options
+    }
+    
+    private func factoryMapRect(
+        indexX:Int,
+        indexY:Int) -> MKMapRect
+    {
+        let mapX:Double = tileToMapPoint(
+            tile:indexX)
+        let mapY:Double = tileToMapPoint(
+            tile:indexY)
+        let mapRect:MKMapRect = MKMapRectMake(
+            mapX,
+            mapY,
+            tileSizeInMap,
+            tileSizeInMap)
+        
+        return mapRect
     }
     
     private func factoryName(
@@ -56,10 +100,25 @@ extension MCreateSaveTileRange
         return string
     }
     
+    private func tileToMapPoint(
+        tile:Int) -> Double
+    {
+        let tileDouble:Double = Double(tile)
+        let point:Double = tileDouble * tileSizeInMap
+        
+        return point
+    }
+    
     //MARK: internal
     
     func factoryRender() -> MCreateSaveRender
     {
+        let tiles:[MCreateSaveRenderTile] = factoryTiles()
         
+        let render:MCreateSaveRender = MCreateSaveRender(
+            zoom:zoom,
+            tiles:tiles)
+        
+        return render
     }
 }
