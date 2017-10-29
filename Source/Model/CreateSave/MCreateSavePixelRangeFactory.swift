@@ -2,14 +2,25 @@ import Foundation
 
 extension MCreateSavePixelRange
 {
+    private static let kMapSizeMultiplier:Double = 1000000
+    
     //MARK: private
     
-    private func factoryTileSizeInMap(
+    private func factoryTileToMap(
         tileSize:Double) -> Double
     {
         let sizeInMap:Double = pixelZoom / tileSize
+        let tileToMap:Double = 1 / sizeInMap
         
-        return sizeInMap
+        return tileToMap
+    }
+    
+    private func factoryMapSize(
+        tileToMap:Double) -> Double
+    {
+        let mapSize:Double = tileToMap * MCreateSavePixelRange.kMapSizeMultiplier
+        
+        return mapSize
     }
     
     //MARK: internal
@@ -17,8 +28,10 @@ extension MCreateSavePixelRange
     func factoryTileRange(
         tileSize:Double) -> MCreateSaveTileRange
     {
-        let tileSizeInMap:Double = factoryTileSizeInMap(
+        let tileToMap:Double = factoryTileToMap(
             tileSize:tileSize)
+        let mapSize:Double = factoryMapSize(
+            tileToMap:tileToMap)
         
         let minX:Double = floor(self.minX / tileSize)
         let maxX:Double = floor(self.maxX / tileSize)
@@ -27,7 +40,8 @@ extension MCreateSavePixelRange
         
         let tileRange:MCreateSaveTileRange = MCreateSaveTileRange(
             tileSize:tileSize,
-            tileSizeInMap:tileSizeInMap,
+            tileToMap:tileToMap,
+            mapSize:mapSize,
             zoom:zoom,
             minX:minX,
             maxX:maxX,

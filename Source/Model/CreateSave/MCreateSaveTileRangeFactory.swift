@@ -73,8 +73,8 @@ extension MCreateSaveTileRange
         let mapY:Double = tileToMapPoint(
             tile:indexY)
         let mapRect:MKMapRect = MKMapRectMake(
-            mapX * 1000000,
-            mapY * 1000000,
+            mapX,
+            mapY,
             1 / tileSizeInMap * 1000000,
             1 / tileSizeInMap * 1000000)
         

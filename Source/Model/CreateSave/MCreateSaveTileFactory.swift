@@ -41,7 +41,8 @@ extension MCreateSave
         
         let boundingTileRange:MCreateSaveTileRange = MCreateSaveTileRange(
             tileSize:tileRange.tileSize,
-            tileSizeInMap:tileRange.tileSizeInMap,
+            tileToMap:tileRange.tileToMap,
+            mapSize:tileRange.mapSize,
             zoom:tileRange.zoom,
             minX:minX,
             maxX:maxX,

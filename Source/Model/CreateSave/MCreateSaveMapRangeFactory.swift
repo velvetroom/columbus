@@ -53,10 +53,10 @@ extension MCreateSaveMapRange
         let pixelZoom:Double = factoryPixelZoom(
             zoom:zoom)
         
-        let minX:Double = (self.minX / 1000000) * pixelZoom
-        let maxX:Double = self.maxX / 1000000 * pixelZoom
-        let minY:Double = self.minY / 1000000 * pixelZoom
-        let maxY:Double = self.maxY / 1000000 * pixelZoom
+        let minX:Double = self.minX * pixelZoom
+        let maxX:Double = self.maxX * pixelZoom
+        let minY:Double = self.minY * pixelZoom
+        let maxY:Double = self.maxY * pixelZoom
         
         let pixelRange:MCreateSavePixelRange = MCreateSavePixelRange(
             zoom:zoom,
