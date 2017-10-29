@@ -4,7 +4,7 @@ extension MCreateSave
 {
     //MARK: internal
     
-    func tiles(
+    class func tiles(
         mapRange:MCreateSaveMapRange,
         zoom:Double) -> MCreateSaveRender
     {
@@ -15,8 +15,7 @@ extension MCreateSave
         let boundingTileRange:MCreateSaveTileRange = factoryBoundingTileRange(
             tileRange:tileRange)
         
-        let render:MCreateSaveRender = tiles(
-            tileRange:boundingTileRange)
+        let render:MCreateSaveRender = boundingTileRange.factoryRender()
         
         return render
     }
