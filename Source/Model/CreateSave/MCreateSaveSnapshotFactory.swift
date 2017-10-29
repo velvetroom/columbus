@@ -8,21 +8,16 @@ extension MCreateSave
         mapRange:MCreateSaveMapRange,
         zoom:MCreateSaveZoomProtocol) -> [MCreateSaveRender]
     {
-        guard
+        var renders:[MCreateSaveRender] = []
         
-            let firstZoom:Double = zoom.zoom.first
-        
-        else
+        for zoomLevel:Double in zoom.zoom
         {
-            return []
+            let render:MCreateSaveRender = tiles(
+                mapRange:mapRange,
+                zoom:firstZoom)
+            
+            renders.append(render)
         }
-        
-        let render:MCreateSaveRender = tiles(
-            mapRange:mapRange,
-            zoom:firstZoom)
-        
-        let renders:[MCreateSaveRender] = [
-            render]
         
         return renders
     }
