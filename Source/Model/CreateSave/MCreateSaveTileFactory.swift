@@ -4,16 +4,6 @@ extension MCreateSave
 {
     //MARK: private
     
-    private class func factoryMaxTile(
-        zoom:Double) -> Double
-    {
-        let timesZoom:Double = Double(2) * zoom
-        let totalTiles:Double = pow(2, timesZoom)
-        let maxTile:Double = totalTiles / 4
-        
-        return maxTile
-    }
-    
     private class func factoryBoundingMin(
         min:Double) -> Double
     {
@@ -28,15 +18,9 @@ extension MCreateSave
     }
     
     private class func factoryBoundingMax(
-        max:Double,
-        maxTile:Double) -> Double
+        max:Double) -> Double
     {
-        var max:Double = max + kPaddingTile
-        
-        if max > maxTile
-        {
-            max = maxTile
-        }
+        let max:Double = max + kPaddingTile
         
         return max
     }
@@ -46,19 +30,14 @@ extension MCreateSave
     class func factoryBoundingTileRange(
         tileRange:MCreateSaveTileRange) -> MCreateSaveTileRange
     {
-        let maxTile:Double = factoryMaxTile(
-            zoom:tileRange.zoom)
-        
         let minX:Double = factoryBoundingMin(
             min:tileRange.minX)
         let maxX:Double = factoryBoundingMax(
-            max:tileRange.minX,
-            maxTile:maxTile)
+            max:tileRange.minX)
         let minY:Double = factoryBoundingMin(
             min:tileRange.minX)
         let maxY:Double = factoryBoundingMax(
-            max:tileRange.minX,
-            maxTile:maxTile)
+            max:tileRange.minX)
         
         let boundingTileRange:MCreateSaveTileRange = MCreateSaveTileRange(
             tileSize:tileRange.tileSize,
