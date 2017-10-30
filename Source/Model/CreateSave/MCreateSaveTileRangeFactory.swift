@@ -50,6 +50,8 @@ extension MCreateSaveTileRange
             mapWidth,
             mapHeight)
         
+        print("map rect: \(mapRect)")
+        
         return mapRect
     }
     

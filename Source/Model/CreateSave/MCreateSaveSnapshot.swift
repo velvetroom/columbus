@@ -16,15 +16,16 @@ extension MCreateSave
         
         for render:MCreateSaveRender in renders
         {
+            dispatchGroup.enter()
+            
             snapshots(
-                dispatchGroup:dispatchGroup,
                 directory:directory,
                 render:render)
-            { (url:URL?) in
+            { (newUrls:[URL]?) in
                 
-                if let url:URL = url
+                if let newUrls:[URL] = newUrls
                 {
-                    urls.append(url)
+                    urls.append(contentsOf:newUrls)
                 }
                 
                 print("save 2 8")
@@ -44,44 +45,25 @@ extension MCreateSave
     }
     
     private class func snapshots(
-        dispatchGroup:DispatchGroup,
         directory:URL,
         render:MCreateSaveRender,
-        completion:@escaping((URL?) -> ()))
-    {
-        for tile:MCreateSaveRenderTile in render.tiles
-        {
-            dispatchGroup.enter()
-            
-            print("enter dispatch \(dispatchGroup)")
-            
-            snapshot(
-                directory:directory,
-                tile:tile,
-                completion:completion)
-        }
-    }
-    
-    private class func snapshot(
-        directory:URL,
-        tile:MCreateSaveRenderTile,
-        completion:@escaping((URL?) -> ()))
+        completion:@escaping(([URL]?) -> ()))
     {
         let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
-            options:tile.options)
-
+            options:render.options)
+        
         snapshotter.start
         { (snapshot:MKMapSnapshot?, error:Error?) in
             
             guard
-            
+                
                 error == nil,
                 let image:UIImage = snapshot?.image,
                 let url:URL = fileSave(
                     directory:directory,
-                    name:tile.name,
+                    name:"test_snap",
                     image:image)
-            
+                
             else
             {
                 print("save 2 7")
@@ -93,7 +75,7 @@ extension MCreateSave
             
             print("save 2 6")
             
-            completion(url)
+            completion([url])
         }
     }
     
