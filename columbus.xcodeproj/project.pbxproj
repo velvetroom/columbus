@@ -209,6 +209,7 @@
 		DABED9B41F9E99B000635E82 /* VSettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABED9B31F9E99B000635E82 /* VSettingsList.swift */; };
 		DAC385E61FA7791A001138CD /* VMapOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E51FA7791A001138CD /* VMapOverlays.swift */; };
 		DAC385E81FA77A15001138CD /* VMapCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E71FA77A15001138CD /* VMapCentre.swift */; };
+		DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E91FA77AAF001138CD /* VMapFactory.swift */; };
 		DACA5C9D1FA4323500B7BBC7 /* MCreateSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5C9C1FA4323500B7BBC7 /* MCreateSaveFile.swift */; };
 		DACA5CA01FA4397000B7BBC7 /* MError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5C9F1FA4397000B7BBC7 /* MError.swift */; };
 		DACA5CA21FA4398900B7BBC7 /* MErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5CA11FA4398900B7BBC7 /* MErrorFactory.swift */; };
@@ -460,6 +461,7 @@
 		DABED9B31F9E99B000635E82 /* VSettingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsList.swift; sourceTree = "<group>"; };
 		DAC385E51FA7791A001138CD /* VMapOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapOverlays.swift; sourceTree = "<group>"; };
 		DAC385E71FA77A15001138CD /* VMapCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapCentre.swift; sourceTree = "<group>"; };
+		DAC385E91FA77AAF001138CD /* VMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapFactory.swift; sourceTree = "<group>"; };
 		DACA5C9C1FA4323500B7BBC7 /* MCreateSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveFile.swift; sourceTree = "<group>"; };
 		DACA5C9F1FA4397000B7BBC7 /* MError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MError.swift; sourceTree = "<group>"; };
 		DACA5CA11FA4398900B7BBC7 /* MErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MErrorFactory.swift; sourceTree = "<group>"; };
@@ -854,6 +856,7 @@
 				DA7D95A01FA76F3400A620FB /* VMapDelegate.swift */,
 				DAC385E51FA7791A001138CD /* VMapOverlays.swift */,
 				DAC385E71FA77A15001138CD /* VMapCentre.swift */,
+				DAC385E91FA77AAF001138CD /* VMapFactory.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -1194,6 +1197,7 @@
 				DA65ECF11F95E68700720673 /* Arch.swift in Sources */,
 				DA65ECDC1F95E68700720673 /* Database.swift in Sources */,
 				DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */,
+				DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */,
 				DAA9255E1FA542E900B72DB2 /* MCreateSavePixelRangeFactory.swift in Sources */,
 				DA4E5B011F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift in Sources */,
 				DA65ECDB1F95E68700720673 /* DatabaseFactory.swift in Sources */,
