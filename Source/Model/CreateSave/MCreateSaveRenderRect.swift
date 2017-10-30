@@ -2,8 +2,8 @@ import Foundation
 
 struct MCreateSaveRenderRect
 {
-    let x:Int
-    let y:Int
-    let width:Int
-    let height:Int
+    let x:Double
+    let y:Double
+    let width:Double
+    let height:Double
 }
