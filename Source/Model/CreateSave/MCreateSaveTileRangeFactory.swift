@@ -25,9 +25,12 @@ extension MCreateSaveTileRange
     {
         let mapRect:MKMapRect = factoryMapRect(
             renderRect:renderRect)
+        let size:CGSize = factoryOptionsSize(
+            renderRect:renderRect)
         
         let options:MKMapSnapshotOptions = MKMapSnapshotOptions()
         options.mapRect = mapRect
+        options.size = size
         
         return options
     }
@@ -53,6 +56,18 @@ extension MCreateSaveTileRange
         print("map rect: \(mapRect)")
         
         return mapRect
+    }
+    
+    private func factoryOptionsSize(
+        renderRect:MCreateSaveRenderRect) -> CGSize
+    {
+        let width:Double = renderRect.width * MCreateSave.kTileSize
+        let height:Double = renderRect.height * MCreateSave.kTileSize
+        let size:CGSize = CGSize(
+            width:width,
+            height:height)
+        
+        return size
     }
     
     private func tileToMapPoint(
