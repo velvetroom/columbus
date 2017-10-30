@@ -20,9 +20,11 @@ extension MHome
         
         let directory:URL = FileManager.default.appDirectory.appendingPathComponent(
             name)
-        let path:URL = directory.appendingPathComponent(kTemplate)
-        let pathString:String = path.absoluteString
         
-        return pathString
+        var template:String = String()
+        template.append(directory.absoluteString)
+        template.append(kTemplate)
+        
+        return template
     }
 }
