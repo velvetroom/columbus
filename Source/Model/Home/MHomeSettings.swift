@@ -55,11 +55,33 @@ extension MHome
         settings:DSettings)
     {
         self.settings = settings
+        updateStatus(settings:settings)
+        updateController()
+    }
+    
+    private func updateStatus(
+        settings:DSettings)
+    {
+        let statusType:MHomeStatusProtocol.Type
         
+        if settings.activePlan == nil
+        {
+            statusType = MHomeStatusStandby.self
+        }
+        else
+        {
+            statusType = MHomeStatusReady.self
+        }
+        
+        changeStatus(statusType:statusType)
+    }
+    
+    private func updateController()
+    {
         guard
-        
+            
             let controller:CHome = view?.controller as? CHome
-        
+            
         else
         {
             return
