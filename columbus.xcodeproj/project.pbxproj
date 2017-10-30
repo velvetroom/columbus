@@ -146,6 +146,7 @@
 		DA740F931F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA740F921F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift */; };
 		DA750CA61FA786E400459985 /* VHomeReadyMapTiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA750CA51FA786E400459985 /* VHomeReadyMapTiler.swift */; };
 		DA750CA81FA789C900459985 /* MHomePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA750CA71FA789C900459985 /* MHomePlan.swift */; };
+		DA750CAA1FA78A7300459985 /* MHomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA750CA91FA78A7300459985 /* MHomeFactory.swift */; };
 		DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */; };
 		DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */; };
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
@@ -398,6 +399,7 @@
 		DA740F921F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelMode.swift; sourceTree = "<group>"; };
 		DA750CA51FA786E400459985 /* VHomeReadyMapTiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeReadyMapTiler.swift; sourceTree = "<group>"; };
 		DA750CA71FA789C900459985 /* MHomePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomePlan.swift; sourceTree = "<group>"; };
+		DA750CA91FA78A7300459985 /* MHomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeFactory.swift; sourceTree = "<group>"; };
 		DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyProtocol.swift; sourceTree = "<group>"; };
 		DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				DA65EC861F95E68700720673 /* MHome.swift */,
+				DA750CA91FA78A7300459985 /* MHomeFactory.swift */,
 				DAE184951F9EA4F100D29126 /* MHomeSettings.swift */,
 				DA7D958E1FA762C300A620FB /* MHomeStatusProtocol.swift */,
 				DA7D95901FA7637300A620FB /* MHomeStatusStandby.swift */,
@@ -1380,6 +1383,7 @@
 				DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift in Sources */,
 				DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */,
 				DAD888F61F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift in Sources */,
+				DA750CAA1FA78A7300459985 /* MHomeFactory.swift in Sources */,
 				DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */,
 				DA65ECEB1F95E68700720673 /* AppDelegate.swift in Sources */,
 				DA2EE5651F98A9A500488A07 /* MCreateMapMenuContract.swift in Sources */,
