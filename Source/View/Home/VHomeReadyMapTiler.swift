@@ -2,6 +2,8 @@ import MapKit
 
 final class VHomeReadyMapTiler:MKTileOverlay
 {
+    private let kTileSize:CGFloat = 512
+    
     init(plan:MHomePlan)
     {
         debugPrint("---- template \(plan.tileTemplate)")
@@ -10,7 +12,9 @@ final class VHomeReadyMapTiler:MKTileOverlay
         canReplaceMapContent = true
         minimumZ = 16
         maximumZ = 16
-        tileSize = CGSize(width:MCreateSave.kTileScale, height:MCreateSave.kTileScale)
+        tileSize = CGSize(
+            width:kTileSize,
+            height:kTileSize)
     }
     
     override func loadTile(

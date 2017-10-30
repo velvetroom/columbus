@@ -60,10 +60,6 @@ extension MCreateSaveTileRange
         
         let options:MKMapSnapshotOptions = MKMapSnapshotOptions()
         options.mapRect = mapRect
-        options.size = CGSize(
-            width:MCreateSave.kTileSize,
-            height:MCreateSave.kTileSize)
-        options.scale = MCreateSave.kTileScale
         
         return options
     }
