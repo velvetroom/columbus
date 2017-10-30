@@ -145,6 +145,7 @@
 		DA740F911F9EAC6C00C8B116 /* MSettingsTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA740F901F9EAC6C00C8B116 /* MSettingsTravelMode.swift */; };
 		DA740F931F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA740F921F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift */; };
 		DA750CA61FA786E400459985 /* VHomeReadyMapTiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA750CA51FA786E400459985 /* VHomeReadyMapTiler.swift */; };
+		DA750CA81FA789C900459985 /* MHomePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA750CA71FA789C900459985 /* MHomePlan.swift */; };
 		DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */; };
 		DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */; };
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
@@ -396,6 +397,7 @@
 		DA740F901F9EAC6C00C8B116 /* MSettingsTravelMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsTravelMode.swift; sourceTree = "<group>"; };
 		DA740F921F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelMode.swift; sourceTree = "<group>"; };
 		DA750CA51FA786E400459985 /* VHomeReadyMapTiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeReadyMapTiler.swift; sourceTree = "<group>"; };
+		DA750CA71FA789C900459985 /* MHomePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomePlan.swift; sourceTree = "<group>"; };
 		DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyProtocol.swift; sourceTree = "<group>"; };
 		DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 				DA7D958E1FA762C300A620FB /* MHomeStatusProtocol.swift */,
 				DA7D95901FA7637300A620FB /* MHomeStatusStandby.swift */,
 				DA7D95921FA763A100A620FB /* MHomeStatusReady.swift */,
+				DA750CA71FA789C900459985 /* MHomePlan.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1215,6 +1218,7 @@
 				DAAFA9961F9B61870097E0E0 /* VCreateStatusReadyBarLoader.swift in Sources */,
 				DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */,
 				DACA5CA01FA4397000B7BBC7 /* MError.swift in Sources */,
+				DA750CA81FA789C900459985 /* MHomePlan.swift in Sources */,
 				DAE1848E1F9EA07C00D29126 /* VSettingsListActions.swift in Sources */,
 				DAE184941F9EA44C00D29126 /* DSettings.swift in Sources */,
 				DAA0B8051FA2A77E009BFFB8 /* VCreateStatusReadyBarStopsFooterFactory.swift in Sources */,
