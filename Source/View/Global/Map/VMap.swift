@@ -36,8 +36,6 @@ final class VMap<A>:MKMapView where A.C:Controller<A>
         userTrackingMode = MKUserTrackingMode.follow
         delegate = self
         self.controller = controller
-        
-        addTiler()
     }
     
     required init?(coder:NSCoder)
