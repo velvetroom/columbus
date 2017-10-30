@@ -19,7 +19,7 @@ extension VMap
         showsScale = true
         showsTraffic = false
         showsUserLocation = true
-        userTrackingMode = MKUserTrackingMode.follow
         delegate = self
+        userTrackingMode = MKUserTrackingMode.follow
     }
 }
