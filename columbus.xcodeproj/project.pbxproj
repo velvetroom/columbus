@@ -210,6 +210,7 @@
 		DAC385E61FA7791A001138CD /* VMapOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E51FA7791A001138CD /* VMapOverlays.swift */; };
 		DAC385E81FA77A15001138CD /* VMapCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E71FA77A15001138CD /* VMapCentre.swift */; };
 		DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E91FA77AAF001138CD /* VMapFactory.swift */; };
+		DAC385EC1FA77AFC001138CD /* VMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385EB1FA77AFC001138CD /* VMapPin.swift */; };
 		DACA5C9D1FA4323500B7BBC7 /* MCreateSaveFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5C9C1FA4323500B7BBC7 /* MCreateSaveFile.swift */; };
 		DACA5CA01FA4397000B7BBC7 /* MError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5C9F1FA4397000B7BBC7 /* MError.swift */; };
 		DACA5CA21FA4398900B7BBC7 /* MErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACA5CA11FA4398900B7BBC7 /* MErrorFactory.swift */; };
@@ -462,6 +463,7 @@
 		DAC385E51FA7791A001138CD /* VMapOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapOverlays.swift; sourceTree = "<group>"; };
 		DAC385E71FA77A15001138CD /* VMapCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapCentre.swift; sourceTree = "<group>"; };
 		DAC385E91FA77AAF001138CD /* VMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapFactory.swift; sourceTree = "<group>"; };
+		DAC385EB1FA77AFC001138CD /* VMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapPin.swift; sourceTree = "<group>"; };
 		DACA5C9C1FA4323500B7BBC7 /* MCreateSaveFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveFile.swift; sourceTree = "<group>"; };
 		DACA5C9F1FA4397000B7BBC7 /* MError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MError.swift; sourceTree = "<group>"; };
 		DACA5CA11FA4398900B7BBC7 /* MErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MErrorFactory.swift; sourceTree = "<group>"; };
@@ -857,6 +859,7 @@
 				DAC385E51FA7791A001138CD /* VMapOverlays.swift */,
 				DAC385E71FA77A15001138CD /* VMapCentre.swift */,
 				DAC385E91FA77AAF001138CD /* VMapFactory.swift */,
+				DAC385EB1FA77AFC001138CD /* VMapPin.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -1195,6 +1198,7 @@
 				DA13F6541F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift in Sources */,
 				DAECA2DA1F9FCBA50051F757 /* MSettingsTravelModeCycling.swift in Sources */,
 				DA65ECF11F95E68700720673 /* Arch.swift in Sources */,
+				DAC385EC1FA77AFC001138CD /* VMapPin.swift in Sources */,
 				DA65ECDC1F95E68700720673 /* Database.swift in Sources */,
 				DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */,
 				DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */,

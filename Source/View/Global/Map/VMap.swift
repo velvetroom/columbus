@@ -1,6 +1,6 @@
 import MapKit
 
-final class VMap<A>:MKMapView where A.C:Controller<A>
+class VMap<A>:MKMapView where A.C:Controller<A>
 {
     private(set) weak var controller:A.C!
     var shouldUpdate:Bool
