@@ -8,6 +8,8 @@ final class VHomeReadyMapTiler:MKTileOverlay
         
         super.init(urlTemplate:plan.tileTemplate)
         canReplaceMapContent = true
+        minimumZ = 16
+        maximumZ = 16
     }
     
     override func loadTile(
@@ -16,6 +18,11 @@ final class VHomeReadyMapTiler:MKTileOverlay
     {
         debugPrint("path: \(path)")
         
-        super.loadTile(at:path, result:result)
+        let newPath:MKTileOverlayPath = MKTileOverlayPath(
+            x:path.x,
+            y:path.y,
+            z:16,
+            contentScaleFactor:path.contentScaleFactor)
+        super.loadTile(at:newPath, result:result)
     }
 }
