@@ -21,9 +21,10 @@ extension MCreateSaveTileRange
     }
     
     private func factoryOptions(
-        rect:MCreateSaveRenderRect) -> MKMapSnapshotOptions
+        renderRect:MCreateSaveRenderRect) -> MKMapSnapshotOptions
     {
-        let mapRect:MKMapRect = factoryMapRect()
+        let mapRect:MKMapRect = factoryMapRect(
+            renderRect:renderRect)
         
         let options:MKMapSnapshotOptions = MKMapSnapshotOptions()
         options.mapRect = mapRect
@@ -31,24 +32,23 @@ extension MCreateSaveTileRange
         return options
     }
     
-    private func factoryMapRect() -> MKMapRect
+    private func factoryMapRect(
+        renderRect:MCreateSaveRenderRect) -> MKMapRect
     {
         let mapX:Double = tileToMapPoint(
-            tilePoint:self.minX)
+            tilePoint:renderRect.x)
         let mapY:Double = tileToMapPoint(
-            tilePoint:self.minY)
-        let lastTileX:Double = tileToMapPoint(
-            tilePoint:self.maxX)
-        let lastTileY:Double = tileToMapPoint(
-            tilePoint:self.maxY)
-        let maxX:Double = lastTileX + tileMapSize
-        let maxY:Double = lastTileY + tileMapSize
+            tilePoint:renderRect.y)
+        let mapWidth:Double = tileToMapPoint(
+            tilePoint:renderRect.width)
+        let mapHeight:Double = tileToMapPoint(
+            tilePoint:renderRect.height)
         
         let mapRect:MKMapRect = MKMapRectMake(
             mapX,
             mapY,
-            tileMapSize,
-            tileMapSize)
+            mapWidth,
+            mapHeight)
         
         return mapRect
     }
@@ -65,13 +65,14 @@ extension MCreateSaveTileRange
     
     func factoryRender() -> MCreateSaveRender
     {
-        let rect:MCreateSaveRenderRect = factoryRenderRect()
+        let renderRect:MCreateSaveRenderRect = factoryRenderRect()
         let options:MKMapSnapshotOptions = factoryOptions(
-            rect:rect)
+            renderRect:renderRect)
         
         let render:MCreateSaveRender = MCreateSaveRender(
             zoom:zoom,
-            tiles:tiles)
+            options:options,
+            rect:renderRect)
         
         return render
     }
