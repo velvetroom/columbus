@@ -4,9 +4,7 @@ extension VMap:MKMapViewDelegate
 {
     //MARK: internal
     
-    func mapView(
-        _ mapView:MKMapView,
-        didUpdate userLocation:MKUserLocation)
+    func didUpdate(userLocation:MKUserLocation)
     {
         guard
             
@@ -23,9 +21,7 @@ extension VMap:MKMapViewDelegate
         userLocation.title = nil
     }
     
-    func mapView(
-        _ mapView:MKMapView,
-        viewFor annotation:MKAnnotation) -> MKAnnotationView?
+    func viewFor(annotation:MKAnnotation) -> MKAnnotationView?
     {
         guard
             
@@ -43,15 +39,5 @@ extension VMap:MKMapViewDelegate
             stop:stop)
         
         return view
-    }
-    
-    func mapView(
-        _ mapView:MKMapView,
-        rendererFor overlay:MKOverlay) -> MKOverlayRenderer
-    {
-        let renderer:MKOverlayRenderer = factoryRenderer(
-            overlay:overlay)
-        
-        return renderer
     }
 }

@@ -42,4 +42,33 @@ final class VMap<A>:MKMapView where A.C:Controller<A>
     {
         return nil
     }
+    
+    //MARK: delegate
+    
+    func mapView(
+        _ mapView:MKMapView,
+        didUpdate userLocation:MKUserLocation)
+    {
+        didUpdate(userLocation:userLocation)
+    }
+    
+    func mapView(
+        _ mapView:MKMapView,
+        viewFor annotation:MKAnnotation) -> MKAnnotationView?
+    {
+        let view:MKAnnotationView? = viewFor(annotation:annotation)
+        
+        return view
+        
+    }
+    
+    func mapView(
+        _ mapView:MKMapView,
+        rendererFor overlay:MKOverlay) -> MKOverlayRenderer
+    {
+        let renderer:MKOverlayRenderer = factoryRenderer(
+            overlay:overlay)
+        
+        return renderer
+    }
 }
