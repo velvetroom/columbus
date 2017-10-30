@@ -4,7 +4,24 @@ extension MCreateSaveTileRange
 {
     //MARK: private
     
-    private func factoryOptions() -> MKMapSnapshotOptions
+    private func factoryRenderRect() -> MCreateSaveRenderRect
+    {
+        let deltaX:Double = maxX - minX
+        let deltaY:Double = maxY - minY
+        let width:Double = deltaX + 1
+        let height:Double = deltaY + 1
+        
+        let rect:MCreateSaveRenderRect = MCreateSaveRenderRect(
+            x:minX,
+            y:minY,
+            width:width,
+            height:height)
+        
+        return rect
+    }
+    
+    private func factoryOptions(
+        rect:MCreateSaveRenderRect) -> MKMapSnapshotOptions
     {
         let mapRect:MKMapRect = factoryMapRect()
         
@@ -48,7 +65,9 @@ extension MCreateSaveTileRange
     
     func factoryRender() -> MCreateSaveRender
     {
-        let options:MKMapSnapshotOptions = factoryOptions()
+        let rect:MCreateSaveRenderRect = factoryRenderRect()
+        let options:MKMapSnapshotOptions = factoryOptions(
+            rect:rect)
         
         let render:MCreateSaveRender = MCreateSaveRender(
             zoom:zoom,
