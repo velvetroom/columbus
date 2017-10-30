@@ -1,6 +1,6 @@
 import MapKit
 
-extension VMap:MKMapViewDelegate
+extension VMap
 {
     //MARK: internal
     
@@ -35,7 +35,7 @@ extension VMap:MKMapViewDelegate
             return view
         }
         
-        let view:VCreateStatusReadyMapPin = factoryPin(
+        let view:VMapPin = factoryPin(
             stop:stop)
         
         return view

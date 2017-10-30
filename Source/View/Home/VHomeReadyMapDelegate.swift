@@ -1,25 +1,10 @@
 import MapKit
 
-extension VHomeReadyMap:MKMapViewDelegate
+extension VHomeReadyMap
 {
     //MARK: internal
     
-    func mapView(
-        _ mapView:MKMapView,
-        didUpdate userLocation:MKUserLocation)
-    {
-        guard
-            
-            shouldUpdate
-            
-        else
-        {
-            return
-        }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        shouldUpdate = false
-        centreCoordinateRegion(
-            coordinate:userLocation.coordinate)
-        userLocation.title = nil
     }
 }

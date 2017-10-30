@@ -1,6 +1,9 @@
 import MapKit
 
-class VMap<A>:MKMapView where A.C:Controller<A>
+class VMap<A>:
+    MKMapView,
+    MKMapViewDelegate
+    where A.C:Controller<A>
 {
     private(set) weak var controller:A.C!
     var shouldUpdate:Bool
@@ -20,22 +23,9 @@ class VMap<A>:MKMapView where A.C:Controller<A>
             0.6)
         
         super.init(frame:CGRect.zero)
-        clipsToBounds = true
-        translatesAutoresizingMaskIntoConstraints = false
-        isRotateEnabled = false
-        isScrollEnabled = true
-        isZoomEnabled = true
-        isPitchEnabled = false
-        mapType = MKMapType.standard
-        showsBuildings = true
-        showsPointsOfInterest = true
-        showsCompass = true
-        showsScale = true
-        showsTraffic = false
-        showsUserLocation = true
-        userTrackingMode = MKUserTrackingMode.follow
-        delegate = self
         self.controller = controller
+        
+        config()
     }
     
     required init?(coder:NSCoder)
@@ -59,7 +49,6 @@ class VMap<A>:MKMapView where A.C:Controller<A>
         let view:MKAnnotationView? = viewFor(annotation:annotation)
         
         return view
-        
     }
     
     func mapView(
