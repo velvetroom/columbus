@@ -67,6 +67,11 @@ extension VMap
         {
             renderer = factoryRenderer(polyline:polyline)
         }
+        else if let tile:MKTileOverlay = overlay as? MKTileOverlay
+        {
+            renderer = MKTileOverlayRenderer(
+                tileOverlay:tile)
+        }
         else
         {
             renderer = MKOverlayRenderer()
