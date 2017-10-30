@@ -2,7 +2,7 @@ import MapKit
 
 final class VHomeReadyMap:VMap<ArchHome>
 {
-    private(set) weak var mapTiler:VHomeReadyMapTiler!
+    private(set) weak var mapTiler:VHomeReadyMapTiler?
     
     override init(controller:CHome)
     {
@@ -20,7 +20,17 @@ final class VHomeReadyMap:VMap<ArchHome>
     
     private func addTiler()
     {
-        let mapTiler:VHomeReadyMapTiler = VHomeReadyMapTiler()
+        guard
+            
+            let plan:MHomePlan = controller.model.plan
+        
+        else
+        {
+            return
+        }
+        
+        let mapTiler:VHomeReadyMapTiler = VHomeReadyMapTiler(
+            plan:plan)
         self.mapTiler = mapTiler
         
         add(

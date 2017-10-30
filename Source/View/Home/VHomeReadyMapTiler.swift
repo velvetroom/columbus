@@ -2,11 +2,9 @@ import MapKit
 
 final class VHomeReadyMapTiler:MKTileOverlay
 {
-    init()
+    init(plan:MHomePlan)
     {
-        
-        
-        super.init(urlTemplate:"{x}/{y}/{z}")
+        super.init(urlTemplate:plan.tileTemplate)
         canReplaceMapContent = true
     }
 }

@@ -4,6 +4,7 @@ final class MHome:Model<ArchHome>
 {
     var database:Database?
     var settings:DSettings?
+    var plan:MHomePlan?
     private(set) var status:MHomeStatusProtocol?
     
     //MARK: internal
