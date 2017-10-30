@@ -32,6 +32,8 @@ extension MCreateSaveTileRange
         options.mapRect = mapRect
         options.size = size
         
+        print("map size: \(size)")
+        
         return options
     }
     
@@ -52,8 +54,6 @@ extension MCreateSaveTileRange
             mapY,
             mapWidth,
             mapHeight)
-        
-        print("map rect: \(mapRect)")
         
         return mapRect
     }

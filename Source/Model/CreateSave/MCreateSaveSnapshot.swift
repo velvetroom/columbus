@@ -61,7 +61,7 @@ extension MCreateSave
                 let image:UIImage = snapshot?.image,
                 let url:URL = fileSave(
                     directory:directory,
-                    name:"test_snap",
+                    name:"test_snap.png",
                     image:image)
                 
             else

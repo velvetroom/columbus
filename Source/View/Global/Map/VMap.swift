@@ -6,11 +6,11 @@ class VMap<A>:
     where A.C:Controller<A>
 {
     private(set) weak var controller:A.C!
+    var shouldUpdate:Bool
     let span:MKCoordinateSpan
     let rendererStrokeColour:UIColor
     let kRendererLineDash:[NSNumber] = [1, 10]
     let kRendererWidth:CGFloat = 6
-    private var shouldUpdate:Bool
     private let kSpanSize:CLLocationDegrees = 0.03
     
     init(controller:A.C)
@@ -39,39 +39,15 @@ class VMap<A>:
         _ mapView:MKMapView,
         didUpdate userLocation:MKUserLocation)
     {
-        guard
-            
-            shouldUpdate
-            
-        else
-        {
-            return
-        }
-        
-        shouldUpdate = false
-        centreCoordinateRegion(
-            coordinate:userLocation.coordinate)
-        userLocation.title = nil
+        didUpdate(userLocation:userLocation)
     }
     
     func mapView(
         _ mapView:MKMapView,
         viewFor annotation:MKAnnotation) -> MKAnnotationView?
     {
-        guard
-            
-            let stop:DPlanStop = annotation as? DPlanStop
-            
-        else
-        {
-            let view:MKAnnotationView? = factoryUser(
-                annotation:annotation)
-            
-            return view
-        }
-        
-        let view:VMapPin = factoryPin(
-            stop:stop)
+        let view:MKAnnotationView? = viewFor(
+            annotation:annotation)
         
         return view
     }
@@ -80,7 +56,7 @@ class VMap<A>:
         _ mapView:MKMapView,
         rendererFor overlay:MKOverlay) -> MKOverlayRenderer
     {
-        let renderer:MKOverlayRenderer = factoryRenderer(
+        let renderer:MKOverlayRenderer = rendererFor(
             overlay:overlay)
         
         return renderer
