@@ -10,7 +10,7 @@ final class VHomeReadyMapTiler:MKTileOverlay
         canReplaceMapContent = true
         minimumZ = 16
         maximumZ = 16
-        tileSize = CGSize(width:512, height:512)
+        tileSize = CGSize(width:MCreateSave.kTileScale, height:MCreateSave.kTileScale)
     }
     
     override func loadTile(
