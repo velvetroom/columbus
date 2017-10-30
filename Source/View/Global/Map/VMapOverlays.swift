@@ -4,7 +4,7 @@ extension VMap
 {
     //MARK: internal
     
-    func addStop(stop:DPlanStop)
+    final func addStop(stop:DPlanStop)
     {
         addAnnotation(stop)
         centreAndSelect(
@@ -22,7 +22,7 @@ extension VMap
         addRoute(travel:travel)
     }
     
-    func addRoute(travel:DPlanTravel)
+    final func addRoute(travel:DPlanTravel)
     {
         guard
             
@@ -38,7 +38,7 @@ extension VMap
             level:MKOverlayLevel.aboveRoads)
     }
     
-    func removeRoute(travel:DPlanTravel)
+    final func removeRoute(travel:DPlanTravel)
     {
         guard
             

@@ -10,7 +10,7 @@ final class VMapPin:MKAnnotationView
     
     init(stop:DPlanStop)
     {
-        let reuseIdentifier:String = VCreateStatusReadyMapPin.reusableIdentifier
+        let reuseIdentifier:String = VMapPin.reusableIdentifier
         
         centerImage = CGPoint(
             x:0,
@@ -59,7 +59,7 @@ final class VMapPin:MKAnnotationView
         _ newDragState:MKAnnotationViewDragState,
         animated:Bool)
     {
-        let dragState:MKAnnotationViewDragState = VCreateStatusReadyMapPin.factoryDragState(
+        let dragState:MKAnnotationViewDragState = VMapPin.factoryDragState(
             state:newDragState)
         self.dragState = dragState
         

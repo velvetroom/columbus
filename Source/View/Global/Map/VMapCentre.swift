@@ -4,7 +4,7 @@ extension VMap
 {
     //MARK: internal
     
-    func centreAndSelect(stop:DPlanStop)
+    final func centreAndSelect(stop:DPlanStop)
     {
         setCenter(
             stop.coordinate,
@@ -14,7 +14,7 @@ extension VMap
             animated:true)
     }
     
-    func centreUser()
+    final func centreUser()
     {
         guard
             
@@ -29,7 +29,7 @@ extension VMap
         selectedAnnotations = []
     }
     
-    func centreCoordinateRegion(
+    final func centreCoordinateRegion(
         coordinate:CLLocationCoordinate2D)
     {
         let region:MKCoordinateRegion = MKCoordinateRegionMake(
@@ -39,7 +39,7 @@ extension VMap
         setRegion(region, animated:true)
     }
     
-    func coordinateAtCentre() -> CLLocationCoordinate2D
+    final func coordinateAtCentre() -> CLLocationCoordinate2D
     {
         let midX:CGFloat = bounds.midX
         let midY:CGFloat = bounds.midY

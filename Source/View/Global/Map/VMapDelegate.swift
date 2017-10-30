@@ -4,7 +4,7 @@ extension VMap:MKMapViewDelegate
 {
     //MARK: internal
     
-    func didUpdate(userLocation:MKUserLocation)
+    final func didUpdate(userLocation:MKUserLocation)
     {
         guard
             
@@ -21,7 +21,7 @@ extension VMap:MKMapViewDelegate
         userLocation.title = nil
     }
     
-    func viewFor(annotation:MKAnnotation) -> MKAnnotationView?
+    final func viewFor(annotation:MKAnnotation) -> MKAnnotationView?
     {
         guard
             

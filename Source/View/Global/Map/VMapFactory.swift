@@ -27,18 +27,18 @@ extension VMap
     
     //MARK: internal
     
-    func factoryPin(
-        stop:DPlanStop) -> VCreateStatusReadyMapPin
+    final func factoryPin(
+        stop:DPlanStop) -> VMapPin
     {
         guard
             
-            let view:VCreateStatusReadyMapPin = dequeueReusableAnnotationView(
+            let view:VMapPin = dequeueReusableAnnotationView(
                 withIdentifier:
-                VCreateStatusReadyMapPin.reusableIdentifier) as? VCreateStatusReadyMapPin
+                VMapPin.reusableIdentifier) as? VMapPin
             
         else
         {
-            let view:VCreateStatusReadyMapPin = VCreateStatusReadyMapPin(
+            let view:VMapPin = VMapPin(
                 stop:stop)
             
             return view
@@ -49,7 +49,7 @@ extension VMap
         return view
     }
     
-    func factoryUser(
+    final func factoryUser(
         annotation:MKAnnotation) -> MKAnnotationView?
     {
         let annotationView:MKAnnotationView? = view(
@@ -66,10 +66,6 @@ extension VMap
         if let polyline:MKPolyline = overlay as? MKPolyline
         {
             renderer = factoryRenderer(polyline:polyline)
-        }
-        else if let mapTiler:VCreateStatusReadyMapTiler = overlay as? VCreateStatusReadyMapTiler
-        {
-            renderer = factoryRenderer(mapTiler:mapTiler)
         }
         else
         {
