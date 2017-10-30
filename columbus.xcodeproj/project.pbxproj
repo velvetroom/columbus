@@ -1023,6 +1023,7 @@
 				DA13F6531F99C56C00DF92F5 /* VCreateStatusReadyMapDelegate.swift */,
 				DAD888F51F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift */,
 				DA2CC7F31FA1F30300CF0DE1 /* VCreateStatusReadyMapSelect.swift */,
+				DA5B093C1FA34AE60055E8F3 /* VCreateStatusReadyMapTiler.swift */,
 				DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */,
 				DA570EA81F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift */,
 				DA6AC17C1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift */,
@@ -1053,7 +1054,6 @@
 				DAAFA9951F9B61870097E0E0 /* VCreateStatusReadyBarLoader.swift */,
 				DA471A101F9B7668009B71FF /* VCreateStatusReadyBarLoaderFactory.swift */,
 				DA471A161F9B7795009B71FF /* VCreateStatusReadyBarLoaderAnimations.swift */,
-				DA5B093C1FA34AE60055E8F3 /* VCreateStatusReadyMapTiler.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
