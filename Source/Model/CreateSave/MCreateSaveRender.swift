@@ -1,7 +1,9 @@
-import Foundation
+import MapKit
 
 struct MCreateSaveRender
 {
     let zoom:Double
-    let tiles:[MCreateSaveRenderTile]
+    let options:MKMapSnapshotOptions
+    let x:Int
+    let y:Int
 }
