@@ -4,14 +4,14 @@ extension MCreateSave
 {
     //MARK: private
     
-    private func save(
-        plan:DPlan,
-        settings:DSettings)
+    private func asyncSave()
     {
         print("save 2")
         
         guard
         
+            let plan:DPlan = self.plan,
+            let settings:DSettings = self.settings,
             let stops:[DPlanStop] = plan.stops?.array as? [DPlanStop],
             let mapRange:MCreateSaveMapRange = MCreateSave.factoryMapRange(
                 stops:stops)
@@ -27,20 +27,15 @@ extension MCreateSave
             settings:settings)
         { [weak self] (urls:[URL]) in
             
-            self?.save(
-                plan:plan,
-                settings:settings,
-                urls:urls)
+            self?.save(urls:urls)
         }
     }
     
     private func save(
-        plan:DPlan,
-        settings:DSettings,
         urls:[URL])
-    {
-        plan.updateTimestamp()
-        settings.activePlan = plan
+    {   
+        plan?.updateTimestamp()
+        settings?.activePlan = plan
         
         print("save 3")
         
@@ -86,19 +81,7 @@ extension MCreateSave
             qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            guard
-                
-                let plan:DPlan = self?.plan,
-                let settings:DSettings = self?.settings
-            
-            else
-            {
-                return
-            }
-            
-            self?.save(
-                plan:plan,
-                settings:settings)
+            self?.asyncSave()
         }
     }
 }
