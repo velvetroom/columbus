@@ -49,33 +49,38 @@ extension MCreateSave
         render:MCreateSaveRender,
         completion:@escaping(([URL]?) -> ()))
     {
-        let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
-            options:render.options)
+        print("start snapshot")
         
-        snapshotter.start
-        { (snapshot:MKMapSnapshot?, error:Error?) in
+        DispatchQueue.main.async
+        {
+            let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
+                options:render.options)
             
-            guard
-                
-                error == nil,
-                let image:UIImage = snapshot?.image,
-                let url:URL = fileSave(
-                    directory:directory,
-                    name:"test_snap.png",
-                    image:image)
-                
-            else
-            {
-                print("save 2 7")
-                
-                completion(nil)
-                
-                return
+            snapshotter.start
+                { (snapshot:MKMapSnapshot?, error:Error?) in
+                    
+                    guard
+                        
+                        error == nil,
+                        let image:UIImage = snapshot?.image,
+                        let url:URL = fileSave(
+                            directory:directory,
+                            name:"test_snap.png",
+                            image:image)
+                        
+                        else
+                    {
+                        print("save 2 7")
+                        
+                        completion(nil)
+                        
+                        return
+                    }
+                    
+                    print("save 2 6")
+                    
+                    completion([url])
             }
-            
-            print("save 2 6")
-            
-            completion([url])
         }
     }
     
