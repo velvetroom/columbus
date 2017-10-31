@@ -36,7 +36,6 @@
 		DA2944E01FA4053500645DA4 /* MCreateSaveZoomMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2944DF1FA4053500645DA4 /* MCreateSaveZoomMin.swift */; };
 		DA2944E21FA4055F00645DA4 /* MCreateSaveZoomMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2944E11FA4055F00645DA4 /* MCreateSaveZoomMedium.swift */; };
 		DA2944E41FA4057600645DA4 /* MCreateSaveZoomMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2944E31FA4057600645DA4 /* MCreateSaveZoomMax.swift */; };
-		DA2958511FA7E8BC00C6E8CA /* MCreateSaveRenderRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2958501FA7E8BC00C6E8CA /* MCreateSaveRenderRect.swift */; };
 		DA2958531FA7F01700C6E8CA /* VMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2958521FA7F01700C6E8CA /* VMapDelegate.swift */; };
 		DA2CC7F21FA1EE8600CF0DE1 /* DSettingsComputed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CC7F11FA1EE8600CF0DE1 /* DSettingsComputed.swift */; };
 		DA2CC7F41FA1F30300CF0DE1 /* VCreateStatusReadyMapSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2CC7F31FA1F30300CF0DE1 /* VCreateStatusReadyMapSelect.swift */; };
@@ -290,7 +289,6 @@
 		DA2944DF1FA4053500645DA4 /* MCreateSaveZoomMin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomMin.swift; sourceTree = "<group>"; };
 		DA2944E11FA4055F00645DA4 /* MCreateSaveZoomMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomMedium.swift; sourceTree = "<group>"; };
 		DA2944E31FA4057600645DA4 /* MCreateSaveZoomMax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomMax.swift; sourceTree = "<group>"; };
-		DA2958501FA7E8BC00C6E8CA /* MCreateSaveRenderRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderRect.swift; sourceTree = "<group>"; };
 		DA2958521FA7F01700C6E8CA /* VMapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapDelegate.swift; sourceTree = "<group>"; };
 		DA2CC7F11FA1EE8600CF0DE1 /* DSettingsComputed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSettingsComputed.swift; sourceTree = "<group>"; };
 		DA2CC7F31FA1F30300CF0DE1 /* VCreateStatusReadyMapSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapSelect.swift; sourceTree = "<group>"; };
@@ -553,7 +551,6 @@
 				DA2944E31FA4057600645DA4 /* MCreateSaveZoomMax.swift */,
 				DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */,
 				DAD7C67A1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift */,
-				DA2958501FA7E8BC00C6E8CA /* MCreateSaveRenderRect.swift */,
 				DAD7C67C1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift */,
 				DAD7C6781FA8C62800534D7A /* MCreateSaveRenderRectFactory.swift */,
 			);
@@ -1333,7 +1330,6 @@
 				DA2CC7F41FA1F30300CF0DE1 /* VCreateStatusReadyMapSelect.swift in Sources */,
 				DAE184901F9EA2D800D29126 /* MSettingsProtocol.swift in Sources */,
 				DAD888F81F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift in Sources */,
-				DA2958511FA7E8BC00C6E8CA /* MCreateSaveRenderRect.swift in Sources */,
 				DA65ECFB1F95E68700720673 /* ViewParent.swift in Sources */,
 				DA7D959F1FA76DCA00A620FB /* VMap.swift in Sources */,
 				DA65ED151F95E68700720673 /* VBorder.swift in Sources */,
