@@ -5,15 +5,6 @@ extension VMap
     //MARK: private
     
     private func factoryRenderer(
-        mapTiler:VCreateStatusReadyMapTiler) -> MKOverlayRenderer
-    {
-        let tileRenderer:MKTileOverlayRenderer = MKTileOverlayRenderer(
-            tileOverlay:mapTiler)
-        
-        return tileRenderer
-    }
-    
-    private func factoryRenderer(
         polyline:MKPolyline) -> MKOverlayRenderer
     {
         let renderer:MKPolylineRenderer = MKPolylineRenderer(
