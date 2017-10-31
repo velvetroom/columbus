@@ -3,6 +3,7 @@ import Foundation
 struct MCreateSaveZoomMedium:MCreateSaveZoomProtocol
 {
     let zoom:[Double] = [
+        4,
         5,
         6,
         7,
