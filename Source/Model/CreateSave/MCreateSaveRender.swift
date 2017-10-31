@@ -4,5 +4,5 @@ struct MCreateSaveRender
 {
     let zoom:Double
     let options:MKMapSnapshotOptions
-    let rect:MCreateSaveRenderRect
+    let rects:[MCreateSaveRenderRect]
 }
