@@ -67,11 +67,13 @@ extension MCreateSave
         
         print("save 2 6")
         
-        let urls:[URL] = factoryImages(
+        let pictures:[MCreateSavePicture] = factoryImages(
             snapshot:image,
             zoom:zoom,
-            directory:directory,
             slice:slice)
+        let urls:[URL] = savePictures(
+            directory:directory,
+            pictures:pictures)
         
         completion(urls)
     }

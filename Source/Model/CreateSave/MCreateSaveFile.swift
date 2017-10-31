@@ -5,6 +5,28 @@ extension MCreateSave
     //MARK: private
     
     private class func fileSave(
+        directory:URL,
+        name:String,
+        image:UIImage) -> URL?
+    {
+        let path:URL = directory.appendingPathComponent(
+            name)
+        
+        do
+        {
+            try fileSave(
+                path:path,
+                image:image)
+        }
+        catch
+        {
+            return nil
+        }
+        
+        return path
+    }
+    
+    private class func fileSave(
         path:URL,
         image:UIImage) throws
     {
@@ -30,26 +52,32 @@ extension MCreateSave
     
     //MARK: internal
     
-    class func fileSave(
+    class func savePictures(
         directory:URL,
-        name:String,
-        image:UIImage) -> URL?
+        pictures:[MCreateSavePicture]) -> [URL]
     {
-        let path:URL = directory.appendingPathComponent(
-            name)
+        var urls:[URL] = []
         
-        do
+        for picture:MCreateSavePicture in pictures
         {
-            try fileSave(
-                path:path,
-                image:image)
-        }
-        catch
-        {
-            return nil
+            let name:String = picture.factoryName()
+            
+            guard
+            
+                let url:URL = fileSave(
+                    directory:directory,
+                    name:name,
+                    image:picture.image)
+            
+            else
+            {
+                continue
+            }
+            
+            urls.append(url)
         }
         
-        return path
+        return urls
     }
     
     class func factoryDirectory(
