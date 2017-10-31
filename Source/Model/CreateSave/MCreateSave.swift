@@ -10,6 +10,7 @@ final class MCreateSave:Model<ArchCreateSave>
     weak var database:Database?
     weak var plan:DPlan?
     weak var settings:DSettings?
+    weak var timer:Timer?
     let dispatchGroup:DispatchGroup
     
     required init()
@@ -17,5 +18,10 @@ final class MCreateSave:Model<ArchCreateSave>
         dispatchGroup = MCreateSave.factoryDispatchGroup()
         
         super.init()
+    }
+    
+    deinit
+    {
+        timer?.invalidate()
     }
 }

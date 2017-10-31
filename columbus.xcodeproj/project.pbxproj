@@ -158,6 +158,7 @@
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
 		DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */; };
 		DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */; };
+		DA7B18EA1FA9022D001F462A /* MCreateSaveTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B18E91FA9022D001F462A /* MCreateSaveTimer.swift */; };
 		DA7B65221F9E6873001CDC35 /* VMenuSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */; };
 		DA7B65241F9E6B5F001CDC35 /* VMenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */; };
 		DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */; };
@@ -418,6 +419,7 @@
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
 		DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationFactory.swift; sourceTree = "<group>"; };
 		DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationDelegate.swift; sourceTree = "<group>"; };
+		DA7B18E91FA9022D001F462A /* MCreateSaveTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTimer.swift; sourceTree = "<group>"; };
 		DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuSynth.swift; sourceTree = "<group>"; };
 		DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuActions.swift; sourceTree = "<group>"; };
 		DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanSave.swift; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5B09451FA361380055E8F3 /* MCreateSave.swift */,
+				DA7B18E91FA9022D001F462A /* MCreateSaveTimer.swift */,
 				DA2944D91FA3F99200645DA4 /* MCreateSaveFactory.swift */,
 				DABC26941FA39FA400746CDD /* MCreateSaveActions.swift */,
 				DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */,
@@ -1383,6 +1386,7 @@
 				DAA793501FA2436200791B99 /* DPlanFactory.swift in Sources */,
 				DAA0B8031FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift in Sources */,
 				DA5259FC1F9F7120004F8503 /* VSettingsListConfig.swift in Sources */,
+				DA7B18EA1FA9022D001F462A /* MCreateSaveTimer.swift in Sources */,
 				DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */,
 				DA13F65C1F9A174D00DF92F5 /* MCreatePlanStop.swift in Sources */,
 				DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */,

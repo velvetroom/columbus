@@ -2,7 +2,7 @@ import Foundation
 
 extension MCreateSave
 {
-    private static let kSnapshotTimeout:TimeInterval = 180
+    private static let kSnapshotTimeout:TimeInterval = 200
     
     //MARK: private
     
@@ -37,7 +37,13 @@ extension MCreateSave
             timeout:timeout)
         
         print("save 2 5")
-        completion(urls)
+        dispatchGroup.notify(
+            queue:DispatchQueue.global(
+                qos:DispatchQoS.QoSClass.background))
+        { [weak self] in
+            
+            self?.saved(urls:urls)
+        }
     }
     
     private func snapshots(
