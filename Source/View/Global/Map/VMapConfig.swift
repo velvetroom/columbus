@@ -21,5 +21,7 @@ extension VMap
         showsUserLocation = true
         delegate = self
         userTrackingMode = MKUserTrackingMode.follow
+        
+        centreUser()
     }
 }
