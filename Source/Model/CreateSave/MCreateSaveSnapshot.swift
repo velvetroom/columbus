@@ -2,7 +2,7 @@ import Foundation
 
 extension MCreateSave
 {
-    private static let kSnapshotTimeout:TimeInterval = 300
+    private static let kSnapshotTimeout:TimeInterval = 180
     
     //MARK: private
     
