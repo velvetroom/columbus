@@ -5,7 +5,7 @@ extension MCreateSaveTileRange
     //MARK: private
     
     private func factoryOptions(
-        renderRect:MCreateSaveRenderRect) -> MKMapSnapshotOptions
+        renderRects:MCreateSaveRenderRects) -> [MKMapSnapshotOptions]
     {
         let mapRect:MKMapRect = factoryMapRect(
             renderRect:renderRect)
@@ -66,16 +66,15 @@ extension MCreateSaveTileRange
     
     func factoryRender() -> MCreateSaveRender
     {
-        // limit render to 2560.0
-        
-        let renderRect:MCreateSaveRenderRect = factoryRenderRect()
-        let options:MKMapSnapshotOptions = factoryOptions(
-            renderRect:renderRect)
+        let renderRects:[MCreateSaveRenderRect] = MCreateSaveRenderRect.factoryRects(
+            tileRange:self)
+        let options:[MKMapSnapshotOptions] = factoryOptions(
+            renderRects:renderRects)
         
         let render:MCreateSaveRender = MCreateSaveRender(
             zoom:zoom,
             options:options,
-            rect:renderRect)
+            rects:renderRects)
         
         return render
     }
