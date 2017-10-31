@@ -1,8 +1,11 @@
 import UIKit
 
-extension VPlansFactory
+extension VPlans
 {
     //MARK: internal
     
-    
+    func factoryViews(controller:CPlans)
+    {
+        
+    }
 }
