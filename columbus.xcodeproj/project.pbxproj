@@ -30,6 +30,7 @@
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
 		DA1AD3B21F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */; };
+		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2944DA1FA3F99200645DA4 /* MCreateSaveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2944D91FA3F99200645DA4 /* MCreateSaveFactory.swift */; };
 		DA2944DC1FA403D500645DA4 /* DSettingsDetailLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2944DB1FA403D500645DA4 /* DSettingsDetailLevel.swift */; };
 		DA2944DE1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2944DD1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift */; };
@@ -284,6 +285,7 @@
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
 		DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeFactory.swift; sourceTree = "<group>"; };
+		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2944D91FA3F99200645DA4 /* MCreateSaveFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveFactory.swift; sourceTree = "<group>"; };
 		DA2944DB1FA403D500645DA4 /* DSettingsDetailLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSettingsDetailLevel.swift; sourceTree = "<group>"; };
 		DA2944DD1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomProtocol.swift; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 				DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */,
 				DA97DC7D1FA41776005A137F /* MCreateSaveTileFactory.swift */,
 				DACA5C9C1FA4323500B7BBC7 /* MCreateSaveFile.swift */,
+				DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */,
 				DA2944DD1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift */,
 				DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */,
 				DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */,
@@ -1270,6 +1273,7 @@
 				DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */,
 				DAD888FE1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift in Sources */,
 				DA4BC9391F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift in Sources */,
+				DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */,
 				DAA0B8071FA2AE07009BFFB8 /* VCreateStatusReadyBarStopsComputed.swift in Sources */,
 				DA65ECE71F95E68700720673 /* ExtensionString.swift in Sources */,
 				DAE1848C1F9E9AA700D29126 /* VSettingsFactory.swift in Sources */,
