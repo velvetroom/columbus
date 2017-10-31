@@ -52,32 +52,25 @@ extension MCreateSave
     
     //MARK: internal
     
-    class func savePictures(
+    class func savePicture(
         directory:URL,
-        pictures:[MCreateSavePicture]) -> [URL]
+        picture:MCreateSavePicture) -> URL?
     {
-        var urls:[URL] = []
+        let name:String = picture.factoryName()
         
-        for picture:MCreateSavePicture in pictures
+        guard
+            
+            let url:URL = fileSave(
+                directory:directory,
+                name:name,
+                image:picture.image)
+            
+        else
         {
-            let name:String = picture.factoryName()
-            
-            guard
-            
-                let url:URL = fileSave(
-                    directory:directory,
-                    name:name,
-                    image:picture.image)
-            
-            else
-            {
-                continue
-            }
-            
-            urls.append(url)
+            return nil
         }
         
-        return urls
+        return url
     }
     
     class func factoryDirectory(

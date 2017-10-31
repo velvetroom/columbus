@@ -6,14 +6,15 @@ extension MCreateSave
     
     private class func factoryPictures(
         snapshot:UIImage,
+        directory:URL,
         tileSize:Int,
         originX:Int,
         originY:Int,
         z:Int,
         width:Int,
-        height:Int) -> [MCreateSavePicture]
+        height:Int) -> [URL]
     {
-        var pictures:[MCreateSavePicture] = []
+        var urls:[URL] = []
         
         for indexX:Int in 0 ..< width
         {
@@ -33,8 +34,9 @@ extension MCreateSave
                 
                 guard
                 
-                    let picture:MCreateSavePicture = factoryPicture(
+                    let url:URL = factoryPicture(
                         snapshot:snapshot,
+                        directory:directory,
                         tileX:tileX,
                         tileY:tileY,
                         z:z,
@@ -45,19 +47,20 @@ extension MCreateSave
                     continue
                 }
                 
-                pictures.append(picture)
+                urls.append(url)
             }
         }
         
-        return pictures
+        return urls
     }
     
     private class func factoryPicture(
         snapshot:UIImage,
+        directory:URL,
         tileX:Int,
         tileY:Int,
         z:Int,
-        cropRect:CGRect) -> MCreateSavePicture?
+        cropRect:CGRect) -> URL?
     {
         guard
         
@@ -75,15 +78,20 @@ extension MCreateSave
             y:tileY,
             z:z)
         
-        return picture
+        let url:URL? = savePicture(
+            directory:directory,
+            picture:picture)
+        
+        return url
     }
     
     //MARK: internal
     
     class func factoryImages(
         snapshot:UIImage,
+        directory:URL,
         zoom:Double,
-        slice:MCreateSaveRenderSlice) -> [MCreateSavePicture]
+        slice:MCreateSaveRenderSlice) -> [URL]
     {
         let tileSize:Int = Int(kTileSize * kTileScale)
         let z:Int = Int(zoom)
@@ -92,8 +100,9 @@ extension MCreateSave
         let width:Int = Int(slice.rect.tileWidth)
         let height:Int = Int(slice.rect.tileHeight)
         
-        let pictures:[MCreateSavePicture] = factoryPictures(
+        let urls:[URL] = factoryPictures(
             snapshot:snapshot,
+            directory:directory,
             tileSize:tileSize,
             originX:originX,
             originY:originY,
@@ -101,6 +110,6 @@ extension MCreateSave
             width:width,
             height:height)
         
-        return pictures
+        return urls
     }
 }

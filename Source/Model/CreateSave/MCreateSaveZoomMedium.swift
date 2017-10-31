@@ -9,7 +9,7 @@ struct MCreateSaveZoomMedium:MCreateSaveZoomProtocol
 //        11,
 //        12,
 //        13,
-        21,
+        19,
 //        16,
 //        19
     ]
