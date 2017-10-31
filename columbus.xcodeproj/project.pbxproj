@@ -220,6 +220,7 @@
 		DAD7C6791FA8C62800534D7A /* MCreateSaveRenderRectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C6781FA8C62800534D7A /* MCreateSaveRenderRectFactory.swift */; };
 		DAD7C67B1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C67A1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift */; };
 		DAD7C67D1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C67C1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift */; };
+		DAD7C67F1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C67E1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift */; };
 		DAD888F61F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F51F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift */; };
 		DAD888F81F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */; };
 		DAD888FA1F9D2172000EC7FD /* MCreatePlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */; };
@@ -475,6 +476,7 @@
 		DAD7C6781FA8C62800534D7A /* MCreateSaveRenderRectFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderRectFactory.swift; sourceTree = "<group>"; };
 		DAD7C67A1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderSlice.swift; sourceTree = "<group>"; };
 		DAD7C67C1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderSliceRect.swift; sourceTree = "<group>"; };
+		DAD7C67E1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderSliceFactory.swift; sourceTree = "<group>"; };
 		DAD888F51F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapDragging.swift; sourceTree = "<group>"; };
 		DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsUpdate.swift; sourceTree = "<group>"; };
 		DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanFactory.swift; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 				DA2944E31FA4057600645DA4 /* MCreateSaveZoomMax.swift */,
 				DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */,
 				DAD7C67A1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift */,
+				DAD7C67E1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift */,
 				DAD7C67C1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift */,
 				DAD7C6781FA8C62800534D7A /* MCreateSaveRenderRectFactory.swift */,
 			);
@@ -1354,6 +1357,7 @@
 				DA0448051F97559A00BA2D45 /* VCreateStatusReady.swift in Sources */,
 				DA65ECDF1F95E68700720673 /* ExtensionUIColor.swift in Sources */,
 				DA4E5B031F97DB6600B7BE3E /* MCreateMapMenuProtocol.swift in Sources */,
+				DAD7C67F1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift in Sources */,
 				DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */,
 				DA06799E1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift in Sources */,
 				DA2944E01FA4053500645DA4 /* MCreateSaveZoomMin.swift in Sources */,
