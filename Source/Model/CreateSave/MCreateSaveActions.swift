@@ -59,9 +59,10 @@ extension MCreateSave
         }
     }
     
-    func saved(
-        urls:[URL])
+    func savedSnapshots()
     {
+        timer?.invalidate()
+        
         plan?.updateTimestamp()
         settings?.activePlan = plan
         

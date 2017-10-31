@@ -2,47 +2,40 @@ import Foundation
 
 extension MCreateSave
 {
-    private static let kSnapshotTimeout:TimeInterval = 200
-    
     //MARK: private
     
     private func snapshots(
         directory:URL,
         renders:[MCreateSaveRender])
     {
-        var urls:[URL] = []
+        startTimer()
         
         for render:MCreateSaveRender in renders
         {
             snapshots(
                 directory:directory,
                 render:render)
-            { [weak self] (newUrls:[URL]?) in
+            { [weak self] (urls:[URL]?) in
                 
-                if let newUrls:[URL] = newUrls
+                if let urls:[URL] = urls
                 {
-                    urls.append(contentsOf:newUrls)
+                    self?.urls.append(
+                        contentsOf:urls)
                 }
                 
                 print("save 2 8")
                 
-                self?.dispatchGroup.leave()
+                self?.dispatchGroup?.leave()
             }
         }
         
-        print("save 2 4")
-        
-        let timeout:DispatchTime = DispatchTime.now() + MCreateSave.kSnapshotTimeout
-        let _:DispatchTimeoutResult = dispatchGroup.wait(
-            timeout:timeout)
-        
         print("save 2 5")
-        dispatchGroup.notify(
+        dispatchGroup?.notify(
             queue:DispatchQueue.global(
                 qos:DispatchQoS.QoSClass.background))
         { [weak self] in
             
-            self?.saved(urls:urls)
+            self?.savedSnapshots()
         }
     }
     
@@ -53,7 +46,7 @@ extension MCreateSave
     {
         for slice:MCreateSaveRenderSlice in render.slices
         {
-            dispatchGroup.enter()
+            dispatchGroup?.enter()
             
             DispatchQueue.main.async
             { [weak self] in
