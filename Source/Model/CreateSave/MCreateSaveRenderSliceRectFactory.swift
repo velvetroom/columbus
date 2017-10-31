@@ -1,6 +1,6 @@
 import MapKit
 
-extension MCreateSaveRenderRect
+extension MCreateSaveRenderSliceRect
 {
     private static let kMaxSize:Double = 2560
     
