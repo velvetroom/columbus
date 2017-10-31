@@ -49,6 +49,7 @@ extension MCreateSaveRenderSlice
         let options:MKMapSnapshotOptions = MKMapSnapshotOptions()
         options.mapRect = mapRect
         options.size = size
+        options.scale = CGFloat(MCreateSave.kTileScale)
         
         print("map size: \(size)")
         

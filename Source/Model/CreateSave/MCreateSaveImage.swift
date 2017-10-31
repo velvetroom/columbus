@@ -18,12 +18,12 @@ extension MCreateSave
         for indexX:Int in 0 ..< width
         {
             let x:Int = indexX * tileSize
-            let tileX:Int = x + originX
+            let tileX:Int = indexX + originX
             
             for indexY:Int in 0 ..< height
             {
                 let y:Int = indexY * tileSize
-                let tileY:Int = y + originY
+                let tileY:Int = indexY + originY
                 
                 let cropRect:CGRect = CGRect(
                     x:x,
@@ -85,7 +85,7 @@ extension MCreateSave
         zoom:Double,
         slice:MCreateSaveRenderSlice) -> [MCreateSavePicture]
     {
-        let tileSize:Int = Int(kTileSize)
+        let tileSize:Int = Int(kTileSize * kTileScale)
         let z:Int = Int(zoom)
         let originX:Int = Int(slice.rect.tileX)
         let originY:Int = Int(slice.rect.tileY)
