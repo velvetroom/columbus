@@ -2,6 +2,8 @@ import UIKit
 
 final class VPlans:ViewMain
 {
+    let kBarHeight:CGFloat = 64
+    
     required init(controller:UIViewController)
     {
         super.init(controller:controller)
