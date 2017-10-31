@@ -6,8 +6,14 @@ extension VPlans
     
     func factoryViews(controller:CPlans)
     {
-        let viewBar:VPlansBar = VPlansBar(controller:controller)
+        let viewBar:VPlansBar = VPlansBar(
+            controller:controller)
         
+        let viewList:VPlansList = VPlansList(
+            controller:controller)
+        self.viewList = viewList
+        
+        addSubview(viewList)
         addSubview(viewBar)
         
         NSLayoutConstraint.topToTop(
@@ -18,6 +24,10 @@ extension VPlans
             constant:kBarHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:viewList,
             toView:self)
     }
 }
