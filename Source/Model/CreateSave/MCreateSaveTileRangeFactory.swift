@@ -82,6 +82,8 @@ extension MCreateSaveTileRange
     
     func factoryRender() -> MCreateSaveRender
     {
+        // limit render to 2560.0
+        
         let renderRect:MCreateSaveRenderRect = factoryRenderRect()
         let options:MKMapSnapshotOptions = factoryOptions(
             renderRect:renderRect)

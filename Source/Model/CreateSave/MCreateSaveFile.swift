@@ -20,6 +20,8 @@ extension MCreateSave
             throw error
         }
         
+        print("data \(data.count)")
+        
         try data.write(
             to:path,
             options:
