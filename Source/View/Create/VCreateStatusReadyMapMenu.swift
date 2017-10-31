@@ -9,7 +9,7 @@ final class VCreateStatusReadyMapMenu:VCollection<
     private var cellSize:CGSize?
     private let kCollectionTop:CGFloat = 6
     private let kCellHeight:CGFloat = 58
-    private let kDeselectTime:TimeInterval = 1
+    private let kDeselectTime:TimeInterval = 0.5
     
     required init(controller:CCreate)
     {
