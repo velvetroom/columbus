@@ -1,1 +1,2 @@
 NSLocationWhenInUseUsageDescription="Start navigating";
+NSPhotoLibraryUsageDescription="Save screenshots to Library";
