@@ -23,9 +23,10 @@ extension MCreateSave
     }
     
     private class func factorySnapshot(
-        directory:URL,
         snapshot:MKMapSnapshot?,
         error:Error?,
+        zoom:Double,
+        directory:URL,
         slice:MCreateSaveRenderSlice,
         completion:@escaping(([URL]?) -> ()))
     {
@@ -33,29 +34,27 @@ extension MCreateSave
             qos:DispatchQoS.QoSClass.background).async
         {
             asyncFactorySnapshot(
-                directory:directory,
                 snapshot:snapshot,
                 error:error,
+                zoom:zoom,
+                directory:directory,
                 slice:slice,
                 completion:completion)
         }
     }
     
     private class func asyncFactorySnapshot(
-        directory:URL,
         snapshot:MKMapSnapshot?,
         error:Error?,
+        zoom:Double,
+        directory:URL,
         slice:MCreateSaveRenderSlice,
         completion:@escaping(([URL]?) -> ()))
     {
         guard
             
             error == nil,
-            let image:UIImage = snapshot?.image,
-            let url:URL = fileSave(
-                directory:directory,
-                name:"test_snap_\(slice.rect.tileX)_\(slice.rect.tileY).png",
-                image:image)
+            let image:UIImage = snapshot?.image
             
         else
         {
@@ -68,7 +67,13 @@ extension MCreateSave
         
         print("save 2 6")
         
-        completion([url])
+        let urls:[URL] = factoryImages(
+            snapshot:image,
+            zoom:zoom,
+            directory:directory,
+            slice:slice)
+        
+        completion(urls)
     }
     
     //MARK: internal
@@ -88,6 +93,7 @@ extension MCreateSave
     }
     
     class func factorySnapshot(
+        zoom:Double,
         directory:URL,
         slice:MCreateSaveRenderSlice,
         completion:@escaping(([URL]?) -> ()))
@@ -99,9 +105,10 @@ extension MCreateSave
         { (snapshot:MKMapSnapshot?, error:Error?) in
             
             factorySnapshot(
-                directory:directory,
                 snapshot:snapshot,
                 error:error,
+                zoom:zoom,
+                directory:directory,
                 slice:slice,
                 completion:completion)
         }

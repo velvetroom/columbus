@@ -56,6 +56,7 @@ extension MCreateSave
             DispatchQueue.main.async
             {
                 factorySnapshot(
+                    zoom:render.zoom,
                     directory:directory,
                     slice:slice,
                     completion:completion)
