@@ -1,4 +1,4 @@
-import MapKit
+import Foundation
 
 extension MCreateSave
 {
@@ -16,9 +16,8 @@ extension MCreateSave
         
         for render:MCreateSaveRender in renders
         {
-            dispatchGroup.enter()
-            
             snapshots(
+                dispatchGroup:dispatchGroup,
                 directory:directory,
                 render:render)
             { (newUrls:[URL]?) in
@@ -45,41 +44,21 @@ extension MCreateSave
     }
     
     private class func snapshots(
+        dispatchGroup:DispatchGroup,
         directory:URL,
         render:MCreateSaveRender,
         completion:@escaping(([URL]?) -> ()))
     {
-        print("start snapshot")
-        
-        DispatchQueue.main.async
+        for slice:MCreateSaveRenderSlice in render.slices
         {
-            let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
-                options:render.options)
+            dispatchGroup.enter()
             
-            snapshotter.start
-                { (snapshot:MKMapSnapshot?, error:Error?) in
-                    
-                    guard
-                        
-                        error == nil,
-                        let image:UIImage = snapshot?.image,
-                        let url:URL = fileSave(
-                            directory:directory,
-                            name:"test_snap.png",
-                            image:image)
-                        
-                        else
-                    {
-                        print("save 2 7")
-                        
-                        completion(nil)
-                        
-                        return
-                    }
-                    
-                    print("save 2 6")
-                    
-                    completion([url])
+            DispatchQueue.main.async
+            {
+                factorySnapshot(
+                    directory:directory,
+                    slice:slice,
+                    completion:completion)
             }
         }
     }

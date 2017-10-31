@@ -11,20 +11,22 @@ extension MCreateSaveRenderSliceRect
     {
         var rects:[MCreateSaveRenderSliceRect] = []
         var tileY:Double = tileRange.minY
+        let maxX:Double = tileRange.maxX + 1
+        let maxY:Double = tileRange.maxY + 1
         
-        while tileY < tileRange.maxY
+        while tileY < maxY
         {
             var tileX:Double = tileRange.minX
-            var deltaY:Double = tileRange.maxY - tileY
+            var deltaY:Double = maxY - tileY
             
             if deltaY > kMaxSize
             {
                 deltaY = kMaxSize
             }
             
-            while tileX < tileRange.maxX
+            while tileX < maxX
             {
-                var deltaX:Double = tileRange.maxX - tileX
+                var deltaX:Double = maxX - tileX
                 
                 if deltaX > kMaxSize
                 {
