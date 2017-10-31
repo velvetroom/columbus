@@ -1,6 +1,6 @@
 import Foundation
 
-struct MCreateSaveRenderRect
+struct MCreateSaveRenderSliceRect
 {
     let tileX:Double
     let tileY:Double
