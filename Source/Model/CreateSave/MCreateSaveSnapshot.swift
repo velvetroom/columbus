@@ -23,13 +23,10 @@ extension MCreateSave
                         contentsOf:urls)
                 }
                 
-                print("save 2 8")
-                
                 self?.dispatchGroup?.leave()
             }
         }
         
-        print("save 2 5")
         dispatchGroup?.notify(
             queue:DispatchQueue.global(
                 qos:DispatchQoS.QoSClass.background))
@@ -64,8 +61,6 @@ extension MCreateSave
     
     func snapshots(mapRange:MCreateSaveMapRange)
     {
-        print("save 2 2")
-        
         guard
             
             let plan:DPlan = self.plan,
@@ -77,8 +72,6 @@ extension MCreateSave
         {
             return
         }
-        
-        print("save 2 3")
         
         let renders:[MCreateSaveRender] = MCreateSave.factorySnapshotRender(
             mapRange:mapRange,

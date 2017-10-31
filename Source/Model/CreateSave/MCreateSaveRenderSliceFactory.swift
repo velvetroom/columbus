@@ -51,8 +51,6 @@ extension MCreateSaveRenderSlice
         options.size = size
         options.scale = CGFloat(MCreateSave.kTileScale)
         
-        print("map size: \(size)")
-        
         return options
     }
     

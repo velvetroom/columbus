@@ -12,8 +12,6 @@ final class VCreateStatusReadyMapTiler:MKTileOverlay
         at path:MKTileOverlayPath,
         result:@escaping (Data?, Error?) -> Void)
     {
-        print("path: \(path)")
-        
         result(nil, nil)
     }
 }

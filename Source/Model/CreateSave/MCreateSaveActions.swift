@@ -6,8 +6,6 @@ extension MCreateSave
     
     private func asyncSave()
     {
-        print("save 2")
-        
         guard
         
             let stops:[DPlanStop] = plan?.stops?.array as? [DPlanStop],
@@ -49,8 +47,6 @@ extension MCreateSave
     
     func save()
     {
-        print("---- start save")
-        
         DispatchQueue.global(
             qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
@@ -66,12 +62,8 @@ extension MCreateSave
         plan?.updateTimestamp()
         settings?.activePlan = plan
         
-        print("save 3")
-        
         database?.save
         { [weak self] in
-            
-            print("save 4")
             
             self?.saveDone()
         }

@@ -62,14 +62,10 @@ extension MCreateSave
             
         else
         {
-            print("save 2 7")
-            
             completion(nil)
             
             return
         }
-        
-        print("save 2 6")
         
         let urls:[URL] = MCreateSave.factoryImages(
             snapshot:image,
