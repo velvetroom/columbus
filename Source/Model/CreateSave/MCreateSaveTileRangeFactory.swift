@@ -4,22 +4,6 @@ extension MCreateSaveTileRange
 {
     //MARK: private
     
-    private func factoryRenderRect() -> MCreateSaveRenderRect
-    {
-        let deltaX:Double = maxX - minX
-        let deltaY:Double = maxY - minY
-        let width:Double = deltaX + 1
-        let height:Double = deltaY + 1
-        
-        let rect:MCreateSaveRenderRect = MCreateSaveRenderRect(
-            x:minX,
-            y:minY,
-            width:width,
-            height:height)
-        
-        return rect
-    }
-    
     private func factoryOptions(
         renderRect:MCreateSaveRenderRect) -> MKMapSnapshotOptions
     {
