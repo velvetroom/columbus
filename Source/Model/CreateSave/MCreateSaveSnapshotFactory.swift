@@ -24,7 +24,7 @@ extension MCreateSave
         return renders
     }
     
-    private class func factorySnapshot(
+    private func factorySnapshot(
         snapshot:MKMapSnapshot?,
         error:Error?,
         zoom:Double,
@@ -34,9 +34,10 @@ extension MCreateSave
     {
         DispatchQueue.global(
             qos:DispatchQoS.QoSClass.background).asyncAfter(
-            deadline:DispatchTime.now() + kAsyncWait)
-        {
-            asyncFactorySnapshot(
+            deadline:DispatchTime.now() + MCreateSave.kAsyncWait)
+        { [weak self] in
+            
+            self?.asyncFactorySnapshot(
                 snapshot:snapshot,
                 error:error,
                 zoom:zoom,
@@ -46,7 +47,7 @@ extension MCreateSave
         }
     }
     
-    private class func asyncFactorySnapshot(
+    private func asyncFactorySnapshot(
         snapshot:MKMapSnapshot?,
         error:Error?,
         zoom:Double,
@@ -70,7 +71,7 @@ extension MCreateSave
         
         print("save 2 6")
         
-        let urls:[URL] = factoryImages(
+        let urls:[URL] = MCreateSave.factoryImages(
             snapshot:image,
             directory:directory,
             zoom:zoom,
@@ -95,7 +96,7 @@ extension MCreateSave
         return options
     }
     
-    class func factorySnapshot(
+    func factorySnapshot(
         zoom:Double,
         directory:URL,
         slice:MCreateSaveRenderSlice,
@@ -105,9 +106,9 @@ extension MCreateSave
             options:slice.options)
         
         snapshotter.start
-        { (snapshot:MKMapSnapshot?, error:Error?) in
+        { [weak self] (snapshot:MKMapSnapshot?, error:Error?) in
             
-            factorySnapshot(
+            self?.factorySnapshot(
                 snapshot:snapshot,
                 error:error,
                 zoom:zoom,
