@@ -39,18 +39,6 @@ extension MCreateSave
         settings:DSettings,
         urls:[URL])
     {
-        DispatchQueue.main.async
-            {
-                print("save present")
-                
-                let activity:UIActivityViewController = UIActivityViewController(
-                    activityItems:urls,
-                    applicationActivities:nil)
-                
-                self.view?.controller.present(activity, animated:true, completion:nil)
-        }
-        
-        
         plan.updateTimestamp()
         settings.activePlan = plan
         
@@ -85,7 +73,7 @@ extension MCreateSave
             return
         }
         
-//        controller.moveToPlans()
+        controller.moveToPlans()
     }
     
     //MARK: internal

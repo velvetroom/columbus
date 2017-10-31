@@ -2,6 +2,8 @@ import MapKit
 
 extension MCreateSave
 {
+    private static let kAsyncWait:TimeInterval = 0.2
+    
     //MARK: private
     
     private class func factoryRender(
@@ -31,7 +33,8 @@ extension MCreateSave
         completion:@escaping(([URL]?) -> ()))
     {
         DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+            qos:DispatchQoS.QoSClass.background).asyncAfter(
+            deadline:DispatchTime.now() + kAsyncWait)
         {
             asyncFactorySnapshot(
                 snapshot:snapshot,
