@@ -9,7 +9,7 @@ final class VSettingsListCellDetailLevelList:
     weak var viewSelector:VSettingsListCellDetailLevelListSelector!
     weak var layoutSelectorTop:NSLayoutConstraint!
     let selectorHeight_2:CGFloat
-    let kSelectorMarginHorizontal:CGFloat = 10
+    let kSelectorMarginHorizontal:CGFloat = 20
     let kSelectorHeight:CGFloat = 30
     let kAnimationDuration:TimeInterval = 0.2
     let kWaitToSelect:TimeInterval = 0.1
@@ -89,20 +89,28 @@ final class VSettingsListCellDetailLevelList:
         _ collectionView:UICollectionView,
         shouldSelectItemAt indexPath:IndexPath) -> Bool
     {
-        let should:Bool = shouldSelect(
+        guard
+            
+            let model:MSettingsDetailLevel = self.model
+            
+        else
+        {
+            return false
+        }
+        
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(
             index:indexPath)
         
-        return should
-    }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        shouldHighlightItemAt indexPath:IndexPath) -> Bool
-    {
-        let should:Bool = shouldSelect(
-            index:indexPath)
+        guard
+            
+            model.settings.detailLevel == item.detailLevel
+            
+        else
+        {
+            return true
+        }
         
-        return should
+        return false
     }
     
     override func collectionView(

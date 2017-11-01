@@ -77,30 +77,4 @@ extension VSettingsListCellDetailLevelList
             self?.layoutIfNeeded()
         }
     }
-    
-    func shouldSelect(index:IndexPath) -> Bool
-    {
-        guard
-            
-            let model:MSettingsDetailLevel = self.model
-            
-        else
-        {
-            return false
-        }
-        
-        let item:MSettingsDetailLevelProtocol = modelAtIndex(
-            index:index)
-        
-        guard
-            
-            model.settings.detailLevel == item.detailLevel
-            
-        else
-        {
-            return true
-        }
-        
-        return false
-    }
 }

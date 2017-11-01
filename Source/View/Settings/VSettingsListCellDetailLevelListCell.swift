@@ -4,7 +4,7 @@ final class VSettingsListCellDetailLevelListCell:
     UICollectionViewCell
 {
     private weak var labelTitle:UILabel!
-    private let kTitleFontSize:CGFloat = 14
+    private let kTitleFontSize:CGFloat = 13
     
     override init(frame:CGRect)
     {
