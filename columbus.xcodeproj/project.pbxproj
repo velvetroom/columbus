@@ -34,6 +34,7 @@
 		DA1A6C3C1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A6C3B1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift */; };
 		DA1A6C401FAA1D5F0022A170 /* MSettingsDistanceMiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A6C3F1FAA1D5F0022A170 /* MSettingsDistanceMiles.swift */; };
 		DA1AD3B21F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */; };
+		DA22194D1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -315,6 +316,7 @@
 		DA1A6C3B1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceProtocol.swift; sourceTree = "<group>"; };
 		DA1A6C3F1FAA1D5F0022A170 /* MSettingsDistanceMiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceMiles.swift; sourceTree = "<group>"; };
 		DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeFactory.swift; sourceTree = "<group>"; };
+		DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -1000,6 +1002,7 @@
 				DAECA2DB1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift */,
 				DAECA2DD1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift */,
 				DA4861821FAA3BDE00FFBAB8 /* MSettingsDetailLevel.swift */,
+				DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */,
 				DA4861841FAA3D2300FFBAB8 /* MSettingsDetailLevelProtocol.swift */,
 				DA4861861FAA3D8500FFBAB8 /* MSettingsDetailLevelMin.swift */,
 				DA4861881FAA3F3700FFBAB8 /* MSettingsDetailLevelMedium.swift */,
@@ -1366,6 +1369,7 @@
 				DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */,
 				DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */,
 				DAA5B48F1F99371C00F9121C /* DPlanTravelMode.swift in Sources */,
+				DA22194D1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift in Sources */,
 				DA65ED191F95E68700720673 /* VSlider.swift in Sources */,
 				DA65ED031F95E68700720673 /* VHome.swift in Sources */,
 				DA65ED1C1F95E68700720673 /* VCollectionFlow.swift in Sources */,
