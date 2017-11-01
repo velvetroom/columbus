@@ -28,4 +28,24 @@ final class MSettingsDistance:MSettingsProtocol
         settings.distance = items[index].distance
         database.save { }
     }
+    
+    func selectedIndex() -> Int?
+    {
+        let index:Int? = indexMap[settings.distance]
+        
+        return index
+    }
+    
+    func itemsTitle() -> [String]
+    {
+        var titles:[String] = []
+        
+        for item:MSettingsDistanceProtocol in items
+        {
+            titles.append(
+                item.title)
+        }
+        
+        return titles
+    }
 }

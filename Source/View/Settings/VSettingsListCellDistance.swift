@@ -3,10 +3,13 @@ import UIKit
 final class VSettingsListCellDistance:VSettingsListCell
 {
     weak var viewSegmented:UISegmentedControl!
+    weak var layoutSegmentedLeft:NSLayoutConstraint!
     let kTitleHeight:CGFloat = 60
     let kTitleLeft:CGFloat = 20
     let kTitleFontSize:CGFloat = 16
-    private weak var model:MSettingsTravelMode?
+    let kSegmentedHeight:CGFloat = 35
+    let kSegmentedWidth:CGFloat = 240
+    private weak var model:MSettingsDistance?
     
     override init(frame:CGRect)
     {
@@ -19,6 +22,16 @@ final class VSettingsListCellDistance:VSettingsListCell
         return nil
     }
     
+    override func layoutSubviews()
+    {
+        let width:CGFloat = bounds.width
+        let remainSegmented:CGFloat = width - kSegmentedWidth
+        let segmentedLeft:CGFloat = remainSegmented / 2.0
+        layoutSegmentedLeft.constant = segmentedLeft
+        
+        super.layoutSubviews()
+    }
+    
     override func config(
         controller:CSettings,
         model:MSettingsProtocol)
@@ -29,32 +42,32 @@ final class VSettingsListCellDistance:VSettingsListCell
         
         guard
             
-            let model:MSettingsTravelMode = model as? MSettingsTravelMode
+            let model:MSettingsDistance = model as? MSettingsDistance
             
-            else
+        else
         {
             return
         }
         
         self.model = model
         
-        factoryList()
-        reloadList()
+        factorySegmented(model:model)
+        updateSegmented()
     }
     
     //MARK: private
     
-    private func reloadList()
+    private func updateSegmented()
     {
         guard
             
-            let model:MSettingsTravelMode = self.model
+            let index:Int = self.model?.selectedIndex()
             
-            else
+        else
         {
             return
         }
         
-        viewList?.reload(model:model)
+        viewSegmented.selectedSegmentIndex = index
     }
 }

@@ -54,12 +54,11 @@ extension VSettingsListCellTravelMode
     
     //MARK: internal
     
-    func factoryList()
+    func factoryList(controller:CSettings)
     {
         guard
             
-            self.viewList == nil,
-            let controller:CSettings = self.controller
+            self.viewList == nil
             
         else
         {

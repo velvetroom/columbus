@@ -59,7 +59,7 @@ extension DSettings
                 
             else
             {
-                return DSettingsDistance.kilometers
+                return DSettingsDistance.kilometres
             }
             
             return distance

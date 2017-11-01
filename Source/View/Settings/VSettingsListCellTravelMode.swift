@@ -39,7 +39,7 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         
         self.model = model
         
-        factoryList()
+        factoryList(controller:controller)
         reloadList()
     }
     

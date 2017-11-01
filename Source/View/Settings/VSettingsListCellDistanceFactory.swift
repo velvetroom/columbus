@@ -32,9 +32,39 @@ extension VSettingsListCellDistance
             toView:self)
     }
     
-    func factorySegmented()
+    func factorySegmented(
+        model:MSettingsDistance)
     {
+        guard
+            
+            self.viewSegmented == nil
+        
+        else
+        {
+            return
+        }
+        
+        let titles:[String] = model.itemsTitle()
         let viewSegmented:UISegmentedControl = UISegmentedControl(
-            items: <#T##[Any]?#>)
+            items:titles)
+        viewSegmented.translatesAutoresizingMaskIntoConstraints = false
+        viewSegmented.tintColor = UIColor.colourBackgroundDark
+        self.viewSegmented = viewSegmented
+        
+        addSubview(viewSegmented)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewSegmented,
+            toView:self,
+            constant:kTitleHeight)
+        NSLayoutConstraint.height(
+            view:viewSegmented,
+            constant:kSegmentedHeight)
+        NSLayoutConstraint.width(
+            view:viewSegmented,
+            constant:kSegmentedWidth)
+        layoutSegmentedLeft = NSLayoutConstraint.leftToLeft(
+            view:viewSegmented,
+            toView:self)
     }
 }
