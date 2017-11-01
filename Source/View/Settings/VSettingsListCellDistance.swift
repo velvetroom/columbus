@@ -7,8 +7,9 @@ final class VSettingsListCellDistance:VSettingsListCell
     let kTitleHeight:CGFloat = 60
     let kTitleLeft:CGFloat = 20
     let kTitleFontSize:CGFloat = 16
-    let kSegmentedHeight:CGFloat = 35
-    let kSegmentedWidth:CGFloat = 240
+    let kSegmentedTop:CGFloat = 80
+    let kSegmentedHeight:CGFloat = 32
+    let kSegmentedWidth:CGFloat = 270
     private weak var model:MSettingsDistance?
     
     override init(frame:CGRect)

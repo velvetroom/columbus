@@ -56,7 +56,7 @@ extension VSettingsListCellDistance
         NSLayoutConstraint.topToTop(
             view:viewSegmented,
             toView:self,
-            constant:kTitleHeight)
+            constant:kSegmentedTop)
         NSLayoutConstraint.height(
             view:viewSegmented,
             constant:kSegmentedHeight)

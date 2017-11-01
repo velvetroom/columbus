@@ -77,7 +77,8 @@ extension VSettingsListCellTravelMode
             constant:kCaptionHeight)
         NSLayoutConstraint.bottomToBottom(
             view:viewList,
-            toView:self)
+            toView:self,
+            constant:kListBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:viewList,
             toView:self)
