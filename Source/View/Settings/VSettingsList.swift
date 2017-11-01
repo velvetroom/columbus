@@ -73,8 +73,4 @@ final class VSettingsList:VCollection<
     {
         return false
     }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        didSelectItemAt indexPath:IndexPath) { }
 }
