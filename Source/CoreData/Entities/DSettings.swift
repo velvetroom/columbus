@@ -6,6 +6,6 @@ extension DSettings
     {
         travelMode = DPlanTravelMode.walking
         detailLevel = DSettingsDetailLevel.medium
-        distance = DSettingsDistance.kilometers
+        distance = DSettingsDistance.kilometres
     }
 }

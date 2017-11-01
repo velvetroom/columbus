@@ -2,6 +2,6 @@ import Foundation
 
 enum DSettingsDistance:Int16
 {
-    case kilometers
+    case kilometres
     case miles
 }
