@@ -8,4 +8,6 @@ MSettingsDistanceKilometres_title="Kilometres";
 MSettingsDistanceMiles_title="Miles";
 MSettingsDetailLevelMin_title="Min";
 MSettingsDetailLevelMin_descr="\nUses as less storage as possible";
+MSettingsDetailLevelMedium_title="Medium";
+MSettingsDetailLevelMedium_descr="\nPerfect balance between map detail and storage usage\n\nThis is the recommended setting";
 MError_noImageData="Unable to get image data";
