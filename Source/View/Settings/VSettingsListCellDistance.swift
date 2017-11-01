@@ -2,8 +2,8 @@ import UIKit
 
 final class VSettingsListCellDistance:VSettingsListCell
 {
-    weak var viewList:VSettingsListCellTravelModeList?
-    let kTitleHeight:CGFloat = 90
+    weak var viewSegmented:UISegmentedControl!
+    let kTitleHeight:CGFloat = 60
     let kTitleLeft:CGFloat = 20
     let kTitleFontSize:CGFloat = 16
     private weak var model:MSettingsTravelMode?
@@ -11,7 +11,7 @@ final class VSettingsListCellDistance:VSettingsListCell
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        factoryCaption()
+        factoryViews()
     }
     
     required init?(coder:NSCoder)
