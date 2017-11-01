@@ -65,8 +65,27 @@ final class VPlansList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let cell:VPlansListCell = cellAtIndex(indexPath:indexPath)
+        let item:DPlan = modelAtIndex(
+            index:indexPath)
+        let cell:VPlansListCell = cellAtIndex(
+            indexPath:indexPath)
+        cell.config(model:item)
+        
         
         return cell
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        shouldSelectItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        shouldHighlightItemAt indexPath:IndexPath) -> Bool
+    {
+        return false
     }
 }
