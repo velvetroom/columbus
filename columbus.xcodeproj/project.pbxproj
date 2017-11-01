@@ -35,6 +35,7 @@
 		DA1A6C401FAA1D5F0022A170 /* MSettingsDistanceMiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A6C3F1FAA1D5F0022A170 /* MSettingsDistanceMiles.swift */; };
 		DA1AD3B21F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */; };
 		DA22194D1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */; };
+		DA22194F1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -317,6 +318,7 @@
 		DA1A6C3F1FAA1D5F0022A170 /* MSettingsDistanceMiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceMiles.swift; sourceTree = "<group>"; };
 		DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeFactory.swift; sourceTree = "<group>"; };
 		DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelFactory.swift; sourceTree = "<group>"; };
+		DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -1087,6 +1089,7 @@
 				DA525A051F9F7765004F8503 /* VSettingsListCellTravelModeListCell.swift */,
 				DAECA2DF1F9FD72E0051F757 /* VSettingsListCellTravelModeListSelector.swift */,
 				DA4861801FAA37F700FFBAB8 /* VSettingsListCellDetailLevel.swift */,
+				DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */,
 				DABDE8821FAA042100E24BBE /* VSettingsListCellDistance.swift */,
 				DA1A6C391FAA18010022A170 /* VSettingsListCellDistanceFactory.swift */,
 			);
@@ -1306,6 +1309,7 @@
 				DA65ECDB1F95E68700720673 /* DatabaseFactory.swift in Sources */,
 				DA2944E21FA4055F00645DA4 /* MCreateSaveZoomMedium.swift in Sources */,
 				DA65ECF01F95E68700720673 /* CHome.swift in Sources */,
+				DA22194F1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift in Sources */,
 				DA65ECE31F95E68700720673 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA2944E41FA4057600645DA4 /* MCreateSaveZoomMax.swift in Sources */,
 				DAA5B4891F99369E00F9121C /* DPlan.swift in Sources */,

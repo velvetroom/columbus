@@ -11,4 +11,6 @@ VSettingsBar_labelTitle="Settings";
 VSettingsListCellTravelMode_title="Default traveling mode";
 VSettingsListCellTravelMode_descr="\nYou can change traveling mode\nwhen editing each Plan";
 VSettingsListCellDistance_labelTitle="Show distance as";
+VSettingsListCellDetailLevel_title="Detail level";
+VSettingsListCellDetailLevel_descr="\nHow much storage to use when\nsaving Navigation Plans";
 VPlansBar_labelTitle="Plans";
