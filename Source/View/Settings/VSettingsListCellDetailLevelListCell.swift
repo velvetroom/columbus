@@ -59,7 +59,7 @@ final class VSettingsListCellDetailLevelListCell:
         }
         else
         {
-            labelTitle.text = UIColor(white:0, alpha:0.3)
+            labelTitle.textColor = UIColor(white:0, alpha:0.3)
         }
     }
     

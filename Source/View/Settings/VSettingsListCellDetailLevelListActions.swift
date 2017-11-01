@@ -8,10 +8,9 @@ extension VSettingsListCellDetailLevelList
     {
         guard
             
-            let travelMode:DPlanTravelMode = model?.settings.travelMode,
-            let index:Int = model?.indexMap[travelMode]
+            let index:Int = model?.selectedIndex
             
-            else
+        else
         {
             return
         }
@@ -31,15 +30,15 @@ extension VSettingsListCellDetailLevelList
     //MARK: internal
     
     func modelAtIndex(
-        index:IndexPath) -> MSettingsTravelModeProtocol
+        index:IndexPath) -> MSettingsDetailLevelProtocol
     {
-        let item:MSettingsTravelModeProtocol = model!.items[
+        let item:MSettingsDetailLevelProtocol = model!.items[
             index.item]
         
         return item
     }
     
-    func reload(model:MSettingsTravelMode)
+    func reload(model:MSettingsDetailLevel)
     {
         self.model = model
         
@@ -64,20 +63,44 @@ extension VSettingsListCellDetailLevelList
             let cell:UICollectionViewCell = collectionView.cellForItem(
                 at:selected)
             
-            else
+        else
         {
             return
         }
         
-        let cellX:CGFloat = cell.center.x
         let cellY:CGFloat = cell.center.y
-        layoutSelectorLeft.constant = cellX - selectorSize_2
-        layoutSelectorTop.constant = cellY - selectorSize_2
+        layoutSelectorTop.constant = cellY - selectorHeight_2
         
         UIView.animate(withDuration:kAnimationDuration)
         { [weak self] in
             
             self?.layoutIfNeeded()
         }
+    }
+    
+    func shouldSelect(index:IndexPath) -> Bool
+    {
+        guard
+            
+            let model:MSettingsDetailLevel = self.model
+            
+        else
+        {
+            return false
+        }
+        
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(
+            index:index)
+        
+        guard
+            
+            model.settings.detailLevel == item.detailLevel
+            
+        else
+        {
+            return true
+        }
+        
+        return false
     }
 }

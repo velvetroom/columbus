@@ -3,21 +3,21 @@ import UIKit
 final class VSettingsListCellDetailLevelList:
     VCollection<
     ArchSettings,
-    VSettingsListCellTravelModeListCell>
+    VSettingsListCellDetailLevelListCell>
 {
-    weak var model:MSettingsTravelMode?
-    weak var viewSelector:VSettingsListCellTravelModeListSelector!
-    weak var layoutSelectorLeft:NSLayoutConstraint!
+    weak var model:MSettingsDetailLevel?
+    weak var viewSelector:VSettingsListCellDetailLevelListSelector!
     weak var layoutSelectorTop:NSLayoutConstraint!
-    let selectorSize_2:CGFloat
-    let kSelectorSize:CGFloat = 50
+    let selectorHeight_2:CGFloat
+    let kSelectorMarginHorizontal:CGFloat = 10
+    let kSelectorHeight:CGFloat = 30
     let kAnimationDuration:TimeInterval = 0.2
     let kWaitToSelect:TimeInterval = 0.1
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
     {
-        selectorSize_2 = kSelectorSize / 2.0
+        selectorHeight_2 = kSelectorHeight / 2.0
         
         super.init(controller:controller)
         config()
@@ -38,16 +38,16 @@ final class VSettingsListCellDetailLevelList:
             
             let cellSize:CGSize = self.cellSize
             
-            else
+        else
         {
             let width:CGFloat = collectionView.bounds.width
             let height:CGFloat = collectionView.bounds.height
             let items:Int = collectionView.numberOfItems(inSection:0)
             let itemsFloat:CGFloat = CGFloat(items)
-            let widthPerItem:CGFloat = width / itemsFloat
+            let heightPerItem:CGFloat = height / itemsFloat
             let cellSize:CGSize = CGSize(
-                width:widthPerItem,
-                height:height)
+                width:width,
+                height:heightPerItem)
             self.cellSize = cellSize
             
             return cellSize
@@ -64,7 +64,7 @@ final class VSettingsListCellDetailLevelList:
             
             let count:Int = model?.items.count
             
-            else
+        else
         {
             return 0
         }
@@ -76,9 +76,9 @@ final class VSettingsListCellDetailLevelList:
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MSettingsTravelModeProtocol = modelAtIndex(
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(
             index:indexPath)
-        let cell:VSettingsListCellTravelModeListCell = cellAtIndex(
+        let cell:VSettingsListCellDetailLevelListCell = cellAtIndex(
             indexPath:indexPath)
         cell.config(model:item)
         
@@ -89,40 +89,20 @@ final class VSettingsListCellDetailLevelList:
         _ collectionView:UICollectionView,
         shouldSelectItemAt indexPath:IndexPath) -> Bool
     {
-        let item:MSettingsTravelModeProtocol = modelAtIndex(
+        let should:Bool = shouldSelect(
             index:indexPath)
         
-        guard
-            
-            let model:MSettingsTravelMode = self.model,
-            model.settings.travelMode != item.mode
-            
-            else
-        {
-            return false
-        }
-        
-        return true
+        return should
     }
     
     override func collectionView(
         _ collectionView:UICollectionView,
         shouldHighlightItemAt indexPath:IndexPath) -> Bool
     {
-        let item:MSettingsTravelModeProtocol = modelAtIndex(
+        let should:Bool = shouldSelect(
             index:indexPath)
         
-        guard
-            
-            let model:MSettingsTravelMode = self.model,
-            model.settings.travelMode != item.mode
-            
-            else
-        {
-            return false
-        }
-        
-        return true
+        return should
     }
     
     override func collectionView(

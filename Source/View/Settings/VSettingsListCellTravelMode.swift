@@ -41,22 +41,13 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         self.model = model
         
         factoryList(controller:controller)
-        reloadList()
+        reloadList(model:model)
     }
     
     //MARK: private
     
-    private func reloadList()
+    private func reloadList(model:MSettingsTravelMode)
     {
-        guard
-        
-            let model:MSettingsTravelMode = self.model
-        
-        else
-        {
-            return
-        }
-        
         viewList?.reload(model:model)
     }
 }

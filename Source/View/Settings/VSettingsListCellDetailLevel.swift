@@ -2,13 +2,13 @@ import UIKit
 
 final class VSettingsListCellDetailLevel:VSettingsListCell
 {
-    weak var viewList:VSettingsListCellTravelModeList?
+    weak var viewList:VSettingsListCellDetailLevelList?
     let kCaptionHeight:CGFloat = 90
     let kCaptionLeft:CGFloat = 20
     let kTitleFontSize:CGFloat = 16
     let kDescrFontSize:CGFloat = 14
-    let kListBottom:CGFloat = -15
-    private weak var model:MSettingsTravelMode?
+    let kListWidth:CGFloat = 150
+    private weak var model:MSettingsDetailLevel?
     
     override init(frame:CGRect)
     {
@@ -31,9 +31,9 @@ final class VSettingsListCellDetailLevel:VSettingsListCell
         
         guard
             
-            let model:MSettingsTravelMode = model as? MSettingsTravelMode
+            let model:MSettingsDetailLevel = model as? MSettingsDetailLevel
             
-            else
+        else
         {
             return
         }
@@ -41,22 +41,14 @@ final class VSettingsListCellDetailLevel:VSettingsListCell
         self.model = model
         
         factoryList(controller:controller)
-        reloadList()
+        reloadList(model:model)
     }
     
     //MARK: private
     
-    private func reloadList()
+    private func reloadList(
+        model:MSettingsDetailLevel)
     {
-        guard
-            
-            let model:MSettingsTravelMode = self.model
-            
-            else
-        {
-            return
-        }
-        
         viewList?.reload(model:model)
     }
 }

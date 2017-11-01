@@ -14,7 +14,7 @@ extension VSettingsListCellDetailLevelList
             flow.scrollDirection = UICollectionViewScrollDirection.vertical
         }
         
-        let viewSelector:VSettingsListCellTravelModeListSelector = VSettingsListCellTravelModeListSelector()
+        let viewSelector:VSettingsListCellDetailLevelListSelector = VSettingsListCellDetailLevelListSelector()
         self.viewSelector = viewSelector
         
         insertSubview(
@@ -24,11 +24,16 @@ extension VSettingsListCellDetailLevelList
         layoutSelectorTop = NSLayoutConstraint.topToTop(
             view:viewSelector,
             toView:self)
-        layoutSelectorLeft = NSLayoutConstraint.leftToLeft(
+        NSLayoutConstraint.height(
             view:viewSelector,
-            toView:self)
-        NSLayoutConstraint.size(
+            constant:kSelectorHeight)
+        NSLayoutConstraint.leftToLeft(
             view:viewSelector,
-            constant:kSelectorSize)
+            toView:self,
+            constant:kSelectorMarginHorizontal)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewSelector,
+            toView:self,
+            margin:kSelectorMarginHorizontal)
     }
 }

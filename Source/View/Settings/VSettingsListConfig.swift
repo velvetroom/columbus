@@ -12,6 +12,8 @@ extension VSettingsList
         registerCell(
             cell:VSettingsListCellTravelMode.self)
         registerCell(
+            cell:VSettingsListCellDetailLevel.self)
+        registerCell(
             cell:VSettingsListCellDistance.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow

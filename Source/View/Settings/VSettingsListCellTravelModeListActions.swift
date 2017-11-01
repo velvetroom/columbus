@@ -8,8 +8,7 @@ extension VSettingsListCellTravelModeList
     {
         guard
             
-            let travelMode:DPlanTravelMode = model?.settings.travelMode,
-            let index:Int = model?.indexMap[travelMode]
+            let index:Int = model?.selectedIndex
             
         else
         {
@@ -79,5 +78,31 @@ extension VSettingsListCellTravelModeList
             
             self?.layoutIfNeeded()
         }
+    }
+    
+    func shouldSelect(index:IndexPath) -> Bool
+    {
+        guard
+            
+            let model:MSettingsTravelMode = self.model
+            
+        else
+        {
+            return false
+        }
+        
+        let item:MSettingsTravelModeProtocol = modelAtIndex(
+            index:index)
+        
+        guard
+            
+            model.settings.travelMode == item.mode
+            
+        else
+        {
+            return true
+        }
+        
+        return false
     }
 }

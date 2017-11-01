@@ -65,7 +65,7 @@ extension VSettingsListCellDetailLevel
             return
         }
         
-        let viewList:VSettingsListCellTravelModeList = VSettingsListCellTravelModeList(
+        let viewList:VSettingsListCellDetailLevelList = VSettingsListCellDetailLevelList(
             controller:controller)
         self.viewList = viewList
         
@@ -77,11 +77,13 @@ extension VSettingsListCellDetailLevel
             constant:kCaptionHeight)
         NSLayoutConstraint.bottomToBottom(
             view:viewList,
-            toView:self,
-            constant:kListBottom)
-        NSLayoutConstraint.equalsHorizontal(
+            toView:self)
+        NSLayoutConstraint.leftToLeft(
             view:viewList,
             toView:self)
+        NSLayoutConstraint.width(
+            view:viewList,
+            constant:kListWidth)
     }
     
     func factoryCaption()

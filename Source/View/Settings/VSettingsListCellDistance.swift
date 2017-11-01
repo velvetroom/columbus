@@ -53,16 +53,17 @@ final class VSettingsListCellDistance:VSettingsListCell
         self.model = model
         
         factorySegmented(model:model)
-        updateSegmented()
+        updateSegmented(model:model)
     }
     
     //MARK: private
     
-    private func updateSegmented()
+    private func updateSegmented(
+        model:MSettingsDistance)
     {
         guard
             
-            let index:Int = self.model?.selectedIndex()
+            let index:Int = model.selectedIndex
             
         else
         {
