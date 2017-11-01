@@ -6,29 +6,25 @@ extension MSettingsDistance
     
     class func factoryItems() -> [MSettingsDistanceProtocol]
     {
-        let itemKilometers:MSettingsTravelModeDriving = MSettingsTravelModeDriving()
-        let itemCycling:MSettingsTravelModeCycling = MSettingsTravelModeCycling()
-        let itemTransit:MSettingsTravelModeTransit = MSettingsTravelModeTransit()
-        let itemWalking:MSettingsTravelModeWalking = MSettingsTravelModeWalking()
+        let itemKilometres:MSettingsDistanceKilometres = MSettingsDistanceKilometres()
+        let itemMiles:MSettingsDistanceMiles = MSettingsDistanceMiles()
         
-        let items:[MSettingsTravelModeProtocol] = [
-            itemWalking,
-            itemCycling,
-            itemTransit,
-            itemDriving]
+        let items:[MSettingsDistanceProtocol] = [
+            itemKilometres,
+            itemMiles]
         
         return items
     }
     
     class func factoryIndexMap(
-        items:[MSettingsTravelModeProtocol]) -> [DPlanTravelMode:Int]
+        items:[MSettingsDistanceProtocol]) -> [DSettingsDistance:Int]
     {
         var index:Int = 0
-        var map:[DPlanTravelMode:Int] = [:]
+        var map:[DSettingsDistance:Int] = [:]
         
-        for item:MSettingsTravelModeProtocol in items
+        for item:MSettingsDistanceProtocol in items
         {
-            map[item.mode] = index
+            map[item.distance] = index
             index += 1
         }
         

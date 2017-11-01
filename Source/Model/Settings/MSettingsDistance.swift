@@ -3,9 +3,9 @@ import UIKit
 final class MSettingsDistance:MSettingsProtocol
 {
     let reusableIdentifier:String = VSettingsListCellDistance.reusableIdentifier
-    let cellHeight:CGFloat = 190
-    let items:[MSettingsTravelModeProtocol]
-    let indexMap:[DPlanTravelMode:Int]
+    let cellHeight:CGFloat = 160
+    let items:[MSettingsDistanceProtocol]
+    let indexMap:[DSettingsDistance:Int]
     private(set) weak var settings:DSettings!
     private(set) weak var database:Database!
     
@@ -16,8 +16,8 @@ final class MSettingsDistance:MSettingsProtocol
         self.settings = settings
         self.database = database
         
-        items = MSettingsTravelMode.factoryItems()
-        indexMap = MSettingsTravelMode.factoryIndexMap(
+        items = MSettingsDistance.factoryItems()
+        indexMap = MSettingsDistance.factoryIndexMap(
             items:items)
     }
     
@@ -25,7 +25,7 @@ final class MSettingsDistance:MSettingsProtocol
     
     func selected(index:Int)
     {
-        settings.travelMode = items[index].mode
+        settings.distance = items[index].distance
         database.save { }
     }
 }
