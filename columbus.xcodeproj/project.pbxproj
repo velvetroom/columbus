@@ -40,6 +40,7 @@
 		DA2219531FAA889000DD6F86 /* VSettingsListCellDetailLevelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219521FAA889000DD6F86 /* VSettingsListCellDetailLevelListCell.swift */; };
 		DA2219551FAA8B0300DD6F86 /* VSettingsListCellDetailLevelListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219541FAA8B0300DD6F86 /* VSettingsListCellDetailLevelListConfig.swift */; };
 		DA2219571FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219561FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelListActions.swift */; };
+		DA2219591FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -327,6 +328,7 @@
 		DA2219521FAA889000DD6F86 /* VSettingsListCellDetailLevelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListCell.swift; sourceTree = "<group>"; };
 		DA2219541FAA8B0300DD6F86 /* VSettingsListCellDetailLevelListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListConfig.swift; sourceTree = "<group>"; };
 		DA2219561FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListActions.swift; sourceTree = "<group>"; };
+		DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListSelector.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -1102,6 +1104,7 @@
 				DA2219541FAA8B0300DD6F86 /* VSettingsListCellDetailLevelListConfig.swift */,
 				DA2219561FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelListActions.swift */,
 				DA2219521FAA889000DD6F86 /* VSettingsListCellDetailLevelListCell.swift */,
+				DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */,
 				DABDE8821FAA042100E24BBE /* VSettingsListCellDistance.swift */,
 				DA1A6C391FAA18010022A170 /* VSettingsListCellDistanceFactory.swift */,
 			);
@@ -1336,6 +1339,7 @@
 				DA3495F51F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift in Sources */,
 				DA65ECE11F95E68700720673 /* ExtensionFileManager.swift in Sources */,
 				DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */,
+				DA2219591FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift in Sources */,
 				DAAFA9961F9B61870097E0E0 /* VCreateStatusReadyBarLoader.swift in Sources */,
 				DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */,
 				DACA5CA01FA4397000B7BBC7 /* MError.swift in Sources */,
