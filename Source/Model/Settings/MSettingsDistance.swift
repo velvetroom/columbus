@@ -9,6 +9,16 @@ final class MSettingsDistance:MSettingsProtocol
     private(set) weak var settings:DSettings!
     private(set) weak var database:Database!
     
+    var selectedIndex:Int?
+    {
+        get
+        {
+            let index:Int? = indexMap[settings.distance]
+            
+            return index
+        }
+    }
+    
     init(
         settings:DSettings,
         database:Database)
@@ -27,13 +37,6 @@ final class MSettingsDistance:MSettingsProtocol
     {
         settings.distance = items[index].distance
         database.save { }
-    }
-    
-    func selectedIndex() -> Int?
-    {
-        let index:Int? = indexMap[settings.distance]
-        
-        return index
     }
     
     func itemsTitle() -> [String]

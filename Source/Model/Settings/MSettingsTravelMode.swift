@@ -9,6 +9,16 @@ final class MSettingsTravelMode:MSettingsProtocol
     private(set) weak var settings:DSettings!
     private(set) weak var database:Database!
     
+    var selectedIndex:Int?
+    {
+        get
+        {
+            let index:Int? = indexMap[settings.travelMode]
+            
+            return index
+        }
+    }
+    
     init(
         settings:DSettings,
         database:Database)

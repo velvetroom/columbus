@@ -9,6 +9,16 @@ final class MSettingsDetailLevel:MSettingsProtocol
     private(set) weak var settings:DSettings!
     private(set) weak var database:Database!
     
+    var selectedIndex:Int?
+    {
+        get
+        {
+            let index:Int? = indexMap[settings.detailLevel]
+            
+            return index
+        }
+    }
+    
     init(
         settings:DSettings,
         database:Database)
