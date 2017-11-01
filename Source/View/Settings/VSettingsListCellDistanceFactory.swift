@@ -4,7 +4,7 @@ extension VSettingsListCellDistance
 {
     //MARK: internal
     
-    func factoryViews()
+    func factoryTitle()
     {
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
@@ -30,5 +30,11 @@ extension VSettingsListCellDistance
         NSLayoutConstraint.rightToRight(
             view:labelTitle,
             toView:self)
+    }
+    
+    func factorySegmented()
+    {
+        let viewSegmented:UISegmentedControl = UISegmentedControl(
+            items: <#T##[Any]?#>)
     }
 }

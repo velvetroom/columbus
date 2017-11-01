@@ -11,7 +11,7 @@ final class VSettingsListCellDistance:VSettingsListCell
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        factoryViews()
+        factoryTitle()
     }
     
     required init?(coder:NSCoder)
