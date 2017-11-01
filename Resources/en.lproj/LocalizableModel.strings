@@ -1,7 +1,8 @@
 MCreateStatusErrorDatabase_message="\nFailed connecting to Database,\ntry again";
+MCreateMapMenuDone_noStops="Plan has no Stops";
 MSettingsTravelModeDriving_title="Driving";
 MSettingsTravelModeCycling_title="Cycling";
 MSettingsTravelModeTransit_title="Transit";
 MSettingsTravelModeWalking_title="Walking";
-MCreateMapMenuDone_noStops="Plan has no Stops";
+MSettingsDistanceKilometers_title="Kilometers";
 MError_noImageData="Unable to get image data";

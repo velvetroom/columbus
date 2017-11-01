@@ -32,6 +32,7 @@
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
 		DA1A6C3A1FAA18010022A170 /* VSettingsListCellDistanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A6C391FAA18010022A170 /* VSettingsListCellDistanceFactory.swift */; };
 		DA1A6C3C1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A6C3B1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift */; };
+		DA1A6C3E1FAA1D020022A170 /* MSettingsDistanceKilometers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A6C3D1FAA1D020022A170 /* MSettingsDistanceKilometers.swift */; };
 		DA1AD3B21F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
@@ -304,6 +305,7 @@
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
 		DA1A6C391FAA18010022A170 /* VSettingsListCellDistanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDistanceFactory.swift; sourceTree = "<group>"; };
 		DA1A6C3B1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceProtocol.swift; sourceTree = "<group>"; };
+		DA1A6C3D1FAA1D020022A170 /* MSettingsDistanceKilometers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceKilometers.swift; sourceTree = "<group>"; };
 		DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeFactory.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
@@ -983,6 +985,7 @@
 				DAECA2DD1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift */,
 				DABDE8841FAA04F200E24BBE /* MSettingsDistance.swift */,
 				DA1A6C3B1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift */,
+				DA1A6C3D1FAA1D020022A170 /* MSettingsDistanceKilometers.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1262,6 +1265,7 @@
 				DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */,
 				DA3495F31F9ABC3200D75252 /* VCreateStatusReadyBarStops.swift in Sources */,
 				DA97DC7C1FA41760005A137F /* MCreateSaveTile.swift in Sources */,
+				DA1A6C3E1FAA1D020022A170 /* MSettingsDistanceKilometers.swift in Sources */,
 				DA525A081F9F7927004F8503 /* VSettingsListCellTravelModeListActions.swift in Sources */,
 				DA65ECFF1F95E68700720673 /* ViewParentTransitions.swift in Sources */,
 				DA3495F91F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift in Sources */,
