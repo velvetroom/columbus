@@ -31,6 +31,7 @@
     </entity>
     <entity name="DSettings" representedClassName="DSettings" syncable="YES" codeGenerationType="class">
         <attribute name="rawDetailLevel" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rawDistancce" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawTravelMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activePlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DPlan" inverseName="activated" inverseEntity="DPlan" syncable="YES"/>
     </entity>
@@ -38,6 +39,6 @@
         <element name="DPlan" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="DPlanStop" positionX="-54" positionY="0" width="128" height="30"/>
         <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="180"/>
-        <element name="DSettings" positionX="-54" positionY="54" width="128" height="90"/>
+        <element name="DSettings" positionX="-54" positionY="54" width="128" height="105"/>
     </elements>
 </model>
