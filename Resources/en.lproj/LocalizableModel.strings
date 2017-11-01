@@ -5,4 +5,5 @@ MSettingsTravelModeCycling_title="Cycling";
 MSettingsTravelModeTransit_title="Transit";
 MSettingsTravelModeWalking_title="Walking";
 MSettingsDistanceKilometers_title="Kilometers";
+MSettingsDistanceMiles_title="Miles";
 MError_noImageData="Unable to get image data";
