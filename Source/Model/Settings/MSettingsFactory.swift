@@ -8,6 +8,7 @@ extension MSettings
     {
         let types:[MSettingsProtocol.Type] = [
             MSettingsTravelMode.self,
+            MSettingsDetailLevel.self,
             MSettingsDistance.self]
         
         return types
