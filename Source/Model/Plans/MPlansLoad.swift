@@ -4,6 +4,17 @@ extension MPlans
 {
     //MARK: private
     
+    private func factorySorters() -> [NSSortDescriptor]
+    {
+        let sorter:NSSortDescriptor = NSSortDescriptor(
+            key:kSortersKey,
+            ascending:false)
+        let sorters:[NSSortDescriptor] = [
+            sorter]
+        
+        return sorters
+    }
+    
     private func asyncLoad()
     {
         guard
@@ -38,8 +49,9 @@ extension MPlans
         settings:DSettings)
     {
         self.settings = settings
+        let sorters:[NSSortDescriptor] = factorySorters()
         
-        database?.fetch
+        database?.fetch(sorters:sorters)
         { [weak self] (plans:[DPlan]) in
             
             self?.plansLoaded(
