@@ -170,6 +170,7 @@
 		DA7D959F1FA76DCA00A620FB /* VMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D959E1FA76DCA00A620FB /* VMap.swift */; };
 		DA8DF8CF1FA94CD200276867 /* VPlansListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8CE1FA94CD200276867 /* VPlansListActions.swift */; };
 		DA8DF8D11FA955EB00276867 /* VPlansListCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8D01FA955EB00276867 /* VPlansListCellFactory.swift */; };
+		DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8DF8D21FA9579E00276867 /* plans.xcassets */; };
 		DA90B8FE1FA0D25900272ECA /* MCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */; };
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
 		DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */; };
@@ -437,6 +438,7 @@
 		DA7D959E1FA76DCA00A620FB /* VMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMap.swift; sourceTree = "<group>"; };
 		DA8DF8CE1FA94CD200276867 /* VPlansListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListActions.swift; sourceTree = "<group>"; };
 		DA8DF8D01FA955EB00276867 /* VPlansListCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellFactory.swift; sourceTree = "<group>"; };
+		DA8DF8D21FA9579E00276867 /* plans.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = plans.xcassets; sourceTree = "<group>"; };
 		DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateFactory.swift; sourceTree = "<group>"; };
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
 		DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRangeFactory.swift; sourceTree = "<group>"; };
@@ -624,6 +626,7 @@
 				DA4F09C51F965B8B00AAE279 /* menu.xcassets */,
 				DADA42011F967CAB00DD1FC4 /* generic.xcassets */,
 				DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */,
+				DA8DF8D21FA9579E00276867 /* plans.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1173,6 +1176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */,
 				DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */,
 				DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */,
 				DA0447FB1F973D3D00BA2D45 /* InfoPlist.strings in Resources */,
