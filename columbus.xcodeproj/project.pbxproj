@@ -69,6 +69,7 @@
 		DA4861851FAA3D2300FFBAB8 /* MSettingsDetailLevelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4861841FAA3D2300FFBAB8 /* MSettingsDetailLevelProtocol.swift */; };
 		DA4861871FAA3D8500FFBAB8 /* MSettingsDetailLevelMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4861861FAA3D8500FFBAB8 /* MSettingsDetailLevelMin.swift */; };
 		DA4861891FAA3F3700FFBAB8 /* MSettingsDetailLevelMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4861881FAA3F3700FFBAB8 /* MSettingsDetailLevelMedium.swift */; };
+		DA48618B1FAA402E00FFBAB8 /* MSettingsDetailLevelMax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48618A1FAA402E00FFBAB8 /* MSettingsDetailLevelMax.swift */; };
 		DA4BC9371F9AC44E00453655 /* VCreateStatusReadyBarActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BC9361F9AC44E00453655 /* VCreateStatusReadyBarActions.swift */; };
 		DA4BC9391F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BC9381F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift */; };
 		DA4BC93B1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BC93A1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift */; };
@@ -349,6 +350,7 @@
 		DA4861841FAA3D2300FFBAB8 /* MSettingsDetailLevelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelProtocol.swift; sourceTree = "<group>"; };
 		DA4861861FAA3D8500FFBAB8 /* MSettingsDetailLevelMin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelMin.swift; sourceTree = "<group>"; };
 		DA4861881FAA3F3700FFBAB8 /* MSettingsDetailLevelMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelMedium.swift; sourceTree = "<group>"; };
+		DA48618A1FAA402E00FFBAB8 /* MSettingsDetailLevelMax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelMax.swift; sourceTree = "<group>"; };
 		DA4BC9361F9AC44E00453655 /* VCreateStatusReadyBarActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarActions.swift; sourceTree = "<group>"; };
 		DA4BC9381F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsCellField.swift; sourceTree = "<group>"; };
 		DA4BC93A1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsCellFactory.swift; sourceTree = "<group>"; };
@@ -1001,6 +1003,7 @@
 				DA4861841FAA3D2300FFBAB8 /* MSettingsDetailLevelProtocol.swift */,
 				DA4861861FAA3D8500FFBAB8 /* MSettingsDetailLevelMin.swift */,
 				DA4861881FAA3F3700FFBAB8 /* MSettingsDetailLevelMedium.swift */,
+				DA48618A1FAA402E00FFBAB8 /* MSettingsDetailLevelMax.swift */,
 				DABDE8841FAA04F200E24BBE /* MSettingsDistance.swift */,
 				DA2F10491FAA233D0078F4F8 /* MSettingsDistanceFactory.swift */,
 				DA1A6C3B1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift */,
@@ -1369,6 +1372,7 @@
 				DABDE8871FAA058C00E24BBE /* DSettingsDistance.swift in Sources */,
 				DAD889001F9D2DBD000EC7FD /* MCreatePlanStopAdd.swift in Sources */,
 				DA2944DE1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift in Sources */,
+				DA48618B1FAA402E00FFBAB8 /* MSettingsDetailLevelMax.swift in Sources */,
 				DAE273CA1FA77DFA006FBCE0 /* VMapConfig.swift in Sources */,
 				DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */,
 				DAE699961FA295C400FFE6E3 /* VCreateStatusReadyBarTravelHeader.swift in Sources */,
