@@ -6,4 +6,6 @@ MSettingsTravelModeTransit_title="Transit";
 MSettingsTravelModeWalking_title="Walking";
 MSettingsDistanceKilometres_title="Kilometres";
 MSettingsDistanceMiles_title="Miles";
+MSettingsDetailLevelMin_title="Min";
+MSettingsDetailLevelMin_descr="\nUses as less storage as possible";
 MError_noImageData="Unable to get image data";
