@@ -4,12 +4,13 @@ final class VPlansListCell:UICollectionViewCell
 {
     weak var labelOrigin:UILabel!
     weak var labelDestination:UILabel!
-    let kRouteWidth:CGFloat = 60
+    let kRouteWidth:CGFloat = 42
     let kRouteHeight:CGFloat = 80
-    let kLabelRouteTop:CGFloat = 20
+    let kLabelOriginTop:CGFloat = 12
+    let kLabelDestinationTop:CGFloat = 18
     let kLabelRouteHeight:CGFloat = 20
     let kLabelRouteRight:CGFloat = -10
-    let kRouteFontSize:CGFloat = 14
+    let kRouteFontSize:CGFloat = 12
     
     override init(frame:CGRect)
     {
@@ -29,6 +30,6 @@ final class VPlansListCell:UICollectionViewCell
     
     func config(model:DPlan)
     {
-        
+        updateRoute(model:model)
     }
 }

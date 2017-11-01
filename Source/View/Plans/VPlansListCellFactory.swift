@@ -17,12 +17,21 @@ extension VPlansListCell
         labelOrigin.isUserInteractionEnabled = false
         labelOrigin.translatesAutoresizingMaskIntoConstraints = false
         labelOrigin.backgroundColor = UIColor.clear
-        labelOrigin.font = UIFont.light(size:kRouteFontSize)
+        labelOrigin.font = UIFont.regular(size:kRouteFontSize)
         labelOrigin.textColor = UIColor.colourBackgroundDark
         self.labelOrigin = labelOrigin
         
+        let labelDestination:UILabel = UILabel()
+        labelDestination.isUserInteractionEnabled = false
+        labelDestination.translatesAutoresizingMaskIntoConstraints = false
+        labelDestination.backgroundColor = UIColor.clear
+        labelDestination.font = UIFont.regular(size:kRouteFontSize)
+        labelDestination.textColor = UIColor.colourBackgroundDark
+        self.labelDestination = labelDestination
+        
         addSubview(imageRoute)
         addSubview(labelOrigin)
+        addSubview(labelDestination)
         
         NSLayoutConstraint.topToTop(
             view:imageRoute,
@@ -40,7 +49,7 @@ extension VPlansListCell
         NSLayoutConstraint.topToTop(
             view:labelOrigin,
             toView:self,
-            constant:kLabelRouteTop)
+            constant:kLabelOriginTop)
         NSLayoutConstraint.height(
             view:labelOrigin,
             constant:kLabelRouteHeight)
@@ -54,7 +63,8 @@ extension VPlansListCell
         
         NSLayoutConstraint.topToBottom(
             view:labelDestination,
-            toView:labelOrigin)
+            toView:labelOrigin,
+            constant:kLabelDestinationTop)
         NSLayoutConstraint.height(
             view:labelDestination,
             constant:kLabelRouteHeight)
