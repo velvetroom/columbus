@@ -31,7 +31,9 @@ final class VPlans:ViewMain
     func plansLoaded()
     {
         DispatchQueue.main.async
-        {
+        { [weak self] in
+            
+            self?.viewList.collectionView.reloadData()
         }
     }
 }
