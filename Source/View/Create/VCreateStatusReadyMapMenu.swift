@@ -9,7 +9,6 @@ final class VCreateStatusReadyMapMenu:VCollection<
     private var cellSize:CGSize?
     private let kCollectionTop:CGFloat = 6
     private let kCellHeight:CGFloat = 58
-    private let kDeselectTime:TimeInterval = 0.5
     
     required init(controller:CCreate)
     {
@@ -93,21 +92,12 @@ final class VCreateStatusReadyMapMenu:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        collectionView.isUserInteractionEnabled = false
+        super.collectionView(
+            collectionView,
+            didSelectItemAt:indexPath)
         
         let item:MCreateMapMenuProtocol = modelAtIndex(
             index:indexPath)
         controller.menuItemSelected(item:item)
-        
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kDeselectTime)
-        { [weak collectionView] in
-            
-            collectionView?.isUserInteractionEnabled = true
-            collectionView?.selectItem(
-                at:nil,
-                animated:true,
-                scrollPosition:UICollectionViewScrollPosition())
-        }
     }
 }
