@@ -47,4 +47,27 @@ extension DSettings
             rawDetailLevel = newValue.rawValue
         }
     }
+    
+    var distance:DSettingsDistance
+    {
+        get
+        {
+            guard
+                
+                let distance:DSettingsDistance = DSettingsDistance(
+                    rawValue:rawDistancce)
+                
+            else
+            {
+                return DSettingsDistance.kilometers
+            }
+            
+            return distance
+        }
+        
+        set(newValue)
+        {
+            rawDistancce = newValue.rawValue
+        }
+    }
 }
