@@ -5,7 +5,7 @@ final class VPlansList:VCollection<
     VPlansListCell>
 {
     let kInterItem:CGFloat = 1
-    let kInsetsTop:CGFloat = 63
+    let kInsetsTop:CGFloat = 64
     let kInsetsBottom:CGFloat = 70
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 120

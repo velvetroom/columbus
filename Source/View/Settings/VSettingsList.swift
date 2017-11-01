@@ -4,8 +4,8 @@ final class VSettingsList:VCollection<
     ArchSettings,
     VSettingsListCell>
 {
-    let kInterItem:CGFloat = 4
-    let kInsetsTop:CGFloat = 63
+    let kInterItem:CGFloat = 2
+    let kInsetsTop:CGFloat = 64
     let kInsetsBottom:CGFloat = 70
     
     required init(controller:CSettings)
