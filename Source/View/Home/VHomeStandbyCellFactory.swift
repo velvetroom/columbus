@@ -2,7 +2,57 @@ import UIKit
 
 extension VHomeStandbyCell
 {
+    //MARK: private
+    
+    private func factoryTitle(
+        model:MHomeInfoProtocol) -> NSAttributedString
+    {
+        let string:NSAttributedString = NSAttributedString(
+            string:model.title,
+            attributes:attributesTitle)
+        
+        return string
+    }
+    
+    private func factoryDescr(
+        model:MHomeInfoProtocol) -> NSAttributedString
+    {
+        let string:NSAttributedString = NSAttributedString(
+            string:model.descr,
+            attributes:attributesDescr)
+        
+        return string
+    }
+    
     //MARK: internal
+    
+    class func factoryAttributesTitle(
+        fontSize:CGFloat) -> [
+        NSAttributedStringKey:Any]
+    {
+        let attributes:[
+            NSAttributedStringKey:Any] = [
+                NSAttributedStringKey.font:
+                    UIFont.medium(size:fontSize),
+                NSAttributedStringKey.foregroundColor:
+                    UIColor.colourBackgroundDark]
+        
+        return attributes
+    }
+    
+    class func factoryAttributesDescr(
+        fontSize:CGFloat) -> [
+        NSAttributedStringKey:Any]
+    {
+        let attributes:[
+            NSAttributedStringKey:Any] = [
+                NSAttributedStringKey.font:
+                    UIFont.regular(size:fontSize),
+                NSAttributedStringKey.foregroundColor:
+                    UIColor(white:0.5, alpha:1)]
+        
+        return attributes
+    }
     
     func factoryViews()
     {
@@ -46,5 +96,20 @@ extension VHomeStandbyCell
             view:labelInfo,
             toView:self,
             constant:kInfoRight)
+    }
+    
+    func factoryInfo(
+        model:MHomeInfoProtocol) -> NSAttributedString
+    {
+        let title:NSAttributedString = factoryTitle(
+            model:model)
+        let descr:NSAttributedString = factoryDescr(
+            model:model)
+        
+        let mutableString:NSMutableAttributedString = NSMutableAttributedString()
+        mutableString.append(title)
+        mutableString.append(descr)
+        
+        return mutableString
     }
 }

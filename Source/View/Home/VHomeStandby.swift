@@ -10,7 +10,7 @@ final class VHomeStandby:VCollection<
     let kInterItem:CGFloat = 1
     let kCollectionBottom:CGFloat = 70
     private var cellSize:CGSize?
-    private let kCellHeight:CGFloat = 100
+    private let kCellHeight:CGFloat = 130
     
     required init(controller:CHome)
     {
