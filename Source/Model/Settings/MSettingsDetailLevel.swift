@@ -33,9 +33,9 @@ final class MSettingsDetailLevel:MSettingsProtocol
     
     //MARK: internal
     
-    func selected(index:Int)
+    func selected(item:MSettingsDetailLevelProtocol)
     {
-        settings.detailLevel = items[index].detailLevel
+        settings.detailLevel = item.detailLevel
         database.save { }
     }
 }

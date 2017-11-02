@@ -18,12 +18,15 @@ extension VSettingsListCellDetailLevelList
         let indexPath:IndexPath = IndexPath(
             item:index,
             section:0)
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(
+            index:indexPath)
         
         collectionView.selectItem(
             at:indexPath,
             animated:false,
             scrollPosition:UICollectionViewScrollPosition())
         
+        updateLabel(item:item)
         updateSelector()
     }
     

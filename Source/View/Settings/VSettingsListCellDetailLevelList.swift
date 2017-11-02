@@ -19,6 +19,7 @@ final class VSettingsListCellDetailLevelList:
     let kWaitToSelect:TimeInterval = 0.1
     let kCellWidth:CGFloat = 140
     let kLabelRight:CGFloat = -20
+    let kFontSize:CGFloat = 15
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
@@ -139,7 +140,12 @@ final class VSettingsListCellDetailLevelList:
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        model?.selected(index:indexPath.item)
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(
+            index:indexPath)
+        
+        model?.selected(item:item)
+        updateLabel(item:item)
+        
         updateSelector()
     }
 }
