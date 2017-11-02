@@ -8,6 +8,7 @@ final class VHomeStandbyHeader:View<ArchHome>
     private let kIconHeight:CGFloat = 80
     private let kTitleTop:CGFloat = -10
     private let kTitleHeight:CGFloat = 20
+    private let kBorderHeight:CGFloat = 1
     
     required init(controller:CHome)
     {
@@ -33,8 +34,12 @@ final class VHomeStandbyHeader:View<ArchHome>
         labelTitle.text = String.localizedView(
             key:"VHomeStandbyHeader_labelTitle")
         
+        let border:VBorder = VBorder(
+            colour:UIColor.colourBackgroundGray)
+        
         addSubview(icon)
         addSubview(labelTitle)
+        addSubview(border)
         
         layoutHeaderTop = NSLayoutConstraint.topToTop(
             view:icon,
@@ -55,6 +60,16 @@ final class VHomeStandbyHeader:View<ArchHome>
             constant:kTitleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:border,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:border,
+            constant:kBorderHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:border,
             toView:self)
     }
     

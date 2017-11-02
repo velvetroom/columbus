@@ -69,7 +69,7 @@ extension VHomeStandbyCell
         labelInfo.backgroundColor = UIColor.clear
         labelInfo.numberOfLines = 0
         self.labelInfo = labelInfo
-        
+
         addSubview(icon)
         addSubview(labelInfo)
         
