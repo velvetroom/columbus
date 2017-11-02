@@ -207,6 +207,7 @@
 		DA97DC801FA418FE005A137F /* MCreateSaveRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */; };
 		DA9C04611FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04601FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift */; };
 		DA9C04631FABDA60006F57E1 /* VHomeStandbyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04621FABDA60006F57E1 /* VHomeStandbyActions.swift */; };
+		DA9C04651FABE4EF006F57E1 /* MHomeInfoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04641FABE4EF006F57E1 /* MHomeInfoHome.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -509,6 +510,7 @@
 		DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRender.swift; sourceTree = "<group>"; };
 		DA9C04601FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeStandbyCellFactory.swift; sourceTree = "<group>"; };
 		DA9C04621FABDA60006F57E1 /* VHomeStandbyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeStandbyActions.swift; sourceTree = "<group>"; };
+		DA9C04641FABE4EF006F57E1 /* MHomeInfoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeInfoHome.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -856,6 +858,7 @@
 				DA750CA71FA789C900459985 /* MHomePlan.swift */,
 				DAB1FA6C1FABA9EC000D857C /* MHomeInfoProtocol.swift */,
 				DAB1FA6E1FABAA45000D857C /* MHomeInfoSettings.swift */,
+				DA9C04641FABE4EF006F57E1 /* MHomeInfoHome.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1515,6 +1518,7 @@
 				DA6A10D11FA1CD7C008CE254 /* ExtensionMKPolyline.swift in Sources */,
 				DA65ECE01F95E68700720673 /* ExtensionCGImage.swift in Sources */,
 				DA97DC7E1FA41776005A137F /* MCreateSaveTileFactory.swift in Sources */,
+				DA9C04651FABE4EF006F57E1 /* MHomeInfoHome.swift in Sources */,
 				DA525A021F9F7671004F8503 /* MSettingsTravelModeFactory.swift in Sources */,
 				DADE5F9E1FA943CF00E59687 /* VPlansListConfig.swift in Sources */,
 				DAD7C67B1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift in Sources */,
