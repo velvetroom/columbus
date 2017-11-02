@@ -1,3 +1,5 @@
+MHomeInfoSettings_title="Settings";
+MHomeInfoSettings_descr="Adjust and personalise Columbus App";
 MCreateStatusErrorDatabase_message="\nFailed connecting to Database,\ntry again";
 MCreateMapMenuDone_noStops="Plan has no Stops";
 MSettingsTravelModeDriving_title="Driving";

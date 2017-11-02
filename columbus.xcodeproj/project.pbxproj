@@ -224,6 +224,7 @@
 		DAB1C4C31F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */; };
 		DAB1FA6B1FAB9F64000D857C /* VHomeStandbyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1FA6A1FAB9F64000D857C /* VHomeStandbyFactory.swift */; };
 		DAB1FA6D1FABA9EC000D857C /* MHomeInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1FA6C1FABA9EC000D857C /* MHomeInfoProtocol.swift */; };
+		DAB1FA6F1FABAA45000D857C /* MHomeInfoSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB1FA6E1FABAA45000D857C /* MHomeInfoSettings.swift */; };
 		DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */; };
 		DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */; };
 		DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8F01F9668E400C1EF4A /* CSettings.swift */; };
@@ -523,6 +524,7 @@
 		DAB1C4C21F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsActions.swift; sourceTree = "<group>"; };
 		DAB1FA6A1FAB9F64000D857C /* VHomeStandbyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeStandbyFactory.swift; sourceTree = "<group>"; };
 		DAB1FA6C1FABA9EC000D857C /* MHomeInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeInfoProtocol.swift; sourceTree = "<group>"; };
+		DAB1FA6E1FABAA45000D857C /* MHomeInfoSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeInfoSettings.swift; sourceTree = "<group>"; };
 		DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAB2F8EE1F9668C300C1EF4A /* CPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPlans.swift; sourceTree = "<group>"; };
 		DAB2F8F01F9668E400C1EF4A /* CSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSettings.swift; sourceTree = "<group>"; };
@@ -849,6 +851,7 @@
 				DA7D95921FA763A100A620FB /* MHomeStatusReady.swift */,
 				DA750CA71FA789C900459985 /* MHomePlan.swift */,
 				DAB1FA6C1FABA9EC000D857C /* MHomeInfoProtocol.swift */,
+				DAB1FA6E1FABAA45000D857C /* MHomeInfoSettings.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1406,6 +1409,7 @@
 				DA2944DA1FA3F99200645DA4 /* MCreateSaveFactory.swift in Sources */,
 				DA7D958F1FA762C300A620FB /* MHomeStatusProtocol.swift in Sources */,
 				DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */,
+				DAB1FA6F1FABAA45000D857C /* MHomeInfoSettings.swift in Sources */,
 				DABED9B01F9E94AF00635E82 /* MCreatePlanDirections.swift in Sources */,
 				DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */,
 				DAD888FE1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift in Sources */,
