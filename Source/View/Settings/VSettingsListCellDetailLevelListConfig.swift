@@ -17,6 +17,12 @@ extension VSettingsListCellDetailLevelList
         let viewSelector:VSettingsListCellDetailLevelListSelector = VSettingsListCellDetailLevelListSelector()
         self.viewSelector = viewSelector
         
+        let viewRail:VSettingsListCellDetailLevelListRail = VSettingsListCellDetailLevelListRail()
+        
+        insertSubview(
+            viewRail,
+            belowSubview:collectionView)
+        
         insertSubview(
             viewSelector,
             belowSubview:collectionView)
@@ -35,5 +41,16 @@ extension VSettingsListCellDetailLevelList
             view:viewSelector,
             toView:self,
             margin:kSelectorMarginHorizontal)
+        
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewRail,
+            toView:self)
+        NSLayoutConstraint.leftToLeft(
+            view:viewRail,
+            toView:self,
+            constant:kRailLeft)
+        NSLayoutConstraint.width(
+            view:viewRail,
+            constant:kRailWidth)
     }
 }
