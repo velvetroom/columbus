@@ -8,11 +8,12 @@ final class VHomeStandbyCell:UICollectionViewCell
     let attributesTitle:[NSAttributedStringKey:Any]
     let attributesDescr:[NSAttributedStringKey:Any]
     let kIconSize:CGFloat = 60
-    let kInfoTop:CGFloat = 18
+    let kInfoTop:CGFloat = 16
     let kInfoRight:CGFloat = -20
     private let options:NSStringDrawingOptions
     private let kInfoMaxHeight:CGFloat = 600
-    private let kFontSize:CGFloat = 14
+    private let kTitleFontSize:CGFloat = 15
+    private let kDescrFontSize:CGFloat = 14
     
     override init(frame:CGRect)
     {
@@ -20,9 +21,9 @@ final class VHomeStandbyCell:UICollectionViewCell
             NSStringDrawingOptions.usesFontLeading,
             NSStringDrawingOptions.usesLineFragmentOrigin])
         attributesTitle = VHomeStandbyCell.factoryAttributesTitle(
-            fontSize:kFontSize)
+            fontSize:kTitleFontSize)
         attributesDescr = VHomeStandbyCell.factoryAttributesDescr(
-            fontSize:kFontSize)
+            fontSize:kDescrFontSize)
         
         super.init(frame:frame)
         clipsToBounds = true
