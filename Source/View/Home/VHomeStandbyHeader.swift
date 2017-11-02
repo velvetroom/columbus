@@ -2,9 +2,11 @@ import UIKit
 
 final class VHomeStandbyHeader:View<ArchHome>
 {
+    private weak var layoutHeaderTop:NSLayoutConstraint!
     private let kFontSize:CGFloat = 14
-    private let kIconTop:CGFloat = 80
-    private let kIconHeight:CGFloat = 60
+    private let kIconTopRatio:CGFloat = 0.4
+    private let kIconHeight:CGFloat = 80
+    private let kTitleTop:CGFloat = -10
     private let kTitleHeight:CGFloat = 20
     
     required init(controller:CHome)
@@ -34,10 +36,9 @@ final class VHomeStandbyHeader:View<ArchHome>
         addSubview(icon)
         addSubview(labelTitle)
         
-        NSLayoutConstraint.topToTop(
+        layoutHeaderTop = NSLayoutConstraint.topToTop(
             view:icon,
-            toView:self,
-            constant:kIconTop)
+            toView:self)
         NSLayoutConstraint.height(
             view:icon,
             constant:kIconHeight)
@@ -47,7 +48,8 @@ final class VHomeStandbyHeader:View<ArchHome>
         
         NSLayoutConstraint.topToBottom(
             view:labelTitle,
-            toView:icon)
+            toView:icon,
+            constant:kTitleTop)
         NSLayoutConstraint.height(
             view:labelTitle,
             constant:kTitleHeight)
@@ -59,5 +61,14 @@ final class VHomeStandbyHeader:View<ArchHome>
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func layoutSubviews()
+    {
+        let height:CGFloat = bounds.height
+        let iconTop:CGFloat = height * kIconTopRatio
+        layoutHeaderTop.constant = iconTop
+        
+        super.layoutSubviews()
     }
 }

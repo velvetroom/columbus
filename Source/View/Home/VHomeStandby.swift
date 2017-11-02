@@ -20,4 +20,18 @@ final class VHomeStandby:VCollection<
     {
         return nil
     }
+    
+    override func scrollViewDidScroll(
+        _ scrollView:UIScrollView)
+    {
+        let offsetY:CGFloat = scrollView.contentOffset.y
+        var headerHeight:CGFloat = kHeaderHeight - offsetY
+        
+        if headerHeight < kHeaderMinHeight
+        {
+            headerHeight = kHeaderMinHeight
+        }
+        
+        layoutHeaderHeight.constant = headerHeight
+    }
 }
