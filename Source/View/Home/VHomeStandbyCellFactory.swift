@@ -7,6 +7,10 @@ extension VHomeStandbyCell
     func factoryViews()
     {
         let icon:UIImageView = UIImageView()
+        icon.isUserInteractionEnabled = false
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.clipsToBounds = true
+        icon.contentMode = UIViewContentMode.center
         self.icon = icon
         
         let labelInfo:UILabel = UILabel()
@@ -19,15 +23,15 @@ extension VHomeStandbyCell
         addSubview(icon)
         addSubview(labelInfo)
         
-        NSLayoutConstraint.equalsVertical(
+        NSLayoutConstraint.topToTop(
             view:icon,
             toView:self)
         NSLayoutConstraint.leftToLeft(
             view:icon,
             toView:self)
-        NSLayoutConstraint.width(
+        NSLayoutConstraint.size(
             view:icon,
-            constant:kIconWidth)
+            constant:kIconSize)
         
         NSLayoutConstraint.topToTop(
             view:labelInfo,

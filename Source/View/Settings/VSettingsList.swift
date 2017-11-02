@@ -50,8 +50,8 @@ final class VSettingsList:VCollection<
         let item:MSettingsProtocol = modelAtIndex(
             index:indexPath)
         let cell:VSettingsListCell = cellAtIndex(
-            reusableIdentifier:item.reusableIdentifier,
-            indexPath:indexPath)
+            indexPath:indexPath,
+            reusableIdentifier:item.reusableIdentifier)
         
         cell.config(
             controller:controller,

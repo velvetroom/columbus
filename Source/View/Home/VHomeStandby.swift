@@ -69,4 +69,17 @@ final class VHomeStandby:VCollection<
         
         return count
     }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:MHomeInfoProtocol = modelAtIndex(
+            index:indexPath)
+        let cell:VHomeStandbyCell = cellAtIndex(
+            indexPath:indexPath)
+        cell.config(model:item)
+        
+        return cell
+    }
 }

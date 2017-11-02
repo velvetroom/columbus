@@ -5,7 +5,7 @@ final class VHomeStandbyCell:UICollectionViewCell
     weak var icon:UIImageView!
     weak var labelInfo:UILabel!
     weak var layoutInfoHeight:NSLayoutConstraint!
-    let kIconWidth:CGFloat = 90
+    let kIconSize:CGFloat = 60
     let kInfoTop:CGFloat = 10
     let kInfoRight:CGFloat = -10
     let kInfoMaxHeight:CGFloat = 200
@@ -22,5 +22,12 @@ final class VHomeStandbyCell:UICollectionViewCell
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: internal
+    
+    func config(model:MHomeInfoProtocol)
+    {
+        icon.image = model.icon
     }
 }
