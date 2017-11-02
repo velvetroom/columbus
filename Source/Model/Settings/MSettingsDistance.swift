@@ -3,7 +3,7 @@ import UIKit
 final class MSettingsDistance:MSettingsProtocol
 {
     let reusableIdentifier:String = VSettingsListCellDistance.reusableIdentifier
-    let cellHeight:CGFloat = 140
+    let cellHeight:CGFloat = 150
     let items:[MSettingsDistanceProtocol]
     let indexMap:[DSettingsDistance:Int]
     private(set) weak var settings:DSettings!

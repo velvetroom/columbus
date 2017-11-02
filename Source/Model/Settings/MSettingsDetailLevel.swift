@@ -3,7 +3,7 @@ import UIKit
 final class MSettingsDetailLevel:MSettingsProtocol
 {
     let reusableIdentifier:String = VSettingsListCellDetailLevel.reusableIdentifier
-    let cellHeight:CGFloat = 300
+    let cellHeight:CGFloat = 330
     let items:[MSettingsDetailLevelProtocol]
     let indexMap:[DSettingsDetailLevel:Int]
     private(set) weak var settings:DSettings!

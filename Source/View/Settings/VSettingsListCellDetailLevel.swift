@@ -8,6 +8,8 @@ final class VSettingsListCellDetailLevel:VSettingsListCell
     let kTitleFontSize:CGFloat = 16
     let kDescrFontSize:CGFloat = 14
     let kListWidth:CGFloat = 140
+    let kListTop:CGFloat = 100
+    let kListBottom:CGFloat = -20
     private weak var model:MSettingsDetailLevel?
     
     override init(frame:CGRect)

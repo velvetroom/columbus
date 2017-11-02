@@ -74,10 +74,11 @@ extension VSettingsListCellDetailLevel
         NSLayoutConstraint.topToTop(
             view:viewList,
             toView:self,
-            constant:kCaptionHeight)
+            constant:kListTop)
         NSLayoutConstraint.bottomToBottom(
             view:viewList,
-            toView:self)
+            toView:self,
+            constant:kListBottom)
         NSLayoutConstraint.leftToLeft(
             view:viewList,
             toView:self)
