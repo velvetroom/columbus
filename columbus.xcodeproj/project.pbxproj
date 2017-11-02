@@ -43,6 +43,7 @@
 		DA2219591FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */; };
 		DA22195B1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */; };
 		DA25C8551FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift */; };
+		DA25C8571FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -333,6 +334,7 @@
 		DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListSelector.swift; sourceTree = "<group>"; };
 		DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListRail.swift; sourceTree = "<group>"; };
 		DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListFactory.swift; sourceTree = "<group>"; };
+		DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListLabel.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -1108,6 +1110,7 @@
 				DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift */,
 				DA2219541FAA8B0300DD6F86 /* VSettingsListCellDetailLevelListConfig.swift */,
 				DA2219561FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelListActions.swift */,
+				DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift */,
 				DA2219521FAA889000DD6F86 /* VSettingsListCellDetailLevelListCell.swift */,
 				DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */,
 				DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */,
@@ -1332,6 +1335,7 @@
 				DA2944E21FA4055F00645DA4 /* MCreateSaveZoomMedium.swift in Sources */,
 				DA65ECF01F95E68700720673 /* CHome.swift in Sources */,
 				DA22194F1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift in Sources */,
+				DA25C8571FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift in Sources */,
 				DA65ECE31F95E68700720673 /* ExtensionNSLayoutConstraint.swift in Sources */,
 				DA2944E41FA4057600645DA4 /* MCreateSaveZoomMax.swift in Sources */,
 				DAA5B4891F99369E00F9121C /* DPlan.swift in Sources */,
