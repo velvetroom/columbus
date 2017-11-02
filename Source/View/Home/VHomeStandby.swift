@@ -4,29 +4,20 @@ final class VHomeStandby:VCollection<
     ArchHome,
     VHomeStandbyCell>
 {
-    let kHeaderHeight:CGFloat = 250
+    weak var layoutHeaderHeight:NSLayoutConstraint!
+    let kHeaderHeight:CGFloat = 200
+    let kHeaderMinHeight:CGFloat = 20
     let kInterItem:CGFloat = 1
     
     required init(controller:CHome)
     {
         super.init(controller:controller)
         config()
+        factoryViews()
     }
     
     required init?(coder:NSCoder)
     {
         return nil
-    }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        viewForSupplementaryElementOfKind kind:String,
-        at indexPath:IndexPath) -> UICollectionReusableView
-    {
-        let header:VHomeStandbyHeader = reusableAtIndex(
-            kind:kind,
-            indexPath:indexPath)
-        
-        return header
     }
 }

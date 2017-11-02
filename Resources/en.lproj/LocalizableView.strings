@@ -1,3 +1,4 @@
+VHomeStandbyHeader_labelTitle="Columbus";
 VCreateStatusNeedsPermission_label="Need your location\nto start navigating";
 VCreateStatusNeedsPermissionContinue_button="Continue";
 VCreateStatusDenied_title="Location access denied";
