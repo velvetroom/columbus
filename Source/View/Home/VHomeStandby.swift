@@ -1,6 +1,8 @@
 import UIKit
 
-final class VHomeStandby:View<ArchHome>
+final class VHomeStandby:VCollection<
+    ArchHome,
+    VHomeStandbyCell>
 {
     
 }
