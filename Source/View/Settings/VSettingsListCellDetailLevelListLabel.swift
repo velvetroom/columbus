@@ -44,7 +44,7 @@ extension VSettingsListCellDetailLevelList
                 NSAttributedStringKey.font:
                     UIFont.regular(size:kFontSize),
                 NSAttributedStringKey.foregroundColor:
-                    UIColor(white:0, alpha:0.5)]
+                    UIColor(white:0, alpha:0.4)]
         
         let string:NSAttributedString = NSAttributedString(
             string:item.descr,

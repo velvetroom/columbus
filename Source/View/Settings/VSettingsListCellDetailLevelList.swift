@@ -18,8 +18,8 @@ final class VSettingsListCellDetailLevelList:
     let kAnimationDuration:TimeInterval = 0.2
     let kWaitToSelect:TimeInterval = 0.1
     let kCellWidth:CGFloat = 140
-    let kLabelRight:CGFloat = -20
-    let kFontSize:CGFloat = 15
+    let kLabelRight:CGFloat = -10
+    let kFontSize:CGFloat = 14
     private var cellSize:CGSize?
     
     required init(controller:CSettings)

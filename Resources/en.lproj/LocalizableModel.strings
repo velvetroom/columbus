@@ -11,5 +11,5 @@ MSettingsDetailLevelMin_descr="\nUses as less storage as possible.";
 MSettingsDetailLevelMedium_title="Medium";
 MSettingsDetailLevelMedium_descr="\nPerfect balance between map detail and storage usage.\n\nThis is the recommended setting.";
 MSettingsDetailLevelMax_title="Max";
-MSettingsDetailLevelMax_descr="\nBest map detail possible, however it consumes huge amounts of storage.\nIt will also increase by a lot the waiting time when saving a new Navigation Plan.\n\nNot recommended.";
+MSettingsDetailLevelMax_descr="\nBest map detail possible, however it consumes huge amounts of storage and increases by a lot the waiting time when saving a new Navigation Plan.\n\nNot recommended.";
 MError_noImageData="Unable to get image data";
