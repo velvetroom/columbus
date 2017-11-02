@@ -24,6 +24,7 @@ final class VSettingsListCellDetailLevelList:
         
         super.init(controller:controller)
         config()
+        factoryViews()
         selectCurrent()
     }
     
