@@ -7,7 +7,9 @@ final class VSettingsListCellDetailLevelList:
 {
     weak var model:MSettingsDetailLevel?
     weak var viewSelector:VSettingsListCellDetailLevelListSelector!
+    weak var label:UILabel!
     weak var layoutSelectorTop:NSLayoutConstraint!
+    weak var layoutLabelHeight:NSLayoutConstraint!
     let selectorHeight_2:CGFloat
     let kSelectorMarginHorizontal:CGFloat = 20
     let kSelectorHeight:CGFloat = 30
@@ -16,6 +18,7 @@ final class VSettingsListCellDetailLevelList:
     let kAnimationDuration:TimeInterval = 0.2
     let kWaitToSelect:TimeInterval = 0.1
     let kCellWidth:CGFloat = 140
+    let kLabelRight:CGFloat = -20
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
