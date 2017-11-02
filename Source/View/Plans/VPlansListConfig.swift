@@ -9,6 +9,9 @@ extension VPlansList
         backgroundColor = UIColor.colourBackgroundGray
         collectionView.alwaysBounceVertical = true
         
+        registerHeader(
+            header:VPlansListHeader.self)
+        
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.minimumInteritemSpacing = kInterItem

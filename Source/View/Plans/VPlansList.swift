@@ -9,6 +9,7 @@ final class VPlansList:VCollection<
     let kInsetsBottom:CGFloat = 70
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 120
+    private let kHeaderHeight:CGFloat = 160
     
     required init(controller:CPlans)
     {
@@ -41,6 +42,30 @@ final class VPlansList:VCollection<
     override func collectionView(
         _ collectionView:UICollectionView,
         layout collectionViewLayout:UICollectionViewLayout,
+        referenceSizeForHeaderInSection section:Int) -> CGSize
+    {
+        let count:Int = collectionView.numberOfItems(
+            inSection:section)
+        
+        guard
+        
+            count > 0
+        
+        else
+        {
+            let size:CGSize = CGSize(
+                width:0,
+                height:kHeaderHeight)
+            
+            return size
+        }
+        
+        return CGSize.zero
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
         guard
@@ -59,6 +84,18 @@ final class VPlansList:VCollection<
         }
         
         return cellSize
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        viewForSupplementaryElementOfKind kind:String,
+        at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let header:VPlansListHeader = reusableAtIndex(
+            kind:kind,
+            indexPath:indexPath)
+        
+        return header
     }
     
     override func collectionView(

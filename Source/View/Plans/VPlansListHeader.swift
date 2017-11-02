@@ -2,7 +2,7 @@ import UIKit
 
 final class VPlansListHeader:UICollectionReusableView
 {
-    private let kTextTop:CGFloat = 80
+    private let kTextTop:CGFloat = 84
     private let kTextMarginHorizontal:CGFloat = 20
     private let kTextHeight:CGFloat = 50
     private let kFontSize:CGFloat = 14
