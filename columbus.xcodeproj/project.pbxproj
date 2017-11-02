@@ -205,6 +205,7 @@
 		DA97DC7C1FA41760005A137F /* MCreateSaveTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */; };
 		DA97DC7E1FA41776005A137F /* MCreateSaveTileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7D1FA41776005A137F /* MCreateSaveTileFactory.swift */; };
 		DA97DC801FA418FE005A137F /* MCreateSaveRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */; };
+		DA9C04611FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04601FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -505,6 +506,7 @@
 		DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTile.swift; sourceTree = "<group>"; };
 		DA97DC7D1FA41776005A137F /* MCreateSaveTileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileFactory.swift; sourceTree = "<group>"; };
 		DA97DC7F1FA418FE005A137F /* MCreateSaveRender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRender.swift; sourceTree = "<group>"; };
+		DA9C04601FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeStandbyCellFactory.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -929,6 +931,7 @@
 				DAB1FA6A1FAB9F64000D857C /* VHomeStandbyFactory.swift */,
 				DA6700DA1FAB90EB00B89997 /* VHomeStandbyHeader.swift */,
 				DA6700DC1FAB910700B89997 /* VHomeStandbyCell.swift */,
+				DA9C04601FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift */,
 				DA7D95961FA7642500A620FB /* VHomeReady.swift */,
 				DA750CAF1FA78D4E00459985 /* VHomeReadyFactory.swift */,
 				DA7D95981FA769AE00A620FB /* VHomeReadyMap.swift */,
@@ -1554,6 +1557,7 @@
 				DAE184961F9EA4F100D29126 /* MHomeSettings.swift in Sources */,
 				DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */,
 				DA0448091F9756D700BA2D45 /* VCreateStatusReadyBar.swift in Sources */,
+				DA9C04611FABD6F5006F57E1 /* VHomeStandbyCellFactory.swift in Sources */,
 				DA65ECDD1F95E68700720673 /* ExtensionDictionary.swift in Sources */,
 				DA65ED011F95E68700720673 /* VMenuCell.swift in Sources */,
 				DA1A6C401FAA1D5F0022A170 /* MSettingsDistanceMiles.swift in Sources */,
