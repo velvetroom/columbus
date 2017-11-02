@@ -14,3 +14,4 @@ VSettingsListCellDistance_labelTitle="Show distance as";
 VSettingsListCellDetailLevel_title="Detail level";
 VSettingsListCellDetailLevel_descr="\nHow much storage to use when\nsaving Navigation Plans";
 VPlansBar_labelTitle="Plans";
+VPlansListHeader_labelText="No Navigation Plans created yet";
