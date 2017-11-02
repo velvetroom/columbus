@@ -2,6 +2,16 @@ import UIKit
 
 extension VSettingsListCellDistance
 {
+    //MARK: selectors
+    
+    @objc
+    private func selectorSegemented(
+        sender segmented:UISegmentedControl)
+    {
+        let index:Int = segmented.selectedSegmentIndex
+        model?.selected(index:index)
+    }
+    
     //MARK: internal
     
     func factoryTitle()
@@ -49,6 +59,10 @@ extension VSettingsListCellDistance
             items:titles)
         viewSegmented.translatesAutoresizingMaskIntoConstraints = false
         viewSegmented.tintColor = UIColor.colourBackgroundDark
+        viewSegmented.addTarget(
+            self,
+            action:#selector(selectorSegemented(sender:)),
+            for:UIControlEvents.valueChanged)
         self.viewSegmented = viewSegmented
         
         addSubview(viewSegmented)

@@ -10,7 +10,7 @@ final class VSettingsListCellDistance:VSettingsListCell
     let kSegmentedTop:CGFloat = 80
     let kSegmentedHeight:CGFloat = 32
     let kSegmentedWidth:CGFloat = 270
-    private weak var model:MSettingsDistance?
+    private(set) weak var model:MSettingsDistance?
     
     override init(frame:CGRect)
     {
