@@ -11,7 +11,7 @@ final class VSettingsListCellDetailLevelList:
     let selectorHeight_2:CGFloat
     let kSelectorMarginHorizontal:CGFloat = 20
     let kSelectorHeight:CGFloat = 30
-    let kRailWidth:CGFloat = 4
+    let kRailWidth:CGFloat = 6
     let kRailLeft:CGFloat = 68
     let kAnimationDuration:TimeInterval = 0.2
     let kWaitToSelect:TimeInterval = 0.1

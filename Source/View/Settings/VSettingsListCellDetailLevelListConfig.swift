@@ -42,7 +42,7 @@ extension VSettingsListCellDetailLevelList
             toView:self,
             margin:kSelectorMarginHorizontal)
         
-        NSLayoutConstraint.equalsHorizontal(
+        NSLayoutConstraint.equalsVertical(
             view:viewRail,
             toView:self)
         NSLayoutConstraint.leftToLeft(
