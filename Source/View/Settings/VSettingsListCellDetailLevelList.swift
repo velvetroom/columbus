@@ -11,7 +11,7 @@ final class VSettingsListCellDetailLevelList:
     weak var layoutSelectorTop:NSLayoutConstraint!
     weak var layoutLabelHeight:NSLayoutConstraint!
     let selectorHeight_2:CGFloat
-    let kSelectorMarginHorizontal:CGFloat = 20
+    let kSelectorLeft:CGFloat = 20
     let kSelectorHeight:CGFloat = 30
     let kRailWidth:CGFloat = 2
     let kRailLeft:CGFloat = 30

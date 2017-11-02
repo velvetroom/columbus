@@ -6,6 +6,9 @@ extension VSettingsListCellDetailLevelList
     
     func factoryViews()
     {
+        let selectorMargin2:CGFloat = kSelectorLeft + kSelectorLeft
+        let selectorWidth:CGFloat = kCellWidth - selectorMargin2
+        
         let viewSelector:VSettingsListCellDetailLevelListSelector = VSettingsListCellDetailLevelListSelector()
         self.viewSelector = viewSelector
         
@@ -37,11 +40,10 @@ extension VSettingsListCellDetailLevelList
         NSLayoutConstraint.leftToLeft(
             view:viewSelector,
             toView:self,
-            constant:kSelectorMarginHorizontal)
-        NSLayoutConstraint.equalsHorizontal(
+            constant:kSelectorLeft)
+        NSLayoutConstraint.width(
             view:viewSelector,
-            toView:self,
-            margin:kSelectorMarginHorizontal)
+            constant:selectorWidth)
         
         NSLayoutConstraint.equalsVertical(
             view:viewRail,
