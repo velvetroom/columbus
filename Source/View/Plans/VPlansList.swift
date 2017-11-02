@@ -9,7 +9,7 @@ final class VPlansList:VCollection<
     let kInsetsBottom:CGFloat = 70
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 120
-    private let kHeaderHeight:CGFloat = 160
+    private let kHeaderHeight:CGFloat = 300
     
     required init(controller:CPlans)
     {
