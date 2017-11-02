@@ -15,6 +15,7 @@ final class VSettingsListCellDetailLevelList:
     let kRailLeft:CGFloat = 30
     let kAnimationDuration:TimeInterval = 0.2
     let kWaitToSelect:TimeInterval = 0.1
+    let kCellWidth:CGFloat = 140
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
@@ -34,6 +35,22 @@ final class VSettingsListCellDetailLevelList:
     override func collectionView(
         _ collectionView:UICollectionView,
         layout collectionViewLayout:UICollectionViewLayout,
+        insetForSectionAt section:Int) -> UIEdgeInsets
+    {
+        let width:CGFloat = collectionView.bounds.width
+        let remainCell:CGFloat = width - kCellWidth
+        let insets:UIEdgeInsets = UIEdgeInsets(
+            top:0,
+            left:0,
+            bottom:0,
+            right:remainCell)
+        
+        return insets
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
         guard
@@ -42,13 +59,12 @@ final class VSettingsListCellDetailLevelList:
             
         else
         {
-            let width:CGFloat = collectionView.bounds.width
             let height:CGFloat = collectionView.bounds.height
             let items:Int = collectionView.numberOfItems(inSection:0)
             let itemsFloat:CGFloat = CGFloat(items)
             let heightPerItem:CGFloat = height / itemsFloat
             let cellSize:CGSize = CGSize(
-                width:width,
+                width:kCellWidth,
                 height:heightPerItem)
             self.cellSize = cellSize
             

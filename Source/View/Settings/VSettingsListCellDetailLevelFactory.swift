@@ -79,12 +79,9 @@ extension VSettingsListCellDetailLevel
             view:viewList,
             toView:self,
             constant:kListBottom)
-        NSLayoutConstraint.leftToLeft(
+        NSLayoutConstraint.equalsHorizontal(
             view:viewList,
             toView:self)
-        NSLayoutConstraint.width(
-            view:viewList,
-            constant:kListWidth)
     }
     
     func factoryCaption()
