@@ -11,9 +11,9 @@ extension MSettingsDetailLevel
         let itemMax:MSettingsDetailLevelMax = MSettingsDetailLevelMax()
         
         let items:[MSettingsDetailLevelProtocol] = [
-            itemMin,
+            itemMax,
             itemMedium,
-            itemMax]
+            itemMin]
         
         return items
     }
