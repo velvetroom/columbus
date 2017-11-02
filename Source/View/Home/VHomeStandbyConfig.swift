@@ -13,6 +13,11 @@ extension VHomeStandby
         {
             flow.minimumLineSpacing = kInterItem
             flow.minimumInteritemSpacing = kInterItem
+            flow.sectionInset = UIEdgeInsets(
+                top:kHeaderHeight + kInterItem,
+                left:0,
+                bottom:kCollectionBottom,
+                right:0)
         }
     }
 }

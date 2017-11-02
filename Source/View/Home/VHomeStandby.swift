@@ -8,6 +8,7 @@ final class VHomeStandby:VCollection<
     let kHeaderHeight:CGFloat = 200
     let kHeaderMinHeight:CGFloat = 20
     let kInterItem:CGFloat = 1
+    let kCollectionBottom:CGFloat = 70
     
     required init(controller:CHome)
     {
