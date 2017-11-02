@@ -4,7 +4,7 @@ final class VHomeStandby:VCollection<
     ArchHome,
     VHomeStandbyCell>
 {
-    let kHeaderHeight:CGFloat = 300
+    let kHeaderHeight:CGFloat = 250
     let kInterItem:CGFloat = 1
     
     required init(controller:CHome)

@@ -7,8 +7,10 @@ extension VHomeStandby
     func config()
     {
         backgroundColor = UIColor.colourBackgroundGray
-        
         collectionView.alwaysBounceVertical = true
+        
+        registerHeader(
+            header:VHomeStandbyHeader.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
