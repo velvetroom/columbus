@@ -27,4 +27,14 @@ extension MHome
         
         return template
     }
+    
+    class func factoryInfo() -> [MHomeInfoProtocol]
+    {
+        let itemSettings:MHomeInfoSettings = MHomeInfoSettings()
+        
+        let items:[MHomeInfoProtocol] = [
+            itemSettings]
+        
+        return items
+    }
 }
