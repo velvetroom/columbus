@@ -15,7 +15,8 @@ extension VCreateStatusReadyBarStopsFooter
         return numberFormatter
     }
     
-    class func factorySuffixMap() -> [DSettingsDistance:String]
+    class func factoryDistanceSuffixMap() -> [
+        DSettingsDistance:String]
     {
         let suffixMap:[DSettingsDistance:String] = [
             DSettingsDistance.kilometres:
@@ -24,6 +25,26 @@ extension VCreateStatusReadyBarStopsFooter
             DSettingsDistance.miles:
                 String.localizedView(
                     key:"VCreateStatusReadyBarStopsFooter_miles")]
+        
+        return suffixMap
+    }
+    
+    class func factoryDurationSuffixMap() -> [
+        DPlanTravelDurationType:String]
+    {
+        let suffixMap:[DPlanTravelDurationType:String] = [
+            DPlanTravelDurationType.days:
+                String.localizedView(
+                    key:"VCreateStatusReadyBarStopsFooter_durationDays"),
+            DPlanTravelDurationType.hours:
+                String.localizedView(
+                    key:"VCreateStatusReadyBarStopsFooter_durationHours"),
+            DPlanTravelDurationType.minutes:
+                String.localizedView(
+                    key:"VCreateStatusReadyBarStopsFooter_durationMinutes"),
+            DPlanTravelDurationType.seconds:
+                String.localizedView(
+                    key:"VCreateStatusReadyBarStopsFooter_durationSeconds")]
         
         return suffixMap
     }

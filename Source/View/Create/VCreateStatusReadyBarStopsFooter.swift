@@ -5,7 +5,8 @@ final class VCreateStatusReadyBarStopsFooter:
 {
     weak var labelDistanceValue:UILabel!
     weak var labelDurationValue:UILabel!
-    let suffixMap:[DSettingsDistance:String]
+    let distanceSuffixMap:[DSettingsDistance:String]
+    let durationSuffixMap:[DPlanTravelDurationType:String]
     let numberFormatter:NumberFormatter
     let kTitleFontSize:CGFloat = 15
     let kValueFontSize:CGFloat = 13
@@ -15,15 +16,13 @@ final class VCreateStatusReadyBarStopsFooter:
     let kValueWidth:CGFloat = 250
     let kDistanceTop:CGFloat = 30
     let kLabelHeight:CGFloat = 30
-    let kSecondsInDay:TimeInterval = 86400
-    let kSecondsInHour:TimeInterval = 3600
-    let kSecondsInMinute:TimeInterval = 60
     private let kMinIntegers:Int = 1
     private let kMaxDecimals:Int = 1
     
     override init(frame:CGRect)
     {
-        suffixMap = VCreateStatusReadyBarStopsFooter.factorySuffixMap()
+        distanceSuffixMap = VCreateStatusReadyBarStopsFooter.factoryDistanceSuffixMap()
+        durationSuffixMap = VCreateStatusReadyBarStopsFooter.factoryDurationSuffixMap()
         numberFormatter = VCreateStatusReadyBarStopsFooter.factoryNumberFormatter(
             minIntegers:kMinIntegers,
             maxDecimals:kMaxDecimals)

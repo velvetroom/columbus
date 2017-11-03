@@ -9,7 +9,7 @@ extension VCreateStatusReadyBarStopsFooter
     {
         guard
             
-            let suffix:String = suffixMap[
+            let suffix:String = distanceSuffixMap[
                 distanceSettings]
             
         else
@@ -21,56 +21,19 @@ extension VCreateStatusReadyBarStopsFooter
     }
     
     private func factoryDuration(
-        duration:TimeInterval) -> String
+        duration:DPlanTravelDuration) -> String
     {
-        let durationString:String = durationAsString(
-            duration:duration)
-        let suffix:String = factorySuffix(
-            duration:duration)
+        let amount:String = String(duration.amount)
         
         var string:String = String()
-        string.append(durationString)
-        string.append(suffix)
+        string.append(amount)
+        
+        if let suffix:String = durationSuffixMap[duration.type]
+        {
+            string.append(suffix)
+        }
         
         return string
-    }
-    
-    private func durationAsString(
-        duration:TimeInterval) -> String
-    {
-        let durationInteger:Int = Int(duration)
-        let string:String = "\(durationInteger)"
-        
-        return string
-    }
-    
-    private func factorySuffix(
-        duration:TimeInterval) -> String
-    {
-        let suffix:String
-        
-        if duration > kSecondsInDay
-        {
-            suffix = String.localizedView(
-                key:"VCreateStatusReadyBarStopsFooter_durationDays")
-        }
-        else if duration > kSecondsInHour
-        {
-            suffix = String.localizedView(
-                key:"VCreateStatusReadyBarStopsFooter_durationHours")
-        }
-        else if duration > kSecondsInMinute
-        {
-            suffix = String.localizedView(
-                key:"VCreateStatusReadyBarStopsFooter_durationMinutes")
-        }
-        else
-        {
-            suffix = String.localizedView(
-                key:"VCreateStatusReadyBarStopsFooter_durationSeconds")
-        }
-        
-        return suffix
     }
     
     //MARK: internal
@@ -95,7 +58,7 @@ extension VCreateStatusReadyBarStopsFooter
     func factoryDuration(
         model:[DPlanTravel]) -> String
     {
-        let duration:TimeInterval = DPlanTravel.factoryDuration(
+        let duration:DPlanTravelDuration = DPlanTravelDuration.factoryDuration(
             travels:model)
         let durationString:String = factoryDuration(
             duration:duration)

@@ -31,12 +31,12 @@ extension DPlanTravelDuration
             duration = factoryDays(
                 duration:totalDuration)
         }
-        else if totalDuration > kSecondsInDay
+        else if totalDuration > kSecondsInHour
         {
             duration = factoryHours(
                 duration:totalDuration)
         }
-        else if totalDuration > kSecondsInDay
+        else if totalDuration > kSecondsInMinute
         {
             duration = factoryMinutes(
                 duration:totalDuration)
@@ -68,7 +68,7 @@ extension DPlanTravelDuration
         let hours:TimeInterval = duration / kSecondsInHour
         let amount:Int = Int(hours)
         let model:DPlanTravelDuration = DPlanTravelDuration(
-            type:DPlanTravelDurationType.days,
+            type:DPlanTravelDurationType.hours,
             amount:amount)
         
         return model
@@ -80,7 +80,7 @@ extension DPlanTravelDuration
         let minutes:TimeInterval = duration / kSecondsInMinute
         let amount:Int = Int(minutes)
         let model:DPlanTravelDuration = DPlanTravelDuration(
-            type:DPlanTravelDurationType.days,
+            type:DPlanTravelDurationType.minutes,
             amount:amount)
         
         return model
