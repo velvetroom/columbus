@@ -54,10 +54,9 @@ extension DPlanTravelDuration
         duration:TimeInterval) -> DPlanTravelDuration
     {
         let days:TimeInterval = duration / kSecondsInDay
-        let amount:Int = Int(days)
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.days,
-            amount:amount)
+            amount:days)
         
         return model
     }
@@ -66,10 +65,9 @@ extension DPlanTravelDuration
         duration:TimeInterval) -> DPlanTravelDuration
     {
         let hours:TimeInterval = duration / kSecondsInHour
-        let amount:Int = Int(hours)
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.hours,
-            amount:amount)
+            amount:hours)
         
         return model
     }
@@ -78,10 +76,9 @@ extension DPlanTravelDuration
         duration:TimeInterval) -> DPlanTravelDuration
     {
         let minutes:TimeInterval = duration / kSecondsInMinute
-        let amount:Int = Int(minutes)
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.minutes,
-            amount:amount)
+            amount:minutes)
         
         return model
     }
@@ -89,10 +86,9 @@ extension DPlanTravelDuration
     private static func factorySeconds(
         duration:TimeInterval) -> DPlanTravelDuration
     {
-        let amount:Int = Int(duration)
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.seconds,
-            amount:amount)
+            amount:duration)
         
         return model
     }
