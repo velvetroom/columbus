@@ -209,6 +209,7 @@
 		DA9C04631FABDA60006F57E1 /* VHomeStandbyActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04621FABDA60006F57E1 /* VHomeStandbyActions.swift */; };
 		DA9C04651FABE4EF006F57E1 /* MHomeInfoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04641FABE4EF006F57E1 /* MHomeInfoHome.swift */; };
 		DA9C04671FABE7C8006F57E1 /* MHomeInfoCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04661FABE7C8006F57E1 /* MHomeInfoCreate.swift */; };
+		DA9C04691FABE9E3006F57E1 /* MHomeInfoPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9C04681FABE9E3006F57E1 /* MHomeInfoPlans.swift */; };
 		DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96061F9667DE00538374 /* ArchCreate.swift */; };
 		DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E96081F9667FF00538374 /* ArchPlans.swift */; };
 		DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E960A1F96681B00538374 /* ArchSettings.swift */; };
@@ -513,6 +514,7 @@
 		DA9C04621FABDA60006F57E1 /* VHomeStandbyActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeStandbyActions.swift; sourceTree = "<group>"; };
 		DA9C04641FABE4EF006F57E1 /* MHomeInfoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeInfoHome.swift; sourceTree = "<group>"; };
 		DA9C04661FABE7C8006F57E1 /* MHomeInfoCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeInfoCreate.swift; sourceTree = "<group>"; };
+		DA9C04681FABE9E3006F57E1 /* MHomeInfoPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeInfoPlans.swift; sourceTree = "<group>"; };
 		DA9E96061F9667DE00538374 /* ArchCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreate.swift; sourceTree = "<group>"; };
 		DA9E96081F9667FF00538374 /* ArchPlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlans.swift; sourceTree = "<group>"; };
 		DA9E960A1F96681B00538374 /* ArchSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettings.swift; sourceTree = "<group>"; };
@@ -862,6 +864,7 @@
 				DAB1FA6E1FABAA45000D857C /* MHomeInfoSettings.swift */,
 				DA9C04641FABE4EF006F57E1 /* MHomeInfoHome.swift */,
 				DA9C04661FABE7C8006F57E1 /* MHomeInfoCreate.swift */,
+				DA9C04681FABE9E3006F57E1 /* MHomeInfoPlans.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1347,6 +1350,7 @@
 				DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */,
 				DA65ED161F95E68700720673 /* VSpinner.swift in Sources */,
 				DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */,
+				DA9C04691FABE9E3006F57E1 /* MHomeInfoPlans.swift in Sources */,
 				DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */,
 				DAECA2DC1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift in Sources */,
 				DA2EE5731F98B46C00488A07 /* VCreateUpdate.swift in Sources */,
