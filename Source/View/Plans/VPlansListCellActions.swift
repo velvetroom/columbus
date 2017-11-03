@@ -19,4 +19,20 @@ extension VPlansListCell
         labelOrigin.text = origin.name
         labelDestination.text = destination.name
     }
+    
+    func updateCreated(model:DPlan)
+    {
+        guard
+            
+            let date:Date = model.created
+        
+        else
+        {
+            return
+        }
+        
+        let dateString:String = dateFormatter.string(
+            from:date)
+        labelCreated.text = dateString
+    }
 }

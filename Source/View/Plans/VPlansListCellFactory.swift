@@ -4,6 +4,15 @@ extension VPlansListCell
 {
     //MARK: internal
     
+    class func factoryDateFormatter() -> DateFormatter
+    {
+        let dateFormatter:DateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        
+        return dateFormatter
+    }
+    
     func factoryViews()
     {
         let imageRoute:UIImageView = UIImageView()
@@ -34,7 +43,7 @@ extension VPlansListCell
         labelCreated.translatesAutoresizingMaskIntoConstraints = false
         labelCreated.backgroundColor = UIColor.clear
         labelCreated.font = UIFont.regular(size:kCreatedFontSize)
-        labelCreated.textColor = UIColor(white:0, alpha:0.5)
+        labelCreated.textColor = UIColor(white:0, alpha:0.4)
         self.labelCreated = labelCreated
         
         addSubview(imageRoute)
@@ -94,6 +103,6 @@ extension VPlansListCell
         NSLayoutConstraint.leftToLeft(
             view:labelCreated,
             toView:self,
-            constant:kCreatedLeft)
+            constant:kRouteWidth)
     }
 }
