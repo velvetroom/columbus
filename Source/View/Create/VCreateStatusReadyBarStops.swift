@@ -121,25 +121,11 @@ final class VCreateStatusReadyBarStops:
         viewForSupplementaryElementOfKind kind:String,
         at indexPath:IndexPath) -> UICollectionReusableView
     {
-        guard
-            
-            kind == UICollectionElementKindSectionHeader
-        
-        else
-        {
-            let reusable:VCreateStatusReadyBarStopsFooter = reusableAtIndex(
-                kind:kind,
-                indexPath:indexPath)
-            reusable.config(model:travel!)
-            
-            return reusable
-        }
-        
-        let reusable:VCreateStatusReadyBarStopsHeader = reusableAtIndex(
+        let reusableView:UICollectionReusableView = reusable(
             kind:kind,
-            indexPath:indexPath)
+            index:indexPath)
         
-        return reusable
+        return reusableView
     }
     
     override func collectionView(

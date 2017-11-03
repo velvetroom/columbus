@@ -28,7 +28,9 @@ final class VCreateStatusReadyBarStopsFooter:
     
     //MARK: internal
     
-    func config(model:[DPlanTravel])
+    func config(
+        model:[DPlanTravel],
+        distanceSettings:DSettingsDistance)
     {
     }
 }

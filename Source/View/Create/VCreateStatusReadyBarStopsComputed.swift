@@ -19,4 +19,12 @@ extension VCreateStatusReadyBarStops
                 DPlanTravel]
         }
     }
+    
+    var distanceSettings:DSettingsDistance?
+    {
+        get
+        {
+            return controller.model.settings?.distance
+        }
+    }
 }
