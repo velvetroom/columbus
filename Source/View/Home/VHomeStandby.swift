@@ -8,7 +8,7 @@ final class VHomeStandby:VCollection<
     let kHeaderHeight:CGFloat = 200
     let kHeaderMinHeight:CGFloat = 20
     let kInterItem:CGFloat = 1
-    let kCollectionBottom:CGFloat = 70
+    let kCollectionBottom:CGFloat = 50
     private var cellSize:CGSize?
     private let kCellHeight:CGFloat = 130
     

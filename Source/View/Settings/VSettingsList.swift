@@ -6,7 +6,7 @@ final class VSettingsList:VCollection<
 {
     let kInterItem:CGFloat = 2
     let kInsetsTop:CGFloat = 64
-    let kInsetsBottom:CGFloat = 70
+    let kCollectionBottom:CGFloat = 50
     
     required init(controller:CSettings)
     {

@@ -19,7 +19,7 @@ extension VPlansList
             flow.sectionInset = UIEdgeInsets(
                 top:kInsetsTop,
                 left:0,
-                bottom:kInsetsBottom,
+                bottom:kCollectionBottom,
                 right:0)
         }
     }
