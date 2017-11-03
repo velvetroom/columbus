@@ -271,7 +271,6 @@
 		DAD888F81F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */; };
 		DAD888FA1F9D2172000EC7FD /* MCreatePlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */; };
 		DAD888FC1F9D23E5000EC7FD /* VCreateStatusReadyBarStopsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888FB1F9D23E5000EC7FD /* VCreateStatusReadyBarStopsFactory.swift */; };
-		DAD888FE1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888FD1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift */; };
 		DAD889001F9D2DBD000EC7FD /* MCreatePlanStopAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD888FF1F9D2DBD000EC7FD /* MCreatePlanStopAdd.swift */; };
 		DAD889041F9D2EFA000EC7FD /* MCreatePlanStopRemove.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD889031F9D2EFA000EC7FD /* MCreatePlanStopRemove.swift */; };
 		DAD889061F9D31B2000EC7FD /* DPlanDisconnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD889051F9D31B2000EC7FD /* DPlanDisconnect.swift */; };
@@ -578,7 +577,6 @@
 		DAD888F71F9D1DFA000EC7FD /* VCreateStatusReadyBarStopsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsUpdate.swift; sourceTree = "<group>"; };
 		DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanFactory.swift; sourceTree = "<group>"; };
 		DAD888FB1F9D23E5000EC7FD /* VCreateStatusReadyBarStopsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsFactory.swift; sourceTree = "<group>"; };
-		DAD888FD1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsCellActions.swift; sourceTree = "<group>"; };
 		DAD888FF1F9D2DBD000EC7FD /* MCreatePlanStopAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanStopAdd.swift; sourceTree = "<group>"; };
 		DAD889031F9D2EFA000EC7FD /* MCreatePlanStopRemove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanStopRemove.swift; sourceTree = "<group>"; };
 		DAD889051F9D31B2000EC7FD /* DPlanDisconnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanDisconnect.swift; sourceTree = "<group>"; };
@@ -1211,7 +1209,6 @@
 				DAA0B8041FA2A77E009BFFB8 /* VCreateStatusReadyBarStopsFooterFactory.swift */,
 				DA3495F41F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift */,
 				DA4BC93A1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift */,
-				DAD888FD1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift */,
 				DA4BC9381F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift */,
 				DA3495F61F9ABF3000D75252 /* VCreateStatusReadyBarTravel.swift */,
 				DAE6998D1FA287CA00FFE6E3 /* VCreateStatusReadyBarTravelConfig.swift */,
@@ -1435,7 +1432,6 @@
 				DAB1FA6F1FABAA45000D857C /* MHomeInfoSettings.swift in Sources */,
 				DABED9B01F9E94AF00635E82 /* MCreatePlanDirections.swift in Sources */,
 				DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */,
-				DAD888FE1F9D2CEC000EC7FD /* VCreateStatusReadyBarStopsCellActions.swift in Sources */,
 				DA6700DF1FAB933C00B89997 /* VHomeStandbyConfig.swift in Sources */,
 				DA4BC9391F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift in Sources */,
 				DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */,

@@ -2,6 +2,24 @@ import UIKit
 
 extension VCreateStatusReadyBarStopsCell
 {
+    //MARK: selectors
+    
+    @objc
+    private func selectorRemove(sender button:UIButton)
+    {
+        guard
+            
+            let model:DPlanStop = self.model
+            
+        else
+        {
+            return
+        }
+        
+        controller?.model.plan?.remove(
+            stop:model)
+    }
+    
     //MARK: internal
     
     func factoryViews()
