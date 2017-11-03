@@ -12,6 +12,16 @@ extension MCreatePlan
     
     //MARK: internal
     
+    func avoidInteraction()
+    {
+        view?.isUserInteractionEnabled = false
+    }
+    
+    func enableInteraction()
+    {
+        view?.isUserInteractionEnabled = true
+    }
+    
     func updateStops()
     {
         view?.viewBar.reload()
