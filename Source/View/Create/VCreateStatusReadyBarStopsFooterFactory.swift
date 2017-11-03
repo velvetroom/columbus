@@ -10,8 +10,9 @@ extension VCreateStatusReadyBarStopsFooter
         labelDistanceTitle.isUserInteractionEnabled = false
         labelDistanceTitle.translatesAutoresizingMaskIntoConstraints = false
         labelDistanceTitle.backgroundColor = UIColor.clear
-        labelDistanceTitle.font = UIFont.medium(size:kFontSize)
-        labelDistanceTitle.textColor = UIColor.white
+        labelDistanceTitle.font = UIFont.regular(
+            size:kTitleFontSize)
+        labelDistanceTitle.textColor = UIColor(white:1, alpha:0.6)
         labelDistanceTitle.text = String.localizedView(
             key:"VCreateStatusReadyBarStopsFooter_labelDistanceTitle")
         
@@ -19,7 +20,8 @@ extension VCreateStatusReadyBarStopsFooter
         labelDistanceValue.isUserInteractionEnabled = false
         labelDistanceValue.translatesAutoresizingMaskIntoConstraints = false
         labelDistanceValue.backgroundColor = UIColor.clear
-        labelDistanceValue.font = UIFont.regular(size:kFontSize)
+        labelDistanceValue.font = UIFont.medium(
+            size:kValueFontSize)
         labelDistanceValue.textColor = UIColor.white
         self.labelDistanceValue = labelDistanceValue
         
@@ -27,8 +29,9 @@ extension VCreateStatusReadyBarStopsFooter
         labelDurationTitle.isUserInteractionEnabled = false
         labelDurationTitle.translatesAutoresizingMaskIntoConstraints = false
         labelDurationTitle.backgroundColor = UIColor.clear
-        labelDurationTitle.font = UIFont.medium(size:kFontSize)
-        labelDurationTitle.textColor = UIColor.white
+        labelDurationTitle.font = UIFont.regular(
+            size:kTitleFontSize)
+        labelDurationTitle.textColor = UIColor(white:1, alpha:0.6)
         labelDurationTitle.text = String.localizedView(
             key:"VCreateStatusReadyBarStopsFooter_labelDurationTitle")
         
@@ -36,7 +39,8 @@ extension VCreateStatusReadyBarStopsFooter
         labelDurationValue.isUserInteractionEnabled = false
         labelDurationValue.translatesAutoresizingMaskIntoConstraints = false
         labelDurationValue.backgroundColor = UIColor.clear
-        labelDurationValue.font = UIFont.regular(size:kFontSize)
+        labelDurationValue.font = UIFont.medium(
+            size:kValueFontSize)
         labelDurationValue.textColor = UIColor.white
         self.labelDurationValue = labelDurationValue
         
@@ -69,7 +73,8 @@ extension VCreateStatusReadyBarStopsFooter
             constant:kLabelHeight)
         NSLayoutConstraint.leftToRight(
             view:labelDistanceValue,
-            toView:labelDistanceTitle)
+            toView:labelDistanceTitle,
+            constant:kValueLeft)
         NSLayoutConstraint.width(
             view:labelDistanceValue,
             constant:kValueWidth)
@@ -96,7 +101,8 @@ extension VCreateStatusReadyBarStopsFooter
             constant:kLabelHeight)
         NSLayoutConstraint.leftToRight(
             view:labelDurationValue,
-            toView:labelDurationTitle)
+            toView:labelDurationTitle,
+            constant:kValueLeft)
         NSLayoutConstraint.width(
             view:labelDurationValue,
             constant:kTitleWidth)

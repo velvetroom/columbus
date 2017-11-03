@@ -10,7 +10,7 @@ final class VCreateStatusReadyBarStops:
     private var cellSize:CGSize?
     private let headerSize:CGSize
     private let footerSize:CGSize
-    private let kFooterHeight:CGFloat = 80
+    private let kFooterHeight:CGFloat = 100
     private let kHeaderHeight:CGFloat = 200
     private let kCellHeight:CGFloat = 50
     
