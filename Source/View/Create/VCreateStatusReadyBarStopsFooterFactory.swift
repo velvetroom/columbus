@@ -4,6 +4,30 @@ extension VCreateStatusReadyBarStopsFooter
 {
     //MARK: internal
     
+    class func factoryNumberFormatter(
+        minIntegers:Int,
+        maxDecimals:Int) -> NumberFormatter
+    {
+        let numberFormatter:NumberFormatter = NumberFormatter()
+        numberFormatter.minimumIntegerDigits = minIntegers
+        numberFormatter.maximumFractionDigits = maxDecimals
+
+        return numberFormatter
+    }
+    
+    class func factorySuffixMap() -> [DSettingsDistance:String]
+    {
+        let suffixMap:[DSettingsDistance:String] = [
+            DSettingsDistance.kilometres:
+                String.localizedView(
+                    key:"VCreateStatusReadyBarStopsFooter_kilometres"),
+            DSettingsDistance.miles:
+                String.localizedView(
+                    key:"VCreateStatusReadyBarStopsFooter_miles")]
+        
+        return suffixMap
+    }
+    
     func factoryViews()
     {
         let labelDistanceTitle:UILabel = UILabel()
@@ -105,6 +129,6 @@ extension VCreateStatusReadyBarStopsFooter
             constant:kValueLeft)
         NSLayoutConstraint.width(
             view:labelDurationValue,
-            constant:kTitleWidth)
+            constant:kValueWidth)
     }
 }
