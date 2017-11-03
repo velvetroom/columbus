@@ -4,10 +4,10 @@ final class VPlansListCell:UICollectionViewCell
 {
     weak var labelOrigin:UILabel!
     weak var labelDestination:UILabel!
-    let kRouteWidth:CGFloat = 42
-    let kRouteHeight:CGFloat = 80
+    let kRouteWidth:CGFloat = 48
+    let kRouteHeight:CGFloat = 66
     let kLabelOriginTop:CGFloat = 12
-    let kLabelDestinationTop:CGFloat = 18
+    let kLabelDestinationTop:CGFloat = 5
     let kLabelRouteHeight:CGFloat = 20
     let kLabelRouteRight:CGFloat = -10
     let kRouteFontSize:CGFloat = 12
