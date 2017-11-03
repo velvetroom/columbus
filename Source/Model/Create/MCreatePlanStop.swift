@@ -47,6 +47,7 @@ extension MCreatePlan
     
     func updated(stop:DPlanStop)
     {
+        view?.viewBar.viewStops.updateFooter()
         view?.viewBar.viewStops.updateLocation(
             stop:stop)
     }

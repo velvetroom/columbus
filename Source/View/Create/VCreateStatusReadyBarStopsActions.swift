@@ -70,23 +70,4 @@ extension VCreateStatusReadyBarStops
     {
         viewTravel.collectionView.contentOffset = collectionView.contentOffset
     }
-    
-    func updateFooter()
-    {
-        guard
-            
-            let count:Int = model?.count,
-            count > 1
-            
-        else
-        {
-            return
-        }
-        
-        let index:IndexPath = IndexPath(
-            item:0,
-            section:0)
-        let _:UICollectionReusableView = footer(
-            index:index)
-    }
 }
