@@ -39,6 +39,8 @@ extension DPlan
         completion:@escaping((DPlanTravel?) -> ()))
     {
         stop.plan = nil
+        stop.destinationTravel?.plan = nil
+        stop.originTravel?.plan = nil
         
         reconnectOrigin(
             database:database,

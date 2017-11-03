@@ -5,7 +5,8 @@ extension VCreateStatusReadyBarStopsCell
     //MARK: selectors
     
     @objc
-    private func selectorRemove(sender button:UIButton)
+    private func selectorRemove(
+        sender button:UIButton)
     {
         guard
             

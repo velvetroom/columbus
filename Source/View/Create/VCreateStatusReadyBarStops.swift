@@ -36,7 +36,7 @@ final class VCreateStatusReadyBarStops:
     override func scrollViewDidScroll(
         _ scrollView:UIScrollView)
     {
-        viewTravel.collectionView.contentOffset = scrollView.contentOffset
+        replicateScroll()
     }
     
     override func collectionView(

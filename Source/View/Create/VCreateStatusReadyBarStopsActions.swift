@@ -65,4 +65,9 @@ extension VCreateStatusReadyBarStops
         
         return reusable
     }
+    
+    func replicateScroll()
+    {
+        viewTravel.collectionView.contentOffset = collectionView.contentOffset
+    }
 }

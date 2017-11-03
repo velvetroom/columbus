@@ -6,7 +6,8 @@ extension VCreateStatusReadyBar
     
     func reload()
     {
-        viewStops.collectionView.reloadData()
         viewTravel.collectionView.reloadData()
+        viewStops.collectionView.reloadData()
+        viewStops.replicateScroll()
     }
 }
