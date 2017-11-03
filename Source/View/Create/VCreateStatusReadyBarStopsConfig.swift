@@ -8,6 +8,8 @@ extension VCreateStatusReadyBarStops
     {
         collectionView.alwaysBounceVertical = true
         
+        registerHeader(
+            header:VCreateStatusReadyBarStopsHeader.self)
         registerFooter(
             footer:VCreateStatusReadyBarStopsFooter.self)
         
