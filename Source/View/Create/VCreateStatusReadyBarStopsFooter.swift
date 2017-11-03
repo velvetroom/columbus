@@ -48,7 +48,7 @@ final class VCreateStatusReadyBarStopsFooter:
         let distance:String? = factoryDistance(
             model:model,
             distanceSettings:distanceSettings)
-        let duration:String = factoryDuration(
+        let duration:String? = factoryDuration(
             model:model)
         
         labelDistanceValue.text = distance

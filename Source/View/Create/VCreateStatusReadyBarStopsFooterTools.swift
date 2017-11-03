@@ -4,7 +4,7 @@ extension VCreateStatusReadyBarStopsFooter
 {
     //MARK: private
     
-    private func updateSuffix(
+    private func updateDistanceSuffix(
         distanceSettings:DSettingsDistance)
     {
         guard
@@ -20,18 +20,32 @@ extension VCreateStatusReadyBarStopsFooter
         numberFormatter.positiveSuffix = suffix
     }
     
-    private func factoryDuration(
-        duration:DPlanTravelDuration) -> String
+    private func updateDurationSuffix(
+        durationType:DPlanTravelDurationType)
     {
-        let amount:String = String(duration.amount)
-        
-        var string:String = String()
-        string.append(amount)
-        
-        if let suffix:String = durationSuffixMap[duration.type]
+        guard
+            
+            let suffix:String = durationSuffixMap[
+                durationType]
+            
+        else
         {
-            string.append(suffix)
+            return
         }
+        
+        numberFormatter.positiveSuffix = suffix
+    }
+    
+    private func factoryDuration(
+        duration:DPlanTravelDuration) -> String?
+    {
+        updateDurationSuffix(
+            durationType:duration.type)
+        
+        let number:NSNumber = NSNumber(
+            value:duration.amount)
+        let string:String? = numberFormatter.string(
+            from:number)
         
         return string
     }
@@ -42,7 +56,7 @@ extension VCreateStatusReadyBarStopsFooter
         model:[DPlanTravel],
         distanceSettings:DSettingsDistance) -> String?
     {
-        updateSuffix(
+        updateDistanceSuffix(
             distanceSettings:distanceSettings)
         
         let distance:Float = DPlanTravel.factoryDistance(
@@ -56,11 +70,11 @@ extension VCreateStatusReadyBarStopsFooter
     }
     
     func factoryDuration(
-        model:[DPlanTravel]) -> String
+        model:[DPlanTravel]) -> String?
     {
         let duration:DPlanTravelDuration = DPlanTravelDuration.factoryDuration(
             travels:model)
-        let durationString:String = factoryDuration(
+        let durationString:String? = factoryDuration(
             duration:duration)
         
         return durationString
