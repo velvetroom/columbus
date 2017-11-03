@@ -32,10 +32,12 @@ extension MHome
     {
         let itemSettings:MHomeInfoSettings = MHomeInfoSettings()
         let itemHome:MHomeInfoHome = MHomeInfoHome()
+        let itemCreate:MHomeInfoCreate = MHomeInfoCreate()
         
         let items:[MHomeInfoProtocol] = [
             itemSettings,
-            itemHome]
+            itemHome,
+            itemCreate]
         
         return items
     }
