@@ -29,9 +29,18 @@ extension VPlansListCell
         labelDestination.textColor = UIColor.colourBackgroundDark
         self.labelDestination = labelDestination
         
+        let labelCreated:UILabel = UILabel()
+        labelCreated.isUserInteractionEnabled = false
+        labelCreated.translatesAutoresizingMaskIntoConstraints = false
+        labelCreated.backgroundColor = UIColor.clear
+        labelCreated.font = UIFont.regular(size:kCreatedFontSize)
+        labelCreated.textColor = UIColor(white:0, alpha:0.5)
+        self.labelCreated = labelCreated
+        
         addSubview(imageRoute)
         addSubview(labelOrigin)
         addSubview(labelDestination)
+        addSubview(labelCreated)
         
         NSLayoutConstraint.topToTop(
             view:imageRoute,
@@ -75,5 +84,16 @@ extension VPlansListCell
             view:labelDestination,
             toView:self,
             constant:kLabelRouteRight)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:labelCreated,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:labelCreated,
+            constant:kCreatedHeight)
+        NSLayoutConstraint.leftToLeft(
+            view:labelCreated,
+            toView:self,
+            constant:kCreatedLeft)
     }
 }
