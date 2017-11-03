@@ -4,12 +4,12 @@ final class VCreateSave:ViewMain
 {
     weak var viewSpinner:VSpinner!
     weak var layoutCancelLeft:NSLayoutConstraint!
-    let kTitleBottom:CGFloat = -150
-    let kTitleHeight:CGFloat = 26
+    let kLabelBottom:CGFloat = -120
+    let kLabelHeight:CGFloat = 60
     let kCancelHeight:CGFloat = 55
     let kCancelWidth:CGFloat = 120
-    let kTitleFontSize:CGFloat = 22
-    let kCancelFontSize:CGFloat = 14
+    let kLabelFontSize:CGFloat = 16
+    let kCancelFontSize:CGFloat = 16
     
     required init(controller:UIViewController)
     {
