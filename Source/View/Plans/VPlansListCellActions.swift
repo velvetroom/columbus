@@ -35,4 +35,21 @@ extension VPlansListCell
             from:date)
         labelCreated.text = dateString
     }
+    
+    func updateButton(
+        controller:CPlans,
+        model:DPlan,
+        active:Bool)
+    {
+        factoryButton(controller:controller)
+        
+        if active
+        {
+            viewButton?.active(model:model)
+        }
+        else
+        {
+            viewButton?.unactive(model:model)
+        }
+    }
 }

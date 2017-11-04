@@ -6,17 +6,19 @@ final class VPlansListCell:UICollectionViewCell
     weak var labelDestination:UILabel!
     weak var labelCreated:UILabel!
     weak var imageRoute:UIImageView!
+    weak var viewButton:VPlansListCellButton?
     let dateFormatter:DateFormatter
     let kRouteWidth:CGFloat = 48
     let kRouteHeight:CGFloat = 66
     let kLabelOriginTop:CGFloat = 12
     let kLabelDestinationTop:CGFloat = 5
     let kLabelRouteHeight:CGFloat = 20
-    let kLabelRouteRight:CGFloat = -10
     let kRouteFontSize:CGFloat = 12
     let kCreatedHeight:CGFloat = 42
     let kCreatedWidth:CGFloat = 200
     let kCreatedFontSize:CGFloat = 12
+    let kButtonMarginVertical:CGFloat = 20
+    let kButtonWidth:CGFloat = 70
     
     override init(frame:CGRect)
     {
@@ -73,10 +75,18 @@ final class VPlansListCell:UICollectionViewCell
     
     //MARK: internal
     
-    func config(model:DPlan)
+    func config(
+        controller:CPlans,
+        model:DPlan,
+        active:Bool)
     {
         updateRoute(model:model)
         updateCreated(model:model)
+        updateButton(
+            controller:controller,
+            model:model,
+            active:active)
+        
         hover()
     }
 }

@@ -76,7 +76,7 @@ extension VPlansListCell
         NSLayoutConstraint.rightToRight(
             view:labelOrigin,
             toView:self,
-            constant:kLabelRouteRight)
+            constant:-kButtonWidth)
         
         NSLayoutConstraint.topToBottom(
             view:labelDestination,
@@ -91,7 +91,7 @@ extension VPlansListCell
         NSLayoutConstraint.rightToRight(
             view:labelDestination,
             toView:self,
-            constant:kLabelRouteRight)
+            constant:-kButtonWidth)
         
         NSLayoutConstraint.bottomToBottom(
             view:labelCreated,
@@ -103,5 +103,35 @@ extension VPlansListCell
             view:labelCreated,
             toView:self,
             constant:kRouteWidth)
+    }
+    
+    func factoryButton(
+        controller:CPlans)
+    {
+        guard
+        
+            self.viewButton == nil
+        
+        else
+        {
+            return
+        }
+        
+        let viewButton:VPlansListCellButton = VPlansListCellButton(
+            controller:controller)
+        self.viewButton = viewButton
+        
+        addSubview(viewButton)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:viewButton,
+            toView:self,
+            margin:kButtonMarginVertical)
+        NSLayoutConstraint.rightToRight(
+            view:viewButton,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:viewButton,
+            constant:kButtonWidth)
     }
 }

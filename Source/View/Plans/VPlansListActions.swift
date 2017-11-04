@@ -11,4 +11,20 @@ extension VPlansList
         
         return item
     }
+    
+    func modelIsActive(
+        model:DPlan) -> Bool
+    {
+        guard
+        
+            let active:DPlan = controller.model.settings?.activePlan,
+            active === model
+        
+        else
+        {
+            return false
+        }
+        
+        return true
+    }
 }

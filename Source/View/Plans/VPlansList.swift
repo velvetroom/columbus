@@ -104,9 +104,16 @@ final class VPlansList:VCollection<
     {
         let item:DPlan = modelAtIndex(
             index:indexPath)
+        let active:Bool = modelIsActive(
+            model:item)
+        
         let cell:VPlansListCell = cellAtIndex(
             indexPath:indexPath)
-        cell.config(model:item)
+        
+        cell.config(
+            controller:controller,
+            model:item,
+            active:active)
         
         return cell
     }
