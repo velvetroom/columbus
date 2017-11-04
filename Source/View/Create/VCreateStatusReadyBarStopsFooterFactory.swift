@@ -56,7 +56,7 @@ extension VCreateStatusReadyBarStopsFooter
         iconDistance.clipsToBounds = true
         iconDistance.contentMode = UIViewContentMode.center
         iconDistance.isUserInteractionEnabled = false
-        iconDistance.image = #imageLiteral(resourceName: "assetMapDuration")
+        iconDistance.image = #imageLiteral(resourceName: "assetMapDistance")
         
         let labelDistanceValue:UILabel = UILabel()
         labelDistanceValue.isUserInteractionEnabled = false
