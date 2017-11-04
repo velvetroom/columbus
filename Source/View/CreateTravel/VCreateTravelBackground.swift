@@ -7,6 +7,7 @@ final class VCreateTravelBackground:View<ArchCreateTravel>
     required init(controller:CCreateTravel)
     {
         super.init(controller:controller)
+        alpha = kAlpha
         
         let blur:VBlur = VBlur.light()
         
