@@ -20,14 +20,15 @@ extension VPlansListCell
         imageRoute.translatesAutoresizingMaskIntoConstraints = false
         imageRoute.clipsToBounds = true
         imageRoute.contentMode = UIViewContentMode.center
-        imageRoute.image = #imageLiteral(resourceName: "assetPlansRoute")
+        imageRoute.image = #imageLiteral(resourceName: "assetPlansRoute").withRenderingMode(
+            UIImageRenderingMode.alwaysTemplate)
+        self.imageRoute = imageRoute
         
         let labelOrigin:UILabel = UILabel()
         labelOrigin.isUserInteractionEnabled = false
         labelOrigin.translatesAutoresizingMaskIntoConstraints = false
         labelOrigin.backgroundColor = UIColor.clear
         labelOrigin.font = UIFont.regular(size:kRouteFontSize)
-        labelOrigin.textColor = UIColor.colourBackgroundDark
         self.labelOrigin = labelOrigin
         
         let labelDestination:UILabel = UILabel()
@@ -35,7 +36,6 @@ extension VPlansListCell
         labelDestination.translatesAutoresizingMaskIntoConstraints = false
         labelDestination.backgroundColor = UIColor.clear
         labelDestination.font = UIFont.regular(size:kRouteFontSize)
-        labelDestination.textColor = UIColor.colourBackgroundDark
         self.labelDestination = labelDestination
         
         let labelCreated:UILabel = UILabel()
@@ -43,7 +43,6 @@ extension VPlansListCell
         labelCreated.translatesAutoresizingMaskIntoConstraints = false
         labelCreated.backgroundColor = UIColor.clear
         labelCreated.font = UIFont.regular(size:kCreatedFontSize)
-        labelCreated.textColor = UIColor(white:0, alpha:0.4)
         self.labelCreated = labelCreated
         
         addSubview(imageRoute)
