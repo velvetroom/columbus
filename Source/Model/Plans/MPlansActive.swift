@@ -10,20 +10,20 @@ extension MPlans
     {
         guard
             
-            settings.activePlan == plan
+            settings.activePlan === plan
             
         else
         {
             saveActivePlan(
                 settings:settings,
-                plan:nil)
+                plan:plan)
             
             return
         }
         
         saveActivePlan(
             settings:settings,
-            plan:plan)
+            plan:nil)
     }
     
     private func saveActivePlan(
