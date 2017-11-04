@@ -31,6 +31,7 @@
 		DA18A96A1FAD4E4700F6BDF8 /* MPlansActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9691FAD4E4700F6BDF8 /* MPlansActive.swift */; };
 		DA18A96D1FAD597900F6BDF8 /* CStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A96C1FAD597900F6BDF8 /* CStore.swift */; };
 		DA18A9701FAD59A400F6BDF8 /* MStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A96F1FAD59A400F6BDF8 /* MStore.swift */; };
+		DA18A9731FAD5BCF00F6BDF8 /* VStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9721FAD5BCF00F6BDF8 /* VStore.swift */; };
 		DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */; };
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
@@ -343,6 +344,7 @@
 		DA18A9691FAD4E4700F6BDF8 /* MPlansActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlansActive.swift; sourceTree = "<group>"; };
 		DA18A96C1FAD597900F6BDF8 /* CStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CStore.swift; sourceTree = "<group>"; };
 		DA18A96F1FAD59A400F6BDF8 /* MStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStore.swift; sourceTree = "<group>"; };
+		DA18A9721FAD5BCF00F6BDF8 /* VStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStore.swift; sourceTree = "<group>"; };
 		DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusError.swift; sourceTree = "<group>"; };
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
@@ -659,6 +661,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		DA18A9711FAD5BC200F6BDF8 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				DA18A9721FAD5BCF00F6BDF8 /* VStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		DA5B09441FA361270055E8F3 /* CreateSave */ = {
 			isa = PBXGroup;
 			children = (
@@ -926,6 +936,7 @@
 				DA65EC8E1F95E68700720673 /* Abstract */,
 				DA65ECAD1F95E68700720673 /* Basic */,
 				DA7D959C1FA76DBC00A620FB /* Global */,
+				DA18A9711FAD5BC200F6BDF8 /* Store */,
 				DA65EC9A1F95E68700720673 /* Home */,
 				DAB2F8FD1F966A0400C1EF4A /* Create */,
 				DA5B094A1FA362050055E8F3 /* CreateSave */,
@@ -1412,6 +1423,7 @@
 				DA65ECF11F95E68700720673 /* Arch.swift in Sources */,
 				DAC385EC1FA77AFC001138CD /* VMapPin.swift in Sources */,
 				DA65ECDC1F95E68700720673 /* Database.swift in Sources */,
+				DA18A9731FAD5BCF00F6BDF8 /* VStore.swift in Sources */,
 				DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */,
 				DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */,
 				DAA9255E1FA542E900B72DB2 /* MCreateSavePixelRangeFactory.swift in Sources */,
