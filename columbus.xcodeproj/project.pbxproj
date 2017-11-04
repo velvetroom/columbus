@@ -270,6 +270,7 @@
 		DABF39241FAE7D7E0072B240 /* VCreateTravelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39231FAE7D7E0072B240 /* VCreateTravelList.swift */; };
 		DABF39261FAE7F3E0072B240 /* VCreateTravelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39251FAE7F3E0072B240 /* VCreateTravelListCell.swift */; };
 		DABF39281FAE821C0072B240 /* MCreateTravelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */; };
+		DABF392A1FAE826B0072B240 /* MCreateTravelWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39291FAE826B0072B240 /* MCreateTravelWalking.swift */; };
 		DAC385E61FA7791A001138CD /* VMapOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E51FA7791A001138CD /* VMapOverlays.swift */; };
 		DAC385E81FA77A15001138CD /* VMapCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E71FA77A15001138CD /* VMapCentre.swift */; };
 		DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E91FA77AAF001138CD /* VMapFactory.swift */; };
@@ -596,6 +597,7 @@
 		DABF39231FAE7D7E0072B240 /* VCreateTravelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelList.swift; sourceTree = "<group>"; };
 		DABF39251FAE7F3E0072B240 /* VCreateTravelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListCell.swift; sourceTree = "<group>"; };
 		DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelProtocol.swift; sourceTree = "<group>"; };
+		DABF39291FAE826B0072B240 /* MCreateTravelWalking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelWalking.swift; sourceTree = "<group>"; };
 		DAC385E51FA7791A001138CD /* VMapOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapOverlays.swift; sourceTree = "<group>"; };
 		DAC385E71FA77A15001138CD /* VMapCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapCentre.swift; sourceTree = "<group>"; };
 		DAC385E91FA77AAF001138CD /* VMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapFactory.swift; sourceTree = "<group>"; };
@@ -1072,6 +1074,7 @@
 			children = (
 				DA96A2941FAE779800109455 /* MCreateTravel.swift */,
 				DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */,
+				DABF39291FAE826B0072B240 /* MCreateTravelWalking.swift */,
 			);
 			path = CreateTravel;
 			sourceTree = "<group>";
@@ -1667,6 +1670,7 @@
 				DA06799E1FA0DE6100F511F7 /* DPlanTravelModeFactory.swift in Sources */,
 				DA2944E01FA4053500645DA4 /* MCreateSaveZoomMin.swift in Sources */,
 				DAA5B4911F993B0B00F9121C /* MCreatePlan.swift in Sources */,
+				DABF392A1FAE826B0072B240 /* MCreateTravelWalking.swift in Sources */,
 				DACA5CA21FA4398900B7BBC7 /* MErrorFactory.swift in Sources */,
 				DAD387261FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift in Sources */,
 				DA4BC9371F9AC44E00453655 /* VCreateStatusReadyBarActions.swift in Sources */,
