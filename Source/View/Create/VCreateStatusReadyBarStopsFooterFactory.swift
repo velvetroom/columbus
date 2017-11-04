@@ -51,15 +51,12 @@ extension VCreateStatusReadyBarStopsFooter
     
     func factoryViews()
     {
-        let labelDistanceTitle:UILabel = UILabel()
-        labelDistanceTitle.isUserInteractionEnabled = false
-        labelDistanceTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelDistanceTitle.backgroundColor = UIColor.clear
-        labelDistanceTitle.font = UIFont.regular(
-            size:kTitleFontSize)
-        labelDistanceTitle.textColor = UIColor(white:1, alpha:0.6)
-        labelDistanceTitle.text = String.localizedView(
-            key:"VCreateStatusReadyBarStopsFooter_labelDistanceTitle")
+        let iconDistance:UIImageView = UIImageView()
+        iconDistance.translatesAutoresizingMaskIntoConstraints = false
+        iconDistance.clipsToBounds = true
+        iconDistance.contentMode = UIViewContentMode.center
+        iconDistance.isUserInteractionEnabled = false
+        iconDistance.image = #imageLiteral(resourceName: "assetMapDuration")
         
         let labelDistanceValue:UILabel = UILabel()
         labelDistanceValue.isUserInteractionEnabled = false
@@ -70,15 +67,12 @@ extension VCreateStatusReadyBarStopsFooter
         labelDistanceValue.textColor = UIColor.white
         self.labelDistanceValue = labelDistanceValue
         
-        let labelDurationTitle:UILabel = UILabel()
-        labelDurationTitle.isUserInteractionEnabled = false
-        labelDurationTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelDurationTitle.backgroundColor = UIColor.clear
-        labelDurationTitle.font = UIFont.regular(
-            size:kTitleFontSize)
-        labelDurationTitle.textColor = UIColor(white:1, alpha:0.6)
-        labelDurationTitle.text = String.localizedView(
-            key:"VCreateStatusReadyBarStopsFooter_labelDurationTitle")
+        let iconDuration:UIImageView = UIImageView()
+        iconDuration.translatesAutoresizingMaskIntoConstraints = false
+        iconDuration.clipsToBounds = true
+        iconDuration.contentMode = UIViewContentMode.center
+        iconDuration.isUserInteractionEnabled = false
+        iconDuration.image = #imageLiteral(resourceName: "assetMapDuration")
         
         let labelDurationValue:UILabel = UILabel()
         labelDurationValue.isUserInteractionEnabled = false
@@ -89,25 +83,25 @@ extension VCreateStatusReadyBarStopsFooter
         labelDurationValue.textColor = UIColor.white
         self.labelDurationValue = labelDurationValue
         
-        addSubview(labelDistanceTitle)
-        addSubview(labelDurationTitle)
+        addSubview(iconDistance)
+        addSubview(iconDuration)
         addSubview(labelDistanceValue)
         addSubview(labelDurationValue)
         
         NSLayoutConstraint.topToTop(
-            view:labelDistanceTitle,
+            view:iconDistance,
             toView:self,
             constant:kDistanceTop)
         NSLayoutConstraint.height(
-            view:labelDistanceTitle,
+            view:iconDistance,
             constant:kLabelHeight)
         NSLayoutConstraint.leftToLeft(
-            view:labelDistanceTitle,
+            view:iconDistance,
             toView:self,
-            constant:kTitleLeft)
+            constant:kIconLeft)
         NSLayoutConstraint.width(
-            view:labelDistanceTitle,
-            constant:kTitleWidth)
+            view:iconDistance,
+            constant:kIconWidth)
         
         NSLayoutConstraint.topToTop(
             view:labelDistanceValue,
@@ -118,25 +112,24 @@ extension VCreateStatusReadyBarStopsFooter
             constant:kLabelHeight)
         NSLayoutConstraint.leftToRight(
             view:labelDistanceValue,
-            toView:labelDistanceTitle,
-            constant:kValueLeft)
+            toView:iconDistance)
         NSLayoutConstraint.width(
             view:labelDistanceValue,
             constant:kValueWidth)
         
         NSLayoutConstraint.topToBottom(
-            view:labelDurationTitle,
-            toView:labelDistanceTitle)
+            view:iconDuration,
+            toView:iconDistance)
         NSLayoutConstraint.height(
-            view:labelDurationTitle,
+            view:iconDuration,
             constant:kLabelHeight)
         NSLayoutConstraint.leftToLeft(
-            view:labelDurationTitle,
+            view:iconDuration,
             toView:self,
-            constant:kTitleLeft)
+            constant:kIconLeft)
         NSLayoutConstraint.width(
-            view:labelDurationTitle,
-            constant:kTitleWidth)
+            view:iconDuration,
+            constant:kIconWidth)
         
         NSLayoutConstraint.topToBottom(
             view:labelDurationValue,
@@ -146,8 +139,7 @@ extension VCreateStatusReadyBarStopsFooter
             constant:kLabelHeight)
         NSLayoutConstraint.leftToRight(
             view:labelDurationValue,
-            toView:labelDurationTitle,
-            constant:kValueLeft)
+            toView:iconDuration)
         NSLayoutConstraint.width(
             view:labelDurationValue,
             constant:kValueWidth)
