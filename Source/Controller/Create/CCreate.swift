@@ -60,4 +60,23 @@ final class CCreate:Controller<ArchCreate>
             controller:controller,
             vertical:ControllerParent.Vertical.bottom)
     }
+    
+    func editTrave(
+        travel:DPlanTravel)
+    {
+        guard
+        
+            let database:Database = model.database
+        
+        else
+        {
+            return
+        }
+        
+        let controller:CCreateTravel = CCreateTravel(
+            database:database,
+            travel:travel)
+        
+        parentController?.animateOver(controller:controller)
+    }
 }

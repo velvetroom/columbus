@@ -126,5 +126,9 @@ final class VCreateStatusReadyBarTravel:
         super.collectionView(
             collectionView,
             didSelectItemAt:indexPath)
+        
+        let item:DPlanTravel = modelAtIndex(
+            index:indexPath)
+        controller.editTrave(travel:travel)
     }
 }
