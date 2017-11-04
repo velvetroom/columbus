@@ -68,13 +68,13 @@ final class VPlansListCellButton:View<ArchPlans>
         model:DPlan)
     {
         self.model = model
-        updateImage(image:#imageLiteral(resourceName: "assetGenericActive"))
+        updateImage(image:#imageLiteral(resourceName: "assetPlansActive"))
     }
     
     func unactive(
         model:DPlan)
     {
         self.model = model
-        updateImage(image:#imageLiteral(resourceName: "assetGenericUnactive"))
+        updateImage(image:#imageLiteral(resourceName: "assetPlansUnactive"))
     }
 }
