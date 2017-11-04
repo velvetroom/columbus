@@ -15,4 +15,11 @@ final class CCreateTravel:Controller<ArchCreateTravel>
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func back()
+    {
+        parentController?.dismissAnimateOver(completion:nil)
+    }
 }
