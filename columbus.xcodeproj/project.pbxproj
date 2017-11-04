@@ -216,6 +216,7 @@
 		DA96A2901FAE76F000109455 /* ArchCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */; };
 		DA96A2921FAE771E00109455 /* CCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A2911FAE771E00109455 /* CCreateTravel.swift */; };
 		DA96A2951FAE779800109455 /* MCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A2941FAE779800109455 /* MCreateTravel.swift */; };
+		DA96A2981FAE77CB00109455 /* VCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A2971FAE77CB00109455 /* VCreateTravel.swift */; };
 		DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */; };
 		DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */; };
 		DA97DC7C1FA41760005A137F /* MCreateSaveTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */; };
@@ -536,6 +537,7 @@
 		DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateTravel.swift; sourceTree = "<group>"; };
 		DA96A2911FAE771E00109455 /* CCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreateTravel.swift; sourceTree = "<group>"; };
 		DA96A2941FAE779800109455 /* MCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravel.swift; sourceTree = "<group>"; };
+		DA96A2971FAE77CB00109455 /* VCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravel.swift; sourceTree = "<group>"; };
 		DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomProtocolFactory.swift; sourceTree = "<group>"; };
 		DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomDefault.swift; sourceTree = "<group>"; };
 		DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTile.swift; sourceTree = "<group>"; };
@@ -951,6 +953,7 @@
 				DA65ECAD1F95E68700720673 /* Basic */,
 				DA7D959C1FA76DBC00A620FB /* Global */,
 				DA18A9711FAD5BC200F6BDF8 /* Store */,
+				DA96A2961FAE77BC00109455 /* CreateTravel */,
 				DA65EC9A1F95E68700720673 /* Home */,
 				DAB2F8FD1F966A0400C1EF4A /* Create */,
 				DA5B094A1FA362050055E8F3 /* CreateSave */,
@@ -1058,6 +1061,14 @@
 			isa = PBXGroup;
 			children = (
 				DA96A2941FAE779800109455 /* MCreateTravel.swift */,
+			);
+			path = CreateTravel;
+			sourceTree = "<group>";
+		};
+		DA96A2961FAE77BC00109455 /* CreateTravel */ = {
+			isa = PBXGroup;
+			children = (
+				DA96A2971FAE77CB00109455 /* VCreateTravel.swift */,
 			);
 			path = CreateTravel;
 			sourceTree = "<group>";
@@ -1654,6 +1665,7 @@
 				DA6700DB1FAB90EB00B89997 /* VHomeStandbyHeader.swift in Sources */,
 				DAB1FA6D1FABA9EC000D857C /* MHomeInfoProtocol.swift in Sources */,
 				DA7D95911FA7637300A620FB /* MHomeStatusStandby.swift in Sources */,
+				DA96A2981FAE77CB00109455 /* VCreateTravel.swift in Sources */,
 				DAE699921FA2892200FFE6E3 /* VCreateStatusReadyBarTravelActions.swift in Sources */,
 				DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */,
 				DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */,
