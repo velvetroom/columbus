@@ -272,6 +272,7 @@
 		DABF39281FAE821C0072B240 /* MCreateTravelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */; };
 		DABF392A1FAE826B0072B240 /* MCreateTravelWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39291FAE826B0072B240 /* MCreateTravelWalking.swift */; };
 		DABF392C1FAE82DB0072B240 /* MCreateTravelCycling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF392B1FAE82DB0072B240 /* MCreateTravelCycling.swift */; };
+		DABF392E1FAE86380072B240 /* MCreateTravelDriving.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF392D1FAE86380072B240 /* MCreateTravelDriving.swift */; };
 		DAC385E61FA7791A001138CD /* VMapOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E51FA7791A001138CD /* VMapOverlays.swift */; };
 		DAC385E81FA77A15001138CD /* VMapCentre.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E71FA77A15001138CD /* VMapCentre.swift */; };
 		DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC385E91FA77AAF001138CD /* VMapFactory.swift */; };
@@ -600,6 +601,7 @@
 		DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelProtocol.swift; sourceTree = "<group>"; };
 		DABF39291FAE826B0072B240 /* MCreateTravelWalking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelWalking.swift; sourceTree = "<group>"; };
 		DABF392B1FAE82DB0072B240 /* MCreateTravelCycling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelCycling.swift; sourceTree = "<group>"; };
+		DABF392D1FAE86380072B240 /* MCreateTravelDriving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelDriving.swift; sourceTree = "<group>"; };
 		DAC385E51FA7791A001138CD /* VMapOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapOverlays.swift; sourceTree = "<group>"; };
 		DAC385E71FA77A15001138CD /* VMapCentre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapCentre.swift; sourceTree = "<group>"; };
 		DAC385E91FA77AAF001138CD /* VMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapFactory.swift; sourceTree = "<group>"; };
@@ -1078,6 +1080,7 @@
 				DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */,
 				DABF39291FAE826B0072B240 /* MCreateTravelWalking.swift */,
 				DABF392B1FAE82DB0072B240 /* MCreateTravelCycling.swift */,
+				DABF392D1FAE86380072B240 /* MCreateTravelDriving.swift */,
 			);
 			path = CreateTravel;
 			sourceTree = "<group>";
@@ -1545,6 +1548,7 @@
 				DA7D958F1FA762C300A620FB /* MHomeStatusProtocol.swift in Sources */,
 				DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */,
 				DAB1FA6F1FABAA45000D857C /* MHomeInfoSettings.swift in Sources */,
+				DABF392E1FAE86380072B240 /* MCreateTravelDriving.swift in Sources */,
 				DABED9B01F9E94AF00635E82 /* MCreatePlanDirections.swift in Sources */,
 				DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */,
 				DA6700DF1FAB933C00B89997 /* VHomeStandbyConfig.swift in Sources */,
