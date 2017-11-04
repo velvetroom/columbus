@@ -6,6 +6,13 @@ extension VCreateTravel
     
     func factoryViews(controller:CCreateTravel)
     {
+        let viewBackground:VCreateTravelBackground = VCreateTravelBackground(
+            controller:controller)
         
+        addSubview(viewBackground)
+        
+        NSLayoutConstraint.equals(
+            view:viewBackground,
+            toView:self)
     }
 }
