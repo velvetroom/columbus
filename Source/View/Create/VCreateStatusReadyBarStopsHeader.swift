@@ -3,10 +3,10 @@ import UIKit
 final class VCreateStatusReadyBarStopsHeader:
     UICollectionReusableView
 {
-    private let kIconTop:CGFloat = 20
+    private let kIconTop:CGFloat = 90
     private let kIconHeight:CGFloat = 60
-    private let kLabelHeight:CGFloat = 50
-    private let kFontSize:CGFloat = 13
+    private let kLabelHeight:CGFloat = 60
+    private let kFontSize:CGFloat = 15
     
     override init(frame:CGRect)
     {
