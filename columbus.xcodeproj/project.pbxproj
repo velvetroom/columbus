@@ -214,6 +214,7 @@
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
 		DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */; };
 		DA96A2901FAE76F000109455 /* ArchCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */; };
+		DA96A2921FAE771E00109455 /* CCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A2911FAE771E00109455 /* CCreateTravel.swift */; };
 		DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */; };
 		DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */; };
 		DA97DC7C1FA41760005A137F /* MCreateSaveTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */; };
@@ -532,6 +533,7 @@
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
 		DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRangeFactory.swift; sourceTree = "<group>"; };
 		DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateTravel.swift; sourceTree = "<group>"; };
+		DA96A2911FAE771E00109455 /* CCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreateTravel.swift; sourceTree = "<group>"; };
 		DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomProtocolFactory.swift; sourceTree = "<group>"; };
 		DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveZoomDefault.swift; sourceTree = "<group>"; };
 		DA97DC7B1FA41760005A137F /* MCreateSaveTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTile.swift; sourceTree = "<group>"; };
@@ -1089,6 +1091,7 @@
 				DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */,
 				DA2EE5761F98C53800488A07 /* CCreateMap.swift */,
 				DA5B093E1FA35EF00055E8F3 /* CCreateSave.swift */,
+				DA96A2911FAE771E00109455 /* CCreateTravel.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -1433,6 +1436,7 @@
 				DA65ECF11F95E68700720673 /* Arch.swift in Sources */,
 				DAC385EC1FA77AFC001138CD /* VMapPin.swift in Sources */,
 				DA65ECDC1F95E68700720673 /* Database.swift in Sources */,
+				DA96A2921FAE771E00109455 /* CCreateTravel.swift in Sources */,
 				DA18A9731FAD5BCF00F6BDF8 /* VStore.swift in Sources */,
 				DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */,
 				DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */,
