@@ -10,12 +10,14 @@ extension MMenu
         let itemCreate:MMenuItemCreate = MMenuItemCreate()
         let itemPlans:MMenuItemPlans = MMenuItemPlans()
         let itemSettings:MMenuItemSettings = MMenuItemSettings()
+        let itemStore:MMenuItemStore = MMenuItemStore()
         
         let map:[MMenuItemProtocol] = [
             itemHome,
             itemCreate,
             itemPlans,
-            itemSettings]
+            itemSettings,
+            itemStore]
         
         return map
     }
