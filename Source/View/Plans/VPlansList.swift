@@ -108,7 +108,6 @@ final class VPlansList:VCollection<
             indexPath:indexPath)
         cell.config(model:item)
         
-        
         return cell
     }
 }
