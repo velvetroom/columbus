@@ -2,7 +2,7 @@ import UIKit
 
 final class VCreateTravelBackground:View<ArchCreateTravel>
 {
-    private let kAlpha:CGFloat = 0.95
+    private let kAlpha:CGFloat = 0.98
     
     required init(controller:CCreateTravel)
     {

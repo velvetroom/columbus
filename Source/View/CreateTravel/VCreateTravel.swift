@@ -4,8 +4,8 @@ final class VCreateTravel:ViewMain
 {
     weak var layoutListTop:NSLayoutConstraint!
     weak var layoutListLeft:NSLayoutConstraint!
-    let kListHeight:CGFloat = 400
-    let kListWidth:CGFloat = 100
+    let kListHeight:CGFloat = 240
+    let kListWidth:CGFloat = 50
     
     required init(controller:UIViewController)
     {
