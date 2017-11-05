@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DPerk" representedClassName="DPerk" syncable="YES" codeGenerationType="class">
+        <attribute name="identifier" attributeType="String" syncable="YES"/>
+        <attribute name="rawType" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="settings" maxCount="1" deletionRule="Nullify" destinationEntity="DSettings" inverseName="perks" inverseEntity="DSettings" syncable="YES"/>
+    </entity>
     <entity name="DPlan" representedClassName="DPlan" syncable="YES" codeGenerationType="class">
         <attribute name="created" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="identifier" attributeType="String" syncable="YES"/>
@@ -34,11 +39,13 @@
         <attribute name="rawDistancce" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rawTravelMode" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="activePlan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DPlan" inverseName="activated" inverseEntity="DPlan" syncable="YES"/>
+        <relationship name="perks" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="DPerk" inverseName="settings" inverseEntity="DPerk" syncable="YES"/>
     </entity>
     <elements>
         <element name="DPlan" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="DPlanStop" positionX="-54" positionY="0" width="128" height="30"/>
         <element name="DPlanTravel" positionX="-36" positionY="9" width="128" height="180"/>
-        <element name="DSettings" positionX="-54" positionY="54" width="128" height="105"/>
+        <element name="DSettings" positionX="-54" positionY="54" width="128" height="120"/>
+        <element name="DPerk" positionX="-54" positionY="72" width="128" height="90"/>
     </elements>
 </model>
