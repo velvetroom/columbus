@@ -11,15 +11,20 @@ extension MStore
         transaction:SKPaymentTransaction)
     {
         let identifier:String = transaction.payment.productIdentifier
+        let transactionState:SKPaymentTransactionState = transaction.transactionState
         
         guard
             
-            let perk:MStorePerkProtocol = perksMap[identifier]
+            let perk:MStorePerkProtocol = perksMap[identifier],
+            let transactionRouter:TransactionRouter = transactionMap[
+                transactionState]
             
         else
         {
             return
         }
+        
+        transactionRouter(self)(perk, transaction)
         /*
         switch skPaymentTransaction.transactionState
         {
