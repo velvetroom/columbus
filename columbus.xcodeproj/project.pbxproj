@@ -198,6 +198,7 @@
 		DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */; };
 		DA79505C1FAED8B10057F6EE /* MCreateTravelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */; };
 		DA79505E1FAEDAA50057F6EE /* VCreateTravelListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505D1FAEDAA50057F6EE /* VCreateTravelListConfig.swift */; };
+		DA7950601FAEDAD30057F6EE /* VCreateTravelListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505F1FAEDAD30057F6EE /* VCreateTravelListFactory.swift */; };
 		DA7B65221F9E6873001CDC35 /* VMenuSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */; };
 		DA7B65241F9E6B5F001CDC35 /* VMenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */; };
 		DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */; };
@@ -530,6 +531,7 @@
 		DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationDelegate.swift; sourceTree = "<group>"; };
 		DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelFactory.swift; sourceTree = "<group>"; };
 		DA79505D1FAEDAA50057F6EE /* VCreateTravelListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListConfig.swift; sourceTree = "<group>"; };
+		DA79505F1FAEDAD30057F6EE /* VCreateTravelListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListFactory.swift; sourceTree = "<group>"; };
 		DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuSynth.swift; sourceTree = "<group>"; };
 		DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuActions.swift; sourceTree = "<group>"; };
 		DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanSave.swift; sourceTree = "<group>"; };
@@ -1101,6 +1103,7 @@
 				DA96A29B1FAE797200109455 /* VCreateTravelBackground.swift */,
 				DABF39231FAE7D7E0072B240 /* VCreateTravelList.swift */,
 				DA79505D1FAEDAA50057F6EE /* VCreateTravelListConfig.swift */,
+				DA79505F1FAEDAD30057F6EE /* VCreateTravelListFactory.swift */,
 				DABF39251FAE7F3E0072B240 /* VCreateTravelListCell.swift */,
 			);
 			path = CreateTravel;
@@ -1571,6 +1574,7 @@
 				DAA0B8071FA2AE07009BFFB8 /* VCreateStatusReadyBarStopsComputed.swift in Sources */,
 				DA65ECE71F95E68700720673 /* ExtensionString.swift in Sources */,
 				DAE1848C1F9E9AA700D29126 /* VSettingsFactory.swift in Sources */,
+				DA7950601FAEDAD30057F6EE /* VCreateTravelListFactory.swift in Sources */,
 				DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */,
 				DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */,
 				DAA5B48F1F99371C00F9121C /* DPlanTravelMode.swift in Sources */,
