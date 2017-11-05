@@ -3,6 +3,7 @@ import StoreKit
 
 final class MStorePerkUnlimited:MStorePerkProtocol
 {
+    var product:SKProduct?
     var status:SKPaymentTransactionState?
     var price:String?
     let perkType:DPerkType = DPerkType.unlimited

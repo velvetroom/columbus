@@ -3,6 +3,7 @@ import StoreKit
 
 protocol MStorePerkProtocol
 {
+    var product:SKProduct? { get set }
     var status:SKPaymentTransactionState? { get set }
     var perkType:DPerkType { get }
     var icon:UIImage { get }
