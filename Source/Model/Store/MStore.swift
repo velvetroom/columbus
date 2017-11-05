@@ -4,11 +4,11 @@ final class MStore:Model<ArchStore>
 {
     var database:Database?
     var settings:DSettings?
-    var error:String?
     let perks:[MStorePerkProtocol]
     let perksMap:[String:MStorePerkProtocol]
     let modelKit:MStoreKit
     let priceFormatter:NumberFormatter
+    private(set) var status:MStoreStatusProtocol?
     
     required init()
     {
@@ -20,5 +20,16 @@ final class MStore:Model<ArchStore>
         
         super.init()
         modelKit.model = self
+    }
+    
+    //MARK: internal
+    
+    func changeStatus(
+        statusType:MStoreStatusProtocol.Type)
+    {
+        let status:MStoreStatusProtocol = statusType.init()
+        self.status = status
+        
+        view?.updateStatus()
     }
 }
