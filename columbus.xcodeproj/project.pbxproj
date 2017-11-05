@@ -43,6 +43,7 @@
 		DA1AD3B21F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */; };
 		DA1FD2931FAF0CB70098C80C /* MStorePerkUnlimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */; };
 		DA1FD2951FAF13350098C80C /* store.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1FD2941FAF13350098C80C /* store.xcassets */; };
+		DA1FD2971FAF16EB0098C80C /* MStorePerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */; };
 		DA22194D1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */; };
 		DA22194F1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */; };
 		DA2219511FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */; };
@@ -385,6 +386,7 @@
 		DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeFactory.swift; sourceTree = "<group>"; };
 		DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkUnlimited.swift; sourceTree = "<group>"; };
 		DA1FD2941FAF13350098C80C /* store.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = store.xcassets; sourceTree = "<group>"; };
+		DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerks.swift; sourceTree = "<group>"; };
 		DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelList.swift; sourceTree = "<group>"; };
@@ -716,6 +718,7 @@
 			children = (
 				DA18A96F1FAD59A400F6BDF8 /* MStore.swift */,
 				DA7950731FAF09000057F6EE /* MStoreFactory.swift */,
+				DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */,
 				DA7950711FAF059A0057F6EE /* MStoreKit.swift */,
 				DA7950751FAF0A440057F6EE /* MStorePerkProtocol.swift */,
 				DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */,
@@ -1666,6 +1669,7 @@
 				DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */,
 				DAD888FA1F9D2172000EC7FD /* MCreatePlanFactory.swift in Sources */,
 				DA4861811FAA37F700FFBAB8 /* VSettingsListCellDetailLevel.swift in Sources */,
+				DA1FD2971FAF16EB0098C80C /* MStorePerks.swift in Sources */,
 				DA9E96091F9667FF00538374 /* ArchPlans.swift in Sources */,
 				DA65ED1B1F95E68700720673 /* VBlur.swift in Sources */,
 				DA6700D31FAB7DC700B89997 /* VPlansListHeader.swift in Sources */,
