@@ -7,15 +7,22 @@ final class VCreateTravelList:VCollection<
     weak var viewSelector:VCreateTravelListSelector!
     weak var layoutSelectorLeft:NSLayoutConstraint!
     weak var layoutSelectorTop:NSLayoutConstraint!
+    let selectorSize_2:CGFloat
     let kSelectorSize:CGFloat = 50
+    let kAnimationDuration:TimeInterval = 0.2
+    let kWaitToSelect:TimeInterval = 0.1
     private var cellSize:CGSize?
     
     required init(controller:CCreateTravel)
     {
+        selectorSize_2 = kSelectorSize / 2.0
+        
         super.init(controller:controller)
         collectionView.isScrollEnabled = false
         collectionView.bounces = false
+        
         factoryViews()
+        selectCurrent()
     }
     
     required init?(coder:NSCoder)
@@ -71,5 +78,13 @@ final class VCreateTravelList:VCollection<
         cell.config(model:item)
         
         return cell
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+//        model?.selected(index:indexPath.item)
+        updateSelector()
     }
 }
