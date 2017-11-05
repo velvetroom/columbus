@@ -34,4 +34,11 @@ extension MStore
         
         return map
     }
+    
+    func factoryProductIdentifiers() -> Set<String>
+    {
+        let perkKeys:Set<String> = Set<String>(perksMap.keys)
+        
+        return perkKeys
+    }
 }
