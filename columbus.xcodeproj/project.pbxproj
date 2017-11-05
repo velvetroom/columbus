@@ -206,6 +206,7 @@
 		DA79506C1FAEFA7B0057F6EE /* DPerkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79506B1FAEFA7B0057F6EE /* DPerkType.swift */; };
 		DA79506E1FAEFFC60057F6EE /* DSettingsPerksMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79506D1FAEFFC60057F6EE /* DSettingsPerksMap.swift */; };
 		DA7950721FAF059A0057F6EE /* MStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7950711FAF059A0057F6EE /* MStoreKit.swift */; };
+		DA7950741FAF09000057F6EE /* MStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7950731FAF09000057F6EE /* MStoreFactory.swift */; };
 		DA7B65221F9E6873001CDC35 /* VMenuSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */; };
 		DA7B65241F9E6B5F001CDC35 /* VMenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */; };
 		DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */; };
@@ -546,6 +547,7 @@
 		DA79506B1FAEFA7B0057F6EE /* DPerkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPerkType.swift; sourceTree = "<group>"; };
 		DA79506D1FAEFFC60057F6EE /* DSettingsPerksMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSettingsPerksMap.swift; sourceTree = "<group>"; };
 		DA7950711FAF059A0057F6EE /* MStoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStoreKit.swift; sourceTree = "<group>"; };
+		DA7950731FAF09000057F6EE /* MStoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStoreFactory.swift; sourceTree = "<group>"; };
 		DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuSynth.swift; sourceTree = "<group>"; };
 		DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuActions.swift; sourceTree = "<group>"; };
 		DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanSave.swift; sourceTree = "<group>"; };
@@ -707,6 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				DA18A96F1FAD59A400F6BDF8 /* MStore.swift */,
+				DA7950731FAF09000057F6EE /* MStoreFactory.swift */,
 				DA7950711FAF059A0057F6EE /* MStoreKit.swift */,
 			);
 			path = Store;
@@ -1482,6 +1485,7 @@
 				DA750CB01FA78D4E00459985 /* VHomeReadyFactory.swift in Sources */,
 				DAAFA9941F9B53A40097E0E0 /* MCreatePlanGeocode.swift in Sources */,
 				DADE5FA01FA945E600E59687 /* MPlansLoad.swift in Sources */,
+				DA7950741FAF09000057F6EE /* MStoreFactory.swift in Sources */,
 				DA7D95971FA7642500A620FB /* VHomeReady.swift in Sources */,
 				DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */,
 				DA1A6C3A1FAA18010022A170 /* VSettingsListCellDistanceFactory.swift in Sources */,
