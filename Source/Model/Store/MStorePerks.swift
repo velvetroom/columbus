@@ -11,29 +11,26 @@ extension MStore
         
         guard
             
-            let perk:MStorePerkProtocol = perksMap[identifier]
+            var perk:MStorePerkProtocol = perksMap[identifier],
+            let price:String = factoryPrice(product:product)
             
         else
         {
             return
         }
         
-        perk.sk
-        mappedItem.skProduct = skProduct
-        priceFormatter.locale = skProduct.priceLocale
+        perk.product = product
+        perk.price = price
+    }
+    
+    private func factoryPrice(product:SKProduct) -> String?
+    {
+        priceFormatter.locale = product.priceLocale
+        let priceNumber:NSDecimalNumber = product.price
+        let price:String? = priceFormatter.string(
+            from:priceNumber)
         
-        let priceNumber:NSDecimalNumber = skProduct.price
-        
-        guard
-            
-            let priceString:String = priceFormatter.string(from:priceNumber)
-            
-            else
-        {
-            return
-        }
-        
-        mappedItem.foundPurchase(price:priceString)
+        return price
     }
     
     //MARK: internal
