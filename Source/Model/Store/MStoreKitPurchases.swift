@@ -26,7 +26,18 @@ extension MStoreKit
     private func asyncPurchase(
         perk:MStorePerkProtocol)
     {
+        guard
+            
+            let status:MStorePerkStatusNew = perk.status as? MStorePerkStatusNew
+            
+        else
+        {
+            return
+        }
         
+        let payment:SKPayment = SKPayment(
+            product:status.product)
+        SKPaymentQueue.default().add(payment)
     }
     
     //MARK: internal
