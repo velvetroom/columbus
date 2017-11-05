@@ -19,8 +19,9 @@ extension MStore
             return
         }
         
-        perk.product = product
-        perk.price = price
+        perk.statusNew(
+            product:product,
+            price:price)
     }
     
     private func factoryPrice(product:SKProduct) -> String?
