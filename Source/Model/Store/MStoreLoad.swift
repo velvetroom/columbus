@@ -42,6 +42,10 @@ extension MStore
     {
         self.database = database
         self.settings = settings
+        
+        let productIdentifiers:Set<String> = factoryProductIdentifiers()
+        modelKit.checkAvailabilities(
+            productIdentifiers:productIdentifiers)
     }
     
     //MARK: internal
