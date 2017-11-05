@@ -4,4 +4,8 @@ extension VCreateTravelList
 {
     //MARK: internal
     
+    func factoryViews()
+    {
+        
+    }
 }
