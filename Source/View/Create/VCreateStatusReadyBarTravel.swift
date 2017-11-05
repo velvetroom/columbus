@@ -129,6 +129,6 @@ final class VCreateStatusReadyBarTravel:
         
         let item:DPlanTravel = modelAtIndex(
             index:indexPath)
-        controller.editTrave(travel:item)
+        controller.editTravel(travel:item)
     }
 }
