@@ -2,6 +2,8 @@ import Foundation
 
 final class MStore:Model<ArchStore>
 {
+    var database:Database?
+    var settings:DSettings?
     var error:String?
     let perks:[MStorePerkProtocol]
     let perksMap:[String:MStorePerkProtocol]

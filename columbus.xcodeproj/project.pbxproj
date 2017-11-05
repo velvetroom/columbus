@@ -44,6 +44,7 @@
 		DA1FD2931FAF0CB70098C80C /* MStorePerkUnlimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */; };
 		DA1FD2951FAF13350098C80C /* store.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1FD2941FAF13350098C80C /* store.xcassets */; };
 		DA1FD2971FAF16EB0098C80C /* MStorePerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */; };
+		DA1FD2991FAF1C660098C80C /* MStoreStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2981FAF1C660098C80C /* MStoreStatusProtocol.swift */; };
 		DA22194D1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */; };
 		DA22194F1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */; };
 		DA2219511FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */; };
@@ -387,6 +388,7 @@
 		DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkUnlimited.swift; sourceTree = "<group>"; };
 		DA1FD2941FAF13350098C80C /* store.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = store.xcassets; sourceTree = "<group>"; };
 		DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerks.swift; sourceTree = "<group>"; };
+		DA1FD2981FAF1C660098C80C /* MStoreStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStoreStatusProtocol.swift; sourceTree = "<group>"; };
 		DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelList.swift; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 				DA18A96F1FAD59A400F6BDF8 /* MStore.swift */,
 				DA7950731FAF09000057F6EE /* MStoreFactory.swift */,
 				DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */,
+				DA1FD2981FAF1C660098C80C /* MStoreStatusProtocol.swift */,
 				DA7950711FAF059A0057F6EE /* MStoreKit.swift */,
 				DA7950751FAF0A440057F6EE /* MStorePerkProtocol.swift */,
 				DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */,
@@ -1573,6 +1576,7 @@
 				DAA0B8051FA2A77E009BFFB8 /* VCreateStatusReadyBarStopsFooterFactory.swift in Sources */,
 				DA0679A41FA1015000F511F7 /* DPlanTravelComputed.swift in Sources */,
 				DADA41F81F96709700DD1FC4 /* MMenuItemPlans.swift in Sources */,
+				DA1FD2991FAF1C660098C80C /* MStoreStatusProtocol.swift in Sources */,
 				DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */,
 				DA5259FE1F9F7502004F8503 /* MSettingsTravelModeProtocol.swift in Sources */,
 				DABED9B21F9E996300635E82 /* VSettingsBar.swift in Sources */,
