@@ -7,7 +7,7 @@ struct MStorePerkUnlimited:MStorePerkProtocol
     var price:String?
     let perkType:DPerkType = DPerkType.unlimited
     let purchaseId:String = "iturbide.columbus.unlimited"
-    let icon:UIImage
-    let title:String
-    let descr:String
+    let icon:UIImage = #imageLiteral(resourceName: "assetStoreUnlimited")
+    let title:String = String.localizedModel(key:"MStorePerkUnlimited_title")
+    let descr:String = String.localizedModel(key:"MStorePerkUnlimited_descr")
 }

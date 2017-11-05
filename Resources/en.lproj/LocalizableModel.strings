@@ -23,3 +23,5 @@ MSettingsDetailLevelMedium_descr="\nPerfect balance between map detail and stora
 MSettingsDetailLevelMax_title="Max";
 MSettingsDetailLevelMax_descr="\nBest map detail possible, however it consumes huge amounts of storage and increases by a lot the waiting time when saving a new Navigation Plan.\n\nNot recommended.";
 MError_noImageData="Unable to get image data";
+MStorePerkUnlimited_title="Columbus Unlimited";
+MStorePerkUnlimited_descr="\nCreate as many Navigation Plans as you need.\nWith this purchase you will no longer have the restriction of only 1 Navigation Plan.";
