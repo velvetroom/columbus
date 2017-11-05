@@ -1,4 +1,5 @@
 import Foundation
+import StoreKit
 
 extension MStore
 {
@@ -32,6 +33,19 @@ extension MStore
         {
             map[perk.identifier] = perk
         }
+        
+        return map
+    }
+    
+    class func factoryTransactionMap() -> [
+        SKPaymentTransactionState:
+        TransactionRouter]
+    {
+        let map:[
+            SKPaymentTransactionState:
+            TransactionRouter] = [
+                SKPaymentTransactionState.purchasing:
+                transactionPurchasing]
         
         return map
     }

@@ -3,22 +3,24 @@ import StoreKit
 
 extension MStore
 {
+    
+    
     //MARK: private
     
     private func updateTransaction(
         transaction:SKPaymentTransaction)
     {
-        let productId:String = skPaymentTransaction.payment.productIdentifier
+        let identifier:String = transaction.payment.productIdentifier
         
         guard
             
-            let mappedItem:MStoreItem = mapItems[productId]
+            let perk:MStorePerkProtocol = perksMap[identifier]
             
-            else
+        else
         {
-            continue
+            return
         }
-        
+        /*
         switch skPaymentTransaction.transactionState
         {
         case SKPaymentTransactionState.deferred:
@@ -47,7 +49,7 @@ extension MStore
             mappedItem.statusPurchasing()
             
             break
-        }
+        }*/
     }
     
     //MARK: internal
@@ -61,5 +63,12 @@ extension MStore
         }
         
         view?.refreshStore()
+    }
+    
+    func transactionPurchasing(
+        perk:MStorePerkProtocol,
+        transaction:SKPaymentTransaction)
+    {
+        
     }
 }
