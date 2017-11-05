@@ -14,7 +14,8 @@ extension MStore
     
     class func factoryPerks() -> [MStorePerkProtocol]
     {
-        let perkUnlimited:MStorePerkUnlimited = MStorePerkUnlimited()
+        var perkUnlimited:MStorePerkUnlimited = MStorePerkUnlimited()
+        perkUnlimited.statusUnavailable()
         
         let perks:[MStorePerkProtocol] = [
             perkUnlimited]
