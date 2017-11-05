@@ -47,6 +47,9 @@
 		DA1906CA1FAFC8C5008147EA /* VStoreStatusReadyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906C91FAFC8C5008147EA /* VStoreStatusReadyListCell.swift */; };
 		DA1906CC1FAFC8E6008147EA /* VStoreStatusReadyListCellLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906CB1FAFC8E6008147EA /* VStoreStatusReadyListCellLoading.swift */; };
 		DA1906CE1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906CD1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift */; };
+		DA1906D01FAFC95F008147EA /* VStoreStatusReadyListCellPurchasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906CF1FAFC95F008147EA /* VStoreStatusReadyListCellPurchasing.swift */; };
+		DA1906D21FAFC96A008147EA /* VStoreStatusReadyListCellPurchased.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906D11FAFC96A008147EA /* VStoreStatusReadyListCellPurchased.swift */; };
+		DA1906D41FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906D31FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift */; };
 		DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */; };
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
@@ -405,6 +408,9 @@
 		DA1906C91FAFC8C5008147EA /* VStoreStatusReadyListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCell.swift; sourceTree = "<group>"; };
 		DA1906CB1FAFC8E6008147EA /* VStoreStatusReadyListCellLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellLoading.swift; sourceTree = "<group>"; };
 		DA1906CD1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellUnavailable.swift; sourceTree = "<group>"; };
+		DA1906CF1FAFC95F008147EA /* VStoreStatusReadyListCellPurchasing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellPurchasing.swift; sourceTree = "<group>"; };
+		DA1906D11FAFC96A008147EA /* VStoreStatusReadyListCellPurchased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellPurchased.swift; sourceTree = "<group>"; };
+		DA1906D31FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellDeferred.swift; sourceTree = "<group>"; };
 		DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusError.swift; sourceTree = "<group>"; };
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
@@ -775,6 +781,9 @@
 				DA1906C91FAFC8C5008147EA /* VStoreStatusReadyListCell.swift */,
 				DA1906CB1FAFC8E6008147EA /* VStoreStatusReadyListCellLoading.swift */,
 				DA1906CD1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift */,
+				DA1906CF1FAFC95F008147EA /* VStoreStatusReadyListCellPurchasing.swift */,
+				DA1906D11FAFC96A008147EA /* VStoreStatusReadyListCellPurchased.swift */,
+				DA1906D31FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1538,6 +1547,8 @@
 				DA570EA91F9D033800C6F590 /* VCreateStatusReadyMapMenuActions.swift in Sources */,
 				DABDE8851FAA04F200E24BBE /* MSettingsDistance.swift in Sources */,
 				DA18A9701FAD59A400F6BDF8 /* MStore.swift in Sources */,
+				DA1906D01FAFC95F008147EA /* VStoreStatusReadyListCellPurchasing.swift in Sources */,
+				DA1906D41FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift in Sources */,
 				DA2926751FACD07400913141 /* VCreateStatusReadyBarStopsFooterTools.swift in Sources */,
 				DAD387281FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
@@ -1630,6 +1641,7 @@
 				DA0447FD1F9747B800BA2D45 /* VCreateStatusDenied.swift in Sources */,
 				DA1906C81FAFC89C008147EA /* MStorePerkStatusLoading.swift in Sources */,
 				DA13F65E1F9A18DD00DF92F5 /* DPlanConnect.swift in Sources */,
+				DA1906D21FAFC96A008147EA /* VStoreStatusReadyListCellPurchased.swift in Sources */,
 				DA79506A1FAEFA4D0057F6EE /* DPerk.swift in Sources */,
 				DA18A9751FAD5BEE00F6BDF8 /* ArchStore.swift in Sources */,
 				DA79506E1FAEFFC60057F6EE /* DSettingsPerksMap.swift in Sources */,
