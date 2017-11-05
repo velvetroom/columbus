@@ -40,6 +40,12 @@ extension MStoreKit
         SKPaymentQueue.default().add(payment)
     }
     
+    private func asyncFinishTransaction(
+        transaction:SKPaymentTransaction)
+    {
+        SKPaymentQueue.default().finishTransaction(transaction)
+    }
+    
     //MARK: internal
     
     func checkAvailabilities(
@@ -71,6 +77,18 @@ extension MStoreKit
         { [weak self] in
             
             self?.asyncPurchase(perk:perk)
+        }
+    }
+    
+    func finishTransaction(
+        transaction:SKPaymentTransaction)
+    {
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.asyncFinishTransaction(
+                transaction:transaction)
         }
     }
 }

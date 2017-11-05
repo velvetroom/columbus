@@ -47,13 +47,13 @@ extension MStore
                 SKPaymentTransactionState.purchasing:
                 transactionPurchasing,
                 SKPaymentTransactionState.restored:
-                transactionPurchasing,
+                transactionPurchased,
                 SKPaymentTransactionState.purchased:
-                transactionPurchasing,
+                transactionPurchased,
                 SKPaymentTransactionState.failed:
-                transactionPurchasing,
+                transactionFailed,
                 SKPaymentTransactionState.deferred:
-                transactionPurchasing]
+                transactionDeferred]
         
         return map
     }

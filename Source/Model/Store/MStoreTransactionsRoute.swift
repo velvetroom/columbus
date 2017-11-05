@@ -5,39 +5,87 @@ extension MStore
 {
     //MARK: internal
     
+    func transactionDeferred(
+        perk:MStorePerkProtocol,
+        transaction:SKPaymentTransaction)
+    {
+        var perk:MStorePerkProtocol = perk
+        
+        guard
+        
+            let status:MStorePerkStatusAvailableProtocol = perk.status as? MStorePerkStatusAvailableProtocol
+        
+        else
+        {
+            return
+        }
+        
+        perk.statusDeferred(
+            product:status.product,
+            price:status.price)
+    }
+    
+    func transactionFailed(
+        perk:MStorePerkProtocol,
+        transaction:SKPaymentTransaction)
+    {
+        var perk:MStorePerkProtocol = perk
+        
+        guard
+            
+            let status:MStorePerkStatusAvailableProtocol = perk.status as? MStorePerkStatusAvailableProtocol
+            
+        else
+        {
+            return
+        }
+        
+        perk.statusNew(
+            product:status.product,
+            price:status.price)
+        modelKit.finishTransaction(
+            transaction:transaction)
+    }
+    
+    func transactionPurchased(
+        perk:MStorePerkProtocol,
+        transaction:SKPaymentTransaction)
+    {
+        var perk:MStorePerkProtocol = perk
+        
+        guard
+            
+            let status:MStorePerkStatusAvailableProtocol = perk.status as? MStorePerkStatusAvailableProtocol
+            
+        else
+        {
+            return
+        }
+        
+        perk.statusPurchased(
+            product:status.product,
+            price:status.price)
+        modelKit.finishTransaction(
+            transaction:transaction)
+    }
+    
     func transactionPurchasing(
         perk:MStorePerkProtocol,
         transaction:SKPaymentTransaction)
     {
-        /*
-         switch skPaymentTransaction.transactionState
-         {
-         case SKPaymentTransactionState.deferred:
-         
-         mappedItem.statusDeferred()
-         
-         break
-         
-         case SKPaymentTransactionState.failed:
-         
-         mappedItem.statusNew()
-         SKPaymentQueue.default().finishTransaction(skPaymentTransaction)
-         
-         break
-         
-         case SKPaymentTransactionState.purchased,
-         SKPaymentTransactionState.restored:
-         
-         mappedItem.statusPurchased(callAction:true)
-         SKPaymentQueue.default().finishTransaction(skPaymentTransaction)
-         
-         break
-         
-         case SKPaymentTransactionState.purchasing:
-         
-         mappedItem.statusPurchasing()
-         
-         break
-         }*/
+        var perk:MStorePerkProtocol = perk
+        
+        guard
+            
+            let status:MStorePerkStatusAvailableProtocol = perk.status as? MStorePerkStatusAvailableProtocol
+            
+        else
+        {
+            return
+        }
+        
+        perk.statusPurchasing(
+            product:status.product,
+            price:status.price)
     }
 }
