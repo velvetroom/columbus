@@ -12,7 +12,8 @@ extension MStoreKit:
         _ request:SKRequest,
         didFailWithError error:Error)
     {
-        model?.statusError(error:error.localizedDescription)
+        model?.statusError(
+            error:error.localizedDescription)
     }
     
     func paymentQueue(
@@ -54,5 +55,19 @@ extension MStoreKit:
             self?.model?.received(
                 products:products)
         }
+    }
+    
+    func paymentQueueRestoreCompletedTransactionsFinished(
+        _ queue:SKPaymentQueue)
+    {
+        model?.view?.refreshStore()
+    }
+    
+    func paymentQueue(
+        _ queue:SKPaymentQueue,
+        restoreCompletedTransactionsFailedWithError error:Error)
+    {
+        model?.statusError(
+            error:error.localizedDescription)
     }
 }
