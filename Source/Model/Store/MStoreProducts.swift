@@ -42,5 +42,8 @@ extension MStore
         {
             received(product:product)
         }
+        
+        changeStatus(
+            statusType:MStoreStatusReady.self)
     }
 }

@@ -19,12 +19,27 @@ extension MStoreKit:
         _ queue:SKPaymentQueue,
         updatedTransactions transactions:[SKPaymentTransaction])
     {
-        
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.model?.updateTransactions(
+                transactions:transactions)
+        }
     }
     
     func productsRequest(
         _ request:SKProductsRequest,
         didReceive response:SKProductsResponse)
     {
+        let products:[SKProduct] = response.products
+        
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.model?.received(
+                products:products)
+        }
     }
 }
