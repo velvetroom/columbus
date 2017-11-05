@@ -33,7 +33,16 @@ final class VStore:ViewMain
     
     private func asyncRefreshStore()
     {
+        guard
         
+            let view:VStoreStatusReady = self.view as? VStoreStatusReady
+        
+        else
+        {
+            return
+        }
+        
+        view.refresh()
     }
     
     //MARK: internal
