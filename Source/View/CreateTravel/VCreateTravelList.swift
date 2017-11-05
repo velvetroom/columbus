@@ -11,6 +11,7 @@ final class VCreateTravelList:VCollection<
     let kSelectorSize:CGFloat = 50
     let kAnimationDuration:TimeInterval = 0.2
     let kWaitToSelect:TimeInterval = 0.1
+    let kWaitToUpdate:TimeInterval = 0.4
     private var cellSize:CGSize?
     
     required init(controller:CCreateTravel)
@@ -84,7 +85,12 @@ final class VCreateTravelList:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-//        model?.selected(index:indexPath.item)
+        let item:MCreateTravelProtocol = modelAtIndex(
+            index:indexPath)
+        controller.model.select(item:item)
+        
+        superview?.isUserInteractionEnabled = false
         updateSelector()
+        waitAndClose()
     }
 }

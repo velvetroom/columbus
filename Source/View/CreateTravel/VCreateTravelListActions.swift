@@ -71,4 +71,14 @@ extension VCreateTravelList
             self?.layoutIfNeeded()
         }
     }
+    
+    func waitAndClose()
+    {
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kWaitToUpdate)
+        { [weak self] in
+            
+            self?.controller.back()
+        }
+    }
 }

@@ -32,4 +32,11 @@ final class MCreateTravel:Model<ArchCreateTravel>
         
         super.init()
     }
+    
+    //MARK: internal
+    
+    func select(item:MCreateTravelProtocol)
+    {
+        travel?.mode = item.mode
+    }
 }
