@@ -15,8 +15,7 @@ final class MStoreKit:
         _ request:SKRequest,
         didFailWithError error:Error)
     {
-        model?.error = error.localizedDescription
-        model?.view?.refresh()
+        model?.statusError(error:error.localizedDescription)
     }
     
     func paymentQueue(
