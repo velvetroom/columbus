@@ -9,6 +9,8 @@ final class VCreateTravelList:VCollection<
     required init(controller:CCreateTravel)
     {
         super.init(controller:controller)
+        collectionView.isScrollEnabled = false
+        collectionView.bounces = false
         factoryViews()
     }
     
@@ -43,5 +45,27 @@ final class VCreateTravelList:VCollection<
         }
         
         return cellSize
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        numberOfItemsInSection section:Int) -> Int
+    {
+        let count:Int = controller.model.items.count
+        
+        return count
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let item:MCreateTravelProtocol = modelAtIndex(
+            index:indexPath)
+        let cell:VCreateTravelListCell = cellAtIndex(
+            indexPath:indexPath)
+        cell.config(model:item)
+        
+        return cell
     }
 }
