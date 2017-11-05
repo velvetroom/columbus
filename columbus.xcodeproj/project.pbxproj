@@ -42,6 +42,7 @@
 		DA1906C01FAFC33F008147EA /* MStoreStatusReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906BF1FAFC33F008147EA /* MStoreStatusReady.swift */; };
 		DA1906C21FAFC369008147EA /* VStoreStatusReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906C11FAFC369008147EA /* VStoreStatusReady.swift */; };
 		DA1906C41FAFC6DC008147EA /* MStoreKitPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906C31FAFC6DC008147EA /* MStoreKitPurchases.swift */; };
+		DA1906C61FAFC80B008147EA /* MStorePerkStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906C51FAFC80B008147EA /* MStorePerkStatusProtocol.swift */; };
 		DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */; };
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
@@ -395,6 +396,7 @@
 		DA1906BF1FAFC33F008147EA /* MStoreStatusReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStoreStatusReady.swift; sourceTree = "<group>"; };
 		DA1906C11FAFC369008147EA /* VStoreStatusReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReady.swift; sourceTree = "<group>"; };
 		DA1906C31FAFC6DC008147EA /* MStoreKitPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStoreKitPurchases.swift; sourceTree = "<group>"; };
+		DA1906C51FAFC80B008147EA /* MStorePerkStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusProtocol.swift; sourceTree = "<group>"; };
 		DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusError.swift; sourceTree = "<group>"; };
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
@@ -748,6 +750,7 @@
 				DA1906C31FAFC6DC008147EA /* MStoreKitPurchases.swift */,
 				DA1906BD1FAFBDD9008147EA /* MStoreKitDelegate.swift */,
 				DA7950751FAF0A440057F6EE /* MStorePerkProtocol.swift */,
+				DA1906C51FAFC80B008147EA /* MStorePerkStatusProtocol.swift */,
 				DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */,
 			);
 			path = Store;
@@ -1609,6 +1612,7 @@
 				DA1FD2991FAF1C660098C80C /* MStoreStatusProtocol.swift in Sources */,
 				DAB2F8ED1F96689B00C1EF4A /* CCreate.swift in Sources */,
 				DA5259FE1F9F7502004F8503 /* MSettingsTravelModeProtocol.swift in Sources */,
+				DA1906C61FAFC80B008147EA /* MStorePerkStatusProtocol.swift in Sources */,
 				DABED9B21F9E996300635E82 /* VSettingsBar.swift in Sources */,
 				DA0448011F97553100BA2D45 /* MCreateLocationStrategyReady.swift in Sources */,
 				DA0447FD1F9747B800BA2D45 /* VCreateStatusDenied.swift in Sources */,
