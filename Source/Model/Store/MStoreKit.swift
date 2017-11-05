@@ -11,6 +11,13 @@ final class MStoreKit:NSObject
         clean()
     }
     
+    //MARK: private
+    
+    private func asyncRestorePurchases()
+    {
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
     //MARK: internal
     
     func start()
@@ -33,5 +40,15 @@ final class MStoreKit:NSObject
         self.request = request
         
         request.start()
+    }
+    
+    func restorePurchases()
+    {
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.asyncRestorePurchases()
+        }
     }
 }
