@@ -1,5 +1,5 @@
 import UIKit
 
-final class VStoreStatusReadyListCellPurchasing:VStoreStatusReadyListCell
+final class VStoreStatusReadyListCellPurchasing:VStoreStatusReadyListCellAvailable
 {
 }

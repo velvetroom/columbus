@@ -52,6 +52,9 @@
 		DA1906D41FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906D31FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift */; };
 		DA1906D61FAFCAA8008147EA /* MStorePerkStatusUnavailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906D51FAFCAA8008147EA /* MStorePerkStatusUnavailable.swift */; };
 		DA1906D81FAFCB0B008147EA /* MStorePerkStatusPurchasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906D71FAFCB0B008147EA /* MStorePerkStatusPurchasing.swift */; };
+		DA1906DA1FAFCB73008147EA /* MStorePerkStatusPurchased.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906D91FAFCB73008147EA /* MStorePerkStatusPurchased.swift */; };
+		DA1906DC1FAFCBAB008147EA /* MStorePerkStatusDeferred.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906DB1FAFCBAB008147EA /* MStorePerkStatusDeferred.swift */; };
+		DA1906E01FAFCBF1008147EA /* MStorePerkStatusAvailableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1906DF1FAFCBF1008147EA /* MStorePerkStatusAvailableProtocol.swift */; };
 		DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */; };
 		DA1A26B81F99415700FAF78C /* MCreateStatusErrorDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */; };
 		DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */; };
@@ -322,6 +325,9 @@
 		DAD387261FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */; };
 		DAD387281FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */; };
 		DAD3872A1FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */; };
+		DAD76D401FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD76D3F1FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift */; };
+		DAD76D421FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD76D411FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift */; };
+		DAD76D441FAFCD33000DA8CC /* MStorePerkStatusNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD76D431FAFCD33000DA8CC /* MStorePerkStatusNew.swift */; };
 		DAD7C67B1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C67A1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift */; };
 		DAD7C67D1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C67C1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift */; };
 		DAD7C67F1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD7C67E1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift */; };
@@ -415,6 +421,9 @@
 		DA1906D31FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellDeferred.swift; sourceTree = "<group>"; };
 		DA1906D51FAFCAA8008147EA /* MStorePerkStatusUnavailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusUnavailable.swift; sourceTree = "<group>"; };
 		DA1906D71FAFCB0B008147EA /* MStorePerkStatusPurchasing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusPurchasing.swift; sourceTree = "<group>"; };
+		DA1906D91FAFCB73008147EA /* MStorePerkStatusPurchased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusPurchased.swift; sourceTree = "<group>"; };
+		DA1906DB1FAFCBAB008147EA /* MStorePerkStatusDeferred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusDeferred.swift; sourceTree = "<group>"; };
+		DA1906DF1FAFCBF1008147EA /* MStorePerkStatusAvailableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusAvailableProtocol.swift; sourceTree = "<group>"; };
 		DA1A26B51F993ECD00FAF78C /* VCreateStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusError.swift; sourceTree = "<group>"; };
 		DA1A26B71F99415700FAF78C /* MCreateStatusErrorDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorDatabase.swift; sourceTree = "<group>"; };
 		DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorProtocol.swift; sourceTree = "<group>"; };
@@ -687,6 +696,9 @@
 		DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapFactory.swift; sourceTree = "<group>"; };
 		DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveSnapshot.swift; sourceTree = "<group>"; };
 		DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveSnapshotFactory.swift; sourceTree = "<group>"; };
+		DAD76D3F1FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellAvailable.swift; sourceTree = "<group>"; };
+		DAD76D411FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellNew.swift; sourceTree = "<group>"; };
+		DAD76D431FAFCD33000DA8CC /* MStorePerkStatusNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusNew.swift; sourceTree = "<group>"; };
 		DAD7C67A1FA8CEC100534D7A /* MCreateSaveRenderSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderSlice.swift; sourceTree = "<group>"; };
 		DAD7C67C1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderSliceRect.swift; sourceTree = "<group>"; };
 		DAD7C67E1FA8CF4400534D7A /* MCreateSaveRenderSliceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveRenderSliceFactory.swift; sourceTree = "<group>"; };
@@ -769,9 +781,13 @@
 				DA1906BD1FAFBDD9008147EA /* MStoreKitDelegate.swift */,
 				DA7950751FAF0A440057F6EE /* MStorePerkProtocol.swift */,
 				DA1906C51FAFC80B008147EA /* MStorePerkStatusProtocol.swift */,
+				DA1906DF1FAFCBF1008147EA /* MStorePerkStatusAvailableProtocol.swift */,
 				DA1906C71FAFC89C008147EA /* MStorePerkStatusLoading.swift */,
 				DA1906D51FAFCAA8008147EA /* MStorePerkStatusUnavailable.swift */,
 				DA1906D71FAFCB0B008147EA /* MStorePerkStatusPurchasing.swift */,
+				DA1906D91FAFCB73008147EA /* MStorePerkStatusPurchased.swift */,
+				DA1906DB1FAFCBAB008147EA /* MStorePerkStatusDeferred.swift */,
+				DAD76D431FAFCD33000DA8CC /* MStorePerkStatusNew.swift */,
 				DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */,
 			);
 			path = Store;
@@ -787,9 +803,11 @@
 				DA1906C91FAFC8C5008147EA /* VStoreStatusReadyListCell.swift */,
 				DA1906CB1FAFC8E6008147EA /* VStoreStatusReadyListCellLoading.swift */,
 				DA1906CD1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift */,
+				DAD76D3F1FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift */,
 				DA1906CF1FAFC95F008147EA /* VStoreStatusReadyListCellPurchasing.swift */,
 				DA1906D11FAFC96A008147EA /* VStoreStatusReadyListCellPurchased.swift */,
 				DA1906D31FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift */,
+				DAD76D411FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1545,6 +1563,7 @@
 				DA65ED021F95E68700720673 /* VMenu.swift in Sources */,
 				DAECA2E01F9FD72E0051F757 /* VSettingsListCellTravelModeListSelector.swift in Sources */,
 				DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */,
+				DA1906E01FAFCBF1008147EA /* MStorePerkStatusAvailableProtocol.swift in Sources */,
 				DA2EE5691F98AC4400488A07 /* MCreateMapStatusExpanded.swift in Sources */,
 				DA7B65221F9E6873001CDC35 /* VMenuSynth.swift in Sources */,
 				DAC385EE1FA77B32001138CD /* VMapPinFactory.swift in Sources */,
@@ -1585,6 +1604,7 @@
 				DA9C04691FABE9E3006F57E1 /* MHomeInfoPlans.swift in Sources */,
 				DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */,
 				DAECA2DC1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift in Sources */,
+				DAD76D401FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift in Sources */,
 				DA2EE5731F98B46C00488A07 /* VCreateUpdate.swift in Sources */,
 				DABC26951FA39FA400746CDD /* MCreateSaveActions.swift in Sources */,
 				DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */,
@@ -1603,6 +1623,7 @@
 				DAA5B48D1F99370200F9121C /* DPlanTravel.swift in Sources */,
 				DAC385EA1FA77AAF001138CD /* VMapFactory.swift in Sources */,
 				DAA9255E1FA542E900B72DB2 /* MCreateSavePixelRangeFactory.swift in Sources */,
+				DAD76D421FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift in Sources */,
 				DA4E5B011F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift in Sources */,
 				DA1906C21FAFC369008147EA /* VStoreStatusReady.swift in Sources */,
 				DA65ECDB1F95E68700720673 /* DatabaseFactory.swift in Sources */,
@@ -1662,6 +1683,7 @@
 				DA4BC93B1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift in Sources */,
 				DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */,
 				DAD889041F9D2EFA000EC7FD /* MCreatePlanStopRemove.swift in Sources */,
+				DA1906DC1FAFCBAB008147EA /* MStorePerkStatusDeferred.swift in Sources */,
 				DA740F931F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift in Sources */,
 				DABED9B41F9E99B000635E82 /* VSettingsList.swift in Sources */,
 				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
@@ -1669,6 +1691,7 @@
 				DA65ECF31F95E68700720673 /* Model.swift in Sources */,
 				DA65ECDE1F95E68700720673 /* ExtensionNotification.swift in Sources */,
 				DA0447FF1F97484500BA2D45 /* MCreateStatusDenied.swift in Sources */,
+				DA1906DA1FAFCB73008147EA /* MStorePerkStatusPurchased.swift in Sources */,
 				DA1906C01FAFC33F008147EA /* MStoreStatusReady.swift in Sources */,
 				DA2944DA1FA3F99200645DA4 /* MCreateSaveFactory.swift in Sources */,
 				DA7D958F1FA762C300A620FB /* MHomeStatusProtocol.swift in Sources */,
@@ -1784,6 +1807,7 @@
 				DA8DF8CF1FA94CD200276867 /* VPlansListActions.swift in Sources */,
 				DA1906CE1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift in Sources */,
 				DADA42041F9680AE00DD1FC4 /* MCreateLocation.swift in Sources */,
+				DAD76D441FAFCD33000DA8CC /* MStorePerkStatusNew.swift in Sources */,
 				DA96A2951FAE779800109455 /* MCreateTravel.swift in Sources */,
 				DA7D95931FA763A100A620FB /* MHomeStatusReady.swift in Sources */,
 				DA7950761FAF0A440057F6EE /* MStorePerkProtocol.swift in Sources */,

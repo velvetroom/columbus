@@ -1,5 +1,5 @@
 import UIKit
 
-final class VStoreStatusReadyListCellDeferred:VStoreStatusReadyListCell
+final class VStoreStatusReadyListCellDeferred:VStoreStatusReadyListCellAvailable
 {
 }

@@ -1,11 +1,11 @@
 import Foundation
 import StoreKit
 
-struct MStorePerkStatusPurchasing:
+struct MStorePerkStatusDeferred:
     MStorePerkStatusProtocol,
     MStorePerkStatusAvailableProtocol
 {
-    let reusableIdentifier:String = VStoreStatusReadyListCellPurchasing.reusableIdentifier
+    let reusableIdentifier:String = VStoreStatusReadyListCellDeferred.reusableIdentifier
     let product:SKProduct
     let price:String
 }
