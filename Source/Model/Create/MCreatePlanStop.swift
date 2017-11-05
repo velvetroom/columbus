@@ -62,6 +62,13 @@ extension MCreatePlan
             stop:stop)
     }
     
+    func updated(travel:DPlanTravel)
+    {
+        view?.viewBar.viewStops.updateFooter()
+        view?.viewBar.viewTravel.updateTravel(
+            travel:travel)
+    }
+    
     func removeTravels(stop:DPlanStop)
     {
         if let origin:DPlanTravel = stop.originTravel
