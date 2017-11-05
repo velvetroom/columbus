@@ -29,7 +29,7 @@ extension MStore
         
         for perk:MStorePerkProtocol in perks
         {
-            map[perk.purchaseId] = perk
+            map[perk.identifier] = perk
         }
         
         return map
