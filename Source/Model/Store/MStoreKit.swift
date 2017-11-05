@@ -7,15 +7,17 @@ final class MStoreKit:
     SKProductsRequestDelegate,
     SKPaymentTransactionObserver
 {
-    private weak var model:MStore?
-    
-    init(model:MStore)
-    {
-        super.init()
-        self.model = model
-    }
-    
+    weak var model:MStore?
+
     //MARK: storekit
+    
+    func request(
+        _ request:SKRequest,
+        didFailWithError error:Error)
+    {
+        model?.error = error.localizedDescription
+        model?.view?.refresh()
+    }
     
     func paymentQueue(
         _ queue:SKPaymentQueue,
