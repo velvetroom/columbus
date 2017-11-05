@@ -45,6 +45,7 @@
 		DA1FD2951FAF13350098C80C /* store.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1FD2941FAF13350098C80C /* store.xcassets */; };
 		DA1FD2971FAF16EB0098C80C /* MStorePerks.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */; };
 		DA1FD2991FAF1C660098C80C /* MStoreStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2981FAF1C660098C80C /* MStoreStatusProtocol.swift */; };
+		DA1FD29B1FAF1E590098C80C /* MStoreStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD29A1FAF1E590098C80C /* MStoreStatusError.swift */; };
 		DA22194D1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */; };
 		DA22194F1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */; };
 		DA2219511FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */; };
@@ -389,6 +390,7 @@
 		DA1FD2941FAF13350098C80C /* store.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = store.xcassets; sourceTree = "<group>"; };
 		DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerks.swift; sourceTree = "<group>"; };
 		DA1FD2981FAF1C660098C80C /* MStoreStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStoreStatusProtocol.swift; sourceTree = "<group>"; };
+		DA1FD29A1FAF1E590098C80C /* MStoreStatusError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStoreStatusError.swift; sourceTree = "<group>"; };
 		DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelList.swift; sourceTree = "<group>"; };
@@ -722,6 +724,7 @@
 				DA7950731FAF09000057F6EE /* MStoreFactory.swift */,
 				DA1FD2961FAF16EB0098C80C /* MStorePerks.swift */,
 				DA1FD2981FAF1C660098C80C /* MStoreStatusProtocol.swift */,
+				DA1FD29A1FAF1E590098C80C /* MStoreStatusError.swift */,
 				DA7950711FAF059A0057F6EE /* MStoreKit.swift */,
 				DA7950751FAF0A440057F6EE /* MStorePerkProtocol.swift */,
 				DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */,
@@ -1800,6 +1803,7 @@
 				DA65ECEB1F95E68700720673 /* AppDelegate.swift in Sources */,
 				DA2EE5651F98A9A500488A07 /* MCreateMapMenuContract.swift in Sources */,
 				DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */,
+				DA1FD29B1FAF1E590098C80C /* MStoreStatusError.swift in Sources */,
 				DA65ECEA1F95E68700720673 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

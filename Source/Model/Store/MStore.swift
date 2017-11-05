@@ -32,4 +32,13 @@ final class MStore:Model<ArchStore>
         
         view?.updateStatus()
     }
+    
+    func statusError(error:String)
+    {
+        let status:MStoreStatusError = MStoreStatusError(
+            error:error)
+        self.status = status
+        
+        view?.updateStatus()
+    }
 }
