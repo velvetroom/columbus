@@ -2,13 +2,15 @@ import Foundation
 
 final class CCreateTravel:Controller<ArchCreateTravel>
 {
+    private weak var controller:CCreate!
+    
     init(
-        database:Database,
+        controller:CCreate,
         travel:DPlanTravel)
     {
         super.init()
-        model.database = database
         model.travel = travel
+        self.controller = controller
     }
     
     required init?(coder:NSCoder)
@@ -20,6 +22,19 @@ final class CCreateTravel:Controller<ArchCreateTravel>
     
     func back()
     {
-        parentController?.dismissAnimateOver(completion:nil)
+        guard
+            
+            let travel:DPlanTravel = model.travel
+        
+        else
+        {
+            return
+        }
+        
+        parentController?.dismissAnimateOver
+        { [weak controller] in
+            
+            controller?.travelEdited(travel:travel)
+        }
     }
 }

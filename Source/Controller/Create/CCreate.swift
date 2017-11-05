@@ -61,22 +61,24 @@ final class CCreate:Controller<ArchCreate>
             vertical:ControllerParent.Vertical.bottom)
     }
     
-    func editTrave(
+    func editTravel(
         travel:DPlanTravel)
     {
-        guard
-        
-            let database:Database = model.database
-        
-        else
-        {
-            return
-        }
-        
         let controller:CCreateTravel = CCreateTravel(
-            database:database,
+            controller:self,
             travel:travel)
         
         parentController?.animateOver(controller:controller)
+    }
+    
+    func travelEdited(
+        travel:DPlanTravel)
+    {
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.model.plan?.update(travel:travel)
+        }
     }
 }
