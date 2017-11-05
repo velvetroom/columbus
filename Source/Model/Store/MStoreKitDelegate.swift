@@ -1,7 +1,10 @@
 import Foundation
 import StoreKit
 
-extension MStoreKit
+extension MStoreKit:
+    SKRequestDelegate,
+    SKProductsRequestDelegate,
+    SKPaymentTransactionObserver
 {
     //MARK: storekit
     
