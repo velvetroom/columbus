@@ -1,5 +1,7 @@
 MHomeInfoSettings_title="Settings";
 MHomeInfoSettings_descr="\nAdjust and personalize Columbus App.\nBe sure to take a look in here to have a better experience with your app.";
+MHomeInfoStore_title="Store";
+MHomeInfoStore_descr="\nUpgrade Columbus App.";
 MHomeInfoHome_title="Home";
 MHomeInfoHome_descr="\nFrom here you will be able to track your Navigation according to your Active Plan even if you are offline.";
 MHomeInfoCreate_title="Create";

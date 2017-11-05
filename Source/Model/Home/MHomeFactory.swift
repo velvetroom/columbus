@@ -31,12 +31,14 @@ extension MHome
     class func factoryInfo() -> [MHomeInfoProtocol]
     {
         let itemSettings:MHomeInfoSettings = MHomeInfoSettings()
+        let itemStore:MHomeInfoStore = MHomeInfoStore()
         let itemHome:MHomeInfoHome = MHomeInfoHome()
         let itemCreate:MHomeInfoCreate = MHomeInfoCreate()
         let itemPlans:MHomeInfoPlans = MHomeInfoPlans()
         
         let items:[MHomeInfoProtocol] = [
             itemSettings,
+            itemStore,
             itemHome,
             itemCreate,
             itemPlans]
