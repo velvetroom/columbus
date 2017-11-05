@@ -17,8 +17,12 @@ extension MCreatePlan
     private func asyncUpdated(
         travel:DPlanTravel)
     {
-        addTravel(travel:travel)
-        updated(travel:travel)
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.addTravel(travel:travel)
+            self?.updated(travel:travel)
+        }
     }
     
     //MARK: internal
