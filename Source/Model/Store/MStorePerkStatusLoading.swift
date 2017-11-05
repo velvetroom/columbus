@@ -2,5 +2,5 @@ import Foundation
 
 struct MStorePerkStatusLoading:MStorePerkStatusProtocol
 {
-    let reusableIdentifier:String
+    let reusableIdentifier:String = VStoreStatusReadyListCellLoading.reusableIdentifier
 }
