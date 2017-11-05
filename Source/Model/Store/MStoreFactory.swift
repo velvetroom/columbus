@@ -45,6 +45,14 @@ extension MStore
             SKPaymentTransactionState:
             TransactionRouter] = [
                 SKPaymentTransactionState.purchasing:
+                transactionPurchasing,
+                SKPaymentTransactionState.restored:
+                transactionPurchasing,
+                SKPaymentTransactionState.purchased:
+                transactionPurchasing,
+                SKPaymentTransactionState.failed:
+                transactionPurchasing,
+                SKPaymentTransactionState.deferred:
                 transactionPurchasing]
         
         return map
