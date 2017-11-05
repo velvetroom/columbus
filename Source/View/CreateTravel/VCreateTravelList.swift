@@ -4,6 +4,10 @@ final class VCreateTravelList:VCollection<
     ArchCreateTravel,
     VCreateTravelListCell>
 {
+    weak var viewSelector:VCreateTravelListSelector!
+    weak var layoutSelectorLeft:NSLayoutConstraint!
+    weak var layoutSelectorTop:NSLayoutConstraint!
+    let kSelectorSize:CGFloat = 50
     private var cellSize:CGSize?
     
     required init(controller:CCreateTravel)
