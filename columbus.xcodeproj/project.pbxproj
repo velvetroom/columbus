@@ -197,6 +197,7 @@
 		DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */; };
 		DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */; };
 		DA79505C1FAED8B10057F6EE /* MCreateTravelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */; };
+		DA79505E1FAEDAA50057F6EE /* VCreateTravelListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505D1FAEDAA50057F6EE /* VCreateTravelListConfig.swift */; };
 		DA7B65221F9E6873001CDC35 /* VMenuSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */; };
 		DA7B65241F9E6B5F001CDC35 /* VMenuActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */; };
 		DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */; };
@@ -528,6 +529,7 @@
 		DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationFactory.swift; sourceTree = "<group>"; };
 		DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationDelegate.swift; sourceTree = "<group>"; };
 		DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelFactory.swift; sourceTree = "<group>"; };
+		DA79505D1FAEDAA50057F6EE /* VCreateTravelListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListConfig.swift; sourceTree = "<group>"; };
 		DA7B65211F9E6873001CDC35 /* VMenuSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuSynth.swift; sourceTree = "<group>"; };
 		DA7B65231F9E6B5F001CDC35 /* VMenuActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMenuActions.swift; sourceTree = "<group>"; };
 		DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanSave.swift; sourceTree = "<group>"; };
@@ -1098,6 +1100,7 @@
 				DA96A2991FAE78E900109455 /* VCreateTravelFactory.swift */,
 				DA96A29B1FAE797200109455 /* VCreateTravelBackground.swift */,
 				DABF39231FAE7D7E0072B240 /* VCreateTravelList.swift */,
+				DA79505D1FAEDAA50057F6EE /* VCreateTravelListConfig.swift */,
 				DABF39251FAE7F3E0072B240 /* VCreateTravelListCell.swift */,
 			);
 			path = CreateTravel;
@@ -1738,6 +1741,7 @@
 				DA750CAA1FA78A7300459985 /* MHomeFactory.swift in Sources */,
 				DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */,
 				DA65ECEB1F95E68700720673 /* AppDelegate.swift in Sources */,
+				DA79505E1FAEDAA50057F6EE /* VCreateTravelListConfig.swift in Sources */,
 				DA2EE5651F98A9A500488A07 /* MCreateMapMenuContract.swift in Sources */,
 				DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */,
 				DA65ECEA1F95E68700720673 /* Controller.swift in Sources */,
