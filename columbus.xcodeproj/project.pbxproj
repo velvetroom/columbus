@@ -42,6 +42,7 @@
 		DA1A6C401FAA1D5F0022A170 /* MSettingsDistanceMiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A6C3F1FAA1D5F0022A170 /* MSettingsDistanceMiles.swift */; };
 		DA1AD3B21F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */; };
 		DA1FD2931FAF0CB70098C80C /* MStorePerkUnlimited.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */; };
+		DA1FD2951FAF13350098C80C /* store.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1FD2941FAF13350098C80C /* store.xcassets */; };
 		DA22194D1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */; };
 		DA22194F1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */; };
 		DA2219511FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */; };
@@ -383,6 +384,7 @@
 		DA1A6C3F1FAA1D5F0022A170 /* MSettingsDistanceMiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceMiles.swift; sourceTree = "<group>"; };
 		DA1AD3B11F9FE87200930D2C /* VSettingsListCellTravelModeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeFactory.swift; sourceTree = "<group>"; };
 		DA1FD2921FAF0CB70098C80C /* MStorePerkUnlimited.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkUnlimited.swift; sourceTree = "<group>"; };
+		DA1FD2941FAF13350098C80C /* store.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = store.xcassets; sourceTree = "<group>"; };
 		DA22194C1FAA821700DD6F86 /* MSettingsDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA22194E1FAA84E500DD6F86 /* VSettingsListCellDetailLevelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelFactory.swift; sourceTree = "<group>"; };
 		DA2219501FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelList.swift; sourceTree = "<group>"; };
@@ -805,6 +807,7 @@
 				DADA42011F967CAB00DD1FC4 /* generic.xcassets */,
 				DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */,
 				DA8DF8D21FA9579E00276867 /* plans.xcassets */,
+				DA1FD2941FAF13350098C80C /* store.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1451,6 +1454,7 @@
 				DA65ECDA1F95E68700720673 /* LocalizableController.strings in Resources */,
 				DA65ECD91F95E68700720673 /* LocalizableView.strings in Resources */,
 				DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */,
+				DA1FD2951FAF13350098C80C /* store.xcassets in Resources */,
 				DA65ED361F95E68700720673 /* LICENSE in Resources */,
 				DA65ED3A1F95EFF000720673 /* Design in Resources */,
 				DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */,
