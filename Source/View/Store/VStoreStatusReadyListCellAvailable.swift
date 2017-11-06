@@ -10,7 +10,6 @@ class VStoreStatusReadyListCellAvailable:VStoreStatusReadyListCell
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        isUserInteractionEnabled = false
         
         let labelPrice:UILabel = UILabel()
         labelPrice.isUserInteractionEnabled = false

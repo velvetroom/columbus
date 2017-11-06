@@ -38,14 +38,14 @@ extension MStore
         
         else
         {
-            perk.statusPurchased(
+            perk.statusNew(
                 product:product,
                 price:price)
             
             return
         }
         
-        perk.statusNew(
+        perk.statusPurchased(
             product:product,
             price:price)
     }

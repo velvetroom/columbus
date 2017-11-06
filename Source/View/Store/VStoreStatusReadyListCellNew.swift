@@ -2,14 +2,13 @@ import UIKit
 
 final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
 {
-    private let kButtonFontSize:CGFloat = 15
-    private let kButtonHeight:CGFloat = 80
-    private let kButtonWidth:CGFloat = 100
+    private let kButtonFontSize:CGFloat = 16
+    private let kButtonHeight:CGFloat = 50
+    private let kButtonWidth:CGFloat = 110
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
-        isUserInteractionEnabled = false
         
         let buttonPurchase:UIButton = UIButton()
         buttonPurchase.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +28,7 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
         let buttonRestore:UIButton = UIButton()
         buttonRestore.translatesAutoresizingMaskIntoConstraints = false
         buttonRestore.setTitleColor(
-            UIColor.colourSuccess,
+            UIColor.colourFail,
             for:UIControlState.normal)
         buttonRestore.setTitleColor(
             UIColor.colourBackgroundDark,
