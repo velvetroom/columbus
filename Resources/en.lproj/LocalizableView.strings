@@ -26,3 +26,4 @@ VStoreStatusLoading_labelTitle="Loading";
 VStoreStatusReadyBar_labelTitle="Store";
 VStoreStatusReadyBarRestore_button="Restore purchases";
 VStoreStatusReadyListCellUnavailable_label="Not available";
+VStoreStatusReadyListCellPurchasing_label="Purchasing";
