@@ -25,3 +25,4 @@ VPlansListHeader_labelText="Once you create Navigation Plans\nthey will appear h
 VStoreStatusLoading_labelTitle="Loading";
 VStoreStatusReadyBar_labelTitle="Store";
 VStoreStatusReadyBarRestore_button="Restore purchases";
+VStoreStatusReadyListCellUnavailable_label="Not available";
