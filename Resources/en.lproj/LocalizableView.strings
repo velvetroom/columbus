@@ -29,3 +29,5 @@ VStoreStatusReadyListCellUnavailable_label="Not available";
 VStoreStatusReadyListCellPurchasing_label="Purchasing";
 VStoreStatusReadyListCellPurchased_label="Purchased";
 VStoreStatusReadyListCellDeferred_label="Purchase deferred";
+VStoreStatusReadyListCellNew_buttonRestore="Restore";
+VStoreStatusReadyListCellNew_buttonPurchase="Purchase";
