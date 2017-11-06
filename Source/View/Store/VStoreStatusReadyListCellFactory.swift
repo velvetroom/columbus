@@ -17,8 +17,17 @@ extension VStoreStatusReadyListCell
         imageView.translatesAutoresizingMaskIntoConstraints = false
         self.imageView = imageView
         
+        let labelTitle:UILabel = UILabel()
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.font = UIFont.bold(size:kTitleFontSize)
+        labelTitle.textColor = UIColor.white
+        self.labelTitle = labelTitle
+        
         addSubview(gradient)
         addSubview(imageView)
+        addSubview(labelTitle)
         
         NSLayoutConstraint.topToTop(
             view:gradient,
@@ -38,6 +47,16 @@ extension VStoreStatusReadyListCell
             constant:kImageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:imageView,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:labelTitle,
+            toView:imageView)
+        NSLayoutConstraint.height(
+            view:labelTitle,
+            constant:kTitleHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:labelTitle,
             toView:self)
     }
 }

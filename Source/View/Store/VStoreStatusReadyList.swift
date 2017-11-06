@@ -8,7 +8,7 @@ final class VStoreStatusReadyList:VCollection<
     let kInsetsTop:CGFloat = 64
     let kCollectionBottom:CGFloat = 50
     private var cellSize:CGSize?
-    private let kCellHeight:CGFloat = 400
+    private let kCellHeight:CGFloat = 450
     
     required init(controller:CStore)
     {
