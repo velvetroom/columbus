@@ -304,6 +304,7 @@
 		DABDE8851FAA04F200E24BBE /* MSettingsDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDE8841FAA04F200E24BBE /* MSettingsDistance.swift */; };
 		DABDE8871FAA058C00E24BBE /* DSettingsDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDE8861FAA058C00E24BBE /* DSettingsDistance.swift */; };
 		DABE09AB1FAFE53200FE08E4 /* VStoreStatusReadyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE09AA1FAFE53200FE08E4 /* VStoreStatusReadyList.swift */; };
+		DABE09AD1FAFE56A00FE08E4 /* VStoreStatusReadyListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE09AC1FAFE56A00FE08E4 /* VStoreStatusReadyListConfig.swift */; };
 		DABED9B01F9E94AF00635E82 /* MCreatePlanDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABED9AF1F9E94AF00635E82 /* MCreatePlanDirections.swift */; };
 		DABED9B21F9E996300635E82 /* VSettingsBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABED9B11F9E996300635E82 /* VSettingsBar.swift */; };
 		DABED9B41F9E99B000635E82 /* VSettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABED9B31F9E99B000635E82 /* VSettingsList.swift */; };
@@ -679,6 +680,7 @@
 		DABDE8841FAA04F200E24BBE /* MSettingsDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistance.swift; sourceTree = "<group>"; };
 		DABDE8861FAA058C00E24BBE /* DSettingsDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSettingsDistance.swift; sourceTree = "<group>"; };
 		DABE09AA1FAFE53200FE08E4 /* VStoreStatusReadyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyList.swift; sourceTree = "<group>"; };
+		DABE09AC1FAFE56A00FE08E4 /* VStoreStatusReadyListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListConfig.swift; sourceTree = "<group>"; };
 		DABED9AF1F9E94AF00635E82 /* MCreatePlanDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanDirections.swift; sourceTree = "<group>"; };
 		DABED9B11F9E996300635E82 /* VSettingsBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsBar.swift; sourceTree = "<group>"; };
 		DABED9B31F9E99B000635E82 /* VSettingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsList.swift; sourceTree = "<group>"; };
@@ -813,6 +815,7 @@
 				DAEED1631FAFDE7A00AD8B67 /* VStoreStatusReadyBar.swift */,
 				DAEED1651FAFDF7000AD8B67 /* VStoreStatusReadyBarRestore.swift */,
 				DABE09AA1FAFE53200FE08E4 /* VStoreStatusReadyList.swift */,
+				DABE09AC1FAFE56A00FE08E4 /* VStoreStatusReadyListConfig.swift */,
 				DA1906C91FAFC8C5008147EA /* VStoreStatusReadyListCell.swift */,
 				DA1906CD1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift */,
 				DAD76D3F1FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift */,
@@ -1588,6 +1591,7 @@
 				DA1906D01FAFC95F008147EA /* VStoreStatusReadyListCellPurchasing.swift in Sources */,
 				DA1906D41FAFC98A008147EA /* VStoreStatusReadyListCellDeferred.swift in Sources */,
 				DA2926751FACD07400913141 /* VCreateStatusReadyBarStopsFooterTools.swift in Sources */,
+				DABE09AD1FAFE56A00FE08E4 /* VStoreStatusReadyListConfig.swift in Sources */,
 				DAD387281FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
 				DA750CB01FA78D4E00459985 /* VHomeReadyFactory.swift in Sources */,
