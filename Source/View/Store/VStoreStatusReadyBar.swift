@@ -7,6 +7,7 @@ final class VStoreStatusReadyBar:View<ArchStore>
     private let kTitleWidth:CGFloat = 150
     private let kBorderHeight:CGFloat = 1
     private let kFontSize:CGFloat = 14
+    private let kRestoreWidth:CGFloat = 200
     
     required init(controller:CStore)
     {
@@ -25,8 +26,12 @@ final class VStoreStatusReadyBar:View<ArchStore>
         labelTitle.text = String.localizedView(
             key:"VStoreStatusReadyBar_labelTitle")
         
+        let viewRestore:VStoreStatusReadyBarRestore = VStoreStatusReadyBarRestore(
+            controller:controller)
+        
         addSubview(border)
         addSubview(labelTitle)
+        addSubview(viewRestore)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -52,6 +57,20 @@ final class VStoreStatusReadyBar:View<ArchStore>
         NSLayoutConstraint.width(
             view:labelTitle,
             constant:kTitleWidth)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewRestore,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:viewRestore,
+            toView:self)
+        NSLayoutConstraint.rightToRight(
+            view:viewRestore,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:viewRestore,
+            constant:kRestoreWidth)
     }
     
     required init?(coder:NSCoder)
