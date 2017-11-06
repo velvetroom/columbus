@@ -11,11 +11,37 @@ extension MStore
         
         guard
             
-            var perk:MStorePerkProtocol = perksMap[identifier],
+            let perk:MStorePerkProtocol = perksMap[identifier],
             let price:String = factoryPrice(product:product)
             
         else
         {
+            return
+        }
+        
+        received(
+            product:product,
+            perk:perk,
+            price:price)
+    }
+    
+    private func received(
+        product:SKProduct,
+        perk:MStorePerkProtocol,
+        price:String)
+    {
+        var perk:MStorePerkProtocol = perk
+        
+        guard
+        
+            let _:DPerk = settings?.perksMap[perk.perkType]
+        
+        else
+        {
+            perk.statusPurchased(
+                product:product,
+                price:price)
+            
             return
         }
         
