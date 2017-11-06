@@ -4,7 +4,7 @@ class VStoreStatusReadyListCell:UICollectionViewCell
 {
     weak var imageView:UIImageView!
     private(set) weak var controller:CStore?
-    let kImageHeight:CGFloat = 150
+    let kImageHeight:CGFloat = 260
     
     override init(frame:CGRect)
     {
