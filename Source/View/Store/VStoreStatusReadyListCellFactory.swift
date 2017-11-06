@@ -25,9 +25,17 @@ extension VStoreStatusReadyListCell
         labelTitle.textColor = UIColor.white
         self.labelTitle = labelTitle
         
+        let labelDescr:UILabel = UILabel()
+        labelDescr.translatesAutoresizingMaskIntoConstraints = false
+        labelDescr.backgroundColor = UIColor.clear
+        labelDescr.isUserInteractionEnabled = false
+        labelDescr.numberOfLines = 0
+        self.labelDescr = labelDescr
+        
         addSubview(gradient)
         addSubview(imageView)
         addSubview(labelTitle)
+        addSubview(labelDescr)
         
         NSLayoutConstraint.topToTop(
             view:gradient,
@@ -58,5 +66,16 @@ extension VStoreStatusReadyListCell
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:labelDescr,
+            toView:self,
+            constant:kDescrMargin)
+        layoutDescrHeight = NSLayoutConstraint.height(
+            view:labelDescr)
+        NSLayoutConstraint.equalsHorizontal(
+            view:labelDescr,
+            toView:self,
+            margin:kDescrMargin)
     }
 }
