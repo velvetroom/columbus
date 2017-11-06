@@ -42,7 +42,7 @@ final class VStore:ViewMain
             return
         }
         
-        view.refresh()
+        view.viewList.collectionView.reloadData()
     }
     
     //MARK: internal

@@ -2,6 +2,7 @@ import UIKit
 
 final class VStoreStatusReady:View<ArchStore>
 {
+    private(set) weak var viewList:VStoreStatusReadyList!
     private let kBarHeight:CGFloat = 64
     
     required init(controller:CStore)
@@ -22,6 +23,11 @@ final class VStoreStatusReady:View<ArchStore>
         let viewBar:VStoreStatusReadyBar = VStoreStatusReadyBar(
             controller:controller)
         
+        let viewList:VStoreStatusReadyList = VStoreStatusReadyList(
+            controller:controller)
+        self.viewList = viewList
+        
+        addSubview(viewList)
         addSubview(viewBar)
         
         NSLayoutConstraint.topToTop(
@@ -33,12 +39,9 @@ final class VStoreStatusReady:View<ArchStore>
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)
-    }
-    
-    //MARK: internal
-    
-    func refresh()
-    {
         
+        NSLayoutConstraint.equals(
+            view:viewList,
+            toView:self)
     }
 }
