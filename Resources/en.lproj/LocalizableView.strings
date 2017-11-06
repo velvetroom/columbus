@@ -28,3 +28,4 @@ VStoreStatusReadyBarRestore_button="Restore purchases";
 VStoreStatusReadyListCellUnavailable_label="Not available";
 VStoreStatusReadyListCellPurchasing_label="Purchasing";
 VStoreStatusReadyListCellPurchased_label="Purchased";
+VStoreStatusReadyListCellDeferred_label="Purchase deferred";
