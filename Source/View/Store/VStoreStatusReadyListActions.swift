@@ -13,7 +13,7 @@ extension VStoreStatusReadyList
         
         else
         {
-            return VStoreStatusReadyListCell.reusableIdentifier
+            return VStoreStatusReadyListCellUnavailable.reusableIdentifier
         }
         
         return status.reusableIdentifier
