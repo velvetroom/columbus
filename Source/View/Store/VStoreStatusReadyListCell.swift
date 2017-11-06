@@ -7,13 +7,18 @@ class VStoreStatusReadyListCell:UICollectionViewCell
     weak var labelDescr:UILabel!
     weak var layoutDescrHeight:NSLayoutConstraint!
     private(set) weak var controller:CStore?
+    let attributesDescr:[NSAttributedStringKey:Any]
     let kImageHeight:CGFloat = 260
     let kTitleHeight:CGFloat = 90
     let kTitleFontSize:CGFloat = 18
     let kDescrMargin:CGFloat = 20
+    private let kDescrFontSize:CGFloat = 16
     
     override init(frame:CGRect)
     {
+        attributesDescr = VStoreStatusReadyListCell.factoryAttributesDescr(
+            fontSize:kDescrFontSize)
+        
         super.init(frame:frame)
         backgroundColor = UIColor.white
         clipsToBounds = true

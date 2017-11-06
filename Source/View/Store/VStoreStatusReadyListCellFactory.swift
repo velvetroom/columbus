@@ -4,6 +4,18 @@ extension VStoreStatusReadyListCell
 {
     //MARK: internal
     
+    class func factoryAttributesDescr(
+        fontSize:CGFloat) -> [NSAttributedStringKey:Any]
+    {
+        let attributes:[NSAttributedStringKey:Any] = [
+            NSAttributedStringKey.font:
+                UIFont.regular(size:fontSize),
+            NSAttributedStringKey.foregroundColor:
+                UIColor.colourBackgroundDark]
+        
+        return attributes
+    }
+    
     func factoryViews()
     {
         let gradient:VGradient = VGradient.vertical(
