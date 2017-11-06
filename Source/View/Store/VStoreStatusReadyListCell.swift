@@ -2,9 +2,9 @@ import UIKit
 
 class VStoreStatusReadyListCell:UICollectionViewCell
 {
-    private(set) weak var imageView:UIImageView!
+    weak var imageView:UIImageView!
     private(set) weak var controller:CStore?
-    private let kImageHeight:CGFloat = 150
+    let kImageHeight:CGFloat = 150
     
     override init(frame:CGRect)
     {
@@ -12,24 +12,7 @@ class VStoreStatusReadyListCell:UICollectionViewCell
         backgroundColor = UIColor.white
         clipsToBounds = true
         
-        let imageView:UIImageView = UIImageView()
-        imageView.isUserInteractionEnabled = false
-        imageView.clipsToBounds = true
-        imageView.contentMode = UIViewContentMode.center
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        self.imageView = imageView
-        
-        addSubview(imageView)
-        
-        NSLayoutConstraint.topToTop(
-            view:imageView,
-            toView:self)
-        NSLayoutConstraint.height(
-            view:imageView,
-            constant:kImageHeight)
-        NSLayoutConstraint.equalsHorizontal(
-            view:imageView,
-            toView:self)
+        factoryViews()
     }
     
     required init?(coder:NSCoder)
