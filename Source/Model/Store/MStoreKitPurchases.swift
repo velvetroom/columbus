@@ -24,17 +24,8 @@ extension MStoreKit
     }
     
     private func asyncPurchase(
-        perk:MStorePerkProtocol)
+        product:SKProduct)
     {
-        guard
-            
-            let status:MStorePerkStatusNew = perk.status as? MStorePerkStatusNew
-            
-        else
-        {
-            return
-        }
-        
         let payment:SKPayment = SKPayment(
             product:status.product)
         SKPaymentQueue.default().add(payment)
@@ -70,13 +61,13 @@ extension MStoreKit
         }
     }
     
-    func purchase(perk:MStorePerkProtocol)
+    func purchase(product:SKProduct)
     {
         DispatchQueue.global(
             qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.asyncPurchase(perk:perk)
+            self?.asyncPurchase(product:product)
         }
     }
     

@@ -1,7 +1,9 @@
 import UIKit
+import StoreKit
 
 final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
 {
+    private weak var product:SKProduct?
     private let kButtonFontSize:CGFloat = 16
     private let kButtonHeight:CGFloat = 50
     private let kButtonWidth:CGFloat = 110
@@ -13,10 +15,10 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
         let buttonPurchase:UIButton = UIButton()
         buttonPurchase.translatesAutoresizingMaskIntoConstraints = false
         buttonPurchase.setTitleColor(
-            UIColor.colourSuccess,
+            UIColor.colourBackgroundDark,
             for:UIControlState.normal)
         buttonPurchase.setTitleColor(
-            UIColor.colourBackgroundDark,
+            UIColor.colourSuccess,
             for:UIControlState.highlighted)
         buttonPurchase.titleLabel!.font = UIFont.bold(
             size:kButtonFontSize)
@@ -73,5 +75,45 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func config(
+        controller:CStore,
+        model:MStorePerkProtocol)
+    {
+        guard
+        
+            let status:MStorePerkStatusNew = model.status as? MStorePerkStatusNew
+        
+        else
+        {
+            return
+        }
+        
+        product = status.product
+    }
+    
+    //MARK: selectors
+    
+    @objc
+    private func selectorPurchase(sender button:UIButton)
+    {
+        guard
+            
+            let product:SKProduct = self.product
+        
+        else
+        {
+            return
+        }
+        
+        controller?.model.modelKit.purchase(
+            product:product)
+    }
+    
+    @objc
+    private func selectorRestore(sender button:UIButton)
+    {
+        controller?.model.modelKit.restorePurchases()
     }
 }
