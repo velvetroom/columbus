@@ -22,5 +22,6 @@ VSettingsListCellDetailLevel_title="Detail level";
 VSettingsListCellDetailLevel_descr="\nHow much storage to use when\nsaving Navigation Plans";
 VPlansBar_labelTitle="Plans";
 VPlansListHeader_labelText="Once you create Navigation Plans\nthey will appear here";
+VStoreStatusLoading_labelTitle="Loading";
 VStoreStatusReadyBar_labelTitle="Store";
 VStoreStatusReadyBarRestore_button="Restore purchases";
