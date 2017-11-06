@@ -11,8 +11,10 @@ class VStoreStatusReadyListCell:UICollectionViewCell
     let kImageHeight:CGFloat = 260
     let kTitleHeight:CGFloat = 90
     let kTitleFontSize:CGFloat = 18
-    let kDescrMargin:CGFloat = 20
-    private let kDescrFontSize:CGFloat = 16
+    let kDescrMarginHorizontal:CGFloat = 20
+    let kDescrTop:CGFloat = 10
+    let kDescrMaxHeight:CGFloat = 300
+    private let kDescrFontSize:CGFloat = 14
     
     override init(frame:CGRect)
     {
@@ -40,5 +42,7 @@ class VStoreStatusReadyListCell:UICollectionViewCell
         self.controller = controller
         imageView.image = model.icon
         labelTitle.text = model.title
+        
+        addDescr(model:model)
     }
 }

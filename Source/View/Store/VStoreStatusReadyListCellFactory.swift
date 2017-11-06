@@ -11,7 +11,7 @@ extension VStoreStatusReadyListCell
             NSAttributedStringKey.font:
                 UIFont.regular(size:fontSize),
             NSAttributedStringKey.foregroundColor:
-                UIColor.colourBackgroundDark]
+                UIColor(white:0, alpha:0.5)]
         
         return attributes
     }
@@ -79,15 +79,15 @@ extension VStoreStatusReadyListCell
             view:labelTitle,
             toView:self)
         
-        NSLayoutConstraint.topToTop(
+        NSLayoutConstraint.topToBottom(
             view:labelDescr,
-            toView:self,
-            constant:kDescrMargin)
+            toView:imageView,
+            constant:kDescrTop)
         layoutDescrHeight = NSLayoutConstraint.height(
             view:labelDescr)
         NSLayoutConstraint.equalsHorizontal(
             view:labelDescr,
             toView:self,
-            margin:kDescrMargin)
+            margin:kDescrMarginHorizontal)
     }
 }
