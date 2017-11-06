@@ -55,6 +55,16 @@ final class VStoreStatusReadyList:VCollection<
     
     override func collectionView(
         _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let cell:VStoreStatusReadyListCell = viewAtIndex(
+            index:indexPath)
+        
+        return cell
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
         shouldSelectItemAt indexPath:IndexPath) -> Bool
     {
         return false
