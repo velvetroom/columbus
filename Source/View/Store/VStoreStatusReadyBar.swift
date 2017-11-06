@@ -7,7 +7,7 @@ final class VStoreStatusReadyBar:View<ArchStore>
     private let kTitleWidth:CGFloat = 150
     private let kBorderHeight:CGFloat = 1
     private let kFontSize:CGFloat = 14
-    private let kRestoreWidth:CGFloat = 200
+    private let kRestoreWidth:CGFloat = 150
     
     required init(controller:CStore)
     {

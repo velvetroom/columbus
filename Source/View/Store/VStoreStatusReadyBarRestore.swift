@@ -2,7 +2,7 @@ import UIKit
 
 final class VStoreStatusReadyBarRestore:View<ArchStore>
 {
-    private let kFontSize:CGFloat = 14
+    private let kFontSize:CGFloat = 13
     
     required init(controller:CStore)
     {
