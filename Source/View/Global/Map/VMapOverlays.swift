@@ -35,7 +35,7 @@ extension VMap
         
         add(
             route,
-            level:MKOverlayLevel.aboveRoads)
+            level:MKOverlayLevel.aboveLabels)
     }
     
     final func removeRoute(travel:DPlanTravel)

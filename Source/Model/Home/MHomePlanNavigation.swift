@@ -28,5 +28,6 @@ extension MHomePlan
         }
         
         addStops(stops:stops, view:view)
+        view.viewMap.centreUser()
     }
 }
