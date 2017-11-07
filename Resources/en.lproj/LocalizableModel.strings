@@ -9,6 +9,7 @@ MHomeInfoCreate_descr="\nThis is where you can create new Navigation Plans.";
 MHomeInfoPlans_title="Plans";
 MHomeInfoPlans_descr="\nNavigation Plans you have created.\nYou can select your Active Plan or edit them.";
 MCreateStatusErrorDatabase_message="\nFailed connecting to Database,\ntry again";
+MCreateStatusErrorAvailability_message="\nYou have reached the limit of Plans you can create.\n\nUpgrade to Unlimited Columbus in order to create more plans.";
 MCreateMapMenuDone_noStops="Plan has no Stops";
 MSettingsTravelModeDriving_title="Driving";
 MSettingsTravelModeCycling_title="Cycling";
