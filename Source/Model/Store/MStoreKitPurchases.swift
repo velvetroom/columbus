@@ -27,7 +27,7 @@ extension MStoreKit
         product:SKProduct)
     {
         let payment:SKPayment = SKPayment(
-            product:status.product)
+            product:product)
         SKPaymentQueue.default().add(payment)
     }
     

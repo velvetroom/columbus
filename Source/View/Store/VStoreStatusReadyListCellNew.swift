@@ -26,6 +26,10 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
             String.localizedView(
                 key:"VStoreStatusReadyListCellNew_buttonPurchase"),
             for:UIControlState.normal)
+        buttonPurchase.addTarget(
+            self,
+            action:#selector(selectorPurchase(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         let buttonRestore:UIButton = UIButton()
         buttonRestore.translatesAutoresizingMaskIntoConstraints = false
@@ -41,6 +45,10 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
             String.localizedView(
                 key:"VStoreStatusReadyListCellNew_buttonRestore"),
             for:UIControlState.normal)
+        buttonRestore.addTarget(
+            self,
+            action:#selector(selectorRestore(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         addSubview(buttonPurchase)
         addSubview(buttonRestore)
@@ -81,6 +89,10 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
         controller:CStore,
         model:MStorePerkProtocol)
     {
+        super.config(
+            controller:controller,
+            model:model)
+        
         guard
         
             let status:MStorePerkStatusNew = model.status as? MStorePerkStatusNew
