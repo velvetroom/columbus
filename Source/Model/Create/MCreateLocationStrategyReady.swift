@@ -7,9 +7,30 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     //MARK: private
     
     private func validateAvailablity(
-        settings:DSettings) -> Bool
+        database:Database,
+        settings:DSettings)
     {
+        guard
         
+            let _:DPerk = settings.perksMap[DPerkType.unlimited]
+        
+        else
+        {
+            notUnlimited(database:database)
+            
+            return
+        }
+        
+        startPlan(database:database)
+    }
+    
+    private func notUnlimited(
+        database:Database)
+    {
+        database.fetch
+        { [weak self] (plan:[DPlan]) in
+            <#code#>
+        }
     }
     
     private func startPlan(database:Database)
@@ -32,6 +53,11 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
             
             self?.planReady(plan:modelPlan)
         }
+    }
+    
+    private func availabilityError()
+    {
+        
     }
     
     private func databaseError()
@@ -76,6 +102,8 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
             return
         }
         
-        startPlan(database:database)
+        validateAvailablity(
+            database:database,
+            settings:settings)
     }
 }
