@@ -6,6 +6,12 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     
     //MARK: private
     
+    private func validateAvailablity(
+        settings:DSettings) -> Bool
+    {
+        
+    }
+    
     private func startPlan(database:Database)
     {
         database.create
@@ -60,7 +66,8 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
         
         guard
             
-            let database:Database = model.database
+            let database:Database = model.database,
+            let settings:DSettings = model.settings
             
         else
         {
