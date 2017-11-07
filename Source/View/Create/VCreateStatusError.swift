@@ -4,9 +4,9 @@ final class VCreateStatusError:View<ArchCreate>
 {
     private let kImageTop:CGFloat = 210
     private let kImageHeight:CGFloat = 50
-    private let kLabelHeight:CGFloat = 150
+    private let kLabelHeight:CGFloat = 220
     private let kFontSizeTitle:CGFloat = 22
-    private let kFontSizeDescr:CGFloat = 14
+    private let kFontSizeDescr:CGFloat = 16
     
     required init(controller:CCreate)
     {
