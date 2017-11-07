@@ -54,6 +54,28 @@ extension MHome
         
         let statusType:MHomeStatusReady.Type = MHomeStatusReady.self
         changeStatus(statusType:statusType)
+        
+        DispatchQueue.main.asyncAfter(
+            deadline:DispatchTime.now() + kWaitAddNavigation)
+        { [weak self] in
+            
+            self?.addNavigation(plan:plan)
+        }
+    }
+    
+    private func addNavigation(
+        plan:MHomePlan)
+    {
+        guard
+        
+            let view:VHomeReady = self.view?.view as? VHomeReady
+        
+        else
+        {
+            return
+        }
+        
+        plan.addMapNavigation(view:view)
     }
     
     private func updateController()
