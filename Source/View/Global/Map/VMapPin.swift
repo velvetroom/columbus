@@ -23,7 +23,7 @@ final class VMapPin:MKAnnotationView
             annotation:stop,
             reuseIdentifier:reuseIdentifier)
         
-        isDraggable = true
+        isDraggable = stop.draggable
     }
     
     required init?(coder:NSCoder)
