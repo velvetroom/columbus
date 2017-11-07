@@ -62,6 +62,8 @@ extension MStore
             return
         }
         
+        purchase(model:perk)
+        
         perk.statusPurchased(
             product:status.product,
             price:status.price)
