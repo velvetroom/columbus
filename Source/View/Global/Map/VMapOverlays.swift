@@ -7,8 +7,6 @@ extension VMap
     final func addStop(stop:DPlanStop)
     {
         addAnnotation(stop)
-        centreAndSelect(
-            stop:stop)
         
         guard
             

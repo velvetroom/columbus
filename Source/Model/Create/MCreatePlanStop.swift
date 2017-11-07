@@ -46,6 +46,7 @@ extension MCreatePlan
     func addAnnotation(stop:DPlanStop)
     {
         view?.viewMap.addStop(stop:stop)
+        view?.viewMap.centreAndSelect(stop:stop)
     }
     
     func removeAnnotation(stop:DPlanStop)
