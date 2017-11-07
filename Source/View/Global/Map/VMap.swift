@@ -11,6 +11,7 @@ class VMap<A>:
     let rendererStrokeColour:UIColor
     let kRendererLineDash:[NSNumber] = [1, 10]
     let kRendererWidth:CGFloat = 6
+    let kDistanceAccuracy:CLLocationDistance = 100
     private let kSpanSize:CLLocationDegrees = 0.03
     
     init(controller:A.C)

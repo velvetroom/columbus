@@ -15,10 +15,10 @@ final class VHomeReadyMap:VMap<ArchHome>
     {
         return nil
     }
-    
-    override func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
-    }
+//
+//    override func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+//
+//    }
     
     //MARK: private
     

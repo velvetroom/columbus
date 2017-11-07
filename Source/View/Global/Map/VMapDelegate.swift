@@ -9,6 +9,8 @@ extension VMap
     {
         guard
             
+            let location:CLLocation = userLocation.location,
+            location.horizontalAccuracy < kDistanceAccuracy,
             shouldUpdate
             
         else
