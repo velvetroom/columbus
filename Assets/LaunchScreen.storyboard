@@ -44,12 +44,21 @@
                                     <constraint firstItem="de1-h6-egd" firstAttribute="leading" secondItem="h0e-qG-HZi" secondAttribute="leading" id="vv5-hc-C9c"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assetGenericLogo" translatesAutoresizingMaskIntoConstraints="NO" id="PPA-3l-c6J">
+                                <rect key="frame" x="0.0" y="80" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="eJ4-ti-1ph"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h0e-qG-HZi" firstAttribute="bottom" secondItem="Bcu-3y-fUS" secondAttribute="bottom" id="Dz3-Iw-nJI"/>
+                            <constraint firstItem="PPA-3l-c6J" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="LS2-wa-HZ9"/>
                             <constraint firstItem="h0e-qG-HZi" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="ZFm-YH-eAX"/>
                             <constraint firstItem="h0e-qG-HZi" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="iyC-6R-fXf"/>
+                            <constraint firstItem="PPA-3l-c6J" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="60" id="jR4-uE-Pvo"/>
+                            <constraint firstItem="PPA-3l-c6J" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="yMz-Sr-jUP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>
@@ -60,6 +69,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="assetGenericLogo" width="64" height="64"/>
         <image name="assetMenuHome" width="38" height="38"/>
     </resources>
 </document>
