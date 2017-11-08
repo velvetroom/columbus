@@ -24,12 +24,22 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assetMenuHome" translatesAutoresizingMaskIntoConstraints="NO" id="de1-h6-egd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     </imageView>
+                                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kN1-g9-ZV6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="zx5-cV-xTC"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="kN1-g9-ZV6" firstAttribute="top" secondItem="h0e-qG-HZi" secondAttribute="top" id="E2B-g5-jbd"/>
+                                    <constraint firstAttribute="trailing" secondItem="kN1-g9-ZV6" secondAttribute="trailing" id="JNx-RX-5a6"/>
                                     <constraint firstItem="de1-h6-egd" firstAttribute="top" secondItem="h0e-qG-HZi" secondAttribute="top" id="Vnr-oE-h3v"/>
                                     <constraint firstAttribute="trailing" secondItem="de1-h6-egd" secondAttribute="trailing" id="YL0-rS-yF9"/>
                                     <constraint firstAttribute="height" constant="50" id="bzm-Nd-vA4"/>
+                                    <constraint firstItem="kN1-g9-ZV6" firstAttribute="leading" secondItem="h0e-qG-HZi" secondAttribute="leading" id="kZ2-I5-PaG"/>
                                     <constraint firstAttribute="bottom" secondItem="de1-h6-egd" secondAttribute="bottom" id="qAS-T0-WHa"/>
                                     <constraint firstItem="de1-h6-egd" firstAttribute="leading" secondItem="h0e-qG-HZi" secondAttribute="leading" id="vv5-hc-C9c"/>
                                 </constraints>
