@@ -49,14 +49,16 @@ class VCollection<A, Cell:UICollectionViewCell>:
     
     //MARK: internal
     
-    final func registerCell(cell:Cell.Type)
+    final func registerCell(
+        cell:Cell.Type)
     {
         collectionView.register(
             cell,
             forCellWithReuseIdentifier:cell.reusableIdentifier)
     }
     
-    final func registerFooter(footer:UICollectionReusableView.Type)
+    final func registerFooter(
+        footer:UICollectionReusableView.Type)
     {
         collectionView.register(
             footer,
@@ -64,7 +66,8 @@ class VCollection<A, Cell:UICollectionViewCell>:
             withReuseIdentifier:footer.reusableIdentifier)
     }
     
-    final func registerHeader(header:UICollectionReusableView.Type)
+    final func registerHeader(
+        header:UICollectionReusableView.Type)
     {
         collectionView.register(
             header,
@@ -72,20 +75,13 @@ class VCollection<A, Cell:UICollectionViewCell>:
             withReuseIdentifier:header.reusableIdentifier)
     }
     
-    final func cellAtIndex(indexPath:IndexPath) -> Cell
+    final func cellAtIndex<P:UICollectionViewCell>(
+        indexPath:IndexPath,
+        reusableIdentifier:String = P.reusableIdentifier) -> P
     {
-        let cell:Cell = cellAtIndex(
-            reusableIdentifier:Cell.reusableIdentifier,
-            indexPath:indexPath)
-        
-        return cell
-    }
-    
-    final func cellAtIndex(reusableIdentifier:String, indexPath:IndexPath) -> Cell
-    {
-        let cell:Cell = collectionView.dequeueReusableCell(
+        let cell:P = collectionView.dequeueReusableCell(
             withReuseIdentifier:reusableIdentifier,
-            for:indexPath) as! Cell
+            for:indexPath) as! P
         
         return cell
     }
@@ -104,28 +100,21 @@ class VCollection<A, Cell:UICollectionViewCell>:
     
     //MARK: collectionView delegate
     
-    func scrollViewWillBeginDragging(_ scrollView:UIScrollView)
-    {
-    }
+    func scrollViewWillBeginDragging(
+        _ scrollView:UIScrollView) { }
     
     func scrollViewDidEndDecelerating(
-        _ scrollView:UIScrollView)
-    {
-    }
+        _ scrollView:UIScrollView) { }
     
     func scrollViewDidEndDragging(
         _ scrollView:UIScrollView,
-        willDecelerate decelerate:Bool)
-    {
-    }
+        willDecelerate decelerate:Bool) { }
     
-    func scrollViewDidEndScrollingAnimation(_ scrollView:UIScrollView)
-    {
-    }
+    func scrollViewDidEndScrollingAnimation(
+        _ scrollView:UIScrollView) { }
     
-    func scrollViewDidScroll(_ scrollView:UIScrollView)
-    {
-    }
+    func scrollViewDidScroll(
+        _ scrollView:UIScrollView) { }
     
     func collectionView(
         _ collectionView:UICollectionView,
@@ -224,9 +213,7 @@ class VCollection<A, Cell:UICollectionViewCell>:
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let cell:Cell = cellAtIndex(
-            reusableIdentifier:Cell.reusableIdentifier,
-            indexPath:indexPath)
+        let cell:Cell = cellAtIndex(indexPath:indexPath)
         
         return cell
     }
@@ -265,7 +252,5 @@ class VCollection<A, Cell:UICollectionViewCell>:
     
     func collectionView(
         _ collectionView:UICollectionView,
-        didDeselectItemAt indexPath:IndexPath)
-    {
-    }
+        didDeselectItemAt indexPath:IndexPath) { }
 }

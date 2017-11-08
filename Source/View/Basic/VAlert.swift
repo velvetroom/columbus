@@ -25,27 +25,32 @@ final class VAlert:UIView
     {
         DispatchQueue.main.async
         {
-            let alert:VAlert = VAlert(
-                message:message,
-                color:color)
-            
-            let rootView:UIView = UIApplication.shared.keyWindow!.rootViewController!.view
-            rootView.addSubview(alert)
-            
-            alert.layoutTop = NSLayoutConstraint.topToTop(
-                view:alert,
-                toView:rootView,
-                constant:-kHeight)
-            NSLayoutConstraint.equalsHorizontal(
-                view:alert,
-                toView:rootView)
-            NSLayoutConstraint.height(
-                view:alert,
-                constant:kHeight)
-            
-            rootView.layoutIfNeeded()
-            alert.animate(open:true)
+            asyncMessage(message:message, color:color)
         }
+    }
+    
+    private class func asyncMessage(message:String, color:UIColor)
+    {
+        let alert:VAlert = VAlert(
+            message:message,
+            color:color)
+        
+        let rootView:UIView = UIApplication.shared.keyWindow!.rootViewController!.view
+        rootView.addSubview(alert)
+        
+        alert.layoutTop = NSLayoutConstraint.topToTop(
+            view:alert,
+            toView:rootView,
+            constant:-kHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:alert,
+            toView:rootView)
+        NSLayoutConstraint.height(
+            view:alert,
+            constant:kHeight)
+        
+        rootView.layoutIfNeeded()
+        alert.animate(open:true)
     }
     
     private convenience init(message:String, color:UIColor)

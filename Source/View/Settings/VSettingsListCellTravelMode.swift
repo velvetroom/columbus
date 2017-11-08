@@ -7,6 +7,7 @@ final class VSettingsListCellTravelMode:VSettingsListCell
     let kCaptionLeft:CGFloat = 20
     let kTitleFontSize:CGFloat = 16
     let kDescrFontSize:CGFloat = 14
+    let kListBottom:CGFloat = -15
     private weak var model:MSettingsTravelMode?
     
     override init(frame:CGRect)
@@ -39,23 +40,14 @@ final class VSettingsListCellTravelMode:VSettingsListCell
         
         self.model = model
         
-        factoryList()
-        reloadList()
+        factoryList(controller:controller)
+        reloadList(model:model)
     }
     
     //MARK: private
     
-    private func reloadList()
+    private func reloadList(model:MSettingsTravelMode)
     {
-        guard
-        
-            let model:MSettingsTravelMode = self.model
-        
-        else
-        {
-            return
-        }
-        
         viewList?.reload(model:model)
     }
 }

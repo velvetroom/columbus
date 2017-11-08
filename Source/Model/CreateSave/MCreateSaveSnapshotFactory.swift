@@ -1,0 +1,116 @@
+import MapKit
+
+extension MCreateSave
+{
+    private static let kAsyncWait:TimeInterval = 0.2
+    
+    //MARK: private
+    
+    private class func factoryRender(
+        mapRange:MCreateSaveMapRange,
+        zoom:MCreateSaveZoomProtocol) -> [MCreateSaveRender]
+    {
+        var renders:[MCreateSaveRender] = []
+        
+        for zoomLevel:Double in zoom.zoom
+        {
+            let render:MCreateSaveRender = tiles(
+                mapRange:mapRange,
+                zoom:zoomLevel)
+            
+            renders.append(render)
+        }
+        
+        return renders
+    }
+    
+    private func factorySnapshot(
+        snapshot:MKMapSnapshot?,
+        error:Error?,
+        zoom:Double,
+        directory:URL,
+        slice:MCreateSaveRenderSlice,
+        completion:@escaping(([URL]?) -> ()))
+    {
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).asyncAfter(
+            deadline:DispatchTime.now() + MCreateSave.kAsyncWait)
+        { [weak self] in
+            
+            self?.asyncFactorySnapshot(
+                snapshot:snapshot,
+                error:error,
+                zoom:zoom,
+                directory:directory,
+                slice:slice,
+                completion:completion)
+        }
+    }
+    
+    private func asyncFactorySnapshot(
+        snapshot:MKMapSnapshot?,
+        error:Error?,
+        zoom:Double,
+        directory:URL,
+        slice:MCreateSaveRenderSlice,
+        completion:@escaping(([URL]?) -> ()))
+    {
+        guard
+            
+            error == nil,
+            let image:UIImage = snapshot?.image
+            
+        else
+        {
+            completion(nil)
+            
+            return
+        }
+        
+        let urls:[URL] = MCreateSave.factoryImages(
+            snapshot:image,
+            directory:directory,
+            zoom:zoom,
+            slice:slice)
+        
+        completion(urls)
+    }
+    
+    //MARK: internal
+    
+    class func factorySnapshotRender(
+        mapRange:MCreateSaveMapRange,
+        settings:DSettings) -> [MCreateSaveRender]
+    {
+        let zoom:MCreateSaveZoomProtocol = MCreateSaveZoomDefault.factoryZoom(
+            detailLevel:settings.detailLevel)
+        
+        let options:[MCreateSaveRender] = factoryRender(
+            mapRange:mapRange,
+            zoom:zoom)
+        
+        return options
+    }
+    
+    func factorySnapshot(
+        zoom:Double,
+        directory:URL,
+        slice:MCreateSaveRenderSlice,
+        completion:@escaping(([URL]?) -> ()))
+    {
+        let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
+            options:slice.options)
+        
+        snapshotter.start
+        { [weak self] (snapshot:MKMapSnapshot?, error:Error?) in
+            
+            self?.factorySnapshot(
+                snapshot:snapshot,
+                error:error,
+                zoom:zoom,
+                directory:directory,
+                slice:slice,
+                completion:completion)
+        }
+    }
+}

@@ -24,4 +24,50 @@ extension DSettings
             rawTravelMode = newValue.rawValue
         }
     }
+    
+    var detailLevel:DSettingsDetailLevel
+    {
+        get
+        {
+            guard
+            
+                let detailLevel:DSettingsDetailLevel = DSettingsDetailLevel(
+                    rawValue:rawDetailLevel)
+            
+            else
+            {
+                return DSettingsDetailLevel.min
+            }
+            
+            return detailLevel
+        }
+        
+        set(newValue)
+        {
+            rawDetailLevel = newValue.rawValue
+        }
+    }
+    
+    var distance:DSettingsDistance
+    {
+        get
+        {
+            guard
+                
+                let distance:DSettingsDistance = DSettingsDistance(
+                    rawValue:rawDistancce)
+                
+            else
+            {
+                return DSettingsDistance.kilometres
+            }
+            
+            return distance
+        }
+        
+        set(newValue)
+        {
+            rawDistancce = newValue.rawValue
+        }
+    }
 }

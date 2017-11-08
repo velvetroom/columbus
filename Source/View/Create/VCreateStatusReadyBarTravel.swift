@@ -123,5 +123,12 @@ final class VCreateStatusReadyBarTravel:
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
+        super.collectionView(
+            collectionView,
+            didSelectItemAt:indexPath)
+        
+        let item:DPlanTravel = modelAtIndex(
+            index:indexPath)
+        controller.editTravel(travel:item)
     }
 }

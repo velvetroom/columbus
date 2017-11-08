@@ -12,6 +12,16 @@ extension MCreatePlan
     
     //MARK: internal
     
+    func avoidInteraction()
+    {
+        view?.isUserInteractionEnabled = false
+    }
+    
+    func enableInteraction()
+    {
+        view?.isUserInteractionEnabled = true
+    }
+    
     func updateStops()
     {
         view?.viewBar.reload()
@@ -36,6 +46,7 @@ extension MCreatePlan
     func addAnnotation(stop:DPlanStop)
     {
         view?.viewMap.addStop(stop:stop)
+        view?.viewMap.centreAndSelect(stop:stop)
     }
     
     func removeAnnotation(stop:DPlanStop)
@@ -47,8 +58,16 @@ extension MCreatePlan
     
     func updated(stop:DPlanStop)
     {
+        view?.viewBar.viewStops.updateFooter()
         view?.viewBar.viewStops.updateLocation(
             stop:stop)
+    }
+    
+    func updated(travel:DPlanTravel)
+    {
+        view?.viewBar.viewStops.updateFooter()
+        view?.viewBar.viewTravel.updateTravel(
+            travel:travel)
     }
     
     func removeTravels(stop:DPlanStop)

@@ -89,40 +89,28 @@ final class VSettingsListCellTravelModeList:
         _ collectionView:UICollectionView,
         shouldSelectItemAt indexPath:IndexPath) -> Bool
     {
-        let item:MSettingsTravelModeProtocol = modelAtIndex(
-            index:indexPath)
-        
-        guard
-        
-            let model:MSettingsTravelMode = self.model,
-            model.settings.travelMode != item.mode
-        
-        else
-        {
-            return false
-        }
-        
-        return true
-    }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        shouldHighlightItemAt indexPath:IndexPath) -> Bool
-    {
-        let item:MSettingsTravelModeProtocol = modelAtIndex(
-            index:indexPath)
-        
         guard
             
-            let model:MSettingsTravelMode = self.model,
-            model.settings.travelMode != item.mode
+            let model:MSettingsTravelMode = self.model
             
         else
         {
             return false
         }
         
-        return true
+        let item:MSettingsTravelModeProtocol = modelAtIndex(
+            index:indexPath)
+        
+        guard
+            
+            model.settings.travelMode == item.mode
+            
+        else
+        {
+            return true
+        }
+        
+        return false
     }
     
     override func collectionView(

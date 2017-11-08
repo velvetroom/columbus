@@ -51,23 +51,6 @@ extension MHome
         }
     }
     
-    private func settingsLoaded(
-        settings:DSettings)
-    {
-        self.settings = settings
-        
-        guard
-        
-            let controller:CHome = view?.controller as? CHome
-        
-        else
-        {
-            return
-        }
-        
-        controller.settingsLoaded()
-    }
-    
     //MARK: internal
     
     func loadSettings()

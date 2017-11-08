@@ -4,9 +4,9 @@ final class VSettingsList:VCollection<
     ArchSettings,
     VSettingsListCell>
 {
-    let kInterItem:CGFloat = 4
-    let kInsetsTop:CGFloat = 63
-    let kInsetsBottom:CGFloat = 70
+    let kInterItem:CGFloat = 2
+    let kInsetsTop:CGFloat = 64
+    let kCollectionBottom:CGFloat = 50
     
     required init(controller:CSettings)
     {
@@ -50,8 +50,8 @@ final class VSettingsList:VCollection<
         let item:MSettingsProtocol = modelAtIndex(
             index:indexPath)
         let cell:VSettingsListCell = cellAtIndex(
-            reusableIdentifier:item.reusableIdentifier,
-            indexPath:indexPath)
+            indexPath:indexPath,
+            reusableIdentifier:item.reusableIdentifier)
         
         cell.config(
             controller:controller,
@@ -73,8 +73,4 @@ final class VSettingsList:VCollection<
     {
         return false
     }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        didSelectItemAt indexPath:IndexPath) { }
 }

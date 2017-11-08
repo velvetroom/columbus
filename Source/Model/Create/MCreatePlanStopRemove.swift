@@ -74,6 +74,7 @@ extension MCreatePlan
         DispatchQueue.main.async
         { [weak self] in
             
+            self?.enableInteraction()
             self?.updateStops()
         }
     }
@@ -82,6 +83,7 @@ extension MCreatePlan
     
     func remove(stop:DPlanStop)
     {
+        avoidInteraction()
         removeAnnotation(stop:stop)
         
         DispatchQueue.global(

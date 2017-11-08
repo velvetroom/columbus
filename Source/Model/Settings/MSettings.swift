@@ -43,11 +43,11 @@ final class MSettings:Model<ArchSettings>
         self.database = database
         
         database.fetch
-        { [weak self] (settingsList:[DSettings]) in
+        { [weak self] (settings:[DSettings]) in
             
             guard
             
-                let settings:DSettings = settingsList.first
+                let settings:DSettings = settings.first
             
             else
             {

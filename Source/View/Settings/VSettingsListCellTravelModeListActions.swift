@@ -8,8 +8,7 @@ extension VSettingsListCellTravelModeList
     {
         guard
             
-            let travelMode:DPlanTravelMode = model?.settings.travelMode,
-            let index:Int = model?.indexMap[travelMode]
+            let index:Int = model?.selectedIndex
             
         else
         {

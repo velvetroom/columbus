@@ -2,6 +2,11 @@ import Foundation
 
 extension DPlan
 {
+    public override func awakeFromInsert()
+    {
+        identifier = UUID().uuidString 
+    }
+    
     //MARK: internal
     
     func updateTimestamp()

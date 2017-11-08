@@ -54,12 +54,11 @@ extension VSettingsListCellTravelMode
     
     //MARK: internal
     
-    func factoryList()
+    func factoryList(controller:CSettings)
     {
         guard
             
-            self.viewList == nil,
-            let controller:CSettings = self.controller
+            self.viewList == nil
             
         else
         {
@@ -78,7 +77,8 @@ extension VSettingsListCellTravelMode
             constant:kCaptionHeight)
         NSLayoutConstraint.bottomToBottom(
             view:viewList,
-            toView:self)
+            toView:self,
+            constant:kListBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:viewList,
             toView:self)
