@@ -20,9 +20,18 @@
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0e-qG-HZi" userLabel="Menu">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="assetMenuHome" translatesAutoresizingMaskIntoConstraints="NO" id="de1-h6-egd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="de1-h6-egd" firstAttribute="top" secondItem="h0e-qG-HZi" secondAttribute="top" id="Vnr-oE-h3v"/>
+                                    <constraint firstAttribute="trailing" secondItem="de1-h6-egd" secondAttribute="trailing" id="YL0-rS-yF9"/>
                                     <constraint firstAttribute="height" constant="50" id="bzm-Nd-vA4"/>
+                                    <constraint firstAttribute="bottom" secondItem="de1-h6-egd" secondAttribute="bottom" id="qAS-T0-WHa"/>
+                                    <constraint firstItem="de1-h6-egd" firstAttribute="leading" secondItem="h0e-qG-HZi" secondAttribute="leading" id="vv5-hc-C9c"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -40,4 +49,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="assetMenuHome" width="38" height="38"/>
+    </resources>
 </document>
