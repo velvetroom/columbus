@@ -4,22 +4,22 @@ extension MCreate
 {
     //MARK: internal
     
-    func factorySettings()
+    func factorySettings(
+        bundle:Bundle?,
+        completion:@escaping((Database, DSettings) -> ()))
     {
         guard
         
             let database:Database = Database(
-                bundle:nil)
+                bundle:bundle)
         
         else
         {
             return
         }
         
-        self.database = database
-        
         database.fetch
-        { [weak self] (settingsList:[DSettings]) in
+        { (settingsList:[DSettings]) in
             
             guard
                 
@@ -30,7 +30,7 @@ extension MCreate
                 return
             }
             
-            self?.settings = settings
+            completion(database, settings)
         }
     }
 }
