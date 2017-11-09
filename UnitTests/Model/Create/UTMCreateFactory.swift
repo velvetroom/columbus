@@ -27,7 +27,7 @@ final class UTMCreateFactory:XCTestCase
         waitForExpectations(timeout:kWait)
         { (error:Error?) in
             
-            XCTAssertNil(
+            XCTAssertNotNil(
                 database,
                 "failed loading database")
             
