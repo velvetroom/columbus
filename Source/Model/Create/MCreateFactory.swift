@@ -2,6 +2,33 @@ import Foundation
 
 extension MCreate
 {
+    //MARK: private
+    
+    private func createSettings(
+        database:Database,
+        completion:@escaping((Database, DSettings) -> ()))
+    {
+        database.create
+        { [weak self] (settings:DSettings) in
+            
+            self?.settingsCreated(
+                settings:settings,
+                database:database,
+                completion:completion)
+        }
+    }
+    
+    private func settingsCreated(
+        settings:DSettings,
+        database:Database,
+        completion:@escaping((Database, DSettings) -> ()))
+    {
+        database.save
+        {
+            completion(database, settings)
+        }
+    }
+    
     //MARK: internal
     
     func factorySettings(
@@ -19,7 +46,7 @@ extension MCreate
         }
         
         database.fetch
-        { (settingsList:[DSettings]) in
+        { [weak self] (settingsList:[DSettings]) in
             
             guard
                 
@@ -27,6 +54,10 @@ extension MCreate
                 
             else
             {
+                self?.createSettings(
+                    database:database,
+                    completion:completion)
+                
                 return
             }
             
