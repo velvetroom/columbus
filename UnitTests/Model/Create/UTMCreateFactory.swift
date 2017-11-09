@@ -3,7 +3,7 @@ import XCTest
 
 final class UTMCreateFactory:XCTestCase
 {
-    private let kWait:TimeInterval = 10
+    private let kWait:TimeInterval = 1
     
     //MARK: tests
     
@@ -20,7 +20,6 @@ final class UTMCreateFactory:XCTestCase
         model.factorySettings(bundle:bundle)
         { (inDatabase:Database, inSettings:DSettings) in
             
-            print("----------- full fill")
             database = inDatabase
             settings = inSettings
             fetchExpectation.fulfill()
