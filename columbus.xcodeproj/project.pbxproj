@@ -299,6 +299,7 @@
 		DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F8FE1F966A1C00C1EF4A /* VCreate.swift */; };
 		DAB2F9011F966A3A00C1EF4A /* VPlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9001F966A3A00C1EF4A /* VPlans.swift */; };
 		DAB2F9031F966A5600C1EF4A /* VSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB2F9021F966A5600C1EF4A /* VSettings.swift */; };
+		DAB31D171FB3DB7400C1BF7F /* UTMCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */; };
 		DAB7609A1F9F7A3B00D53F59 /* VSettingsListCellTravelModeListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeListConfig.swift */; };
 		DAB831441FB2190B00E22942 /* MCreateStatusErrorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */; };
 		DABC26931FA38E7D00746CDD /* VCreateSaveFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC26921FA38E7D00746CDD /* VCreateSaveFactory.swift */; };
@@ -693,6 +694,7 @@
 		DAB2F9021F966A5600C1EF4A /* VSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettings.swift; sourceTree = "<group>"; };
 		DAB31D0A1FB3D8D800C1BF7F /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAB31D0E1FB3D8D800C1BF7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateFactory.swift; sourceTree = "<group>"; };
 		DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellTravelModeListConfig.swift; sourceTree = "<group>"; };
 		DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorAvailability.swift; sourceTree = "<group>"; };
 		DABC26921FA38E7D00746CDD /* VCreateSaveFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveFactory.swift; sourceTree = "<group>"; };
@@ -1515,9 +1517,26 @@
 		DAB31D0B1FB3D8D800C1BF7F /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				DAB31D141FB3DB3F00C1BF7F /* Model */,
 				DAB31D0E1FB3D8D800C1BF7F /* Info.plist */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		DAB31D141FB3DB3F00C1BF7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAB31D151FB3DB3F00C1BF7F /* Create */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAB31D151FB3DB3F00C1BF7F /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */,
+			);
+			path = Create;
 			sourceTree = "<group>";
 		};
 		DACA5C9E1FA4396900B7BBC7 /* Error */ = {
@@ -1583,6 +1602,7 @@
 					};
 					DAB31D091FB3D8D800C1BF7F = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DA65EC3C1F95DFD700720673;
 					};
@@ -2012,6 +2032,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB31D171FB3DB7400C1BF7F /* UTMCreateFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2214,6 +2235,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.columbus.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/columbus.app/columbus";
