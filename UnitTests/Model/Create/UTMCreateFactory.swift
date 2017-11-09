@@ -13,11 +13,10 @@ final class UTMCreateFactory:XCTestCase
             description:"fetch expectation")
         
         let bundle:Bundle = Bundle(for:UTMCreateFactory.self)
-        let model:MCreate = MCreate()
         var database:Database?
         var settings:DSettings?
         
-        model.factorySettings(bundle:bundle)
+        MCreate.factorySettings(bundle:bundle)
         { (inDatabase:Database, inSettings:DSettings) in
             
             database = inDatabase
