@@ -18,7 +18,7 @@ final class MCreate:Model<ArchCreate>
         
         locationDelegate.model = self
         
-        factorySettings(bundle:nil)
+        MCreate.factorySettings(bundle:nil)
         { [weak self] (database:Database, settings:DSettings) in
             
             self?.database = database

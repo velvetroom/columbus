@@ -4,21 +4,21 @@ extension MCreate
 {
     //MARK: private
     
-    private func createSettings(
+    private class func createSettings(
         database:Database,
         completion:@escaping((Database, DSettings) -> ()))
     {
         database.create
-        { [weak self] (settings:DSettings) in
+        { (settings:DSettings) in
             
-            self?.settingsCreated(
+            settingsCreated(
                 settings:settings,
                 database:database,
                 completion:completion)
         }
     }
     
-    private func settingsCreated(
+    private class func settingsCreated(
         settings:DSettings,
         database:Database,
         completion:@escaping((Database, DSettings) -> ()))
@@ -31,7 +31,7 @@ extension MCreate
     
     //MARK: internal
     
-    func factorySettings(
+    class func factorySettings(
         bundle:Bundle?,
         completion:@escaping((Database, DSettings) -> ()))
     {
@@ -46,7 +46,7 @@ extension MCreate
         }
         
         database.fetch
-        { [weak self] (settingsList:[DSettings]) in
+        { (settingsList:[DSettings]) in
             
             guard
                 
@@ -54,7 +54,7 @@ extension MCreate
                 
             else
             {
-                self?.createSettings(
+                createSettings(
                     database:database,
                     completion:completion)
                 
