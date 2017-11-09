@@ -3,7 +3,7 @@ import XCTest
 
 final class UTMCreateFactory:XCTestCase
 {
-    private let kWait:TimeInterval = 1
+    private let kWait:TimeInterval = 10
     
     //MARK: tests
     
@@ -12,18 +12,29 @@ final class UTMCreateFactory:XCTestCase
         let fetchExpectation:XCTestExpectation = expectation(
             description:"fetch expectation")
         
+        let bundle:Bundle = Bundle(for:UTMCreateFactory.self)
         let model:MCreate = MCreate()
-        model.factorySettings()
+        var database:Database?
+        var settings:DSettings?
+        
+        model.factorySettings(bundle:bundle)
+        { (inDatabase:Database, inSettings:DSettings) in
+            
+            print("----------- full fill")
+            database = inDatabase
+            settings = inSettings
+            fetchExpectation.fulfill()
+        }
         
         waitForExpectations(timeout:kWait)
         { (error:Error?) in
             
             XCTAssertNotNil(
-                model.database,
+                database,
                 "failed loading database")
             
             XCTAssertNotNil(
-                model.settings,
+                settings,
                 "failed loading settings")
         }
     }
