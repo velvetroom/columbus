@@ -115,4 +115,14 @@ final class UTMCreateLocationDelegate:XCTestCase
             strategy,
             "location strategy should be ready")
     }
+    
+    func testChangeAuthorizationRestricted()
+    {
+        let strategy:MCreateLocationStrategyDenied? = changeAuthorization(
+            authStatus:CLAuthorizationStatus.restricted)
+        
+        XCTAssertNotNil(
+            strategy,
+            "location strategy should be denied")
+    }
 }
