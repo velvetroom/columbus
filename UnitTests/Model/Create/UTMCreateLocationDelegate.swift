@@ -44,4 +44,28 @@ final class UTMCreateLocationDelegate:XCTestCase
             modelLocation?.locationManager?.delegate,
             "failed removing delegate from location manager")
     }
+    
+    func testChangeAuthorizationNotDetermined()
+    {
+        XCTAssertNil(
+            modelCreate?.status,
+            "create status should be nil")
+        
+        guard
+        
+            let locationManager:CLLocationManager = modelLocation?.locationManager
+        
+        else
+        {
+            return
+        }
+        
+        modelLocation?.locationManager(
+            locationManager,
+            didChangeAuthorization:CLAuthorizationStatus.notDetermined)
+        
+        XCTAssertNil(
+            modelCreate?.status,
+            "status should still be nil")
+    }
 }
