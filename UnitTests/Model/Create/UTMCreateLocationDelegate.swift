@@ -26,4 +26,15 @@ final class UTMCreateLocationDelegate:XCTestCase
             kAccuracy,
             "failed assigning maximum accuracy for location manager")
     }
+    
+    func testClean()
+    {
+        let model:MCreateLocationDelegate = MCreateLocationDelegate()
+        model.askAuthorization()
+        model.clean()
+        
+        XCTAssertNil(
+            model.locationManager?.delegate,
+            "failed removing delegate from location manager")
+    }
 }
