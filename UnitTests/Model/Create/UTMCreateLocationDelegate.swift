@@ -22,6 +22,14 @@ final class UTMCreateLocationDelegate:XCTestCase
     
     func testAskAuthorization()
     {
+        XCTAssertNil(
+            modelCreate?.status,
+            "create status should be nil")
+        
+        XCTAssertNil(
+            modelCreate?.locationStrategy,
+            "location strategy should be nil")
+        
         XCTAssertNotNil(
             modelLocation?.locationManager,
             "failed creating location manager")
@@ -47,10 +55,6 @@ final class UTMCreateLocationDelegate:XCTestCase
     
     func testChangeAuthorizationNotDetermined()
     {
-        XCTAssertNil(
-            modelCreate?.status,
-            "create status should be nil")
-        
         guard
         
             let locationManager:CLLocationManager = modelLocation?.locationManager
@@ -65,7 +69,29 @@ final class UTMCreateLocationDelegate:XCTestCase
             didChangeAuthorization:CLAuthorizationStatus.notDetermined)
         
         XCTAssertNil(
-            modelCreate?.status,
-            "status should still be nil")
+            modelCreate?.locationStrategy,
+            "location strategy should still be nil")
+    }
+    
+    func testChangeAuthorizationDenied()
+    {
+        guard
+            
+            let locationManager:CLLocationManager = modelLocation?.locationManager
+            
+        else
+        {
+            return
+        }
+        
+        modelLocation?.locationManager(
+            locationManager,
+            didChangeAuthorization:CLAuthorizationStatus.denied)
+        
+        let strategy:MCreateLocationStrategyDenied? = modelCreate?.locationStrategy as? MCreateLocationStrategyDenied
+        
+        XCTAssertNil(
+            strategy,
+            "location strategy should be denied")
     }
 }
