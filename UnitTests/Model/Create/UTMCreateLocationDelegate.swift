@@ -4,37 +4,44 @@ import CoreLocation
 
 final class UTMCreateLocationDelegate:XCTestCase
 {
+    private var modelLocation:MCreateLocationDelegate?
+    private var modelCreate:MCreate?
     private let kAccuracy:CLLocationAccuracy = kCLLocationAccuracyBestForNavigation
+    
+    override func setUp()
+    {
+        super.setUp()
+        
+        modelLocation = MCreateLocationDelegate()
+        modelCreate = MCreate()
+        modelLocation?.model = modelCreate
+        modelLocation?.askAuthorization()
+    }
     
     //MARK: tests
     
     func testAskAuthorization()
     {
-        let model:MCreateLocationDelegate = MCreateLocationDelegate()
-        model.askAuthorization()
-        
         XCTAssertNotNil(
-            model.locationManager,
+            modelLocation?.locationManager,
             "failed creating location manager")
         
         XCTAssertNotNil(
-            model.locationManager?.delegate,
+            modelLocation?.locationManager?.delegate,
             "failed assigning delegate to location manager")
         
         XCTAssertEqual(
-            model.locationManager?.desiredAccuracy,
+            modelLocation?.locationManager?.desiredAccuracy,
             kAccuracy,
             "failed assigning maximum accuracy for location manager")
     }
     
     func testClean()
     {
-        let model:MCreateLocationDelegate = MCreateLocationDelegate()
-        model.askAuthorization()
-        model.clean()
+        modelLocation?.clean()
         
         XCTAssertNil(
-            model.locationManager?.delegate,
+            modelLocation?.locationManager?.delegate,
             "failed removing delegate from location manager")
     }
 }
