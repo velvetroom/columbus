@@ -18,6 +18,29 @@ final class UTMCreateLocationDelegate:XCTestCase
         modelLocation?.askAuthorization()
     }
     
+    //MARK: private
+    
+    private func changeAuthorization<T:MCreateLocationStrategyProtocol>(
+        authStatus:CLAuthorizationStatus) -> T?
+    {
+        guard
+            
+            let locationManager:CLLocationManager = modelLocation?.locationManager
+            
+        else
+        {
+            return nil
+        }
+        
+        modelLocation?.locationManager(
+            locationManager,
+            didChangeAuthorization:CLAuthorizationStatus.authorizedAlways)
+        
+        let strategy:T? = modelCreate?.locationStrategy as? T
+        
+        return strategy
+    }
+    
     //MARK: tests
     
     func testAskAuthorization()
@@ -55,18 +78,8 @@ final class UTMCreateLocationDelegate:XCTestCase
     
     func testChangeAuthorizationNotDetermined()
     {
-        guard
-        
-            let locationManager:CLLocationManager = modelLocation?.locationManager
-        
-        else
-        {
-            return
-        }
-        
-        modelLocation?.locationManager(
-            locationManager,
-            didChangeAuthorization:CLAuthorizationStatus.notDetermined)
+        let _:MCreateLocationStrategyUnknown? = changeAuthorization(
+            authStatus:CLAuthorizationStatus.notDetermined)
         
         XCTAssertNil(
             modelCreate?.locationStrategy,
@@ -75,23 +88,21 @@ final class UTMCreateLocationDelegate:XCTestCase
     
     func testChangeAuthorizationDenied()
     {
-        guard
-            
-            let locationManager:CLLocationManager = modelLocation?.locationManager
-            
-        else
-        {
-            return
-        }
-        
-        modelLocation?.locationManager(
-            locationManager,
-            didChangeAuthorization:CLAuthorizationStatus.denied)
-        
-        let strategy:MCreateLocationStrategyDenied? = modelCreate?.locationStrategy as? MCreateLocationStrategyDenied
+        let strategy:MCreateLocationStrategyDenied? = changeAuthorization(
+            authStatus:CLAuthorizationStatus.denied)
         
         XCTAssertNil(
             strategy,
             "location strategy should be denied")
+    }
+    
+    func testChangeAuthorizationAuthAlways()
+    {
+        let strategy:MCreateLocationStrategyReady? = changeAuthorization(
+            authStatus:CLAuthorizationStatus.authorizedAlways)
+        
+        XCTAssertNil(
+            strategy,
+            "location strategy should be ready")
     }
 }
