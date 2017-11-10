@@ -332,6 +332,7 @@
 		DAD387261FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */; };
 		DAD387281FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */; };
 		DAD3872A1FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */; };
+		DAD5EF201FB5579B0048D451 /* UTMCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5EF1F1FB5579B0048D451 /* UTMCreateLocationDelegate.swift */; };
 		DAD76D401FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD76D3F1FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift */; };
 		DAD76D421FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD76D411FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift */; };
 		DAD76D441FAFCD33000DA8CC /* MStorePerkStatusNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD76D431FAFCD33000DA8CC /* MStorePerkStatusNew.swift */; };
@@ -727,6 +728,7 @@
 		DAD387251FA3ECAF0031B9F8 /* MCreateSaveMapFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveMapFactory.swift; sourceTree = "<group>"; };
 		DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveSnapshot.swift; sourceTree = "<group>"; };
 		DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveSnapshotFactory.swift; sourceTree = "<group>"; };
+		DAD5EF1F1FB5579B0048D451 /* UTMCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationDelegate.swift; sourceTree = "<group>"; };
 		DAD76D3F1FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellAvailable.swift; sourceTree = "<group>"; };
 		DAD76D411FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStoreStatusReadyListCellNew.swift; sourceTree = "<group>"; };
 		DAD76D431FAFCD33000DA8CC /* MStorePerkStatusNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePerkStatusNew.swift; sourceTree = "<group>"; };
@@ -1535,6 +1537,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */,
+				DAD5EF1F1FB5579B0048D451 /* UTMCreateLocationDelegate.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -2032,6 +2035,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD5EF201FB5579B0048D451 /* UTMCreateLocationDelegate.swift in Sources */,
 				DAB31D171FB3DB7400C1BF7F /* UTMCreateFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
