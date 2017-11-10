@@ -34,7 +34,7 @@ final class UTMCreateLocationDelegate:XCTestCase
         
         modelLocation?.locationManager(
             locationManager,
-            didChangeAuthorization:CLAuthorizationStatus.authorizedAlways)
+            didChangeAuthorization:authStatus)
         
         let strategy:T? = modelCreate?.locationStrategy as? T
         
@@ -91,7 +91,7 @@ final class UTMCreateLocationDelegate:XCTestCase
         let strategy:MCreateLocationStrategyDenied? = changeAuthorization(
             authStatus:CLAuthorizationStatus.denied)
         
-        XCTAssertNil(
+        XCTAssertNotNil(
             strategy,
             "location strategy should be denied")
     }
@@ -101,7 +101,7 @@ final class UTMCreateLocationDelegate:XCTestCase
         let strategy:MCreateLocationStrategyReady? = changeAuthorization(
             authStatus:CLAuthorizationStatus.authorizedAlways)
         
-        XCTAssertNil(
+        XCTAssertNotNil(
             strategy,
             "location strategy should be ready")
     }
