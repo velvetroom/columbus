@@ -105,4 +105,14 @@ final class UTMCreateLocationDelegate:XCTestCase
             strategy,
             "location strategy should be ready")
     }
+    
+    func testChangeAuthorizationAuthWhenInUse()
+    {
+        let strategy:MCreateLocationStrategyReady? = changeAuthorization(
+            authStatus:CLAuthorizationStatus.authorizedWhenInUse)
+        
+        XCTAssertNotNil(
+            strategy,
+            "location strategy should be ready")
+    }
 }
