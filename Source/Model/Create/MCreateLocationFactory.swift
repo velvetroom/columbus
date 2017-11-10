@@ -24,33 +24,23 @@ extension MCreate
         return map
     }
     
-    private class func locationStrategyType(
+    //MARK: internal
+    
+    class func factoryLocationStrategy(
         status:CLAuthorizationStatus) -> MCreateLocationStrategyProtocol.Type
     {
-        let map:[
-            CLAuthorizationStatus:
+        let map:[CLAuthorizationStatus:
             MCreateLocationStrategyProtocol.Type] = locationStrategyMap()
         
         guard
-        
+            
             let type:MCreateLocationStrategyProtocol.Type = map[status]
-        
+            
         else
         {
             return MCreateLocationStrategyUnknown.self
         }
         
         return type
-    }
-    
-    //MARK: internal
-    
-    class func factoryLocationStrategy() -> MCreateLocationStrategyProtocol.Type
-    {
-        let status:CLAuthorizationStatus = CLLocationManager.authorizationStatus()
-        let strategyType:MCreateLocationStrategyProtocol.Type = locationStrategyType(
-            status:status)
-        
-        return strategyType
     }
 }
