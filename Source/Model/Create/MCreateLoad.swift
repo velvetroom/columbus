@@ -2,18 +2,6 @@ import Foundation
 
 extension MCreate
 {
-    //MARK: private
-    
-    private func loadedSettings(
-        database:Database,
-        settings:DSettings)
-    {
-        self.database = database
-        self.settings = settings
-        
-        load()
-    }
-    
     //MARK: internal
     
     func load()
@@ -31,16 +19,22 @@ extension MCreate
         }
         
         loadSettings(bundle:nil)
+        { [weak self] in
+            
+            self?.checkAuthorization()
+        }
     }
     
-    func loadSettings(bundle:Bundle?)
+    func loadSettings(
+        bundle:Bundle?,
+        completion:@escaping(() -> ()))
     {
         MCreate.factorySettings(bundle:bundle)
         { [weak self] (database:Database, settings:DSettings) in
             
-            self?.loadedSettings(
-                database:database,
-                settings:settings)
+            self?.database = database
+            self?.settings = settings
+            completion()
         }
     }
 }
