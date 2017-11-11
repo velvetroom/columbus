@@ -9,11 +9,11 @@ final class VCreateStatusReadyBarStopsFooter:
     let durationSuffixMap:[DPlanTravelDurationType:String]
     let numberFormatter:NumberFormatter
     let kValueFontSize:CGFloat = 13
-    let kIconLeft:CGFloat = 4
+    let kIconMarginHorizontal:CGFloat = 4
     let kIconWidth:CGFloat = 44
     let kValueWidth:CGFloat = 250
-    let kDistanceTop:CGFloat = 15
-    let kLabelHeight:CGFloat = 40
+    let kContentTop:CGFloat = 8
+    let kLabelHeight:CGFloat = 36
     private let kMinIntegers:Int = 1
     private let kMaxDecimals:Int = 1
     

@@ -81,6 +81,7 @@ extension VCreateStatusReadyBarStopsFooter
         labelDurationValue.font = UIFont.medium(
             size:kValueFontSize)
         labelDurationValue.textColor = UIColor.white
+        labelDurationValue.textAlignment = NSTextAlignment.right
         self.labelDurationValue = labelDurationValue
         
         addSubview(iconDistance)
@@ -91,14 +92,14 @@ extension VCreateStatusReadyBarStopsFooter
         NSLayoutConstraint.topToTop(
             view:iconDistance,
             toView:self,
-            constant:kDistanceTop)
+            constant:kContentTop)
         NSLayoutConstraint.height(
             view:iconDistance,
             constant:kLabelHeight)
         NSLayoutConstraint.leftToLeft(
             view:iconDistance,
             toView:self,
-            constant:kIconLeft)
+            constant:kIconMarginHorizontal)
         NSLayoutConstraint.width(
             view:iconDistance,
             constant:kIconWidth)
@@ -106,7 +107,7 @@ extension VCreateStatusReadyBarStopsFooter
         NSLayoutConstraint.topToTop(
             view:labelDistanceValue,
             toView:self,
-            constant:kDistanceTop)
+            constant:kContentTop)
         NSLayoutConstraint.height(
             view:labelDistanceValue,
             constant:kLabelHeight)
@@ -117,27 +118,29 @@ extension VCreateStatusReadyBarStopsFooter
             view:labelDistanceValue,
             constant:kValueWidth)
         
-        NSLayoutConstraint.topToBottom(
+        NSLayoutConstraint.topToTop(
             view:iconDuration,
-            toView:iconDistance)
+            toView:self,
+            constant:kContentTop)
         NSLayoutConstraint.height(
             view:iconDuration,
             constant:kLabelHeight)
-        NSLayoutConstraint.leftToLeft(
+        NSLayoutConstraint.rightToRight(
             view:iconDuration,
             toView:self,
-            constant:kIconLeft)
+            constant:-kIconMarginHorizontal)
         NSLayoutConstraint.width(
             view:iconDuration,
             constant:kIconWidth)
         
-        NSLayoutConstraint.topToBottom(
+        NSLayoutConstraint.topToTop(
             view:labelDurationValue,
-            toView:labelDistanceValue)
+            toView:self,
+            constant:kContentTop)
         NSLayoutConstraint.height(
             view:labelDurationValue,
             constant:kLabelHeight)
-        NSLayoutConstraint.leftToRight(
+        NSLayoutConstraint.rightToLeft(
             view:labelDurationValue,
             toView:iconDuration)
         NSLayoutConstraint.width(
