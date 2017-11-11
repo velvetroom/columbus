@@ -27,8 +27,8 @@ final class MCreateMapMenuDone:MCreateMapMenuProtocol
     {
         guard
         
-            let count:Int = controller.model.plan?.plan.stops?.count,
-            count > 0
+            isDoneable(
+                plan:controller.model.plan?.plan)
         
         else
         {
@@ -38,5 +38,20 @@ final class MCreateMapMenuDone:MCreateMapMenuProtocol
         }
         
         confirmDone(controller:controller)
+    }
+    
+    func isDoneable(plan:DPlan?) -> Bool
+    {
+        guard
+        
+            let count:Int = plan?.stops?.count,
+            count > 0
+        
+        else
+        {
+            return false
+        }
+        
+        return true
     }
 }
