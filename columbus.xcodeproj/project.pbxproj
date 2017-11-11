@@ -80,6 +80,7 @@
 		DA26F17E1FB7B713007F171D /* MCreateMapMenuSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */; };
 		DA26F1801FB7BAAB007F171D /* ArchCreateSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F17F1FB7BAAB007F171D /* ArchCreateSearch.swift */; };
 		DA26F1821FB7BD23007F171D /* CCreateSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F1811FB7BD23007F171D /* CCreateSearch.swift */; };
+		DA26F1851FB7BF17007F171D /* MCreateSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F1841FB7BF17007F171D /* MCreateSearch.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -484,6 +485,7 @@
 		DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuSearch.swift; sourceTree = "<group>"; };
 		DA26F17F1FB7BAAB007F171D /* ArchCreateSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateSearch.swift; sourceTree = "<group>"; };
 		DA26F1811FB7BD23007F171D /* CCreateSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreateSearch.swift; sourceTree = "<group>"; };
+		DA26F1841FB7BF17007F171D /* MCreateSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSearch.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -890,6 +892,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		DA26F1831FB7BF04007F171D /* CreateSearch */ = {
+			isa = PBXGroup;
+			children = (
+				DA26F1841FB7BF17007F171D /* MCreateSearch.swift */,
+			);
+			path = CreateSearch;
+			sourceTree = "<group>";
+		};
 		DA5B09441FA361270055E8F3 /* CreateSave */ = {
 			isa = PBXGroup;
 			children = (
@@ -1107,6 +1117,7 @@
 				DA96A2931FAE778B00109455 /* CreateTravel */,
 				DA65EC871F95E68700720673 /* Menu */,
 				DA65EC851F95E68700720673 /* Home */,
+				DA26F1831FB7BF04007F171D /* CreateSearch */,
 				DAB2F8F31F96691D00C1EF4A /* Create */,
 				DA5B09441FA361270055E8F3 /* CreateSave */,
 				DAB2F8F41F96691D00C1EF4A /* Plans */,
@@ -1713,6 +1724,7 @@
 				DADA42061F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift in Sources */,
 				DAB1FA6B1FAB9F64000D857C /* VHomeStandbyFactory.swift in Sources */,
 				DA65ECFA1F95E68700720673 /* View.swift in Sources */,
+				DA26F1851FB7BF17007F171D /* MCreateSearch.swift in Sources */,
 				DA65ED021F95E68700720673 /* VMenu.swift in Sources */,
 				DAECA2E01F9FD72E0051F757 /* VSettingsListCellTravelModeListSelector.swift in Sources */,
 				DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */,
