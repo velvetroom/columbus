@@ -4,16 +4,6 @@ extension MCreate
 {
     //MARK: private
     
-    private func loadSettings()
-    {
-        MCreate.factorySettings(bundle:nil)
-        { [weak self] (database:Database, settings:DSettings) in
-            
-            self?.database = database
-            self?.settings = settings
-        }
-    }
-    
     private func loadedSettings(
         database:Database,
         settings:DSettings)
@@ -40,6 +30,17 @@ extension MCreate
             return
         }
         
-        loadSettings()
+        loadSettings(bundle:nil)
+    }
+    
+    func loadSettings(bundle:Bundle?)
+    {
+        MCreate.factorySettings(bundle:bundle)
+        { [weak self] (database:Database, settings:DSettings) in
+            
+            self?.loadedSettings(
+                database:database,
+                settings:settings)
+        }
     }
 }
