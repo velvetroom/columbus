@@ -252,6 +252,8 @@
 		DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8DF8D21FA9579E00276867 /* plans.xcassets */; };
 		DA8DF8D51FA95B6100276867 /* VPlansListCellActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8D41FA95B6100276867 /* VPlansListCellActions.swift */; };
 		DA8F05BB1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */; };
+		DA8F05BD1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BC1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift */; };
+		DA8F05BF1FB69CAC00589C86 /* MCreateLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BE1FB69CAC00589C86 /* MCreateLoad.swift */; };
 		DA90B8FE1FA0D25900272ECA /* MCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */; };
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
 		DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */; };
@@ -648,6 +650,8 @@
 		DA8DF8D21FA9579E00276867 /* plans.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = plans.xcassets; sourceTree = "<group>"; };
 		DA8DF8D41FA95B6100276867 /* VPlansListCellActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellActions.swift; sourceTree = "<group>"; };
 		DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
+		DA8F05BC1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationStrategyReady.swift; sourceTree = "<group>"; };
+		DA8F05BE1FB69CAC00589C86 /* MCreateLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLoad.swift; sourceTree = "<group>"; };
 		DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateFactory.swift; sourceTree = "<group>"; };
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
 		DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRangeFactory.swift; sourceTree = "<group>"; };
@@ -1368,6 +1372,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB2F8F51F96697300C1EF4A /* MCreate.swift */,
+				DA8F05BE1FB69CAC00589C86 /* MCreateLoad.swift */,
 				DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */,
 				DADA41FB1F9676E700DD1FC4 /* MCreateStatusProtocol.swift */,
 				DA1A26B91F99419C00FAF78C /* MCreateStatusErrorProtocol.swift */,
@@ -1544,6 +1549,7 @@
 				DAD5EF1F1FB5579B0048D451 /* UTMCreateLocationDelegate.swift */,
 				DAD5EF211FB5649C0048D451 /* UTMCreateLocationFactory.swift */,
 				DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */,
+				DA8F05BC1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -2014,6 +2020,7 @@
 				DAB2F8FF1F966A1C00C1EF4A /* VCreate.swift in Sources */,
 				DAD7C6811FA8CF6B00534D7A /* MCreateSaveRenderSliceRectFactory.swift in Sources */,
 				DA65ECF41F95E68700720673 /* MHome.swift in Sources */,
+				DA8F05BF1FB69CAC00589C86 /* MCreateLoad.swift in Sources */,
 				DA5B09411FA360D10055E8F3 /* ArchCreateSave.swift in Sources */,
 				DAD888FC1F9D23E5000EC7FD /* VCreateStatusReadyBarStopsFactory.swift in Sources */,
 				DA7B65261F9E707E001CDC35 /* MCreatePlanSave.swift in Sources */,
@@ -2043,6 +2050,7 @@
 			files = (
 				DAD5EF221FB5649C0048D451 /* UTMCreateLocationFactory.swift in Sources */,
 				DAD5EF201FB5579B0048D451 /* UTMCreateLocationDelegate.swift in Sources */,
+				DA8F05BD1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift in Sources */,
 				DAB31D171FB3DB7400C1BF7F /* UTMCreateFactory.swift in Sources */,
 				DA8F05BB1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift in Sources */,
 			);
