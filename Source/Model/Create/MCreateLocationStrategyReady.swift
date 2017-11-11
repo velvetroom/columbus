@@ -12,17 +12,17 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
         settings:DSettings)
     {
         guard
-        
-            let _:DPerk = settings.perksMap[DPerkType.unlimited]
-        
+            
+            settings.perksMap[DPerkType.unlimited] == nil
+            
         else
         {
-            notUnlimited(database:database)
+            startPlan(database:database)
             
             return
         }
         
-        startPlan(database:database)
+        notUnlimited(database:database)
     }
     
     private func notUnlimited(
