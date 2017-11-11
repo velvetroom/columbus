@@ -5,7 +5,6 @@ final class UTMCreateLoad:XCTestCase
 {
     private var model:MCreate?
     private let kWait:TimeInterval = 1
-    private let kAsyncAfter:TimeInterval = 0.5
     
     override func setUp()
     {
@@ -23,9 +22,6 @@ final class UTMCreateLoad:XCTestCase
         
         let bundle:Bundle = Bundle(for:UTMCreateLoad.self)
         model?.loadSettings(bundle:bundle)
-        
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kAsyncAfter)
         {
             settingsExpectation.fulfill()
         }
@@ -40,10 +36,6 @@ final class UTMCreateLoad:XCTestCase
             XCTAssertNotNil(
                 self?.model?.settings,
                 "failed loading settings")
-            
-            XCTAssertNotNil(
-                self?.model?.status,
-                "faliled creating status")
         }
     }
 }
