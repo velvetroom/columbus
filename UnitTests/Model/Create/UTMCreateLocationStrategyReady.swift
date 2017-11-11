@@ -87,6 +87,19 @@ final class UTMCreateLocationStrategyReady:XCTestCase
         }
     }
     
+    private func purchaseUnlimited(
+        completion:@escaping(() -> ()))
+    {
+        model?.database?.create
+        { (perk:DPerk) in
+            
+            perk.type = DPerkType.unlimited
+            perk.settings = self.model?.settings
+            
+            completion()
+        }
+    }
+    
     private func nextStep(
         completion:@escaping(() -> ()))
     {
@@ -170,6 +183,49 @@ final class UTMCreateLocationStrategyReady:XCTestCase
             self?.nextStep
             {
                 availableExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWait)
+        { [weak self] (error:Error?) in
+            
+            XCTAssertNotNil(
+                self?.model?.plan,
+                "failed creating plan")
+            
+            let mapStatus:MCreateMapStatusContracted? = self?.model?.mapStatus as? MCreateMapStatusContracted
+            
+            XCTAssertNotNil(
+                mapStatus,
+                "map status should be contracted")
+            
+            let status:MCreateStatusReady? = self?.model?.status as? MCreateStatusReady
+            
+            XCTAssertNotNil(
+                status,
+                "status should be ready")
+        }
+    }
+    
+    func testUnlimited()
+    {
+        let errorExpectation:XCTestExpectation = expectation(
+            description:"error expectation failed")
+        
+        loadSettingsDeletePerks
+        { [weak self] in
+            
+            self?.createPlan
+            { [weak self] in
+                
+                self?.purchaseUnlimited
+                { [weak self] in
+                    
+                    self?.nextStep
+                    {
+                        errorExpectation.fulfill()
+                    }
+                }
             }
         }
         
