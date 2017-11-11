@@ -158,4 +158,39 @@ final class UTMCreateLocationStrategyReady:XCTestCase
                 "status should be availability error")
         }
     }
+    
+    func testAvailable()
+    {
+        let availableExpectation:XCTestExpectation = expectation(
+            description:"error expectation failed")
+        
+        loadSettingsDeletePerks
+        { [weak self] in
+                
+            self?.nextStep
+            {
+                availableExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout:kWait)
+        { [weak self] (error:Error?) in
+            
+            XCTAssertNotNil(
+                self?.model?.plan,
+                "failed creating plan")
+            
+            let mapStatus:MCreateMapStatusContracted? = self?.model?.mapStatus as? MCreateMapStatusContracted
+            
+            XCTAssertNotNil(
+                mapStatus,
+                "map status should be contracted")
+            
+            let status:MCreateStatusReady? = self?.model?.status as? MCreateStatusReady
+            
+            XCTAssertNotNil(
+                status,
+                "status should be ready")
+        }
+    }
 }
