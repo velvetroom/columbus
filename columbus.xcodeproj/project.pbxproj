@@ -84,6 +84,7 @@
 		DA26F1881FB7BFB6007F171D /* VCreateSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F1871FB7BFB6007F171D /* VCreateSearch.swift */; };
 		DA26F18A1FB7C012007F171D /* VCreateSearchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F1891FB7C012007F171D /* VCreateSearchFactory.swift */; };
 		DA26F18C1FB7C0AB007F171D /* VCreateSearchAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */; };
+		DA26F18E1FB7C24D007F171D /* VCreateSearchCancel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F18D1FB7C24D007F171D /* VCreateSearchCancel.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -492,6 +493,7 @@
 		DA26F1871FB7BFB6007F171D /* VCreateSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearch.swift; sourceTree = "<group>"; };
 		DA26F1891FB7C012007F171D /* VCreateSearchFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchFactory.swift; sourceTree = "<group>"; };
 		DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchAnimations.swift; sourceTree = "<group>"; };
+		DA26F18D1FB7C24D007F171D /* VCreateSearchCancel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchCancel.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -912,6 +914,7 @@
 				DA26F1871FB7BFB6007F171D /* VCreateSearch.swift */,
 				DA26F1891FB7C012007F171D /* VCreateSearchFactory.swift */,
 				DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */,
+				DA26F18D1FB7C24D007F171D /* VCreateSearchCancel.swift */,
 			);
 			path = CreateSearch;
 			sourceTree = "<group>";
@@ -1853,6 +1856,7 @@
 				DA1906C61FAFC80B008147EA /* MStorePerkStatusProtocol.swift in Sources */,
 				DABED9B21F9E996300635E82 /* VSettingsBar.swift in Sources */,
 				DA0448011F97553100BA2D45 /* MCreateLocationStrategyReady.swift in Sources */,
+				DA26F18E1FB7C24D007F171D /* VCreateSearchCancel.swift in Sources */,
 				DA0447FD1F9747B800BA2D45 /* VCreateStatusDenied.swift in Sources */,
 				DA13F65E1F9A18DD00DF92F5 /* DPlanConnect.swift in Sources */,
 				DA1906D21FAFC96A008147EA /* VStoreStatusReadyListCellPurchased.swift in Sources */,
