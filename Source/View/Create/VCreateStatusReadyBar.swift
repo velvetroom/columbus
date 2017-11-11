@@ -6,7 +6,7 @@ final class VCreateStatusReadyBar:View<ArchCreate>
     weak var viewTravel:VCreateStatusReadyBarTravel!
     weak var viewLoader:VCreateStatusReadyBarLoader!
     weak var layoutTop:NSLayoutConstraint!
-    let kHeight:CGFloat = 330
+    let kHeight:CGFloat = 280
     let kBorderHeight:CGFloat = 1
     let kContentTop:CGFloat = 20
     let kContentBottom:CGFloat = -20
