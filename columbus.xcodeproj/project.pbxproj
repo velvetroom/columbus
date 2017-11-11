@@ -78,6 +78,7 @@
 		DA25C8551FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift */; };
 		DA25C8571FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift */; };
 		DA26F17E1FB7B713007F171D /* MCreateMapMenuSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */; };
+		DA26F1801FB7BAAB007F171D /* ArchCreateSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F17F1FB7BAAB007F171D /* ArchCreateSearch.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -480,6 +481,7 @@
 		DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListFactory.swift; sourceTree = "<group>"; };
 		DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListLabel.swift; sourceTree = "<group>"; };
 		DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuSearch.swift; sourceTree = "<group>"; };
+		DA26F17F1FB7BAAB007F171D /* ArchCreateSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateSearch.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -1086,6 +1088,7 @@
 				DA9E96061F9667DE00538374 /* ArchCreate.swift */,
 				DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */,
 				DA5B09401FA360D10055E8F3 /* ArchCreateSave.swift */,
+				DA26F17F1FB7BAAB007F171D /* ArchCreateSearch.swift */,
 				DA9E96081F9667FF00538374 /* ArchPlans.swift */,
 				DA9E960A1F96681B00538374 /* ArchSettings.swift */,
 				DA18A9741FAD5BEE00F6BDF8 /* ArchStore.swift */,
@@ -2014,6 +2017,7 @@
 				DABDE8831FAA042100E24BBE /* VSettingsListCellDistance.swift in Sources */,
 				DA13F65C1F9A174D00DF92F5 /* MCreatePlanStop.swift in Sources */,
 				DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */,
+				DA26F1801FB7BAAB007F171D /* ArchCreateSearch.swift in Sources */,
 				DA2219551FAA8B0300DD6F86 /* VSettingsListCellDetailLevelListConfig.swift in Sources */,
 				DA6700DB1FAB90EB00B89997 /* VHomeStandbyHeader.swift in Sources */,
 				DAB1FA6D1FABA9EC000D857C /* MHomeInfoProtocol.swift in Sources */,
