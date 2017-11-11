@@ -3,9 +3,9 @@ import Foundation
 final class MCreate:Model<ArchCreate>
 {
     var plan:MCreatePlan?
+    var database:Database?
+    var settings:DSettings?
     let locationDelegate:MCreateLocationDelegate
-    private(set) var database:Database?
-    private(set) var settings:DSettings?
     private(set) var status:MCreateStatusProtocol?
     private(set) var mapStatus:MCreateMapStatusProtocol?
     private(set) var locationStrategy:MCreateLocationStrategyProtocol?
@@ -17,13 +17,6 @@ final class MCreate:Model<ArchCreate>
         super.init()
         
         locationDelegate.model = self
-        
-        MCreate.factorySettings(bundle:nil)
-        { [weak self] (database:Database, settings:DSettings) in
-            
-            self?.database = database
-            self?.settings = settings
-        }
     }
     
     deinit
