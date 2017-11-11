@@ -254,6 +254,7 @@
 		DA8F05BB1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */; };
 		DA8F05BD1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BC1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift */; };
 		DA8F05BF1FB69CAC00589C86 /* MCreateLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BE1FB69CAC00589C86 /* MCreateLoad.swift */; };
+		DA8F05C11FB6A00C00589C86 /* UTMCreateLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05C01FB6A00C00589C86 /* UTMCreateLoad.swift */; };
 		DA90B8FE1FA0D25900272ECA /* MCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */; };
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
 		DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */; };
@@ -652,6 +653,7 @@
 		DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
 		DA8F05BC1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationStrategyReady.swift; sourceTree = "<group>"; };
 		DA8F05BE1FB69CAC00589C86 /* MCreateLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLoad.swift; sourceTree = "<group>"; };
+		DA8F05C01FB6A00C00589C86 /* UTMCreateLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLoad.swift; sourceTree = "<group>"; };
 		DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateFactory.swift; sourceTree = "<group>"; };
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
 		DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRangeFactory.swift; sourceTree = "<group>"; };
@@ -1546,6 +1548,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */,
+				DA8F05C01FB6A00C00589C86 /* UTMCreateLoad.swift */,
 				DAD5EF1F1FB5579B0048D451 /* UTMCreateLocationDelegate.swift */,
 				DAD5EF211FB5649C0048D451 /* UTMCreateLocationFactory.swift */,
 				DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */,
@@ -2052,6 +2055,7 @@
 				DAD5EF201FB5579B0048D451 /* UTMCreateLocationDelegate.swift in Sources */,
 				DA8F05BD1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift in Sources */,
 				DAB31D171FB3DB7400C1BF7F /* UTMCreateFactory.swift in Sources */,
+				DA8F05C11FB6A00C00589C86 /* UTMCreateLoad.swift in Sources */,
 				DA8F05BB1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
