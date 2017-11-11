@@ -2,6 +2,8 @@ import UIKit
 
 final class VCreateStatusReadyBar:View<ArchCreate>
 {
+    static let kMinTop:CGFloat = -260
+    
     weak var viewStops:VCreateStatusReadyBarStops!
     weak var viewTravel:VCreateStatusReadyBarTravel!
     weak var viewLoader:VCreateStatusReadyBarLoader!

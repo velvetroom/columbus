@@ -2,8 +2,6 @@ import UIKit
 
 extension VCreateStatusReadyBar
 {
-    static let kMinTop:CGFloat = -310
-    
     //MARK: internal
     
     func animate(
