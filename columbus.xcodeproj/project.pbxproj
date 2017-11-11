@@ -83,6 +83,7 @@
 		DA26F1851FB7BF17007F171D /* MCreateSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F1841FB7BF17007F171D /* MCreateSearch.swift */; };
 		DA26F1881FB7BFB6007F171D /* VCreateSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F1871FB7BFB6007F171D /* VCreateSearch.swift */; };
 		DA26F18A1FB7C012007F171D /* VCreateSearchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F1891FB7C012007F171D /* VCreateSearchFactory.swift */; };
+		DA26F18C1FB7C0AB007F171D /* VCreateSearchAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -490,6 +491,7 @@
 		DA26F1841FB7BF17007F171D /* MCreateSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSearch.swift; sourceTree = "<group>"; };
 		DA26F1871FB7BFB6007F171D /* VCreateSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearch.swift; sourceTree = "<group>"; };
 		DA26F1891FB7C012007F171D /* VCreateSearchFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchFactory.swift; sourceTree = "<group>"; };
+		DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchAnimations.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -909,6 +911,7 @@
 			children = (
 				DA26F1871FB7BFB6007F171D /* VCreateSearch.swift */,
 				DA26F1891FB7C012007F171D /* VCreateSearchFactory.swift */,
+				DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */,
 			);
 			path = CreateSearch;
 			sourceTree = "<group>";
@@ -1946,6 +1949,7 @@
 				DA26F1821FB7BD23007F171D /* CCreateSearch.swift in Sources */,
 				DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */,
 				DA7950681FAEF1E00057F6EE /* MHomeInfoStore.swift in Sources */,
+				DA26F18C1FB7C0AB007F171D /* VCreateSearchAnimations.swift in Sources */,
 				DA2926771FACD52400913141 /* DPlanTravelDurationFactory.swift in Sources */,
 				DA525A041F9F7713004F8503 /* VSettingsListCellTravelModeList.swift in Sources */,
 				DAD3872A1FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift in Sources */,
