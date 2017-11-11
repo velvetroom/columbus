@@ -251,6 +251,7 @@
 		DA8DF8D11FA955EB00276867 /* VPlansListCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8D01FA955EB00276867 /* VPlansListCellFactory.swift */; };
 		DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8DF8D21FA9579E00276867 /* plans.xcassets */; };
 		DA8DF8D51FA95B6100276867 /* VPlansListCellActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8D41FA95B6100276867 /* VPlansListCellActions.swift */; };
+		DA8F05BB1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */; };
 		DA90B8FE1FA0D25900272ECA /* MCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */; };
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
 		DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */; };
@@ -646,6 +647,7 @@
 		DA8DF8D01FA955EB00276867 /* VPlansListCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellFactory.swift; sourceTree = "<group>"; };
 		DA8DF8D21FA9579E00276867 /* plans.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = plans.xcassets; sourceTree = "<group>"; };
 		DA8DF8D41FA95B6100276867 /* VPlansListCellActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellActions.swift; sourceTree = "<group>"; };
+		DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
 		DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateFactory.swift; sourceTree = "<group>"; };
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
 		DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRangeFactory.swift; sourceTree = "<group>"; };
@@ -1541,6 +1543,7 @@
 				DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */,
 				DAD5EF1F1FB5579B0048D451 /* UTMCreateLocationDelegate.swift */,
 				DAD5EF211FB5649C0048D451 /* UTMCreateLocationFactory.swift */,
+				DA8F05BA1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -2041,6 +2044,7 @@
 				DAD5EF221FB5649C0048D451 /* UTMCreateLocationFactory.swift in Sources */,
 				DAD5EF201FB5579B0048D451 /* UTMCreateLocationDelegate.swift in Sources */,
 				DAB31D171FB3DB7400C1BF7F /* UTMCreateFactory.swift in Sources */,
+				DA8F05BB1FB6992900589C86 /* UTMCreateLocationStrategyDenied.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@ import XCTest
 import CoreLocation
 @testable import columbus
 
-class UTMCreateLocationFactory:XCTestCase
+final class UTMCreateLocationFactory:XCTestCase
 {
     //MARK: private
     
