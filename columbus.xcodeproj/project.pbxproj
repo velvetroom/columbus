@@ -77,6 +77,7 @@
 		DA22195B1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */; };
 		DA25C8551FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift */; };
 		DA25C8571FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift */; };
+		DA26F17E1FB7B713007F171D /* MCreateMapMenuSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */; };
 		DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */; };
 		DA2780141FA8E0AB00489D0E /* ExtensionUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */; };
 		DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */; };
@@ -478,6 +479,7 @@
 		DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListRail.swift; sourceTree = "<group>"; };
 		DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListFactory.swift; sourceTree = "<group>"; };
 		DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelListLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListLabel.swift; sourceTree = "<group>"; };
+		DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuSearch.swift; sourceTree = "<group>"; };
 		DA2780111FA8DCE700489D0E /* MCreateSaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveImage.swift; sourceTree = "<group>"; };
 		DA2780131FA8E0AB00489D0E /* ExtensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImage.swift; sourceTree = "<group>"; };
 		DA2780151FA8E17F00489D0E /* MCreateSavePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePicture.swift; sourceTree = "<group>"; };
@@ -1409,6 +1411,7 @@
 				DA2EE5641F98A9A500488A07 /* MCreateMapMenuContract.swift */,
 				DA6AC1781F98FE7E004D6707 /* MCreateMapMenuUser.swift */,
 				DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */,
+				DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */,
 				DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */,
 				DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */,
 				DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */,
@@ -1920,6 +1923,7 @@
 				DA6700D31FAB7DC700B89997 /* VPlansListHeader.swift in Sources */,
 				DAB7609A1F9F7A3B00D53F59 /* VSettingsListCellTravelModeListConfig.swift in Sources */,
 				DA525A061F9F7765004F8503 /* VSettingsListCellTravelModeListCell.swift in Sources */,
+				DA26F17E1FB7B713007F171D /* MCreateMapMenuSearch.swift in Sources */,
 				DA65ED181F95E68700720673 /* VSliderBar.swift in Sources */,
 				DADE5F981FA93E9B00E59687 /* VPlansFactory.swift in Sources */,
 				DABC26931FA38E7D00746CDD /* VCreateSaveFactory.swift in Sources */,
