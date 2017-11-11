@@ -111,6 +111,7 @@
 		DA3495F91F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3495F81F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift */; };
 		DA3C024C1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C024B1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift */; };
 		DA3C024E1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C024D1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift */; };
+		DA3C02501FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C024F1FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift */; };
 		DA471A111F9B7668009B71FF /* VCreateStatusReadyBarLoaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA471A101F9B7668009B71FF /* VCreateStatusReadyBarLoaderFactory.swift */; };
 		DA471A171F9B7795009B71FF /* VCreateStatusReadyBarLoaderAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA471A161F9B7795009B71FF /* VCreateStatusReadyBarLoaderAnimations.swift */; };
 		DA4861811FAA37F700FFBAB8 /* VSettingsListCellDetailLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4861801FAA37F700FFBAB8 /* VSettingsListCellDetailLevel.swift */; };
@@ -510,6 +511,7 @@
 		DA3495F81F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarTravelCell.swift; sourceTree = "<group>"; };
 		DA3C024B1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
 		DA3C024D1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateMapMenuDone.swift; sourceTree = "<group>"; };
+		DA3C024F1FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateMapStatusContractedFactory.swift; sourceTree = "<group>"; };
 		DA471A101F9B7668009B71FF /* VCreateStatusReadyBarLoaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarLoaderFactory.swift; sourceTree = "<group>"; };
 		DA471A161F9B7795009B71FF /* VCreateStatusReadyBarLoaderAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarLoaderAnimations.swift; sourceTree = "<group>"; };
 		DA4861801FAA37F700FFBAB8 /* VSettingsListCellDetailLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevel.swift; sourceTree = "<group>"; };
@@ -1559,6 +1561,7 @@
 				DA8F05BC1FB69A7000589C86 /* UTMCreateLocationStrategyReady.swift */,
 				DA3C024B1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift */,
 				DA3C024D1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift */,
+				DA3C024F1FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -2057,6 +2060,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3C02501FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift in Sources */,
 				DA3C024E1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift in Sources */,
 				DAD5EF221FB5649C0048D451 /* UTMCreateLocationFactory.swift in Sources */,
 				DA3C024C1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift in Sources */,
