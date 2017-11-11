@@ -6,6 +6,12 @@ extension VCreateSearch
     
     func factoryViews(controller:CCreateSearch)
     {
+        let blur:VBlur = VBlur.light()
         
+        addSubview(blur)
+        
+        NSLayoutConstraint.equals(
+            view:blur,
+            toView:self)
     }
 }
