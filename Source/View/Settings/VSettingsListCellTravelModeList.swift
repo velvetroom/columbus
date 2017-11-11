@@ -118,6 +118,6 @@ final class VSettingsListCellTravelModeList:
         didSelectItemAt indexPath:IndexPath)
     {
         model?.selected(index:indexPath.item)
-        updateSelector()
+        updateSelector(animationDuration:kAnimationDuration)
     }
 }

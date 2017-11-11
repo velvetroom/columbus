@@ -24,7 +24,7 @@ extension VSettingsListCellTravelModeList
             animated:false,
             scrollPosition:UICollectionViewScrollPosition())
         
-        updateSelector()
+        updateSelector(animationDuration:0)
     }
     
     //MARK: internal
@@ -55,7 +55,8 @@ extension VSettingsListCellTravelModeList
         }
     }
     
-    func updateSelector()
+    func updateSelector(
+        animationDuration:TimeInterval)
     {
         guard
         
@@ -73,7 +74,7 @@ extension VSettingsListCellTravelModeList
         layoutSelectorLeft.constant = cellX - selectorSize_2
         layoutSelectorTop.constant = cellY - selectorSize_2
         
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:animationDuration)
         { [weak self] in
             
             self?.layoutIfNeeded()
