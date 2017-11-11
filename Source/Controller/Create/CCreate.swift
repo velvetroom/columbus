@@ -81,4 +81,11 @@ final class CCreate:Controller<ArchCreate>
             self?.model.plan?.update(travel:travel)
         }
     }
+    
+    func showSearch()
+    {
+        let controller:CCreateSearch = CCreateSearch()
+        
+        parentController?.animateOver(controller:controller)
+    }
 }

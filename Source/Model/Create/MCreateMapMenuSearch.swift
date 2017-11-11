@@ -10,5 +10,6 @@ final class MCreateMapMenuSearch:MCreateMapMenuProtocol
     
     func selected(controller:CCreate)
     {
+        controller.showSearch()
     }
 }
