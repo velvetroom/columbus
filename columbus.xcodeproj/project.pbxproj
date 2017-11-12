@@ -122,6 +122,7 @@
 		DA3495F51F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3495F41F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift */; };
 		DA3495F71F9ABF3000D75252 /* VCreateStatusReadyBarTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3495F61F9ABF3000D75252 /* VCreateStatusReadyBarTravel.swift */; };
 		DA3495F91F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3495F81F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift */; };
+		DA38B2A31FB8BD8900F7E915 /* MCreateSearchCompleterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA38B2A21FB8BD8900F7E915 /* MCreateSearchCompleterDelegate.swift */; };
 		DA3C024C1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C024B1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift */; };
 		DA3C024E1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C024D1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift */; };
 		DA3C02501FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C024F1FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift */; };
@@ -541,6 +542,7 @@
 		DA3495F41F9ABC4B00D75252 /* VCreateStatusReadyBarStopsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsCell.swift; sourceTree = "<group>"; };
 		DA3495F61F9ABF3000D75252 /* VCreateStatusReadyBarTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarTravel.swift; sourceTree = "<group>"; };
 		DA3495F81F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarTravelCell.swift; sourceTree = "<group>"; };
+		DA38B2A21FB8BD8900F7E915 /* MCreateSearchCompleterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSearchCompleterDelegate.swift; sourceTree = "<group>"; };
 		DA3C024B1FB6B55E0051D7C5 /* UTMCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
 		DA3C024D1FB6BF1E0051D7C5 /* UTMCreateMapMenuDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateMapMenuDone.swift; sourceTree = "<group>"; };
 		DA3C024F1FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateMapStatusContractedFactory.swift; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 				DA26F1841FB7BF17007F171D /* MCreateSearch.swift */,
 				DA3225F51FB8A6E000924A4D /* MCreateSearchLook.swift */,
 				DA3225F91FB8AEF500924A4D /* MCreateSearchCompleter.swift */,
+				DA38B2A21FB8BD8900F7E915 /* MCreateSearchCompleterDelegate.swift */,
 				DA3225F71FB8AA2D00924A4D /* MCreateSearchFactory.swift */,
 			);
 			path = CreateSearch;
@@ -2101,6 +2104,7 @@
 				DA6700DB1FAB90EB00B89997 /* VHomeStandbyHeader.swift in Sources */,
 				DAB1FA6D1FABA9EC000D857C /* MHomeInfoProtocol.swift in Sources */,
 				DA7D95911FA7637300A620FB /* MHomeStatusStandby.swift in Sources */,
+				DA38B2A31FB8BD8900F7E915 /* MCreateSearchCompleterDelegate.swift in Sources */,
 				DA96A2981FAE77CB00109455 /* VCreateTravel.swift in Sources */,
 				DAE699921FA2892200FFE6E3 /* VCreateStatusReadyBarTravelActions.swift in Sources */,
 				DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */,
@@ -2258,7 +2262,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2311,7 +2315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
@@ -2328,7 +2332,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.columbus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2344,7 +2347,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.columbus;
 				PRODUCT_NAME = "$(TARGET_NAME)";

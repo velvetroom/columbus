@@ -1,7 +1,11 @@
 import MapKit
 
-extension MCreateSearchCompleter
+extension MCreateSearch
 {
     //MARK: internal
     
+    func complete(string:String)
+    {
+        completer.queryFragment = string
+    }
 }

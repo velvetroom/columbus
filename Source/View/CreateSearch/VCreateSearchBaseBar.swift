@@ -37,7 +37,7 @@ final class VCreateSearchBaseBar:
         _ searchBar:UISearchBar,
         textDidChange searchText:String)
     {
-        controller.model.searchPlace(
-            place:searchText)
+        controller.model.complete(
+            string:searchText)
     }
 }
