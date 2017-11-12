@@ -234,6 +234,7 @@
 		DA750CB01FA78D4E00459985 /* VHomeReadyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA750CAF1FA78D4E00459985 /* VHomeReadyFactory.swift */; };
 		DA776E181FB87A1700AB58F8 /* VCreateSearchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA776E171FB87A1700AB58F8 /* VCreateSearchList.swift */; };
 		DA776E1A1FB87A3B00AB58F8 /* VCreateSearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA776E191FB87A3B00AB58F8 /* VCreateSearchListCell.swift */; };
+		DA776E1C1FB87BD700AB58F8 /* VCreateSearchListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA776E1B1FB87BD700AB58F8 /* VCreateSearchListConfig.swift */; };
 		DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */; };
 		DA78BB321F97199400A7C280 /* MCreateLocationStrategyDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */; };
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
@@ -647,6 +648,7 @@
 		DA750CAF1FA78D4E00459985 /* VHomeReadyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeReadyFactory.swift; sourceTree = "<group>"; };
 		DA776E171FB87A1700AB58F8 /* VCreateSearchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchList.swift; sourceTree = "<group>"; };
 		DA776E191FB87A3B00AB58F8 /* VCreateSearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchListCell.swift; sourceTree = "<group>"; };
+		DA776E1B1FB87BD700AB58F8 /* VCreateSearchListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchListConfig.swift; sourceTree = "<group>"; };
 		DA78BB2F1F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyProtocol.swift; sourceTree = "<group>"; };
 		DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyDenied.swift; sourceTree = "<group>"; };
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
@@ -920,6 +922,7 @@
 				DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */,
 				DA26F18D1FB7C24D007F171D /* VCreateSearchCancel.swift */,
 				DA776E171FB87A1700AB58F8 /* VCreateSearchList.swift */,
+				DA776E1B1FB87BD700AB58F8 /* VCreateSearchListConfig.swift */,
 				DA776E191FB87A3B00AB58F8 /* VCreateSearchListCell.swift */,
 			);
 			path = CreateSearch;
@@ -2075,6 +2078,7 @@
 				DA96A29A1FAE78E900109455 /* VCreateTravelFactory.swift in Sources */,
 				DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */,
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
+				DA776E1C1FB87BD700AB58F8 /* VCreateSearchListConfig.swift in Sources */,
 				DA2EE56F1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift in Sources */,
 				DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */,
 				DAE184961F9EA4F100D29126 /* MHomeSettings.swift in Sources */,
