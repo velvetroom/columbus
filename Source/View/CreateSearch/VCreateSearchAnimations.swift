@@ -6,7 +6,6 @@ extension VCreateSearch
     
     private func animate(listTop:CGFloat)
     {
-        layoutIfNeeded()
         viewList.layoutTop.constant = listTop
         
         UIView.animate(withDuration:kAnimationDuration)

@@ -2,9 +2,9 @@ import Foundation
 
 final class CCreateSearch:Controller<ArchCreateSearch>
 {
-    override func viewWillAppear(_ animated:Bool)
+    override func viewDidAppear(_ animated:Bool)
     {
-        super.viewWillAppear(animated)
+        super.viewDidAppear(animated)
         
         guard
             

@@ -5,7 +5,7 @@ final class VCreateSearchList:VCollection
     VCreateSearchListCell>
 {
     weak var layoutTop:NSLayoutConstraint!
-    let kHeight:CGFloat = 300
+    let kHeight:CGFloat = 380
     
     required init(controller:CCreateSearch)
     {
