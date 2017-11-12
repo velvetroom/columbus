@@ -11,6 +11,8 @@ final class MCreateSearchCompleterDelegate:
     func completerDidUpdateResults(
         _ completer:MKLocalSearchCompleter)
     {
-        print(completer.results)
+        let items:[MKLocalSearchCompletion] = completer.results
+        
+        model?.updateItems(items:items)
     }
 }

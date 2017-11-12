@@ -6,6 +6,11 @@ extension MCreateSearch
     
     func complete(string:String)
     {
-        completer.queryFragment = string
+        DispatchQueue.global(
+            qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.completer.queryFragment = string
+        }
     }
 }

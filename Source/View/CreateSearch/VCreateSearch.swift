@@ -26,4 +26,22 @@ final class VCreateSearch:ViewMain
     {
         return nil
     }
+    
+    //MARK: private
+    
+    private func asyncUpdateList()
+    {
+        viewBase.viewList.collectionView.reloadData()
+    }
+    
+    //MARK: internal
+    
+    func updateList()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncUpdateList()
+        }
+    }
 }

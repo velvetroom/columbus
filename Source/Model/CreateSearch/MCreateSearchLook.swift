@@ -48,10 +48,14 @@ extension MCreateSearch
     private func searchPlace(
         mapItems:[MKMapItem])
     {
+        print("search start")
+        
         for mapItem:MKMapItem in mapItems
         {
             print(mapItem.name)
         }
+        
+        print("search end")
     }
     
     //MARK: internal
