@@ -279,6 +279,7 @@
 		DA8F05BF1FB69CAC00589C86 /* MCreateLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05BE1FB69CAC00589C86 /* MCreateLoad.swift */; };
 		DA8F05C11FB6A00C00589C86 /* UTMCreateLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05C01FB6A00C00589C86 /* UTMCreateLoad.swift */; };
 		DA90B8FE1FA0D25900272ECA /* MCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */; };
+		DA954E431FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift */; };
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
 		DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */; };
 		DA96A2901FAE76F000109455 /* ArchCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */; };
@@ -701,6 +702,7 @@
 		DA8F05BE1FB69CAC00589C86 /* MCreateLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLoad.swift; sourceTree = "<group>"; };
 		DA8F05C01FB6A00C00589C86 /* UTMCreateLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLoad.swift; sourceTree = "<group>"; };
 		DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateFactory.swift; sourceTree = "<group>"; };
+		DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseListActions.swift; sourceTree = "<group>"; };
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
 		DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRangeFactory.swift; sourceTree = "<group>"; };
 		DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateTravel.swift; sourceTree = "<group>"; };
@@ -946,6 +948,7 @@
 				DA3225EF1FB89D8000924A4D /* VCreateSearchBaseBar.swift */,
 				DA3225F11FB89FF500924A4D /* VCreateSearchBaseBarFactory.swift */,
 				DA63C0E81FB89A10007D01A7 /* VCreateSearchBaseList.swift */,
+				DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift */,
 				DA63C0EA1FB89A3D007D01A7 /* VCreateSearchBaseListConfig.swift */,
 				DA63C0E61FB899E2007D01A7 /* VCreateSearchBaseListCell.swift */,
 			);
@@ -2010,6 +2013,7 @@
 				DA65ED181F95E68700720673 /* VSliderBar.swift in Sources */,
 				DADE5F981FA93E9B00E59687 /* VPlansFactory.swift in Sources */,
 				DABC26931FA38E7D00746CDD /* VCreateSaveFactory.swift in Sources */,
+				DA954E431FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift in Sources */,
 				DA65ECFE1F95E68700720673 /* ViewMain.swift in Sources */,
 				DA9C04631FABDA60006F57E1 /* VHomeStandbyActions.swift in Sources */,
 				DA2EE5711F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift in Sources */,
