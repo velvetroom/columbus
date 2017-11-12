@@ -6,8 +6,7 @@ extension VCreateSearchBase
     
     func factoryViews()
     {
-        let border:VBorder = VBorder(
-            colour:UIColor(white:0, alpha:0.2))
+        let border:VBorder = VBorder(colour:UIColor.black)
         
         let viewList:VCreateSearchBaseList = VCreateSearchBaseList(
             controller:controller)

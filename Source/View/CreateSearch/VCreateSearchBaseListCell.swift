@@ -9,6 +9,7 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
     let attributesSubtitle:[NSAttributedStringKey:Any]
     let attributesSubtitleHighlighted:[NSAttributedStringKey:Any]
     let breakLine:NSAttributedString
+    private var text:NSAttributedString?
     private let kBreakLine:String = "\n"
     private let kTitleFontSize:CGFloat = 14
     private let kSubtitleFontSize:CGFloat = 11
@@ -48,8 +49,6 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         
         super.init(frame:frame)
         clipsToBounds = true
-        isUserInteractionEnabled = false
-        backgroundColor = UIColor.white
         
         let label:UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -77,10 +76,49 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         return nil
     }
     
+    override var isSelected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var isHighlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
     //MARK: private
     
-    private func updateHeight(text:NSAttributedString)
+    private func hover()
     {
+        if isSelected || isHighlighted
+        {
+            backgroundColor = UIColor.colourSuccess
+            label.textColor = UIColor.white
+        }
+        else
+        {
+            backgroundColor = UIColor.white
+            label.attributedText = text
+        }
+    }
+    
+    private func updateHeight()
+    {
+        guard
+            
+            let text:NSAttributedString = self.text
+        
+        else
+        {
+            return
+        }
+        
         let size:CGSize = CGSize(
             width:label.bounds.width,
             height:kTextMaxHeight)
@@ -100,8 +138,8 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
     
     func config(model:MKLocalSearchCompletion)
     {
-        let text:NSAttributedString = factoryText(model:model)
-        label.attributedText = text
-        updateHeight(text:text)
+        text = factoryText(model:model)
+        updateHeight()
+        hover()
     }
 }
