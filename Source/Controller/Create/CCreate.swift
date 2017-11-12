@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 final class CCreate:Controller<ArchCreate>
 {
@@ -84,8 +85,26 @@ final class CCreate:Controller<ArchCreate>
     
     func showSearch()
     {
-        let controller:CCreateSearch = CCreateSearch()
+        let controller:CCreateSearch = CCreateSearch(
+            controller:self)
         
         parentController?.animateOver(controller:controller)
+    }
+    
+    func centreCoordinate(
+        coordinate:CLLocationCoordinate2D)
+    {
+        guard
+        
+            let view:VCreate = self.view as? VCreate,
+            let viewReady:VCreateStatusReady = view.view as? VCreateStatusReady
+        
+        else
+        {
+            return
+        }
+        
+        viewReady.viewMap.centreCoordinateRegion(
+            coordinate:coordinate)
     }
 }

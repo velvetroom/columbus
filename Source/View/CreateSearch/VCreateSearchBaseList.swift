@@ -64,4 +64,13 @@ final class VCreateSearchBaseList:VCollection
         
         return cell
     }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        let item:MKLocalSearchCompletion = modelAtIndex(
+            index:indexPath)
+        controller.selected(item:item)
+    }
 }
