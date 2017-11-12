@@ -2,7 +2,7 @@ import UIKit
 
 final class VCreateSearch:ViewMain
 {
-    weak var viewList:VCreateSearchList!
+    weak var viewBase:VCreateSearchBase!
     let kAnimationDuration:TimeInterval = 0.3
     
     required init(controller:UIViewController)

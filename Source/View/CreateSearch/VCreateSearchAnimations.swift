@@ -6,7 +6,7 @@ extension VCreateSearch
     
     private func animate(listTop:CGFloat)
     {
-        viewList.layoutTop.constant = listTop
+        viewBase.layoutTop.constant = listTop
         
         UIView.animate(withDuration:kAnimationDuration)
         { [weak self] in
@@ -24,6 +24,6 @@ extension VCreateSearch
     
     func animateHide()
     {
-        animate(listTop:-viewList.kHeight)
+        animate(listTop:-viewBase.kHeight)
     }
 }

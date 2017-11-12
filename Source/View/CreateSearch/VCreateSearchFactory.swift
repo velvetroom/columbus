@@ -9,26 +9,26 @@ extension VCreateSearch
         let viewCancel:VCreateSearchCancel = VCreateSearchCancel(
             controller:controller)
         
-        let viewList:VCreateSearchList = VCreateSearchList(
+        let viewBase:VCreateSearchBase = VCreateSearchBase(
             controller:controller)
-        self.viewList = viewList
+        self.viewBase = viewBase
         
         addSubview(viewCancel)
-        addSubview(viewList)
+        addSubview(viewBase)
         
         NSLayoutConstraint.equals(
             view:viewCancel,
             toView:self)
         
-        viewList.layoutTop = NSLayoutConstraint.topToTop(
-            view:viewList,
+        viewBase.layoutTop = NSLayoutConstraint.topToTop(
+            view:viewBase,
             toView:self,
-            constant:-viewList.kHeight)
+            constant:-viewBase.kHeight)
         NSLayoutConstraint.height(
-            view:viewList,
-            constant:viewList.kHeight)
+            view:viewBase,
+            constant:viewBase.kHeight)
         NSLayoutConstraint.equalsHorizontal(
-            view:viewList,
+            view:viewBase,
             toView:self)
     }
 }
