@@ -1,6 +1,8 @@
 import UIKit
 
-final class VCreateSearchBaseBar:View<ArchCreateSearch>
+final class VCreateSearchBaseBar:
+    View<ArchCreateSearch>,
+    UISearchBarDelegate
 {
     weak var searchBar:UISearchBar!
     let kBorderHeight:CGFloat = 1
@@ -15,5 +17,13 @@ final class VCreateSearchBaseBar:View<ArchCreateSearch>
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: delegate
+    
+    func searchBarCancelButtonClicked(
+        _ searchBar:UISearchBar)
+    {
+        controller.back()
     }
 }

@@ -15,6 +15,7 @@ extension VCreateSearchBaseBar
         searchBar.searchBarStyle = UISearchBarStyle.minimal
         searchBar.showsCancelButton = true
         searchBar.tintColor = UIColor.colourBackgroundDark
+        searchBar.delegate = self
         self.searchBar = searchBar
         
         addSubview(border)

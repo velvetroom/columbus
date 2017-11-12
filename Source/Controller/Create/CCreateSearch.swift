@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 final class CCreateSearch:Controller<ArchCreateSearch>
 {
@@ -22,6 +22,8 @@ final class CCreateSearch:Controller<ArchCreateSearch>
     
     func back()
     {
+        UIApplication.shared.keyWindow?.endEditing(true)
+        
         guard
         
             let view:VCreateSearch = self.view as? VCreateSearch
