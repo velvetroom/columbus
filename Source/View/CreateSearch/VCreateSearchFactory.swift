@@ -11,6 +11,7 @@ extension VCreateSearch
         
         let viewList:VCreateSearchList = VCreateSearchList(
             controller:controller)
+        self.viewList = viewList
         
         addSubview(viewCancel)
         addSubview(viewList)
@@ -19,7 +20,7 @@ extension VCreateSearch
             view:viewCancel,
             toView:self)
         
-        NSLayoutConstraint.topToTop(
+        viewList.layoutTop = NSLayoutConstraint.topToTop(
             view:viewList,
             toView:self,
             constant:-viewList.kHeight)
