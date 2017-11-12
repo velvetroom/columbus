@@ -1,11 +1,9 @@
 import UIKit
 
-final class VCreateSearchList:VCollection
+final class VCreateSearchBaseList:VCollection
     <ArchCreateSearch,
-    VCreateSearchListCell>
+    VCreateSearchBaseListCell>
 {
-    
-    
     required init(controller:CCreateSearch)
     {
         super.init(controller:controller)
