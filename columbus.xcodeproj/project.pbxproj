@@ -280,6 +280,7 @@
 		DA8F05C11FB6A00C00589C86 /* UTMCreateLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8F05C01FB6A00C00589C86 /* UTMCreateLoad.swift */; };
 		DA90B8FE1FA0D25900272ECA /* MCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */; };
 		DA954E431FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift */; };
+		DA954E451FB8D1AA00CA60BE /* VCreateSearchBaseListCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E441FB8D1AA00CA60BE /* VCreateSearchBaseListCellFactory.swift */; };
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
 		DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */; };
 		DA96A2901FAE76F000109455 /* ArchCreateTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */; };
@@ -703,6 +704,7 @@
 		DA8F05C01FB6A00C00589C86 /* UTMCreateLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateLoad.swift; sourceTree = "<group>"; };
 		DA90B8FD1FA0D25900272ECA /* MCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateFactory.swift; sourceTree = "<group>"; };
 		DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseListActions.swift; sourceTree = "<group>"; };
+		DA954E441FB8D1AA00CA60BE /* VCreateSearchBaseListCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseListCellFactory.swift; sourceTree = "<group>"; };
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
 		DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRangeFactory.swift; sourceTree = "<group>"; };
 		DA96A28F1FAE76F000109455 /* ArchCreateTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateTravel.swift; sourceTree = "<group>"; };
@@ -951,6 +953,7 @@
 				DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseListActions.swift */,
 				DA63C0EA1FB89A3D007D01A7 /* VCreateSearchBaseListConfig.swift */,
 				DA63C0E61FB899E2007D01A7 /* VCreateSearchBaseListCell.swift */,
+				DA954E441FB8D1AA00CA60BE /* VCreateSearchBaseListCellFactory.swift */,
 			);
 			path = CreateSearch;
 			sourceTree = "<group>";
@@ -2137,6 +2140,7 @@
 				DA65ECE81F95E68700720673 /* ExtensionUICollectionReusableView.swift in Sources */,
 				DA65ECF81F95E68700720673 /* MMenuOrder.swift in Sources */,
 				DAB2F8F81F96698F00C1EF4A /* MPlans.swift in Sources */,
+				DA954E451FB8D1AA00CA60BE /* VCreateSearchBaseListCellFactory.swift in Sources */,
 				DA1906BA1FAFBBAA008147EA /* MStoreStatusLoading.swift in Sources */,
 				DA1A6C3C1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift in Sources */,
 				DA18A96D1FAD597900F6BDF8 /* CStore.swift in Sources */,
