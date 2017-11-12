@@ -5,15 +5,14 @@ final class VCreateSearchBase:View<ArchCreateSearch>
     weak var viewList:VCreateSearchBaseList!
     weak var viewBar:VCreateSearchBaseBar!
     weak var layoutTop:NSLayoutConstraint!
-    let kHeight:CGFloat = 400
-    let kBarTop:CGFloat = 14
-    let kBarHeight:CGFloat = 64
+    let kHeight:CGFloat = 300
+    let kBarHeight:CGFloat = 78
     let kBorderHeight:CGFloat = 1
     
     required init(controller:CCreateSearch)
     {
         super.init(controller:controller)
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.colourBackgroundGray
         
         factoryViews()
     }

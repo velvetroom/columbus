@@ -17,8 +17,8 @@ extension VCreateSearchBase
             controller:controller)
         self.viewBar = viewBar
         
-        addSubview(border)
         addSubview(viewList)
+        addSubview(border)
         addSubview(viewBar)
         
         NSLayoutConstraint.bottomToBottom(
@@ -37,8 +37,7 @@ extension VCreateSearchBase
         
         NSLayoutConstraint.topToTop(
             view:viewBar,
-            toView:self,
-            constant:kBarTop)
+            toView:self)
         NSLayoutConstraint.height(
             view:viewBar,
             constant:kBarHeight)

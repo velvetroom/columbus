@@ -31,7 +31,14 @@ extension VCreateSearchBaseBar
             view:border,
             toView:self)
         
-        NSLayoutConstraint.equals(
+        NSLayoutConstraint.topToTop(
+            view:searchBar,
+            toView:self,
+            constant:kBarTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:searchBar,
+            toView:self)
+        NSLayoutConstraint.equalsHorizontal(
             view:searchBar,
             toView:self)
     }

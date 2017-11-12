@@ -31,7 +31,7 @@ final class VCreateSearch:ViewMain
     
     private func asyncUpdateList()
     {
-        viewBase.viewList.collectionView.reloadData()
+        viewBase.viewList.update()
     }
     
     //MARK: internal

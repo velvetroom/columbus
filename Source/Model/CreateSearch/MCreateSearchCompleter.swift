@@ -6,6 +6,18 @@ extension MCreateSearch
     
     func complete(string:String)
     {
-        completer.queryFragment = string
+        guard
+            
+            string.isEmpty
+        
+        else
+        {
+            completer.queryFragment = string
+            
+            return
+        }
+        
+        completer.cancel()
+        updateItems(items:[])
     }
 }

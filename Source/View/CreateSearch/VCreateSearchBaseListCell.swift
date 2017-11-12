@@ -2,18 +2,18 @@ import MapKit
 
 final class VCreateSearchBaseListCell:UICollectionViewCell
 {
-    weak var label:UILabel!
-    weak var layoutLabelHeight:NSLayoutConstraint!
+    private weak var label:UILabel!
+    private weak var layoutLabelHeight:NSLayoutConstraint!
     let attributesTitle:[NSAttributedStringKey:Any]
     let attributesTitleHighlighted:[NSAttributedStringKey:Any]
     let attributesSubtitle:[NSAttributedStringKey:Any]
     let attributesSubtitleHighlighted:[NSAttributedStringKey:Any]
     let breakLine:NSAttributedString
-    private let kBreakLine:String = "\ntd;tr\n"
+    private let kBreakLine:String = "\n"
     private let kTitleFontSize:CGFloat = 14
-    private let kSubtitleFontSize:CGFloat = 12
-    private let kMarginHorizontal:CGFloat = 20
-    private let kTitleTop:CGFloat = 10
+    private let kSubtitleFontSize:CGFloat = 11
+    private let kMargin:CGFloat = 10
+    private let kTextMaxHeight:CGFloat = 1000
     
     override init(frame:CGRect)
     {
@@ -28,7 +28,7 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         
         attributesTitleHighlighted = [
             NSAttributedStringKey.font:
-                UIFont.regular(size:kTitleFontSize),
+                UIFont.medium(size:kTitleFontSize),
             NSAttributedStringKey.foregroundColor:
                 colourLabelHighlighted]
         
@@ -40,7 +40,7 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         
         attributesSubtitleHighlighted = [
             NSAttributedStringKey.font:
-                UIFont.regular(size:kSubtitleFontSize),
+                UIFont.medium(size:kSubtitleFontSize),
             NSAttributedStringKey.foregroundColor:
                 colourLabelHighlighted]
         
@@ -49,7 +49,7 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         super.init(frame:frame)
         clipsToBounds = true
         isUserInteractionEnabled = false
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.white
         
         let label:UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -62,13 +62,14 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         
         NSLayoutConstraint.topToTop(
             view:label,
-            toView:self)
+            toView:self,
+            constant:kMargin)
         layoutLabelHeight = NSLayoutConstraint.height(
             view:label)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self,
-            margin:kMarginHorizontal)
+            margin:kMargin)
     }
     
     required init?(coder:NSCoder)
@@ -76,9 +77,31 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         return nil
     }
     
+    //MARK: private
+    
+    private func updateHeight(text:NSAttributedString)
+    {
+        let size:CGSize = CGSize(
+            width:label.bounds.width,
+            height:kTextMaxHeight)
+        
+        let rect:CGRect = text.boundingRect(
+            with:size,
+            options:NSStringDrawingOptions([
+                NSStringDrawingOptions.usesLineFragmentOrigin,
+                NSStringDrawingOptions.usesFontLeading]),
+            context:nil)
+        let height:CGFloat = ceil(rect.height)
+        
+        layoutLabelHeight.constant = height
+    }
+    
+    //MARK: internal
+    
     func config(model:MKLocalSearchCompletion)
     {
         let text:NSAttributedString = factoryText(model:model)
         label.attributedText = text
+        updateHeight(text:text)
     }
 }

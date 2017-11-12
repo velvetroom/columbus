@@ -6,10 +6,12 @@ final class VCreateSearchBaseBar:
 {
     weak var searchBar:UISearchBar!
     let kBorderHeight:CGFloat = 1
+    let kBarTop:CGFloat = 14
     
     required init(controller:CCreateSearch)
     {
         super.init(controller:controller)
+        backgroundColor = UIColor.white
         
         factoryViews()
     }

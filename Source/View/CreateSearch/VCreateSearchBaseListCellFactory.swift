@@ -26,9 +26,11 @@ extension VCreateSearchBaseListCell
     private func factorySubtitle(
         model:MKLocalSearchCompletion) -> NSAttributedString?
     {
+        let subtitle:String = model.subtitle
+        
         guard
         
-            model.subtitle.count > 0
+            subtitle.count > 0
         
         else
         {
@@ -37,7 +39,7 @@ extension VCreateSearchBaseListCell
         
         let highlightRanges:[NSValue] = model.subtitleHighlightRanges
         let string:NSMutableAttributedString = NSMutableAttributedString(
-            string:model.subtitle,
+            string:subtitle,
             attributes:attributesSubtitle)
         
         for highlightRange:NSValue in highlightRanges

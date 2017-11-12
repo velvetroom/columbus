@@ -4,7 +4,9 @@ final class VCreateSearchBaseList:VCollection
     <ArchCreateSearch,
     VCreateSearchBaseListCell>
 {
-    private let kCellHeight:CGFloat = 50
+    let kCollectionTop:CGFloat = 78
+    let kInterItem:CGFloat = 1
+    private let kCellHeight:CGFloat = 62
     private var cellSize:CGSize?
     
     required init(controller:CCreateSearch)

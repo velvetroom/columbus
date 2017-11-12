@@ -6,7 +6,7 @@ final class VCreateSearchCancel:View<ArchCreateSearch>
     {
         super.init(controller:controller)
         
-        let blur:VBlur = VBlur.light()
+        let blur:VBlur = VBlur.dark()
         
         let button:UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
