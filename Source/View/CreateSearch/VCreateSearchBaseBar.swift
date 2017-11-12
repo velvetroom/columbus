@@ -26,4 +26,18 @@ final class VCreateSearchBaseBar:
     {
         controller.back()
     }
+    
+    func searchBarSearchButtonClicked(
+        _ searchBar:UISearchBar)
+    {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBar(
+        _ searchBar:UISearchBar,
+        textDidChange searchText:String)
+    {
+        controller.model.searchPlace(
+            place:searchText)
+    }
 }
