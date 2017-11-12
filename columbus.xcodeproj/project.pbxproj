@@ -157,6 +157,7 @@
 		DA5B09411FA360D10055E8F3 /* ArchCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B09401FA360D10055E8F3 /* ArchCreateSave.swift */; };
 		DA5B09461FA361380055E8F3 /* MCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B09451FA361380055E8F3 /* MCreateSave.swift */; };
 		DA5B094C1FA362210055E8F3 /* VCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B094B1FA362210055E8F3 /* VCreateSave.swift */; };
+		DA63C0E31FB89969007D01A7 /* VCreateSearchBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */; };
 		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
 		DA65ECD61F95E68700720673 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC561F95E68600720673 /* spinner.xcassets */; };
@@ -569,6 +570,7 @@
 		DA5B09401FA360D10055E8F3 /* ArchCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateSave.swift; sourceTree = "<group>"; };
 		DA5B09451FA361380055E8F3 /* MCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSave.swift; sourceTree = "<group>"; };
 		DA5B094B1FA362210055E8F3 /* VCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSave.swift; sourceTree = "<group>"; };
+		DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBase.swift; sourceTree = "<group>"; };
 		DA65EC3D1F95DFD700720673 /* columbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = columbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65EC531F95E68600720673 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA65EC551F95E68600720673 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -921,6 +923,7 @@
 				DA26F1891FB7C012007F171D /* VCreateSearchFactory.swift */,
 				DA26F18B1FB7C0AB007F171D /* VCreateSearchAnimations.swift */,
 				DA26F18D1FB7C24D007F171D /* VCreateSearchCancel.swift */,
+				DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */,
 				DA776E171FB87A1700AB58F8 /* VCreateSearchList.swift */,
 				DA776E1B1FB87BD700AB58F8 /* VCreateSearchListConfig.swift */,
 				DA776E191FB87A3B00AB58F8 /* VCreateSearchListCell.swift */,
@@ -2109,6 +2112,7 @@
 				DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift in Sources */,
 				DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */,
 				DAD888F61F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift in Sources */,
+				DA63C0E31FB89969007D01A7 /* VCreateSearchBase.swift in Sources */,
 				DA750CAA1FA78A7300459985 /* MHomeFactory.swift in Sources */,
 				DA9E960B1F96681B00538374 /* ArchSettings.swift in Sources */,
 				DA65ECEB1F95E68700720673 /* AppDelegate.swift in Sources */,
