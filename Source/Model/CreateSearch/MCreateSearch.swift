@@ -1,12 +1,13 @@
-import MapKit
+import Foundation
 
 final class MCreateSearch:Model<ArchCreateSearch>
 {
-    private let completer:MKLocalSearchCompleter
+    let completer:Any?
     
     required init()
     {
-        completer = MKLocalSearchCompleter()
+        completer = MCreateSearch.factoryCompleter()
+        
         super.init()
     }
 }

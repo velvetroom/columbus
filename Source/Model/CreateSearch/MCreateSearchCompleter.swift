@@ -1,6 +1,7 @@
 import MapKit
 
-extension MCreateSearch
+extension MCreateSearchCompleter
 {
+    //MARK: internal
     
 }

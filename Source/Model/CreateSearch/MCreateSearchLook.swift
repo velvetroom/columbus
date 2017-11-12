@@ -50,7 +50,7 @@ extension MCreateSearch
     {
         for mapItem:MKMapItem in mapItems
         {
-            
+            print(mapItem.name)
         }
     }
     
