@@ -2,28 +2,33 @@ import UIKit
 
 extension VCreateSearch
 {
-    //MARK: private
+    //MARK: internal
     
-    private func animate(listTop:CGFloat)
+    func animateShow()
     {
-        viewBase.layoutTop.constant = listTop
+        viewBase.layoutTop.constant = 0
+        
+        UIView.animate(
+            withDuration:kAnimationDuration,
+        animations:
+        { [weak self] in
+            
+            self?.layoutIfNeeded()
+        })
+        { [weak self] (done:Bool) in
+            
+            self?.viewBase.viewBar.searchBar.becomeFirstResponder()
+        }
+    }
+    
+    func animateHide()
+    {
+        viewBase.layoutTop.constant = -viewBase.kHeight
         
         UIView.animate(withDuration:kAnimationDuration)
         { [weak self] in
             
             self?.layoutIfNeeded()
         }
-    }
-    
-    //MARK: internal
-    
-    func animateShow()
-    {
-        animate(listTop:0)
-    }
-    
-    func animateHide()
-    {
-        animate(listTop:-viewBase.kHeight)
     }
 }
