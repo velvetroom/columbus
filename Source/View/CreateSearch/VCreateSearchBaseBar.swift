@@ -2,23 +2,14 @@ import UIKit
 
 final class VCreateSearchBaseBar:View<ArchCreateSearch>
 {
-    private weak var searchBar:UISearchBar!
+    weak var searchBar:UISearchBar!
+    let kBorderHeight:CGFloat = 1
     
     required init(controller:CCreateSearch)
     {
         super.init(controller:controller)
         
-        let searchBar:UISearchBar = UISearchBar(frame:CGRect.zero)
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.backgroundColor = UIColor.clear
-        searchBar.searchBarStyle = UISearchBarStyle.minimal
-        self.searchBar = searchBar
-        
-        addSubview(searchBar)
-        
-        NSLayoutConstraint.equals(
-            view:searchBar,
-            toView:self)
+        factoryViews()
     }
     
     required init?(coder:NSCoder)

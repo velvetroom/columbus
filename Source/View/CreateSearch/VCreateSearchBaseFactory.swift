@@ -37,7 +37,8 @@ extension VCreateSearchBase
         
         NSLayoutConstraint.topToTop(
             view:viewBar,
-            toView:self)
+            toView:self,
+            constant:kBarTop)
         NSLayoutConstraint.height(
             view:viewBar,
             constant:kBarHeight)

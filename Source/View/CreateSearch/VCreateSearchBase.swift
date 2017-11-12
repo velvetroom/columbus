@@ -6,7 +6,8 @@ final class VCreateSearchBase:View<ArchCreateSearch>
     weak var viewBar:VCreateSearchBaseBar!
     weak var layoutTop:NSLayoutConstraint!
     let kHeight:CGFloat = 400
-    let kBarHeight:CGFloat = 124
+    let kBarTop:CGFloat = 14
+    let kBarHeight:CGFloat = 64
     let kBorderHeight:CGFloat = 1
     
     required init(controller:CCreateSearch)
