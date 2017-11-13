@@ -70,9 +70,13 @@ extension MCreateSave
             mapRange:mapRange,
             settings:settings)
         
-        builder = MCreateSaveBuilder(
+        let builder:MCreateSaveBuilder = MCreateSaveBuilder(
             renders:renders,
             directory:directory)
+        builder.model = self
+        self.builder = builder
+        
+        pullSnapshot()
     }
     
     func pullSnapshot()

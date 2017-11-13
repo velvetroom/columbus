@@ -27,7 +27,7 @@ final class MCreateSaveBuilder
     private func selectorTimeout(sender timer:Timer)
     {
         timer.invalidate()
-        
+        model?.buildingError()
     }
     
     //MARK: private
