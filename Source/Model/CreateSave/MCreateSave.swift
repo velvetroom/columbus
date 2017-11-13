@@ -22,8 +22,6 @@ final class MCreateSave:Model<ArchCreateSave>
         urls = []
         
         super.init()
-        
-        changeStatus(statusType:MCreateSaveStatusBusy.self)
     }
     
     deinit
@@ -56,15 +54,15 @@ final class MCreateSave:Model<ArchCreateSave>
         self.timer = timer
     }
     
-    private func changeStatus(statusType:MCreateSaveStatusProtocol.Type)
+    //MARK: internal
+    
+    func changeStatus(statusType:MCreateSaveStatusProtocol.Type)
     {
         let status:MCreateSaveStatusProtocol = statusType.init()
         self.status = status
         
         view?.updateStatus()
     }
-    
-    //MARK: internal
     
     func startTimer()
     {

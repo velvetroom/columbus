@@ -47,6 +47,8 @@ extension MCreateSave
     
     func save()
     {
+        changeStatus(statusType:MCreateSaveStatusBusy.self)
+        
         DispatchQueue.global(
             qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
