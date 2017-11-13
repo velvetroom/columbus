@@ -5,6 +5,54 @@ extension MCreatePlan
 {
     //MARK: private
     
+    private func loadProgress()
+    {
+        guard
+        
+            let view:VCreateStatusReady = model?.view?.view as? VCreateStatusReady
+        
+        else
+        {
+            return
+        }
+        
+        view.viewBar.viewLoader.loadProgress()
+    }
+    
+    private func asyncAddStop(coordinate:CLLocationCoordinate2D)
+    {
+        guard
+            
+            let database:Database = model?.database,
+            let settings:DSettings = model?.settings
+            
+        else
+        {
+            return
+        }
+        
+        let location:CLLocation = MCreatePlan.factoryLocation(coordinate:coordinate)
+        
+        geocodeLocation(location:location)
+        { [weak self] (name:String?) in
+            
+            guard
+                
+                let name:String = name
+                
+            else
+            {
+                return
+            }
+            
+            self?.addStop(
+                database:database,
+                settings:settings,
+                name:name,
+                coordinate:coordinate)
+        }
+    }
+    
     private func addStop(
         database:Database,
         settings:DSettings,
@@ -83,36 +131,12 @@ extension MCreatePlan
     
     func addStop(coordinate:CLLocationCoordinate2D)
     {
-        guard
-            
-            let database:Database = model?.database,
-            let settings:DSettings = model?.settings
+        loadProgress()
         
-        else
-        {
-            return
-        }
-        
-        let location:CLLocation = MCreatePlan.factoryLocation(
-            coordinate:coordinate)
-        
-        geocodeLocation(location:location)
-        { [weak self] (name:String?) in
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
             
-            guard
-                
-                let name:String = name
-                
-            else
-            {
-                return
-            }
-            
-            self?.addStop(
-                database:database,
-                settings:settings,
-                name:name,
-                coordinate:coordinate)
+            self?.asyncAddStop(coordinate:coordinate)
         }
     }
 }
