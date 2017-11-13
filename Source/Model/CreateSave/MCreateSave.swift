@@ -11,18 +11,11 @@ final class MCreateSave:Model<ArchCreateSave>
     weak var plan:DPlan?
     weak var settings:DSettings?
     weak var timer:Timer?
-    var dispatchGroup:DispatchGroup?
-    var urls:[URL]
+    var imageUrls:[URL]?
+    var imageRenders:[MCreateSaveRender]?
+    var imageDirectory:URL?
     private(set) var status:MCreateSaveStatusProtocol?
-    private let kTimeout:TimeInterval = 9
-    
-    required init()
-    {
-        dispatchGroup = MCreateSave.factoryDispatchGroup()
-        urls = []
-        
-        super.init()
-    }
+    private let kTimeout:TimeInterval = 7
     
     deinit
     {
