@@ -13,7 +13,7 @@ final class MCreateSave:Model<ArchCreateSave>
     weak var timer:Timer?
     var dispatchGroup:DispatchGroup?
     var urls:[URL]
-    private let kTimeout:TimeInterval = 180
+    private let kTimeout:TimeInterval = 18
     
     required init()
     {

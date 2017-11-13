@@ -1,6 +1,6 @@
 import UIKit
 
-extension VCreateSave
+extension VCreateSaveStatusBusy
 {
     //MARK: private
     
@@ -12,7 +12,7 @@ extension VCreateSave
             NSAttributedStringKey.foregroundColor:
                 UIColor.white]
         let string:String = String.localizedView(
-            key:"VCreateSave_labelTitle")
+            key:"VCreateSaveStatusBusy_labelTitle")
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -28,7 +28,7 @@ extension VCreateSave
             NSAttributedStringKey.foregroundColor:
                 UIColor(white:1, alpha:0.6)]
         let string:String = String.localizedView(
-            key:"VCreateSave_labelDescr")
+            key:"VCreateSaveStatusBusy_labelDescr")
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -79,7 +79,7 @@ extension VCreateSave
             for:UIControlState.highlighted)
         buttonCancel.setTitle(
             String.localizedView(
-                key:"VCreateSave_buttonCancel"),
+                key:"VCreateSaveStatusBusy_buttonCancel"),
             for:UIControlState.normal)
         buttonCancel.titleLabel!.font = UIFont.regular(
             size:kCancelFontSize)
