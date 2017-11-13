@@ -419,6 +419,7 @@
 		DAEF388D1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */; };
 		DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */; };
 		DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */; };
+		DAF2EF351FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -848,6 +849,7 @@
 		DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyFactory.swift; sourceTree = "<group>"; };
 		DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarFactory.swift; sourceTree = "<group>"; };
 		DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarAnimations.swift; sourceTree = "<group>"; };
+		DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveStatusErrorFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1008,6 +1010,7 @@
 				DA5573C51FBA372400F15606 /* VCreateSaveStatusBusy.swift */,
 				DA5573C91FBA387200F15606 /* VCreateSaveStatusBusyFactory.swift */,
 				DA5573C71FBA372F00F15606 /* VCreateSaveStatusError.swift */,
+				DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */,
 			);
 			path = CreateSave;
 			sourceTree = "<group>";
@@ -1930,6 +1933,7 @@
 				DAB831441FB2190B00E22942 /* MCreateStatusErrorAvailability.swift in Sources */,
 				DAE6998E1FA287CA00FFE6E3 /* VCreateStatusReadyBarTravelConfig.swift in Sources */,
 				DAD387241FA3E7E40031B9F8 /* MCreateSaveMapRangeFactory.swift in Sources */,
+				DAF2EF351FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift in Sources */,
 				DA4BC93B1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift in Sources */,
 				DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */,
 				DAD889041F9D2EFA000EC7FD /* MCreatePlanStopRemove.swift in Sources */,
