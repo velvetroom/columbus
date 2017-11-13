@@ -2,65 +2,43 @@ import UIKit
 
 final class VCreateSave:ViewMain
 {
-    weak var viewSpinner:VSpinner!
-    weak var layoutCancelLeft:NSLayoutConstraint!
-    let kLabelBottom:CGFloat = -120
-    let kLabelHeight:CGFloat = 60
-    let kCancelHeight:CGFloat = 55
-    let kCancelWidth:CGFloat = 120
-    let kLabelFontSize:CGFloat = 16
-    let kCancelFontSize:CGFloat = 16
+    private(set) weak var view:View<ArchCreateSave>?
     
-    required init(controller:UIViewController)
+    //MARK: private
+    
+    private func asyncUpdateStatus()
     {
-        super.init(controller:controller)
+        self.view?.removeFromSuperview()
         
         guard
-        
-            let controller:CCreateSave = controller as? CCreateSave
-        
+            
+            let controller:CCreateSave = self.controller as? CCreateSave,
+            let status:MCreateSaveStatusProtocol = controller.model.status
+            
         else
         {
             return
         }
         
-        factoryViews(controller:controller)
-    }
-    
-    required init?(coder:NSCoder)
-    {
-        return nil
-    }
-    
-    deinit
-    {
-        viewSpinner.stopAnimating()
-    }
-    
-    override func layoutSubviews()
-    {
-        let width:CGFloat = bounds.width
-        let remainWidth:CGFloat = width - kCancelWidth
-        let marginLeft:CGFloat = remainWidth / 2.0
-        layoutCancelLeft.constant = marginLeft
+        let view:View<ArchCreateSave> = status.viewType.init(
+            controller:controller)
+        self.view = view
         
-        super.layoutSubviews()
+        addSubview(view)
+        
+        NSLayoutConstraint.equals(
+            view:view,
+            toView:self)
     }
     
-    //MARK: selectors
+    //MARK: internal
     
-    @objc
-    func selectorCancel(sender button:UIButton)
+    func updateStatus()
     {
-        guard
-        
-            let controller:CCreateSave = self.controller as? CCreateSave
-        
-        else
-        {
-            return
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncUpdateStatus()
         }
-        
-        controller.cancel()
     }
 }

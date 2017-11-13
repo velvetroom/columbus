@@ -13,7 +13,8 @@ final class MCreateSave:Model<ArchCreateSave>
     weak var timer:Timer?
     var dispatchGroup:DispatchGroup?
     var urls:[URL]
-    private let kTimeout:TimeInterval = 18
+    private(set) var status:MCreateSaveStatusProtocol?
+    private let kTimeout:TimeInterval = 9
     
     required init()
     {
@@ -21,6 +22,8 @@ final class MCreateSave:Model<ArchCreateSave>
         urls = []
         
         super.init()
+        
+        changeStatus(statusType:MCreateSaveStatusBusy.self)
     }
     
     deinit
@@ -34,8 +37,9 @@ final class MCreateSave:Model<ArchCreateSave>
     private func selectorTimeout(sender timer:Timer)
     {
         timer.invalidate()
-        dispatchGroup = nil
-        savedSnapshots()
+//        dispatchGroup = nil
+//        savedSnapshots()
+        changeStatus(statusType:MCreateSaveStatusError.self)
     }
     
     //MARK: private
@@ -50,6 +54,14 @@ final class MCreateSave:Model<ArchCreateSave>
             repeats:false)
         
         self.timer = timer
+    }
+    
+    private func changeStatus(statusType:MCreateSaveStatusProtocol.Type)
+    {
+        let status:MCreateSaveStatusProtocol = statusType.init()
+        self.status = status
+        
+        view?.updateStatus()
     }
     
     //MARK: internal

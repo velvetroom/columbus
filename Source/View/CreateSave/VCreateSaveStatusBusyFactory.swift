@@ -50,7 +50,7 @@ extension VCreateSaveStatusBusy
     
     //MARK: internal
     
-    func factoryViews(controller:CCreateSave)
+    func factoryViews()
     {
         let title:NSAttributedString = factoryInfo()
         
