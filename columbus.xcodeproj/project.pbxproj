@@ -414,6 +414,7 @@
 		DAEF388D1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */; };
 		DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */; };
 		DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */; };
+		DAFD521B1FBA2DFB00886A3F /* MCreatePlanAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD521A1FBA2DFB00886A3F /* MCreatePlanAdd.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -838,6 +839,7 @@
 		DAEF388C1F97AC99002AF8BE /* VCreateStatusReadyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyFactory.swift; sourceTree = "<group>"; };
 		DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarFactory.swift; sourceTree = "<group>"; };
 		DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarAnimations.swift; sourceTree = "<group>"; };
+		DAFD521A1FBA2DFB00886A3F /* MCreatePlanAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanAdd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1484,6 +1486,7 @@
 				DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */,
 				DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */,
 				DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */,
+				DAFD521A1FBA2DFB00886A3F /* MCreatePlanAdd.swift */,
 				DAD888F91F9D2172000EC7FD /* MCreatePlanFactory.swift */,
 				DA7B65251F9E707E001CDC35 /* MCreatePlanSave.swift */,
 				DA13F65B1F9A174D00DF92F5 /* MCreatePlanStop.swift */,
@@ -2093,6 +2096,7 @@
 				DAA793501FA2436200791B99 /* DPlanFactory.swift in Sources */,
 				DAA0B8031FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift in Sources */,
 				DA4861851FAA3D2300FFBAB8 /* MSettingsDetailLevelProtocol.swift in Sources */,
+				DAFD521B1FBA2DFB00886A3F /* MCreatePlanAdd.swift in Sources */,
 				DA5259FC1F9F7120004F8503 /* VSettingsListConfig.swift in Sources */,
 				DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */,
 				DABDE8831FAA042100E24BBE /* VSettingsListCellDistance.swift in Sources */,
