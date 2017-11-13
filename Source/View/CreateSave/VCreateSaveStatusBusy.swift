@@ -6,9 +6,9 @@ final class VCreateSaveStatusBusy:View<ArchCreateSave>
     weak var layoutCancelLeft:NSLayoutConstraint!
     let kLabelBottom:CGFloat = -120
     let kLabelHeight:CGFloat = 60
+    let kLabelFontSize:CGFloat = 16
     let kCancelHeight:CGFloat = 55
     let kCancelWidth:CGFloat = 120
-    let kLabelFontSize:CGFloat = 16
     let kCancelFontSize:CGFloat = 16
     
     required init(controller:CCreateSave)

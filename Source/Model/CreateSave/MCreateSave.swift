@@ -40,4 +40,10 @@ final class MCreateSave:Model<ArchCreateSave>
         cancel()
         changeStatus(statusType:MCreateSaveStatusError.self)
     }
+    
+    func retryBuilding()
+    {
+        changeStatus(statusType:MCreateSaveStatusBusy.self)
+        pullSnapshot()
+    }
 }

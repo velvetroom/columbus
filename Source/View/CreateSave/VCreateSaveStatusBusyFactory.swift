@@ -52,7 +52,7 @@ extension VCreateSaveStatusBusy
     
     func factoryViews()
     {
-        let title:NSAttributedString = factoryInfo()
+        let info:NSAttributedString = factoryInfo()
         
         let viewGradient:VGradient = VGradient.vertical(
             colourTop:UIColor.colourGradientLight,
@@ -67,7 +67,7 @@ extension VCreateSaveStatusBusy
         label.backgroundColor = UIColor.clear
         label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0
-        label.attributedText = title
+        label.attributedText = info
         
         let buttonCancel:UIButton = UIButton()
         buttonCancel.translatesAutoresizingMaskIntoConstraints = false

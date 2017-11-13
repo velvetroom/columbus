@@ -7,7 +7,7 @@ final class MCreateSaveBuilder
     var urls:[URL]
     let directory:URL
     private(set) weak var timer:Timer?
-    private let kTimeout:TimeInterval = 3
+    private let kTimeout:TimeInterval = 1
     
     init(renders:[MCreateSaveRender], directory:URL)
     {
