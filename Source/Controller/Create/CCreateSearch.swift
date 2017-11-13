@@ -76,7 +76,7 @@ final class CCreateSearch:Controller<ArchCreateSearch>
         
         parentController?.dismissAnimateOver
         {
-            controller.centreCoordinate(coordinate:coordinate)
+            controller.addStop(coordinate:coordinate)
         }
     }
 }

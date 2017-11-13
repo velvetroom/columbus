@@ -21,6 +21,6 @@ final class MCreateMapMenuStop:MCreateMapMenuProtocol
         }
         
         let coordinate:CLLocationCoordinate2D = view.viewMap.coordinateAtCentre()
-        controller.model.plan?.addStop(coordinate:coordinate)
+        controller.addStop(coordinate:coordinate)
     }
 }

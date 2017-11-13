@@ -91,20 +91,9 @@ final class CCreate:Controller<ArchCreate>
         parentController?.animateOver(controller:controller)
     }
     
-    func centreCoordinate(
+    func addStop(
         coordinate:CLLocationCoordinate2D)
     {
-        guard
-        
-            let view:VCreate = self.view as? VCreate,
-            let viewReady:VCreateStatusReady = view.view as? VCreateStatusReady
-        
-        else
-        {
-            return
-        }
-        
-        viewReady.viewMap.centreCoordinateRegion(
-            coordinate:coordinate)
+        model.plan?.addStop(coordinate:coordinate)
     }
 }
