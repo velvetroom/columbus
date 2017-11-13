@@ -59,7 +59,7 @@ final class CCreateSave:Controller<ArchCreateSave>
     
     func cancel()
     {
-        model.timer?.invalidate()
+        model.cancel()
         
         parentController?.pop(
             vertical:ControllerParent.Vertical.bottom)

@@ -57,9 +57,24 @@ extension MCreateSave
         }
     }
     
+    func snapshotUrls(urls:[URL])
+    {
+        guard
+        
+            let builder:MCreateSaveBuilder = self.builder
+        
+        else
+        {
+            return
+        }
+        
+        builder.urls.append(contentsOf:urls)
+        builder.renders.first?.slices.removeFirst()
+        pullSnapshot()
+    }
+    
     func savedSnapshots()
     {
-        timer?.invalidate()
         plan?.updateTimestamp()
         
         database?.save

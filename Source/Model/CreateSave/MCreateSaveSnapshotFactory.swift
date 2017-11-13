@@ -25,55 +25,38 @@ extension MCreateSave
     }
     
     private func factorySnapshot(
-        snapshot:MKMapSnapshot?,
-        error:Error?,
+        image:UIImage,
         zoom:Double,
         directory:URL,
-        slice:MCreateSaveRenderSlice,
-        completion:@escaping(([URL]?) -> ()))
+        slice:MCreateSaveRenderSlice)
     {
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).asyncAfter(
+        builder?.timer?.invalidate()
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
             deadline:DispatchTime.now() + MCreateSave.kAsyncWait)
         { [weak self] in
             
             self?.asyncFactorySnapshot(
-                snapshot:snapshot,
-                error:error,
+                image:image,
                 zoom:zoom,
                 directory:directory,
-                slice:slice,
-                completion:completion)
+                slice:slice)
         }
     }
     
     private func asyncFactorySnapshot(
-        snapshot:MKMapSnapshot?,
-        error:Error?,
+        image:UIImage,
         zoom:Double,
         directory:URL,
-        slice:MCreateSaveRenderSlice,
-        completion:@escaping(([URL]?) -> ()))
+        slice:MCreateSaveRenderSlice)
     {
-        guard
-            
-            error == nil,
-            let image:UIImage = snapshot?.image
-            
-        else
-        {
-            completion(nil)
-            
-            return
-        }
-        
         let urls:[URL] = MCreateSave.factoryImages(
             snapshot:image,
             directory:directory,
             zoom:zoom,
             slice:slice)
         
-        completion(urls)
+        snapshotUrls(urls:urls)
     }
     
     //MARK: internal
@@ -95,22 +78,33 @@ extension MCreateSave
     func factorySnapshot(
         zoom:Double,
         directory:URL,
-        slice:MCreateSaveRenderSlice,
-        completion:@escaping(([URL]?) -> ()))
+        slice:MCreateSaveRenderSlice)
     {
-        let snapshotter:MKMapSnapshotter = MKMapSnapshotter(
-            options:slice.options)
+        self.snapshotter?.cancel()
+        
+        let snapshotter:MKMapSnapshotter = MKMapSnapshotter(options:slice.options)
+        self.snapshotter = snapshotter
         
         snapshotter.start
         { [weak self] (snapshot:MKMapSnapshot?, error:Error?) in
             
+            guard
+                
+                error == nil,
+                let image:UIImage = snapshot?.image
+                
+            else
+            {
+                self?.buildingError()
+                
+                return
+            }
+            
             self?.factorySnapshot(
-                snapshot:snapshot,
-                error:error,
+                image:image,
                 zoom:zoom,
                 directory:directory,
-                slice:slice,
-                completion:completion)
+                slice:slice)
         }
     }
 }

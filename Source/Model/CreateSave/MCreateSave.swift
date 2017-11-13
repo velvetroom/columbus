@@ -1,4 +1,4 @@
-import Foundation
+import MapKit
 
 final class MCreateSave:Model<ArchCreateSave>
 {
@@ -10,41 +10,13 @@ final class MCreateSave:Model<ArchCreateSave>
     weak var database:Database?
     weak var plan:DPlan?
     weak var settings:DSettings?
-    weak var timer:Timer?
-    var imageUrls:[URL]?
-    var imageRenders:[MCreateSaveRender]?
-    var imageDirectory:URL?
+    weak var snapshotter:MKMapSnapshotter?
+    var builder:MCreateSaveBuilder?
     private(set) var status:MCreateSaveStatusProtocol?
-    private let kTimeout:TimeInterval = 7
     
     deinit
     {
-        timer?.invalidate()
-    }
-    
-    //MARK: selectors
-    
-    @objc
-    private func selectorTimeout(sender timer:Timer)
-    {
-        timer.invalidate()
-//        dispatchGroup = nil
-//        savedSnapshots()
-        changeStatus(statusType:MCreateSaveStatusError.self)
-    }
-    
-    //MARK: private
-    
-    private func asyncStartTimer()
-    {
-        let timer:Timer = Timer.scheduledTimer(
-            timeInterval:kTimeout,
-            target:self,
-            selector:#selector(selectorTimeout(sender:)),
-            userInfo:nil,
-            repeats:false)
-        
-        self.timer = timer
+        builder?.timer?.invalidate()
     }
     
     //MARK: internal
@@ -57,12 +29,15 @@ final class MCreateSave:Model<ArchCreateSave>
         view?.updateStatus()
     }
     
-    func startTimer()
+    func cancel()
     {
-        DispatchQueue.main.async
-        { [weak self] in
-            
-            self?.asyncStartTimer()
-        }
+        builder?.timer?.invalidate()
+        snapshotter?.cancel()
+    }
+    
+    func buildingError()
+    {
+        cancel()
+        changeStatus(statusType:MCreateSaveStatusError.self)
     }
 }

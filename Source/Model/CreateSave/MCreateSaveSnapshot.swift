@@ -4,57 +4,50 @@ extension MCreateSave
 {
     //MARK: private
     
-    private func snapshots(
-        directory:URL,
-        renders:[MCreateSaveRender])
+    private func asyncPullSnapshot(builder:MCreateSaveBuilder)
     {
-        startTimer()
+        print("total renders \(builder.renders.count)")
         
-        for render:MCreateSaveRender in renders
-        {
-            snapshots(
-                directory:directory,
-                render:render)
-            { [weak self] (urls:[URL]?) in
-                
-                if let urls:[URL] = urls
-                {
-                    self?.urls.append(
-                        contentsOf:urls)
-                }
-                
-                self?.dispatchGroup?.leave()
-            }
-        }
-        
-        dispatchGroup?.notify(
-            queue:DispatchQueue.global(
-                qos:DispatchQoS.QoSClass.background))
-        { [weak self] in
+        guard
             
-            self?.savedSnapshots()
+            let render:MCreateSaveRender = builder.renders.first
+            
+        else
+        {
+            savedSnapshots()
+            
+            return
         }
+        
+        pullSnapshot(
+            builder:builder,
+            render:render)
     }
     
-    private func snapshots(
-        directory:URL,
-        render:MCreateSaveRender,
-        completion:@escaping(([URL]?) -> ()))
+    private func pullSnapshot(
+        builder:MCreateSaveBuilder,
+        render:MCreateSaveRender)
     {
-        for slice:MCreateSaveRenderSlice in render.slices
-        {
-            dispatchGroup?.enter()
+        print("total slices \(render.slices.count)")
+        
+        guard
             
-            DispatchQueue.main.async
-            { [weak self] in
-                
-                self?.factorySnapshot(
-                    zoom:render.zoom,
-                    directory:directory,
-                    slice:slice,
-                    completion:completion)
-            }
+            let slice:MCreateSaveRenderSlice = render.slices.first
+            
+        else
+        {
+            builder.renders.removeFirst()
+            asyncPullSnapshot(builder:builder)
+            
+            return
         }
+        
+        builder.startTimer()
+        
+        factorySnapshot(
+            zoom:render.zoom,
+            directory:builder.directory,
+            slice:slice)
     }
     
     //MARK: internal
@@ -77,8 +70,26 @@ extension MCreateSave
             mapRange:mapRange,
             settings:settings)
         
-        snapshots(
-            directory:directory,
-            renders:renders)
+        builder = MCreateSaveBuilder(
+            renders:renders,
+            directory:directory)
+    }
+    
+    func pullSnapshot()
+    {
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            guard
+                
+                let builder:MCreateSaveBuilder = self?.builder
+            
+            else
+            {
+                return
+            }
+            
+            self?.asyncPullSnapshot(builder:builder)
+        }
     }
 }
