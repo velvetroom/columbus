@@ -8,9 +8,9 @@ extension VCreateSaveStatusError
     {
         let attributes:[NSAttributedStringKey:Any] = [
             NSAttributedStringKey.font:
-                UIFont.medium(size:kLabelFontSize),
+                UIFont.medium(size:kTitleFontSize),
             NSAttributedStringKey.foregroundColor:
-                UIColor.colourBackgroundDark]
+                UIColor.white]
         let string:String = String.localizedView(
             key:"VCreateSaveStatusError_labelTitle")
         let attributedString:NSAttributedString = NSAttributedString(
@@ -24,9 +24,9 @@ extension VCreateSaveStatusError
     {
         let attributes:[NSAttributedStringKey:Any] = [
             NSAttributedStringKey.font:
-                UIFont.regular(size:kLabelFontSize),
+                UIFont.regular(size:kDescrFontSize),
             NSAttributedStringKey.foregroundColor:
-                UIColor(white:0, alpha:0.5)]
+                UIColor(white:1, alpha:0.8)]
         let string:String = String.localizedView(
             key:"VCreateSaveStatusError_labelDescr")
         let attributedString:NSAttributedString = NSAttributedString(
@@ -54,6 +54,16 @@ extension VCreateSaveStatusError
     {
         let info:NSAttributedString = factoryInfo()
         
+        let colourTop:UIColor = UIColor(
+            red:1,
+            green:0.4352941176470589,
+            blue:0.5686274509803924,
+            alpha:1)
+        
+        let viewGradient:VGradient = VGradient.vertical(
+            colourTop:colourTop,
+            colourBottom:UIColor.colourFail)
+        
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -65,10 +75,10 @@ extension VCreateSaveStatusError
         let buttonCancel:UIButton = UIButton()
         buttonCancel.translatesAutoresizingMaskIntoConstraints = false
         buttonCancel.setTitleColor(
-            UIColor(white:0, alpha:0.5),
+            UIColor(white:1, alpha:0.9),
             for:UIControlState.normal)
         buttonCancel.setTitleColor(
-            UIColor.colourBackgroundGray,
+            UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
         buttonCancel.setTitle(
             String.localizedView(
@@ -84,25 +94,39 @@ extension VCreateSaveStatusError
         let buttonRetry:UIButton = UIButton()
         buttonRetry.translatesAutoresizingMaskIntoConstraints = false
         buttonRetry.setTitleColor(
-            UIColor.colourBackgroundDark,
+            UIColor.white,
             for:UIControlState.normal)
         buttonRetry.setTitleColor(
-            UIColor.colourBackgroundGray,
+            UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
         buttonRetry.setTitle(
             String.localizedView(
                 key:"VCreateSaveStatusError_buttonRetry"),
             for:UIControlState.normal)
-        buttonRetry.titleLabel!.font = UIFont.medium(
+        buttonRetry.titleLabel!.font = UIFont.bold(
             size:kRetryFontSize)
         buttonRetry.addTarget(
             self,
             action:#selector(selectorRetry(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        let image:UIImageView = UIImageView()
+        image.isUserInteractionEnabled = false
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.clipsToBounds = true
+        image.contentMode = UIViewContentMode.center
+        image.image = #imageLiteral(resourceName: "assetGenericError").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        image.tintColor = UIColor.white
+        
+        addSubview(viewGradient)
         addSubview(label)
         addSubview(buttonCancel)
         addSubview(buttonRetry)
+        addSubview(image)
+        
+        NSLayoutConstraint.equals(
+            view:viewGradient,
+            toView:self)
         
         NSLayoutConstraint.bottomToBottom(
             view:label,
@@ -120,7 +144,7 @@ extension VCreateSaveStatusError
             toView:buttonRetry)
         NSLayoutConstraint.height(
             view:buttonCancel,
-            constant:kCancelHeight)
+            constant:kButtonHeight)
         layoutCancelLeft = NSLayoutConstraint.leftToLeft(
             view:buttonCancel,
             toView:self)
@@ -133,12 +157,22 @@ extension VCreateSaveStatusError
             toView:label)
         NSLayoutConstraint.height(
             view:buttonRetry,
-            constant:kCancelHeight)
+            constant:kButtonHeight)
         layoutRetryLeft = NSLayoutConstraint.leftToLeft(
             view:buttonRetry,
             toView:self)
         NSLayoutConstraint.width(
             view:buttonRetry,
             constant:kButtonWidth)
+        
+        NSLayoutConstraint.bottomToTop(
+            view:image,
+            toView:label)
+        NSLayoutConstraint.height(
+            view:image,
+            constant:kImageHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:image,
+            toView:self)
     }
 }

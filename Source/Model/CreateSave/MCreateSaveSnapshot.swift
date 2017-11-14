@@ -6,8 +6,6 @@ extension MCreateSave
     
     private func asyncPullSnapshot(builder:MCreateSaveBuilder)
     {
-        print("total renders \(builder.renders.count)")
-        
         guard
             
             let render:MCreateSaveRender = builder.renders.first
@@ -28,8 +26,6 @@ extension MCreateSave
         builder:MCreateSaveBuilder,
         render:MCreateSaveRender)
     {
-        print("total slices \(render.slices.count)")
-        
         guard
             
             let slice:MCreateSaveRenderSlice = render.slices.first

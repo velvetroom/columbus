@@ -5,13 +5,14 @@ final class VCreateSaveStatusError:View<ArchCreateSave>
     weak var layoutCancelLeft:NSLayoutConstraint!
     weak var layoutRetryLeft:NSLayoutConstraint!
     let kLabelBottom:CGFloat = -200
-    let kLabelHeight:CGFloat = 60
-    let kLabelFontSize:CGFloat = 16
+    let kLabelHeight:CGFloat = 220
+    let kTitleFontSize:CGFloat = 20
+    let kDescrFontSize:CGFloat = 14
     let kButtonWidth:CGFloat = 120
-    let kCancelHeight:CGFloat = 55
+    let kButtonHeight:CGFloat = 40
     let kCancelFontSize:CGFloat = 16
-    let kRetryHeight:CGFloat = 65
     let kRetryFontSize:CGFloat = 18
+    let kImageHeight:CGFloat = 80
     
     required init(controller:CCreateSave)
     {
