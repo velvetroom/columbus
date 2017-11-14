@@ -248,6 +248,7 @@
 		DA78BB361F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */; };
 		DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */; };
 		DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */; };
+		DA7933351FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7933341FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift */; };
 		DA79505C1FAED8B10057F6EE /* MCreateTravelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */; };
 		DA7950601FAEDAD30057F6EE /* VCreateTravelListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505F1FAEDAD30057F6EE /* VCreateTravelListFactory.swift */; };
 		DA7950621FAEDE900057F6EE /* VCreateTravelListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7950611FAEDE900057F6EE /* VCreateTravelListActions.swift */; };
@@ -676,6 +677,7 @@
 		DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationStrategyUnknown.swift; sourceTree = "<group>"; };
 		DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationFactory.swift; sourceTree = "<group>"; };
 		DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationDelegate.swift; sourceTree = "<group>"; };
+		DA7933341FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveStatusBusyProgress.swift; sourceTree = "<group>"; };
 		DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelFactory.swift; sourceTree = "<group>"; };
 		DA79505F1FAEDAD30057F6EE /* VCreateTravelListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListFactory.swift; sourceTree = "<group>"; };
 		DA7950611FAEDE900057F6EE /* VCreateTravelListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListActions.swift; sourceTree = "<group>"; };
@@ -1009,6 +1011,7 @@
 				DA5B094B1FA362210055E8F3 /* VCreateSave.swift */,
 				DA5573C51FBA372400F15606 /* VCreateSaveStatusBusy.swift */,
 				DA5573C91FBA387200F15606 /* VCreateSaveStatusBusyFactory.swift */,
+				DA7933341FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift */,
 				DA5573C71FBA372F00F15606 /* VCreateSaveStatusError.swift */,
 				DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */,
 			);
@@ -2003,6 +2006,7 @@
 				DA1906D81FAFCB0B008147EA /* MStorePerkStatusPurchasing.swift in Sources */,
 				DAA9255C1FA5426E00B72DB2 /* MCreateSavePixelRange.swift in Sources */,
 				DA65ECE21F95E68700720673 /* ExtensionURLResponse.swift in Sources */,
+				DA7933351FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift in Sources */,
 				DA4E5B051F97DDCA00B7BE3E /* MCreateMapMenuExpand.swift in Sources */,
 				DAB2F8F11F9668E400C1EF4A /* CSettings.swift in Sources */,
 				DA65ED1D1F95E68700720673 /* VPushBackground.swift in Sources */,
