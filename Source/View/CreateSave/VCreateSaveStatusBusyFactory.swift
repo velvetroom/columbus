@@ -88,7 +88,12 @@ extension VCreateSaveStatusBusy
             action:#selector(selectorCancel(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        let viewProgress:VCreateSaveStatusBusyProgress = VCreateSaveStatusBusyProgress(
+            controller:controller)
+        self.viewProgress = viewProgress
+        
         addSubview(viewGradient)
+        addSubview(viewProgress)
         addSubview(viewSpinner)
         addSubview(label)
         addSubview(buttonCancel)
@@ -124,5 +129,15 @@ extension VCreateSaveStatusBusy
         NSLayoutConstraint.width(
             view:buttonCancel,
             constant:kCancelWidth)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:viewProgress,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewProgress,
+            constant:kProgressHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewProgress,
+            toView:self)
     }
 }

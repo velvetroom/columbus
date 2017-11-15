@@ -3,6 +3,7 @@ import UIKit
 final class VCreateSaveStatusBusy:View<ArchCreateSave>
 {
     weak var viewSpinner:VSpinner!
+    weak var viewProgress:VCreateSaveStatusBusyProgress!
     weak var layoutCancelLeft:NSLayoutConstraint!
     let kLabelBottom:CGFloat = -120
     let kLabelHeight:CGFloat = 60
@@ -10,6 +11,7 @@ final class VCreateSaveStatusBusy:View<ArchCreateSave>
     let kCancelHeight:CGFloat = 55
     let kCancelWidth:CGFloat = 120
     let kCancelFontSize:CGFloat = 16
+    let kProgressHeight:CGFloat = 20
     
     required init(controller:CCreateSave)
     {
