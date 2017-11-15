@@ -39,6 +39,7 @@ extension MCreateSave
             return
         }
         
+        updateProgress()
         builder.startTimer()
         
         factorySnapshot(
@@ -52,7 +53,6 @@ extension MCreateSave
         render:MCreateSaveRender)
     {
         builder.renders.removeFirst()
-        updateProgress()
         asyncPullSnapshot(builder:builder)
     }
     
