@@ -2,7 +2,7 @@ import UIKit
 
 final class VSettingsListCellStorage:VSettingsListCell
 {
-    private let kTitleFontSize:CGFloat = 15
+    private let kTitleFontSize:CGFloat = 16
     private(set) weak var model:MSettingsStorage?
     
     override init(frame:CGRect)
@@ -10,6 +10,8 @@ final class VSettingsListCellStorage:VSettingsListCell
         super.init(frame:frame)
         
         let button:UIButton = UIButton()
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(
             UIColor.colourBackgroundDark,
             for:UIControlState.normal)
@@ -19,7 +21,7 @@ final class VSettingsListCellStorage:VSettingsListCell
         button.setTitle(
             String.localizedView(key:"VSettingsListCellStorage_title"),
             for:UIControlState.normal)
-        button.titleLabel!.font = UIFont.medium(
+        button.titleLabel!.font = UIFont.regular(
             size:kTitleFontSize)
         button.addTarget(
             self,

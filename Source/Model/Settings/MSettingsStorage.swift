@@ -3,7 +3,7 @@ import UIKit
 final class MSettingsStorage:MSettingsProtocol
 {
     let reusableIdentifier:String = VSettingsListCellStorage.reusableIdentifier
-    let cellHeight:CGFloat = 100
+    let cellHeight:CGFloat = 60
     private(set) weak var settings:DSettings!
     private(set) weak var database:Database!
     
