@@ -169,6 +169,7 @@
 		DA63C0E91FB89A10007D01A7 /* VCreateSearchBaseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E81FB89A10007D01A7 /* VCreateSearchBaseList.swift */; };
 		DA63C0EB1FB89A3D007D01A7 /* VCreateSearchBaseListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0EA1FB89A3D007D01A7 /* VCreateSearchBaseListConfig.swift */; };
 		DA641D721FBC95A3001FC05B /* MSettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA641D711FBC95A3001FC05B /* MSettingsStorage.swift */; };
+		DA641D741FBC9637001FC05B /* VSettingsListCellStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA641D731FBC9637001FC05B /* VSettingsListCellStorage.swift */; };
 		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
 		DA65ECD61F95E68700720673 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC561F95E68600720673 /* spinner.xcassets */; };
@@ -597,6 +598,7 @@
 		DA63C0E81FB89A10007D01A7 /* VCreateSearchBaseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseList.swift; sourceTree = "<group>"; };
 		DA63C0EA1FB89A3D007D01A7 /* VCreateSearchBaseListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseListConfig.swift; sourceTree = "<group>"; };
 		DA641D711FBC95A3001FC05B /* MSettingsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsStorage.swift; sourceTree = "<group>"; };
+		DA641D731FBC9637001FC05B /* VSettingsListCellStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellStorage.swift; sourceTree = "<group>"; };
 		DA65EC3D1F95DFD700720673 /* columbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = columbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65EC531F95E68600720673 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DA65EC551F95E68600720673 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1561,6 +1563,7 @@
 				DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */,
 				DABDE8821FAA042100E24BBE /* VSettingsListCellDistance.swift */,
 				DA1A6C391FAA18010022A170 /* VSettingsListCellDistanceFactory.swift */,
+				DA641D731FBC9637001FC05B /* VSettingsListCellStorage.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1914,6 +1917,7 @@
 				DAE184941F9EA44C00D29126 /* DSettings.swift in Sources */,
 				DAA0B8051FA2A77E009BFFB8 /* VCreateStatusReadyBarStopsFooterFactory.swift in Sources */,
 				DA0679A41FA1015000F511F7 /* DPlanTravelComputed.swift in Sources */,
+				DA641D741FBC9637001FC05B /* VSettingsListCellStorage.swift in Sources */,
 				DA63C0E51FB8999D007D01A7 /* VCreateSearchBaseFactory.swift in Sources */,
 				DADA41F81F96709700DD1FC4 /* MMenuItemPlans.swift in Sources */,
 				DA1FD2991FAF1C660098C80C /* MStoreStatusProtocol.swift in Sources */,

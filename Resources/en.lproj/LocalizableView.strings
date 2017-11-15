@@ -24,6 +24,7 @@ VSettingsListCellTravelMode_descr="\nYou can change traveling mode\nwhen editing
 VSettingsListCellDistance_labelTitle="Show distance as";
 VSettingsListCellDetailLevel_title="Detail level";
 VSettingsListCellDetailLevel_descr="\nHow much storage to use when\nsaving Navigation Plans";
+VSettingsListCellStorage_title="Manage storage";
 VPlansBar_labelTitle="Plans";
 VPlansListHeader_labelText="Once you create Navigation Plans\nthey will appear here";
 VStoreStatusLoading_labelTitle="Loading";
