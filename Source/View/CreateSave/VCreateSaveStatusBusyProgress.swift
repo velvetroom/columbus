@@ -4,7 +4,7 @@ final class VCreateSaveStatusBusyProgress:View<ArchCreateSave>
 {
     private weak var layoutBarWidth:NSLayoutConstraint!
     private var progress:CGFloat
-    private let kBarAlpha:CGFloat = 0.5
+    private let kBarAlpha:CGFloat = 0.3
     private let kBackgroundAlpha:CGFloat = 0.1
     
     required init(controller:CCreateSave)
@@ -49,14 +49,14 @@ final class VCreateSaveStatusBusyProgress:View<ArchCreateSave>
     
     //MARK: internal
     
-    func update(progress:CGFloat)
+    func update(progress:Float)
     {
-        self.progress = progress
+        self.progress = CGFloat(progress)
         
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.layoutIfNeeded()
+            self?.setNeedsLayout()
         }
     }
 }

@@ -6,15 +6,15 @@ final class MCreateSaveBuilder
     var renders:[MCreateSaveRender]
     var urls:[URL]
     let directory:URL
-    let totalRenders:Int
     private(set) weak var timer:Timer?
+    private let totalRenders:Float
     private let kTimeout:TimeInterval = 9
     
     init(renders:[MCreateSaveRender], directory:URL)
     {
         self.renders = renders
         self.directory = directory
-        totalRenders = renders.count
+        totalRenders = Float(renders.count)
         urls = []
     }
     
@@ -57,5 +57,13 @@ final class MCreateSaveBuilder
             
             self?.asyncStartTimer()
         }
+    }
+    
+    func progress() -> Float
+    {
+        let current:Float = totalRenders - Float(renders.count)
+        let percent:Float = current / totalRenders
+        
+        return percent
     }
 }

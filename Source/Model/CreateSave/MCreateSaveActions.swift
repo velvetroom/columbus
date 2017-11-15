@@ -43,6 +43,37 @@ extension MCreateSave
         controller.moveToPlans()
     }
     
+    private func updateBuilder(urls:[URL])
+    {
+        guard
+            
+            let builder:MCreateSaveBuilder = self.builder
+            
+        else
+        {
+            return
+        }
+        
+        builder.urls.append(contentsOf:urls)
+        builder.renders.first?.slices.removeFirst()
+    }
+    
+    private func updateProgress()
+    {
+        guard
+            
+            let builder:MCreateSaveBuilder = self.builder,
+            let view:VCreateSaveStatusBusy = self.view?.view as? VCreateSaveStatusBusy
+            
+        else
+        {
+            return
+        }
+        
+        let progress:Float = builder.progress()
+        view.viewProgress.update(progress:progress)
+    }
+    
     //MARK: internal
     
     func save()
@@ -59,17 +90,8 @@ extension MCreateSave
     
     func snapshotUrls(urls:[URL])
     {
-        guard
-        
-            let builder:MCreateSaveBuilder = self.builder
-        
-        else
-        {
-            return
-        }
-        
-        builder.urls.append(contentsOf:urls)
-        builder.renders.first?.slices.removeFirst()
+        updateBuilder(urls:urls)
+        updateProgress()
         pullSnapshot()
     }
     
