@@ -1,4 +1,4 @@
-struct ArchSettings:Arch
+struct ArchSettingsMemory:Arch
 {
     typealias V = VSettingsMemory
     typealias M = MSettingsMemory
