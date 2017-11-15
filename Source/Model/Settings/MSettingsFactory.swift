@@ -7,10 +7,10 @@ extension MSettings
     private class func factoryItemTypes() -> [MSettingsProtocol.Type]
     {
         let types:[MSettingsProtocol.Type] = [
+            MSettingsStorage.self,
             MSettingsTravelMode.self,
             MSettingsDetailLevel.self,
-            MSettingsDistance.self,
-            MSettingsStorage.self]
+            MSettingsDistance.self]
         
         return types
     }
