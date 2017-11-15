@@ -32,8 +32,9 @@ extension MCreateSave
             
         else
         {
-            builder.renders.removeFirst()
-            asyncPullSnapshot(builder:builder)
+            renderFinished(
+                builder:builder,
+                render:render)
             
             return
         }
@@ -44,6 +45,15 @@ extension MCreateSave
             zoom:render.zoom,
             directory:builder.directory,
             slice:slice)
+    }
+    
+    private func renderFinished(
+        builder:MCreateSaveBuilder,
+        render:MCreateSaveRender)
+    {
+        builder.renders.removeFirst()
+        updateProgress()
+        asyncPullSnapshot(builder:builder)
     }
     
     //MARK: internal
