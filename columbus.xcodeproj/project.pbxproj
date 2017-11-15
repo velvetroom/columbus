@@ -161,6 +161,7 @@
 		DA570EAD1F9D076400C6F590 /* VCreateStatusReadyBarStopsSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA570EAC1F9D076400C6F590 /* VCreateStatusReadyBarStopsSelection.swift */; };
 		DA5877A51FBCF98200EF9493 /* ArchSettingsMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5877A41FBCF98200EF9493 /* ArchSettingsMemory.swift */; };
 		DA5877A71FBCF9CE00EF9493 /* CSettingsMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5877A61FBCF9CE00EF9493 /* CSettingsMemory.swift */; };
+		DA5877AC1FBCFA8B00EF9493 /* MSettingsMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5877AB1FBCFA8B00EF9493 /* MSettingsMemory.swift */; };
 		DA5B093F1FA35EF00055E8F3 /* CCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B093E1FA35EF00055E8F3 /* CCreateSave.swift */; };
 		DA5B09411FA360D10055E8F3 /* ArchCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B09401FA360D10055E8F3 /* ArchCreateSave.swift */; };
 		DA5B09461FA361380055E8F3 /* MCreateSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5B09451FA361380055E8F3 /* MCreateSave.swift */; };
@@ -592,6 +593,7 @@
 		DA570EAC1F9D076400C6F590 /* VCreateStatusReadyBarStopsSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsSelection.swift; sourceTree = "<group>"; };
 		DA5877A41FBCF98200EF9493 /* ArchSettingsMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchSettingsMemory.swift; sourceTree = "<group>"; };
 		DA5877A61FBCF9CE00EF9493 /* CSettingsMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSettingsMemory.swift; sourceTree = "<group>"; };
+		DA5877AB1FBCFA8B00EF9493 /* MSettingsMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemory.swift; sourceTree = "<group>"; };
 		DA5B093E1FA35EF00055E8F3 /* CCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreateSave.swift; sourceTree = "<group>"; };
 		DA5B09401FA360D10055E8F3 /* ArchCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCreateSave.swift; sourceTree = "<group>"; };
 		DA5B09451FA361380055E8F3 /* MCreateSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSave.swift; sourceTree = "<group>"; };
@@ -974,6 +976,14 @@
 			path = CreateSearch;
 			sourceTree = "<group>";
 		};
+		DA5877AA1FBCFA7100EF9493 /* SettingsMemory */ = {
+			isa = PBXGroup;
+			children = (
+				DA5877AB1FBCFA8B00EF9493 /* MSettingsMemory.swift */,
+			);
+			path = SettingsMemory;
+			sourceTree = "<group>";
+		};
 		DA5B09441FA361270055E8F3 /* CreateSave */ = {
 			isa = PBXGroup;
 			children = (
@@ -1193,6 +1203,7 @@
 		DA65EC821F95E68600720673 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA5877AA1FBCFA7100EF9493 /* SettingsMemory */,
 				DA18A96E1FAD599A00F6BDF8 /* Store */,
 				DACA5C9E1FA4396900B7BBC7 /* Error */,
 				DA65EC831F95E68700720673 /* Abstract */,
@@ -2180,6 +2191,7 @@
 				DA1A6C3C1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift in Sources */,
 				DA18A96D1FAD597900F6BDF8 /* CStore.swift in Sources */,
 				DA65ECFD1F95E68700720673 /* ViewParentGesture.swift in Sources */,
+				DA5877AC1FBCFA8B00EF9493 /* MSettingsMemory.swift in Sources */,
 				DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocolFactory.swift in Sources */,
 				DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */,
 				DAD888F61F9D1D1B000EC7FD /* VCreateStatusReadyMapDragging.swift in Sources */,
