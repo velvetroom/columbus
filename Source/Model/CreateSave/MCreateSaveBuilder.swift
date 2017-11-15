@@ -6,6 +6,7 @@ final class MCreateSaveBuilder
     var renders:[MCreateSaveRender]
     var urls:[URL]
     let directory:URL
+    let totalRenders:Int
     private(set) weak var timer:Timer?
     private let kTimeout:TimeInterval = 9
     
@@ -13,6 +14,7 @@ final class MCreateSaveBuilder
     {
         self.renders = renders
         self.directory = directory
+        totalRenders = renders.count
         urls = []
     }
     
