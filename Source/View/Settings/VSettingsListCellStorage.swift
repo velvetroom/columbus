@@ -65,6 +65,18 @@ final class VSettingsListCellStorage:VSettingsListCell
     @objc
     private func selectorButton(sender button:UIButton)
     {
+        guard
         
+            let database:Database = model?.database,
+            let settings:DSettings = model?.settings
+        
+        else
+        {
+            return
+        }
+        
+        controller?.openMemory(
+            database:database,
+            settings:settings)
     }
 }

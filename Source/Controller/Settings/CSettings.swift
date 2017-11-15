@@ -13,4 +13,19 @@ final class CSettings:Controller<ArchSettings>
             self?.model.loadSettings()
         }
     }
+    
+    //MARK: internal
+    
+    func openMemory(
+        database:Database,
+        settings:DSettings)
+    {
+        let controller:CSettingsMemory = CSettingsMemory(
+            database:database,
+            settings:settings)
+        
+        parentController?.push(
+            controller:controller,
+            horizontal:ControllerParent.Horizontal.right)
+    }
 }
