@@ -15,4 +15,11 @@ final class CSettingsMemory:Controller<ArchSettingsMemory>
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func back()
+    {
+        parentController?.pop(horizontal:ControllerParent.Horizontal.right)
+    }
 }

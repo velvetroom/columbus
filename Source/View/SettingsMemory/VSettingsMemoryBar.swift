@@ -24,8 +24,24 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         labelTitle.text = String.localizedView(
             key:"VSettingsMemoryBar_labelTitle")
         
+        let backButton:UIButton = UIButton()
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.setImage(
+            #imageLiteral(resourceName: "assetGenericBack"),
+            for:UIControlState.normal)
+        backButton.setImage(
+            #imageLiteral(resourceName: "assetGenericBack").withRenderingMode(UIImageRenderingMode.alwaysTemplate),
+            for:UIControlState.highlighted)
+        backButton.imageView!.tintColor = UIColor.colourBackgroundGray
+        backButton.imageView!.contentMode = UIViewContentMode.center
+        backButton.addTarget(
+            self,
+            action:#selector(selectorBack(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
         addSubview(border)
         addSubview(labelTitle)
+        addSubview(backButton)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -52,5 +68,13 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: selectors
+    
+    @objc
+    private func selectorBack(sender button:UIButton)
+    {
+        controller.back()
     }
 }
