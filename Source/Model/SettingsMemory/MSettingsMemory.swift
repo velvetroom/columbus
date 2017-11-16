@@ -2,9 +2,10 @@ import Foundation
 
 final class MSettingsMemory:Model<ArchSettingsMemory>
 {
+    var items:[MSettingsMemoryItem]
     var database:Database?
     var settings:DSettings?
-    var items:[MSettingsMemoryItem]
+    var system:MSettingsMemorySystem?
     
     required init()
     {
