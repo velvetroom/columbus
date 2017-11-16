@@ -170,6 +170,7 @@
 		DA5DA31B1FBD18540047FED4 /* VSettingsMemoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA31A1FBD18540047FED4 /* VSettingsMemoryListCell.swift */; };
 		DA5DA31D1FBD18810047FED4 /* VSettingsMemoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA31C1FBD18810047FED4 /* VSettingsMemoryList.swift */; };
 		DA5DA31F1FBD18F50047FED4 /* VSettingsMemoryListConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA31E1FBD18F50047FED4 /* VSettingsMemoryListConfig.swift */; };
+		DA5DA3211FBD1CD90047FED4 /* VSettingsMemoryListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA3201FBD1CD90047FED4 /* VSettingsMemoryListHeader.swift */; };
 		DA63C0E31FB89969007D01A7 /* VCreateSearchBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */; };
 		DA63C0E51FB8999D007D01A7 /* VCreateSearchBaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E41FB8999D007D01A7 /* VCreateSearchBaseFactory.swift */; };
 		DA63C0E71FB899E2007D01A7 /* VCreateSearchBaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E61FB899E2007D01A7 /* VCreateSearchBaseListCell.swift */; };
@@ -608,6 +609,7 @@
 		DA5DA31A1FBD18540047FED4 /* VSettingsMemoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemoryListCell.swift; sourceTree = "<group>"; };
 		DA5DA31C1FBD18810047FED4 /* VSettingsMemoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemoryList.swift; sourceTree = "<group>"; };
 		DA5DA31E1FBD18F50047FED4 /* VSettingsMemoryListConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemoryListConfig.swift; sourceTree = "<group>"; };
+		DA5DA3201FBD1CD90047FED4 /* VSettingsMemoryListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemoryListHeader.swift; sourceTree = "<group>"; };
 		DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBase.swift; sourceTree = "<group>"; };
 		DA63C0E41FB8999D007D01A7 /* VCreateSearchBaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseFactory.swift; sourceTree = "<group>"; };
 		DA63C0E61FB899E2007D01A7 /* VCreateSearchBaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseListCell.swift; sourceTree = "<group>"; };
@@ -1004,6 +1006,7 @@
 				DADC9D6C1FBD076B00C3E71F /* VSettingsMemoryBar.swift */,
 				DA5DA31C1FBD18810047FED4 /* VSettingsMemoryList.swift */,
 				DA5DA31E1FBD18F50047FED4 /* VSettingsMemoryListConfig.swift */,
+				DA5DA3201FBD1CD90047FED4 /* VSettingsMemoryListHeader.swift */,
 				DA5DA31A1FBD18540047FED4 /* VSettingsMemoryListCell.swift */,
 			);
 			path = SettingsMemory;
@@ -2013,6 +2016,7 @@
 				DABED9B01F9E94AF00635E82 /* MCreatePlanDirections.swift in Sources */,
 				DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */,
 				DA6700DF1FAB933C00B89997 /* VHomeStandbyConfig.swift in Sources */,
+				DA5DA3211FBD1CD90047FED4 /* VSettingsMemoryListHeader.swift in Sources */,
 				DA4BC9391F9AC51000453655 /* VCreateStatusReadyBarStopsCellField.swift in Sources */,
 				DAE73F1D1FB0C94D005BE26F /* VStoreStatusReadyListCellFactory.swift in Sources */,
 				DA2780121FA8DCE700489D0E /* MCreateSaveImage.swift in Sources */,
