@@ -16,6 +16,13 @@ final class CSettingsMemory:Controller<ArchSettingsMemory>
         return nil
     }
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        model.load()
+    }
+    
     //MARK: internal
     
     func back()
