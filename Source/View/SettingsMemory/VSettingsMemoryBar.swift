@@ -2,7 +2,8 @@ import UIKit
 
 final class VSettingsMemoryBar:View<ArchSettingsMemory>
 {
-    private let kTitleTop:CGFloat = 20
+    private let kContentTop:CGFloat = 20
+    private let kBackWidth:CGFloat = 50
     private let kBorderHeight:CGFloat = 1
     private let kFontSize:CGFloat = 14
     
@@ -56,13 +57,27 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         NSLayoutConstraint.topToTop(
             view:labelTitle,
             toView:self,
-            constant:kTitleTop)
+            constant:kContentTop)
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:backButton,
+            toView:self,
+            constant:kContentTop)
+        NSLayoutConstraint.bottomToBottom(
+            view:backButton,
+            toView:self)
+        NSLayoutConstraint.leftToLeft(
+            view:backButton,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:backButton,
+            constant:kBackWidth)
     }
     
     required init?(coder:NSCoder)
