@@ -18,4 +18,25 @@ final class VSettingsMemoryList:VCollection<
     {
         return nil
     }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        viewForSupplementaryElementOfKind kind:String,
+        at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let header:VSettingsMemoryListHeader = reusableAtIndex(
+            kind:kind,
+            indexPath:indexPath)
+        
+        return header
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
+    {
+        let cell:VSettingsMemoryListCell = cellAtIndex(indexPath:indexPath)
+        
+        return cell
+    }
 }

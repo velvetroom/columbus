@@ -9,6 +9,8 @@ extension VSettingsMemoryList
         backgroundColor = UIColor.colourBackgroundGray
         collectionView.alwaysBounceVertical = true
         
+        registerHeader(header:VSettingsMemoryListHeader.self)
+        
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.minimumLineSpacing = kInterItem
