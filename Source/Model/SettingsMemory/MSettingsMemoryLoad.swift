@@ -6,6 +6,15 @@ extension MSettingsMemory
     
     private func asyncLoad()
     {
+        system = MSettingsMemorySystem.factorySystem()
+        
+        print(system)
+        
+        factoryItems()
+    }
+    
+    private func factoryItems()
+    {
         
     }
     

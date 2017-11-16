@@ -36,7 +36,7 @@ extension MSettingsMemorySystem
         
         guard
         
-            let sizeNumber:NSNumber = attributes[FileAttributeKey.size] as? NSNumber
+            let sizeNumber:NSNumber = attributes[FileAttributeKey.] as? NSNumber
         
         else
         {
