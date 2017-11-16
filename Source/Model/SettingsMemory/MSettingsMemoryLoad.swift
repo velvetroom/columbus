@@ -6,18 +6,19 @@ extension MSettingsMemory
     
     private func asyncLoad()
     {
+        let projects:MSettingsMemoryProjects = factoryProjects()
         
-        
-        factoryItems()
+        factorySystem(projects:projects)
+        factoryItems(projects:projects)
     }
     
-    private func factoryProjects() -> [String:MSettingsMemoryProject]
+    private func factoryProjects() -> MSettingsMemoryProjects
     {
-        
+        let projects:MSettingsMemoryProjects = MSettingsMemoryProjects()
         let appDirectory:String = FileManager.default.appDirectory.path
-        let projects:[String] = FileManager.default.contentsAt(path:appDirectory)
+        let paths:[String] = FileManager.default.contentsAt(path:appDirectory)
         
-        for path:String in projects
+        for path:String in paths
         {
             guard
             
@@ -29,12 +30,14 @@ extension MSettingsMemory
             }
             
             let size:CGFloat = factorySize(path:path)
-            let project:MSettingsMemoryProject = MSettingsMemoryProject(
+            let project:MSettingsMemoryProjectsItem = MSettingsMemoryProjectsItem(
                 identifier:identifier,
                 size:size)
             
-            
+            projects.add(project:project)
         }
+        
+        return projects
     }
     
     private func factoryIdentifier(path:String) -> String?
@@ -50,17 +53,17 @@ extension MSettingsMemory
         let size:UInt64 = FileManager.default.sizeAt(path:path)
         let sizeFloat:CGFloat = CGFloat(size)
         
-        return size
+        return sizeFloat
     }
     
-    private func factorySystem()
+    private func factorySystem(projects:MSettingsMemoryProjects)
     {
-        system = MSettingsMemorySystem.factorySystem()
+        system = MSettingsMemorySystem.factorySystem(columbusSize:projects.size)
         
         print(system)
     }
     
-    private func factoryItems()
+    private func factoryItems(projects:MSettingsMemoryProjects)
     {
         
     }

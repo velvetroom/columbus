@@ -20,44 +20,14 @@ extension MSettingsMemorySystem
         return floatSystemFreeSize
     }
     
-    private static func factoryColumbusSize() -> CGFloat
-    {
-        let columbusPath:String = FileManager.default.appDirectory.path
-        let attributes:[FileAttributeKey:Any]
-        
-        do
-        {
-            try attributes = FileManager.default.attributesOfItem(atPath:columbusPath)
-        }
-        catch
-        {
-            return 0
-        }
-        
-        guard
-        
-            let sizeNumber:NSNumber = attributes[FileAttributeKey.] as? NSNumber
-        
-        else
-        {
-            return 0
-        }
-        
-        let sizeUnsigned:UInt64 = sizeNumber.uint64Value
-        let size:CGFloat = CGFloat(sizeUnsigned)
-        
-        return size
-    }
-    
     //MARK: internal
     
-    static func factorySystem() -> MSettingsMemorySystem
+    static func factorySystem(columbusSize:CGFloat) -> MSettingsMemorySystem
     {
         let systemSize:CGFloat = factorySystemSize()
         let systemFreeSize:CGFloat = factorySystemFreeSize()
         let otherSize:CGFloat = systemSize - systemFreeSize
         let otherPercent:CGFloat = otherSize / systemSize
-        let columbusSize:CGFloat = factoryColumbusSize()
         let columbusPercent:CGFloat = columbusSize / systemSize
         
         let system:MSettingsMemorySystem = MSettingsMemorySystem(

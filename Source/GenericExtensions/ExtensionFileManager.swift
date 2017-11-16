@@ -117,7 +117,7 @@ extension FileManager
     
     func sizeAt(path:String) -> UInt64
     {
-        var isDirectory:ObjCBool
+        var isDirectory:ObjCBool = false
         
         guard
             

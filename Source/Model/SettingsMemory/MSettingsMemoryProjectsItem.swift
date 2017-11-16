@@ -1,6 +1,6 @@
 import UIKit
 
-final class MSettingsMemoryProjectItem
+final class MSettingsMemoryProjectsItem
 {
     var project:DPlan?
     let identifier:String
