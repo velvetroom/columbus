@@ -176,7 +176,6 @@
 		DA5DA3271FBD2FBB0047FED4 /* MSettingsMemoryLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA3261FBD2FBB0047FED4 /* MSettingsMemoryLoad.swift */; };
 		DA5DA3291FBD31000047FED4 /* MSettingsMemorySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA3281FBD31000047FED4 /* MSettingsMemorySystem.swift */; };
 		DA5DA32B1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA32A1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift */; };
-		DA5DA32D1FBD42440047FED4 /* MSettingsMemoryProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA32C1FBD42440047FED4 /* MSettingsMemoryProjects.swift */; };
 		DA5DA32F1FBD44550047FED4 /* MSettingsMemoryProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA32E1FBD44550047FED4 /* MSettingsMemoryProject.swift */; };
 		DA63C0E31FB89969007D01A7 /* VCreateSearchBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */; };
 		DA63C0E51FB8999D007D01A7 /* VCreateSearchBaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E41FB8999D007D01A7 /* VCreateSearchBaseFactory.swift */; };
@@ -622,7 +621,6 @@
 		DA5DA3261FBD2FBB0047FED4 /* MSettingsMemoryLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemoryLoad.swift; sourceTree = "<group>"; };
 		DA5DA3281FBD31000047FED4 /* MSettingsMemorySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemorySystem.swift; sourceTree = "<group>"; };
 		DA5DA32A1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemorySystemFactory.swift; sourceTree = "<group>"; };
-		DA5DA32C1FBD42440047FED4 /* MSettingsMemoryProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemoryProjects.swift; sourceTree = "<group>"; };
 		DA5DA32E1FBD44550047FED4 /* MSettingsMemoryProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemoryProject.swift; sourceTree = "<group>"; };
 		DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBase.swift; sourceTree = "<group>"; };
 		DA63C0E41FB8999D007D01A7 /* VCreateSearchBaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseFactory.swift; sourceTree = "<group>"; };
@@ -1009,7 +1007,6 @@
 			children = (
 				DA5877AB1FBCFA8B00EF9493 /* MSettingsMemory.swift */,
 				DA5DA3261FBD2FBB0047FED4 /* MSettingsMemoryLoad.swift */,
-				DA5DA32C1FBD42440047FED4 /* MSettingsMemoryProjects.swift */,
 				DA5DA3281FBD31000047FED4 /* MSettingsMemorySystem.swift */,
 				DA5DA32A1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift */,
 				DA5DA3241FBD2ECF0047FED4 /* MSettingsMemoryItem.swift */,
@@ -2189,7 +2186,6 @@
 				DAD889061F9D31B2000EC7FD /* DPlanDisconnect.swift in Sources */,
 				DADE5F9C1FA9406F00E59687 /* VPlansList.swift in Sources */,
 				DA471A111F9B7668009B71FF /* VCreateStatusReadyBarLoaderFactory.swift in Sources */,
-				DA5DA32D1FBD42440047FED4 /* MSettingsMemoryProjects.swift in Sources */,
 				DA7950661FAEE8BC0057F6EE /* MCreatePlanTravel.swift in Sources */,
 				DA0448051F97559A00BA2D45 /* VCreateStatusReady.swift in Sources */,
 				DA65ECDF1F95E68700720673 /* ExtensionUIColor.swift in Sources */,

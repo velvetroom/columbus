@@ -39,29 +39,13 @@ extension FileManager
         return size
     }
     
-    private func contentsAt(path:String) -> [String]
-    {
-        let contents:[String]
-        
-        do
-        {
-            try contents = FileManager.default.contentsOfDirectory(atPath:path)
-        }
-        catch
-        {
-            return []
-        }
-        
-        return contents
-    }
-    
     private func sizeOfItem(path:String) -> UInt64
     {
         let attributes:[FileAttributeKey:Any]
         
         do
         {
-            try attributes = FileManager.default.attributesOfItem(atPath:path)
+            try attributes = attributesOfItem(atPath:path)
         }
         catch
         {
@@ -137,7 +121,7 @@ extension FileManager
         
         guard
             
-            FileManager.default.fileExists(atPath:path, isDirectory:&isDirectory)
+            fileExists(atPath:path, isDirectory:&isDirectory)
             
         else
         {
@@ -159,5 +143,21 @@ extension FileManager
         size += itemsSize
         
         return size
+    }
+    
+    func contentsAt(path:String) -> [String]
+    {
+        let contents:[String]
+        
+        do
+        {
+            try contents = contentsOfDirectory(atPath:path)
+        }
+        catch
+        {
+            return []
+        }
+        
+        return contents
     }
 }
