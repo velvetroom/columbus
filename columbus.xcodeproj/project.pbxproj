@@ -177,6 +177,8 @@
 		DA5DA3291FBD31000047FED4 /* MSettingsMemorySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA3281FBD31000047FED4 /* MSettingsMemorySystem.swift */; };
 		DA5DA32B1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA32A1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift */; };
 		DA5DA32F1FBD44550047FED4 /* MSettingsMemoryProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA32E1FBD44550047FED4 /* MSettingsMemoryProject.swift */; };
+		DA5DA3311FBD47F40047FED4 /* MSettingsMemoryProjectsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA3301FBD47F40047FED4 /* MSettingsMemoryProjectsItem.swift */; };
+		DA5DA3331FBD48080047FED4 /* MSettingsMemoryProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA3321FBD48080047FED4 /* MSettingsMemoryProjects.swift */; };
 		DA63C0E31FB89969007D01A7 /* VCreateSearchBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */; };
 		DA63C0E51FB8999D007D01A7 /* VCreateSearchBaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E41FB8999D007D01A7 /* VCreateSearchBaseFactory.swift */; };
 		DA63C0E71FB899E2007D01A7 /* VCreateSearchBaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0E61FB899E2007D01A7 /* VCreateSearchBaseListCell.swift */; };
@@ -622,6 +624,8 @@
 		DA5DA3281FBD31000047FED4 /* MSettingsMemorySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemorySystem.swift; sourceTree = "<group>"; };
 		DA5DA32A1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemorySystemFactory.swift; sourceTree = "<group>"; };
 		DA5DA32E1FBD44550047FED4 /* MSettingsMemoryProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemoryProject.swift; sourceTree = "<group>"; };
+		DA5DA3301FBD47F40047FED4 /* MSettingsMemoryProjectsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemoryProjectsItem.swift; sourceTree = "<group>"; };
+		DA5DA3321FBD48080047FED4 /* MSettingsMemoryProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsMemoryProjects.swift; sourceTree = "<group>"; };
 		DA63C0E21FB89969007D01A7 /* VCreateSearchBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBase.swift; sourceTree = "<group>"; };
 		DA63C0E41FB8999D007D01A7 /* VCreateSearchBaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseFactory.swift; sourceTree = "<group>"; };
 		DA63C0E61FB899E2007D01A7 /* VCreateSearchBaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseListCell.swift; sourceTree = "<group>"; };
@@ -1011,6 +1015,8 @@
 				DA5DA32A1FBD32980047FED4 /* MSettingsMemorySystemFactory.swift */,
 				DA5DA3241FBD2ECF0047FED4 /* MSettingsMemoryItem.swift */,
 				DA5DA32E1FBD44550047FED4 /* MSettingsMemoryProject.swift */,
+				DA5DA3321FBD48080047FED4 /* MSettingsMemoryProjects.swift */,
+				DA5DA3301FBD47F40047FED4 /* MSettingsMemoryProjectsItem.swift */,
 			);
 			path = SettingsMemory;
 			sourceTree = "<group>";
@@ -2101,6 +2107,7 @@
 				DA7950681FAEF1E00057F6EE /* MHomeInfoStore.swift in Sources */,
 				DA26F18C1FB7C0AB007F171D /* VCreateSearchAnimations.swift in Sources */,
 				DA2926771FACD52400913141 /* DPlanTravelDurationFactory.swift in Sources */,
+				DA5DA3311FBD47F40047FED4 /* MSettingsMemoryProjectsItem.swift in Sources */,
 				DA525A041F9F7713004F8503 /* VSettingsListCellTravelModeList.swift in Sources */,
 				DAD3872A1FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift in Sources */,
 				DA2EE5671F98ABA200488A07 /* MCreateMapStatusProtocol.swift in Sources */,
@@ -2222,6 +2229,7 @@
 				DA5DA3231FBD276A0047FED4 /* VSettingsMemoryListActions.swift in Sources */,
 				DA96A29A1FAE78E900109455 /* VCreateTravelFactory.swift in Sources */,
 				DA97DC7A1FA41398005A137F /* MCreateSaveZoomDefault.swift in Sources */,
+				DA5DA3331FBD48080047FED4 /* MSettingsMemoryProjects.swift in Sources */,
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
 				DA2EE56F1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift in Sources */,
 				DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */,
