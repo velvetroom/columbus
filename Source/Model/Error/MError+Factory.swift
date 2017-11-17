@@ -6,10 +6,8 @@ extension MError
     
     private static func factory(key:String) -> MError
     {
-        let message:String = String.localizedModel(
-            key:key)
-        let error:MError = MError(
-            localizedDescription:message)
+        let message:String = String.localizedModel(key:key)
+        let error:MError = MError(localizedDescription:message)
         
         return error
     }
