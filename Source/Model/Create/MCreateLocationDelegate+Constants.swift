@@ -5,6 +5,6 @@ extension MCreateLocationDelegate
 {
     struct Constants
     {
-        let distanceFilter:CLLocationDistance = 10
+        static let distanceFilter:CLLocationDistance = 10
     }
 }

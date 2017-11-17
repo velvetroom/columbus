@@ -4,8 +4,7 @@ extension MCreatePlan
 {
     //MARK: private
     
-    private func asyncRemoveTravel(
-        travel:DPlanTravel)
+    private func asyncRemoveTravel(travel:DPlanTravel)
     {
         DispatchQueue.main.async
         { [weak self] in
@@ -14,8 +13,7 @@ extension MCreatePlan
         }
     }
     
-    private func asyncUpdated(
-        travel:DPlanTravel)
+    private func asyncUpdated(travel:DPlanTravel)
     {
         DispatchQueue.main.async
         { [weak self] in

@@ -66,8 +66,7 @@ extension MCreatePlan
     {
         guard
         
-            let directions:MKDirections = factoryDirections(
-                travel:travel)
+            let directions:MKDirections = factoryDirections(travel:travel)
         
         else
         {

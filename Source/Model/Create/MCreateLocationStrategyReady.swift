@@ -3,7 +3,6 @@ import Foundation
 final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
 {
     private weak var model:MCreate?
-    private let kMaxPlansAllowed:Int = 1
     
     //MARK: private
     
@@ -28,7 +27,7 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     private func notUnlimited(
         database:Database)
     {
-        let maxPlans:Int = kMaxPlansAllowed
+        let maxPlans:Int = MCreateLocationStrategyReady.Constants.maxPlansAllowed
         
         database.fetch
         { [weak self] (plans:[DPlan]) in
@@ -74,14 +73,12 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
     
     private func availabilityError()
     {
-        model?.changeStatus(
-            statusType:MCreateStatusErrorAvailability.self)
+        model?.changeStatus(statusType:MCreateStatusErrorAvailability.self)
     }
     
     private func databaseError()
     {
-        model?.changeStatus(
-            statusType:MCreateStatusErrorDatabase.self)
+        model?.changeStatus(statusType:MCreateStatusErrorDatabase.self)
     }
     
     private func planReady(plan:MCreatePlan)
@@ -96,10 +93,8 @@ final class MCreateLocationStrategyReady:MCreateLocationStrategyProtocol
         }
         
         model.plan = plan
-        model.changeMapStatus(
-            statusType:MCreateMapStatusContracted.self)
-        model.changeStatus(
-            statusType:MCreateStatusReady.self)
+        model.changeMapStatus(statusType:MCreateMapStatusContracted.self)
+        model.changeStatus(statusType:MCreateStatusReady.self)
     }
     
     //MARK: internal

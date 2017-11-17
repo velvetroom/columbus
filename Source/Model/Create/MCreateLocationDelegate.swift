@@ -7,7 +7,6 @@ final class MCreateLocationDelegate:
 {
     weak var model:MCreate?
     var locationManager:CLLocationManager?
-    private let kDistanceFilter:CLLocationDistance = 10
     
     //MARK: private
     
@@ -24,7 +23,7 @@ final class MCreateLocationDelegate:
         
         let locationManager:CLLocationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        locationManager.distanceFilter = kDistanceFilter
+        locationManager.distanceFilter = MCreateLocationDelegate.Constants.distanceFilter
         locationManager.delegate = self
         self.locationManager = locationManager
     }

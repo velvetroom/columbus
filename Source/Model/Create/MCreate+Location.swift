@@ -15,7 +15,6 @@ extension MCreate
     {
         let locationStrategyType:MCreateLocationStrategyProtocol.Type = MCreate.factoryLocationStrategy(
             status:status)
-        changeLocationStrategy(
-            locationStrategyType:locationStrategyType)
+        changeLocationStrategy(locationStrategyType:locationStrategyType)
     }
 }

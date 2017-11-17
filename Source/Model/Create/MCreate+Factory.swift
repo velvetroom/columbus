@@ -37,8 +37,7 @@ extension MCreate
     {
         guard
         
-            let database:Database = Database(
-                bundle:bundle)
+            let database:Database = Database(bundle:bundle)
         
         else
         {

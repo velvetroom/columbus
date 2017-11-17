@@ -31,7 +31,6 @@ final class MCreateLocationStrategyDenied:MCreateLocationStrategyProtocol
     func nextStep(model:MCreate)
     {
         self.model = model
-        model.changeStatus(
-            statusType:MCreateStatusDenied.self)
+        model.changeStatus(statusType:MCreateStatusDenied.self)
     }
 }

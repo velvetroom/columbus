@@ -86,8 +86,7 @@ extension MCreatePlan
         avoidInteraction()
         removeAnnotation(stop:stop)
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.asyncRemove(stop:stop)

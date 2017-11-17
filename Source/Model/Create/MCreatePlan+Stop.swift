@@ -39,8 +39,7 @@ extension MCreatePlan
         }
         
         let lastStop:Int = totalStops - 1
-        view?.viewBar.viewStops.selectItem(
-            index:lastStop)
+        view?.viewBar.viewStops.selectItem(index:lastStop)
     }
     
     func addAnnotation(stop:DPlanStop)
@@ -66,8 +65,7 @@ extension MCreatePlan
     func updated(travel:DPlanTravel)
     {
         view?.viewBar.viewStops.updateFooter()
-        view?.viewBar.viewTravel.updateTravel(
-            travel:travel)
+        view?.viewBar.viewTravel.updateTravel(travel:travel)
     }
     
     func removeTravels(stop:DPlanStop)
@@ -90,7 +88,6 @@ extension MCreatePlan
     
     func addTravel(travel:DPlanTravel)
     {        
-        view?.viewMap.addRoute(
-            travel:travel)
+        view?.viewMap.addRoute(travel:travel)
     }
 }

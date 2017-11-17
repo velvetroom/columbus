@@ -4,8 +4,7 @@ extension MCreatePlan
 {
     //MARK: private
     
-    private func factoryRequest(
-        travel:DPlanTravel) -> MKDirectionsRequest?
+    private func factoryRequest(travel:DPlanTravel) -> MKDirectionsRequest?
     {
         guard
             
@@ -17,10 +16,8 @@ extension MCreatePlan
             return nil
         }
         
-        let itemOrigin:MKMapItem = factoryMapItem(
-            stop:origin)
-        let itemDestination:MKMapItem = factoryMapItem(
-            stop:destination)
+        let itemOrigin:MKMapItem = factoryMapItem(stop:origin)
+        let itemDestination:MKMapItem = factoryMapItem(stop:destination)
         let transportType:MKDirectionsTransportType = travel.mode.factoryTransportType()
         
         let request:MKDirectionsRequest = MKDirectionsRequest()
@@ -31,35 +28,31 @@ extension MCreatePlan
         return request
     }
     
-    private func factoryMapItem(
-        stop:DPlanStop) -> MKMapItem
+    private func factoryMapItem(stop:DPlanStop) -> MKMapItem
     {
         let placemark:MKPlacemark = MKPlacemark(
             coordinate:stop.coordinate,
             addressDictionary:nil)
-        let mapItem:MKMapItem = MKMapItem(
-            placemark:placemark)
+        
+        let mapItem:MKMapItem = MKMapItem(placemark:placemark)
         
         return mapItem
     }
     
     //MARK: internal
     
-    func factoryDirections(
-        travel:DPlanTravel) -> MKDirections?
+    func factoryDirections(travel:DPlanTravel) -> MKDirections?
     {
         guard
             
-            let request:MKDirectionsRequest = factoryRequest(
-                travel:travel)
+            let request:MKDirectionsRequest = factoryRequest(travel:travel)
             
         else
         {
             return nil
         }
         
-        let directions:MKDirections = MKDirections(
-            request:request)
+        let directions:MKDirections = MKDirections(request:request)
         
         return directions
     }

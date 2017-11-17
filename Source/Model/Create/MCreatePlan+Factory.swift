@@ -5,8 +5,7 @@ extension MCreatePlan
 {
     //MARK: internal
     
-    class func factoryLocation(
-        coordinate:CLLocationCoordinate2D) -> CLLocation
+    class func factoryLocation(coordinate:CLLocationCoordinate2D) -> CLLocation
     {
         let location:CLLocation = CLLocation(
             latitude:coordinate.latitude,
@@ -15,11 +14,9 @@ extension MCreatePlan
         return location
     }
     
-    class func factoryLocation(
-        stop:DPlanStop) -> CLLocation
+    class func factoryLocation(stop:DPlanStop) -> CLLocation
     {
-        let location:CLLocation = factoryLocation(
-            coordinate:stop.coordinate)
+        let location:CLLocation = factoryLocation(coordinate:stop.coordinate)
         
         return location
     }

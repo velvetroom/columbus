@@ -79,19 +79,15 @@ extension MCreatePlan
     
     func update(stop:DPlanStop)
     {
-        let location:CLLocation = MCreatePlan.factoryLocation(
-            stop:stop)
-
-        asyncRemoveTravels(
-            stop:stop)
+        let location:CLLocation = MCreatePlan.factoryLocation(stop:stop)
+        asyncRemoveTravels(stop:stop)
         
         geocodeLocation(location:location)
         { [weak self] (name:String?) in
             
             stop.name = name
 
-            self?.configTravelOrigin(
-                stop:stop)
+            self?.configTravelOrigin(stop:stop)
         }
     }
 }
