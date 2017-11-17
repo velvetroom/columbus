@@ -28,7 +28,7 @@ extension ControllerParent
     {
         guard
             
-            let item:MMenuItemProtocol = menu.selectedItem()
+            let item:MMenuItemProtocol = menu.selectedItem
         
         else
         {
