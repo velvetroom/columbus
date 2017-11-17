@@ -2,28 +2,25 @@ import Foundation
 
 extension MHome
 {
-    private static let kTemplate:String = "{x}.{y}.{z}"
-    
     //MARK: internal
     
-    class func factoryTileTemplate(
-        plan:DPlan) -> String?
+    class func factoryTileTemplate(plan:DPlan) -> String?
     {
         guard
             
-            let name:String = plan.identifier
+            let name:String = plan.identifier,
+            let projects:URL = MCreateSave.projectsDirectory()
             
         else
         {
             return nil
         }
         
-        let directory:URL = FileManager.default.appDirectory.appendingPathComponent(
-            name)
+        let directory:URL = projects.appendingPathComponent(name)
         
         var template:String = String()
         template.append(directory.absoluteString)
-        template.append(kTemplate)
+        template.append(MHome.Constants.Tile.template)
         
         return template
     }
