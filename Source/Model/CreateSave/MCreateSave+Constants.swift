@@ -14,7 +14,6 @@ extension MCreateSave
         struct Timers
         {
             static let asyncWait:TimeInterval = 0.2
-            static let renderTimeout:TimeInterval = 9
         }
         
         struct Map

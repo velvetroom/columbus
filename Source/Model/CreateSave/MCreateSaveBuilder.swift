@@ -36,7 +36,7 @@ final class MCreateSaveBuilder
     private func asyncStartTimer()
     {
         let timer:Timer = Timer.scheduledTimer(
-            timeInterval:kTimeout,
+            timeInterval:Constants.saveTimeout,
             target:self,
             selector:#selector(selectorTimeout(sender:)),
             userInfo:nil,
