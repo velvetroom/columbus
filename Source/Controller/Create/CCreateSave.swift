@@ -47,7 +47,7 @@ final class CCreateSave:Controller<ArchCreateSave>
             return
         }
         
-        let order:MMenuOrder = MMenuOrder.plans
+        let order:MMenu.Order = MMenu.Order.plans
         
         parentController?.pop(vertical:ControllerTransition.Vertical.bottom)
         {

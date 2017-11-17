@@ -21,7 +21,7 @@ extension VMenu
     
     //MARK: internal
     
-    func synthSelect(order:MMenuOrder)
+    func synthSelect(order:MMenu.Order)
     {
         let totalItems:Int = collectionView.numberOfItems(
             inSection:0)

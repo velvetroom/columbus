@@ -6,8 +6,8 @@ extension ControllerParent
     
     private func factoryDirection(item:MMenuItemProtocol) ->  ControllerTransition.Horizontal
     {
-        let order:MMenuOrder = item.order
-        let current:MMenuOrder = menu.selected
+        let order:MMenu.Order = item.order
+        let current:MMenu.Order = menu.selected
         let direction:ControllerTransition.Horizontal
         
         if order.rawValue > current.rawValue
