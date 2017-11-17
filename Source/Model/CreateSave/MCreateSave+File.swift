@@ -9,8 +9,7 @@ extension MCreateSave
         name:String,
         image:UIImage) -> URL?
     {
-        let path:URL = directory.appendingPathComponent(
-            name)
+        let path:URL = directory.appendingPathComponent(name)
         
         do
         {
@@ -32,8 +31,7 @@ extension MCreateSave
     {
         guard
             
-            let data:Data = UIImagePNGRepresentation(
-                image)
+            let data:Data = UIImagePNGRepresentation(image)
             
         else
         {
@@ -92,11 +90,11 @@ extension MCreateSave
         return url
     }
     
-    class func factoryDirectory(
-        plan:DPlan) -> URL?
+    class func factoryDirectory(plan:DPlan) -> URL?
     {
         guard
             
+            let projects:URL = projectsDirectory(),
             let name:String = plan.identifier
         
         else
@@ -104,8 +102,7 @@ extension MCreateSave
             return nil
         }
         
-        var directory:URL = FileManager.default.appDirectory.appendingPathComponent(
-            name)
+        var directory:URL = projects.appendingPathComponent(name)
         directory.excludeFromBackup()
         
         do
