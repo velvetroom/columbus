@@ -43,7 +43,7 @@ extension MMenu
         
         for item:MMenuItemProtocol in items
         {
-            
+            map[item.order] = item
         }
         
         return map
