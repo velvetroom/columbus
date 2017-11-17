@@ -24,7 +24,7 @@
 		DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */; };
 		DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */; };
 		DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E821F9928C4000240F2 /* Columbus.xcdatamodeld */; };
-		DA12A7191FB2728B0069AA44 /* MHomePlanNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12A7181FB2728B0069AA44 /* MHomePlanNavigation.swift */; };
+		DA12A7191FB2728B0069AA44 /* MHomePlan+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12A7181FB2728B0069AA44 /* MHomePlan+Navigation.swift */; };
 		DA13F6521F99C4C800DF92F5 /* DPlanStopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6511F99C4C800DF92F5 /* DPlanStopAnnotation.swift */; };
 		DA13F6581F9A064600DF92F5 /* ExtensionMKAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */; };
 		DA13F65C1F9A174D00DF92F5 /* MCreatePlanStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F65B1F9A174D00DF92F5 /* MCreatePlanStop.swift */; };
@@ -475,7 +475,7 @@
 		DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuStop.swift; sourceTree = "<group>"; };
 		DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuDone.swift; sourceTree = "<group>"; };
 		DA0A5E831F9928C4000240F2 /* Columbus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Columbus.xcdatamodel; sourceTree = "<group>"; };
-		DA12A7181FB2728B0069AA44 /* MHomePlanNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomePlanNavigation.swift; sourceTree = "<group>"; };
+		DA12A7181FB2728B0069AA44 /* MHomePlan+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MHomePlan+Navigation.swift"; sourceTree = "<group>"; };
 		DA13F6511F99C4C800DF92F5 /* DPlanStopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanStopAnnotation.swift; sourceTree = "<group>"; };
 		DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMKAnnotationView.swift; sourceTree = "<group>"; };
 		DA13F65B1F9A174D00DF92F5 /* MCreatePlanStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanStop.swift; sourceTree = "<group>"; };
@@ -1301,7 +1301,7 @@
 				DA7D95901FA7637300A620FB /* MHomeStatusStandby.swift */,
 				DA7D95921FA763A100A620FB /* MHomeStatusReady.swift */,
 				DA750CA71FA789C900459985 /* MHomePlan.swift */,
-				DA12A7181FB2728B0069AA44 /* MHomePlanNavigation.swift */,
+				DA12A7181FB2728B0069AA44 /* MHomePlan+Navigation.swift */,
 				DAB1FA6C1FABA9EC000D857C /* MHomeInfoProtocol.swift */,
 				DAB1FA6E1FABAA45000D857C /* MHomeInfoSettings.swift */,
 				DA7950671FAEF1E00057F6EE /* MHomeInfoStore.swift */,
@@ -2156,7 +2156,7 @@
 				DA2219531FAA889000DD6F86 /* VSettingsListCellDetailLevelListCell.swift in Sources */,
 				DA65ECF91F95E68700720673 /* MMenuItemProtocol.swift in Sources */,
 				DAA5B48B1F9936C000F9121C /* DPlanStop.swift in Sources */,
-				DA12A7191FB2728B0069AA44 /* MHomePlanNavigation.swift in Sources */,
+				DA12A7191FB2728B0069AA44 /* MHomePlan+Navigation.swift in Sources */,
 				DA7D95951FA763F500A620FB /* VHomeStandby.swift in Sources */,
 				DA2CC7F41FA1F30300CF0DE1 /* VCreateStatusReadyMapSelect.swift in Sources */,
 				DAE184901F9EA2D800D29126 /* MSettingsProtocol.swift in Sources */,
