@@ -18,8 +18,7 @@ final class MHome:Model<ArchHome>
     
     //MARK: internal
     
-    func changeStatus(
-        statusType:MHomeStatusProtocol.Type)
+    func changeStatus(statusType:MHomeStatusProtocol.Type)
     {
         let status:MHomeStatusProtocol = statusType.init()
         self.status = status
