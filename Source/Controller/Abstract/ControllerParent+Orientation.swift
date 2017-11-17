@@ -24,7 +24,7 @@ extension ControllerParent
             
             let controller:UIViewController = childViewControllers.last
             
-            else
+        else
         {
             return false
         }
@@ -41,7 +41,7 @@ extension ControllerParent
     }
     
     override var shouldAutorotate:Bool
-        {
+    {
         get
         {
             return true
@@ -55,6 +55,7 @@ extension ControllerParent
         UIDevice.current.setValue(
             orientation.rawValue,
             forKey:ControllerParent.kOrientationKey)
+        
         UIViewController.attemptRotationToDeviceOrientation()
     }
     
@@ -63,14 +64,12 @@ extension ControllerParent
     func landscapeOrientation()
     {
         orientation = UIInterfaceOrientationMask.landscape
-        updateOrientation(
-            orientation:UIInterfaceOrientation.landscapeLeft)
+        updateOrientation(orientation:UIInterfaceOrientation.landscapeLeft)
     }
     
     func portraitOrientation()
     {
         orientation = UIInterfaceOrientationMask.portrait
-        updateOrientation(
-            orientation:UIInterfaceOrientation.portrait)
+        updateOrientation(orientation:UIInterfaceOrientation.portrait)
     }
 }

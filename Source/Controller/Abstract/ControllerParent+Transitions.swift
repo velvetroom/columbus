@@ -36,11 +36,16 @@ extension ControllerParent
     
     //MARK: internal
     
-    func slideTo(horizontal:Horizontal, controller:UIViewController)
+    func slideTo(
+        horizontal:ControllerTransition.Horizontal,
+        controller:UIViewController)
     {
         let viewWidth:CGFloat = -view.bounds.maxX
         let left:CGFloat = viewWidth * horizontal.rawValue
-        slide(controller:controller, left:left)
+        
+        slide(
+            controller:controller,
+            left:left)
     }
     
     func mainController(controller:UIViewController)
@@ -62,8 +67,8 @@ extension ControllerParent
     
     func push(
         controller:UIViewController,
-        horizontal:Horizontal = Horizontal.none,
-        vertical:Vertical = Vertical.none,
+        horizontal:ControllerTransition.Horizontal = ControllerTransition.Horizontal.none,
+        vertical:ControllerTransition.Vertical = ControllerTransition.Vertical.none,
         background:Bool = true,
         completion:(() -> ())? = nil)
     {
@@ -84,8 +89,14 @@ extension ControllerParent
         let top:CGFloat = height * vertical.rawValue
         
         addChildViewController(controller)
-        controller.beginAppearanceTransition(true, animated:true)
-        currentController.beginAppearanceTransition(false, animated:true)
+        
+        controller.beginAppearanceTransition(
+            true,
+            animated:true)
+        
+        currentController.beginAppearanceTransition(
+            false,
+            animated:true)
         
         view.push(
             newView:newView,
@@ -113,11 +124,16 @@ extension ControllerParent
         }
         
         addChildViewController(controller)
-        controller.beginAppearanceTransition(true, animated:true)
-        currentController.beginAppearanceTransition(false, animated:true)
         
-        view.animateOver(
-            newView:newView)
+        controller.beginAppearanceTransition(
+            true,
+            animated:true)
+        
+        currentController.beginAppearanceTransition(
+            false,
+            animated:true)
+        
+        view.animateOver(newView:newView)
         {
             controller.endAppearanceTransition()
             currentController.endAppearanceTransition()
@@ -138,8 +154,14 @@ extension ControllerParent
         }
         
         addChildViewController(controller)
-        controller.beginAppearanceTransition(true, animated:true)
-        currentController.beginAppearanceTransition(false, animated:true)
+        
+        controller.beginAppearanceTransition(
+            true,
+            animated:true)
+        
+        currentController.beginAppearanceTransition(
+            false,
+            animated:true)
         
         view.centreOver(newView:newView)
         
@@ -156,7 +178,11 @@ extension ControllerParent
             controllers -= 1
             
             let controller:UIViewController = childViewControllers[controllers]
-            controller.beginAppearanceTransition(false, animated:false)
+            
+            controller.beginAppearanceTransition(
+                false,
+                animated:false)
+            
             controller.view.removeFromSuperview()
             controller.endAppearanceTransition()
             controller.removeFromParentViewController()
@@ -172,7 +198,11 @@ extension ControllerParent
             controllers -= 1
             
             let controller:UIViewController = childViewControllers[controllers]
-            controller.beginAppearanceTransition(false, animated:false)
+            
+            controller.beginAppearanceTransition(
+                false,
+                animated:false)
+            
             controller.view.removeFromSuperview()
             controller.endAppearanceTransition()
             controller.removeFromParentViewController()
@@ -180,8 +210,8 @@ extension ControllerParent
     }
     
     func pop(
-        horizontal:Horizontal = Horizontal.none,
-        vertical:Vertical = Vertical.none,
+        horizontal:ControllerTransition.Horizontal = ControllerTransition.Horizontal.none,
+        vertical:ControllerTransition.Vertical = ControllerTransition.Vertical.none,
         completion:(() -> ())? = nil)
     {
         let width:CGFloat = view.bounds.maxX
@@ -206,8 +236,13 @@ extension ControllerParent
                 return
             }
             
-            currentController.beginAppearanceTransition(false, animated:true)
-            previousController.beginAppearanceTransition(true, animated:true)
+            currentController.beginAppearanceTransition(
+                false,
+                animated:true)
+            
+            previousController.beginAppearanceTransition(
+                true,
+                animated:true)
             
             view.pop(
                 currentView:currentView,
@@ -268,11 +303,15 @@ extension ControllerParent
             return
         }
         
-        currentController.beginAppearanceTransition(false, animated:true)
-        previousController.beginAppearanceTransition(true, animated:true)
+        currentController.beginAppearanceTransition(
+            false,
+            animated:true)
         
-        view.dismissAnimateOver(
-            currentView:currentController.view)
+        previousController.beginAppearanceTransition(
+            true,
+            animated:true)
+        
+        view.dismissAnimateOver(currentView:currentController.view)
         {
             currentController.endAppearanceTransition()
             previousController.endAppearanceTransition()
