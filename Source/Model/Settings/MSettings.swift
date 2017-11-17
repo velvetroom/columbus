@@ -20,6 +20,7 @@ final class MSettings:Model<ArchSettings>
         database:Database)
     {
         self.settings = settings
+        
         items = MSettings.factoryItems(
             settings:settings,
             database:database)

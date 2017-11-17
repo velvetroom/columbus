@@ -20,8 +20,7 @@ extension MSettingsTravelMode
         return items
     }
     
-    class func factoryIndexMap(
-        items:[MSettingsTravelModeProtocol]) -> [DPlanTravelMode:Int]
+    class func factoryIndexMap(items:[MSettingsTravelModeProtocol]) -> [DPlanTravelMode:Int]
     {
         var index:Int = 0
         var map:[DPlanTravelMode:Int] = [:]

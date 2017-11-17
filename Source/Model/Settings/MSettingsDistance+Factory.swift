@@ -16,8 +16,7 @@ extension MSettingsDistance
         return items
     }
     
-    class func factoryIndexMap(
-        items:[MSettingsDistanceProtocol]) -> [DSettingsDistance:Int]
+    class func factoryIndexMap(items:[MSettingsDistanceProtocol]) -> [DSettingsDistance:Int]
     {
         var index:Int = 0
         var map:[DSettingsDistance:Int] = [:]

@@ -18,8 +18,7 @@ extension MSettingsDetailLevel
         return items
     }
     
-    class func factoryIndexMap(
-        items:[MSettingsDetailLevelProtocol]) -> [DSettingsDetailLevel:Int]
+    class func factoryIndexMap(items:[MSettingsDetailLevelProtocol]) -> [DSettingsDetailLevel:Int]
     {
         var index:Int = 0
         var map:[DSettingsDetailLevel:Int] = [:]

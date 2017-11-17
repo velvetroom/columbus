@@ -27,8 +27,7 @@ final class MSettingsTravelMode:MSettingsProtocol
         self.database = database
         
         items = MSettingsTravelMode.factoryItems()
-        indexMap = MSettingsTravelMode.factoryIndexMap(
-            items:items)
+        indexMap = MSettingsTravelMode.factoryIndexMap(items:items)
     }
     
     //MARK: internal
