@@ -332,6 +332,7 @@
 		DAA5B48F1F99371C00F9121C /* DPlanTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B48E1F99371C00F9121C /* DPlanTravelMode.swift */; };
 		DAA5B4911F993B0B00F9121C /* MCreatePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */; };
 		DAA734C91FBEB70F002E4F1C /* MCreateLocationDelegate+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA734C81FBEB70F002E4F1C /* MCreateLocationDelegate+Constants.swift */; };
+		DAA734CB1FBEB77B002E4F1C /* MCreateLocationStrategyReady+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA734CA1FBEB77B002E4F1C /* MCreateLocationStrategyReady+Constants.swift */; };
 		DAA793501FA2436200791B99 /* DPlanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7934F1FA2436200791B99 /* DPlanFactory.swift */; };
 		DAA9255C1FA5426E00B72DB2 /* MCreateSavePixelRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9255B1FA5426E00B72DB2 /* MCreateSavePixelRange.swift */; };
 		DAA9255E1FA542E900B72DB2 /* MCreateSavePixelRange+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9255D1FA542E900B72DB2 /* MCreateSavePixelRange+Factory.swift */; };
@@ -786,6 +787,7 @@
 		DAA5B48E1F99371C00F9121C /* DPlanTravelMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravelMode.swift; sourceTree = "<group>"; };
 		DAA5B4901F993B0B00F9121C /* MCreatePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlan.swift; sourceTree = "<group>"; };
 		DAA734C81FBEB70F002E4F1C /* MCreateLocationDelegate+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateLocationDelegate+Constants.swift"; sourceTree = "<group>"; };
+		DAA734CA1FBEB77B002E4F1C /* MCreateLocationStrategyReady+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateLocationStrategyReady+Constants.swift"; sourceTree = "<group>"; };
 		DAA7934F1FA2436200791B99 /* DPlanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanFactory.swift; sourceTree = "<group>"; };
 		DAA9255B1FA5426E00B72DB2 /* MCreateSavePixelRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSavePixelRange.swift; sourceTree = "<group>"; };
 		DAA9255D1FA542E900B72DB2 /* MCreateSavePixelRange+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSavePixelRange+Factory.swift"; sourceTree = "<group>"; };
@@ -1581,6 +1583,7 @@
 				DA78BB311F97199400A7C280 /* MCreateLocationStrategyDenied.swift */,
 				DA78BB351F971A5000A7C280 /* MCreateLocationStrategyUnknown.swift */,
 				DA0448001F97553100BA2D45 /* MCreateLocationStrategyReady.swift */,
+				DAA734CA1FBEB77B002E4F1C /* MCreateLocationStrategyReady+Constants.swift */,
 				DA2EE5661F98ABA200488A07 /* MCreateMapStatusProtocol.swift */,
 				DA2EE5681F98AC4400488A07 /* MCreateMapStatusExpanded.swift */,
 				DA2EE56A1F98AD6C00488A07 /* MCreateMapStatusExpanded+Factory.swift */,
@@ -1988,6 +1991,7 @@
 				DAE73F1F1FB0CBE5005BE26F /* VStoreStatusReadyListActions.swift in Sources */,
 				DA0448031F97557600BA2D45 /* MCreateStatusReady.swift in Sources */,
 				DAD7C67D1FA8CEF900534D7A /* MCreateSaveRenderSliceRect.swift in Sources */,
+				DAA734CB1FBEB77B002E4F1C /* MCreateLocationStrategyReady+Constants.swift in Sources */,
 				DA2944DC1FA403D500645DA4 /* DSettingsDetailLevel.swift in Sources */,
 				DAB1C4C31F9B0329009185EA /* VCreateStatusReadyBarStopsActions.swift in Sources */,
 				DA96A29C1FAE797200109455 /* VCreateTravelBackground.swift in Sources */,
