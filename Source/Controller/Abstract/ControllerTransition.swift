@@ -1,6 +1,6 @@
 import UIKit
 
-struct ControllerParentTransition
+struct ControllerTransition
 {
     struct Vertical
     {
