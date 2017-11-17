@@ -8,11 +8,9 @@ final class MCreateSearchCompleterDelegate:
     
     //MARK: delegate
     
-    func completerDidUpdateResults(
-        _ completer:MKLocalSearchCompleter)
+    func completerDidUpdateResults(_ completer:MKLocalSearchCompleter)
     {
         let items:[MKLocalSearchCompletion] = completer.results
-        
         model?.updateItems(items:items)
     }
 }

@@ -4,13 +4,10 @@ extension MCreateSearch
 {
     //MARK: private
     
-    private func asyncSearchItem(
-        item:MKLocalSearchCompletion)
+    private func asyncSearchItem(item:MKLocalSearchCompletion)
     {
-        let searchRequest:MKLocalSearchRequest = MKLocalSearchRequest(
-            completion:item)
-        let search:MKLocalSearch = MKLocalSearch(
-            request:searchRequest)
+        let searchRequest:MKLocalSearchRequest = MKLocalSearchRequest(completion:item)
+        let search:MKLocalSearch = MKLocalSearch(request:searchRequest)
         
         search.start
         { [weak self] (response:MKLocalSearchResponse?, error:Error?) in
@@ -80,8 +77,7 @@ extension MCreateSearch
     
     func searchItem(item:MKLocalSearchCompletion)
     {
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.asyncSearchItem(item:item)
