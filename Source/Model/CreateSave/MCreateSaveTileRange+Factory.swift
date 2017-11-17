@@ -6,8 +6,7 @@ extension MCreateSaveTileRange
     
     func factoryRender() -> MCreateSaveRender
     {
-        let slices:[MCreateSaveRenderSlice] = MCreateSaveRenderSlice.factorySlices(
-            tileRange:self)
+        let slices:[MCreateSaveRenderSlice] = MCreateSaveRenderSlice.factorySlices(tileRange:self)
         
         let render:MCreateSaveRender = MCreateSaveRender(
             zoom:zoom,

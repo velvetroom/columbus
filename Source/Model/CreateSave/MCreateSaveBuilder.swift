@@ -9,7 +9,9 @@ final class MCreateSaveBuilder
     private(set) weak var timer:Timer?
     private let totalRenders:Float
     
-    init(renders:[MCreateSaveRender], directory:URL)
+    init(
+        renders:[MCreateSaveRender],
+        directory:URL)
     {
         self.renders = renders
         self.directory = directory

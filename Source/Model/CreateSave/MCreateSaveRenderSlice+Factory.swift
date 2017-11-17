@@ -29,6 +29,7 @@ extension MCreateSaveRenderSlice
         let options:MKMapSnapshotOptions = factoryOptions(
             tileRange:tileRange,
             rect:rect)
+        
         let slice:MCreateSaveRenderSlice = MCreateSaveRenderSlice(
             options:options,
             rect:rect)
@@ -43,6 +44,7 @@ extension MCreateSaveRenderSlice
         let mapRect:MKMapRect = factoryMapRect(
             tileRange:tileRange,
             rect:rect)
+        
         let size:CGSize = factoryOptionsSize(
             rect:rect)
         
@@ -76,6 +78,7 @@ extension MCreateSaveRenderSlice
     {
         let width:Double = rect.tileWidth * MCreateSave.Constants.Tile.size
         let height:Double = rect.tileHeight * MCreateSave.Constants.Tile.size
+        
         let size:CGSize = CGSize(
             width:width,
             height:height)
@@ -88,6 +91,7 @@ extension MCreateSaveRenderSlice
     static func factorySlices(tileRange:MCreateSaveTileRange) -> [MCreateSaveRenderSlice]
     {
         let rects:[MCreateSaveRenderSliceRect] = MCreateSaveRenderSliceRect.factoryRects(tileRange:tileRange)
+        
         let slices:[MCreateSaveRenderSlice] = factorySlices(
             tileRange:tileRange,
             rects:rects)

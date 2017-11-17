@@ -8,25 +8,19 @@ extension MCreateSaveZoomProtocol
         DSettingsDetailLevel:
         MCreateSaveZoomProtocol.Type]
     {
-        let map:[DSettingsDetailLevel:
-            MCreateSaveZoomProtocol.Type] = [
-            DSettingsDetailLevel.min:
-                MCreateSaveZoomMin.self,
-            DSettingsDetailLevel.medium:
-                MCreateSaveZoomMedium.self,
-            DSettingsDetailLevel.max:
-                MCreateSaveZoomMax.self]
+        let map:[DSettingsDetailLevel:MCreateSaveZoomProtocol.Type] = [
+                DSettingsDetailLevel.min : MCreateSaveZoomMin.self,
+                DSettingsDetailLevel.medium : MCreateSaveZoomMedium.self,
+                DSettingsDetailLevel.max : MCreateSaveZoomMax.self]
         
         return map
     }
     
     //MARK: internal
     
-    static func factoryZoom(
-        detailLevel:DSettingsDetailLevel) -> MCreateSaveZoomProtocol
+    static func factoryZoom(detailLevel:DSettingsDetailLevel) -> MCreateSaveZoomProtocol
     {
-        let map:[DSettingsDetailLevel:
-            MCreateSaveZoomProtocol.Type] = zoomMap()
+        let map:[DSettingsDetailLevel:MCreateSaveZoomProtocol.Type] = zoomMap()
         
         guard
         

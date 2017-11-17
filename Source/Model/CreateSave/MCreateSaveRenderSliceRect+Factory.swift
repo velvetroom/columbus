@@ -4,8 +4,7 @@ extension MCreateSaveRenderSliceRect
 {
     //MARK: internal
     
-    static func factoryRects(
-        tileRange:MCreateSaveTileRange) -> [MCreateSaveRenderSliceRect]
+    static func factoryRects(tileRange:MCreateSaveTileRange) -> [MCreateSaveRenderSliceRect]
     {
         var rects:[MCreateSaveRenderSliceRect] = []
         var tileY:Double = tileRange.minY

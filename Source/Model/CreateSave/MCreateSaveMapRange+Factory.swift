@@ -4,8 +4,7 @@ extension MCreateSaveMapRange
 {
     //MARK: private
     
-    private func factoryPixelZoom(
-        zoom:Double) -> Double
+    private func factoryPixelZoom(zoom:Double) -> Double
     {
         let pixelZoomInt:Int = 1 << Int(zoom)
         let pixelZoom:Double = Double(pixelZoomInt)
@@ -47,11 +46,9 @@ extension MCreateSaveMapRange
         return newRange
     }
     
-    func factoryPixelRange(
-        zoom:Double) -> MCreateSavePixelRange
+    func factoryPixelRange(zoom:Double) -> MCreateSavePixelRange
     {
-        let pixelZoom:Double = factoryPixelZoom(
-            zoom:zoom)
+        let pixelZoom:Double = factoryPixelZoom(zoom:zoom)
         let pixelTranslated:Double = pixelZoom / MCreateSave.Constants.Map.appleToGoogle
         
         let minX:Double = self.minX * pixelTranslated

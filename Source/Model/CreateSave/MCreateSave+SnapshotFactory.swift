@@ -30,8 +30,8 @@ extension MCreateSave
     {
         builder?.timer?.invalidate()
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
-            deadline:DispatchTime.now() + MCreateSave.Constants.TimeIntervals.snapshotWait)
+        let deadline:DispatchTime = DispatchTime.now() + MCreateSave.Constants.TimeIntervals.snapshotWait
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(deadline:deadline)
         { [weak self] in
             
             self?.asyncFactorySnapshot(
@@ -63,8 +63,7 @@ extension MCreateSave
         mapRange:MCreateSaveMapRange,
         settings:DSettings) -> [MCreateSaveRender]
     {
-        let zoom:MCreateSaveZoomProtocol = MCreateSaveZoomDefault.factoryZoom(
-            detailLevel:settings.detailLevel)
+        let zoom:MCreateSaveZoomProtocol = MCreateSaveZoomDefault.factoryZoom(detailLevel:settings.detailLevel)
         
         let options:[MCreateSaveRender] = factoryRender(
             mapRange:mapRange,

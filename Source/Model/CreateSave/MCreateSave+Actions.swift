@@ -9,8 +9,7 @@ extension MCreateSave
         guard
         
             let stops:[DPlanStop] = plan?.stops?.array as? [DPlanStop],
-            let mapRange:MCreateSaveMapRange = MCreateSave.factoryMapRange(
-                stops:stops)
+            let mapRange:MCreateSaveMapRange = MCreateSave.factoryMapRange(stops:stops)
         
         else
         {
@@ -64,8 +63,7 @@ extension MCreateSave
     {
         changeStatus(statusType:MCreateSaveStatusBusy.self)
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.asyncSave()

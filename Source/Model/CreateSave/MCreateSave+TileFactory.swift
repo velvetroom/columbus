@@ -4,8 +4,7 @@ extension MCreateSave
 {
     //MARK: private
     
-    private class func factoryBoundingMin(
-        min:Double) -> Double
+    private class func factoryBoundingMin(min:Double) -> Double
     {
         var min:Double = min - MCreateSave.Constants.Tile.padding
         
@@ -17,8 +16,7 @@ extension MCreateSave
         return min
     }
     
-    private class func factoryBoundingMax(
-        max:Double) -> Double
+    private class func factoryBoundingMax(max:Double) -> Double
     {
         let max:Double = max + MCreateSave.Constants.Tile.padding
         
@@ -27,17 +25,12 @@ extension MCreateSave
     
     //MARK: internal
     
-    class func factoryBoundingTileRange(
-        tileRange:MCreateSaveTileRange) -> MCreateSaveTileRange
+    class func factoryBoundingTileRange(tileRange:MCreateSaveTileRange) -> MCreateSaveTileRange
     {
-        let minX:Double = factoryBoundingMin(
-            min:tileRange.minX)
-        let maxX:Double = factoryBoundingMax(
-            max:tileRange.maxX)
-        let minY:Double = factoryBoundingMin(
-            min:tileRange.minY)
-        let maxY:Double = factoryBoundingMax(
-            max:tileRange.maxY)
+        let minX:Double = factoryBoundingMin(min:tileRange.minX)
+        let maxX:Double = factoryBoundingMax(max:tileRange.maxX)
+        let minY:Double = factoryBoundingMin(min:tileRange.minY)
+        let maxY:Double = factoryBoundingMax(max:tileRange.maxY)
         
         let boundingTileRange:MCreateSaveTileRange = MCreateSaveTileRange(
             tileSize:tileRange.tileSize,

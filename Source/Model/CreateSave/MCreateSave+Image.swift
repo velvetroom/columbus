@@ -64,8 +64,7 @@ extension MCreateSave
     {
         guard
         
-            let croppedImage:UIImage = snapshot.imageCropping(
-                rect:cropRect)
+            let croppedImage:UIImage = snapshot.imageCropping(rect:cropRect)
         
         else
         {

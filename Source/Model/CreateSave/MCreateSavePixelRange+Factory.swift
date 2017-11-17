@@ -4,8 +4,7 @@ extension MCreateSavePixelRange
 {
     //MARK: private
     
-    private func factoryTileMapSize(
-        tileSize:Double) -> Double
+    private func factoryTileMapSize(tileSize:Double) -> Double
     {
         let sizeInMap:Double = pixelZoom / tileSize
         let tileMapSize:Double = MCreateSave.Constants.Map.appleToGoogle / sizeInMap
@@ -15,12 +14,9 @@ extension MCreateSavePixelRange
     
     //MARK: internal
     
-    func factoryTileRange(
-        tileSize:Double) -> MCreateSaveTileRange
+    func factoryTileRange(tileSize:Double) -> MCreateSaveTileRange
     {
-        let tileMapSize:Double = factoryTileMapSize(
-            tileSize:tileSize)
-        
+        let tileMapSize:Double = factoryTileMapSize(tileSize:tileSize)
         let minX:Double = floor(self.minX / tileSize)
         let maxX:Double = floor(self.maxX / tileSize)
         let minY:Double = floor(self.minY / tileSize)
