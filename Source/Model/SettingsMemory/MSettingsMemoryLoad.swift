@@ -42,7 +42,7 @@ extension MSettingsMemory
     
     private func factoryIdentifier(path:String) -> String?
     {
-        let pathSplit:[String] = path.components(separatedBy:kPathSeparator)
+        let pathSplit:[String] = path.components(separatedBy:"/")
         let identifier:String? = pathSplit.last
         
         return identifier
