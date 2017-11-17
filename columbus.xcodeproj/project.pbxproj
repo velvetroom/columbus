@@ -219,7 +219,7 @@
 		DA65ECF31F95E68700720673 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC841F95E68700720673 /* Model.swift */; };
 		DA65ECF41F95E68700720673 /* MHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC861F95E68700720673 /* MHome.swift */; };
 		DA65ECF51F95E68700720673 /* MMenuItemHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC881F95E68700720673 /* MMenuItemHome.swift */; };
-		DA65ECF61F95E68700720673 /* MMenuFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC891F95E68700720673 /* MMenuFactory.swift */; };
+		DA65ECF61F95E68700720673 /* MMenu+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC891F95E68700720673 /* MMenu+Factory.swift */; };
 		DA65ECF71F95E68700720673 /* MMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC8A1F95E68700720673 /* MMenu.swift */; };
 		DA65ECF81F95E68700720673 /* MMenuOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC8B1F95E68700720673 /* MMenuOrder.swift */; };
 		DA65ECF91F95E68700720673 /* MMenuItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC8C1F95E68700720673 /* MMenuItemProtocol.swift */; };
@@ -669,7 +669,7 @@
 		DA65EC841F95E68700720673 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA65EC861F95E68700720673 /* MHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHome.swift; sourceTree = "<group>"; };
 		DA65EC881F95E68700720673 /* MMenuItemHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemHome.swift; sourceTree = "<group>"; };
-		DA65EC891F95E68700720673 /* MMenuFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuFactory.swift; sourceTree = "<group>"; };
+		DA65EC891F95E68700720673 /* MMenu+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MMenu+Factory.swift"; sourceTree = "<group>"; };
 		DA65EC8A1F95E68700720673 /* MMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenu.swift; sourceTree = "<group>"; };
 		DA65EC8B1F95E68700720673 /* MMenuOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuOrder.swift; sourceTree = "<group>"; };
 		DA65EC8C1F95E68700720673 /* MMenuItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMenuItemProtocol.swift; sourceTree = "<group>"; };
@@ -1311,7 +1311,7 @@
 			isa = PBXGroup;
 			children = (
 				DA65EC8A1F95E68700720673 /* MMenu.swift */,
-				DA65EC891F95E68700720673 /* MMenuFactory.swift */,
+				DA65EC891F95E68700720673 /* MMenu+Factory.swift */,
 				DA65EC8B1F95E68700720673 /* MMenuOrder.swift */,
 				DA65EC8C1F95E68700720673 /* MMenuItemProtocol.swift */,
 				DA65EC881F95E68700720673 /* MMenuItemHome.swift */,
@@ -2083,7 +2083,7 @@
 				DA2926791FACD59D00913141 /* DPlanTravelDurationType.swift in Sources */,
 				DA6AC17D1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift in Sources */,
 				DA5877AF1FBCFAC000EF9493 /* VSettingsMemory.swift in Sources */,
-				DA65ECF61F95E68700720673 /* MMenuFactory.swift in Sources */,
+				DA65ECF61F95E68700720673 /* MMenu+Factory.swift in Sources */,
 				DA2F47EE1FA129AA003625D6 /* MCreatePlanStopUpdate.swift in Sources */,
 				DA2CC7F21FA1EE8600CF0DE1 /* DSettingsComputed.swift in Sources */,
 				DA1A26B61F993ECD00FAF78C /* VCreateStatusError.swift in Sources */,

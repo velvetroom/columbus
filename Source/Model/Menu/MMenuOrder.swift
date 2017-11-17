@@ -1,3 +1,5 @@
+import Foundation
+
 enum MMenuOrder:Int
 {
     case settings

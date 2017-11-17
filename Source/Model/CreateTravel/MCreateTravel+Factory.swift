@@ -20,8 +20,7 @@ extension MCreateTravel
         return items
     }
     
-    class func factoryIndexMap(
-        items:[MCreateTravelProtocol]) -> [DPlanTravelMode:Int]
+    class func factoryIndexMap(items:[MCreateTravelProtocol]) -> [DPlanTravelMode:Int]
     {
         var index:Int = 0
         var map:[DPlanTravelMode:Int] = [:]
