@@ -4,8 +4,7 @@ extension CCreate
 {
     //MARK: private
     
-    private func changeMapStatus(
-        item:MCreateMapMenuProtocol)
+    private func changeMapStatus(item:MCreateMapMenuProtocol)
     {
         guard
             
@@ -22,8 +21,7 @@ extension CCreate
     
     //MARK: internal
     
-    func menuItemSelected(
-        item:MCreateMapMenuProtocol)
+    func menuItemSelected(item:MCreateMapMenuProtocol)
     {
         item.selected(controller:self)
         changeMapStatus(item:item)
