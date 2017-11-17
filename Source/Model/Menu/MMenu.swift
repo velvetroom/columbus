@@ -5,7 +5,6 @@ final class MMenu
     var selected:MMenu.Order
     let items:[MMenuItemProtocol]
     private let itemsMap:[MMenu.Order:MMenuItemProtocol]
-    private let kInitialSelected:MMenu.Order = MMenu.Order.home
     
     var selectedItem:MMenuItemProtocol?
     {
@@ -19,7 +18,7 @@ final class MMenu
     
     init()
     {
-        selected = kInitialSelected
+        selected = MMenu.Constants.initialSelected
         items = MMenu.factoryItems()
         itemsMap = MMenu.factoryItemsMap(items:items)
     }
