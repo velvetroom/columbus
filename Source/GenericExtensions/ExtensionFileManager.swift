@@ -145,19 +145,26 @@ extension FileManager
         return size
     }
     
-    func contentsAt(path:String) -> [String]
+    func urlsInDirectory(url:URL) -> [URL]
     {
         let contents:[String]
+        var urls:[URL]
         
         do
         {
-            try contents = contentsOfDirectory(atPath:path)
+            try contents = contentsOfDirectory(atPath:url.path)
         }
         catch
         {
             return []
         }
         
-        return contents
+        for path:String in contents
+        {
+            let url:URL url.appendingPathComponent(path)
+            urls.append(url)
+        }
+        
+        return urls
     }
 }
