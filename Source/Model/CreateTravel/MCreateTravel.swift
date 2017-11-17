@@ -27,8 +27,7 @@ final class MCreateTravel:Model<ArchCreateTravel>
     required init()
     {
         items = MCreateTravel.factoryItems()
-        indexMap = MCreateTravel.factoryIndexMap(
-            items:items)
+        indexMap = MCreateTravel.factoryIndexMap(items:items)
         
         super.init()
     }
