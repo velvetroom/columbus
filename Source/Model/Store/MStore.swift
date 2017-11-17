@@ -10,9 +10,11 @@ final class MStore:Model<ArchStore>
     
     var database:Database?
     var settings:DSettings?
+    
     let transactionMap:[
         SKPaymentTransactionState:
         TransactionRouter]
+    
     let perks:[MStorePerkProtocol]
     let perksMap:[String:MStorePerkProtocol]
     let modelKit:MStoreKit
@@ -24,8 +26,7 @@ final class MStore:Model<ArchStore>
         modelKit = MStoreKit()
         priceFormatter = MStore.factoryPriceFormatter()
         perks = MStore.factoryPerks()
-        perksMap = MStore.factoryPerksMap(
-            perks:perks)
+        perksMap = MStore.factoryPerksMap(perks:perks)
         transactionMap = MStore.factoryTransactionMap()
         
         super.init()
@@ -34,8 +35,7 @@ final class MStore:Model<ArchStore>
     
     //MARK: internal
     
-    func changeStatus(
-        statusType:MStoreStatusProtocol.Type)
+    func changeStatus(statusType:MStoreStatusProtocol.Type)
     {
         let status:MStoreStatusProtocol = statusType.init()
         self.status = status
@@ -45,8 +45,7 @@ final class MStore:Model<ArchStore>
     
     func statusError(error:String)
     {
-        let status:MStoreStatusError = MStoreStatusError(
-            error:error)
+        let status:MStoreStatusError = MStoreStatusError(error:error)
         self.status = status
         
         view?.updateStatus()
