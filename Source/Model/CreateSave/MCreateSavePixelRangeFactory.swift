@@ -2,8 +2,6 @@ import Foundation
 
 extension MCreateSavePixelRange
 {
-    private static let kMapSizeMultiplier:Double = 1000000
-    
     //MARK: private
     
     private func factoryTileMapSize(

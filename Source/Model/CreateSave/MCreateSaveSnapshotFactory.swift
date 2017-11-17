@@ -2,8 +2,6 @@ import MapKit
 
 extension MCreateSave
 {
-    private static let kAsyncWait:TimeInterval = 0.2
-    
     //MARK: private
     
     private class func factoryRender(

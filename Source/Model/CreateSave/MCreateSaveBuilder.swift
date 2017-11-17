@@ -8,7 +8,6 @@ final class MCreateSaveBuilder
     let directory:URL
     private(set) weak var timer:Timer?
     private let totalRenders:Float
-    private let kTimeout:TimeInterval = 9
     
     init(renders:[MCreateSaveRender], directory:URL)
     {

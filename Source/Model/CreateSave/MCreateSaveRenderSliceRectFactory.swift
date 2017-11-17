@@ -2,8 +2,6 @@ import MapKit
 
 extension MCreateSaveRenderSliceRect
 {
-    private static let kMaxSize:Double = 10
-    
     //MARK: internal
     
     static func factoryRects(

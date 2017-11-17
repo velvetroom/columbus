@@ -440,6 +440,7 @@
 		DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */; };
 		DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */; };
 		DAF2EF351FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */; };
+		DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -890,6 +891,7 @@
 		DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarFactory.swift; sourceTree = "<group>"; };
 		DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarAnimations.swift; sourceTree = "<group>"; };
 		DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveStatusErrorFactory.swift; sourceTree = "<group>"; };
+		DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1037,6 +1039,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5B09451FA361380055E8F3 /* MCreateSave.swift */,
+				DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */,
 				DABC26941FA39FA400746CDD /* MCreateSaveActions.swift */,
 				DAD387271FA3ECE00031B9F8 /* MCreateSaveSnapshot.swift */,
 				DAD387291FA3F0E90031B9F8 /* MCreateSaveSnapshotFactory.swift */,
@@ -1940,6 +1943,7 @@
 				DA3225F01FB89D8000924A4D /* VCreateSearchBaseBar.swift in Sources */,
 				DAC385EC1FA77AFC001138CD /* VMapPin.swift in Sources */,
 				DA5DA31D1FBD18810047FED4 /* VSettingsMemoryList.swift in Sources */,
+				DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */,
 				DA65ECDC1F95E68700720673 /* Database.swift in Sources */,
 				DA96A2921FAE771E00109455 /* CCreateTravel.swift in Sources */,
 				DA18A9731FAD5BCF00F6BDF8 /* VStore.swift in Sources */,

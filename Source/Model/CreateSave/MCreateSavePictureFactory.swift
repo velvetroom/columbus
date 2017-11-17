@@ -2,8 +2,6 @@ import Foundation
 
 extension MCreateSavePicture
 {
-    private static let kDot:String = "."
-    
     //MARK: internal
     
     func factoryName() -> String

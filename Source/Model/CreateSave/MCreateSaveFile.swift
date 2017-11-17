@@ -50,6 +50,27 @@ extension MCreateSave
     
     //MARK: internal
     
+    class func projectsDirectory() -> URL?
+    {
+        var directory:URL = FileManager.default.appDirectory.appendingPathComponent(
+            Constants.projectsDirectory)
+        directory.excludeFromBackup()
+        
+        do
+        {
+            try FileManager.default.createDirectory(
+                at:directory,
+                withIntermediateDirectories:true,
+                attributes:nil)
+        }
+        catch
+        {
+            return nil
+        }
+        
+        return directory
+    }
+    
     class func savePicture(
         directory:URL,
         picture:MCreateSavePicture) -> URL?
