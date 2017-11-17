@@ -5,8 +5,7 @@ extension MStore
 {
     //MARK: private
     
-    private func updateTransaction(
-        transaction:SKPaymentTransaction)
+    private func updateTransaction(transaction:SKPaymentTransaction)
     {
         let identifier:String = transaction.payment.productIdentifier
         let transactionState:SKPaymentTransactionState = transaction.transactionState
@@ -27,8 +26,7 @@ extension MStore
     
     //MARK: internal
     
-    func updateTransactions(
-        transactions:[SKPaymentTransaction])
+    func updateTransactions(transactions:[SKPaymentTransaction])
     {
         for transaction:SKPaymentTransaction in transactions
         {

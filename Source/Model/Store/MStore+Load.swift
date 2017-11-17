@@ -44,8 +44,7 @@ extension MStore
         self.settings = settings
         
         let productIdentifiers:Set<String> = factoryProductIdentifiers()
-        modelKit.checkAvailabilities(
-            productIdentifiers:productIdentifiers)
+        modelKit.checkAvailabilities(productIdentifiers:productIdentifiers)
     }
     
     //MARK: internal
@@ -54,8 +53,7 @@ extension MStore
     {
         modelKit.start()
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.asyncLoad()

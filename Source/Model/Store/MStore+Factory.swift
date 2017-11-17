@@ -18,14 +18,12 @@ extension MStore
         var perkUnlimited:MStorePerkUnlimited = MStorePerkUnlimited()
         perkUnlimited.statusUnavailable()
         
-        let perks:[MStorePerkProtocol] = [
-            perkUnlimited]
+        let perks:[MStorePerkProtocol] = [perkUnlimited]
         
         return perks
     }
     
-    class func factoryPerksMap(
-        perks:[MStorePerkProtocol]) -> [String:MStorePerkProtocol]
+    class func factoryPerksMap(perks:[MStorePerkProtocol]) -> [String:MStorePerkProtocol]
     {
         var map:[String:MStorePerkProtocol] = [:]
         

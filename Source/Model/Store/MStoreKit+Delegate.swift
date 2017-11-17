@@ -12,20 +12,17 @@ extension MStoreKit:
         _ request:SKRequest,
         didFailWithError error:Error)
     {
-        model?.statusError(
-            error:error.localizedDescription)
+        model?.statusError(error:error.localizedDescription)
     }
     
     func paymentQueue(
         _ queue:SKPaymentQueue,
         updatedTransactions transactions:[SKPaymentTransaction])
     {
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.model?.updateTransactions(
-                transactions:transactions)
+            self?.model?.updateTransactions(transactions:transactions)
         }
     }
     
@@ -33,12 +30,10 @@ extension MStoreKit:
         _ queue:SKPaymentQueue,
         removedTransactions transactions:[SKPaymentTransaction])
     {
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.model?.updateTransactions(
-                transactions:transactions)
+            self?.model?.updateTransactions(transactions:transactions)
         }
     }
     
@@ -48,17 +43,14 @@ extension MStoreKit:
     {
         let products:[SKProduct] = response.products
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.model?.received(
-                products:products)
+            self?.model?.received(products:products)
         }
     }
     
-    func paymentQueueRestoreCompletedTransactionsFinished(
-        _ queue:SKPaymentQueue)
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue:SKPaymentQueue)
     {
         model?.view?.refreshStore()
     }
@@ -67,7 +59,6 @@ extension MStoreKit:
         _ queue:SKPaymentQueue,
         restoreCompletedTransactionsFailedWithError error:Error)
     {
-        model?.statusError(
-            error:error.localizedDescription)
+        model?.statusError(error:error.localizedDescription)
     }
 }

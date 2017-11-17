@@ -43,8 +43,8 @@ extension MStore
         perk.statusNew(
             product:status.product,
             price:status.price)
-        modelKit.finishTransaction(
-            transaction:transaction)
+        
+        modelKit.finishTransaction(transaction:transaction)
     }
     
     func transactionPurchased(
@@ -67,8 +67,8 @@ extension MStore
         perk.statusPurchased(
             product:status.product,
             price:status.price)
-        modelKit.finishTransaction(
-            transaction:transaction)
+        
+        modelKit.finishTransaction(transaction:transaction)
     }
     
     func transactionPurchasing(

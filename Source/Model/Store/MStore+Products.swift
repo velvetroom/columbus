@@ -54,8 +54,7 @@ extension MStore
     {
         priceFormatter.locale = product.priceLocale
         let priceNumber:NSDecimalNumber = product.price
-        let price:String? = priceFormatter.string(
-            from:priceNumber)
+        let price:String? = priceFormatter.string(from:priceNumber)
         
         return price
     }
@@ -69,7 +68,6 @@ extension MStore
             received(product:product)
         }
         
-        changeStatus(
-            statusType:MStoreStatusReady.self)
+        changeStatus(statusType:MStoreStatusReady.self)
     }
 }
