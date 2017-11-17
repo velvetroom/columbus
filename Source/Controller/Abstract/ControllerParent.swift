@@ -23,7 +23,7 @@ final class ControllerParent:UIViewController
         
         guard
             
-            let controller:UIViewController = selectedController()
+            let controller:UIViewController = factorySelectedController()
             
         else
         {

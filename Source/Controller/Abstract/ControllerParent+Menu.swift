@@ -24,7 +24,7 @@ extension ControllerParent
     
     //MARK: internal
     
-    func selectedController() -> UIViewController?
+    func factorySelectedController() -> UIViewController?
     {
         guard
             
@@ -47,7 +47,7 @@ extension ControllerParent
         
         guard
             
-            let controller:UIViewController = selectedController()
+            let controller:UIViewController = factorySelectedController()
         
         else
         {
