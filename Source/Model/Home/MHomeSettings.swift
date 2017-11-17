@@ -4,8 +4,7 @@ extension MHome
 {
     //MARK: private
     
-    private func loadSettings(
-        database:Database)
+    private func loadSettings(database:Database)
     {
         database.fetch
         { [weak self] (settingsList:[DSettings]) in
@@ -16,19 +15,16 @@ extension MHome
             
             else
             {
-                self?.createSettings(
-                    database:database)
+                self?.createSettings(database:database)
                 
                 return
             }
             
-            self?.settingsLoaded(
-                settings:settings)
+            self?.settingsLoaded(settings:settings)
         }
     }
     
-    private func createSettings(
-        database:Database)
+    private func createSettings(database:Database)
     {
         database.create
         { [weak self] (settings:DSettings) in
@@ -46,8 +42,7 @@ extension MHome
         database.save
         { [weak self] in
             
-            self?.settingsLoaded(
-                settings:settings)
+            self?.settingsLoaded(settings:settings)
         }
     }
     
@@ -57,8 +52,7 @@ extension MHome
     {
         guard
         
-            let database:Database = Database(
-                bundle:nil)
+            let database:Database = Database(bundle:nil)
         
         else
         {
@@ -66,7 +60,6 @@ extension MHome
         }
         
         self.database = database
-        
         loadSettings(database:database)
     }
 }
