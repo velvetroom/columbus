@@ -36,4 +36,16 @@ extension MMenu
         
         return items
     }
+    
+    class func factoryItemsMap(items:[MMenuItemProtocol]) -> [MMenuOrder:MMenuItemProtocol]
+    {
+        var map:[MMenuOrder:MMenuItemProtocol] = [:]
+        
+        for item:MMenuItemProtocol in items
+        {
+            
+        }
+        
+        return map
+    }
 }
