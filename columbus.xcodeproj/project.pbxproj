@@ -108,7 +108,7 @@
 		DA2EE56F1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE56E1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift */; };
 		DA2EE5711F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5701F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift */; };
 		DA2EE5731F98B46C00488A07 /* VCreateUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5721F98B46C00488A07 /* VCreateUpdate.swift */; };
-		DA2EE5771F98C53800488A07 /* CCreateMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5761F98C53800488A07 /* CCreateMap.swift */; };
+		DA2EE5771F98C53800488A07 /* CCreate+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2EE5761F98C53800488A07 /* CCreate+Map.swift */; };
 		DA2F104A1FAA233D0078F4F8 /* MSettingsDistanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F10491FAA233D0078F4F8 /* MSettingsDistanceFactory.swift */; };
 		DA2F104C1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F104B1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift */; };
 		DA2F47EE1FA129AA003625D6 /* MCreatePlanStopUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F47ED1FA129AA003625D6 /* MCreatePlanStopUpdate.swift */; };
@@ -557,7 +557,7 @@
 		DA2EE56E1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapStatusContractedFactory.swift; sourceTree = "<group>"; };
 		DA2EE5701F98B26600488A07 /* MCreateMapMenuProtocolDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuProtocolDefault.swift; sourceTree = "<group>"; };
 		DA2EE5721F98B46C00488A07 /* VCreateUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateUpdate.swift; sourceTree = "<group>"; };
-		DA2EE5761F98C53800488A07 /* CCreateMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCreateMap.swift; sourceTree = "<group>"; };
+		DA2EE5761F98C53800488A07 /* CCreate+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CCreate+Map.swift"; sourceTree = "<group>"; };
 		DA2F10491FAA233D0078F4F8 /* MSettingsDistanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceFactory.swift; sourceTree = "<group>"; };
 		DA2F104B1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceKilometres.swift; sourceTree = "<group>"; };
 		DA2F47ED1FA129AA003625D6 /* MCreatePlanStopUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanStopUpdate.swift; sourceTree = "<group>"; };
@@ -1506,7 +1506,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB2F8EC1F96689B00C1EF4A /* CCreate.swift */,
-				DA2EE5761F98C53800488A07 /* CCreateMap.swift */,
+				DA2EE5761F98C53800488A07 /* CCreate+Map.swift */,
 				DA5B093E1FA35EF00055E8F3 /* CCreateSave.swift */,
 				DA96A2911FAE771E00109455 /* CCreateTravel.swift */,
 				DA26F1811FB7BD23007F171D /* CCreateSearch.swift */,
@@ -2076,7 +2076,7 @@
 				DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */,
 				DAE699961FA295C400FFE6E3 /* VCreateStatusReadyBarTravelHeader.swift in Sources */,
 				DADA41FA1F9670C200DD1FC4 /* MMenuItemSettings.swift in Sources */,
-				DA2EE5771F98C53800488A07 /* CCreateMap.swift in Sources */,
+				DA2EE5771F98C53800488A07 /* CCreate+Map.swift in Sources */,
 				DAE699901FA2880A00FFE6E3 /* VCreateStatusReadyBarStopsConfig.swift in Sources */,
 				DA65ECF71F95E68700720673 /* MMenu.swift in Sources */,
 				DA65ECE51F95E68700720673 /* ExtensionData.swift in Sources */,
