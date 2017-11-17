@@ -7,10 +7,10 @@ extension MPlans
     private func factorySorters() -> [NSSortDescriptor]
     {
         let sorter:NSSortDescriptor = NSSortDescriptor(
-            key:kSortersKey,
+            key:MPlans.Constants.sortersKey,
             ascending:false)
-        let sorters:[NSSortDescriptor] = [
-            sorter]
+        
+        let sorters:[NSSortDescriptor] = [sorter]
         
         return sorters
     }
@@ -40,13 +40,11 @@ extension MPlans
                 return
             }
             
-            self?.settingsLoaded(
-                settings:settings)
+            self?.settingsLoaded(settings:settings)
         }
     }
     
-    private func settingsLoaded(
-        settings:DSettings)
+    private func settingsLoaded(settings:DSettings)
     {
         self.settings = settings
         let sorters:[NSSortDescriptor] = factorySorters()
@@ -54,13 +52,11 @@ extension MPlans
         database?.fetch(sorters:sorters)
         { [weak self] (plans:[DPlan]) in
             
-            self?.plansLoaded(
-                plans:plans)
+            self?.plansLoaded(plans:plans)
         }
     }
     
-    private func plansLoaded(
-        plans:[DPlan])
+    private func plansLoaded(plans:[DPlan])
     {
         self.plans = plans
         view?.plansLoaded()
@@ -70,8 +66,7 @@ extension MPlans
     
     func load()
     {
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.asyncLoad()

@@ -31,6 +31,7 @@ extension MPlans
         plan:DPlan?)
     {
         settings.activePlan = plan
+        
         database?.save
         { [weak self] in
             
