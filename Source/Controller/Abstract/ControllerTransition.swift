@@ -1,18 +1,18 @@
 import UIKit
 
-struct ControllerTransition
+enum ControllerTransition
 {
-    struct Vertical
+    enum Vertical:CGFloat
     {
-        static let top:CGFloat = -1
-        static let bottom:CGFloat = 1
-        static let none:CGFloat = 0
+        case top = -1
+        case bottom = 1
+        case none = 0
     }
     
-    struct Horizontal
+    enum Horizontal:CGFloat
     {
-        static let left:CGFloat = -1
-        static let right:CGFloat = 1
-        static let none:CGFloat = 0
+        case left = -1
+        case right = 1
+        case none = 0
     }
 }
