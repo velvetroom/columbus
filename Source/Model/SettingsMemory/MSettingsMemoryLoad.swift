@@ -16,7 +16,7 @@ extension MSettingsMemory
     {
         let projects:MSettingsMemoryProjects = MSettingsMemoryProjects()
         let appDirectory:String = FileManager.default.appDirectory.path
-        let paths:[String] = FileManager.default.contentsAt(path:appDirectory)
+        /*let paths:[String] = FileManager.default.contentsAt(path:appDirectory)
         
         for path:String in paths
         {
@@ -35,7 +35,7 @@ extension MSettingsMemory
                 size:size)
             
             projects.add(project:project)
-        }
+        }*/
         
         return projects
     }

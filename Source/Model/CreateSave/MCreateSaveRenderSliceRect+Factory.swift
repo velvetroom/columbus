@@ -17,18 +17,18 @@ extension MCreateSaveRenderSliceRect
             var tileX:Double = tileRange.minX
             var deltaY:Double = maxY - tileY
             
-            if deltaY > kMaxSize
+            if deltaY > MCreateSave.Constants.Slice.maxSize
             {
-                deltaY = kMaxSize
+                deltaY = MCreateSave.Constants.Slice.maxSize
             }
             
             while tileX < maxX
             {
                 var deltaX:Double = maxX - tileX
                 
-                if deltaX > kMaxSize
+                if deltaX > MCreateSave.Constants.Slice.maxSize
                 {
-                    deltaX = kMaxSize
+                    deltaX = MCreateSave.Constants.Slice.maxSize
                 }
                 
                 let rect:MCreateSaveRenderSliceRect = MCreateSaveRenderSliceRect(

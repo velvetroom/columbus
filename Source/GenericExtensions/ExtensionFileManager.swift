@@ -28,13 +28,13 @@ extension FileManager
     private func sizeOfItems(path:String) -> UInt64
     {
         var size:UInt64 = 0
-        let contents:[String] = contentsAt(path:path)
+        /*let contents:[String] = contentsAt(path:path)
         
         for path:String in contents
         {
             let itemSize:UInt64 = sizeAt(path:path)
             size += itemSize
-        }
+        }*/
         
         return size
     }
@@ -148,7 +148,7 @@ extension FileManager
     func urlsInDirectory(url:URL) -> [URL]
     {
         let contents:[String]
-        var urls:[URL]
+        var urls:[URL] = []
         
         do
         {
