@@ -2,28 +2,21 @@ import UIKit
 
 final class VSettingsMemoryBar:View<ArchSettingsMemory>
 {
-    private let kContentTop:CGFloat = 20
-    private let kBackWidth:CGFloat = 50
-    private let kBorderHeight:CGFloat = 1
-    private let kFontSize:CGFloat = 14
-    
     required init(controller:CSettingsMemory)
     {
         super.init(controller:controller)
         backgroundColor = UIColor.white
         
-        let border:VBorder = VBorder(
-            colour:UIColor(white:0, alpha:0.2))
+        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.2))
         
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.medium(size:kFontSize)
+        labelTitle.font = UIFont.medium(size:VSettingsMemory.Constants.Bar.fontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
-        labelTitle.text = String.localizedView(
-            key:"VSettingsMemoryBar_labelTitle")
+        labelTitle.text = String.localizedView(key:"VSettingsMemoryBar_labelTitle")
         
         let backButton:UIButton = UIButton()
         backButton.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +42,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:VSettingsMemory.Constants.Bar.borderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
@@ -57,7 +50,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         NSLayoutConstraint.topToTop(
             view:labelTitle,
             toView:self,
-            constant:kContentTop)
+            constant:VSettingsMemory.Constants.Bar.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)
@@ -68,7 +61,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         NSLayoutConstraint.topToTop(
             view:backButton,
             toView:self,
-            constant:kContentTop)
+            constant:VSettingsMemory.Constants.Bar.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:backButton,
             toView:self)
@@ -77,7 +70,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
             toView:self)
         NSLayoutConstraint.width(
             view:backButton,
-            constant:kBackWidth)
+            constant:VSettingsMemory.Constants.Bar.backWidth)
     }
     
     required init?(coder:NSCoder)

@@ -6,8 +6,7 @@ extension VSettingsMemory
     
     func factoryViews(controller:CSettingsMemory)
     {
-        let viewBar:VSettingsMemoryBar = VSettingsMemoryBar(
-            controller:controller)
+        let viewBar:VSettingsMemoryBar = VSettingsMemoryBar(controller:controller)
         
         addSubview(viewBar)
         
@@ -16,7 +15,7 @@ extension VSettingsMemory
             toView:self)
         NSLayoutConstraint.height(
             view:viewBar,
-            constant:kBarHeight)
+            constant:VSettingsMemory.Constants.Main.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)

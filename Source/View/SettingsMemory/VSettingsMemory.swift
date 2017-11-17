@@ -2,8 +2,6 @@ import UIKit
 
 final class VSettingsMemory:ViewMain
 {
-    let kBarHeight:CGFloat = 64
-    
     override var panBack:Bool
     {
         get
