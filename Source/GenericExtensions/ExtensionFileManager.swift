@@ -161,7 +161,7 @@ extension FileManager
         
         for path:String in contents
         {
-            let url:URL url.appendingPathComponent(path)
+            let url:URL = url.appendingPathComponent(path)
             urls.append(url)
         }
         
