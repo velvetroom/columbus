@@ -289,6 +289,7 @@
 		DA7D95971FA7642500A620FB /* VHomeReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D95961FA7642500A620FB /* VHomeReady.swift */; };
 		DA7D95991FA769AE00A620FB /* VHomeReadyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D95981FA769AE00A620FB /* VHomeReadyMap.swift */; };
 		DA7D959F1FA76DCA00A620FB /* VMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7D959E1FA76DCA00A620FB /* VMap.swift */; };
+		DA82E7661FBE9CF400AC6195 /* ControllerParentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82E7651FBE9CF400AC6195 /* ControllerParentTransition.swift */; };
 		DA8DF8CF1FA94CD200276867 /* VPlansListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8CE1FA94CD200276867 /* VPlansListActions.swift */; };
 		DA8DF8D11FA955EB00276867 /* VPlansListCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8D01FA955EB00276867 /* VPlansListCellFactory.swift */; };
 		DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8DF8D21FA9579E00276867 /* plans.xcassets */; };
@@ -739,6 +740,7 @@
 		DA7D95961FA7642500A620FB /* VHomeReady.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeReady.swift; sourceTree = "<group>"; };
 		DA7D95981FA769AE00A620FB /* VHomeReadyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VHomeReadyMap.swift; sourceTree = "<group>"; };
 		DA7D959E1FA76DCA00A620FB /* VMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMap.swift; sourceTree = "<group>"; };
+		DA82E7651FBE9CF400AC6195 /* ControllerParentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerParentTransition.swift; sourceTree = "<group>"; };
 		DA8DF8CE1FA94CD200276867 /* VPlansListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListActions.swift; sourceTree = "<group>"; };
 		DA8DF8D01FA955EB00276867 /* VPlansListCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellFactory.swift; sourceTree = "<group>"; };
 		DA8DF8D21FA9579E00276867 /* plans.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = plans.xcassets; sourceTree = "<group>"; };
@@ -1222,10 +1224,11 @@
 			children = (
 				DA65EC771F95E68600720673 /* Controller.swift */,
 				DA65EC781F95E68600720673 /* AppDelegate.swift */,
-				DA65EC791F95E68600720673 /* ControllerParent+Transitions.swift */,
 				DA65EC7A1F95E68600720673 /* ControllerParent.swift */,
+				DA65EC791F95E68600720673 /* ControllerParent+Transitions.swift */,
 				DA65EC7B1F95E68600720673 /* ControllerParent+Orientation.swift */,
 				DA65EC7C1F95E68600720673 /* ControllerParent+Menu.swift */,
+				DA82E7651FBE9CF400AC6195 /* ControllerParentTransition.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1956,6 +1959,7 @@
 				DAA9255E1FA542E900B72DB2 /* MCreateSavePixelRange+Factory.swift in Sources */,
 				DA26F1881FB7BFB6007F171D /* VCreateSearch.swift in Sources */,
 				DAD76D421FAFCCD9000DA8CC /* VStoreStatusReadyListCellNew.swift in Sources */,
+				DA82E7661FBE9CF400AC6195 /* ControllerParentTransition.swift in Sources */,
 				DA4E5B011F97D96300B7BE3E /* VCreateStatusReadyMapMenuCell.swift in Sources */,
 				DA1906C21FAFC369008147EA /* VStoreStatusReady.swift in Sources */,
 				DA65ECDB1F95E68700720673 /* DatabaseFactory.swift in Sources */,
