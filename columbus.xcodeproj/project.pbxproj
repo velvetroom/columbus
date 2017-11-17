@@ -209,10 +209,10 @@
 		DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC741F95E68600720673 /* ExtensionURL.swift */; };
 		DA65ECEA1F95E68700720673 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC771F95E68600720673 /* Controller.swift */; };
 		DA65ECEB1F95E68700720673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC781F95E68600720673 /* AppDelegate.swift */; };
-		DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC791F95E68600720673 /* ControllerParentTransitions.swift */; };
+		DA65ECEC1F95E68700720673 /* ControllerParent+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC791F95E68600720673 /* ControllerParent+Transitions.swift */; };
 		DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC7A1F95E68600720673 /* ControllerParent.swift */; };
-		DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC7B1F95E68600720673 /* ControllerParentOrientation.swift */; };
-		DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC7C1F95E68600720673 /* ControllerParentMenu.swift */; };
+		DA65ECEE1F95E68700720673 /* ControllerParent+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC7B1F95E68600720673 /* ControllerParent+Orientation.swift */; };
+		DA65ECEF1F95E68700720673 /* ControllerParent+Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC7C1F95E68600720673 /* ControllerParent+Menu.swift */; };
 		DA65ECF01F95E68700720673 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC7E1F95E68600720673 /* CHome.swift */; };
 		DA65ECF11F95E68700720673 /* Arch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC801F95E68600720673 /* Arch.swift */; };
 		DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC811F95E68600720673 /* ArchHome.swift */; };
@@ -658,10 +658,10 @@
 		DA65EC741F95E68600720673 /* ExtensionURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionURL.swift; sourceTree = "<group>"; };
 		DA65EC771F95E68600720673 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		DA65EC781F95E68600720673 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA65EC791F95E68600720673 /* ControllerParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentTransitions.swift; sourceTree = "<group>"; };
+		DA65EC791F95E68600720673 /* ControllerParent+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Transitions.swift"; sourceTree = "<group>"; };
 		DA65EC7A1F95E68600720673 /* ControllerParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParent.swift; sourceTree = "<group>"; };
-		DA65EC7B1F95E68600720673 /* ControllerParentOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentOrientation.swift; sourceTree = "<group>"; };
-		DA65EC7C1F95E68600720673 /* ControllerParentMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerParentMenu.swift; sourceTree = "<group>"; };
+		DA65EC7B1F95E68600720673 /* ControllerParent+Orientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Orientation.swift"; sourceTree = "<group>"; };
+		DA65EC7C1F95E68600720673 /* ControllerParent+Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Menu.swift"; sourceTree = "<group>"; };
 		DA65EC7E1F95E68600720673 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DA65EC801F95E68600720673 /* Arch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arch.swift; sourceTree = "<group>"; };
 		DA65EC811F95E68600720673 /* ArchHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchHome.swift; sourceTree = "<group>"; };
@@ -1222,10 +1222,10 @@
 			children = (
 				DA65EC771F95E68600720673 /* Controller.swift */,
 				DA65EC781F95E68600720673 /* AppDelegate.swift */,
-				DA65EC791F95E68600720673 /* ControllerParentTransitions.swift */,
+				DA65EC791F95E68600720673 /* ControllerParent+Transitions.swift */,
 				DA65EC7A1F95E68600720673 /* ControllerParent.swift */,
-				DA65EC7B1F95E68600720673 /* ControllerParentOrientation.swift */,
-				DA65EC7C1F95E68600720673 /* ControllerParentMenu.swift */,
+				DA65EC7B1F95E68600720673 /* ControllerParent+Orientation.swift */,
+				DA65EC7C1F95E68600720673 /* ControllerParent+Menu.swift */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -1983,7 +1983,7 @@
 				DA65ECE11F95E68700720673 /* ExtensionFileManager.swift in Sources */,
 				DAE486161FBA39D8006A3B8B /* MCreateSaveStatusProtocol.swift in Sources */,
 				DA5DA3271FBD2FBB0047FED4 /* MSettingsMemoryLoad.swift in Sources */,
-				DA65ECEC1F95E68700720673 /* ControllerParentTransitions.swift in Sources */,
+				DA65ECEC1F95E68700720673 /* ControllerParent+Transitions.swift in Sources */,
 				DA2219591FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift in Sources */,
 				DAAFA9961F9B61870097E0E0 /* VCreateStatusReadyBarLoader.swift in Sources */,
 				DA1906C41FAFC6DC008147EA /* MStoreKitPurchases.swift in Sources */,
@@ -2029,7 +2029,7 @@
 				DA1906DC1FAFCBAB008147EA /* MStorePerkStatusDeferred.swift in Sources */,
 				DA740F931F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift in Sources */,
 				DABED9B41F9E99B000635E82 /* VSettingsList.swift in Sources */,
-				DA65ECEF1F95E68700720673 /* ControllerParentMenu.swift in Sources */,
+				DA65ECEF1F95E68700720673 /* ControllerParent+Menu.swift in Sources */,
 				DADA41F61F96707000DD1FC4 /* MMenuItemCreate.swift in Sources */,
 				DA65ECF31F95E68700720673 /* Model.swift in Sources */,
 				DA65ECDE1F95E68700720673 /* ExtensionNotification.swift in Sources */,
@@ -2215,7 +2215,7 @@
 				DAA0B8031FA2A51C009BFFB8 /* VCreateStatusReadyBarStopsFooter.swift in Sources */,
 				DA4861851FAA3D2300FFBAB8 /* MSettingsDetailLevelProtocol.swift in Sources */,
 				DA5259FC1F9F7120004F8503 /* VSettingsListConfig.swift in Sources */,
-				DA65ECEE1F95E68700720673 /* ControllerParentOrientation.swift in Sources */,
+				DA65ECEE1F95E68700720673 /* ControllerParent+Orientation.swift in Sources */,
 				DABDE8831FAA042100E24BBE /* VSettingsListCellDistance.swift in Sources */,
 				DA13F65C1F9A174D00DF92F5 /* MCreatePlanStop.swift in Sources */,
 				DA2780161FA8E18000489D0E /* MCreateSavePicture.swift in Sources */,
