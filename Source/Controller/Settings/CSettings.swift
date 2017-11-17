@@ -6,8 +6,7 @@ final class CSettings:Controller<ArchSettings>
     {
         super.viewDidLoad()
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.model.loadSettings()
@@ -26,6 +25,6 @@ final class CSettings:Controller<ArchSettings>
         
         parentController?.push(
             controller:controller,
-            horizontal:ControllerParent.Horizontal.right)
+            horizontal:ControllerTransition.Horizontal.right)
     }
 }

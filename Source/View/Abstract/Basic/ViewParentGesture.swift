@@ -25,8 +25,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         
         guard
         
-            let router:Router = ViewParent.kRouterMap[
-                panGesture.state]
+            let router:Router = ViewParent.kRouterMap[panGesture.state]
         
         else
         {
@@ -106,8 +105,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         self.panningX = nil
     }
     
-    private func gesturePanTo(
-        deltaX:CGFloat)
+    private func gesturePanTo(deltaX:CGFloat)
     {
         var useDeltaX:CGFloat = deltaX
         
@@ -131,7 +129,7 @@ extension ViewParent:UIGestureRecognizerDelegate
     private func gesturePop()
     {
         panRecognizer.isEnabled = true
-        controller.pop(horizontal:ControllerParent.Horizontal.right)
+        controller.pop(horizontal:ControllerTransition.Horizontal.right)
     }
     
     private func gestureRestore()
@@ -162,6 +160,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         let panRecognizer:UIPanGestureRecognizer = UIPanGestureRecognizer(
             target:self,
             action:#selector(selectorPanRecognized(sender:)))
+        
         panRecognizer.delegate = self
         self.panRecognizer = panRecognizer
         
@@ -170,8 +169,7 @@ extension ViewParent:UIGestureRecognizerDelegate
     
     //MARK: gestureRecognizerDelegate
     
-    override func gestureRecognizerShouldBegin(
-        _ gestureRecognizer:UIGestureRecognizer) -> Bool
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer:UIGestureRecognizer) -> Bool
     {
         guard
             

@@ -27,6 +27,6 @@ final class CSettingsMemory:Controller<ArchSettingsMemory>
     
     func back()
     {
-        parentController?.pop(horizontal:ControllerParent.Horizontal.right)
+        parentController?.pop(horizontal:ControllerTransition.Horizontal.right)
     }
 }

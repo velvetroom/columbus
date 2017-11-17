@@ -57,13 +57,13 @@ final class CCreate:Controller<ArchCreate>
             database:database,
             plan:plan,
             settings:settings)
+        
         parentController?.push(
             controller:controller,
-            vertical:ControllerParent.Vertical.bottom)
+            vertical:ControllerTransition.Vertical.bottom)
     }
     
-    func editTravel(
-        travel:DPlanTravel)
+    func editTravel(travel:DPlanTravel)
     {
         let controller:CCreateTravel = CCreateTravel(
             controller:self,
@@ -75,8 +75,7 @@ final class CCreate:Controller<ArchCreate>
     func travelEdited(
         travel:DPlanTravel)
     {
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.model.plan?.update(travel:travel)
@@ -85,8 +84,7 @@ final class CCreate:Controller<ArchCreate>
     
     func showSearch()
     {
-        let controller:CCreateSearch = CCreateSearch(
-            controller:self)
+        let controller:CCreateSearch = CCreateSearch(controller:self)
         
         parentController?.animateOver(controller:controller)
     }
