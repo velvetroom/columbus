@@ -12,9 +12,9 @@ extension MCreateSavePicture
         
         var name:String = String()
         name.append(x)
-        name.append(MCreateSavePicture.kDot)
+        name.append(".")
         name.append(y)
-        name.append(MCreateSavePicture.kDot)
+        name.append(".")
         name.append(z)
         
         return name

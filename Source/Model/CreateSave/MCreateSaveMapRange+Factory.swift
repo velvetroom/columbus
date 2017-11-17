@@ -52,7 +52,7 @@ extension MCreateSaveMapRange
     {
         let pixelZoom:Double = factoryPixelZoom(
             zoom:zoom)
-        let pixelTranslated:Double = pixelZoom / MCreateSave.kAppleToGoogleMaps
+        let pixelTranslated:Double = pixelZoom / MCreateSave.Constants.Map.appleToGoogle
         
         let minX:Double = self.minX * pixelTranslated
         let maxX:Double = self.maxX * pixelTranslated

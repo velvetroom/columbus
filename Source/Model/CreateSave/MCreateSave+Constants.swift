@@ -11,9 +11,9 @@ extension MCreateSave
             static let scale:Double = 2
         }
         
-        struct Timers
+        struct TimeIntervals
         {
-            static let asyncWait:TimeInterval = 0.2
+            static let snapshotWait:TimeInterval = 0.2
         }
         
         struct Map
@@ -30,11 +30,6 @@ extension MCreateSave
         struct Slice
         {
             static let maxSize:Double = 10
-        }
-        
-        struct Strings
-        {
-            static let dot:String = "."
         }
     }
 }

@@ -93,7 +93,8 @@ extension MCreateSave
         zoom:Double,
         slice:MCreateSaveRenderSlice) -> [URL]
     {
-        let tileSize:Int = Int(kTileSize * kTileScale)
+        let tileSizeDouble:Double = MCreateSave.Constants.Tile.size * MCreateSave.Constants.Tile.scale
+        let tileSize:Int = Int(tileSizeDouble)
         let z:Int = Int(zoom)
         let originX:Int = Int(slice.rect.tileX)
         let originY:Int = Int(slice.rect.tileY)

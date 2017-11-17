@@ -31,7 +31,7 @@ extension MCreateSave
         builder?.timer?.invalidate()
         
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(
-            deadline:DispatchTime.now() + MCreateSave.kAsyncWait)
+            deadline:DispatchTime.now() + MCreateSave.Constants.TimeIntervals.snapshotWait)
         { [weak self] in
             
             self?.asyncFactorySnapshot(

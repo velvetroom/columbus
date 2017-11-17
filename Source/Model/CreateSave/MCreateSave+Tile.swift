@@ -11,7 +11,7 @@ extension MCreateSave
         let pixelRange:MCreateSavePixelRange = mapRange.factoryPixelRange(
             zoom:zoom)
         let tileRange:MCreateSaveTileRange = pixelRange.factoryTileRange(
-            tileSize:kTileSize)
+            tileSize:MCreateSave.Constants.Tile.size)
         let boundingTileRange:MCreateSaveTileRange = factoryBoundingTileRange(
             tileRange:tileRange)
         

@@ -7,7 +7,7 @@ extension MCreateSave
     private class func factoryBoundingMin(
         min:Double) -> Double
     {
-        var min:Double = min - kPaddingTile
+        var min:Double = min - MCreateSave.Constants.Tile.padding
         
         if min < 0
         {
@@ -20,7 +20,7 @@ extension MCreateSave
     private class func factoryBoundingMax(
         max:Double) -> Double
     {
-        let max:Double = max + kPaddingTile
+        let max:Double = max + MCreateSave.Constants.Tile.padding
         
         return max
     }

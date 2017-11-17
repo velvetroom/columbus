@@ -8,7 +8,7 @@ extension MCreateSavePixelRange
         tileSize:Double) -> Double
     {
         let sizeInMap:Double = pixelZoom / tileSize
-        let tileMapSize:Double = MCreateSave.kAppleToGoogleMaps / sizeInMap
+        let tileMapSize:Double = MCreateSave.Constants.Map.appleToGoogle / sizeInMap
         
         return tileMapSize
     }
