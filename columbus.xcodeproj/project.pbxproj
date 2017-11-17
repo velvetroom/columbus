@@ -267,7 +267,7 @@
 		DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */; };
 		DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */; };
 		DA7933351FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7933341FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift */; };
-		DA79505C1FAED8B10057F6EE /* MCreateTravelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */; };
+		DA79505C1FAED8B10057F6EE /* MCreateTravel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505B1FAED8B10057F6EE /* MCreateTravel+Factory.swift */; };
 		DA7950601FAEDAD30057F6EE /* VCreateTravelListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA79505F1FAEDAD30057F6EE /* VCreateTravelListFactory.swift */; };
 		DA7950621FAEDE900057F6EE /* VCreateTravelListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7950611FAEDE900057F6EE /* VCreateTravelListActions.swift */; };
 		DA7950641FAEE40F0057F6EE /* VCreateTravelListSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7950631FAEE40F0057F6EE /* VCreateTravelListSelector.swift */; };
@@ -718,7 +718,7 @@
 		DA78BB371F971B5400A7C280 /* MCreateLocationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationFactory.swift; sourceTree = "<group>"; };
 		DA78BB391F9728CC00A7C280 /* MCreateLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateLocationDelegate.swift; sourceTree = "<group>"; };
 		DA7933341FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveStatusBusyProgress.swift; sourceTree = "<group>"; };
-		DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelFactory.swift; sourceTree = "<group>"; };
+		DA79505B1FAED8B10057F6EE /* MCreateTravel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateTravel+Factory.swift"; sourceTree = "<group>"; };
 		DA79505F1FAEDAD30057F6EE /* VCreateTravelListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListFactory.swift; sourceTree = "<group>"; };
 		DA7950611FAEDE900057F6EE /* VCreateTravelListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListActions.swift; sourceTree = "<group>"; };
 		DA7950631FAEE40F0057F6EE /* VCreateTravelListSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListSelector.swift; sourceTree = "<group>"; };
@@ -1440,7 +1440,7 @@
 			isa = PBXGroup;
 			children = (
 				DA96A2941FAE779800109455 /* MCreateTravel.swift */,
-				DA79505B1FAED8B10057F6EE /* MCreateTravelFactory.swift */,
+				DA79505B1FAED8B10057F6EE /* MCreateTravel+Factory.swift */,
 				DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */,
 				DABF39291FAE826B0072B240 /* MCreateTravelWalking.swift */,
 				DABF392B1FAE82DB0072B240 /* MCreateTravelCycling.swift */,
@@ -1875,7 +1875,7 @@
 				DAE1848A1F9E9A6100D29126 /* VSettingsListCell.swift in Sources */,
 				DA1906B61FAFBA42008147EA /* VStoreStatusError.swift in Sources */,
 				DA4BDFD31FAC29C100EFC73E /* VCreateStatusReadyBarStopsHeader.swift in Sources */,
-				DA79505C1FAED8B10057F6EE /* MCreateTravelFactory.swift in Sources */,
+				DA79505C1FAED8B10057F6EE /* MCreateTravel+Factory.swift in Sources */,
 				DA4E5AFF1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift in Sources */,
 				DADA42061F96840800DD1FC4 /* VCreateStatusNeedsPermissionContinue.swift in Sources */,
 				DAB1FA6B1FAB9F64000D857C /* VHomeStandbyFactory.swift in Sources */,
