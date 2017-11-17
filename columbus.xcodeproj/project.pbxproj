@@ -137,6 +137,7 @@
 		DA4BC93B1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BC93A1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift */; };
 		DA4BDFD31FAC29C100EFC73E /* VCreateStatusReadyBarStopsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BDFD21FAC29C100EFC73E /* VCreateStatusReadyBarStopsHeader.swift */; };
 		DA4BDFD71FAC3E4800EFC73E /* DPlanTravelDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4BDFD61FAC3E4800EFC73E /* DPlanTravelDistance.swift */; };
+		DA4C1EFA1FBE869D002BF797 /* MCreateSaveBuilder+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C1EF91FBE869D002BF797 /* MCreateSaveBuilder+Constants.swift */; };
 		DA4C2F8C1FB1F58D006D123C /* MStorePurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C2F8B1FB1F58D006D123C /* MStorePurchase.swift */; };
 		DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */; };
 		DA4E5AFF1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */; };
@@ -584,6 +585,7 @@
 		DA4BC93A1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsCellFactory.swift; sourceTree = "<group>"; };
 		DA4BDFD21FAC29C100EFC73E /* VCreateStatusReadyBarStopsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarStopsHeader.swift; sourceTree = "<group>"; };
 		DA4BDFD61FAC3E4800EFC73E /* DPlanTravelDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravelDistance.swift; sourceTree = "<group>"; };
+		DA4C1EF91FBE869D002BF797 /* MCreateSaveBuilder+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSaveBuilder+Constants.swift"; sourceTree = "<group>"; };
 		DA4C2F8B1FB1F58D006D123C /* MStorePurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStorePurchase.swift; sourceTree = "<group>"; };
 		DA4E5AFC1F97C6FB00B7BE3E /* map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = map.xcassets; sourceTree = "<group>"; };
 		DA4E5AFE1F97D92400B7BE3E /* VCreateStatusReadyMapMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapMenu.swift; sourceTree = "<group>"; };
@@ -1044,20 +1046,21 @@
 				DAD387271FA3ECE00031B9F8 /* MCreateSave+Snapshot.swift */,
 				DAD387291FA3F0E90031B9F8 /* MCreateSave+SnapshotFactory.swift */,
 				DAD387251FA3ECAF0031B9F8 /* MCreateSave+MapFactory.swift */,
+				DA97DC7B1FA41760005A137F /* MCreateSave+Tile.swift */,
+				DA97DC7D1FA41776005A137F /* MCreateSave+TileFactory.swift */,
+				DACA5C9C1FA4323500B7BBC7 /* MCreateSave+File.swift */,
+				DA2780111FA8DCE700489D0E /* MCreateSave+Image.swift */,
 				DAE486151FBA39D8006A3B8B /* MCreateSaveStatusProtocol.swift */,
 				DAE486171FBA3A0B006A3B8B /* MCreateSaveStatusBusy.swift */,
 				DAE486191FBA3A64006A3B8B /* MCreateSaveStatusError.swift */,
 				DAE4861B1FBA4276006A3B8B /* MCreateSaveBuilder.swift */,
+				DA4C1EF91FBE869D002BF797 /* MCreateSaveBuilder+Constants.swift */,
 				DAD387211FA3E3B00031B9F8 /* MCreateSaveMapRange.swift */,
 				DAD387231FA3E7E40031B9F8 /* MCreateSaveMapRange+Factory.swift */,
 				DAA9255B1FA5426E00B72DB2 /* MCreateSavePixelRange.swift */,
 				DAA9255D1FA542E900B72DB2 /* MCreateSavePixelRange+Factory.swift */,
 				DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */,
 				DA95AB291FA5512200ACA0C3 /* MCreateSaveTileRange+Factory.swift */,
-				DA97DC7B1FA41760005A137F /* MCreateSave+Tile.swift */,
-				DA97DC7D1FA41776005A137F /* MCreateSave+TileFactory.swift */,
-				DACA5C9C1FA4323500B7BBC7 /* MCreateSave+File.swift */,
-				DA2780111FA8DCE700489D0E /* MCreateSave+Image.swift */,
 				DA2944DD1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift */,
 				DA97DC771FA4100A005A137F /* MCreateSaveZoomProtocol+Factory.swift */,
 				DA97DC791FA41398005A137F /* MCreateSaveZoomDefault.swift */,
@@ -2233,6 +2236,7 @@
 				DA65ECED1F95E68700720673 /* ControllerParent.swift in Sources */,
 				DA2EE56F1F98AEBF00488A07 /* MCreateMapStatusContractedFactory.swift in Sources */,
 				DA78BB381F971B5400A7C280 /* MCreateLocationFactory.swift in Sources */,
+				DA4C1EFA1FBE869D002BF797 /* MCreateSaveBuilder+Constants.swift in Sources */,
 				DAE184961F9EA4F100D29126 /* MHomeSettings.swift in Sources */,
 				DA95AB2A1FA5512200ACA0C3 /* MCreateSaveTileRange+Factory.swift in Sources */,
 				DA0448091F9756D700BA2D45 /* VCreateStatusReadyBar.swift in Sources */,
