@@ -4,8 +4,7 @@ extension MHome
 {
     //MARK: private
     
-    private func configureSettings(
-        settings:DSettings)
+    private func configureSettings(settings:DSettings)
     {
         guard
             
@@ -27,13 +26,11 @@ extension MHome
         changeStatus(statusType:statusType)
     }
     
-    private func configurePlan(
-        plan:DPlan)
+    private func configurePlan(plan:DPlan)
     {
         guard
             
-            let tileTemplate:String = MHome.factoryTileTemplate(
-                plan:plan)
+            let tileTemplate:String = MHome.factoryTileTemplate(plan:plan)
         
         else
         {
@@ -47,8 +44,7 @@ extension MHome
         configurePlan(plan:modelPlan)
     }
     
-    private func configurePlan(
-        plan:MHomePlan)
+    private func configurePlan(plan:MHomePlan)
     {
         self.plan = plan
         
@@ -63,8 +59,7 @@ extension MHome
         }
     }
     
-    private func addNavigation(
-        plan:MHomePlan)
+    private func addNavigation(plan:MHomePlan)
     {
         guard
         
@@ -94,8 +89,7 @@ extension MHome
     
     //MARK: internal
     
-    func settingsLoaded(
-        settings:DSettings)
+    func settingsLoaded(settings:DSettings)
     {
         self.settings = settings
         configureSettings(settings:settings)
