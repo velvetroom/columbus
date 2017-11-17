@@ -26,8 +26,7 @@ final class MCreate:Model<ArchCreate>
     
     //MARK: internal
     
-    func changeStatus(
-        statusType:MCreateStatusProtocol.Type)
+    func changeStatus(statusType:MCreateStatusProtocol.Type)
     {
         let status:MCreateStatusProtocol = statusType.init()
         self.status = status
@@ -35,8 +34,7 @@ final class MCreate:Model<ArchCreate>
         view?.updateStatus()
     }
     
-    func changeMapStatus(
-        statusType:MCreateMapStatusProtocol.Type)
+    func changeMapStatus(statusType:MCreateMapStatusProtocol.Type)
     {
         let mapStatus:MCreateMapStatusProtocol = statusType.init()
         self.mapStatus = mapStatus
@@ -45,8 +43,7 @@ final class MCreate:Model<ArchCreate>
             barTop:mapStatus.barTop)
     }
     
-    func changeLocationStrategy(
-        locationStrategyType:MCreateLocationStrategyProtocol.Type)
+    func changeLocationStrategy(locationStrategyType:MCreateLocationStrategyProtocol.Type)
     {
         let locationStrategy:MCreateLocationStrategyProtocol = locationStrategyType.init()
         self.locationStrategy = locationStrategy
