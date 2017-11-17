@@ -112,6 +112,7 @@
 		DA2F104A1FAA233D0078F4F8 /* MSettingsDistanceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F10491FAA233D0078F4F8 /* MSettingsDistanceFactory.swift */; };
 		DA2F104C1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F104B1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift */; };
 		DA2F47EE1FA129AA003625D6 /* MCreatePlanStopUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F47ED1FA129AA003625D6 /* MCreatePlanStopUpdate.swift */; };
+		DA3013651FBEAF7F00D5DFA5 /* MHome+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3013641FBEAF7F00D5DFA5 /* MHome+Constants.swift */; };
 		DA3225F01FB89D8000924A4D /* VCreateSearchBaseBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3225EF1FB89D8000924A4D /* VCreateSearchBaseBar.swift */; };
 		DA3225F21FB89FF500924A4D /* VCreateSearchBaseBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3225F11FB89FF500924A4D /* VCreateSearchBaseBarFactory.swift */; };
 		DA3225FA1FB8AEF500924A4D /* MCreateSearchCompleter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3225F91FB8AEF500924A4D /* MCreateSearchCompleter.swift */; };
@@ -562,6 +563,7 @@
 		DA2F10491FAA233D0078F4F8 /* MSettingsDistanceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceFactory.swift; sourceTree = "<group>"; };
 		DA2F104B1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsDistanceKilometres.swift; sourceTree = "<group>"; };
 		DA2F47ED1FA129AA003625D6 /* MCreatePlanStopUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreatePlanStopUpdate.swift; sourceTree = "<group>"; };
+		DA3013641FBEAF7F00D5DFA5 /* MHome+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MHome+Constants.swift"; sourceTree = "<group>"; };
 		DA3225EF1FB89D8000924A4D /* VCreateSearchBaseBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseBar.swift; sourceTree = "<group>"; };
 		DA3225F11FB89FF500924A4D /* VCreateSearchBaseBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSearchBaseBarFactory.swift; sourceTree = "<group>"; };
 		DA3225F91FB8AEF500924A4D /* MCreateSearchCompleter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSearchCompleter.swift; sourceTree = "<group>"; };
@@ -1291,6 +1293,7 @@
 			isa = PBXGroup;
 			children = (
 				DA65EC861F95E68700720673 /* MHome.swift */,
+				DA3013641FBEAF7F00D5DFA5 /* MHome+Constants.swift */,
 				DA750CA91FA78A7300459985 /* MHomeFactory.swift */,
 				DAE184951F9EA4F100D29126 /* MHomeSettings.swift */,
 				DA750CAD1FA78B6700459985 /* MHomeConfig.swift */,
@@ -1975,6 +1978,7 @@
 				DAA5B4891F99369E00F9121C /* DPlan.swift in Sources */,
 				DA740F911F9EAC6C00C8B116 /* MSettingsTravelMode.swift in Sources */,
 				DAD387221FA3E3B00031B9F8 /* MCreateSaveMapRange.swift in Sources */,
+				DA3013651FBEAF7F00D5DFA5 /* MHome+Constants.swift in Sources */,
 				DA2F104C1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift in Sources */,
 				DA63C0E71FB899E2007D01A7 /* VCreateSearchBaseListCell.swift in Sources */,
 				DABF39301FAE86650072B240 /* MCreateTravelTransit.swift in Sources */,

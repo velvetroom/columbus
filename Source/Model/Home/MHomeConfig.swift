@@ -55,8 +55,8 @@ extension MHome
         let statusType:MHomeStatusReady.Type = MHomeStatusReady.self
         changeStatus(statusType:statusType)
         
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kWaitAddNavigation)
+        let deadline:DispatchTime = DispatchTime.now() + MHome.Constants.waitAddNavigation
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak self] in
             
             self?.addNavigation(plan:plan)

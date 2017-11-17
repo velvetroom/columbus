@@ -6,7 +6,6 @@ final class MHome:Model<ArchHome>
     var settings:DSettings?
     var plan:MHomePlan?
     let info:[MHomeInfoProtocol]
-    let kWaitAddNavigation:TimeInterval = 1
     private(set) var status:MHomeStatusProtocol?
     
     required init()
