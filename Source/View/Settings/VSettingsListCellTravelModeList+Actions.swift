@@ -29,11 +29,9 @@ extension VSettingsListCellTravelModeList
     
     //MARK: internal
     
-    func modelAtIndex(
-        index:IndexPath) -> MSettingsTravelModeProtocol
+    func modelAtIndex(index:IndexPath) -> MSettingsTravelModeProtocol
     {
-        let item:MSettingsTravelModeProtocol = model!.items[
-            index.item]
+        let item:MSettingsTravelModeProtocol = model!.items[index.item]
         
         return item
     }
@@ -47,22 +45,20 @@ extension VSettingsListCellTravelModeList
     
     func selectCurrent()
     {
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kWaitToSelect)
+        let deadline:DispatchTime = DispatchTime.now() + VSettingsListCellTravelModeList.Constants.waitToSelect
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak self] in
             
             self?.asyncSelectCurrent()
         }
     }
     
-    func updateSelector(
-        animationDuration:TimeInterval)
+    func updateSelector(animationDuration:TimeInterval)
     {
         guard
         
             let selected:IndexPath = collectionView.indexPathsForSelectedItems?.first,
-            let cell:UICollectionViewCell = collectionView.cellForItem(
-                at:selected)
+            let cell:UICollectionViewCell = collectionView.cellForItem(at:selected)
             
         else
         {
