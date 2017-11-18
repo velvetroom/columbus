@@ -6,11 +6,9 @@ extension VSettings
     
     func factoryViews(controller:CSettings)
     {
-        let viewBar:VSettingsBar = VSettingsBar(
-            controller:controller)
+        let viewBar:VSettingsBar = VSettingsBar(controller:controller)
         
-        let viewList:VSettingsList = VSettingsList(
-            controller:controller)
+        let viewList:VSettingsList = VSettingsList(controller:controller)
         self.viewList = viewList
         
         addSubview(viewList)
@@ -21,7 +19,7 @@ extension VSettings
             toView:self)
         NSLayoutConstraint.height(
             view:viewBar,
-            constant:kBarHeight)
+            constant:ViewMain.Constants.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)

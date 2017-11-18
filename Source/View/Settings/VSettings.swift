@@ -3,7 +3,6 @@ import UIKit
 final class VSettings:ViewMain
 {
     weak var viewList:VSettingsList!
-    let kBarHeight:CGFloat = 64
     
     required init(controller:UIViewController)
     {

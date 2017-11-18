@@ -9,23 +9,19 @@ extension VSettingsList
         backgroundColor = UIColor.colourBackgroundGray
         collectionView.alwaysBounceVertical = true
         
-        registerCell(
-            cell:VSettingsListCellTravelMode.self)
-        registerCell(
-            cell:VSettingsListCellDetailLevel.self)
-        registerCell(
-            cell:VSettingsListCellDistance.self)
-        registerCell(
-            cell:VSettingsListCellStorage.self)
+        registerCell(cell:VSettingsListCellTravelMode.self)
+        registerCell(cell:VSettingsListCellDetailLevel.self)
+        registerCell(cell:VSettingsListCellDistance.self)
+        registerCell(cell:VSettingsListCellStorage.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            flow.minimumInteritemSpacing = kInterItem
-            flow.minimumLineSpacing = kInterItem
+            flow.minimumInteritemSpacing = VSettingsList.Constants.interItem
+            flow.minimumLineSpacing = VSettingsList.Constants.interItem
             flow.sectionInset = UIEdgeInsets(
-                top:kInsetsTop,
+                top:ViewMain.Constants.barHeight,
                 left:0,
-                bottom:kCollectionBottom,
+                bottom:ViewMain.Constants.menuHeight,
                 right:0)
         }
     }
