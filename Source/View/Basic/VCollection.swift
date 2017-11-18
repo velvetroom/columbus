@@ -8,7 +8,6 @@ class VCollection<A, Cell:UICollectionViewCell>:
     where A.C:Controller<A>
 {
     private(set) weak var collectionView:UICollectionView!
-    private let kDeselectTime:TimeInterval = 0.3
     
     required init(controller:A.C)
     {
@@ -49,16 +48,14 @@ class VCollection<A, Cell:UICollectionViewCell>:
     
     //MARK: internal
     
-    final func registerCell(
-        cell:Cell.Type)
+    final func registerCell(cell:Cell.Type)
     {
         collectionView.register(
             cell,
             forCellWithReuseIdentifier:cell.reusableIdentifier)
     }
     
-    final func registerFooter(
-        footer:UICollectionReusableView.Type)
+    final func registerFooter(footer:UICollectionReusableView.Type)
     {
         collectionView.register(
             footer,
@@ -66,8 +63,7 @@ class VCollection<A, Cell:UICollectionViewCell>:
             withReuseIdentifier:footer.reusableIdentifier)
     }
     
-    final func registerHeader(
-        header:UICollectionReusableView.Type)
+    final func registerHeader(header:UICollectionReusableView.Type)
     {
         collectionView.register(
             header,
@@ -100,21 +96,17 @@ class VCollection<A, Cell:UICollectionViewCell>:
     
     //MARK: collectionView delegate
     
-    func scrollViewWillBeginDragging(
-        _ scrollView:UIScrollView) { }
+    func scrollViewWillBeginDragging(_ scrollView:UIScrollView) { }
     
-    func scrollViewDidEndDecelerating(
-        _ scrollView:UIScrollView) { }
+    func scrollViewDidEndDecelerating(_ scrollView:UIScrollView) { }
     
     func scrollViewDidEndDragging(
         _ scrollView:UIScrollView,
         willDecelerate decelerate:Bool) { }
     
-    func scrollViewDidEndScrollingAnimation(
-        _ scrollView:UIScrollView) { }
+    func scrollViewDidEndScrollingAnimation(_ scrollView:UIScrollView) { }
     
-    func scrollViewDidScroll(
-        _ scrollView:UIScrollView) { }
+    func scrollViewDidScroll(_ scrollView:UIScrollView) { }
     
     func collectionView(
         _ collectionView:UICollectionView,
@@ -184,8 +176,7 @@ class VCollection<A, Cell:UICollectionViewCell>:
         return flow.itemSize
     }
     
-    func numberOfSections(
-        in collectionView:UICollectionView) -> Int
+    func numberOfSections(in collectionView:UICollectionView) -> Int
     {
         return 1
     }
@@ -238,8 +229,8 @@ class VCollection<A, Cell:UICollectionViewCell>:
     {
         collectionView.isUserInteractionEnabled = false
         
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kDeselectTime)
+        let deadline:DispatchTime = DispatchTime.now() + ViewMain.Constants.deselectTime
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak collectionView] in
             
             collectionView?.isUserInteractionEnabled = true

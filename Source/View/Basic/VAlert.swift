@@ -2,14 +2,8 @@ import UIKit
 
 final class VAlert:UIView
 {
-    private static let kHeight:CGFloat = 80
     private weak var layoutTop:NSLayoutConstraint!
     private weak var timer:Timer?
-    private let kAnimationDuration:TimeInterval = 0.25
-    private let kTimeOut:TimeInterval = 3.5
-    private let kFontSize:CGFloat = 16
-    private let kLabelTop:CGFloat = 20
-    private let kLabelMargin:CGFloat = 9
     
     class func messageFail(message:String)
     {
@@ -134,13 +128,11 @@ final class VAlert:UIView
             layoutTop.constant = -VAlert.kHeight
         }
         
-        UIView.animate(
-            withDuration:kAnimationDuration,
+        UIView.animate(withDuration:kAnimationDuration,
             animations:
         { [weak self] in
             
             self?.superview?.layoutIfNeeded()
-            
         })
         { [weak self] (done:Bool) in
         

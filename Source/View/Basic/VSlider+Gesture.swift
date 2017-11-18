@@ -6,24 +6,21 @@ extension VSlider:UIGestureRecognizerDelegate
         (VSlider) ->
         (UIPanGestureRecognizer) -> ())
     
-    private static let kRouterMap:[
-        UIGestureRecognizerState:Router] = [
-            UIGestureRecognizerState.began:gestureBegan,
-            UIGestureRecognizerState.changed:gestureChanged,
-            UIGestureRecognizerState.ended:gestureEnded,
-            UIGestureRecognizerState.failed:gestureEnded,
-            UIGestureRecognizerState.cancelled:gestureEnded]
+    private static let kRouterMap:[UIGestureRecognizerState:Router] = [
+            UIGestureRecognizerState.began : gestureBegan,
+            UIGestureRecognizerState.changed : gestureChanged,
+            UIGestureRecognizerState.ended : gestureEnded,
+            UIGestureRecognizerState.failed : gestureEnded,
+            UIGestureRecognizerState.cancelled : gestureEnded]
     
     //MARK: selectors
     
     @objc
-    private func selectorPanning(
-        sender gesture:UIPanGestureRecognizer)
+    private func selectorPanning(sender gesture:UIPanGestureRecognizer)
     {
         guard
         
-            let router:Router = VSlider.kRouterMap[
-                gesture.state]
+            let router:Router = VSlider.kRouterMap[gesture.state]
         
         else
         {
@@ -85,8 +82,7 @@ extension VSlider:UIGestureRecognizerDelegate
         let percentUsed:CGFloat = newWidth / totalWidth
         self.percentUsed = percentUsed
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.sliderChange?(percentUsed)
@@ -100,6 +96,7 @@ extension VSlider:UIGestureRecognizerDelegate
         let gesture:UIPanGestureRecognizer = UIPanGestureRecognizer(
             target:self,
             action:#selector(selectorPanning(sender:)))
+        
         gesture.delegate = self
         
         return gesture
@@ -107,8 +104,7 @@ extension VSlider:UIGestureRecognizerDelegate
     
     //MARK: gestureRecognizer delegate
     
-    override func gestureRecognizerShouldBegin(
-        _ gestureRecognizer:UIGestureRecognizer) -> Bool
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer:UIGestureRecognizer) -> Bool
     {
         guard
             

@@ -9,9 +9,6 @@ final class VSlider:UIView
     private(set) weak var layoutBarWidth:NSLayoutConstraint!
     private(set) var sliderChange:((CGFloat) -> ())?
     private(set) var slidingFinished:(() -> ())?
-    private let kHorizontalMargin:CGFloat = 20
-    private let kCornerRadius:CGFloat = 10
-    private let kBorderWidth:CGFloat = 1
     
     init(
         percentUsed:CGFloat = 0,
@@ -49,7 +46,7 @@ final class VSlider:UIView
         viewBase.clipsToBounds = true
         viewBase.backgroundColor = UIColor(white:0.95, alpha:1)
         viewBase.translatesAutoresizingMaskIntoConstraints = false
-        viewBase.layer.cornerRadius = kCornerRadius
+        viewBase.layer.cornerRadius = VSlider.Constants.cornerRadius
         viewBase.layer.borderWidth = kBorderWidth
         viewBase.layer.borderColor = UIColor(white:0, alpha:0.2).cgColor
         self.viewBase = viewBase

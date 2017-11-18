@@ -13,7 +13,6 @@ extension VSettingsMemory
         {
             static let contentTop:CGFloat = 20
             static let backWidth:CGFloat = 50
-            static let borderHeight:CGFloat = 1
             static let fontSize:CGFloat = 14
         }
         

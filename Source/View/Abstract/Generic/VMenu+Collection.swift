@@ -84,10 +84,12 @@ extension VMenu:
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
         let item:MMenuItemProtocol = modelAtIndex(index:indexPath)
+        
         let cell:VMenuCell = collectionView.dequeueReusableCell(
             withReuseIdentifier:
             VMenuCell.reusableIdentifier,
             for:indexPath) as! VMenuCell
+        
         cell.config(model:item)
         
         return cell
@@ -118,8 +120,7 @@ extension VMenu:
         controller.menuSelected(item:item)
         
         let deadline:DispatchTime = DispatchTime.now() + VMenu.Constants.deselectTime
-        DispatchQueue.main.asyncAfter(
-            deadline:deadline)
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak collectionView] in
             
             collectionView?.isUserInteractionEnabled = true

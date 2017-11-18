@@ -2,8 +2,6 @@ import UIKit
 
 final class VSliderBar:UIView
 {
-    private let kBorderWidth:CGFloat = 1
-    
     init()
     {
         super.init(frame:CGRect.zero)
