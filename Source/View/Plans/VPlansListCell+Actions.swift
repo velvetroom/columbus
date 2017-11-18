@@ -31,8 +31,7 @@ extension VPlansListCell
             return
         }
         
-        let dateString:String = dateFormatter.string(
-            from:date)
+        let dateString:String = dateFormatter.string(from:date)
         labelCreated.text = dateString
     }
     
