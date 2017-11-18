@@ -5,8 +5,7 @@ extension VCreateStatusReadyBarStopsCell
     //MARK: selectors
     
     @objc
-    private func selectorRemove(
-        sender button:UIButton)
+    private func selectorRemove(sender button:UIButton)
     {
         guard
             
@@ -17,8 +16,7 @@ extension VCreateStatusReadyBarStopsCell
             return
         }
         
-        controller?.model.plan?.remove(
-            stop:model)
+        controller?.model.plan?.remove(stop:model)
     }
     
     //MARK: internal
@@ -55,16 +53,16 @@ extension VCreateStatusReadyBarStopsCell
             toView:self)
         NSLayoutConstraint.width(
             view:buttonRemove,
-            constant:kRemoveWidth)
+            constant:VCreateStatusReadyBarStopsCell.Constants.removeWidth)
         
         NSLayoutConstraint.equalsVertical(
             view:viewField,
             toView:self,
-            margin:kFieldMarginVertical)
+            margin:VCreateStatusReadyBarStopsCell.Constants.fieldMarginVertical)
         NSLayoutConstraint.leftToLeft(
             view:viewField,
             toView:self,
-            constant:kFieldLeft)
+            constant:VCreateStatusReadyBarStopsCell.Constants.fieldLeft)
         NSLayoutConstraint.rightToLeft(
             view:viewField,
             toView:buttonRemove)
