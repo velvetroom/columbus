@@ -6,8 +6,8 @@ extension VSettingsListCellDetailLevelList
     
     func factoryViews()
     {
-        let selectorMargin2:CGFloat = kSelectorLeft + kSelectorLeft
-        let selectorWidth:CGFloat = kCellWidth - selectorMargin2
+        let selectorMargin2:CGFloat = VSettingsListCellDetailLevelList.Constants.selectorLeft * 2
+        let selectorWidth:CGFloat = VSettingsListCellDetailLevelList.Constants.cellWidth - selectorMargin2
         
         let viewSelector:VSettingsListCellDetailLevelListSelector = VSettingsListCellDetailLevelListSelector()
         self.viewSelector = viewSelector
@@ -36,11 +36,11 @@ extension VSettingsListCellDetailLevelList
             toView:self)
         NSLayoutConstraint.height(
             view:viewSelector,
-            constant:kSelectorHeight)
+            constant:VSettingsListCellDetailLevelList.Constants.selectorHeight)
         NSLayoutConstraint.leftToLeft(
             view:viewSelector,
             toView:self,
-            constant:kSelectorLeft)
+            constant:VSettingsListCellDetailLevelList.Constants.selectorLeft)
         NSLayoutConstraint.width(
             view:viewSelector,
             constant:selectorWidth)
@@ -51,10 +51,10 @@ extension VSettingsListCellDetailLevelList
         NSLayoutConstraint.leftToLeft(
             view:viewRail,
             toView:self,
-            constant:kRailLeft)
+            constant:VSettingsListCellDetailLevelList.Constants.railLeft)
         NSLayoutConstraint.width(
             view:viewRail,
-            constant:kRailWidth)
+            constant:VSettingsListCellDetailLevelList.Constants.railWidth)
         
         NSLayoutConstraint.topToTop(
             view:label,
@@ -64,10 +64,10 @@ extension VSettingsListCellDetailLevelList
         NSLayoutConstraint.leftToLeft(
             view:label,
             toView:self,
-            constant:kCellWidth)
+            constant:VSettingsListCellDetailLevelList.Constants.cellWidth)
         NSLayoutConstraint.rightToRight(
             view:label,
             toView:self,
-            constant:kLabelRight)
+            constant:VSettingsListCellDetailLevelList.Constants.labelRight)
     }
 }

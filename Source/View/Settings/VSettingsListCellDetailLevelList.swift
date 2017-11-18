@@ -11,20 +11,11 @@ final class VSettingsListCellDetailLevelList:
     weak var layoutSelectorTop:NSLayoutConstraint!
     weak var layoutLabelHeight:NSLayoutConstraint!
     let selectorHeight_2:CGFloat
-    let kSelectorLeft:CGFloat = 20
-    let kSelectorHeight:CGFloat = 30
-    let kRailWidth:CGFloat = 2
-    let kRailLeft:CGFloat = 30
-    let kAnimationDuration:TimeInterval = 0.2
-    let kWaitToSelect:TimeInterval = 0.1
-    let kCellWidth:CGFloat = 140
-    let kLabelRight:CGFloat = -10
-    let kFontSize:CGFloat = 14
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
     {
-        selectorHeight_2 = kSelectorHeight / 2.0
+        selectorHeight_2 = VSettingsListCellDetailLevelList.Constants.selectorHeight / 2.0
         
         super.init(controller:controller)
         config()
@@ -43,7 +34,8 @@ final class VSettingsListCellDetailLevelList:
         insetForSectionAt section:Int) -> UIEdgeInsets
     {
         let width:CGFloat = collectionView.bounds.width
-        let remainCell:CGFloat = width - kCellWidth
+        let remainCell:CGFloat = width - VSettingsListCellDetailLevelList.Constants.cellWidth
+        
         let insets:UIEdgeInsets = UIEdgeInsets(
             top:0,
             left:0,
@@ -68,9 +60,11 @@ final class VSettingsListCellDetailLevelList:
             let items:Int = collectionView.numberOfItems(inSection:0)
             let itemsFloat:CGFloat = CGFloat(items)
             let heightPerItem:CGFloat = height / itemsFloat
+            
             let cellSize:CGSize = CGSize(
-                width:kCellWidth,
+                width:VSettingsListCellDetailLevelList.Constants.cellWidth,
                 height:heightPerItem)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -99,10 +93,8 @@ final class VSettingsListCellDetailLevelList:
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MSettingsDetailLevelProtocol = modelAtIndex(
-            index:indexPath)
-        let cell:VSettingsListCellDetailLevelListCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(index:indexPath)
+        let cell:VSettingsListCellDetailLevelListCell = cellAtIndex(indexPath:indexPath)
         cell.config(model:item)
         
         return cell
@@ -121,8 +113,7 @@ final class VSettingsListCellDetailLevelList:
             return false
         }
         
-        let item:MSettingsDetailLevelProtocol = modelAtIndex(
-            index:indexPath)
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(index:indexPath)
         
         guard
             
@@ -140,12 +131,9 @@ final class VSettingsListCellDetailLevelList:
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        let item:MSettingsDetailLevelProtocol = modelAtIndex(
-            index:indexPath)
-        
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(index:indexPath)
         model?.selected(item:item)
         updateLabel(item:item)
-        
         updateSelector()
     }
 }

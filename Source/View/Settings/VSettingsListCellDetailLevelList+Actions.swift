@@ -18,8 +18,8 @@ extension VSettingsListCellDetailLevelList
         let indexPath:IndexPath = IndexPath(
             item:index,
             section:0)
-        let item:MSettingsDetailLevelProtocol = modelAtIndex(
-            index:indexPath)
+        
+        let item:MSettingsDetailLevelProtocol = modelAtIndex(index:indexPath)
         
         collectionView.selectItem(
             at:indexPath,
@@ -32,11 +32,9 @@ extension VSettingsListCellDetailLevelList
     
     //MARK: internal
     
-    func modelAtIndex(
-        index:IndexPath) -> MSettingsDetailLevelProtocol
+    func modelAtIndex(index:IndexPath) -> MSettingsDetailLevelProtocol
     {
-        let item:MSettingsDetailLevelProtocol = model!.items[
-            index.item]
+        let item:MSettingsDetailLevelProtocol = model!.items[index.item]
         
         return item
     }
@@ -50,8 +48,8 @@ extension VSettingsListCellDetailLevelList
     
     func selectCurrent()
     {
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kWaitToSelect)
+        let deadline:DispatchTime = DispatchTime.now() + VSettingsListCellDetailLevelList.Constants.waitToSelect
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak self] in
             
             self?.asyncSelectCurrent()
@@ -63,8 +61,7 @@ extension VSettingsListCellDetailLevelList
         guard
             
             let selected:IndexPath = collectionView.indexPathsForSelectedItems?.first,
-            let cell:UICollectionViewCell = collectionView.cellForItem(
-                at:selected)
+            let cell:UICollectionViewCell = collectionView.cellForItem(at:selected)
             
         else
         {
@@ -74,7 +71,7 @@ extension VSettingsListCellDetailLevelList
         let cellY:CGFloat = cell.center.y
         layoutSelectorTop.constant = cellY - selectorHeight_2
         
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:VSettingsListCellDetailLevelList.Constants.animationDuration)
         { [weak self] in
             
             self?.layoutIfNeeded()
