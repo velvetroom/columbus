@@ -11,12 +11,12 @@ extension VCreateSearchBaseList
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            flow.minimumLineSpacing = kInterItem
-            flow.minimumInteritemSpacing = kInterItem
+            flow.minimumLineSpacing = ViewMain.Constants.interCellSpace
+            flow.minimumInteritemSpacing = ViewMain.Constants.interCellSpace
             flow.sectionInset = UIEdgeInsets(
-                top:kCollectionTop,
+                top:VCreateSearchBaseList.Constants.collectionTop,
                 left:0,
-                bottom:kInterItem,
+                bottom:ViewMain.Constants.interCellSpace,
                 right:0)
         }
     }

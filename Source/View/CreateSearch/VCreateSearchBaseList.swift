@@ -4,9 +4,6 @@ final class VCreateSearchBaseList:VCollection
     <ArchCreateSearch,
     VCreateSearchBaseListCell>
 {
-    let kCollectionTop:CGFloat = 78
-    let kInterItem:CGFloat = 1
-    private let kCellHeight:CGFloat = 62
     private var cellSize:CGSize?
     
     required init(controller:CCreateSearch)
@@ -32,9 +29,11 @@ final class VCreateSearchBaseList:VCollection
         else
         {
             let width:CGFloat = collectionView.bounds.width
+            
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:kCellHeight)
+                height:VCreateSearchBaseList.Constants.cellHeight)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -56,10 +55,8 @@ final class VCreateSearchBaseList:VCollection
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MKLocalSearchCompletion = modelAtIndex(
-            index:indexPath)
-        let cell:VCreateSearchBaseListCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:MKLocalSearchCompletion = modelAtIndex(index:indexPath)
+        let cell:VCreateSearchBaseListCell = cellAtIndex(indexPath:indexPath)
         cell.config(model:item)
         
         return cell
@@ -69,8 +66,7 @@ final class VCreateSearchBaseList:VCollection
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        let item:MKLocalSearchCompletion = modelAtIndex(
-            index:indexPath)
+        let item:MKLocalSearchCompletion = modelAtIndex(index:indexPath)
         controller.selected(item:item)
     }
 }

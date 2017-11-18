@@ -6,8 +6,7 @@ extension VCreateSearchBaseList
     
     func modelAtIndex(index:IndexPath) -> MKLocalSearchCompletion
     {
-        let item:MKLocalSearchCompletion = controller.model.items[
-            index.item]
+        let item:MKLocalSearchCompletion = controller.model.items[index.item]
         
         return item
     }
