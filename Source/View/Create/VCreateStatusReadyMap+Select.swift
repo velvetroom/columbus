@@ -19,8 +19,7 @@ extension VCreateStatusReadyMap
             return
         }
         
-        view.viewBar.viewStops.selectItem(
-            stop:stop)
+        view.viewBar.viewStops.selectItem(stop:stop)
     }
     
     //MARK: internal

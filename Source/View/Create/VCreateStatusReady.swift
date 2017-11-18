@@ -5,9 +5,6 @@ final class VCreateStatusReady:View<ArchCreate>
     weak var viewBar:VCreateStatusReadyBar!
     weak var viewMap:VCreateStatusReadyMap!
     weak var viewMapMenu:VCreateStatusReadyMapMenu!
-    let kBottom:CGFloat = -50
-    let kMapMenuWidth:CGFloat = 70
-    private let kWaitForAnimation:TimeInterval = 1.4
     
     required init(controller:CCreate)
     {
@@ -26,9 +23,8 @@ final class VCreateStatusReady:View<ArchCreate>
     
     private func animateStart()
     {
-        DispatchQueue.main.asyncAfter(
-            deadline:
-            DispatchTime.now() + kWaitForAnimation)
+        let deadline:DispatchTime = DispatchTime.now() + VCreateStatusReady.Constants.waitForAnimation
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak self] in
             
             self?.asyncAnimateStart()

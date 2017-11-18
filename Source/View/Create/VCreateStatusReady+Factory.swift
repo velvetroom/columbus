@@ -6,16 +6,13 @@ extension VCreateStatusReady
     
     func factoryViews()
     {
-        let viewBar:VCreateStatusReadyBar = VCreateStatusReadyBar(
-            controller:controller)
+        let viewBar:VCreateStatusReadyBar = VCreateStatusReadyBar(controller:controller)
         self.viewBar = viewBar
         
-        let viewMapMenu:VCreateStatusReadyMapMenu = VCreateStatusReadyMapMenu(
-            controller:controller)
+        let viewMapMenu:VCreateStatusReadyMapMenu = VCreateStatusReadyMapMenu(controller:controller)
         self.viewMapMenu = viewMapMenu
         
-        let viewMap:VCreateStatusReadyMap = VCreateStatusReadyMap(
-            controller:controller)
+        let viewMap:VCreateStatusReadyMap = VCreateStatusReadyMap(controller:controller)
         self.viewMap = viewMap
         
         addSubview(viewMap)
@@ -39,7 +36,7 @@ extension VCreateStatusReady
         NSLayoutConstraint.bottomToBottom(
             view:viewMap,
             toView:self,
-            constant:kBottom)
+            constant:-ViewMain.Constants.menuHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewMap,
             toView:self)
@@ -51,7 +48,7 @@ extension VCreateStatusReady
             view:viewMapMenu)
         NSLayoutConstraint.width(
             view:viewMapMenu,
-            constant:kMapMenuWidth)
+            constant:VCreateStatusReady.Constants.mapMenuWidth)
         NSLayoutConstraint.rightToRight(
             view:viewMapMenu,
             toView:self)
