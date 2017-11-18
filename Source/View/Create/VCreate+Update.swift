@@ -15,8 +15,7 @@ extension VCreate
             return
         }
         
-        view.viewBar.animate(
-            top:barTop)
+        view.viewBar.animate(top:barTop)
         { [weak view] in
             
             view?.viewMapMenu.collectionView.reloadData()
@@ -30,8 +29,7 @@ extension VCreate
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncUpdateMapMenu(
-                barTop:barTop)
+            self?.asyncUpdateMapMenu(barTop:barTop)
         }
     }
 }

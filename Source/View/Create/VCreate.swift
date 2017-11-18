@@ -20,8 +20,7 @@ final class VCreate:ViewMain
             return
         }
         
-        let view:View<ArchCreate> = status.viewType.init(
-            controller:controller)
+        let view:View<ArchCreate> = status.viewType.init(controller:controller)
         self.view = view
         
         addSubview(view)
