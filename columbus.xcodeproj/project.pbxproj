@@ -450,6 +450,7 @@
 		DAF2EF351FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */; };
 		DAF940D31FBFC9700094E7EB /* ViewParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */; };
 		DAF940D51FBFCD3C0094E7EB /* VMenu+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */; };
+		DAF940D71FBFCE8A0094E7EB /* VSpinner+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */; };
 		DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -911,6 +912,7 @@
 		DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveStatusErrorFactory.swift; sourceTree = "<group>"; };
 		DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewParent+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VMenu+Constants.swift"; sourceTree = "<group>"; };
+		DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSpinner+Constants.swift"; sourceTree = "<group>"; };
 		DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1421,6 +1423,7 @@
 			children = (
 				DA65ECAF1F95E68700720673 /* VBorder.swift */,
 				DA65ECB01F95E68700720673 /* VSpinner.swift */,
+				DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */,
 				DA65ECB11F95E68700720673 /* VGradient.swift */,
 				DA65ECB21F95E68700720673 /* VSliderBar.swift */,
 				DA65ECB31F95E68700720673 /* VSlider.swift */,
@@ -1917,6 +1920,7 @@
 				DAC385EE1FA77B32001138CD /* VMapPinFactory.swift in Sources */,
 				DA65ED001F95E68700720673 /* VMenu+Collection.swift in Sources */,
 				DA1840051FA93CE10086B0E8 /* VPlansBar.swift in Sources */,
+				DAF940D71FBFCE8A0094E7EB /* VSpinner+Constants.swift in Sources */,
 				DA26F18A1FB7C012007F171D /* VCreateSearchFactory.swift in Sources */,
 				DAA734CF1FBEBD99002E4F1C /* VSettingsMemory+Constants.swift in Sources */,
 				DA4C2F8C1FB1F58D006D123C /* MStore+Purchase.swift in Sources */,
