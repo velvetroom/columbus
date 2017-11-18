@@ -13,7 +13,7 @@ class VStoreStatusReadyListCellAvailable:VStoreStatusReadyListCell
         labelPrice.translatesAutoresizingMaskIntoConstraints = false
         labelPrice.textAlignment = NSTextAlignment.center
         labelPrice.backgroundColor = UIColor.clear
-        labelPrice.font = UIFont.light(size:kPriceFontSize)
+        labelPrice.font = UIFont.light(size:VStoreStatusReadyListCellAvailable.Constants.priceFontSize)
         labelPrice.textColor = UIColor.colourBackgroundDark
         self.labelPrice = labelPrice
         
@@ -22,10 +22,10 @@ class VStoreStatusReadyListCellAvailable:VStoreStatusReadyListCell
         NSLayoutConstraint.bottomToBottom(
             view:labelPrice,
             toView:self,
-            constant:kPriceBottom)
+            constant:VStoreStatusReadyListCellAvailable.Constants.priceBottom)
         NSLayoutConstraint.height(
             view:labelPrice,
-            constant:kPriceHeight)
+            constant:VStoreStatusReadyListCellAvailable.Constants.priceHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelPrice,
             toView:self)
