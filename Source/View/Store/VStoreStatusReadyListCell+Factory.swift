@@ -4,14 +4,11 @@ extension VStoreStatusReadyListCell
 {
     //MARK: internal
     
-    class func factoryAttributesDescr(
-        fontSize:CGFloat) -> [NSAttributedStringKey:Any]
+    class func factoryAttributesDescr(fontSize:CGFloat) -> [NSAttributedStringKey:Any]
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:fontSize),
-            NSAttributedStringKey.foregroundColor:
-                UIColor(white:0, alpha:0.5)]
+            NSAttributedStringKey.font : UIFont.regular(size:fontSize),
+            NSAttributedStringKey.foregroundColor : UIColor(white:0, alpha:0.5)]
         
         return attributes
     }
@@ -33,7 +30,7 @@ extension VStoreStatusReadyListCell
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.bold(size:kTitleFontSize)
+        labelTitle.font = UIFont.bold(size:VStoreStatusReadyListCell.Constants.titleFontSize)
         labelTitle.textColor = UIColor.white
         self.labelTitle = labelTitle
         
@@ -54,7 +51,7 @@ extension VStoreStatusReadyListCell
             toView:self)
         NSLayoutConstraint.height(
             view:gradient,
-            constant:kImageHeight)
+            constant:VStoreStatusReadyListCell.Constants.imageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:gradient,
             toView:self)
@@ -64,7 +61,7 @@ extension VStoreStatusReadyListCell
             toView:self)
         NSLayoutConstraint.height(
             view:imageView,
-            constant:kImageHeight)
+            constant:VStoreStatusReadyListCell.Constants.imageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:imageView,
             toView:self)
@@ -74,7 +71,7 @@ extension VStoreStatusReadyListCell
             toView:imageView)
         NSLayoutConstraint.height(
             view:labelTitle,
-            constant:kTitleHeight)
+            constant:VStoreStatusReadyListCell.Constants.titleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
@@ -82,12 +79,12 @@ extension VStoreStatusReadyListCell
         NSLayoutConstraint.topToBottom(
             view:labelDescr,
             toView:imageView,
-            constant:kDescrTop)
+            constant:VStoreStatusReadyListCell.Constants.descrTop)
         layoutDescrHeight = NSLayoutConstraint.height(
             view:labelDescr)
         NSLayoutConstraint.equalsHorizontal(
             view:labelDescr,
             toView:self,
-            margin:kDescrMarginHorizontal)
+            margin:VStoreStatusReadyListCell.Constants.descrMarginHorizontal)
     }
 }

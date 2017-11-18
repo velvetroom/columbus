@@ -12,7 +12,7 @@ class VStoreStatusReadyListCell:UICollectionViewCell
     override init(frame:CGRect)
     {
         attributesDescr = VStoreStatusReadyListCell.factoryAttributesDescr(
-            fontSize:kDescrFontSize)
+            fontSize:VStoreStatusReadyListCell.Constants.descrFontSize)
         
         super.init(frame:frame)
         backgroundColor = UIColor.white
