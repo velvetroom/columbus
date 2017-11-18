@@ -6,11 +6,8 @@ extension VCreateTravel
     
     func factoryViews(controller:CCreateTravel)
     {
-        let viewBackground:VCreateTravelBackground = VCreateTravelBackground(
-            controller:controller)
-        
-        let viewList:VCreateTravelList = VCreateTravelList(
-            controller:controller)
+        let viewBackground:VCreateTravelBackground = VCreateTravelBackground(controller:controller)
+        let viewList:VCreateTravelList = VCreateTravelList(controller:controller)
         
         addSubview(viewBackground)
         addSubview(viewList)
