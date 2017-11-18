@@ -2,27 +2,21 @@ import UIKit
 
 final class VPlansBar:View<ArchPlans>
 {
-    private let kTitleTop:CGFloat = 20
-    private let kBorderHeight:CGFloat = 1
-    private let kFontSize:CGFloat = 14
-    
     required init(controller:CPlans)
     {
         super.init(controller:controller)
         backgroundColor = UIColor.white
         
-        let border:VBorder = VBorder(
-            colour:UIColor(white:0, alpha:0.2))
+        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.2))
         
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.medium(size:kFontSize)
+        labelTitle.font = UIFont.medium(size:VPlansBar.Constants.fontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
-        labelTitle.text = String.localizedView(
-            key:"VPlansBar_labelTitle")
+        labelTitle.text = String.localizedView(key:"VPlansBar_labelTitle")
         
         addSubview(border)
         addSubview(labelTitle)
@@ -32,7 +26,7 @@ final class VPlansBar:View<ArchPlans>
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
@@ -40,7 +34,7 @@ final class VPlansBar:View<ArchPlans>
         NSLayoutConstraint.topToTop(
             view:labelTitle,
             toView:self,
-            constant:kTitleTop)
+            constant:ViewMain.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)

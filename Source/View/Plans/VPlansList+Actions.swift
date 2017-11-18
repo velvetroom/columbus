@@ -6,14 +6,12 @@ extension VPlansList
     
     func modelAtIndex(index:IndexPath) -> DPlan
     {
-        let item:DPlan = controller.model.plans![
-            index.item]
+        let item:DPlan = controller.model.plans![index.item]
         
         return item
     }
     
-    func modelIsActive(
-        model:DPlan) -> Bool
+    func modelIsActive(model:DPlan) -> Bool
     {
         guard
         
