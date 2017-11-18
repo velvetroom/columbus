@@ -4,9 +4,6 @@ import StoreKit
 final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
 {
     private weak var product:SKProduct?
-    private let kButtonFontSize:CGFloat = 16
-    private let kButtonHeight:CGFloat = 50
-    private let kButtonWidth:CGFloat = 110
     
     override init(frame:CGRect)
     {
