@@ -3,9 +3,6 @@ import UIKit
 class VStoreStatusReadyListCellAvailable:VStoreStatusReadyListCell
 {
     private weak var labelPrice:UILabel!
-    private let kPriceFontSize:CGFloat = 30
-    private let kPriceHeight:CGFloat = 44
-    private let kPriceBottom:CGFloat = -90
     
     override init(frame:CGRect)
     {
