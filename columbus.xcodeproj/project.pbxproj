@@ -254,6 +254,7 @@
 		DA67C7421FBFDD47007D8B10 /* VStoreStatusReadyBar+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67C7411FBFDD47007D8B10 /* VStoreStatusReadyBar+Constants.swift */; };
 		DA67C7441FBFDEBF007D8B10 /* VStoreStatusReadyBarRestore+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67C7431FBFDEBF007D8B10 /* VStoreStatusReadyBarRestore+Constants.swift */; };
 		DA67C7461FBFDF08007D8B10 /* VStoreStatusReadyList+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67C7451FBFDF08007D8B10 /* VStoreStatusReadyList+Constants.swift */; };
+		DA67C7481FBFE06B007D8B10 /* VStoreStatusReadyListCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67C7471FBFE06B007D8B10 /* VStoreStatusReadyListCell+Constants.swift */; };
 		DA6A10D11FA1CD7C008CE254 /* ExtensionMKPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A10D01FA1CD7C008CE254 /* ExtensionMKPolyline.swift */; };
 		DA6AC1791F98FE7E004D6707 /* MCreateMapMenuUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC1781F98FE7E004D6707 /* MCreateMapMenuUser.swift */; };
 		DA6AC17D1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6AC17C1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift */; };
@@ -724,6 +725,7 @@
 		DA67C7411FBFDD47007D8B10 /* VStoreStatusReadyBar+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStoreStatusReadyBar+Constants.swift"; sourceTree = "<group>"; };
 		DA67C7431FBFDEBF007D8B10 /* VStoreStatusReadyBarRestore+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStoreStatusReadyBarRestore+Constants.swift"; sourceTree = "<group>"; };
 		DA67C7451FBFDF08007D8B10 /* VStoreStatusReadyList+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStoreStatusReadyList+Constants.swift"; sourceTree = "<group>"; };
+		DA67C7471FBFE06B007D8B10 /* VStoreStatusReadyListCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStoreStatusReadyListCell+Constants.swift"; sourceTree = "<group>"; };
 		DA6A10D01FA1CD7C008CE254 /* ExtensionMKPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMKPolyline.swift; sourceTree = "<group>"; };
 		DA6AC1781F98FE7E004D6707 /* MCreateMapMenuUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuUser.swift; sourceTree = "<group>"; };
 		DA6AC17C1F99093C004D6707 /* VCreateStatusReadyMapMenuAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyMapMenuAnimations.swift; sourceTree = "<group>"; };
@@ -1011,6 +1013,7 @@
 				DABE09AC1FAFE56A00FE08E4 /* VStoreStatusReadyList+Config.swift */,
 				DAE73F1E1FB0CBE5005BE26F /* VStoreStatusReadyList+Actions.swift */,
 				DA1906C91FAFC8C5008147EA /* VStoreStatusReadyListCell.swift */,
+				DA67C7471FBFE06B007D8B10 /* VStoreStatusReadyListCell+Constants.swift */,
 				DAE73F1C1FB0C94D005BE26F /* VStoreStatusReadyListCell+Factory.swift */,
 				DAE73F201FB0D358005BE26F /* VStoreStatusReadyListCell+Actions.swift */,
 				DA1906CD1FAFC909008147EA /* VStoreStatusReadyListCellUnavailable.swift */,
@@ -2166,6 +2169,7 @@
 				DA7B65241F9E6B5F001CDC35 /* VMenu+Actions.swift in Sources */,
 				DA1A26BA1F99419C00FAF78C /* MCreateStatusErrorProtocol.swift in Sources */,
 				DA5B09461FA361380055E8F3 /* MCreateSave.swift in Sources */,
+				DA67C7481FBFE06B007D8B10 /* VStoreStatusReadyListCell+Constants.swift in Sources */,
 				DA22195B1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift in Sources */,
 				DA1906D81FAFCB0B008147EA /* MStorePerkStatusPurchasing.swift in Sources */,
 				DAA9255C1FA5426E00B72DB2 /* MCreateSavePixelRange.swift in Sources */,
