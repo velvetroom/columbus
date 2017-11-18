@@ -70,12 +70,6 @@ extension VMenu:
         return cellSize
     }
     
-    func numberOfSections(
-        in collectionView:UICollectionView) -> Int
-    {
-        return 1
-    }
-    
     func collectionView(
         _ collectionView:UICollectionView,
         numberOfItemsInSection section:Int) -> Int
@@ -123,8 +117,9 @@ extension VMenu:
         let item:MMenuItemProtocol = modelAtIndex(index:indexPath)
         controller.menuSelected(item:item)
         
+        let deadline:DispatchTime = DispatchTime.now() + VMenu.Constants.deselectTime
         DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kDeselectTime)
+            deadline:deadline)
         { [weak collectionView] in
             
             collectionView?.isUserInteractionEnabled = true

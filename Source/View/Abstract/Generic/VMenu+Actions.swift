@@ -14,6 +14,7 @@ extension VMenu
     func selectCurrent()
     {
         let indexSelected:Int = controller.menu.selected.rawValue
+        
         let indexPath:IndexPath = IndexPath(
             item:indexSelected,
             section:0)

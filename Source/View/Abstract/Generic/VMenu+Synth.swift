@@ -9,6 +9,7 @@ extension VMenu
         let indexPath:IndexPath = IndexPath(
             item:index,
             section:0)
+        
         let item:MMenuItemProtocol = modelAtIndex(index:indexPath)
         
         collectionView.selectItem(
@@ -25,6 +26,7 @@ extension VMenu
     {
         let totalItems:Int = collectionView.numberOfItems(
             inSection:0)
+        
         let index:Int = order.rawValue
         
         guard

@@ -55,8 +55,7 @@ final class VMenuCell:UICollectionViewCell
         }
         else
         {
-            imageView.tintColor = UIColor.colourBackgroundDark.withAlphaComponent(
-                0.2)
+            imageView.tintColor = UIColor.colourBackgroundDark.withAlphaComponent(0.2)
         }
     }
     
@@ -64,8 +63,7 @@ final class VMenuCell:UICollectionViewCell
     
     func config(model:MMenuItemProtocol)
     {
-        imageView.image = model.icon.withRenderingMode(
-            UIImageRenderingMode.alwaysTemplate)
+        imageView.image = model.icon.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         hover()
     }
 }

@@ -14,8 +14,7 @@ final class VMenu:UIView
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
-        let border:VBorder = VBorder(
-            colour:UIColor.colourBackgroundDark.withAlphaComponent(0.4))
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundDark.withAlphaComponent(0.4))
         
         addSubview(border)
         
@@ -24,7 +23,7 @@ final class VMenu:UIView
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:VMenu.Constants.borderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
