@@ -451,6 +451,7 @@
 		DAF940D31FBFC9700094E7EB /* ViewParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */; };
 		DAF940D51FBFCD3C0094E7EB /* VMenu+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */; };
 		DAF940D71FBFCE8A0094E7EB /* VSpinner+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */; };
+		DAF940D91FBFCF7D0094E7EB /* VGradient+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */; };
 		DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -913,6 +914,7 @@
 		DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewParent+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VMenu+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSpinner+Constants.swift"; sourceTree = "<group>"; };
+		DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VGradient+Constants.swift"; sourceTree = "<group>"; };
 		DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1425,6 +1427,7 @@
 				DA65ECB01F95E68700720673 /* VSpinner.swift */,
 				DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */,
 				DA65ECB11F95E68700720673 /* VGradient.swift */,
+				DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */,
 				DA65ECB21F95E68700720673 /* VSliderBar.swift */,
 				DA65ECB31F95E68700720673 /* VSlider.swift */,
 				DA65ECB41F95E68700720673 /* VSlider+Gesture.swift */,
@@ -2004,6 +2007,7 @@
 				DA740F911F9EAC6C00C8B116 /* MSettingsTravelMode.swift in Sources */,
 				DAD387221FA3E3B00031B9F8 /* MCreateSaveMapRange.swift in Sources */,
 				DA3013651FBEAF7F00D5DFA5 /* MHome+Constants.swift in Sources */,
+				DAF940D91FBFCF7D0094E7EB /* VGradient+Constants.swift in Sources */,
 				DA2F104C1FAA243C0078F4F8 /* MSettingsDistanceKilometres.swift in Sources */,
 				DA63C0E71FB899E2007D01A7 /* VCreateSearchBaseListCell.swift in Sources */,
 				DABF39301FAE86650072B240 /* MCreateTravelTransit.swift in Sources */,

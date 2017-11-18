@@ -2,9 +2,6 @@ import UIKit
 
 final class VGradient:UIView
 {
-    private static let kLocationStart:NSNumber = 0
-    private static let kLocationEnd:NSNumber = 1
-    
     class func diagonal(
         colourLeftBottom:UIColor,
         colourTopRight:UIColor) -> VGradient
