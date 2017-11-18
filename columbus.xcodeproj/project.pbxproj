@@ -449,11 +449,11 @@
 		DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */; };
 		DAF2EF351FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */; };
 		DAF940D31FBFC9700094E7EB /* ViewParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */; };
-		DAF940D51FBFCD3C0094E7EB /* VMenu+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */; };
 		DAF940D71FBFCE8A0094E7EB /* VSpinner+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */; };
 		DAF940D91FBFCF7D0094E7EB /* VGradient+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */; };
 		DAF940DB1FBFD0870094E7EB /* VSlider+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940DA1FBFD0870094E7EB /* VSlider+Constants.swift */; };
 		DAF940DF1FBFD1450094E7EB /* ViewMain+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940DE1FBFD1450094E7EB /* ViewMain+Constants.swift */; };
+		DAF940E11FBFD45C0094E7EB /* VAlert+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940E01FBFD45C0094E7EB /* VAlert+Constants.swift */; };
 		DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -914,11 +914,11 @@
 		DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarAnimations.swift; sourceTree = "<group>"; };
 		DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveStatusErrorFactory.swift; sourceTree = "<group>"; };
 		DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewParent+Constants.swift"; sourceTree = "<group>"; };
-		DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VMenu+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSpinner+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VGradient+Constants.swift"; sourceTree = "<group>"; };
 		DAF940DA1FBFD0870094E7EB /* VSlider+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSlider+Constants.swift"; sourceTree = "<group>"; };
 		DAF940DE1FBFD1450094E7EB /* ViewMain+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewMain+Constants.swift"; sourceTree = "<group>"; };
+		DAF940E01FBFD45C0094E7EB /* VAlert+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VAlert+Constants.swift"; sourceTree = "<group>"; };
 		DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1397,7 +1397,6 @@
 			isa = PBXGroup;
 			children = (
 				DA65EC991F95E68700720673 /* VMenu.swift */,
-				DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */,
 				DA65EC971F95E68700720673 /* VMenu+Collection.swift */,
 				DA7B65231F9E6B5F001CDC35 /* VMenu+Actions.swift */,
 				DA7B65211F9E6873001CDC35 /* VMenu+Synth.swift */,
@@ -1442,6 +1441,7 @@
 				DA65ECB71F95E68700720673 /* VPushBackground.swift */,
 				DA65ECB81F95E68700720673 /* VCollection.swift */,
 				DA65ECB91F95E68700720673 /* VAlert.swift */,
+				DAF940E01FBFD45C0094E7EB /* VAlert+Constants.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -2099,7 +2099,6 @@
 				DAE73F1D1FB0C94D005BE26F /* VStoreStatusReadyListCellFactory.swift in Sources */,
 				DA2780121FA8DCE700489D0E /* MCreateSave+Image.swift in Sources */,
 				DA4861891FAA3F3700FFBAB8 /* MSettingsDetailLevelMedium.swift in Sources */,
-				DAF940D51FBFCD3C0094E7EB /* VMenu+Constants.swift in Sources */,
 				DA56FD051FA8EEB00018C2C7 /* MCreateSavePicture+Factory.swift in Sources */,
 				DA2219511FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift in Sources */,
 				DA0A3C911FAFD38E00F70A2B /* MStore+Products.swift in Sources */,
@@ -2228,6 +2227,7 @@
 				DA65ECE01F95E68700720673 /* ExtensionCGImage.swift in Sources */,
 				DA97DC7E1FA41776005A137F /* MCreateSave+TileFactory.swift in Sources */,
 				DAE486181FBA3A0B006A3B8B /* MCreateSaveStatusBusy.swift in Sources */,
+				DAF940E11FBFD45C0094E7EB /* VAlert+Constants.swift in Sources */,
 				DA9C04651FABE4EF006F57E1 /* MHomeInfoHome.swift in Sources */,
 				DABF39241FAE7D7E0072B240 /* VCreateTravelList.swift in Sources */,
 				DA525A021F9F7671004F8503 /* MSettingsTravelMode+Factory.swift in Sources */,
