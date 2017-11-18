@@ -34,6 +34,7 @@
 		DA17F7751FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7741FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift */; };
 		DA17F7771FC01EDF00612A9C /* VPlansBar+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7761FC01EDF00612A9C /* VPlansBar+Constants.swift */; };
 		DA17F7791FC01F7700612A9C /* VPlansList+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7781FC01F7700612A9C /* VPlansList+Constants.swift */; };
+		DA17F77B1FC0200700612A9C /* VPlansListHeader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F77A1FC0200700612A9C /* VPlansListHeader+Constants.swift */; };
 		DA1840051FA93CE10086B0E8 /* VPlansBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1840041FA93CE00086B0E8 /* VPlansBar.swift */; };
 		DA18A9681FAD47CA00F6BDF8 /* VPlansListCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9671FAD47CA00F6BDF8 /* VPlansListCellButton.swift */; };
 		DA18A96A1FAD4E4700F6BDF8 /* MPlans+Active.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9691FAD4E4700F6BDF8 /* MPlans+Active.swift */; };
@@ -537,6 +538,7 @@
 		DA17F7741FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSearchBaseListCell+Constants.swift"; sourceTree = "<group>"; };
 		DA17F7761FC01EDF00612A9C /* VPlansBar+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansBar+Constants.swift"; sourceTree = "<group>"; };
 		DA17F7781FC01F7700612A9C /* VPlansList+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansList+Constants.swift"; sourceTree = "<group>"; };
+		DA17F77A1FC0200700612A9C /* VPlansListHeader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansListHeader+Constants.swift"; sourceTree = "<group>"; };
 		DA1840041FA93CE00086B0E8 /* VPlansBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPlansBar.swift; sourceTree = "<group>"; };
 		DA18A9671FAD47CA00F6BDF8 /* VPlansListCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellButton.swift; sourceTree = "<group>"; };
 		DA18A9691FAD4E4700F6BDF8 /* MPlans+Active.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPlans+Active.swift"; sourceTree = "<group>"; };
@@ -1801,6 +1803,7 @@
 				DA8DF8CE1FA94CD200276867 /* VPlansList+Actions.swift */,
 				DADE5F9D1FA943CF00E59687 /* VPlansList+Config.swift */,
 				DA6700D21FAB7DC700B89997 /* VPlansListHeader.swift */,
+				DA17F77A1FC0200700612A9C /* VPlansListHeader+Constants.swift */,
 				DADE5F991FA9405100E59687 /* VPlansListCell.swift */,
 				DA8DF8D01FA955EB00276867 /* VPlansListCell+Factory.swift */,
 				DA8DF8D41FA95B6100276867 /* VPlansListCell+Actions.swift */,
@@ -2259,6 +2262,7 @@
 				DA65ED191F95E68700720673 /* VSlider.swift in Sources */,
 				DA65ED031F95E68700720673 /* VHome.swift in Sources */,
 				DA65ED1C1F95E68700720673 /* VCollectionFlow.swift in Sources */,
+				DA17F77B1FC0200700612A9C /* VPlansListHeader+Constants.swift in Sources */,
 				DABDE8871FAA058C00E24BBE /* DSettingsDistance.swift in Sources */,
 				DAD889001F9D2DBD000EC7FD /* MCreatePlan+StopAdd.swift in Sources */,
 				DA2944DE1FA404CF00645DA4 /* MCreateSaveZoomProtocol.swift in Sources */,
