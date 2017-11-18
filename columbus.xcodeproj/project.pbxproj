@@ -31,6 +31,7 @@
 		DA13F65E1F9A18DD00DF92F5 /* DPlan+Connect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F65D1F9A18DD00DF92F5 /* DPlan+Connect.swift */; };
 		DA17F7711FC01CA600612A9C /* VCreateSearchBaseBar+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7701FC01CA600612A9C /* VCreateSearchBaseBar+Constants.swift */; };
 		DA17F7731FC01D1C00612A9C /* VCreateSearchBaseList+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7721FC01D1C00612A9C /* VCreateSearchBaseList+Constants.swift */; };
+		DA17F7751FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7741FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift */; };
 		DA1840051FA93CE10086B0E8 /* VPlansBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1840041FA93CE00086B0E8 /* VPlansBar.swift */; };
 		DA18A9681FAD47CA00F6BDF8 /* VPlansListCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9671FAD47CA00F6BDF8 /* VPlansListCellButton.swift */; };
 		DA18A96A1FAD4E4700F6BDF8 /* MPlans+Active.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9691FAD4E4700F6BDF8 /* MPlans+Active.swift */; };
@@ -531,6 +532,7 @@
 		DA13F65D1F9A18DD00DF92F5 /* DPlan+Connect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DPlan+Connect.swift"; sourceTree = "<group>"; };
 		DA17F7701FC01CA600612A9C /* VCreateSearchBaseBar+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSearchBaseBar+Constants.swift"; sourceTree = "<group>"; };
 		DA17F7721FC01D1C00612A9C /* VCreateSearchBaseList+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSearchBaseList+Constants.swift"; sourceTree = "<group>"; };
+		DA17F7741FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSearchBaseListCell+Constants.swift"; sourceTree = "<group>"; };
 		DA1840041FA93CE00086B0E8 /* VPlansBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPlansBar.swift; sourceTree = "<group>"; };
 		DA18A9671FAD47CA00F6BDF8 /* VPlansListCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellButton.swift; sourceTree = "<group>"; };
 		DA18A9691FAD4E4700F6BDF8 /* MPlans+Active.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPlans+Active.swift"; sourceTree = "<group>"; };
@@ -1119,6 +1121,7 @@
 				DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseList+Actions.swift */,
 				DA63C0EA1FB89A3D007D01A7 /* VCreateSearchBaseList+Config.swift */,
 				DA63C0E61FB899E2007D01A7 /* VCreateSearchBaseListCell.swift */,
+				DA17F7741FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift */,
 				DA954E441FB8D1AA00CA60BE /* VCreateSearchBaseListCell+Factory.swift */,
 			);
 			path = CreateSearch;
@@ -2073,6 +2076,7 @@
 				DA0679A01FA0E11E00F511F7 /* MCreatePlan+DirectionsFactory.swift in Sources */,
 				DA18A96A1FAD4E4700F6BDF8 /* MPlans+Active.swift in Sources */,
 				DA8DF8D11FA955EB00276867 /* VPlansListCell+Factory.swift in Sources */,
+				DA17F7751FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift in Sources */,
 				DA2958531FA7F01700C6E8CA /* VMap+Delegate.swift in Sources */,
 				DA5B093F1FA35EF00055E8F3 /* CCreateSave.swift in Sources */,
 				DA2EE56D1F98AE9900488A07 /* MCreateMapStatusContracted.swift in Sources */,
