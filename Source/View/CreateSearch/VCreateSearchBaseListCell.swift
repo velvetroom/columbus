@@ -10,11 +10,6 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
     let attributesSubtitleHighlighted:[NSAttributedStringKey:Any]
     let breakLine:NSAttributedString
     private var text:NSAttributedString?
-    private let kBreakLine:String = "\n"
-    private let kTitleFontSize:CGFloat = 14
-    private let kSubtitleFontSize:CGFloat = 11
-    private let kMargin:CGFloat = 10
-    private let kTextMaxHeight:CGFloat = 1000
     
     override init(frame:CGRect)
     {
@@ -22,30 +17,22 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         let colourLabelHighlighted:UIColor = UIColor.colourBackgroundDark
         
         attributesTitle = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:kTitleFontSize),
-            NSAttributedStringKey.foregroundColor:
-                colourLabel]
+            NSAttributedStringKey.font : UIFont.regular(size:VCreateSearchBaseListCell.Constants.titleFontSize),
+            NSAttributedStringKey.foregroundColor : colourLabel]
         
         attributesTitleHighlighted = [
-            NSAttributedStringKey.font:
-                UIFont.medium(size:kTitleFontSize),
-            NSAttributedStringKey.foregroundColor:
-                colourLabelHighlighted]
+            NSAttributedStringKey.font : UIFont.medium(size:VCreateSearchBaseListCell.Constants.titleFontSize),
+            NSAttributedStringKey.foregroundColor : colourLabelHighlighted]
         
         attributesSubtitle = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:kSubtitleFontSize),
-            NSAttributedStringKey.foregroundColor:
-                colourLabel]
+            NSAttributedStringKey.font : UIFont.regular(size:VCreateSearchBaseListCell.Constants.subtitleFontSize),
+            NSAttributedStringKey.foregroundColor : colourLabel]
         
         attributesSubtitleHighlighted = [
-            NSAttributedStringKey.font:
-                UIFont.medium(size:kSubtitleFontSize),
-            NSAttributedStringKey.foregroundColor:
-                colourLabelHighlighted]
+            NSAttributedStringKey.font : UIFont.medium(size:VCreateSearchBaseListCell.Constants.subtitleFontSize),
+            NSAttributedStringKey.foregroundColor : colourLabelHighlighted]
         
-        breakLine = NSAttributedString(string:kBreakLine)
+        breakLine = NSAttributedString(string:"\n")
         
         super.init(frame:frame)
         clipsToBounds = true
@@ -62,13 +49,13 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         NSLayoutConstraint.topToTop(
             view:label,
             toView:self,
-            constant:kMargin)
+            constant:VCreateSearchBaseListCell.Constants.margin)
         layoutLabelHeight = NSLayoutConstraint.height(
             view:label)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self,
-            margin:kMargin)
+            margin:VCreateSearchBaseListCell.Constants.margin)
     }
     
     required init?(coder:NSCoder)
@@ -121,7 +108,7 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         
         let size:CGSize = CGSize(
             width:label.bounds.width,
-            height:kTextMaxHeight)
+            height:VCreateSearchBaseListCell.Constants.textMaxHeight)
         
         let rect:CGRect = text.boundingRect(
             with:size,
@@ -129,6 +116,7 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
                 NSStringDrawingOptions.usesLineFragmentOrigin,
                 NSStringDrawingOptions.usesFontLeading]),
             context:nil)
+        
         let height:CGFloat = ceil(rect.height)
         
         layoutLabelHeight.constant = height

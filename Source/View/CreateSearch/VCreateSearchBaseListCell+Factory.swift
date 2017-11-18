@@ -4,10 +4,10 @@ extension VCreateSearchBaseListCell
 {
     //MARK: private
     
-    private func factoryTitle(
-        model:MKLocalSearchCompletion) -> NSAttributedString
+    private func factoryTitle(model:MKLocalSearchCompletion) -> NSAttributedString
     {
         let highlightRanges:[NSValue] = model.titleHighlightRanges
+        
         let string:NSMutableAttributedString = NSMutableAttributedString(
             string:model.title,
             attributes:attributesTitle)
@@ -15,6 +15,7 @@ extension VCreateSearchBaseListCell
         for highlightRange:NSValue in highlightRanges
         {
             let range:NSRange = highlightRange.rangeValue
+            
             string.addAttributes(
                 attributesTitleHighlighted,
                 range:range)
@@ -23,8 +24,7 @@ extension VCreateSearchBaseListCell
         return string
     }
     
-    private func factorySubtitle(
-        model:MKLocalSearchCompletion) -> NSAttributedString?
+    private func factorySubtitle(model:MKLocalSearchCompletion) -> NSAttributedString?
     {
         let subtitle:String = model.subtitle
         
@@ -38,6 +38,7 @@ extension VCreateSearchBaseListCell
         }
         
         let highlightRanges:[NSValue] = model.subtitleHighlightRanges
+        
         let string:NSMutableAttributedString = NSMutableAttributedString(
             string:subtitle,
             attributes:attributesSubtitle)
@@ -55,17 +56,14 @@ extension VCreateSearchBaseListCell
     
     //MARK: internal
     
-    func factoryText(
-        model:MKLocalSearchCompletion) -> NSAttributedString
+    func factoryText(model:MKLocalSearchCompletion) -> NSAttributedString
     {
-        let title:NSAttributedString = factoryTitle(
-            model:model)
+        let title:NSAttributedString = factoryTitle(model:model)
         
         let string:NSMutableAttributedString = NSMutableAttributedString()
         string.append(title)
         
-        if let subtitle:NSAttributedString = factorySubtitle(
-            model:model)
+        if let subtitle:NSAttributedString = factorySubtitle(model:model)
         {
             string.append(breakLine)
             string.append(subtitle)
