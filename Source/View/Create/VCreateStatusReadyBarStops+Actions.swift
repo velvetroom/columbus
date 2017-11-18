@@ -4,8 +4,7 @@ extension VCreateStatusReadyBarStops
 {
     //MARK: private
     
-    private func header(
-        index:IndexPath) -> UICollectionReusableView
+    private func header(index:IndexPath) -> UICollectionReusableView
     {
         let reusable:VCreateStatusReadyBarStopsHeader = reusableAtIndex(
             kind:UICollectionElementKindSectionHeader,
@@ -14,8 +13,7 @@ extension VCreateStatusReadyBarStops
         return reusable
     }
     
-    private func footer(
-        index:IndexPath) -> UICollectionReusableView
+    private func footer(index:IndexPath) -> UICollectionReusableView
     {
         let reusable:VCreateStatusReadyBarStopsFooter = reusableAtIndex(
             kind:UICollectionElementKindSectionFooter,
@@ -40,8 +38,7 @@ extension VCreateStatusReadyBarStops
     
     //MARK: internal
     
-    func modelAtIndex(
-        index:IndexPath) -> DPlanStop
+    func modelAtIndex(index:IndexPath) -> DPlanStop
     {
         let item:DPlanStop = model![index.item]
         

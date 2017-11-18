@@ -8,8 +8,7 @@ extension VCreateStatusReadyBarStops
     {
         guard
             
-            let indexPath:IndexPath = factoryIndexPath(
-                stop:stop),
+            let indexPath:IndexPath = factoryIndexPath(stop:stop),
             let cell:VCreateStatusReadyBarStopsCell = collectionView.cellForItem(
                 at:indexPath) as? VCreateStatusReadyBarStopsCell
             
@@ -34,6 +33,7 @@ extension VCreateStatusReadyBarStops
             let footer:VCreateStatusReadyBarStopsFooter = collectionView.supplementaryView(
                 forElementKind:UICollectionElementKindSectionFooter,
                 at:index) as? VCreateStatusReadyBarStopsFooter,
+            
             let travel:[DPlanTravel] = self.travel,
             let distanceSettings:DSettingsDistance = self.distanceSettings
         

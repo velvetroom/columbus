@@ -15,8 +15,7 @@ extension VCreateStatusReadyBarStops
             return nil
         }
         
-        let indexPath:IndexPath? = factoryIndexPath(
-            index:index)
+        let indexPath:IndexPath? = factoryIndexPath(index:index)
         
         return indexPath
     }
@@ -55,8 +54,7 @@ extension VCreateStatusReadyBarStops
     
     func factoryIndexPath(index:Int) -> IndexPath?
     {
-        let currentItems:Int = collectionView.numberOfItems(
-            inSection:0)
+        let currentItems:Int = collectionView.numberOfItems(inSection:0)
         
         guard
             

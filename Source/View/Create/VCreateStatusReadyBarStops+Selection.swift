@@ -18,8 +18,7 @@ extension VCreateStatusReadyBarStops
     {
         guard
             
-            let indexPath:IndexPath = factoryIndexPath(
-                index:index)
+            let indexPath:IndexPath = factoryIndexPath(index:index)
         
         else
         {
@@ -33,8 +32,7 @@ extension VCreateStatusReadyBarStops
     {
         guard
         
-            let indexPath:IndexPath = factoryIndexPath(
-                stop:stop)
+            let indexPath:IndexPath = factoryIndexPath(stop:stop)
         
         else
         {
@@ -63,9 +61,7 @@ extension VCreateStatusReadyBarStops
             return
         }
         
-        let stop:DPlanStop = modelAtIndex(
-            index:indexPath)
-        view.viewMap.centreAndSelect(
-            stop:stop)
+        let stop:DPlanStop = modelAtIndex(index:indexPath)
+        view.viewMap.centreAndSelect(stop:stop)
     }
 }
