@@ -1,10 +1,8 @@
 import UIKit
 
-final class VCreateStatusNeedsPermissionContinue:
-    View<ArchCreate>
+final class VCreateStatusNeedsPermissionContinue:View<ArchCreate>
 {
     private weak var layoutButtonLeft:NSLayoutConstraint!
-    private let kButtonWidth:CGFloat = 200
     
     required init(controller:CCreate)
     {
@@ -46,7 +44,7 @@ final class VCreateStatusNeedsPermissionContinue:
             toView:self)
         NSLayoutConstraint.width(
             view:button,
-            constant:kButtonWidth)
+            constant:VCreateStatusNeedsPermissionContinue.Constants.buttonWidth)
         layoutButtonLeft = NSLayoutConstraint.leftToLeft(
             view:button,
             toView:self)
@@ -60,7 +58,7 @@ final class VCreateStatusNeedsPermissionContinue:
     override func layoutSubviews()
     {
         let width:CGFloat = bounds.width
-        let remainWidth:CGFloat = width - kButtonWidth
+        let remainWidth:CGFloat = width - VCreateStatusNeedsPermissionContinue.Constants.buttonWidth
         let buttonLeft:CGFloat = remainWidth / 2.0
         layoutButtonLeft.constant = buttonLeft
         
@@ -75,4 +73,3 @@ final class VCreateStatusNeedsPermissionContinue:
         controller.model.locationDelegate.askAuthorization()
     }
 }
-
