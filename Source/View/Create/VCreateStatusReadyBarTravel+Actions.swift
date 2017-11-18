@@ -15,8 +15,7 @@ extension VCreateStatusReadyBarTravel
             return nil
         }
         
-        let indexPath:IndexPath? = factoryIndexPath(
-            index:index)
+        let indexPath:IndexPath? = factoryIndexPath(index:index)
         
         return indexPath
     }
@@ -55,8 +54,7 @@ extension VCreateStatusReadyBarTravel
     
     private func factoryIndexPath(index:Int) -> IndexPath?
     {
-        let currentItems:Int = collectionView.numberOfItems(
-            inSection:0)
+        let currentItems:Int = collectionView.numberOfItems(inSection:0)
         
         guard
             
@@ -76,8 +74,7 @@ extension VCreateStatusReadyBarTravel
     
     //MARK: internal
     
-    func modelAtIndex(
-        index:IndexPath) -> DPlanTravel
+    func modelAtIndex(index:IndexPath) -> DPlanTravel
     {
         let item:DPlanTravel = model![index.item]
         
@@ -88,8 +85,7 @@ extension VCreateStatusReadyBarTravel
     {
         guard
             
-            let indexPath:IndexPath = factoryIndexPath(
-                travel:travel),
+            let indexPath:IndexPath = factoryIndexPath(travel:travel),
             let cell:VCreateStatusReadyBarTravelCell = collectionView.cellForItem(
                 at:indexPath) as? VCreateStatusReadyBarTravelCell
             

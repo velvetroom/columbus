@@ -9,7 +9,6 @@ extension VCreateStatusReadyBarTravel
         collectionView.isScrollEnabled = false
         collectionView.bounces = false
         
-        registerHeader(
-            header:VCreateStatusReadyBarTravelHeader.self)
+        registerHeader(header:VCreateStatusReadyBarTravelHeader.self)
     }
 }

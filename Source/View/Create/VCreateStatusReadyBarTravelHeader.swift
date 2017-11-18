@@ -1,7 +1,6 @@
 import UIKit
 
-final class VCreateStatusReadyBarTravelHeader:
-    UICollectionReusableView
+final class VCreateStatusReadyBarTravelHeader:UICollectionReusableView
 {
     override init(frame:CGRect)
     {

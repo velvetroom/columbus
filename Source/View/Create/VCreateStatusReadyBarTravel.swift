@@ -1,21 +1,17 @@
 import UIKit
 
-final class VCreateStatusReadyBarTravel:
-    VCollection<
+final class VCreateStatusReadyBarTravel:VCollection<
     ArchCreate,
     VCreateStatusReadyBarTravelCell>
 {
-    private let kHeaderHeight:CGFloat = 45
     private var cellSize:CGSize?
     private let headerSize:CGSize
-    private let kCellHeight:CGFloat = 50
     
     var model:[DPlanTravel]?
     {
         get
         {
-            return controller.model.plan?.plan.travels?.array as? [
-                DPlanTravel]
+            return controller.model.plan?.plan.travels?.array as? [DPlanTravel]
         }
     }
     
@@ -23,7 +19,7 @@ final class VCreateStatusReadyBarTravel:
     {
         headerSize = CGSize(
             width:0,
-            height:kHeaderHeight)
+            height:VCreateStatusReadyBarTravel.Constants.headerHeight)
         
         super.init(controller:controller)
         config()
@@ -64,9 +60,11 @@ final class VCreateStatusReadyBarTravel:
         else
         {
             let width:CGFloat = collectionView.bounds.width
+            
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:kCellHeight)
+                height:VCreateStatusReadyBarTravel.Constants.cellHeight)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -107,10 +105,8 @@ final class VCreateStatusReadyBarTravel:
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:DPlanTravel = modelAtIndex(
-            index:indexPath)
-        let cell:VCreateStatusReadyBarTravelCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:DPlanTravel = modelAtIndex(index:indexPath)
+        let cell:VCreateStatusReadyBarTravelCell = cellAtIndex(indexPath:indexPath)
         
         cell.config(
             controller:controller,

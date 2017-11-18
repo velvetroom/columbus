@@ -1,7 +1,6 @@
 import UIKit
 
-final class VCreateStatusReadyBarTravelCell:
-    UICollectionViewCell
+final class VCreateStatusReadyBarTravelCell:UICollectionViewCell
 {
     weak var imageView:UIImageView!
     private(set) weak var controller:CCreate?
@@ -60,8 +59,7 @@ final class VCreateStatusReadyBarTravelCell:
         self.controller = controller
         self.model = model
         
-        let image:UIImage? = VCreateStatusReadyBarTravelCell.factoryImage(
-            mode:model.mode)
+        let image:UIImage? = VCreateStatusReadyBarTravelCell.factoryImage(mode:model.mode)
         imageView.image = image
         
         hover()
