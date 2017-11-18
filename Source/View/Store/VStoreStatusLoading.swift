@@ -3,8 +3,6 @@ import UIKit
 final class VStoreStatusLoading:View<ArchStore>
 {
     private weak var layoutTitleTop:NSLayoutConstraint!
-    private let kTitleHeight:CGFloat = 50
-    private let kFontSize:CGFloat = 14
     
     required init(controller:CStore)
     {

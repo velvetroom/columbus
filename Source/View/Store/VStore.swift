@@ -20,8 +20,7 @@ final class VStore:ViewMain
             return
         }
         
-        let view:View<ArchStore> = status.viewType.init(
-            controller:controller)
+        let view:View<ArchStore> = status.viewType.init(controller:controller)
         self.view = view
         
         addSubview(view)
