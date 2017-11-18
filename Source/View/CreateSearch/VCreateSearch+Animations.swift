@@ -8,8 +8,7 @@ extension VCreateSearch
     {
         viewBase.layoutTop.constant = 0
         
-        UIView.animate(
-            withDuration:kAnimationDuration,
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration,
         animations:
         { [weak self] in
             
@@ -25,7 +24,7 @@ extension VCreateSearch
     {
         viewBase.layoutTop.constant = -viewBase.kHeight
         
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration)
         { [weak self] in
             
             self?.layoutIfNeeded()

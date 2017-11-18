@@ -6,11 +6,9 @@ extension VCreateSearch
     
     func factoryViews(controller:CCreateSearch)
     {
-        let viewCancel:VCreateSearchCancel = VCreateSearchCancel(
-            controller:controller)
+        let viewCancel:VCreateSearchCancel = VCreateSearchCancel(controller:controller)
         
-        let viewBase:VCreateSearchBase = VCreateSearchBase(
-            controller:controller)
+        let viewBase:VCreateSearchBase = VCreateSearchBase(controller:controller)
         self.viewBase = viewBase
         
         addSubview(viewCancel)
