@@ -453,6 +453,7 @@
 		DAF940D71FBFCE8A0094E7EB /* VSpinner+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */; };
 		DAF940D91FBFCF7D0094E7EB /* VGradient+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */; };
 		DAF940DB1FBFD0870094E7EB /* VSlider+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940DA1FBFD0870094E7EB /* VSlider+Constants.swift */; };
+		DAF940DF1FBFD1450094E7EB /* ViewMain+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940DE1FBFD1450094E7EB /* ViewMain+Constants.swift */; };
 		DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -917,6 +918,7 @@
 		DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSpinner+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VGradient+Constants.swift"; sourceTree = "<group>"; };
 		DAF940DA1FBFD0870094E7EB /* VSlider+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSlider+Constants.swift"; sourceTree = "<group>"; };
+		DAF940DE1FBFD1450094E7EB /* ViewMain+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewMain+Constants.swift"; sourceTree = "<group>"; };
 		DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1386,6 +1388,7 @@
 				DA65EC951F95E68700720673 /* ViewParent+Transitions.swift */,
 				DA65EC931F95E68700720673 /* ViewParent+Gesture.swift */,
 				DA65EC941F95E68700720673 /* ViewMain.swift */,
+				DAF940DE1FBFD1450094E7EB /* ViewMain+Constants.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -2057,6 +2060,7 @@
 				DA79506E1FAEFFC60057F6EE /* DSettingsPerksMap.swift in Sources */,
 				DA5DA31B1FBD18540047FED4 /* VSettingsMemoryListCell.swift in Sources */,
 				DAB2F9031F966A5600C1EF4A /* VSettings.swift in Sources */,
+				DAF940DF1FBFD1450094E7EB /* ViewMain+Constants.swift in Sources */,
 				DA4FC1EC1FAFD87E00B103BA /* MStore+TransactionsRoute.swift in Sources */,
 				DA3495F71F9ABF3000D75252 /* VCreateStatusReadyBarTravel.swift in Sources */,
 				DA9E96071F9667DE00538374 /* ArchCreate.swift in Sources */,
