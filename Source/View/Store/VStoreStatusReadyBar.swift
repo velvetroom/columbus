@@ -7,8 +7,7 @@ final class VStoreStatusReadyBar:View<ArchStore>
         super.init(controller:controller)
         backgroundColor = UIColor.white
         
-        let border:VBorder = VBorder(
-            colour:UIColor(white:0, alpha:0.2))
+        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.2))
         
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
@@ -16,11 +15,9 @@ final class VStoreStatusReadyBar:View<ArchStore>
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.font = UIFont.medium(size:VStoreStatusReadyBar.Constants.fontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
-        labelTitle.text = String.localizedView(
-            key:"VStoreStatusReadyBar_labelTitle")
+        labelTitle.text = String.localizedView(key:"VStoreStatusReadyBar_labelTitle")
         
-        let viewRestore:VStoreStatusReadyBarRestore = VStoreStatusReadyBarRestore(
-            controller:controller)
+        let viewRestore:VStoreStatusReadyBarRestore = VStoreStatusReadyBarRestore(controller:controller)
         
         addSubview(border)
         addSubview(labelTitle)

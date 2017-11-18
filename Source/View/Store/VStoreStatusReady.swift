@@ -19,11 +19,9 @@ final class VStoreStatusReady:View<ArchStore>
     
     private func factoryViews()
     {
-        let viewBar:VStoreStatusReadyBar = VStoreStatusReadyBar(
-            controller:controller)
+        let viewBar:VStoreStatusReadyBar = VStoreStatusReadyBar(controller:controller)
         
-        let viewList:VStoreStatusReadyList = VStoreStatusReadyList(
-            controller:controller)
+        let viewList:VStoreStatusReadyList = VStoreStatusReadyList(controller:controller)
         self.viewList = viewList
         
         addSubview(viewList)
