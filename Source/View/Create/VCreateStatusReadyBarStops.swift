@@ -1,28 +1,23 @@
 import UIKit
 
-final class VCreateStatusReadyBarStops:
-    VCollection<
+final class VCreateStatusReadyBarStops:VCollection<
     ArchCreate,
     VCreateStatusReadyBarStopsCell>
 {
     weak var viewTravel:VCreateStatusReadyBarTravel!
-    let kInsetsTop:CGFloat = 10
     private var cellSize:CGSize?
     private let headerSize:CGSize
     private let footerSize:CGSize
-    private let kFooterHeight:CGFloat = 44
-    private let kHeaderHeight:CGFloat = 230
-    private let kCellHeight:CGFloat = 50
     
     required init(controller:CCreate)
     {
         headerSize = CGSize(
             width:0,
-            height:kHeaderHeight)
+            height:VCreateStatusReadyBarStops.Constants.headerHeight)
         
         footerSize = CGSize(
             width:0,
-            height:kFooterHeight)
+            height:VCreateStatusReadyBarStops.Constants.footerHeight)
         
         super.init(controller:controller)
         config()
@@ -33,8 +28,7 @@ final class VCreateStatusReadyBarStops:
         return nil
     }
     
-    override func scrollViewDidScroll(
-        _ scrollView:UIScrollView)
+    override func scrollViewDidScroll(_ scrollView:UIScrollView)
     {
         replicateScroll()
     }
@@ -42,7 +36,7 @@ final class VCreateStatusReadyBarStops:
     override func collectionView(
         _ collectionView:UICollectionView,
         layout collectionViewLayout:UICollectionViewLayout,
-        referenceSizeForHeaderInSection section: Int) -> CGSize
+        referenceSizeForHeaderInSection section:Int) -> CGSize
     {
         guard
         
@@ -87,9 +81,11 @@ final class VCreateStatusReadyBarStops:
         else
         {
             let width:CGFloat = collectionView.bounds.width
+            
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:kCellHeight)
+                height:VCreateStatusReadyBarStops.Constants.cellHeight)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -132,10 +128,8 @@ final class VCreateStatusReadyBarStops:
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:DPlanStop = modelAtIndex(
-            index:indexPath)
-        let cell:VCreateStatusReadyBarStopsCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:DPlanStop = modelAtIndex(index:indexPath)
+        let cell:VCreateStatusReadyBarStopsCell = cellAtIndex(indexPath:indexPath)
         
         cell.config(
             controller:controller,
