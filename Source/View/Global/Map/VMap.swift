@@ -13,11 +13,11 @@ class VMap<A>:
     init(controller:A.C)
     {
         shouldUpdate = true
+        rendererStrokeColour = UIColor.colourSuccess.withAlphaComponent(0.6)
+        
         span = MKCoordinateSpan(
-            latitudeDelta:kSpanSize,
-            longitudeDelta:kSpanSize)
-        rendererStrokeColour = UIColor.colourSuccess.withAlphaComponent(
-            0.6)
+            latitudeDelta:VMapConstants.spanSize,
+            longitudeDelta:VMapConstants.spanSize)
         
         super.init(frame:CGRect.zero)
         self.controller = controller
@@ -43,8 +43,7 @@ class VMap<A>:
         _ mapView:MKMapView,
         viewFor annotation:MKAnnotation) -> MKAnnotationView?
     {
-        let view:MKAnnotationView? = viewFor(
-            annotation:annotation)
+        let view:MKAnnotationView? = viewFor(annotation:annotation)
         
         return view
     }
@@ -53,8 +52,7 @@ class VMap<A>:
         _ mapView:MKMapView,
         rendererFor overlay:MKOverlay) -> MKOverlayRenderer
     {
-        let renderer:MKOverlayRenderer = rendererFor(
-            overlay:overlay)
+        let renderer:MKOverlayRenderer = rendererFor(overlay:overlay)
         
         return renderer
     }

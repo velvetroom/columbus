@@ -4,22 +4,20 @@ extension VMap
 {
     //MARK: private
     
-    private func factoryRenderer(
-        polyline:MKPolyline) -> MKOverlayRenderer
+    private func factoryRenderer(polyline:MKPolyline) -> MKOverlayRenderer
     {
         let renderer:MKPolylineRenderer = MKPolylineRenderer(
             polyline:polyline)
-        renderer.lineWidth = kRendererWidth
+        renderer.lineWidth = VMapConstants.rendererWidth
         renderer.strokeColor = rendererStrokeColour
-        renderer.lineDashPattern = kRendererLineDash
+        renderer.lineDashPattern = VMapConstants.rendererLineDash
         
         return renderer
     }
     
     //MARK: internal
     
-    final func factoryPin(
-        stop:DPlanStop) -> VMapPin
+    final func factoryPin(stop:DPlanStop) -> VMapPin
     {
         guard
             
@@ -29,8 +27,7 @@ extension VMap
             
         else
         {
-            let view:VMapPin = VMapPin(
-                stop:stop)
+            let view:VMapPin = VMapPin(stop:stop)
             
             return view
         }
@@ -40,17 +37,14 @@ extension VMap
         return view
     }
     
-    final func factoryUser(
-        annotation:MKAnnotation) -> MKAnnotationView?
+    final func factoryUser(annotation:MKAnnotation) -> MKAnnotationView?
     {
-        let annotationView:MKAnnotationView? = view(
-            for:annotation)
+        let annotationView:MKAnnotationView? = view(for:annotation)
         
         return annotationView
     }
     
-    func factoryRenderer(
-        overlay:MKOverlay) -> MKOverlayRenderer
+    func factoryRenderer(overlay:MKOverlay) -> MKOverlayRenderer
     {
         let renderer:MKOverlayRenderer
         
@@ -60,8 +54,7 @@ extension VMap
         }
         else if let tile:MKTileOverlay = overlay as? MKTileOverlay
         {
-            renderer = MKTileOverlayRenderer(
-                tileOverlay:tile)
+            renderer = MKTileOverlayRenderer(tileOverlay:tile)
         }
         else
         {

@@ -9,6 +9,7 @@ extension VMap
         setCenter(
             stop.coordinate,
             animated:true)
+        
         selectAnnotation(
             stop,
             animated:true)
@@ -29,8 +30,7 @@ extension VMap
         selectedAnnotations = []
     }
     
-    final func centreCoordinateRegion(
-        coordinate:CLLocationCoordinate2D)
+    final func centreCoordinateRegion(coordinate:CLLocationCoordinate2D)
     {
         let region:MKCoordinateRegion = MKCoordinateRegionMake(
             coordinate,
@@ -43,6 +43,7 @@ extension VMap
     {
         let midX:CGFloat = bounds.midX
         let midY:CGFloat = bounds.midY
+        
         let point:CGPoint = CGPoint(
             x:midX,
             y:midY)

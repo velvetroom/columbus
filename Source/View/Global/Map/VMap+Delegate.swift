@@ -4,13 +4,12 @@ extension VMap
 {
     //MARK: internal
     
-    final func didUpdate(
-        userLocation:MKUserLocation)
+    final func didUpdate(userLocation:MKUserLocation)
     {
         guard
             
             let location:CLLocation = userLocation.location,
-            location.horizontalAccuracy < kDistanceAccuracy,
+            location.horizontalAccuracy < VMapConstants.distanceAccuracy,
             shouldUpdate
             
         else
@@ -19,13 +18,11 @@ extension VMap
         }
         
         shouldUpdate = false
-        centreCoordinateRegion(
-            coordinate:userLocation.coordinate)
+        centreCoordinateRegion(coordinate:userLocation.coordinate)
         userLocation.title = nil
     }
     
-    final func viewFor(
-        annotation:MKAnnotation) -> MKAnnotationView?
+    final func viewFor(annotation:MKAnnotation) -> MKAnnotationView?
     {
         guard
             
@@ -33,23 +30,19 @@ extension VMap
             
         else
         {
-            let view:MKAnnotationView? = factoryUser(
-                annotation:annotation)
+            let view:MKAnnotationView? = factoryUser(annotation:annotation)
             
             return view
         }
         
-        let view:VMapPin = factoryPin(
-            stop:stop)
+        let view:VMapPin = factoryPin(stop:stop)
         
         return view
     }
     
-    final func rendererFor(
-        overlay:MKOverlay) -> MKOverlayRenderer
+    final func rendererFor(overlay:MKOverlay) -> MKOverlayRenderer
     {
-        let renderer:MKOverlayRenderer = factoryRenderer(
-            overlay:overlay)
+        let renderer:MKOverlayRenderer = factoryRenderer(overlay:overlay)
         
         return renderer
     }
