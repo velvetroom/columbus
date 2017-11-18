@@ -22,10 +22,10 @@ extension VCreateStatusReady
         viewBar.layoutTop = NSLayoutConstraint.topToTop(
             view:viewBar,
             toView:self,
-            constant:-viewBar.kHeight)
+            constant:-VCreateStatusReadyBar.Constants.height)
         NSLayoutConstraint.height(
             view:viewBar,
-            constant:viewBar.kHeight)
+            constant:VCreateStatusReadyBar.Constants.height)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)

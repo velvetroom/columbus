@@ -6,20 +6,16 @@ extension VCreateStatusReadyBar
     
     func factoryViews()
     {
-        let border:VBorder = VBorder(
-            colour:UIColor(white:0, alpha:0.4))
+        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.4))
         
-        let viewTravel:VCreateStatusReadyBarTravel = VCreateStatusReadyBarTravel(
-            controller:controller)
+        let viewTravel:VCreateStatusReadyBarTravel = VCreateStatusReadyBarTravel(controller:controller)
         self.viewTravel = viewTravel
         
-        let viewStops:VCreateStatusReadyBarStops = VCreateStatusReadyBarStops(
-            controller:controller)
+        let viewStops:VCreateStatusReadyBarStops = VCreateStatusReadyBarStops(controller:controller)
         viewStops.viewTravel = viewTravel
         self.viewStops = viewStops
         
-        let viewLoader:VCreateStatusReadyBarLoader = VCreateStatusReadyBarLoader(
-            controller:controller)
+        let viewLoader:VCreateStatusReadyBarLoader = VCreateStatusReadyBarLoader(controller:controller)
         self.viewLoader = viewLoader
         
         addSubview(border)
@@ -32,7 +28,7 @@ extension VCreateStatusReadyBar
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
@@ -42,7 +38,7 @@ extension VCreateStatusReadyBar
             toView:border)
         NSLayoutConstraint.height(
             view:viewLoader,
-            constant:kLoaderHeight)
+            constant:VCreateStatusReadyBar.Constants.loaderHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewLoader,
             toView:self)
@@ -50,11 +46,11 @@ extension VCreateStatusReadyBar
         NSLayoutConstraint.topToTop(
             view:viewStops,
             toView:self,
-            constant:kContentTop)
+            constant:VCreateStatusReadyBar.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:viewStops,
             toView:self,
-            constant:kContentBottom)
+            constant:VCreateStatusReadyBar.Constants.contentBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:viewStops,
             toView:self)
@@ -62,16 +58,16 @@ extension VCreateStatusReadyBar
         NSLayoutConstraint.topToTop(
             view:viewTravel,
             toView:self,
-            constant:kContentTop)
+            constant:VCreateStatusReadyBar.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:viewTravel,
             toView:self,
-            constant:kContentBottom)
+            constant:VCreateStatusReadyBar.Constants.contentBottom)
         NSLayoutConstraint.leftToLeft(
             view:viewTravel,
             toView:self)
         NSLayoutConstraint.width(
             view:viewTravel,
-            constant:kTravelWidth)
+            constant:VCreateStatusReadyBar.Constants.travelWidth)
     }
 }

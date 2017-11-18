@@ -10,9 +10,8 @@ extension VCreateStatusReadyBar
     {
         layoutTop.constant = top
         
-        UIView.animate(
-            withDuration:kAnimationDuration,
-            animations:
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration,
+        animations:
         { [weak self] in
             
             self?.superview?.layoutIfNeeded()
