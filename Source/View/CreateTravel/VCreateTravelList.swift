@@ -8,10 +8,6 @@ final class VCreateTravelList:VCollection<
     weak var layoutSelectorLeft:NSLayoutConstraint!
     weak var layoutSelectorTop:NSLayoutConstraint!
     let selectorSize_2:CGFloat
-    let kSelectorSize:CGFloat = 50
-    let kAnimationDuration:TimeInterval = 0.2
-    let kWaitToSelect:TimeInterval = 0.1
-    let kWaitToUpdate:TimeInterval = 0.4
     private var cellSize:CGSize?
     
     required init(controller:CCreateTravel)
