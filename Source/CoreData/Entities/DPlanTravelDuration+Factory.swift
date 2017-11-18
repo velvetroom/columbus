@@ -2,14 +2,9 @@ import Foundation
 
 extension DPlanTravelDuration
 {
-    private static let kSecondsInDay:TimeInterval = 86400
-    private static let kSecondsInHour:TimeInterval = 3600
-    private static let kSecondsInMinute:TimeInterval = 60
-    
     //MARK: private
     
-    private static func factoryTotalDuration(
-        travels:[DPlanTravel]) -> TimeInterval
+    private static func factoryTotalDuration(travels:[DPlanTravel]) -> TimeInterval
     {
         var duration:TimeInterval = 0
         
@@ -21,39 +16,34 @@ extension DPlanTravelDuration
         return duration
     }
     
-    private static func factoryDuration(
-        totalDuration:TimeInterval) -> DPlanTravelDuration
+    private static func factoryDuration(totalDuration:TimeInterval) -> DPlanTravelDuration
     {
         let duration:DPlanTravelDuration
         
-        if totalDuration > kSecondsInDay
+        if totalDuration > DPlanTravelDuration.Constants.secondsInDay
         {
-            duration = factoryDays(
-                duration:totalDuration)
+            duration = factoryDays(duration:totalDuration)
         }
-        else if totalDuration > kSecondsInHour
+        else if totalDuration > DPlanTravelDuration.Constants.secondsInHour
         {
-            duration = factoryHours(
-                duration:totalDuration)
+            duration = factoryHours(duration:totalDuration)
         }
-        else if totalDuration > kSecondsInMinute
+        else if totalDuration > DPlanTravelDuration.Constants.secondsInMinute
         {
-            duration = factoryMinutes(
-                duration:totalDuration)
+            duration = factoryMinutes(duration:totalDuration)
         }
         else
         {
-            duration = factorySeconds(
-                duration:totalDuration)
+            duration = factorySeconds(duration:totalDuration)
         }
         
         return duration
     }
     
-    private static func factoryDays(
-        duration:TimeInterval) -> DPlanTravelDuration
+    private static func factoryDays(duration:TimeInterval) -> DPlanTravelDuration
     {
-        let days:TimeInterval = duration / kSecondsInDay
+        let days:TimeInterval = duration / DPlanTravelDuration.Constants.secondsInDay
+        
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.days,
             amount:days)
@@ -61,10 +51,10 @@ extension DPlanTravelDuration
         return model
     }
     
-    private static func factoryHours(
-        duration:TimeInterval) -> DPlanTravelDuration
+    private static func factoryHours(duration:TimeInterval) -> DPlanTravelDuration
     {
-        let hours:TimeInterval = duration / kSecondsInHour
+        let hours:TimeInterval = duration / DPlanTravelDuration.Constants.secondsInHour
+        
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.hours,
             amount:hours)
@@ -72,10 +62,10 @@ extension DPlanTravelDuration
         return model
     }
     
-    private static func factoryMinutes(
-        duration:TimeInterval) -> DPlanTravelDuration
+    private static func factoryMinutes(duration:TimeInterval) -> DPlanTravelDuration
     {
-        let minutes:TimeInterval = duration / kSecondsInMinute
+        let minutes:TimeInterval = duration / DPlanTravelDuration.Constants.secondsInMinute
+        
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.minutes,
             amount:minutes)
@@ -83,8 +73,7 @@ extension DPlanTravelDuration
         return model
     }
     
-    private static func factorySeconds(
-        duration:TimeInterval) -> DPlanTravelDuration
+    private static func factorySeconds(duration:TimeInterval) -> DPlanTravelDuration
     {
         let model:DPlanTravelDuration = DPlanTravelDuration(
             type:DPlanTravelDurationType.seconds,
@@ -95,13 +84,10 @@ extension DPlanTravelDuration
     
     //MARK: internal
     
-    static func factoryDuration(
-        travels:[DPlanTravel]) -> DPlanTravelDuration
+    static func factoryDuration(travels:[DPlanTravel]) -> DPlanTravelDuration
     {
-        let totalDuration:TimeInterval = factoryTotalDuration(
-            travels:travels)
-        let duration:DPlanTravelDuration = factoryDuration(
-            totalDuration:totalDuration)
+        let totalDuration:TimeInterval = factoryTotalDuration(travels:travels)
+        let duration:DPlanTravelDuration = factoryDuration(totalDuration:totalDuration)
         
         return duration
     }
