@@ -6,14 +6,11 @@ extension VSettingsListCellTravelMode
     
     private func factoryTitle() -> NSAttributedString
     {
-        let string:String = String.localizedView(
-            key:"VSettingsListCellTravelMode_title")
-        let attributes:[
-            NSAttributedStringKey:Any] = [
-                NSAttributedStringKey.font:
-                    UIFont.regular(size:kTitleFontSize),
-                NSAttributedStringKey.foregroundColor:
-                    UIColor.colourBackgroundDark]
+        let string:String = String.localizedView(key:"VSettingsListCellTravelMode_title")
+        
+        let attributes:[NSAttributedStringKey:Any] = [
+            NSAttributedStringKey.font : UIFont.regular(size:VSettingsListCellTravelMode.Constants.titleFontSize),
+            NSAttributedStringKey.foregroundColor : UIColor.colourBackgroundDark]
         
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
@@ -24,14 +21,11 @@ extension VSettingsListCellTravelMode
     
     private func factoryDescr() -> NSAttributedString
     {
-        let string:String = String.localizedView(
-            key:"VSettingsListCellTravelMode_descr")
-        let attributes:[
-            NSAttributedStringKey:Any] = [
-                NSAttributedStringKey.font:
-                    UIFont.regular(size:kDescrFontSize),
-                NSAttributedStringKey.foregroundColor:
-                    UIColor(white:0, alpha:0.45)]
+        let string:String = String.localizedView(key:"VSettingsListCellTravelMode_descr")
+        
+        let attributes:[NSAttributedStringKey:Any] = [
+                NSAttributedStringKey.font : UIFont.regular(size:VSettingsListCellTravelMode.Constants.descrFontSize),
+                NSAttributedStringKey.foregroundColor : UIColor(white:0, alpha:0.45)]
         
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
@@ -74,11 +68,11 @@ extension VSettingsListCellTravelMode
         NSLayoutConstraint.topToTop(
             view:viewList,
             toView:self,
-            constant:kCaptionHeight)
+            constant:VSettingsListCellTravelMode.Constants.captionHeight)
         NSLayoutConstraint.bottomToBottom(
             view:viewList,
             toView:self,
-            constant:kListBottom)
+            constant:VSettingsListCellTravelMode.Constants.listBottom)
         NSLayoutConstraint.equalsHorizontal(
             view:viewList,
             toView:self)
@@ -101,11 +95,11 @@ extension VSettingsListCellTravelMode
             toView:self)
         NSLayoutConstraint.height(
             view:labelCaption,
-            constant:kCaptionHeight)
+            constant:VSettingsListCellTravelMode.Constants.captionHeight)
         NSLayoutConstraint.leftToLeft(
             view:labelCaption,
             toView:self,
-            constant:kCaptionLeft)
+            constant:VSettingsListCellTravelMode.Constants.captionLeft)
         NSLayoutConstraint.rightToRight(
             view:labelCaption,
             toView:self)
