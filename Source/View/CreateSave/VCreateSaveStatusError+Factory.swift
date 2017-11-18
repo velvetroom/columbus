@@ -7,12 +7,11 @@ extension VCreateSaveStatusError
     private func factoryTitle() -> NSAttributedString
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.medium(size:kTitleFontSize),
-            NSAttributedStringKey.foregroundColor:
-                UIColor.white]
-        let string:String = String.localizedView(
-            key:"VCreateSaveStatusError_labelTitle")
+            NSAttributedStringKey.font : UIFont.medium(size:VCreateSaveStatusError.Constants.titleFontSize),
+            NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+        let string:String = String.localizedView(key:"VCreateSaveStatusError_labelTitle")
+        
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -23,12 +22,11 @@ extension VCreateSaveStatusError
     private func factoryDescr() -> NSAttributedString
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:kDescrFontSize),
-            NSAttributedStringKey.foregroundColor:
-                UIColor(white:1, alpha:0.8)]
-        let string:String = String.localizedView(
-            key:"VCreateSaveStatusError_labelDescr")
+            NSAttributedStringKey.font : UIFont.regular(size:VCreateSaveStatusError.Constants.descrFontSize),
+            NSAttributedStringKey.foregroundColor : UIColor(white:1, alpha:0.8)]
+        
+        let string:String = String.localizedView(key:"VCreateSaveStatusError_labelDescr")
+        
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -81,11 +79,10 @@ extension VCreateSaveStatusError
             UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
         buttonCancel.setTitle(
-            String.localizedView(
-                key:"VCreateSaveStatusError_buttonCancel"),
+            String.localizedView(key:"VCreateSaveStatusError_buttonCancel"),
             for:UIControlState.normal)
         buttonCancel.titleLabel!.font = UIFont.regular(
-            size:kCancelFontSize)
+            size:VCreateSaveStatusError.Constants.cancelFontSize)
         buttonCancel.addTarget(
             self,
             action:#selector(selectorCancel(sender:)),
@@ -100,11 +97,10 @@ extension VCreateSaveStatusError
             UIColor(white:1, alpha:0.2),
             for:UIControlState.highlighted)
         buttonRetry.setTitle(
-            String.localizedView(
-                key:"VCreateSaveStatusError_buttonRetry"),
+            String.localizedView(key:"VCreateSaveStatusError_buttonRetry"),
             for:UIControlState.normal)
         buttonRetry.titleLabel!.font = UIFont.bold(
-            size:kRetryFontSize)
+            size:VCreateSaveStatusError.Constants.retryFontSize)
         buttonRetry.addTarget(
             self,
             action:#selector(selectorRetry(sender:)),
@@ -131,10 +127,10 @@ extension VCreateSaveStatusError
         NSLayoutConstraint.bottomToBottom(
             view:label,
             toView:self,
-            constant:kLabelBottom)
+            constant:VCreateSaveStatusError.Constants.labelBottom)
         NSLayoutConstraint.height(
             view:label,
-            constant:kLabelHeight)
+            constant:VCreateSaveStatusError.Constants.labelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)
@@ -144,33 +140,33 @@ extension VCreateSaveStatusError
             toView:buttonRetry)
         NSLayoutConstraint.height(
             view:buttonCancel,
-            constant:kButtonHeight)
+            constant:VCreateSaveStatusError.Constants.buttonHeight)
         layoutCancelLeft = NSLayoutConstraint.leftToLeft(
             view:buttonCancel,
             toView:self)
         NSLayoutConstraint.width(
             view:buttonCancel,
-            constant:kButtonWidth)
+            constant:VCreateSaveStatusError.Constants.buttonWidth)
         
         NSLayoutConstraint.topToBottom(
             view:buttonRetry,
             toView:label)
         NSLayoutConstraint.height(
             view:buttonRetry,
-            constant:kButtonHeight)
+            constant:VCreateSaveStatusError.Constants.buttonHeight)
         layoutRetryLeft = NSLayoutConstraint.leftToLeft(
             view:buttonRetry,
             toView:self)
         NSLayoutConstraint.width(
             view:buttonRetry,
-            constant:kButtonWidth)
+            constant:VCreateSaveStatusError.Constants.buttonWidth)
         
         NSLayoutConstraint.bottomToTop(
             view:image,
             toView:label)
         NSLayoutConstraint.height(
             view:image,
-            constant:kImageHeight)
+            constant:VCreateSaveStatusError.Constants.imageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:image,
             toView:self)
