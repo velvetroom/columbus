@@ -9,10 +9,6 @@ class VMap<A>:
     var shouldUpdate:Bool
     let span:MKCoordinateSpan
     let rendererStrokeColour:UIColor
-    let kRendererLineDash:[NSNumber] = [1, 10]
-    let kRendererWidth:CGFloat = 6
-    let kDistanceAccuracy:CLLocationDistance = 100
-    private let kSpanSize:CLLocationDegrees = 0.003
     
     init(controller:A.C)
     {
