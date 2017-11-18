@@ -2,15 +2,12 @@ import UIKit
 
 extension VCreateStatusReadyBarLoader
 {
-    private static let kQueueName:String = "iturbide.columbus.loader"
-    private static let kSemaphoreCount:Int = 1
-    
     //MARK: internal
     
     class func factoryDispatchQueue() -> DispatchQueue
     {
         let dispatchQueue:DispatchQueue = DispatchQueue(
-            label:kQueueName,
+            label:VCreateStatusReadyBarLoader.Constants.Dispatch.queueName,
             qos:DispatchQoS.background,
             attributes:DispatchQueue.Attributes(),
             autoreleaseFrequency:
@@ -24,7 +21,7 @@ extension VCreateStatusReadyBarLoader
     class func factoryDispatchSemaphore() -> DispatchSemaphore
     {
         let dispatchSemaphore:DispatchSemaphore = DispatchSemaphore(
-            value:kSemaphoreCount)
+            value:VCreateStatusReadyBarLoader.Constants.Dispatch.semaphoreCount)
         
         return dispatchSemaphore
     }

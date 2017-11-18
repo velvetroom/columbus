@@ -28,9 +28,8 @@ extension VCreateStatusReadyBarLoader
         viewProgress.alpha = 1
         layoutProgressWidth.constant = bounds.width
         
-        UIView.animate(
-            withDuration:kAnimationDuration,
-            animations:
+        UIView.animate(withDuration:VCreateStatusReadyBarLoader.Constants.UI.animationDuration,
+        animations:
         { [weak self] in
             
             self?.layoutIfNeeded()
@@ -43,9 +42,8 @@ extension VCreateStatusReadyBarLoader
     
     private func animateFade()
     {
-        UIView.animate(
-            withDuration:kFadeDuration,
-            animations:
+        UIView.animate(withDuration:VCreateStatusReadyBarLoader.Constants.UI.fadeDuration,
+        animations:
         { [weak self] in
             
             self?.viewProgress.alpha = 0
