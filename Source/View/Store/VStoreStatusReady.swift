@@ -3,7 +3,6 @@ import UIKit
 final class VStoreStatusReady:View<ArchStore>
 {
     private(set) weak var viewList:VStoreStatusReadyList!
-    private let kBarHeight:CGFloat = 64
     
     required init(controller:CStore)
     {
@@ -35,7 +34,7 @@ final class VStoreStatusReady:View<ArchStore>
             toView:self)
         NSLayoutConstraint.height(
             view:viewBar,
-            constant:kBarHeight)
+            constant:ViewMain.Constants.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)

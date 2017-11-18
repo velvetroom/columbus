@@ -21,11 +21,10 @@ final class VStoreStatusLoading:View<ArchStore>
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.regular(size:kFontSize)
+        labelTitle.font = UIFont.regular(size:VStoreStatusLoading.Constants.fontSize)
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textColor = UIColor.colourBackgroundDark
-        labelTitle.text = String.localizedView(
-            key:"VStoreStatusLoading_labelTitle")
+        labelTitle.text = String.localizedView(key:"VStoreStatusLoading_labelTitle")
         
         addSubview(icon)
         addSubview(labelTitle)
@@ -39,7 +38,7 @@ final class VStoreStatusLoading:View<ArchStore>
             toView:self)
         NSLayoutConstraint.height(
             view:labelTitle,
-            constant:kTitleHeight)
+            constant:VStoreStatusLoading.Constants.titleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
