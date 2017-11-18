@@ -2,17 +2,9 @@ import Foundation
 
 extension DPlanTravel
 {
-    private static let kDistanceConversion:[
-        DSettingsDistance:Float] = [
-            DSettingsDistance.kilometres:
-                1000.0,
-            DSettingsDistance.miles:
-                1609.34449789256338]
-    
     //MARK: private
     
-    private class func factoryDistance(
-        travels:[DPlanTravel]) -> Float
+    private class func factoryDistance(travels:[DPlanTravel]) -> Float
     {
         var distance:Float = 0
         
@@ -30,8 +22,7 @@ extension DPlanTravel
     {
         guard
         
-            let divisor:Float = kDistanceConversion[
-                distanceSettings]
+            let divisor:Float = DPlanTravel.Constants.distanceConversion[distanceSettings]
         
         else
         {
@@ -49,8 +40,8 @@ extension DPlanTravel
         travels:[DPlanTravel],
         distanceSettings:DSettingsDistance) -> Float
     {
-        let distanceMetres:Float = factoryDistance(
-            travels:travels)
+        let distanceMetres:Float = factoryDistance(travels:travels)
+        
         let distance:Float = convert(
             distance:distanceMetres,
             distanceSettings:distanceSettings)

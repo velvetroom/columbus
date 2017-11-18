@@ -8,8 +8,7 @@ extension DPlanTravel
         {
             guard
                 
-                let status:DPlanTravelStatus = DPlanTravelStatus(
-                    rawValue:rawStatus)
+                let status:DPlanTravelStatus = DPlanTravelStatus(rawValue:rawStatus)
                 
             else
             {
@@ -31,8 +30,7 @@ extension DPlanTravel
         {
             guard
                 
-                let mode:DPlanTravelMode = DPlanTravelMode(
-                    rawValue:rawMode)
+                let mode:DPlanTravelMode = DPlanTravelMode(rawValue:rawMode)
                 
             else
             {
