@@ -22,7 +22,7 @@ extension VCreateSearch
     
     func animateHide()
     {
-        viewBase.layoutTop.constant = -viewBase.kHeight
+        viewBase.layoutTop.constant = -VCreateSearchBase.Constants.height
         
         UIView.animate(withDuration:ViewMain.Constants.animationDuration)
         { [weak self] in

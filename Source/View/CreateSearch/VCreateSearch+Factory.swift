@@ -21,10 +21,10 @@ extension VCreateSearch
         viewBase.layoutTop = NSLayoutConstraint.topToTop(
             view:viewBase,
             toView:self,
-            constant:-viewBase.kHeight)
+            constant:-VCreateSearchBase.Constants.height)
         NSLayoutConstraint.height(
             view:viewBase,
-            constant:viewBase.kHeight)
+            constant:VCreateSearchBase.Constants.height)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBase,
             toView:self)

@@ -8,12 +8,10 @@ extension VCreateSearchBase
     {
         let border:VBorder = VBorder(colour:UIColor.black)
         
-        let viewList:VCreateSearchBaseList = VCreateSearchBaseList(
-            controller:controller)
+        let viewList:VCreateSearchBaseList = VCreateSearchBaseList(controller:controller)
         self.viewList = viewList
         
-        let viewBar:VCreateSearchBaseBar = VCreateSearchBaseBar(
-            controller:controller)
+        let viewBar:VCreateSearchBaseBar = VCreateSearchBaseBar(controller:controller)
         self.viewBar = viewBar
         
         addSubview(viewList)
@@ -25,7 +23,7 @@ extension VCreateSearchBase
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
@@ -39,7 +37,7 @@ extension VCreateSearchBase
             toView:self)
         NSLayoutConstraint.height(
             view:viewBar,
-            constant:kBarHeight)
+            constant:VCreateSearchBase.Constants.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)
