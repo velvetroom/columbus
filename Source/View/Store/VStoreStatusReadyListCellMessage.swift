@@ -14,7 +14,7 @@ final class VStoreStatusReadyListCellMessage:VStoreStatusReadyListCellAvailable
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
-        label.font = UIFont.regular(size:kLabelFontSize)
+        label.font = UIFont.regular(size:VStoreStatusReadyListCellMessage.Constants.labelFontSize)
         label.textColor = UIColor(white:0, alpha:0.4)
         self.label = label
         
@@ -25,7 +25,7 @@ final class VStoreStatusReadyListCellMessage:VStoreStatusReadyListCellAvailable
             toView:self)
         NSLayoutConstraint.height(
             view:label,
-            constant:kLabelHeight)
+            constant:VStoreStatusReadyListCellMessage.Constants.labelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)
@@ -34,5 +34,25 @@ final class VStoreStatusReadyListCellMessage:VStoreStatusReadyListCellAvailable
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func config(
+        controller:CStore,
+        model:MStorePerkProtocol)
+    {
+        super.config(
+            controller:controller,
+            model:model)
+        
+        guard
+            
+            let status:MStorePerkStatusAvailableMessageProtocol = model.status as? MStorePerkStatusAvailableMessageProtocol
+            
+        else
+        {
+            return
+        }
+        
+        label.text = status.message
     }
 }

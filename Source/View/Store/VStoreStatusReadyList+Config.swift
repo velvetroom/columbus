@@ -10,9 +10,7 @@ extension VStoreStatusReadyList
         collectionView.alwaysBounceVertical = true
         
         registerCell(cell:VStoreStatusReadyListCellNew.self)
-        registerCell(cell:VStoreStatusReadyListCellDeferred.self)
-        registerCell(cell:VStoreStatusReadyListCellPurchased.self)
-        registerCell(cell:VStoreStatusReadyListCellPurchasing.self)
+        registerCell(cell:VStoreStatusReadyListCellMessage.self)
         registerCell(cell:VStoreStatusReadyListCellUnavailable.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
