@@ -2,12 +2,6 @@ import UIKit
 
 final class VCreateStatusError:View<ArchCreate>
 {
-    private let kImageTop:CGFloat = 210
-    private let kImageHeight:CGFloat = 50
-    private let kLabelHeight:CGFloat = 220
-    private let kFontSizeTitle:CGFloat = 22
-    private let kFontSizeDescr:CGFloat = 16
-    
     required init(controller:CCreate)
     {
         super.init(controller:controller)
@@ -47,10 +41,10 @@ final class VCreateStatusError:View<ArchCreate>
         NSLayoutConstraint.topToTop(
             view:imageView,
             toView:self,
-            constant:kImageTop)
+            constant:VCreateStatusError.Constants.imageTop)
         NSLayoutConstraint.height(
             view:imageView,
-            constant:kImageHeight)
+            constant:VCreateStatusError.Constants.imageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:imageView,
             toView:self)
@@ -60,7 +54,7 @@ final class VCreateStatusError:View<ArchCreate>
             toView:imageView)
         NSLayoutConstraint.height(
             view:label,
-            constant:kLabelHeight)
+            constant:VCreateStatusError.Constants.labelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)
@@ -83,12 +77,9 @@ final class VCreateStatusError:View<ArchCreate>
     private func factoryMessageTitle() -> NSAttributedString
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:kFontSizeTitle),
-            NSAttributedStringKey.foregroundColor:
-                UIColor.colourFail]
-        let string:String = String.localizedView(
-            key:"VCreateStatusError_title")
+            NSAttributedStringKey.font : UIFont.regular(size:VCreateStatusError.Constants.fontSizeTitle),
+            NSAttributedStringKey.foregroundColor : UIColor.colourFail]
+        let string:String = String.localizedView(key:"VCreateStatusError_title")
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -108,10 +99,8 @@ final class VCreateStatusError:View<ArchCreate>
         }
         
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:kFontSizeDescr),
-            NSAttributedStringKey.foregroundColor:
-                UIColor.colourBackgroundDark]
+            NSAttributedStringKey.font : UIFont.regular(size:VCreateStatusError.Constants.fontSizeDescr),
+            NSAttributedStringKey.foregroundColor : UIColor.colourBackgroundDark]
         let attributedString:NSAttributedString = NSAttributedString(
             string:status.message,
             attributes:attributes)
