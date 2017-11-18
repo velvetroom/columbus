@@ -79,11 +79,10 @@ extension ViewParent
             newView.layoutRight.constant = 0
         }
         
-        UIView.animate(
-            withDuration:kAnimationDuration,
-            animations:
-            {
-                self.layoutIfNeeded()
+        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        animations:
+        {
+            self.layoutIfNeeded()
         })
         { (done:Bool) in
             
@@ -163,12 +162,11 @@ extension ViewParent
             newView.layoutLeft.constant = 0
         }
         
-        UIView.animate(
-            withDuration:kAnimationDuration,
-            animations:
-            {
-                self.layoutIfNeeded()
-                newView.pushBackground?.alpha = 1
+        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        animations:
+        {
+            self.layoutIfNeeded()
+            newView.pushBackground?.alpha = 1
         })
         { (done:Bool) in
             
@@ -208,7 +206,7 @@ extension ViewParent
         layoutIfNeeded()
         completion()
         
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:ViewParent.Constants.animationDuration)
         { [weak newUi] in
             
             newUi?.alpha = 1
@@ -273,12 +271,11 @@ extension ViewParent
             currentView.layoutBottom.constant = top
         }
         
-        UIView.animate(
-            withDuration:kAnimationDuration,
-            animations:
-            {
-                self.layoutIfNeeded()
-                currentView.pushBackground?.alpha = 0
+        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        animations:
+        {
+            self.layoutIfNeeded()
+            currentView.pushBackground?.alpha = 0
         })
         { (done:Bool) in
             
@@ -292,13 +289,12 @@ extension ViewParent
         currentView:UIView,
         completion:@escaping(() -> ()))
     {
-        UIView.animate(
-            withDuration:kAnimationDuration,
-            animations:
-            { [weak currentView] in
-                
-                currentView?.alpha = 0
-            })
+        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        animations:
+        { [weak currentView] in
+            
+            currentView?.alpha = 0
+        })
         { [weak currentView] (done:Bool) in
             
             currentView?.removeFromSuperview()

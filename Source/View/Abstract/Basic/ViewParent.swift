@@ -3,9 +3,9 @@ import UIKit
 final class ViewParent:UIView
 {
     weak var panRecognizer:UIPanGestureRecognizer!
-    var panningX:CGFloat?
     private(set) weak var controller:ControllerParent!
     private(set) weak var viewMenu:VMenu!
+    var panningX:CGFloat?
     
     init(controller:ControllerParent)
     {
@@ -24,7 +24,7 @@ final class ViewParent:UIView
             toView:self)
         NSLayoutConstraint.height(
             view:viewMenu,
-            constant:kMenuHeight)
+            constant:ViewParent.Constants.menuHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewMenu,
             toView:self)

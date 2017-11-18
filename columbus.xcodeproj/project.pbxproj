@@ -1371,13 +1371,13 @@
 		DA65EC8F1F95E68700720673 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				DA65EC921F95E68700720673 /* ViewProtocol.swift */,
 				DA65EC901F95E68700720673 /* View.swift */,
 				DA65EC911F95E68700720673 /* ViewParent.swift */,
 				DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */,
-				DA65EC921F95E68700720673 /* ViewProtocol.swift */,
+				DA65EC951F95E68700720673 /* ViewParent+Transitions.swift */,
 				DA65EC931F95E68700720673 /* ViewParent+Gesture.swift */,
 				DA65EC941F95E68700720673 /* ViewMain.swift */,
-				DA65EC951F95E68700720673 /* ViewParent+Transitions.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";

@@ -6,14 +6,13 @@ extension ViewParent:UIGestureRecognizerDelegate
         (ViewParent) ->
         (CGPoint, CGFloat) -> ())
     
-    private static let kRouterMap:[
-        UIGestureRecognizerState:Router] = [
-            UIGestureRecognizerState.began:gestureStateBegan,
-            UIGestureRecognizerState.possible:gestureStateBegan,
-            UIGestureRecognizerState.changed:gestureStateChanged,
-            UIGestureRecognizerState.cancelled:gestureStateEnded,
-            UIGestureRecognizerState.ended:gestureStateEnded,
-            UIGestureRecognizerState.failed:gestureStateEnded]
+    private static let kRouterMap:[UIGestureRecognizerState:Router] = [
+            UIGestureRecognizerState.began : gestureStateBegan,
+            UIGestureRecognizerState.possible : gestureStateBegan,
+            UIGestureRecognizerState.changed : gestureStateChanged,
+            UIGestureRecognizerState.cancelled : gestureStateEnded,
+            UIGestureRecognizerState.ended : gestureStateEnded,
+            UIGestureRecognizerState.failed : gestureStateEnded]
     
     //MARK: selectors
     
@@ -41,7 +40,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         location:CGPoint,
         xPos:CGFloat)
     {
-        if xPos < kMaxXPanning
+        if xPos < ViewParent.Constants.panningMaxX
         {
             self.panningX = xPos
         }
@@ -64,7 +63,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         
         guard
         
-            deltaX < kMaxXDelta
+            deltaX < ViewParent.Constants.panningMaxXDelta
         
         else
         {
@@ -93,7 +92,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         
         let deltaX:CGFloat = xPos - panningX
         
-        if deltaX > kMinXDelta
+        if deltaX > ViewParent.Constants.panningMinXDelta
         {
             gesturePop()
         }
@@ -147,7 +146,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         
         topView.layoutLeft.constant = 0
         
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:ViewParent.Constants.animationDuration)
         {
             self.layoutIfNeeded()
         }
