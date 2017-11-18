@@ -13,8 +13,7 @@ extension FileManager
             
             do
             {
-                try attributes = attributesOfFileSystem(
-                    forPath:path)
+                try attributes = attributesOfFileSystem(forPath:path)
             }
             catch
             {
@@ -75,6 +74,7 @@ extension FileManager
             let urlsDict:[URL] = urls(
                 for:FileManager.SearchPathDirectory.documentDirectory,
                 in:FileManager.SearchPathDomainMask.userDomainMask)
+            
             let appDirectory:URL = urlsDict.last!
             
             return appDirectory
@@ -85,8 +85,7 @@ extension FileManager
     {
         guard
         
-            let objectSystemSize:NSNumber = systemAttributes?[
-                FileAttributeKey.systemSize] as? NSNumber
+            let objectSystemSize:NSNumber = systemAttributes?[FileAttributeKey.systemSize] as? NSNumber
         
         else
         {
@@ -102,8 +101,7 @@ extension FileManager
     {
         guard
             
-            let objectSystemSize:NSNumber = systemAttributes?[
-                FileAttributeKey.systemFreeSize] as? NSNumber
+            let objectSystemSize:NSNumber = systemAttributes?[FileAttributeKey.systemFreeSize] as? NSNumber
             
         else
         {
