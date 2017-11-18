@@ -18,10 +18,9 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
             UIColor.colourSuccess,
             for:UIControlState.highlighted)
         buttonPurchase.titleLabel!.font = UIFont.bold(
-            size:kButtonFontSize)
+            size:VStoreStatusReadyListCellNew.Constants.buttonFontSize)
         buttonPurchase.setTitle(
-            String.localizedView(
-                key:"VStoreStatusReadyListCellNew_buttonPurchase"),
+            String.localizedView(key:"VStoreStatusReadyListCellNew_buttonPurchase"),
             for:UIControlState.normal)
         buttonPurchase.addTarget(
             self,
@@ -37,10 +36,9 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
             UIColor.colourBackgroundDark,
             for:UIControlState.highlighted)
         buttonRestore.titleLabel!.font = UIFont.bold(
-            size:kButtonFontSize)
+            size:VStoreStatusReadyListCellNew.Constants.buttonFontSize)
         buttonRestore.setTitle(
-            String.localizedView(
-                key:"VStoreStatusReadyListCellNew_buttonRestore"),
+            String.localizedView(key:"VStoreStatusReadyListCellNew_buttonRestore"),
             for:UIControlState.normal)
         buttonRestore.addTarget(
             self,
@@ -55,10 +53,10 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
             toView:self)
         NSLayoutConstraint.height(
             view:buttonRestore,
-            constant:kButtonHeight)
+            constant:VStoreStatusReadyListCellNew.Constants.buttonHeight)
         NSLayoutConstraint.width(
             view:buttonRestore,
-            constant:kButtonWidth)
+            constant:VStoreStatusReadyListCellNew.Constants.buttonWidth)
         NSLayoutConstraint.leftToLeft(
             view:buttonRestore,
             toView:self)
@@ -68,10 +66,10 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
             toView:self)
         NSLayoutConstraint.height(
             view:buttonPurchase,
-            constant:kButtonHeight)
+            constant:VStoreStatusReadyListCellNew.Constants.buttonHeight)
         NSLayoutConstraint.width(
             view:buttonPurchase,
-            constant:kButtonWidth)
+            constant:VStoreStatusReadyListCellNew.Constants.buttonWidth)
         NSLayoutConstraint.rightToRight(
             view:buttonPurchase,
             toView:self)
@@ -116,8 +114,7 @@ final class VStoreStatusReadyListCellNew:VStoreStatusReadyListCellAvailable
             return
         }
         
-        controller?.model.modelKit.purchase(
-            product:product)
+        controller?.model.modelKit.purchase(product:product)
     }
     
     @objc
