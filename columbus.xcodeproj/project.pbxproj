@@ -238,7 +238,7 @@
 		DA65ED171F95E68700720673 /* VGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB11F95E68700720673 /* VGradient.swift */; };
 		DA65ED181F95E68700720673 /* VSliderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB21F95E68700720673 /* VSliderBar.swift */; };
 		DA65ED191F95E68700720673 /* VSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB31F95E68700720673 /* VSlider.swift */; };
-		DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB41F95E68700720673 /* VSliderGesture.swift */; };
+		DA65ED1A1F95E68700720673 /* VSlider+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB41F95E68700720673 /* VSlider+Gesture.swift */; };
 		DA65ED1B1F95E68700720673 /* VBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB51F95E68700720673 /* VBlur.swift */; };
 		DA65ED1C1F95E68700720673 /* VCollectionFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB61F95E68700720673 /* VCollectionFlow.swift */; };
 		DA65ED1D1F95E68700720673 /* VPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB71F95E68700720673 /* VPushBackground.swift */; };
@@ -697,7 +697,7 @@
 		DA65ECB11F95E68700720673 /* VGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VGradient.swift; sourceTree = "<group>"; };
 		DA65ECB21F95E68700720673 /* VSliderBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSliderBar.swift; sourceTree = "<group>"; };
 		DA65ECB31F95E68700720673 /* VSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSlider.swift; sourceTree = "<group>"; };
-		DA65ECB41F95E68700720673 /* VSliderGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VSliderGesture.swift; sourceTree = "<group>"; };
+		DA65ECB41F95E68700720673 /* VSlider+Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VSlider+Gesture.swift"; sourceTree = "<group>"; };
 		DA65ECB51F95E68700720673 /* VBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VBlur.swift; sourceTree = "<group>"; };
 		DA65ECB61F95E68700720673 /* VCollectionFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCollectionFlow.swift; sourceTree = "<group>"; };
 		DA65ECB71F95E68700720673 /* VPushBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPushBackground.swift; sourceTree = "<group>"; };
@@ -1427,7 +1427,7 @@
 				DA65ECB11F95E68700720673 /* VGradient.swift */,
 				DA65ECB21F95E68700720673 /* VSliderBar.swift */,
 				DA65ECB31F95E68700720673 /* VSlider.swift */,
-				DA65ECB41F95E68700720673 /* VSliderGesture.swift */,
+				DA65ECB41F95E68700720673 /* VSlider+Gesture.swift */,
 				DA65ECB51F95E68700720673 /* VBlur.swift */,
 				DA65ECB61F95E68700720673 /* VCollectionFlow.swift */,
 				DA65ECB71F95E68700720673 /* VPushBackground.swift */,
@@ -1962,7 +1962,7 @@
 				DAE73F211FB0D358005BE26F /* VStoreStatusReadyListCellActions.swift in Sources */,
 				DA9C04691FABE9E3006F57E1 /* MHomeInfoPlans.swift in Sources */,
 				DAF940D31FBFC9700094E7EB /* ViewParent+Constants.swift in Sources */,
-				DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */,
+				DA65ED1A1F95E68700720673 /* VSlider+Gesture.swift in Sources */,
 				DAECA2DC1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift in Sources */,
 				DAD76D401FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift in Sources */,
 				DA5573C81FBA372F00F15606 /* VCreateSaveStatusError.swift in Sources */,
