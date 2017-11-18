@@ -4,26 +4,21 @@ extension VCreateStatusReadyBarStopsFooter
 {
     //MARK: internal
     
-    class func factoryNumberFormatter(
-        minIntegers:Int,
-        maxDecimals:Int) -> NumberFormatter
+    class func factoryNumberFormatter() -> NumberFormatter
     {
         let numberFormatter:NumberFormatter = NumberFormatter()
-        numberFormatter.minimumIntegerDigits = minIntegers
-        numberFormatter.maximumFractionDigits = maxDecimals
+        numberFormatter.minimumIntegerDigits = VCreateStatusReadyBarStopsFooter.Constants.Formatter.minIntegers
+        numberFormatter.maximumFractionDigits = VCreateStatusReadyBarStopsFooter.Constants.Formatter.maxDecimals
 
         return numberFormatter
     }
     
-    class func factoryDistanceSuffixMap() -> [
-        DSettingsDistance:String]
+    class func factoryDistanceSuffixMap() -> [DSettingsDistance:String]
     {
         let suffixMap:[DSettingsDistance:String] = [
-            DSettingsDistance.kilometres:
-                String.localizedView(
+            DSettingsDistance.kilometres : String.localizedView(
                     key:"VCreateStatusReadyBarStopsFooter_kilometres"),
-            DSettingsDistance.miles:
-                String.localizedView(
+            DSettingsDistance.miles : String.localizedView(
                     key:"VCreateStatusReadyBarStopsFooter_miles")]
         
         return suffixMap
@@ -33,17 +28,13 @@ extension VCreateStatusReadyBarStopsFooter
         DPlanTravelDurationType:String]
     {
         let suffixMap:[DPlanTravelDurationType:String] = [
-            DPlanTravelDurationType.days:
-                String.localizedView(
+            DPlanTravelDurationType.days : String.localizedView(
                     key:"VCreateStatusReadyBarStopsFooter_durationDays"),
-            DPlanTravelDurationType.hours:
-                String.localizedView(
+            DPlanTravelDurationType.hours : String.localizedView(
                     key:"VCreateStatusReadyBarStopsFooter_durationHours"),
-            DPlanTravelDurationType.minutes:
-                String.localizedView(
+            DPlanTravelDurationType.minutes : String.localizedView(
                     key:"VCreateStatusReadyBarStopsFooter_durationMinutes"),
-            DPlanTravelDurationType.seconds:
-                String.localizedView(
+            DPlanTravelDurationType.seconds : String.localizedView(
                     key:"VCreateStatusReadyBarStopsFooter_durationSeconds")]
         
         return suffixMap
@@ -62,8 +53,7 @@ extension VCreateStatusReadyBarStopsFooter
         labelDistanceValue.isUserInteractionEnabled = false
         labelDistanceValue.translatesAutoresizingMaskIntoConstraints = false
         labelDistanceValue.backgroundColor = UIColor.clear
-        labelDistanceValue.font = UIFont.medium(
-            size:kValueFontSize)
+        labelDistanceValue.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
         labelDistanceValue.textColor = UIColor.white
         self.labelDistanceValue = labelDistanceValue
         
@@ -78,8 +68,7 @@ extension VCreateStatusReadyBarStopsFooter
         labelDurationValue.isUserInteractionEnabled = false
         labelDurationValue.translatesAutoresizingMaskIntoConstraints = false
         labelDurationValue.backgroundColor = UIColor.clear
-        labelDurationValue.font = UIFont.medium(
-            size:kValueFontSize)
+        labelDurationValue.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
         labelDurationValue.textColor = UIColor.white
         labelDurationValue.textAlignment = NSTextAlignment.right
         self.labelDurationValue = labelDurationValue
@@ -92,59 +81,59 @@ extension VCreateStatusReadyBarStopsFooter
         NSLayoutConstraint.topToTop(
             view:iconDistance,
             toView:self,
-            constant:kContentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
         NSLayoutConstraint.height(
             view:iconDistance,
-            constant:kLabelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
         NSLayoutConstraint.leftToLeft(
             view:iconDistance,
             toView:self,
-            constant:kIconMarginHorizontal)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconMarginHorizontal)
         NSLayoutConstraint.width(
             view:iconDistance,
-            constant:kIconWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconWidth)
         
         NSLayoutConstraint.topToTop(
             view:labelDistanceValue,
             toView:self,
-            constant:kContentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
         NSLayoutConstraint.height(
             view:labelDistanceValue,
-            constant:kLabelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
         NSLayoutConstraint.leftToRight(
             view:labelDistanceValue,
             toView:iconDistance)
         NSLayoutConstraint.width(
             view:labelDistanceValue,
-            constant:kValueWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.valueWidth)
         
         NSLayoutConstraint.topToTop(
             view:iconDuration,
             toView:self,
-            constant:kContentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
         NSLayoutConstraint.height(
             view:iconDuration,
-            constant:kLabelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
         NSLayoutConstraint.rightToRight(
             view:iconDuration,
             toView:self,
-            constant:-kIconMarginHorizontal)
+            constant:-VCreateStatusReadyBarStopsFooter.Constants.UI.iconMarginHorizontal)
         NSLayoutConstraint.width(
             view:iconDuration,
-            constant:kIconWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconWidth)
         
         NSLayoutConstraint.topToTop(
             view:labelDurationValue,
             toView:self,
-            constant:kContentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
         NSLayoutConstraint.height(
             view:labelDurationValue,
-            constant:kLabelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
         NSLayoutConstraint.rightToLeft(
             view:labelDurationValue,
             toView:iconDuration)
         NSLayoutConstraint.width(
             view:labelDurationValue,
-            constant:kValueWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.valueWidth)
     }
 }

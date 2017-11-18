@@ -4,13 +4,11 @@ extension VCreateStatusReadyBarStopsFooter
 {
     //MARK: private
     
-    private func updateDistanceSuffix(
-        distanceSettings:DSettingsDistance)
+    private func updateDistanceSuffix(distanceSettings:DSettingsDistance)
     {
         guard
             
-            let suffix:String = distanceSuffixMap[
-                distanceSettings]
+            let suffix:String = distanceSuffixMap[distanceSettings]
             
         else
         {
@@ -20,13 +18,11 @@ extension VCreateStatusReadyBarStopsFooter
         numberFormatter.positiveSuffix = suffix
     }
     
-    private func updateDurationSuffix(
-        durationType:DPlanTravelDurationType)
+    private func updateDurationSuffix(durationType:DPlanTravelDurationType)
     {
         guard
             
-            let suffix:String = durationSuffixMap[
-                durationType]
+            let suffix:String = durationSuffixMap[durationType]
             
         else
         {
@@ -36,16 +32,12 @@ extension VCreateStatusReadyBarStopsFooter
         numberFormatter.positiveSuffix = suffix
     }
     
-    private func factoryDuration(
-        duration:DPlanTravelDuration) -> String?
+    private func factoryDuration(duration:DPlanTravelDuration) -> String?
     {
-        updateDurationSuffix(
-            durationType:duration.type)
+        updateDurationSuffix(durationType:duration.type)
         
-        let number:NSNumber = NSNumber(
-            value:duration.amount)
-        let string:String? = numberFormatter.string(
-            from:number)
+        let number:NSNumber = NSNumber(value:duration.amount)
+        let string:String? = numberFormatter.string(from:number)
         
         return string
     }
@@ -56,26 +48,22 @@ extension VCreateStatusReadyBarStopsFooter
         model:[DPlanTravel],
         distanceSettings:DSettingsDistance) -> String?
     {
-        updateDistanceSuffix(
-            distanceSettings:distanceSettings)
+        updateDistanceSuffix(distanceSettings:distanceSettings)
         
         let distance:Float = DPlanTravel.factoryDistance(
             travels:model,
             distanceSettings:distanceSettings)
+        
         let distanceNumber:NSNumber = NSNumber(value:distance)
-        let distanceString:String? = numberFormatter.string(
-            from:distanceNumber)
+        let distanceString:String? = numberFormatter.string(from:distanceNumber)
         
         return distanceString
     }
     
-    func factoryDuration(
-        model:[DPlanTravel]) -> String?
+    func factoryDuration(model:[DPlanTravel]) -> String?
     {
-        let duration:DPlanTravelDuration = DPlanTravelDuration.factoryDuration(
-            travels:model)
-        let durationString:String? = factoryDuration(
-            duration:duration)
+        let duration:DPlanTravelDuration = DPlanTravelDuration.factoryDuration(travels:model)
+        let durationString:String? = factoryDuration(duration:duration)
         
         return durationString
     }
