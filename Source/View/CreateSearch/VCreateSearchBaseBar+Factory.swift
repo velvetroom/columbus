@@ -6,8 +6,7 @@ extension VCreateSearchBaseBar
     
     func factoryViews()
     {
-        let border:VBorder = VBorder(
-            colour:UIColor.colourBackgroundGray)
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
         
         let searchBar:UISearchBar = UISearchBar(frame:CGRect.zero)
         searchBar.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +25,7 @@ extension VCreateSearchBaseBar
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
@@ -34,7 +33,7 @@ extension VCreateSearchBaseBar
         NSLayoutConstraint.topToTop(
             view:searchBar,
             toView:self,
-            constant:kBarTop)
+            constant:VCreateSearchBaseBar.Constants.barTop)
         NSLayoutConstraint.bottomToBottom(
             view:searchBar,
             toView:self)

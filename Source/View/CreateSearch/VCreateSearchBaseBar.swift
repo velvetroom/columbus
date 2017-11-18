@@ -5,8 +5,6 @@ final class VCreateSearchBaseBar:
     UISearchBarDelegate
 {
     weak var searchBar:UISearchBar!
-    let kBorderHeight:CGFloat = 1
-    let kBarTop:CGFloat = 14
     
     required init(controller:CCreateSearch)
     {
@@ -23,14 +21,12 @@ final class VCreateSearchBaseBar:
     
     //MARK: delegate
     
-    func searchBarCancelButtonClicked(
-        _ searchBar:UISearchBar)
+    func searchBarCancelButtonClicked(_ searchBar:UISearchBar)
     {
         controller.back()
     }
     
-    func searchBarSearchButtonClicked(
-        _ searchBar:UISearchBar)
+    func searchBarSearchButtonClicked(_ searchBar:UISearchBar)
     {
         searchBar.resignFirstResponder()
     }
@@ -39,7 +35,6 @@ final class VCreateSearchBaseBar:
         _ searchBar:UISearchBar,
         textDidChange searchText:String)
     {
-        controller.model.complete(
-            string:searchText)
+        controller.model.complete(string:searchText)
     }
 }
