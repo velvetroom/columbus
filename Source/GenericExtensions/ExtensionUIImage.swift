@@ -2,8 +2,7 @@ import UIKit
 
 extension UIImage
 {
-    func imageCropping(
-        rect:CGRect) -> UIImage?
+    func imageCropping(rect:CGRect) -> UIImage?
     {
         guard
             
@@ -54,8 +53,7 @@ extension UIImage
         
         UIGraphicsEndImageContext()
         
-        let newImage:UIImage = UIImage(
-            cgImage:newCgImage)
+        let newImage:UIImage = UIImage(cgImage:newCgImage)
         
         return newImage
     }
