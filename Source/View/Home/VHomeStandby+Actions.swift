@@ -6,8 +6,7 @@ extension VHomeStandby
     
     func modelAtIndex(index:IndexPath) -> MHomeInfoProtocol
     {
-        let item:MHomeInfoProtocol = controller.model.info[
-            index.item]
+        let item:MHomeInfoProtocol = controller.model.info[index.item]
         
         return item
     }

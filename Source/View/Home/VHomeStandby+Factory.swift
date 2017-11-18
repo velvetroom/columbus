@@ -6,8 +6,7 @@ extension VHomeStandby
     
     func factoryViews()
     {
-        let viewHeader:VHomeStandbyHeader = VHomeStandbyHeader(
-            controller:controller)
+        let viewHeader:VHomeStandbyHeader = VHomeStandbyHeader(controller:controller)
         
         addSubview(viewHeader)
         
@@ -16,7 +15,7 @@ extension VHomeStandby
             toView:self)
         layoutHeaderHeight = NSLayoutConstraint.height(
             view:viewHeader,
-            constant:kHeaderHeight)
+            constant:VHomeStandby.Constants.headerHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewHeader,
             toView:self)

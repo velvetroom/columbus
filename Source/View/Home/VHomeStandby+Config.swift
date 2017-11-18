@@ -11,12 +11,12 @@ extension VHomeStandby
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            flow.minimumLineSpacing = kInterItem
-            flow.minimumInteritemSpacing = kInterItem
+            flow.minimumLineSpacing = ViewMain.Constants.interCellSpace
+            flow.minimumInteritemSpacing = ViewMain.Constants.interCellSpace
             flow.sectionInset = UIEdgeInsets(
-                top:kHeaderHeight + kInterItem,
+                top:VHomeStandby.Constants.headerHeight + ViewMain.Constants.interCellSpace,
                 left:0,
-                bottom:kCollectionBottom,
+                bottom:ViewMain.Constants.menuHeight,
                 right:0)
         }
     }
