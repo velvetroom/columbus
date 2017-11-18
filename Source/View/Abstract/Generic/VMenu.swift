@@ -5,8 +5,6 @@ final class VMenu:UIView
     weak var collectionView:UICollectionView!
     private(set) weak var controller:ControllerParent!
     var cellSize:CGSize?
-    let kDeselectTime:TimeInterval = 0.3
-    private let kBorderHeight:CGFloat = 1
     
     init(controller:ControllerParent)
     {
