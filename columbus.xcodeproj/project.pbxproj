@@ -448,6 +448,7 @@
 		DAEF388F1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */; };
 		DAEF38911F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */; };
 		DAF2EF351FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */; };
+		DAF940D31FBFC9700094E7EB /* ViewParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */; };
 		DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -907,6 +908,7 @@
 		DAEF388E1F97BBB2002AF8BE /* VCreateStatusReadyBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarFactory.swift; sourceTree = "<group>"; };
 		DAEF38901F97C26F002AF8BE /* VCreateStatusReadyBarAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusReadyBarAnimations.swift; sourceTree = "<group>"; };
 		DAF2EF341FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateSaveStatusErrorFactory.swift; sourceTree = "<group>"; };
+		DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewParent+Constants.swift"; sourceTree = "<group>"; };
 		DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1371,6 +1373,7 @@
 			children = (
 				DA65EC901F95E68700720673 /* View.swift */,
 				DA65EC911F95E68700720673 /* ViewParent.swift */,
+				DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */,
 				DA65EC921F95E68700720673 /* ViewProtocol.swift */,
 				DA65EC931F95E68700720673 /* ViewParentGesture.swift */,
 				DA65EC941F95E68700720673 /* ViewMain.swift */,
@@ -1951,6 +1954,7 @@
 				DA18A9771FAD5C2800F6BDF8 /* MMenuItemStore.swift in Sources */,
 				DAE73F211FB0D358005BE26F /* VStoreStatusReadyListCellActions.swift in Sources */,
 				DA9C04691FABE9E3006F57E1 /* MHomeInfoPlans.swift in Sources */,
+				DAF940D31FBFC9700094E7EB /* ViewParent+Constants.swift in Sources */,
 				DA65ED1A1F95E68700720673 /* VSliderGesture.swift in Sources */,
 				DAECA2DC1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift in Sources */,
 				DAD76D401FAFCCAE000DA8CC /* VStoreStatusReadyListCellAvailable.swift in Sources */,

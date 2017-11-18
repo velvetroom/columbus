@@ -4,13 +4,8 @@ final class ViewParent:UIView
 {
     weak var panRecognizer:UIPanGestureRecognizer!
     var panningX:CGFloat?
-    let kMaxXPanning:CGFloat = 60
-    let kMaxXDelta:CGFloat = 210
-    let kMinXDelta:CGFloat = 30
-    let kAnimationDuration:TimeInterval = 0.3
     private(set) weak var controller:ControllerParent!
     private(set) weak var viewMenu:VMenu!
-    private let kMenuHeight:CGFloat = 50
     
     init(controller:ControllerParent)
     {
