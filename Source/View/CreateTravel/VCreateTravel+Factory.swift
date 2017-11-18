@@ -21,12 +21,12 @@ extension VCreateTravel
             toView:self)
         NSLayoutConstraint.height(
             view:viewList,
-            constant:kListHeight)
+            constant:VCreateTravel.Constants.listHeight)
         layoutListLeft = NSLayoutConstraint.leftToLeft(
             view:viewList,
             toView:self)
         NSLayoutConstraint.width(
             view:viewList,
-            constant:kListWidth)
+            constant:VCreateTravel.Constants.listWidth)
     }
 }

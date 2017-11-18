@@ -31,16 +31,15 @@ extension VCreateTravelList
     
     func modelAtIndex(index:IndexPath) -> MCreateTravelProtocol
     {
-        let item:MCreateTravelProtocol = controller.model.items[
-            index.item]
+        let item:MCreateTravelProtocol = controller.model.items[index.item]
         
         return item
     }
     
     func selectCurrent()
     {
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kWaitToSelect)
+        let deadline:DispatchTime = DispatchTime.now() + VCreateTravelList.Constants.waitToSelect
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak self] in
             
             self?.asyncSelectCurrent()
@@ -52,8 +51,7 @@ extension VCreateTravelList
         guard
             
             let selected:IndexPath = collectionView.indexPathsForSelectedItems?.first,
-            let cell:UICollectionViewCell = collectionView.cellForItem(
-                at:selected)
+            let cell:UICollectionViewCell = collectionView.cellForItem(at:selected)
             
         else
         {
@@ -65,7 +63,7 @@ extension VCreateTravelList
         layoutSelectorLeft.constant = cellX - selectorSize_2
         layoutSelectorTop.constant = cellY - selectorSize_2
         
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:VCreateTravelList.Constants.animationDuration)
         { [weak self] in
             
             self?.layoutIfNeeded()
@@ -74,8 +72,8 @@ extension VCreateTravelList
     
     func waitAndClose()
     {
-        DispatchQueue.main.asyncAfter(
-            deadline:DispatchTime.now() + kWaitToUpdate)
+        let deadline:DispatchTime = DispatchTime.now() + VCreateTravelList.Constants.waitToUpdate
+        DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak self] in
             
             self?.controller.back()

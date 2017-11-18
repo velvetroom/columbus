@@ -21,6 +21,6 @@ extension VCreateTravelList
             toView:self)
         NSLayoutConstraint.size(
             view:viewSelector,
-            constant:kSelectorSize)
+            constant:VCreateTravelList.Constants.selectorSize)
     }
 }
