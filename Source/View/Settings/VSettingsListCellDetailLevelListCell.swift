@@ -1,11 +1,8 @@
 import UIKit
 
-final class VSettingsListCellDetailLevelListCell:
-    UICollectionViewCell
+final class VSettingsListCellDetailLevelListCell:UICollectionViewCell
 {
     private weak var labelTitle:UILabel!
-    private let kTitleFontSize:CGFloat = 13
-    private let kTitleLeft:CGFloat = 45
     
     override init(frame:CGRect)
     {
@@ -17,7 +14,7 @@ final class VSettingsListCellDetailLevelListCell:
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
-        labelTitle.font = UIFont.medium(size:kTitleFontSize)
+        labelTitle.font = UIFont.medium(size:VSettingsListCellDetailLevelListCell.Constants.titleFontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
         self.labelTitle = labelTitle
 
@@ -29,7 +26,7 @@ final class VSettingsListCellDetailLevelListCell:
         NSLayoutConstraint.leftToLeft(
             view:labelTitle,
             toView:self,
-            constant:kTitleLeft)
+            constant:VSettingsListCellDetailLevelListCell.Constants.titleLeft)
         NSLayoutConstraint.rightToRight(
             view:labelTitle,
             toView:self)
@@ -75,7 +72,6 @@ final class VSettingsListCellDetailLevelListCell:
     func config(model:MSettingsDetailLevelProtocol)
     {
         labelTitle.text = model.title
-        
         hover()
     }
 }
