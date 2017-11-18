@@ -9,8 +9,7 @@ final class Database
     {
         guard
             
-            let managedObjectContext:NSManagedObjectContext = Database.factoryContext(
-                bundle:bundle)
+            let managedObjectContext:NSManagedObjectContext = Database.factoryContext(bundle:bundle)
             
         else
         {
@@ -48,8 +47,7 @@ final class Database
         }
     }
     
-    func create<T:NSManagedObject>(
-        completion:@escaping((T) -> ()))
+    func create<T:NSManagedObject>(completion:@escaping((T) -> ()))
     {
         managedObjectContext.perform
         {
@@ -89,8 +87,7 @@ final class Database
             
             do
             {
-                data = try self.managedObjectContext.fetch(
-                    fetchRequest)
+                data = try self.managedObjectContext.fetch(fetchRequest)
             }
             catch
             {

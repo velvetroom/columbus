@@ -3,11 +3,6 @@ import CoreData
 
 extension Database
 {
-    private static let kModelName:String = "Columbus"
-    private static let kModelExtension:String = "momd"
-    private static let kSQLiteExtension:String = "sqlite"
-    private static let kSeparator:String = "."
-    
     //MARK: private
     
     private class func factoryModel() -> NSManagedObjectModel?
@@ -15,10 +10,9 @@ extension Database
         guard
             
             let modelURL:URL = Bundle.main.url(
-                forResource:kModelName,
-                withExtension:kModelExtension),
-            let managedObjectModel:NSManagedObjectModel = NSManagedObjectModel(
-                contentsOf:modelURL)
+                forResource:Database.Constants.modelName,
+                withExtension:Database.Constants.modelExtension),
+            let managedObjectModel:NSManagedObjectModel = NSManagedObjectModel(contentsOf:modelURL)
             
         else
         {
@@ -76,21 +70,19 @@ extension Database
         }
         
         var sqliteFile:String = bundleIdentifier
-        sqliteFile.append(kSeparator)
-        sqliteFile.append(kModelName)
-        sqliteFile.append(kSeparator)
-        sqliteFile.append(kSQLiteExtension)
+        sqliteFile.append(".")
+        sqliteFile.append(Database.Constants.modelName)
+        sqliteFile.append(".")
+        sqliteFile.append(Database.Constants.sQLiteExtension)
         
-        let url:URL = FileManager.default.appDirectory.appendingPathComponent(
-            sqliteFile)
+        let url:URL = FileManager.default.appDirectory.appendingPathComponent(sqliteFile)
         
         return url
     }
     
     //MARK: internal
     
-    class func factoryContext(
-        bundle:Bundle?) -> NSManagedObjectContext?
+    class func factoryContext(bundle:Bundle?) -> NSManagedObjectContext?
     {
         guard
             
@@ -120,8 +112,7 @@ extension Database
         predicate:NSPredicate?,
         sorters:[NSSortDescriptor]?) -> NSFetchRequest<NSManagedObject>
     {
-        let fetchRequest:NSFetchRequest<NSManagedObject> = NSFetchRequest(
-            entityName:entityName)
+        let fetchRequest:NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName:entityName)
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sorters
         fetchRequest.fetchLimit = limit
