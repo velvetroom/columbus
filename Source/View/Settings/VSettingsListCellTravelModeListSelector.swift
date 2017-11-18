@@ -1,7 +1,6 @@
 import UIKit
 
-final class VSettingsListCellTravelModeListSelector:
-    UIView
+final class VSettingsListCellTravelModeListSelector:UIView
 {
     init()
     {

@@ -1,12 +1,9 @@
 import UIKit
 
-final class VSettingsListCellTravelModeListCell:
-    UICollectionViewCell
+final class VSettingsListCellTravelModeListCell:UICollectionViewCell
 {
     private weak var imageView:UIImageView!
     private weak var labelTitle:UILabel!
-    private let kTitleFontSize:CGFloat = 12
-    private let kTitleHeight:CGFloat = 30
     
     override init(frame:CGRect)
     {
@@ -25,7 +22,7 @@ final class VSettingsListCellTravelModeListCell:
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
-        labelTitle.font = UIFont.regular(size:kTitleFontSize)
+        labelTitle.font = UIFont.regular(size:VSettingsListCellTravelModeListCell.Constants.titleFontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
         labelTitle.textAlignment = NSTextAlignment.center
         self.labelTitle = labelTitle
@@ -42,7 +39,7 @@ final class VSettingsListCellTravelModeListCell:
             toView:self)
         NSLayoutConstraint.height(
             view:labelTitle,
-            constant:kTitleHeight)
+            constant:VSettingsListCellTravelModeListCell.Constants.titleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
@@ -89,8 +86,7 @@ final class VSettingsListCellTravelModeListCell:
     
     func config(model:MSettingsTravelModeProtocol)
     {
-        imageView.image = model.icon.withRenderingMode(
-            UIImageRenderingMode.alwaysTemplate)
+        imageView.image = model.icon.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         labelTitle.text = model.title
         
         hover()

@@ -29,6 +29,6 @@ extension VSettingsListCellTravelModeList
             toView:self)
         NSLayoutConstraint.size(
             view:viewSelector,
-            constant:kSelectorSize)
+            constant:VSettingsListCellTravelModeList.Constants.selectorSize)
     }
 }
