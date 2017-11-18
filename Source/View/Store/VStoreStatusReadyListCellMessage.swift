@@ -1,7 +1,9 @@
 import UIKit
 
-final class VStoreStatusReadyListCellPurchasing:VStoreStatusReadyListCellAvailable
+final class VStoreStatusReadyListCellMessage:VStoreStatusReadyListCellAvailable
 {
+    private weak var label:UILabel!
+    
     override init(frame:CGRect)
     {
         super.init(frame:frame)
@@ -14,8 +16,7 @@ final class VStoreStatusReadyListCellPurchasing:VStoreStatusReadyListCellAvailab
         label.backgroundColor = UIColor.clear
         label.font = UIFont.regular(size:kLabelFontSize)
         label.textColor = UIColor(white:0, alpha:0.4)
-        label.text = String.localizedView(
-            key:"VStoreStatusReadyListCellPurchasing_label")
+        self.label = label
         
         addSubview(label)
         

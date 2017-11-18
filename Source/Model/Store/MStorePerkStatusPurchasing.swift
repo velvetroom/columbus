@@ -3,7 +3,7 @@ import StoreKit
 
 struct MStorePerkStatusPurchasing:
     MStorePerkStatusProtocol,
-    MStorePerkStatusAvailableProtocol
+    MStorePerkStatusAvailableMessageProtocol
 {
     let reusableIdentifier:String = VStoreStatusReadyListCellPurchasing.reusableIdentifier
     let product:SKProduct
