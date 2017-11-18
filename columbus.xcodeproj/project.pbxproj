@@ -496,6 +496,7 @@
 		DAEABCC11FC02DFD00B0B056 /* VSettingsListCellStorage+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEABCC01FC02DFD00B0B056 /* VSettingsListCellStorage+Constants.swift */; };
 		DAEABCC31FC02E6F00B0B056 /* Database+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEABCC21FC02E6F00B0B056 /* Database+Constants.swift */; };
 		DAEABCC51FC02F5700B0B056 /* DPlanTravel+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEABCC41FC02F5700B0B056 /* DPlanTravel+Constants.swift */; };
+		DAEABCC71FC02FD700B0B056 /* DPlanTravelDuration+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEABCC61FC02FD700B0B056 /* DPlanTravelDuration+Constants.swift */; };
 		DAECA2DA1F9FCBA50051F757 /* MSettingsTravelModeCycling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAECA2D91F9FCBA50051F757 /* MSettingsTravelModeCycling.swift */; };
 		DAECA2DC1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAECA2DB1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift */; };
 		DAECA2DE1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAECA2DD1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift */; };
@@ -1019,6 +1020,7 @@
 		DAEABCC01FC02DFD00B0B056 /* VSettingsListCellStorage+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsListCellStorage+Constants.swift"; sourceTree = "<group>"; };
 		DAEABCC21FC02E6F00B0B056 /* Database+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Database+Constants.swift"; sourceTree = "<group>"; };
 		DAEABCC41FC02F5700B0B056 /* DPlanTravel+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DPlanTravel+Constants.swift"; sourceTree = "<group>"; };
+		DAEABCC61FC02FD700B0B056 /* DPlanTravelDuration+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DPlanTravelDuration+Constants.swift"; sourceTree = "<group>"; };
 		DAECA2D91F9FCBA50051F757 /* MSettingsTravelModeCycling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsTravelModeCycling.swift; sourceTree = "<group>"; };
 		DAECA2DB1F9FCBD00051F757 /* MSettingsTravelModeTransit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsTravelModeTransit.swift; sourceTree = "<group>"; };
 		DAECA2DD1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSettingsTravelModeWalking.swift; sourceTree = "<group>"; };
@@ -1654,6 +1656,7 @@
 				DA0679A31FA1015000F511F7 /* DPlanTravel+Computed.swift */,
 				DA4BDFD61FAC3E4800EFC73E /* DPlanTravel+Distance.swift */,
 				DA2926721FACCDF400913141 /* DPlanTravelDuration.swift */,
+				DAEABCC61FC02FD700B0B056 /* DPlanTravelDuration+Constants.swift */,
 				DA2926761FACD52400913141 /* DPlanTravelDuration+Factory.swift */,
 				DA2926781FACD59D00913141 /* DPlanTravelDurationType.swift */,
 				DA0679A11FA1004E00F511F7 /* DPlanTravelStatus.swift */,
@@ -2130,6 +2133,7 @@
 				DA25C8551FAAD179005A540B /* VSettingsListCellDetailLevelList+Factory.swift in Sources */,
 				DA0679A01FA0E11E00F511F7 /* MCreatePlan+DirectionsFactory.swift in Sources */,
 				DA18A96A1FAD4E4700F6BDF8 /* MPlans+Active.swift in Sources */,
+				DAEABCC71FC02FD700B0B056 /* DPlanTravelDuration+Constants.swift in Sources */,
 				DA17F7831FC0267800612A9C /* VSettingsListCellTravelMode+Constants.swift in Sources */,
 				DA8DF8D11FA955EB00276867 /* VPlansListCell+Factory.swift in Sources */,
 				DA17F7751FC01DC100612A9C /* VCreateSearchBaseListCell+Constants.swift in Sources */,
