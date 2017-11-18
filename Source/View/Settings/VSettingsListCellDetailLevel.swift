@@ -3,12 +3,6 @@ import UIKit
 final class VSettingsListCellDetailLevel:VSettingsListCell
 {
     weak var viewList:VSettingsListCellDetailLevelList?
-    let kCaptionHeight:CGFloat = 90
-    let kCaptionLeft:CGFloat = 20
-    let kTitleFontSize:CGFloat = 16
-    let kDescrFontSize:CGFloat = 14
-    let kListTop:CGFloat = 100
-    let kListBottom:CGFloat = -20
     private weak var model:MSettingsDetailLevel?
     
     override init(frame:CGRect)
@@ -47,8 +41,7 @@ final class VSettingsListCellDetailLevel:VSettingsListCell
     
     //MARK: private
     
-    private func reloadList(
-        model:MSettingsDetailLevel)
+    private func reloadList(model:MSettingsDetailLevel)
     {
         viewList?.reload(model:model)
     }
