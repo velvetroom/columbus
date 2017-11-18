@@ -146,7 +146,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         
         topView.layoutLeft.constant = 0
         
-        UIView.animate(withDuration:ViewParent.Constants.animationDuration)
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration)
         {
             self.layoutIfNeeded()
         }

@@ -35,13 +35,13 @@ final class VAlert:UIView
         alert.layoutTop = NSLayoutConstraint.topToTop(
             view:alert,
             toView:rootView,
-            constant:-kHeight)
+            constant:-VAlert.Constants.height)
         NSLayoutConstraint.equalsHorizontal(
             view:alert,
             toView:rootView)
         NSLayoutConstraint.height(
             view:alert,
-            constant:kHeight)
+            constant:VAlert.Constants.height)
         
         rootView.layoutIfNeeded()
         alert.animate(open:true)
@@ -57,7 +57,7 @@ final class VAlert:UIView
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.medium(size:kFontSize)
+        label.font = UIFont.medium(size:VAlert.Constants.fontSize)
         label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0
@@ -78,14 +78,14 @@ final class VAlert:UIView
         NSLayoutConstraint.topToTop(
             view:label,
             toView:self,
-            constant:kLabelTop)
+            constant:VAlert.Constants.labelTop)
         NSLayoutConstraint.bottomToBottom(
             view:label,
             toView:self)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self,
-            margin:kLabelMargin)
+            margin:VAlert.Constants.labelMargin)
     }
     
     //MARK: selectors
@@ -110,7 +110,7 @@ final class VAlert:UIView
     private func scheduleTimer()
     {
         self.timer = Timer.scheduledTimer(
-            timeInterval:kTimeOut,
+            timeInterval:VAlert.Constants.timeOut,
             target:self,
             selector:#selector(selectorAlertTimeOut(sender:)),
             userInfo:nil,
@@ -125,10 +125,10 @@ final class VAlert:UIView
         }
         else
         {
-            layoutTop.constant = -VAlert.kHeight
+            layoutTop.constant = -VAlert.Constants.height
         }
         
-        UIView.animate(withDuration:kAnimationDuration,
+        UIView.animate(withDuration:VAlert.Constants.animationDuration,
             animations:
         { [weak self] in
             

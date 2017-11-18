@@ -79,7 +79,7 @@ extension ViewParent
             newView.layoutRight.constant = 0
         }
         
-        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration,
         animations:
         {
             self.layoutIfNeeded()
@@ -162,7 +162,7 @@ extension ViewParent
             newView.layoutLeft.constant = 0
         }
         
-        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration,
         animations:
         {
             self.layoutIfNeeded()
@@ -206,7 +206,7 @@ extension ViewParent
         layoutIfNeeded()
         completion()
         
-        UIView.animate(withDuration:ViewParent.Constants.animationDuration)
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration)
         { [weak newUi] in
             
             newUi?.alpha = 1
@@ -271,7 +271,7 @@ extension ViewParent
             currentView.layoutBottom.constant = top
         }
         
-        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration,
         animations:
         {
             self.layoutIfNeeded()
@@ -289,7 +289,7 @@ extension ViewParent
         currentView:UIView,
         completion:@escaping(() -> ()))
     {
-        UIView.animate(withDuration:ViewParent.Constants.animationDuration,
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration,
         animations:
         { [weak currentView] in
             

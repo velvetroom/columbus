@@ -42,7 +42,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:VSettingsMemory.Constants.Bar.borderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)

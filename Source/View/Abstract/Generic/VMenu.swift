@@ -23,7 +23,7 @@ final class VMenu:UIView
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:VMenu.Constants.borderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)

@@ -47,7 +47,7 @@ final class VSlider:UIView
         viewBase.backgroundColor = UIColor(white:0.95, alpha:1)
         viewBase.translatesAutoresizingMaskIntoConstraints = false
         viewBase.layer.cornerRadius = VSlider.Constants.cornerRadius
-        viewBase.layer.borderWidth = kBorderWidth
+        viewBase.layer.borderWidth = ViewMain.Constants.borderWidth
         viewBase.layer.borderColor = UIColor(white:0, alpha:0.2).cgColor
         self.viewBase = viewBase
         
@@ -63,7 +63,7 @@ final class VSlider:UIView
         NSLayoutConstraint.equalsHorizontal(
             view:viewBase,
             toView:self,
-            margin:kHorizontalMargin)
+            margin:VSlider.Constants.horizontalMargin)
         
         NSLayoutConstraint.equalsVertical(
             view:viewBar,

@@ -119,7 +119,7 @@ extension VMenu:
         let item:MMenuItemProtocol = modelAtIndex(index:indexPath)
         controller.menuSelected(item:item)
         
-        let deadline:DispatchTime = DispatchTime.now() + VMenu.Constants.deselectTime
+        let deadline:DispatchTime = DispatchTime.now() + ViewMain.Constants.deselectTime
         DispatchQueue.main.asyncAfter(deadline:deadline)
         { [weak collectionView] in
             
