@@ -452,6 +452,7 @@
 		DAF940D51FBFCD3C0094E7EB /* VMenu+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */; };
 		DAF940D71FBFCE8A0094E7EB /* VSpinner+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */; };
 		DAF940D91FBFCF7D0094E7EB /* VGradient+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */; };
+		DAF940DB1FBFD0870094E7EB /* VSlider+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF940DA1FBFD0870094E7EB /* VSlider+Constants.swift */; };
 		DAF9481B1FBE81D4002A77D6 /* MCreateSave+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -915,6 +916,7 @@
 		DAF940D41FBFCD3C0094E7EB /* VMenu+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VMenu+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D61FBFCE8A0094E7EB /* VSpinner+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSpinner+Constants.swift"; sourceTree = "<group>"; };
 		DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VGradient+Constants.swift"; sourceTree = "<group>"; };
+		DAF940DA1FBFD0870094E7EB /* VSlider+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSlider+Constants.swift"; sourceTree = "<group>"; };
 		DAF9481A1FBE81D4002A77D6 /* MCreateSave+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1430,6 +1432,7 @@
 				DAF940D81FBFCF7D0094E7EB /* VGradient+Constants.swift */,
 				DA65ECB21F95E68700720673 /* VSliderBar.swift */,
 				DA65ECB31F95E68700720673 /* VSlider.swift */,
+				DAF940DA1FBFD0870094E7EB /* VSlider+Constants.swift */,
 				DA65ECB41F95E68700720673 /* VSlider+Gesture.swift */,
 				DA65ECB51F95E68700720673 /* VBlur.swift */,
 				DA65ECB61F95E68700720673 /* VCollectionFlow.swift */,
@@ -2064,6 +2067,7 @@
 				DAE6998E1FA287CA00FFE6E3 /* VCreateStatusReadyBarTravelConfig.swift in Sources */,
 				DAD387241FA3E7E40031B9F8 /* MCreateSaveMapRange+Factory.swift in Sources */,
 				DAF2EF351FBA63D50039AAFE /* VCreateSaveStatusErrorFactory.swift in Sources */,
+				DAF940DB1FBFD0870094E7EB /* VSlider+Constants.swift in Sources */,
 				DA4BC93B1F9AC80400453655 /* VCreateStatusReadyBarStopsCellFactory.swift in Sources */,
 				DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */,
 				DAD889041F9D2EFA000EC7FD /* MCreatePlan+StopRemove.swift in Sources */,
