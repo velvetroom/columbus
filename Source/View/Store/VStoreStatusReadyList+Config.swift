@@ -9,25 +9,20 @@ extension VStoreStatusReadyList
         backgroundColor = UIColor.colourBackgroundGray
         collectionView.alwaysBounceVertical = true
         
-        registerCell(
-            cell:VStoreStatusReadyListCellNew.self)
-        registerCell(
-            cell:VStoreStatusReadyListCellDeferred.self)
-        registerCell(
-            cell:VStoreStatusReadyListCellPurchased.self)
-        registerCell(
-            cell:VStoreStatusReadyListCellPurchasing.self)
-        registerCell(
-            cell:VStoreStatusReadyListCellUnavailable.self)
+        registerCell(cell:VStoreStatusReadyListCellNew.self)
+        registerCell(cell:VStoreStatusReadyListCellDeferred.self)
+        registerCell(cell:VStoreStatusReadyListCellPurchased.self)
+        registerCell(cell:VStoreStatusReadyListCellPurchasing.self)
+        registerCell(cell:VStoreStatusReadyListCellUnavailable.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            flow.minimumLineSpacing = kInterItem
-            flow.minimumInteritemSpacing = kInterItem
+            flow.minimumLineSpacing = ViewMain.Constants.interCellSpace
+            flow.minimumInteritemSpacing = ViewMain.Constants.interCellSpace
             flow.sectionInset = UIEdgeInsets(
-                top:kInsetsTop,
+                top:ViewMain.Constants.barHeight,
                 left:0,
-                bottom:kCollectionBottom,
+                bottom:ViewMain.Constants.menuHeight,
                 right:0)
         }
     }

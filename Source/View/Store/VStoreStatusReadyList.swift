@@ -4,11 +4,7 @@ final class VStoreStatusReadyList:VCollection<
     ArchStore,
     VStoreStatusReadyListCell>
 {
-    let kInterItem:CGFloat = 1
-    let kInsetsTop:CGFloat = 64
-    let kCollectionBottom:CGFloat = 50
     private var cellSize:CGSize?
-    private let kCellHeight:CGFloat = 520
     
     required init(controller:CStore)
     {
@@ -33,9 +29,11 @@ final class VStoreStatusReadyList:VCollection<
         else
         {
             let width:CGFloat = collectionView.bounds.width
+            
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:kCellHeight)
+                height:VStoreStatusReadyList.Constants.cellHeight)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -57,8 +55,7 @@ final class VStoreStatusReadyList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let cell:VStoreStatusReadyListCell = viewAtIndex(
-            index:indexPath)
+        let cell:VStoreStatusReadyListCell = viewAtIndex(index:indexPath)
         
         return cell
     }

@@ -24,7 +24,7 @@ final class ViewParent:UIView
             toView:self)
         NSLayoutConstraint.height(
             view:viewMenu,
-            constant:ViewParent.Constants.menuHeight)
+            constant:ViewMain.Constants.menuHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewMenu,
             toView:self)
