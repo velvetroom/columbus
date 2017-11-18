@@ -2,25 +2,13 @@ import MapKit
 
 extension DPlanTravelMode
 {
-    private static let kMapTransportType:[
-        DPlanTravelMode:MKDirectionsTransportType] = [
-            DPlanTravelMode.walking:
-                MKDirectionsTransportType.walking,
-            DPlanTravelMode.cycling:
-                MKDirectionsTransportType.walking,
-            DPlanTravelMode.transit:
-                MKDirectionsTransportType.transit,
-            DPlanTravelMode.driving:
-                MKDirectionsTransportType.automobile]
-    
     //MARK: private
     
-    private static func factoryTransportType(
-        travelMode:DPlanTravelMode) -> MKDirectionsTransportType
+    private static func factoryTransportType(travelMode:DPlanTravelMode) -> MKDirectionsTransportType
     {
         guard
         
-            let transportType:MKDirectionsTransportType = kMapTransportType[
+            let transportType:MKDirectionsTransportType = DPlanTravelMode.Constants.mapTransportType[
                 travelMode]
         
         else

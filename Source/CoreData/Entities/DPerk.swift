@@ -8,8 +8,7 @@ extension DPerk
         {
             guard
             
-                let type:DPerkType = DPerkType(
-                    rawValue:rawType)
+                let type:DPerkType = DPerkType(rawValue:rawType)
             
             else
             {

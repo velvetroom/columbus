@@ -8,8 +8,7 @@ extension DSettings
         {
             guard
                 
-                let travelMode:DPlanTravelMode = DPlanTravelMode(
-                    rawValue:rawTravelMode)
+                let travelMode:DPlanTravelMode = DPlanTravelMode(rawValue:rawTravelMode)
                 
             else
             {
@@ -31,8 +30,7 @@ extension DSettings
         {
             guard
             
-                let detailLevel:DSettingsDetailLevel = DSettingsDetailLevel(
-                    rawValue:rawDetailLevel)
+                let detailLevel:DSettingsDetailLevel = DSettingsDetailLevel(rawValue:rawDetailLevel)
             
             else
             {
@@ -54,8 +52,7 @@ extension DSettings
         {
             guard
                 
-                let distance:DSettingsDistance = DSettingsDistance(
-                    rawValue:rawDistancce)
+                let distance:DSettingsDistance = DSettingsDistance(rawValue:rawDistancce)
                 
             else
             {
