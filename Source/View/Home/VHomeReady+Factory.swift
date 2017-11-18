@@ -6,8 +6,7 @@ extension VHomeReady
     
     func factoryViews()
     {
-        let viewMap:VHomeReadyMap = VHomeReadyMap(
-            controller:controller)
+        let viewMap:VHomeReadyMap = VHomeReadyMap(controller:controller)
         self.viewMap = viewMap
         
         addSubview(viewMap)

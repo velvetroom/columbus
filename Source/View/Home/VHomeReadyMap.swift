@@ -33,8 +33,7 @@ final class VHomeReadyMap:VMap<ArchHome>
             return
         }
         
-        let mapTiler:VHomeReadyMapTiler = VHomeReadyMapTiler(
-            plan:plan)
+        let mapTiler:VHomeReadyMapTiler = VHomeReadyMapTiler(plan:plan)
         self.mapTiler = mapTiler
         
         add(
