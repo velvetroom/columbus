@@ -5,12 +5,7 @@ final class VHomeStandby:VCollection<
     VHomeStandbyCell>
 {
     weak var layoutHeaderHeight:NSLayoutConstraint!
-    let kHeaderHeight:CGFloat = 200
-    let kHeaderMinHeight:CGFloat = 20
-    let kInterItem:CGFloat = 1
-    let kCollectionBottom:CGFloat = 50
     private var cellSize:CGSize?
-    private let kCellHeight:CGFloat = 130
     
     required init(controller:CHome)
     {
@@ -24,15 +19,14 @@ final class VHomeStandby:VCollection<
         return nil
     }
     
-    override func scrollViewDidScroll(
-        _ scrollView:UIScrollView)
+    override func scrollViewDidScroll(_ scrollView:UIScrollView)
     {
         let offsetY:CGFloat = scrollView.contentOffset.y
-        var headerHeight:CGFloat = kHeaderHeight - offsetY
+        var headerHeight:CGFloat = VHomeStandby.Constants.headerHeight - offsetY
         
-        if headerHeight < kHeaderMinHeight
+        if headerHeight < VHomeStandby.Constants.headerMinHeight
         {
-            headerHeight = kHeaderMinHeight
+            headerHeight = VHomeStandby.Constants.headerMinHeight
         }
         
         layoutHeaderHeight.constant = headerHeight
@@ -50,9 +44,11 @@ final class VHomeStandby:VCollection<
         else
         {
             let width:CGFloat = collectionView.bounds.width
+            
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:kCellHeight)
+                height:VHomeStandby.Constants.cellHeight)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -74,10 +70,8 @@ final class VHomeStandby:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MHomeInfoProtocol = modelAtIndex(
-            index:indexPath)
-        let cell:VHomeStandbyCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:MHomeInfoProtocol = modelAtIndex(index:indexPath)
+        let cell:VHomeStandbyCell = cellAtIndex(indexPath:indexPath)
         cell.config(model:item)
         
         return cell
