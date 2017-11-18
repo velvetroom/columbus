@@ -7,12 +7,11 @@ extension VCreateSaveStatusBusy
     private func factoryTitle() -> NSAttributedString
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.medium(size:kLabelFontSize),
-            NSAttributedStringKey.foregroundColor:
-                UIColor.white]
-        let string:String = String.localizedView(
-            key:"VCreateSaveStatusBusy_labelTitle")
+            NSAttributedStringKey.font : UIFont.medium(size:VCreateSaveStatusBusy.Constants.labelFontSize),
+            NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+        let string:String = String.localizedView(key:"VCreateSaveStatusBusy_labelTitle")
+        
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -23,12 +22,11 @@ extension VCreateSaveStatusBusy
     private func factoryDescr() -> NSAttributedString
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:kLabelFontSize),
-            NSAttributedStringKey.foregroundColor:
-                UIColor(white:1, alpha:0.6)]
-        let string:String = String.localizedView(
-            key:"VCreateSaveStatusBusy_labelDescr")
+            NSAttributedStringKey.font : UIFont.regular(size:VCreateSaveStatusBusy.Constants.labelFontSize),
+            NSAttributedStringKey.foregroundColor : UIColor(white:1, alpha:0.6)]
+        
+        let string:String = String.localizedView(key:"VCreateSaveStatusBusy_labelDescr")
+        
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -78,18 +76,16 @@ extension VCreateSaveStatusBusy
             UIColor(white:1, alpha:0.6),
             for:UIControlState.highlighted)
         buttonCancel.setTitle(
-            String.localizedView(
-                key:"VCreateSaveStatusBusy_buttonCancel"),
+            String.localizedView(key:"VCreateSaveStatusBusy_buttonCancel"),
             for:UIControlState.normal)
         buttonCancel.titleLabel!.font = UIFont.regular(
-            size:kCancelFontSize)
+            size:VCreateSaveStatusBusy.Constants.cancelFontSize)
         buttonCancel.addTarget(
             self,
             action:#selector(selectorCancel(sender:)),
             for:UIControlEvents.touchUpInside)
         
-        let viewProgress:VCreateSaveStatusBusyProgress = VCreateSaveStatusBusyProgress(
-            controller:controller)
+        let viewProgress:VCreateSaveStatusBusyProgress = VCreateSaveStatusBusyProgress(controller:controller)
         self.viewProgress = viewProgress
         
         addSubview(viewGradient)
@@ -109,10 +105,10 @@ extension VCreateSaveStatusBusy
         NSLayoutConstraint.bottomToBottom(
             view:label,
             toView:self,
-            constant:kLabelBottom)
+            constant:VCreateSaveStatusBusy.Constants.labelBottom)
         NSLayoutConstraint.height(
             view:label,
-            constant:kLabelHeight)
+            constant:VCreateSaveStatusBusy.Constants.labelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)
@@ -122,20 +118,20 @@ extension VCreateSaveStatusBusy
             toView:label)
         NSLayoutConstraint.height(
             view:buttonCancel,
-            constant:kCancelHeight)
+            constant:VCreateSaveStatusBusy.Constants.cancelHeight)
         layoutCancelLeft = NSLayoutConstraint.leftToLeft(
             view:buttonCancel,
             toView:self)
         NSLayoutConstraint.width(
             view:buttonCancel,
-            constant:kCancelWidth)
+            constant:VCreateSaveStatusBusy.Constants.cancelWidth)
         
         NSLayoutConstraint.bottomToBottom(
             view:viewProgress,
             toView:self)
         NSLayoutConstraint.height(
             view:viewProgress,
-            constant:kProgressHeight)
+            constant:VCreateSaveStatusBusy.Constants.progressHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewProgress,
             toView:self)

@@ -20,8 +20,7 @@ final class VCreateSave:ViewMain
             return
         }
         
-        let view:View<ArchCreateSave> = status.viewType.init(
-            controller:controller)
+        let view:View<ArchCreateSave> = status.viewType.init(controller:controller)
         self.view = view
         
         addSubview(view)
