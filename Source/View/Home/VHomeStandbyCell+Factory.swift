@@ -4,8 +4,7 @@ extension VHomeStandbyCell
 {
     //MARK: private
     
-    private func factoryTitle(
-        model:MHomeInfoProtocol) -> NSAttributedString
+    private func factoryTitle(model:MHomeInfoProtocol) -> NSAttributedString
     {
         let string:NSAttributedString = NSAttributedString(
             string:model.title,
@@ -14,8 +13,7 @@ extension VHomeStandbyCell
         return string
     }
     
-    private func factoryDescr(
-        model:MHomeInfoProtocol) -> NSAttributedString
+    private func factoryDescr(model:MHomeInfoProtocol) -> NSAttributedString
     {
         let string:NSAttributedString = NSAttributedString(
             string:model.descr,
@@ -26,30 +24,20 @@ extension VHomeStandbyCell
     
     //MARK: internal
     
-    class func factoryAttributesTitle(
-        fontSize:CGFloat) -> [
-        NSAttributedStringKey:Any]
+    class func factoryAttributesTitle(fontSize:CGFloat) -> [NSAttributedStringKey:Any]
     {
-        let attributes:[
-            NSAttributedStringKey:Any] = [
-                NSAttributedStringKey.font:
-                    UIFont.medium(size:fontSize),
-                NSAttributedStringKey.foregroundColor:
-                    UIColor.colourBackgroundDark]
+        let attributes:[NSAttributedStringKey:Any] = [
+                NSAttributedStringKey.font : UIFont.medium(size:fontSize),
+                NSAttributedStringKey.foregroundColor : UIColor.colourBackgroundDark]
         
         return attributes
     }
     
-    class func factoryAttributesDescr(
-        fontSize:CGFloat) -> [
-        NSAttributedStringKey:Any]
+    class func factoryAttributesDescr(fontSize:CGFloat) -> [NSAttributedStringKey:Any]
     {
-        let attributes:[
-            NSAttributedStringKey:Any] = [
-                NSAttributedStringKey.font:
-                    UIFont.regular(size:fontSize),
-                NSAttributedStringKey.foregroundColor:
-                    UIColor(white:0.5, alpha:1)]
+        let attributes:[NSAttributedStringKey:Any] = [
+                NSAttributedStringKey.font : UIFont.regular(size:fontSize),
+                NSAttributedStringKey.foregroundColor : UIColor(white:0.5, alpha:1)]
         
         return attributes
     }
@@ -81,12 +69,12 @@ extension VHomeStandbyCell
             toView:self)
         NSLayoutConstraint.size(
             view:icon,
-            constant:kIconSize)
+            constant:VHomeStandbyCell.Constants.iconSize)
         
         NSLayoutConstraint.topToTop(
             view:labelInfo,
             toView:self,
-            constant:kInfoTop)
+            constant:VHomeStandbyCell.Constants.infoTop)
         layoutInfoHeight = NSLayoutConstraint.height(
             view:labelInfo)
         NSLayoutConstraint.leftToRight(
@@ -95,16 +83,13 @@ extension VHomeStandbyCell
         NSLayoutConstraint.rightToRight(
             view:labelInfo,
             toView:self,
-            constant:kInfoRight)
+            constant:VHomeStandbyCell.Constants.infoRight)
     }
     
-    func factoryInfo(
-        model:MHomeInfoProtocol) -> NSAttributedString
+    func factoryInfo(model:MHomeInfoProtocol) -> NSAttributedString
     {
-        let title:NSAttributedString = factoryTitle(
-            model:model)
-        let descr:NSAttributedString = factoryDescr(
-            model:model)
+        let title:NSAttributedString = factoryTitle(model:model)
+        let descr:NSAttributedString = factoryDescr(model:model)
         
         let mutableString:NSMutableAttributedString = NSMutableAttributedString()
         mutableString.append(title)

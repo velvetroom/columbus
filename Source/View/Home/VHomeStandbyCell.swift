@@ -7,13 +7,7 @@ final class VHomeStandbyCell:UICollectionViewCell
     weak var layoutInfoHeight:NSLayoutConstraint!
     let attributesTitle:[NSAttributedStringKey:Any]
     let attributesDescr:[NSAttributedStringKey:Any]
-    let kIconSize:CGFloat = 60
-    let kInfoTop:CGFloat = 16
-    let kInfoRight:CGFloat = -20
     private let options:NSStringDrawingOptions
-    private let kInfoMaxHeight:CGFloat = 600
-    private let kTitleFontSize:CGFloat = 15
-    private let kDescrFontSize:CGFloat = 14
     
     override init(frame:CGRect)
     {
@@ -21,9 +15,9 @@ final class VHomeStandbyCell:UICollectionViewCell
             NSStringDrawingOptions.usesFontLeading,
             NSStringDrawingOptions.usesLineFragmentOrigin])
         attributesTitle = VHomeStandbyCell.factoryAttributesTitle(
-            fontSize:kTitleFontSize)
+            fontSize:VHomeStandbyCell.Constants.titleFontSize)
         attributesDescr = VHomeStandbyCell.factoryAttributesDescr(
-            fontSize:kDescrFontSize)
+            fontSize:VHomeStandbyCell.Constants.descrFontSize)
         
         super.init(frame:frame)
         clipsToBounds = true
@@ -41,8 +35,7 @@ final class VHomeStandbyCell:UICollectionViewCell
     
     private func updateInfo(model:MHomeInfoProtocol)
     {
-        let info:NSAttributedString = factoryInfo(
-            model:model)
+        let info:NSAttributedString = factoryInfo(model:model)
         
         labelInfo.attributedText = info
         updateInfoLayout(info:info)
@@ -55,11 +48,13 @@ final class VHomeStandbyCell:UICollectionViewCell
         
         let size:CGSize = CGSize(
             width:labelInfo.bounds.width,
-            height:kInfoMaxHeight)
+            height:VHomeStandbyCell.Constants.infoMaxHeight)
+        
         let boundingRect:CGRect = info.boundingRect(
             with:size,
             options:options,
             context:nil)
+        
         let infoHeight:CGFloat = ceil(boundingRect.size.height)
         
         layoutInfoHeight.constant = infoHeight
