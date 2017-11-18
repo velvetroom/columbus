@@ -4,14 +4,14 @@ final class VCreateSaveStatusBusyProgress:View<ArchCreateSave>
 {
     private weak var layoutBarWidth:NSLayoutConstraint!
     private var progress:CGFloat
-    private let kBarAlpha:CGFloat = 0.3
-    private let kBackgroundAlpha:CGFloat = 0.1
     
     required init(controller:CCreateSave)
     {
         progress = 0
-        let backgroundColor:UIColor = UIColor(white:1, alpha:kBackgroundAlpha)
-        let barColor:UIColor = UIColor(white:1, alpha:kBarAlpha)
+        let backgroundColor:UIColor = UIColor(white:1, alpha:
+            VCreateSaveStatusBusyProgress.Constants.backgroundAlpha)
+        let barColor:UIColor = UIColor(white:1, alpha:
+            VCreateSaveStatusBusyProgress.Constants.barAlpha)
         
         super.init(controller:controller)
         isUserInteractionEnabled = false
