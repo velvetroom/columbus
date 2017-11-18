@@ -313,6 +313,7 @@
 		DA8A96191FC016EC000C8E91 /* VCreateStatusReadyBarTravel+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96181FC016EC000C8E91 /* VCreateStatusReadyBarTravel+Constants.swift */; };
 		DA8A961B1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A961A1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift */; };
 		DA8A961D1FC01839000C8E91 /* VCreateStatusReadyBarLoader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A961C1FC01839000C8E91 /* VCreateStatusReadyBarLoader+Constants.swift */; };
+		DA8A961F1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A961E1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift */; };
 		DA8DF8CF1FA94CD200276867 /* VPlansList+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8CE1FA94CD200276867 /* VPlansList+Actions.swift */; };
 		DA8DF8D11FA955EB00276867 /* VPlansListCell+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8D01FA955EB00276867 /* VPlansListCell+Factory.swift */; };
 		DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8DF8D21FA9579E00276867 /* plans.xcassets */; };
@@ -809,6 +810,7 @@
 		DA8A96181FC016EC000C8E91 /* VCreateStatusReadyBarTravel+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarTravel+Constants.swift"; sourceTree = "<group>"; };
 		DA8A961A1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarTravelCell+Constants.swift"; sourceTree = "<group>"; };
 		DA8A961C1FC01839000C8E91 /* VCreateStatusReadyBarLoader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarLoader+Constants.swift"; sourceTree = "<group>"; };
+		DA8A961E1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSaveStatusBusy+Constants.swift"; sourceTree = "<group>"; };
 		DA8DF8CE1FA94CD200276867 /* VPlansList+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansList+Actions.swift"; sourceTree = "<group>"; };
 		DA8DF8D01FA955EB00276867 /* VPlansListCell+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansListCell+Factory.swift"; sourceTree = "<group>"; };
 		DA8DF8D21FA9579E00276867 /* plans.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = plans.xcassets; sourceTree = "<group>"; };
@@ -1185,6 +1187,7 @@
 			children = (
 				DA5B094B1FA362210055E8F3 /* VCreateSave.swift */,
 				DA5573C51FBA372400F15606 /* VCreateSaveStatusBusy.swift */,
+				DA8A961E1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift */,
 				DA5573C91FBA387200F15606 /* VCreateSaveStatusBusy+Factory.swift */,
 				DA7933341FBB445E00C020BC /* VCreateSaveStatusBusyProgress.swift */,
 				DA5573C71FBA372F00F15606 /* VCreateSaveStatusError.swift */,
@@ -2209,6 +2212,7 @@
 				DA67C7461FBFDF08007D8B10 /* VStoreStatusReadyList+Constants.swift in Sources */,
 				DAE73F1D1FB0C94D005BE26F /* VStoreStatusReadyListCell+Factory.swift in Sources */,
 				DA2780121FA8DCE700489D0E /* MCreateSave+Image.swift in Sources */,
+				DA8A961F1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift in Sources */,
 				DA4861891FAA3F3700FFBAB8 /* MSettingsDetailLevelMedium.swift in Sources */,
 				DA56FD051FA8EEB00018C2C7 /* MCreateSavePicture+Factory.swift in Sources */,
 				DA2219511FAA880500DD6F86 /* VSettingsListCellDetailLevelList.swift in Sources */,
