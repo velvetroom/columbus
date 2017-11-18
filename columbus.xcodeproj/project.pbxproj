@@ -35,6 +35,7 @@
 		DA17F7771FC01EDF00612A9C /* VPlansBar+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7761FC01EDF00612A9C /* VPlansBar+Constants.swift */; };
 		DA17F7791FC01F7700612A9C /* VPlansList+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F7781FC01F7700612A9C /* VPlansList+Constants.swift */; };
 		DA17F77B1FC0200700612A9C /* VPlansListHeader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F77A1FC0200700612A9C /* VPlansListHeader+Constants.swift */; };
+		DA17F77D1FC020A300612A9C /* VPlansListCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA17F77C1FC020A300612A9C /* VPlansListCell+Constants.swift */; };
 		DA1840051FA93CE10086B0E8 /* VPlansBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1840041FA93CE00086B0E8 /* VPlansBar.swift */; };
 		DA18A9681FAD47CA00F6BDF8 /* VPlansListCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9671FAD47CA00F6BDF8 /* VPlansListCellButton.swift */; };
 		DA18A96A1FAD4E4700F6BDF8 /* MPlans+Active.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A9691FAD4E4700F6BDF8 /* MPlans+Active.swift */; };
@@ -539,6 +540,7 @@
 		DA17F7761FC01EDF00612A9C /* VPlansBar+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansBar+Constants.swift"; sourceTree = "<group>"; };
 		DA17F7781FC01F7700612A9C /* VPlansList+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansList+Constants.swift"; sourceTree = "<group>"; };
 		DA17F77A1FC0200700612A9C /* VPlansListHeader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansListHeader+Constants.swift"; sourceTree = "<group>"; };
+		DA17F77C1FC020A300612A9C /* VPlansListCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansListCell+Constants.swift"; sourceTree = "<group>"; };
 		DA1840041FA93CE00086B0E8 /* VPlansBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPlansBar.swift; sourceTree = "<group>"; };
 		DA18A9671FAD47CA00F6BDF8 /* VPlansListCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansListCellButton.swift; sourceTree = "<group>"; };
 		DA18A9691FAD4E4700F6BDF8 /* MPlans+Active.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MPlans+Active.swift"; sourceTree = "<group>"; };
@@ -1805,6 +1807,7 @@
 				DA6700D21FAB7DC700B89997 /* VPlansListHeader.swift */,
 				DA17F77A1FC0200700612A9C /* VPlansListHeader+Constants.swift */,
 				DADE5F991FA9405100E59687 /* VPlansListCell.swift */,
+				DA17F77C1FC020A300612A9C /* VPlansListCell+Constants.swift */,
 				DA8DF8D01FA955EB00276867 /* VPlansListCell+Factory.swift */,
 				DA8DF8D41FA95B6100276867 /* VPlansListCell+Actions.swift */,
 				DA18A9671FAD47CA00F6BDF8 /* VPlansListCellButton.swift */,
@@ -2090,6 +2093,7 @@
 				DA5B093F1FA35EF00055E8F3 /* CCreateSave.swift in Sources */,
 				DA2EE56D1F98AE9900488A07 /* MCreateMapStatusContracted.swift in Sources */,
 				DA13F6521F99C4C800DF92F5 /* DPlanStop+Annotation.swift in Sources */,
+				DA17F77D1FC020A300612A9C /* VPlansListCell+Constants.swift in Sources */,
 				DA5B094C1FA362210055E8F3 /* VCreateSave.swift in Sources */,
 				DAECA2DE1F9FCBF30051F757 /* MSettingsTravelModeWalking.swift in Sources */,
 				DADA41FC1F9676E700DD1FC4 /* MCreateStatusProtocol.swift in Sources */,
