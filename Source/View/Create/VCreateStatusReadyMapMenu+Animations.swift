@@ -6,7 +6,7 @@ extension VCreateStatusReadyMapMenu
     
     func animateShow()
     {
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:ViewMain.Constants.animationDuration)
         { [weak self] in
             
             self?.alpha = 1
