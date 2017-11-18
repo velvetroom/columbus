@@ -226,9 +226,9 @@
 		DA65ECFA1F95E68700720673 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC901F95E68700720673 /* View.swift */; };
 		DA65ECFB1F95E68700720673 /* ViewParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC911F95E68700720673 /* ViewParent.swift */; };
 		DA65ECFC1F95E68700720673 /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC921F95E68700720673 /* ViewProtocol.swift */; };
-		DA65ECFD1F95E68700720673 /* ViewParentGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC931F95E68700720673 /* ViewParentGesture.swift */; };
+		DA65ECFD1F95E68700720673 /* ViewParent+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC931F95E68700720673 /* ViewParent+Gesture.swift */; };
 		DA65ECFE1F95E68700720673 /* ViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC941F95E68700720673 /* ViewMain.swift */; };
-		DA65ECFF1F95E68700720673 /* ViewParentTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC951F95E68700720673 /* ViewParentTransitions.swift */; };
+		DA65ECFF1F95E68700720673 /* ViewParent+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC951F95E68700720673 /* ViewParent+Transitions.swift */; };
 		DA65ED001F95E68700720673 /* VMenuCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC971F95E68700720673 /* VMenuCollection.swift */; };
 		DA65ED011F95E68700720673 /* VMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC981F95E68700720673 /* VMenuCell.swift */; };
 		DA65ED021F95E68700720673 /* VMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65EC991F95E68700720673 /* VMenu.swift */; };
@@ -683,9 +683,9 @@
 		DA65EC901F95E68700720673 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		DA65EC911F95E68700720673 /* ViewParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParent.swift; sourceTree = "<group>"; };
 		DA65EC921F95E68700720673 /* ViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
-		DA65EC931F95E68700720673 /* ViewParentGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParentGesture.swift; sourceTree = "<group>"; };
+		DA65EC931F95E68700720673 /* ViewParent+Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewParent+Gesture.swift"; sourceTree = "<group>"; };
 		DA65EC941F95E68700720673 /* ViewMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMain.swift; sourceTree = "<group>"; };
-		DA65EC951F95E68700720673 /* ViewParentTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewParentTransitions.swift; sourceTree = "<group>"; };
+		DA65EC951F95E68700720673 /* ViewParent+Transitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewParent+Transitions.swift"; sourceTree = "<group>"; };
 		DA65EC971F95E68700720673 /* VMenuCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMenuCollection.swift; sourceTree = "<group>"; };
 		DA65EC981F95E68700720673 /* VMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMenuCell.swift; sourceTree = "<group>"; };
 		DA65EC991F95E68700720673 /* VMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMenu.swift; sourceTree = "<group>"; };
@@ -1375,9 +1375,9 @@
 				DA65EC911F95E68700720673 /* ViewParent.swift */,
 				DAF940D21FBFC9700094E7EB /* ViewParent+Constants.swift */,
 				DA65EC921F95E68700720673 /* ViewProtocol.swift */,
-				DA65EC931F95E68700720673 /* ViewParentGesture.swift */,
+				DA65EC931F95E68700720673 /* ViewParent+Gesture.swift */,
 				DA65EC941F95E68700720673 /* ViewMain.swift */,
-				DA65EC951F95E68700720673 /* ViewParentTransitions.swift */,
+				DA65EC951F95E68700720673 /* ViewParent+Transitions.swift */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -1965,7 +1965,7 @@
 				DA3495F31F9ABC3200D75252 /* VCreateStatusReadyBarStops.swift in Sources */,
 				DA97DC7C1FA41760005A137F /* MCreateSave+Tile.swift in Sources */,
 				DA525A081F9F7927004F8503 /* VSettingsListCellTravelModeListActions.swift in Sources */,
-				DA65ECFF1F95E68700720673 /* ViewParentTransitions.swift in Sources */,
+				DA65ECFF1F95E68700720673 /* ViewParent+Transitions.swift in Sources */,
 				DA3495F91F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift in Sources */,
 				DA63C0E91FB89A10007D01A7 /* VCreateSearchBaseList.swift in Sources */,
 				DAECA2DA1F9FCBA50051F757 /* MSettingsTravelModeCycling.swift in Sources */,
@@ -2294,7 +2294,7 @@
 				DA1906BA1FAFBBAA008147EA /* MStoreStatusLoading.swift in Sources */,
 				DA1A6C3C1FAA1B8F0022A170 /* MSettingsDistanceProtocol.swift in Sources */,
 				DA18A96D1FAD597900F6BDF8 /* CStore.swift in Sources */,
-				DA65ECFD1F95E68700720673 /* ViewParentGesture.swift in Sources */,
+				DA65ECFD1F95E68700720673 /* ViewParent+Gesture.swift in Sources */,
 				DA5877AC1FBCFA8B00EF9493 /* MSettingsMemory.swift in Sources */,
 				DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocol+Factory.swift in Sources */,
 				DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */,
