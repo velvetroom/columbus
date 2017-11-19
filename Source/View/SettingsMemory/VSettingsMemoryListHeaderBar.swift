@@ -13,10 +13,18 @@ final class VSettingsMemoryListHeaderBar:View<ArchSettingsMemory>
         layer.cornerRadius = VSettingsMemoryListHeaderBar.Constants.cornerRadius
         
         factoryViews()
+        animateLines()
     }
     
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: private
+    
+    func animateLines()
+    {
+        
     }
 }
