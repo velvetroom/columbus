@@ -14,7 +14,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.medium(size:VSettingsMemory.Constants.Bar.fontSize)
+        labelTitle.font = UIFont.medium(size:VSettingsMemoryBar.Constants.fontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
         labelTitle.text = String.localizedView(key:"VSettingsMemoryBar_labelTitle")
         
@@ -50,7 +50,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         NSLayoutConstraint.topToTop(
             view:labelTitle,
             toView:self,
-            constant:VSettingsMemory.Constants.Bar.contentTop)
+            constant:VSettingsMemory.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)
@@ -61,7 +61,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         NSLayoutConstraint.topToTop(
             view:backButton,
             toView:self,
-            constant:VSettingsMemory.Constants.Bar.contentTop)
+            constant:VSettingsMemoryBar.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:backButton,
             toView:self)
@@ -70,7 +70,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
             toView:self)
         NSLayoutConstraint.width(
             view:backButton,
-            constant:VSettingsMemory.Constants.Bar.backWidth)
+            constant:VSettingsMemoryBar.Constants.backWidth)
     }
     
     required init?(coder:NSCoder)

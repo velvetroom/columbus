@@ -4,6 +4,8 @@ final class VSettingsMemoryList:VCollection<
     ArchSettingsMemory,
     VSettingsMemoryListCell>
 {
+    private var cellSize:CGSize?
+    
     required init(controller:CSettingsMemory)
     {
         super.init(controller:controller)
@@ -13,6 +15,29 @@ final class VSettingsMemoryList:VCollection<
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        layout collectionViewLayout:UICollectionViewLayout,
+        sizeForItemAt indexPath:IndexPath) -> CGSize
+    {
+        guard
+        
+            let cellSize:CGSize = self.cellSize
+        
+        else
+        {
+            let width:CGFloat = collectionView.bounds.width
+            let cellSize:CGSize = CGSize(
+                width:width,
+                height:VSettingsMemoryList.Constants.cellHeight)
+            self.cellSize = cellSize
+            
+            return cellSize
+        }
+        
+        return cellSize
     }
     
     override func numberOfSections(

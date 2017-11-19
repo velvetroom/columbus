@@ -23,7 +23,7 @@ extension VSettingsMemory
             toView:self)
         NSLayoutConstraint.height(
             view:viewBar,
-            constant:VSettingsMemory.Constants.Main.barHeight)
+            constant:ViewMain.Constants.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)
