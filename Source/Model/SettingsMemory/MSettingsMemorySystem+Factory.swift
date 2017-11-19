@@ -26,7 +26,8 @@ extension MSettingsMemorySystem
     {
         let systemSize:CGFloat = factorySystemSize()
         let systemFreeSize:CGFloat = factorySystemFreeSize()
-        let otherSize:CGFloat = systemSize - systemFreeSize
+        let usedSize:CGFloat = systemSize - systemFreeSize
+        let otherSize:CGFloat = usedSize - columbusSize
         let otherPercent:CGFloat = otherSize / systemSize
         let columbusPercent:CGFloat = columbusSize / systemSize
         
