@@ -10,6 +10,7 @@ final class VSettingsMemorySpinner:UIImageView
         clipsToBounds = true
         animationDuration = VSettingsMemorySpinner.Constants.animationDuration
         animationImages = VSettingsMemorySpinner.Constants.images
+        alpha = VSettingsMemorySpinner.Constants.alpha
         contentMode = UIViewContentMode.center
         startAnimating()
     }

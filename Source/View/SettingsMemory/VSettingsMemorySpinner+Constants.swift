@@ -19,6 +19,7 @@ extension VSettingsMemorySpinner
             #imageLiteral(resourceName: "assetMeassuring11"),
             #imageLiteral(resourceName: "assetMeassuring12")]
         
-        static let animationDuration:TimeInterval = 2
+        static let alpha:CGFloat = 0.4
+        static let animationDuration:TimeInterval = 1
     }
 }
