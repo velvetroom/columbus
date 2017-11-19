@@ -38,4 +38,24 @@ final class VSettingsMemory:ViewMain
     {
         viewSpinner?.stopAnimating()
     }
+    
+    //MARK: private
+    
+    private func asyncReload()
+    {
+        viewSpinner?.stopAnimating()
+        viewSpinner?.removeFromSuperview()
+        viewList.collectionView.reloadData()
+    }
+    
+    //MARK: internal
+    
+    func reload()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.asyncReload()
+        }
+    }
 }
