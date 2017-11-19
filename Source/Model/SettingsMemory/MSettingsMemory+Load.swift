@@ -4,14 +4,6 @@ extension MSettingsMemory
 {
     //MARK: private
     
-    private func asyncLoad()
-    {
-        let projects:MSettingsMemoryProjects = factoryProjects()
-        system = MSettingsMemorySystem.factorySystem(columbusSize:projects.size)
-        
-        factoryItems(projects:projects)
-    }
-    
     private func factoryProjects() -> MSettingsMemoryProjects
     {
         let projects:MSettingsMemoryProjects = MSettingsMemoryProjects()
@@ -65,19 +57,60 @@ extension MSettingsMemory
         return sizeFloat
     }
     
-    private func factoryItems(projects:MSettingsMemoryProjects)
+    private func factoryItems(
+        projects:MSettingsMemoryProjects,
+        completion:@escaping(() -> ()))
     {
+        database?.fetch
+        { [weak self] (plans:[DPlan]) in
+            
+            self?.factoryItems(
+                projects:projects,
+                plans:plans,
+                completion:completion)
+        }
+    }
+    
+    private func factoryItems(
+        projects:MSettingsMemoryProjects,
+        plans:[DPlan],
+        completion:(() -> ()))
+    {
+        var items:[MSettingsMemoryItem] = []
         
+        for plan:DPlan in plans
+        {
+            guard
+            
+                let identifier:String = plan.identifier,
+                let project:MSettingsMemoryProjectsItem = projects.pop(identifier:identifier)
+            
+            else
+            {
+                continue
+            }
+            
+            let item:MSettingsMemoryItem = MSettingsMemoryItem(
+                plan:plan,
+                size:project.size)
+            items.append(item)
+        }
+        
+        self.items = items
+        completion()
     }
     
     //MARK: internal
     
     func load()
     {
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        let projects:MSettingsMemoryProjects = factoryProjects()
+        system = MSettingsMemorySystem.factorySystem(columbusSize:projects.size)
+        
+        factoryItems(projects:projects)
         { [weak self] in
             
-            self?.asyncLoad()
+            self?.garbage = projects
         }
     }
 }

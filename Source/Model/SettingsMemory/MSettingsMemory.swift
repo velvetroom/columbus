@@ -6,6 +6,7 @@ final class MSettingsMemory:Model<ArchSettingsMemory>
     var database:Database?
     var settings:DSettings?
     var system:MSettingsMemorySystem?
+    var garbage:MSettingsMemoryProjects?
     
     required init()
     {

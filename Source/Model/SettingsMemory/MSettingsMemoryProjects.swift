@@ -2,8 +2,8 @@ import UIKit
 
 final class MSettingsMemoryProjects
 {
-    private(set) var map:[String:MSettingsMemoryProjectsItem]
     private(set) var size:CGFloat
+    private var map:[String:MSettingsMemoryProjectsItem]
     
     init()
     {
@@ -17,5 +17,21 @@ final class MSettingsMemoryProjects
     {
         map[project.identifier] = project
         size += project.size
+    }
+    
+    func pop(identifier:String) -> MSettingsMemoryProjectsItem?
+    {
+        guard
+            
+            let item:MSettingsMemoryProjectsItem = map.removeValue(forKey:identifier)
+        
+        else
+        {
+            return nil
+        }
+        
+        size -= item.size
+        
+        return item
     }
 }
