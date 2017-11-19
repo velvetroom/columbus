@@ -2,6 +2,9 @@ import UIKit
 
 final class VSettingsMemory:ViewMain
 {
+    weak var viewSpinner:VSpinner?
+    weak var viewList:VSettingsMemoryList!
+    
     override var panBack:Bool
     {
         get
@@ -29,5 +32,10 @@ final class VSettingsMemory:ViewMain
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    deinit
+    {
+        viewSpinner?.stopAnimating()
     }
 }

@@ -8,7 +8,11 @@ extension VSettingsMemory
     {
         let viewBar:VSettingsMemoryBar = VSettingsMemoryBar(controller:controller)
         
+        let viewSpinner:VSpinner = VSpinner()
+        self.viewSpinner = viewSpinner
+        
         addSubview(viewBar)
+        addSubview(viewSpinner)
         
         NSLayoutConstraint.topToTop(
             view:viewBar,
@@ -18,6 +22,10 @@ extension VSettingsMemory
             constant:VSettingsMemory.Constants.Main.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:viewSpinner,
             toView:self)
     }
 }
