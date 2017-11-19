@@ -397,6 +397,7 @@
 		DAB31D171FB3DB7400C1BF7F /* UTMCreateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */; };
 		DAB385751FC15B8800ECCF76 /* DPlan+Computed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB385741FC15B8800ECCF76 /* DPlan+Computed.swift */; };
 		DAB385771FC1659000ECCF76 /* meassuring.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB385761FC1659000ECCF76 /* meassuring.xcassets */; };
+		DAB3857B1FC1724100ECCF76 /* VSettingsMemorySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3857A1FC1724100ECCF76 /* VSettingsMemorySpinner.swift */; };
 		DAB7609A1F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift */; };
 		DAB831441FB2190B00E22942 /* MCreateStatusErrorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */; };
 		DABC26951FA39FA400746CDD /* MCreateSave+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC26941FA39FA400746CDD /* MCreateSave+Actions.swift */; };
@@ -926,6 +927,7 @@
 		DAB31D161FB3DB7400C1BF7F /* UTMCreateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateFactory.swift; sourceTree = "<group>"; };
 		DAB385741FC15B8800ECCF76 /* DPlan+Computed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DPlan+Computed.swift"; sourceTree = "<group>"; };
 		DAB385761FC1659000ECCF76 /* meassuring.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = meassuring.xcassets; sourceTree = "<group>"; };
+		DAB3857A1FC1724100ECCF76 /* VSettingsMemorySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemorySpinner.swift; sourceTree = "<group>"; };
 		DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsListCellTravelModeList+Config.swift"; sourceTree = "<group>"; };
 		DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorAvailability.swift; sourceTree = "<group>"; };
 		DABC26941FA39FA400746CDD /* MCreateSave+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Actions.swift"; sourceTree = "<group>"; };
@@ -1201,6 +1203,7 @@
 				DA5DA3221FBD276A0047FED4 /* VSettingsMemoryList+Actions.swift */,
 				DA5DA3201FBD1CD90047FED4 /* VSettingsMemoryListHeader.swift */,
 				DA5DA31A1FBD18540047FED4 /* VSettingsMemoryListCell.swift */,
+				DAB3857A1FC1724100ECCF76 /* VSettingsMemorySpinner.swift */,
 			);
 			path = SettingsMemory;
 			sourceTree = "<group>";
@@ -2099,6 +2102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA750CAE1FA78B6700459985 /* MHome+Config.swift in Sources */,
+				DAB3857B1FC1724100ECCF76 /* VSettingsMemorySpinner.swift in Sources */,
 				DAEED1661FAFDF7000AD8B67 /* VStoreStatusReadyBarRestore.swift in Sources */,
 				DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */,
 				DAE1848A1F9E9A6100D29126 /* VSettingsListCell.swift in Sources */,
