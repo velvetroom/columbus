@@ -73,6 +73,8 @@ final class VSettingsMemoryList:VCollection<
             kind:kind,
             indexPath:indexPath)
         
+        header.config(controller:controller)
+        
         return header
     }
     

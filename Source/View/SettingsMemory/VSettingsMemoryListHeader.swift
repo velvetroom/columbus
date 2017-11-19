@@ -10,6 +10,7 @@ final class VSettingsMemoryListHeader:UICollectionReusableView
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
+        isUserInteractionEnabled = false
         
         factoryViews()
     }
@@ -17,5 +18,21 @@ final class VSettingsMemoryListHeader:UICollectionReusableView
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: internal
+    
+    func config(controller:CSettingsMemory)
+    {
+        guard
+        
+            viewBar == nil
+        
+        else
+        {
+            return
+        }
+        
+        factoryBar(controller:controller)
     }
 }
