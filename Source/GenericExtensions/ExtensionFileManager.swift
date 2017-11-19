@@ -24,27 +24,27 @@ extension FileManager
         }
     }
     
-    private func sizeOfItems(path:String) -> UInt64
+    private func sizeOfItems(url:URL) -> UInt64
     {
         var size:UInt64 = 0
-        /*let contents:[String] = contentsAt(path:path)
+        let contents:[URL] = urlsInDirectory(url:url)
         
-        for path:String in contents
+        for url:URL in contents
         {
-            let itemSize:UInt64 = sizeAt(path:path)
+            let itemSize:UInt64 = sizeAt(url:url)
             size += itemSize
-        }*/
+        }
         
         return size
     }
     
-    private func sizeOfItem(path:String) -> UInt64
+    private func sizeOfItem(url:URL) -> UInt64
     {
         let attributes:[FileAttributeKey:Any]
         
         do
         {
-            try attributes = attributesOfItem(atPath:path)
+            try attributes = attributesOfItem(atPath:url.path)
         }
         catch
         {
@@ -113,20 +113,20 @@ extension FileManager
         return systemSize
     }
     
-    func sizeAt(path:String) -> UInt64
+    func sizeAt(url:URL) -> UInt64
     {
         var isDirectory:ObjCBool = false
         
         guard
             
-            fileExists(atPath:path, isDirectory:&isDirectory)
+            fileExists(atPath:url.path, isDirectory:&isDirectory)
             
         else
         {
             return 0
         }
         
-        var size:UInt64 = sizeOfItem(path:path)
+        var size:UInt64 = sizeOfItem(url:url)
         
         guard
             
@@ -137,7 +137,7 @@ extension FileManager
             return size
         }
         
-        let itemsSize:UInt64 = sizeOfItems(path:path)
+        let itemsSize:UInt64 = sizeOfItems(url:url)
         size += itemsSize
         
         return size
