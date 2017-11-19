@@ -15,7 +15,6 @@ extension VSettingsMemorySpinner
             #imageLiteral(resourceName: "assetMeassuring7"),
             #imageLiteral(resourceName: "assetMeassuring8"),
             #imageLiteral(resourceName: "assetMeassuring9"),
-            #imageLiteral(resourceName: "assetMeassuring9"),
             #imageLiteral(resourceName: "assetMeassuring10"),
             #imageLiteral(resourceName: "assetMeassuring11"),
             #imageLiteral(resourceName: "assetMeassuring12")]

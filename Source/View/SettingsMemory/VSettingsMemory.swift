@@ -2,7 +2,7 @@ import UIKit
 
 final class VSettingsMemory:ViewMain
 {
-    weak var viewSpinner:VSpinner?
+    weak var viewSpinner:VSettingsMemorySpinner?
     weak var viewList:VSettingsMemoryList!
     
     override var panBack:Bool

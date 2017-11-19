@@ -8,7 +8,7 @@ extension VSettingsMemory
     {
         let viewBar:VSettingsMemoryBar = VSettingsMemoryBar(controller:controller)
         
-        let viewSpinner:VSpinner = VSpinner()
+        let viewSpinner:VSettingsMemorySpinner = VSettingsMemorySpinner()
         self.viewSpinner = viewSpinner
         
         addSubview(viewBar)

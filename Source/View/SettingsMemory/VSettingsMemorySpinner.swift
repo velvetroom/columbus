@@ -8,8 +8,8 @@ final class VSettingsMemorySpinner:UIImageView
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
-        animationDuration = VSpinner.Constants.animationDuration
-        animationImages = VSpinner.Constants.images
+        animationDuration = VSettingsMemorySpinner.Constants.animationDuration
+        animationImages = VSettingsMemorySpinner.Constants.images
         contentMode = UIViewContentMode.center
         startAnimating()
     }
