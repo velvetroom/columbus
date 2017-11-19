@@ -7,60 +7,62 @@ extension MSettingsMemory
     private func asyncLoad()
     {
         let projects:MSettingsMemoryProjects = factoryProjects()
+        system = MSettingsMemorySystem.factorySystem(columbusSize:projects.size)
         
-        factorySystem(projects:projects)
         factoryItems(projects:projects)
     }
     
     private func factoryProjects() -> MSettingsMemoryProjects
     {
         let projects:MSettingsMemoryProjects = MSettingsMemoryProjects()
-        let appDirectory:String = FileManager.default.appDirectory.path
-        /*let paths:[String] = FileManager.default.contentsAt(path:appDirectory)
         
-        for path:String in paths
+        guard
+            
+            let projectsDirectory:URL = MCreateSave.projectsDirectory()
+        
+        else
+        {
+            return projects
+        }
+        
+        let projectsList:[URL] = FileManager.default.urlsInDirectory(url:projectsDirectory)
+        
+        for projectURL:URL in projectsList
         {
             guard
-            
-                let identifier:String = factoryIdentifier(path:path)
-            
+
+                let identifier:String = factoryIdentifier(url:projectURL)
+
             else
             {
                 continue
             }
-            
-            let size:CGFloat = factorySize(path:path)
+
+            let size:CGFloat = factorySize(url:projectURL)
             let project:MSettingsMemoryProjectsItem = MSettingsMemoryProjectsItem(
                 identifier:identifier,
                 size:size)
-            
+
             projects.add(project:project)
-        }*/
+        }
         
         return projects
     }
     
-    private func factoryIdentifier(path:String) -> String?
+    private func factoryIdentifier(url:URL) -> String?
     {
-        let pathSplit:[String] = path.components(separatedBy:"/")
+        let pathSplit:[String] = url.path.components(separatedBy:"/")
         let identifier:String? = pathSplit.last
         
         return identifier
     }
     
-    private func factorySize(path:String) -> CGFloat
+    private func factorySize(url:URL) -> CGFloat
     {
-        let size:UInt64 = FileManager.default.sizeAt(path:path)
+        let size:UInt64 = FileManager.default.sizeAt(url:url)
         let sizeFloat:CGFloat = CGFloat(size)
         
         return sizeFloat
-    }
-    
-    private func factorySystem(projects:MSettingsMemoryProjects)
-    {
-        system = MSettingsMemorySystem.factorySystem(columbusSize:projects.size)
-        
-        print(system)
     }
     
     private func factoryItems(projects:MSettingsMemoryProjects)
