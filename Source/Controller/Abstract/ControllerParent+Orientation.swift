@@ -2,8 +2,6 @@ import UIKit
 
 extension ControllerParent
 {
-    private static let kOrientationKey:String = "orientation"
-    
     override var preferredStatusBarStyle:UIStatusBarStyle
     {
         guard
@@ -54,7 +52,7 @@ extension ControllerParent
     {
         UIDevice.current.setValue(
             orientation.rawValue,
-            forKey:ControllerParent.kOrientationKey)
+            forKey:ControllerParent.Constants.orientationKey)
         
         UIViewController.attemptRotationToDeviceOrientation()
     }

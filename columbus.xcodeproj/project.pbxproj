@@ -399,6 +399,7 @@
 		DAB385771FC1659000ECCF76 /* meassuring.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAB385761FC1659000ECCF76 /* meassuring.xcassets */; };
 		DAB3857B1FC1724100ECCF76 /* VSettingsMemorySpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3857A1FC1724100ECCF76 /* VSettingsMemorySpinner.swift */; };
 		DAB3857D1FC1733A00ECCF76 /* VSettingsMemorySpinner+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3857C1FC1733A00ECCF76 /* VSettingsMemorySpinner+Constants.swift */; };
+		DAB3857F1FC17A9700ECCF76 /* ControllerParent+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3857E1FC17A9700ECCF76 /* ControllerParent+Constants.swift */; };
 		DAB7609A1F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift */; };
 		DAB831441FB2190B00E22942 /* MCreateStatusErrorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */; };
 		DABC26951FA39FA400746CDD /* MCreateSave+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC26941FA39FA400746CDD /* MCreateSave+Actions.swift */; };
@@ -930,6 +931,7 @@
 		DAB385761FC1659000ECCF76 /* meassuring.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = meassuring.xcassets; sourceTree = "<group>"; };
 		DAB3857A1FC1724100ECCF76 /* VSettingsMemorySpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemorySpinner.swift; sourceTree = "<group>"; };
 		DAB3857C1FC1733A00ECCF76 /* VSettingsMemorySpinner+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsMemorySpinner+Constants.swift"; sourceTree = "<group>"; };
+		DAB3857E1FC17A9700ECCF76 /* ControllerParent+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ControllerParent+Constants.swift"; sourceTree = "<group>"; };
 		DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsListCellTravelModeList+Config.swift"; sourceTree = "<group>"; };
 		DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorAvailability.swift; sourceTree = "<group>"; };
 		DABC26941FA39FA400746CDD /* MCreateSave+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreateSave+Actions.swift"; sourceTree = "<group>"; };
@@ -1404,6 +1406,7 @@
 				DA65EC771F95E68600720673 /* Controller.swift */,
 				DA65EC781F95E68600720673 /* AppDelegate.swift */,
 				DA65EC7A1F95E68600720673 /* ControllerParent.swift */,
+				DAB3857E1FC17A9700ECCF76 /* ControllerParent+Constants.swift */,
 				DA65EC791F95E68600720673 /* ControllerParent+Transitions.swift */,
 				DA65EC7B1F95E68600720673 /* ControllerParent+Orientation.swift */,
 				DA65EC7C1F95E68600720673 /* ControllerParent+Menu.swift */,
@@ -2424,6 +2427,7 @@
 				DA65ED181F95E68700720673 /* VSliderBar.swift in Sources */,
 				DA5877A71FBCF9CE00EF9493 /* CSettingsMemory.swift in Sources */,
 				DADE5F981FA93E9B00E59687 /* VPlans+Factory.swift in Sources */,
+				DAB3857F1FC17A9700ECCF76 /* ControllerParent+Constants.swift in Sources */,
 				DA954E431FB8CE0F00CA60BE /* VCreateSearchBaseList+Actions.swift in Sources */,
 				DA65ECFE1F95E68700720673 /* ViewMain.swift in Sources */,
 				DA17F7811FC025E400612A9C /* VSettingsList+Constants.swift in Sources */,
