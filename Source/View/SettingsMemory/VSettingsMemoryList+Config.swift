@@ -13,15 +13,15 @@ extension VSettingsMemoryList
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            flow.minimumLineSpacing = VSettingsMemory.Constants.List.interItem
-            flow.minimumInteritemSpacing = VSettingsMemory.Constants.List.interItem
+            flow.minimumLineSpacing = ViewMain.Constants.interCellSpace
+            flow.minimumInteritemSpacing = ViewMain.Constants.interCellSpace
             flow.headerReferenceSize = CGSize(
                 width:0,
                 height:VSettingsMemory.Constants.List.headerHeight)
             flow.sectionInset = UIEdgeInsets(
-                top:0,
+                top:ViewMain.Constants.interCellSpace,
                 left:0,
-                bottom:VSettingsMemory.Constants.List.collectionBottom,
+                bottom:ViewMain.Constants.interCellSpace,
                 right:0)
         }
     }

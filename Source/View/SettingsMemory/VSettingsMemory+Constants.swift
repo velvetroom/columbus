@@ -18,9 +18,8 @@ extension VSettingsMemory
         
         struct List
         {
-            static let interItem:CGFloat = 1
-            static let headerHeight:CGFloat = 124
-            static let collectionBottom:CGFloat = 10
+            static let headerHeight:CGFloat = 200
+            static let footerHeight:CGFloat = 100
         }
     }
 }

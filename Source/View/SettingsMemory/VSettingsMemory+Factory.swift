@@ -11,6 +11,10 @@ extension VSettingsMemory
         let viewSpinner:VSettingsMemorySpinner = VSettingsMemorySpinner()
         self.viewSpinner = viewSpinner
         
+        let viewList:VSettingsMemoryList = VSettingsMemoryList(controller:controller)
+        self.viewList = viewList
+        
+        addSubview(viewList)
         addSubview(viewBar)
         addSubview(viewSpinner)
         
@@ -26,6 +30,10 @@ extension VSettingsMemory
         
         NSLayoutConstraint.equals(
             view:viewSpinner,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:viewList,
             toView:self)
     }
 }
