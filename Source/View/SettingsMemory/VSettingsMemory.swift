@@ -16,6 +16,7 @@ final class VSettingsMemory:ViewMain
     required init(controller:UIViewController)
     {
         super.init(controller:controller)
+        backgroundColor = UIColor.colourBackgroundGray
         
         guard
         

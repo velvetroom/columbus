@@ -111,6 +111,7 @@ extension MSettingsMemory
         { [weak self] in
             
             self?.garbage = projects
+            self?.view?.reload()
         }
     }
 }

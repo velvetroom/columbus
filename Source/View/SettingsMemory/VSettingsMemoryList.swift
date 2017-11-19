@@ -15,6 +15,30 @@ final class VSettingsMemoryList:VCollection<
         return nil
     }
     
+    override func numberOfSections(
+        in collectionView:UICollectionView) -> Int
+    {
+        guard
+        
+            controller.model.system == nil
+        
+        else
+        {
+            return 1
+        }
+        
+        return 0
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        numberOfItemsInSection section:Int) -> Int
+    {
+        let count:Int = controller.model.items.count
+        
+        return count
+    }
+    
     override func collectionView(
         _ collectionView:UICollectionView,
         viewForSupplementaryElementOfKind kind:String,
