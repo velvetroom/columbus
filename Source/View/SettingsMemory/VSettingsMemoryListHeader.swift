@@ -26,10 +26,10 @@ final class VSettingsMemoryListHeader:UICollectionReusableView
     {
         guard
         
-            let systemMemory:CGFloat = model.system?.systemSize,
-            let usedMemory:CGFloat = model.system?.usedSize,
-            let system:String = model.bytesAsRoundedGB(bytes:systemMemory),
-            let used:String = model.bytesAsGB(bytes:usedMemory)
+            let systemBytes:CGFloat = model.system?.systemSize,
+            let usedBytes:CGFloat = model.system?.usedSize,
+            let systemString:String = model.bytesAsRoundedGB(bytes:systemBytes),
+            let usedString:String = model.bytesAsGB(bytes:usedBytes)
         
         else
         {
@@ -38,8 +38,8 @@ final class VSettingsMemoryListHeader:UICollectionReusableView
         
         let string:String = String(
             format:String.localizedView(key:"VSettingsMemoryListHeader_labelUsage"),
-            system,
-            used)
+            usedString,
+            systemString)
         
         labelUsage.text = string
     }
