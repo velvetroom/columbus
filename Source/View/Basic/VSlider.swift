@@ -2,6 +2,10 @@ import UIKit
 
 final class VSlider:UIView
 {
+    typealias Router = (
+        (VSlider) ->
+        (UIPanGestureRecognizer) -> ())
+    
     var panInitialWidth:CGFloat?
     var percentUsed:CGFloat
     private(set) weak var viewBase:UIView!

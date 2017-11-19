@@ -1,9 +1,12 @@
-import UIKit
+import MapKit
 
 extension VMapPin
 {
     struct Constants
     {
+        static let dragStateMap:[MKAnnotationViewDragState:MKAnnotationViewDragState] = [
+            MKAnnotationViewDragState.starting : MKAnnotationViewDragState.dragging]
+        
         static let imageOffsetY:CGFloat = -17
         static let imageDragginOffsetY:CGFloat = 24
         static let animationDuration:TimeInterval = 0.3

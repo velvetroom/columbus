@@ -2,17 +2,6 @@ import UIKit
 
 extension VSlider:UIGestureRecognizerDelegate
 {
-    private typealias Router = (
-        (VSlider) ->
-        (UIPanGestureRecognizer) -> ())
-    
-    private static let kRouterMap:[UIGestureRecognizerState:Router] = [
-            UIGestureRecognizerState.began : gestureBegan,
-            UIGestureRecognizerState.changed : gestureChanged,
-            UIGestureRecognizerState.ended : gestureEnded,
-            UIGestureRecognizerState.failed : gestureEnded,
-            UIGestureRecognizerState.cancelled : gestureEnded]
-    
     //MARK: selectors
     
     @objc
@@ -20,7 +9,7 @@ extension VSlider:UIGestureRecognizerDelegate
     {
         guard
         
-            let router:Router = VSlider.kRouterMap[gesture.state]
+            let router:Router = VSlider.Constants.routerMap[gesture.state]
         
         else
         {
@@ -32,12 +21,40 @@ extension VSlider:UIGestureRecognizerDelegate
     
     //MARK: private
     
-    private func gestureBegan(gesture:UIPanGestureRecognizer)
+    private func updateBar(
+        newWidth:CGFloat,
+        totalWidth:CGFloat)
+    {
+        layoutBarWidth.constant = newWidth
+        let percentUsed:CGFloat = newWidth / totalWidth
+        self.percentUsed = percentUsed
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.sliderChange?(percentUsed)
+        }
+    }
+    
+    //MARK: internal
+    
+    func factoryGestureRecognizer() -> UIPanGestureRecognizer
+    {
+        let gesture:UIPanGestureRecognizer = UIPanGestureRecognizer(
+            target:self,
+            action:#selector(selectorPanning(sender:)))
+        
+        gesture.delegate = self
+        
+        return gesture
+    }
+    
+    func gestureBegan(gesture:UIPanGestureRecognizer)
     {
         panInitialWidth = layoutBarWidth.constant
     }
     
-    private func gestureChanged(gesture:UIPanGestureRecognizer)
+    func gestureChanged(gesture:UIPanGestureRecognizer)
     {
         let totalWidth:CGFloat = viewBase.bounds.maxX
         
@@ -68,38 +85,10 @@ extension VSlider:UIGestureRecognizerDelegate
             totalWidth:totalWidth)
     }
     
-    private func gestureEnded(gesture:UIPanGestureRecognizer)
+    func gestureEnded(gesture:UIPanGestureRecognizer)
     {
         panInitialWidth = nil
         slidingFinished?()
-    }
-    
-    private func updateBar(
-        newWidth:CGFloat,
-        totalWidth:CGFloat)
-    {
-        layoutBarWidth.constant = newWidth
-        let percentUsed:CGFloat = newWidth / totalWidth
-        self.percentUsed = percentUsed
-        
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.sliderChange?(percentUsed)
-        }
-    }
-    
-    //MARK: internal
-    
-    func factoryGestureRecognizer() -> UIPanGestureRecognizer
-    {
-        let gesture:UIPanGestureRecognizer = UIPanGestureRecognizer(
-            target:self,
-            action:#selector(selectorPanning(sender:)))
-        
-        gesture.delegate = self
-        
-        return gesture
     }
     
     //MARK: gestureRecognizer delegate

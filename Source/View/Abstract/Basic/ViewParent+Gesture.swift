@@ -2,18 +2,6 @@ import UIKit
 
 extension ViewParent:UIGestureRecognizerDelegate
 {
-    private typealias Router = (
-        (ViewParent) ->
-        (CGPoint, CGFloat) -> ())
-    
-    private static let kRouterMap:[UIGestureRecognizerState:Router] = [
-            UIGestureRecognizerState.began : gestureStateBegan,
-            UIGestureRecognizerState.possible : gestureStateBegan,
-            UIGestureRecognizerState.changed : gestureStateChanged,
-            UIGestureRecognizerState.cancelled : gestureStateEnded,
-            UIGestureRecognizerState.ended : gestureStateEnded,
-            UIGestureRecognizerState.failed : gestureStateEnded]
-    
     //MARK: selectors
     
     @objc
@@ -24,7 +12,7 @@ extension ViewParent:UIGestureRecognizerDelegate
         
         guard
         
-            let router:Router = ViewParent.kRouterMap[panGesture.state]
+            let router:Router = ViewParent.Constants.routerMap[panGesture.state]
         
         else
         {
@@ -35,74 +23,6 @@ extension ViewParent:UIGestureRecognizerDelegate
     }
     
     //MARK: private
-    
-    private func gestureStateBegan(
-        location:CGPoint,
-        xPos:CGFloat)
-    {
-        if xPos < ViewParent.Constants.panningMaxX
-        {
-            self.panningX = xPos
-        }
-    }
-    
-    private func gestureStateChanged(
-        location:CGPoint,
-        xPos:CGFloat)
-    {
-        guard
-        
-            let panningX:CGFloat = self.panningX
-        
-        else
-        {
-            return
-        }
-        
-        let deltaX:CGFloat = xPos - panningX
-        
-        guard
-        
-            deltaX < ViewParent.Constants.panningMaxXDelta
-        
-        else
-        {
-            panRecognizer.isEnabled = false
-            
-            return
-        }
-        
-        gesturePanTo(deltaX:deltaX)
-    }
-    
-    private func gestureStateEnded(
-        location:CGPoint,
-        xPos:CGFloat)
-    {
-        guard
-        
-            let panningX:CGFloat = self.panningX
-        
-        else
-        {
-            self.panningX = nil
-            
-            return
-        }
-        
-        let deltaX:CGFloat = xPos - panningX
-        
-        if deltaX > ViewParent.Constants.panningMinXDelta
-        {
-            gesturePop()
-        }
-        else
-        {
-            gestureRestore()
-        }
-        
-        self.panningX = nil
-    }
     
     private func gesturePanTo(deltaX:CGFloat)
     {
@@ -164,6 +84,74 @@ extension ViewParent:UIGestureRecognizerDelegate
         self.panRecognizer = panRecognizer
         
         addGestureRecognizer(panRecognizer)
+    }
+    
+    func gestureStateBegan(
+        location:CGPoint,
+        xPos:CGFloat)
+    {
+        if xPos < ViewParent.Constants.panningMaxX
+        {
+            self.panningX = xPos
+        }
+    }
+    
+    func gestureStateChanged(
+        location:CGPoint,
+        xPos:CGFloat)
+    {
+        guard
+            
+            let panningX:CGFloat = self.panningX
+            
+        else
+        {
+            return
+        }
+        
+        let deltaX:CGFloat = xPos - panningX
+        
+        guard
+            
+            deltaX < ViewParent.Constants.panningMaxXDelta
+            
+        else
+        {
+            panRecognizer.isEnabled = false
+            
+            return
+        }
+        
+        gesturePanTo(deltaX:deltaX)
+    }
+    
+    func gestureStateEnded(
+        location:CGPoint,
+        xPos:CGFloat)
+    {
+        guard
+            
+            let panningX:CGFloat = self.panningX
+            
+        else
+        {
+            self.panningX = nil
+            
+            return
+        }
+        
+        let deltaX:CGFloat = xPos - panningX
+        
+        if deltaX > ViewParent.Constants.panningMinXDelta
+        {
+            gesturePop()
+        }
+        else
+        {
+            gestureRestore()
+        }
+        
+        self.panningX = nil
     }
     
     //MARK: gestureRecognizerDelegate
