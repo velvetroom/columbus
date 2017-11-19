@@ -17,7 +17,7 @@ extension VSettingsMemoryList
             flow.minimumInteritemSpacing = ViewMain.Constants.interCellSpace
             flow.headerReferenceSize = CGSize(
                 width:0,
-                height:VSettingsMemory.Constants.List.headerHeight)
+                height:VSettingsMemoryList.Constants.headerHeight)
             flow.sectionInset = UIEdgeInsets(
                 top:ViewMain.Constants.interCellSpace,
                 left:0,

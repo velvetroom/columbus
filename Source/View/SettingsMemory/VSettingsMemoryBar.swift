@@ -50,7 +50,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         NSLayoutConstraint.topToTop(
             view:labelTitle,
             toView:self,
-            constant:VSettingsMemory.Constants.contentTop)
+            constant:ViewMain.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)
@@ -61,7 +61,7 @@ final class VSettingsMemoryBar:View<ArchSettingsMemory>
         NSLayoutConstraint.topToTop(
             view:backButton,
             toView:self,
-            constant:VSettingsMemoryBar.Constants.contentTop)
+            constant:ViewMain.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:backButton,
             toView:self)
