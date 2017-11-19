@@ -9,7 +9,7 @@ final class VSettingsMemoryListHeader:UICollectionReusableView
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.clear
         
         factoryViews()
     }
