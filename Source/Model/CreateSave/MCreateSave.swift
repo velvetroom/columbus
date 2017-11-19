@@ -39,6 +39,12 @@ final class MCreateSave:Model<ArchCreateSave>
     func retryBuilding()
     {
         changeStatus(statusType:MCreateSaveStatusBusy.self)
-        pullSnapshot()
+        
+        let deadline:DispatchTime = DispatchTime.now() + MCreateSave.Constants.TimeIntervals.snapshotWait
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(deadline:deadline)
+        { [weak self] in
+            
+            self?.pullSnapshot()
+        }
     }
 }
