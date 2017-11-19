@@ -66,7 +66,7 @@ extension VSettingsMemoryListHeader
         NSLayoutConstraint.height(
             view:labelUsage,
             constant:VSettingsMemoryListHeader.Constants.headingHeight)
-        NSLayoutConstraint.righToRight(
+        NSLayoutConstraint.rightToRight(
             view:labelUsage,
             toView:self,
             constant:-VSettingsMemoryListHeader.Constants.paddingHorizontal)

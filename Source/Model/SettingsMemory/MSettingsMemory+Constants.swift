@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 extension MSettingsMemory
 {
@@ -8,6 +8,11 @@ extension MSettingsMemory
         {
             static let minIntegers:Int = 1
             static let maxDecimals:Int = 1
+        }
+        
+        struct Numeric
+        {
+            static let divider:CGFloat = 1000
         }
     }
 }

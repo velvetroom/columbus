@@ -33,6 +33,7 @@ extension MSettingsMemorySystem
         
         let system:MSettingsMemorySystem = MSettingsMemorySystem(
             systemSize:systemSize,
+            usedSize:usedSize,
             columbusSize:columbusSize,
             columbusPercent:columbusPercent,
             otherSize:otherSize,
