@@ -86,6 +86,7 @@
 		DA2219571FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelList+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219561FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelList+Actions.swift */; };
 		DA2219591FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */; };
 		DA22195B1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */; };
+		DA24A3711FC2680F003E5B86 /* VSettingsMemoryListFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA24A3701FC2680F003E5B86 /* VSettingsMemoryListFooter.swift */; };
 		DA25C8551FAAD179005A540B /* VSettingsListCellDetailLevelList+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelList+Factory.swift */; };
 		DA25C8571FAAD2E4005A540B /* VSettingsListCellDetailLevelList+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelList+Label.swift */; };
 		DA26F17E1FB7B713007F171D /* MCreateMapMenuSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */; };
@@ -627,6 +628,7 @@
 		DA2219561FAA8B3E00DD6F86 /* VSettingsListCellDetailLevelList+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsListCellDetailLevelList+Actions.swift"; sourceTree = "<group>"; };
 		DA2219581FAA8B6800DD6F86 /* VSettingsListCellDetailLevelListSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListSelector.swift; sourceTree = "<group>"; };
 		DA22195A1FAA8BC700DD6F86 /* VSettingsListCellDetailLevelListRail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsListCellDetailLevelListRail.swift; sourceTree = "<group>"; };
+		DA24A3701FC2680F003E5B86 /* VSettingsMemoryListFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemoryListFooter.swift; sourceTree = "<group>"; };
 		DA25C8541FAAD179005A540B /* VSettingsListCellDetailLevelList+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsListCellDetailLevelList+Factory.swift"; sourceTree = "<group>"; };
 		DA25C8561FAAD2E4005A540B /* VSettingsListCellDetailLevelList+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsListCellDetailLevelList+Label.swift"; sourceTree = "<group>"; };
 		DA26F17D1FB7B713007F171D /* MCreateMapMenuSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuSearch.swift; sourceTree = "<group>"; };
@@ -1245,6 +1247,7 @@
 				DAC1F29C1FC2611300C488D6 /* VSettingsMemoryListHeaderList+Constants.swift */,
 				DAC1F2961FC25FB300C488D6 /* VSettingsMemoryListHeaderListBadge.swift */,
 				DAC1F2981FC25FFB00C488D6 /* VSettingsMemoryListHeaderListBadge+Constants.swift */,
+				DA24A3701FC2680F003E5B86 /* VSettingsMemoryListFooter.swift */,
 				DA5DA31A1FBD18540047FED4 /* VSettingsMemoryListCell.swift */,
 				DAB3857A1FC1724100ECCF76 /* VSettingsMemorySpinner.swift */,
 				DAB3857C1FC1733A00ECCF76 /* VSettingsMemorySpinner+Constants.swift */,
@@ -2359,6 +2362,7 @@
 				DABCCB181FBFF39C00F05BC3 /* VHomeStandby+Constants.swift in Sources */,
 				DA1906C01FAFC33F008147EA /* MStoreStatusReady.swift in Sources */,
 				DA7D958F1FA762C300A620FB /* MHomeStatusProtocol.swift in Sources */,
+				DA24A3711FC2680F003E5B86 /* VSettingsMemoryListFooter.swift in Sources */,
 				DAB2F8F61F96697300C1EF4A /* MCreate.swift in Sources */,
 				DAB1FA6F1FABAA45000D857C /* MHomeInfoSettings.swift in Sources */,
 				DA5DA31F1FBD18F50047FED4 /* VSettingsMemoryList+Config.swift in Sources */,
