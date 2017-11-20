@@ -181,6 +181,25 @@ extension NSLayoutConstraint
         return constraint
     }
     
+    @discardableResult class func widthGreaterOrEqual(
+        view:UIView,
+        constant:CGFloat = 0,
+        multiplier:CGFloat = 1) -> NSLayoutConstraint
+    {
+        let constraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:view,
+            attribute:NSLayoutAttribute.width,
+            relatedBy:NSLayoutRelation.greaterThanOrEqual,
+            toItem:nil,
+            attribute:NSLayoutAttribute.notAnAttribute,
+            multiplier:multiplier,
+            constant:constant)
+        
+        constraint.isActive = true
+        
+        return constraint
+    }
+    
     @discardableResult class func height(
         view:UIView,
         constant:CGFloat = 0,
@@ -190,6 +209,25 @@ extension NSLayoutConstraint
             item:view,
             attribute:NSLayoutAttribute.height,
             relatedBy:NSLayoutRelation.equal,
+            toItem:nil,
+            attribute:NSLayoutAttribute.notAnAttribute,
+            multiplier:multiplier,
+            constant:constant)
+        
+        constraint.isActive = true
+        
+        return constraint
+    }
+    
+    @discardableResult class func heightGreaterOrEqual(
+        view:UIView,
+        constant:CGFloat = 0,
+        multiplier:CGFloat = 1) -> NSLayoutConstraint
+    {
+        let constraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:view,
+            attribute:NSLayoutAttribute.height,
+            relatedBy:NSLayoutRelation.greaterThanOrEqual,
             toItem:nil,
             attribute:NSLayoutAttribute.notAnAttribute,
             multiplier:multiplier,
