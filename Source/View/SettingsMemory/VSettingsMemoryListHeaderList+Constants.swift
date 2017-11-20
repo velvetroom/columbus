@@ -10,5 +10,6 @@ extension VSettingsMemoryListHeaderList
         static let labelWidth:CGFloat = 20
         static let labelRight:CGFloat = 25
         static let labelHeight:CGFloat = 40
+        static let fontSize:CGFloat = 11
     }
 }
