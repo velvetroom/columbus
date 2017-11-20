@@ -10,5 +10,6 @@ extension VSettingsMemoryListHeader
         static let barHeight:CGFloat = 30
         static let titleFontSize:CGFloat = 14
         static let usageFontSize:CGFloat = 12
+        static let listHeight:CGFloat = 50
     }
 }

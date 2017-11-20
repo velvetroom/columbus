@@ -80,6 +80,9 @@ extension VSettingsMemoryListHeader
         let viewBar:VSettingsMemoryListHeaderBar = VSettingsMemoryListHeaderBar(controller:controller)
         self.viewBar = viewBar
         
+        let viewList:VSettingsMemoryListHeaderList = VSettingsMemoryListHeaderList(controller:controller)
+        
+        addSubview(viewList)
         addSubview(viewBar)
         
         NSLayoutConstraint.topToBottom(
@@ -90,6 +93,17 @@ extension VSettingsMemoryListHeader
             constant:VSettingsMemoryListHeader.Constants.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self,
+            margin:VSettingsMemoryListHeader.Constants.paddingHorizontal)
+        
+        NSLayoutConstraint.topToBottom(
+            view:viewList,
+            toView:viewBar)
+        NSLayoutConstraint.height(
+            view:viewList,
+            constant:VSettingsMemoryListHeader.Constants.listHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewList,
             toView:self,
             margin:VSettingsMemoryListHeader.Constants.paddingHorizontal)
     }

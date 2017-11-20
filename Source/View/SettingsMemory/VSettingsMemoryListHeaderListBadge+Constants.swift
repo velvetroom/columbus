@@ -4,6 +4,6 @@ extension VSettingsMemoryListHeaderListBadge
 {
     struct Constants
     {
-        static let cornerRadius:CGFloat = 3
+        static let cornerRadius:CGFloat = 2
     }
 }
