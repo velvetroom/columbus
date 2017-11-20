@@ -7,6 +7,8 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.white
+        
+        factoryViews()
     }
     
     required init?(coder:NSCoder)
