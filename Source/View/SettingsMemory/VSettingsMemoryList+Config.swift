@@ -10,6 +10,7 @@ extension VSettingsMemoryList
         collectionView.alwaysBounceVertical = true
         
         registerHeader(header:VSettingsMemoryListHeader.self)
+        registerFooter(footer:VSettingsMemoryListFooter.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
@@ -18,6 +19,9 @@ extension VSettingsMemoryList
             flow.headerReferenceSize = CGSize(
                 width:0,
                 height:VSettingsMemoryList.Constants.headerHeight)
+            flow.footerReferenceSize = CGSize(
+                width:0,
+                height:VSettingsMemoryList.Constants.footerHeight)
             flow.sectionInset = UIEdgeInsets(
                 top:ViewMain.Constants.interCellSpace,
                 left:0,

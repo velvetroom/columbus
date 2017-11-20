@@ -69,6 +69,21 @@ final class VSettingsMemoryList:VCollection<
         viewForSupplementaryElementOfKind kind:String,
         at indexPath:IndexPath) -> UICollectionReusableView
     {
+        guard
+            
+            kind == UICollectionElementKindSectionHeader
+        
+        else
+        {
+            let footer:VSettingsMemoryListFooter = reusableAtIndex(
+                kind:kind,
+                indexPath:indexPath)
+            
+            footer.config(controller:controller)
+            
+            return footer
+        }
+        
         let header:VSettingsMemoryListHeader = reusableAtIndex(
             kind:kind,
             indexPath:indexPath)
