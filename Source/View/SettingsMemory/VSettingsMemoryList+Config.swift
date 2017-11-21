@@ -6,7 +6,6 @@ extension VSettingsMemoryList
     
     func config()
     {
-        backgroundColor = UIColor.colourBackgroundGray
         collectionView.alwaysBounceVertical = true
         
         registerHeader(header:VSettingsMemoryListHeader.self)

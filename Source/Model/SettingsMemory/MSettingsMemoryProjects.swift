@@ -5,6 +5,16 @@ final class MSettingsMemoryProjects
     private(set) var size:CGFloat
     private var map:[String:MSettingsMemoryProjectsItem]
     
+    var identifiers:[String]
+    {
+        get
+        {
+            let identifiers:[String] = Array(map.keys)
+            
+            return identifiers
+        }
+    }
+    
     init()
     {
         map = [:]
