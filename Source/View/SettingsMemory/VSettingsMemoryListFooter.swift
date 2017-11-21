@@ -5,6 +5,7 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
     weak var labelSize:UILabel!
     weak var buttonClean:UIButton!
     weak var labelEmpty:UILabel!
+    private weak var controller:CSettingsMemory?
     
     override init(frame:CGRect)
     {
@@ -18,6 +19,14 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: selectors
+    
+    @objc
+    func selectorClean(sender button:UIButton)
+    {
+        controller.model.cleanGarbage()
     }
     
     //MARK: private
@@ -45,6 +54,7 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
     
     func config(controller:CSettingsMemory)
     {
+        self.controller = controller
         let model:MSettingsMemory = controller.model
         
         guard

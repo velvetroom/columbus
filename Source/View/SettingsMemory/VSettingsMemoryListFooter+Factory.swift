@@ -19,7 +19,7 @@ extension VSettingsMemoryListFooter
         labelDescr.backgroundColor = UIColor.clear
         labelDescr.translatesAutoresizingMaskIntoConstraints = false
         labelDescr.font = UIFont.regular(size:VSettingsMemoryListFooter.Constants.descrFontSize)
-        labelDescr.textColor = UIColor(white:0, alpha:0.5)
+        labelDescr.textColor = UIColor(white:0, alpha:0.4)
         labelDescr.text = String.localizedView(key:"VSettingsMemoryListFooter_labelDescr")
         labelDescr.numberOfLines = 0
         
@@ -29,7 +29,7 @@ extension VSettingsMemoryListFooter
         labelEmpty.backgroundColor = UIColor.clear
         labelEmpty.textAlignment = NSTextAlignment.right
         labelEmpty.font = UIFont.regular(size:VSettingsMemoryListFooter.Constants.titleFontSize)
-        labelEmpty.textColor = UIColor(white:0, alpha:0.5)
+        labelEmpty.textColor = UIColor(white:0, alpha:0.4)
         labelEmpty.text = String.localizedView(key:"VSettingsMemoryListFooter_labelEmpty")
         self.labelEmpty = labelEmpty
         
@@ -47,6 +47,10 @@ extension VSettingsMemoryListFooter
         buttonClean.titleLabel!.font = UIFont.medium(
             size:VSettingsMemoryListFooter.Constants.titleFontSize)
         buttonClean.isHidden = true
+        buttonClean.addTarget(
+            self,
+            action:#selector(selectorClean(sender:)),
+            for:UIControlEvents.touchUpInside)
         self.buttonClean = buttonClean
         
         let labelSize:UILabel = UILabel()
@@ -55,7 +59,7 @@ extension VSettingsMemoryListFooter
         labelSize.backgroundColor = UIColor.clear
         labelSize.textAlignment = NSTextAlignment.right
         labelSize.font = UIFont.regular(size:VSettingsMemoryListFooter.Constants.titleFontSize)
-        labelSize.textColor = UIColor(white:0, alpha:0.5)
+        labelSize.textColor = UIColor(white:0, alpha:0.4)
         labelSize.isHidden = true
         self.labelSize = labelSize
         
@@ -123,8 +127,7 @@ extension VSettingsMemoryListFooter
             constant:VSettingsMemoryListFooter.Constants.titleHeight)
         NSLayoutConstraint.rightToRight(
             view:buttonClean,
-            toView:self,
-            constant:-VSettingsMemoryListFooter.Constants.paddingHorizontal)
+            toView:self)
         NSLayoutConstraint.width(
             view:buttonClean,
             constant:VSettingsMemoryListFooter.Constants.cleanWidth)
@@ -137,7 +140,8 @@ extension VSettingsMemoryListFooter
             constant:VSettingsMemoryListFooter.Constants.titleHeight)
         NSLayoutConstraint.rightToLeft(
             view:labelSize,
-            toView:buttonClean)
+            toView:buttonClean,
+            constant:VSettingsMemoryListFooter.Constants.cleanLeft)
         NSLayoutConstraint.widthGreaterOrEqual(
             view:labelSize)
     }

@@ -2,7 +2,7 @@ import UIKit
 
 final class VSettingsMemory:ViewMain
 {
-    weak var viewSpinner:VSettingsMemorySpinner?
+    weak var viewSpinner:VSettingsMemorySpinner!
     weak var viewList:VSettingsMemoryList!
     
     override var panBack:Bool
@@ -36,16 +36,16 @@ final class VSettingsMemory:ViewMain
     
     deinit
     {
-        viewSpinner?.stopAnimating()
+        viewSpinner.stopAnimating()
     }
     
     //MARK: private
     
     private func asyncReload()
     {
-        viewSpinner?.stopAnimating()
-        viewSpinner?.removeFromSuperview()
+        viewSpinner.stopAnimating()
         viewList.collectionView.reloadData()
+        viewList.isHidden = false
     }
     
     //MARK: internal
@@ -57,5 +57,11 @@ final class VSettingsMemory:ViewMain
             
             self?.asyncReload()
         }
+    }
+    
+    func startLoading()
+    {
+        viewList.isHidden = true
+        viewSpinner.startAnimating()
     }
 }

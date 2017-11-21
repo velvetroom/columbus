@@ -12,6 +12,7 @@ extension VSettingsMemory
         self.viewSpinner = viewSpinner
         
         let viewList:VSettingsMemoryList = VSettingsMemoryList(controller:controller)
+        viewList.isHidden = true
         self.viewList = viewList
         
         addSubview(viewList)
