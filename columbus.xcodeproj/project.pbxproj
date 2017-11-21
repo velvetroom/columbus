@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA000A531FC3D85D00E4A795 /* MSettingsMemory+Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA000A521FC3D85D00E4A795 /* MSettingsMemory+Delete.swift */; };
 		DA0447FB1F973D3D00BA2D45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA0447F91F973D3D00BA2D45 /* InfoPlist.strings */; };
 		DA0447FD1F9747B800BA2D45 /* VCreateStatusDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0447FC1F9747B800BA2D45 /* VCreateStatusDenied.swift */; };
 		DA0447FF1F97484500BA2D45 /* MCreateStatusDenied.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0447FE1F97484500BA2D45 /* MCreateStatusDenied.swift */; };
@@ -551,6 +552,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA000A521FC3D85D00E4A795 /* MSettingsMemory+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSettingsMemory+Delete.swift"; sourceTree = "<group>"; };
 		DA0447FA1F973D3D00BA2D45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA0447FC1F9747B800BA2D45 /* VCreateStatusDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusDenied.swift; sourceTree = "<group>"; };
 		DA0447FE1F97484500BA2D45 /* MCreateStatusDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusDenied.swift; sourceTree = "<group>"; };
@@ -1220,6 +1222,7 @@
 				DADBD1E01FC210290002FE05 /* MSettingsMemory+Constants.swift */,
 				DA5DA3261FBD2FBB0047FED4 /* MSettingsMemory+Load.swift */,
 				DADBD1E21FC211600002FE05 /* MSettingsMemory+Bytes.swift */,
+				DA000A521FC3D85D00E4A795 /* MSettingsMemory+Delete.swift */,
 				DA5DA3281FBD31000047FED4 /* MSettingsMemorySystem.swift */,
 				DA5DA32A1FBD32980047FED4 /* MSettingsMemorySystem+Factory.swift */,
 				DA5DA3241FBD2ECF0047FED4 /* MSettingsMemoryItem.swift */,
@@ -2175,6 +2178,7 @@
 				DA65ED021F95E68700720673 /* VMenu.swift in Sources */,
 				DAECA2E01F9FD72E0051F757 /* VSettingsListCellTravelModeListSelector.swift in Sources */,
 				DA78BB3A1F9728CC00A7C280 /* MCreateLocationDelegate.swift in Sources */,
+				DA000A531FC3D85D00E4A795 /* MSettingsMemory+Delete.swift in Sources */,
 				DA82E76C1FBEAA7200AC6195 /* MMenu+Order.swift in Sources */,
 				DA1906E01FAFCBF1008147EA /* MStorePerkStatusAvailableProtocol.swift in Sources */,
 				DA2EE5691F98AC4400488A07 /* MCreateMapStatusExpanded.swift in Sources */,
