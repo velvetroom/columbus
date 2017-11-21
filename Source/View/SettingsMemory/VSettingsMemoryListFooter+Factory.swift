@@ -29,9 +29,25 @@ extension VSettingsMemoryListFooter
         labelEmpty.backgroundColor = UIColor.clear
         labelEmpty.textAlignment = NSTextAlignment.right
         labelEmpty.font = UIFont.regular(size:VSettingsMemoryListFooter.Constants.titleFontSize)
-        labelEmpty.textColor = UIColor(white:0, alpha:0.6)
+        labelEmpty.textColor = UIColor(white:0, alpha:0.5)
         labelEmpty.text = String.localizedView(key:"VSettingsMemoryListFooter_labelEmpty")
         self.labelEmpty = labelEmpty
+        
+        let buttonClean:UIButton = UIButton()
+        buttonClean.translatesAutoresizingMaskIntoConstraints = false
+        buttonClean.setTitleColor(
+            UIColor.colourSuccess,
+            for:UIControlState.normal)
+        buttonClean.setTitleColor(
+            UIColor.colourBackgroundGray,
+            for:UIControlState.highlighted)
+        buttonClean.setTitle(
+            String.localizedView(key:"VSettingsMemoryListFooter_buttonClean"),
+            for:UIControlState.normal)
+        buttonClean.titleLabel!.font = UIFont.medium(
+            size:VSettingsMemoryListFooter.Constants.titleFontSize)
+        buttonClean.isHidden = true
+        self.buttonClean = buttonClean
         
         let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
         
@@ -39,6 +55,7 @@ extension VSettingsMemoryListFooter
         addSubview(labelDescr)
         addSubview(labelEmpty)
         addSubview(border)
+        addSubview(buttonClean)
         
         NSLayoutConstraint.topToTop(
             view:labelTitle,
@@ -86,5 +103,18 @@ extension VSettingsMemoryListFooter
             constant:-VSettingsMemoryListFooter.Constants.paddingHorizontal)
         NSLayoutConstraint.widthGreaterOrEqual(
             view:labelEmpty)
+        
+        NSLayoutConstraint.topToTop(
+            view:buttonClean,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:buttonClean,
+            constant:VSettingsMemoryListFooter.Constants.titleHeight)
+        NSLayoutConstraint.rightToRight(
+            view:buttonClean,
+            toView:self)
+        NSLayoutConstraint.width(
+            view:buttonClean,
+            constant:VSettingsMemoryListFooter.Constants.cleanWidth)
     }
 }
