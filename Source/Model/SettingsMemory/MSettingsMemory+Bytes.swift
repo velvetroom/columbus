@@ -20,10 +20,22 @@ extension MSettingsMemory
         return giga
     }
     
-    private func stringFromValue(value:CGFloat) -> String?
+    private func stringFromValue(
+        value:CGFloat,
+        suffix:String) -> String?
     {
         let number:NSNumber = value as NSNumber
-        let string:String? = numberFormatter.string(from:number)
+        
+        guard
+        
+            var string:String = numberFormatter.string(from:number)
+        
+        else
+        {
+            return nil
+        }
+        
+        string.append(suffix)
         
         return string
     }
@@ -32,25 +44,34 @@ extension MSettingsMemory
     
     func bytesAsGB(bytes:CGFloat) -> String?
     {
+        let suffix:String = String.localizedModel(key:"MSettingsMemory_bytesGB")
         let giga:CGFloat = bytesAsGiga(bytes:bytes)
-        let string:String? = stringFromValue(value:giga)
+        let string:String? = stringFromValue(
+            value:giga,
+            suffix:suffix)
         
         return string
     }
     
     func bytesAsRoundedGB(bytes:CGFloat) -> String?
     {
+        let suffix:String = String.localizedModel(key:"MSettingsMemory_bytesGB")
         let giga:CGFloat = bytesAsGiga(bytes:bytes)
         let roundedGiga:CGFloat = ceil(giga)
-        let string:String? = stringFromValue(value:roundedGiga)
+        let string:String? = stringFromValue(
+            value:roundedGiga,
+            suffix:suffix)
         
         return string
     }
     
     func bytesAsMB(bytes:CGFloat) -> String?
     {
+        let suffix:String = String.localizedModel(key:"MSettingsMemory_bytesMB")
         let mega:CGFloat = bytesAsMega(bytes:bytes)
-        let string:String? = stringFromValue(value:mega)
+        let string:String? = stringFromValue(
+            value:mega,
+            suffix:suffix)
         
         return string
     }

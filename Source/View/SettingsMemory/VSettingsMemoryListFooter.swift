@@ -45,9 +45,10 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
     
     func config(controller:CSettingsMemory)
     {
+        let model:MSettingsMemory = controller.model
+        
         guard
         
-            let model:MSettingsMemory = controller.model,
             let garbage:MSettingsMemoryProjects = model.garbage,
             garbage.size > 0
         
