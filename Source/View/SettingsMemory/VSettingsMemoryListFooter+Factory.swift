@@ -49,11 +49,22 @@ extension VSettingsMemoryListFooter
         buttonClean.isHidden = true
         self.buttonClean = buttonClean
         
+        let labelSize:UILabel = UILabel()
+        labelSize.isUserInteractionEnabled = false
+        labelSize.translatesAutoresizingMaskIntoConstraints = false
+        labelSize.backgroundColor = UIColor.clear
+        labelSize.textAlignment = NSTextAlignment.right
+        labelSize.font = UIFont.regular(size:VSettingsMemoryListFooter.Constants.titleFontSize)
+        labelSize.textColor = UIColor(white:0, alpha:0.6)
+        labelSize.isHidden = true
+        self.labelSize = labelSize
+        
         let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
         
         addSubview(labelTitle)
         addSubview(labelDescr)
         addSubview(labelEmpty)
+        addSubview(labelSize)
         addSubview(border)
         addSubview(buttonClean)
         
@@ -116,5 +127,17 @@ extension VSettingsMemoryListFooter
         NSLayoutConstraint.width(
             view:buttonClean,
             constant:VSettingsMemoryListFooter.Constants.cleanWidth)
+        
+        NSLayoutConstraint.topToTop(
+            view:labelSize,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:labelSize,
+            constant:VSettingsMemoryListFooter.Constants.titleHeight)
+        NSLayoutConstraint.rightToLeft(
+            view:labelSize,
+            toView:buttonClean)
+        NSLayoutConstraint.widthGreaterOrEqual(
+            view:labelSize)
     }
 }
