@@ -20,10 +20,44 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
         return nil
     }
     
+    //MARK: private
+    
+    private func updateSize(
+        model:MSettingsMemory,
+        garbage:MSettingsMemoryProjects)
+    {
+        guard
+        
+            let megas:String = model.bytesAsMB(bytes:garbage.size)
+        
+        else
+        {
+            return
+        }
+        
+        labelEmpty.isHidden = true
+        labelSize.text = megas
+        labelSize.isHidden = false
+        buttonClean.isHidden = false
+    }
+    
     //MARK: internal
     
     func config(controller:CSettingsMemory)
     {
+        guard
         
+            let model:MSettingsMemory = controller.model,
+            let garbage:MSettingsMemoryProjects = model.garbage,
+            garbage.size > 0
+        
+        else
+        {
+            return
+        }
+        
+        updateSize(
+            model:model,
+            garbage:garbage)
     }
 }
