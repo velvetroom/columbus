@@ -6,6 +6,10 @@ extension VSettingsMemoryListCell
     
     func factoryViews()
     {
+        let labelOrigin:UILabel = UILabel()
+        labelOrigin.translatesAutoresizingMaskIntoConstraints = false
+        self.labelOrigin = labelOrigin
         
+        addSubview(labelOrigin)
     }
 }
