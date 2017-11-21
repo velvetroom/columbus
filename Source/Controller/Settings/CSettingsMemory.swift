@@ -20,11 +20,7 @@ final class CSettingsMemory:Controller<ArchSettingsMemory>
     {
         super.viewDidLoad()
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
-        { [weak self] in
-            
-            self?.model.load()
-        }
+        model.load()
     }
     
     //MARK: internal

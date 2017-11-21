@@ -44,10 +44,22 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
             return
         }
         
-        labelEmpty.isHidden = true
         labelSize.text = megas
+        showSize()
+    }
+    
+    private func showSize()
+    {
+        labelEmpty.isHidden = true
         labelSize.isHidden = false
         buttonClean.isHidden = false
+    }
+    
+    private func showEmpty()
+    {
+        labelEmpty.isHidden = false
+        labelSize.isHidden = true
+        buttonClean.isHidden = true
     }
     
     //MARK: internal
@@ -64,6 +76,8 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
         
         else
         {
+            showEmpty()
+            
             return
         }
         

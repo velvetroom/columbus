@@ -4,6 +4,19 @@ extension MSettingsMemory
 {
     //MARK: private
     
+    private func asyncLoad()
+    {
+        let projects:MSettingsMemoryProjects = factoryProjects()
+        system = MSettingsMemorySystem.factorySystem(columbusSize:projects.size)
+        
+        factoryItems(projects:projects)
+        { [weak self] in
+            
+            self?.garbage = projects
+            self?.view?.reload()
+        }
+    }
+    
     private func factoryProjects() -> MSettingsMemoryProjects
     {
         let projects:MSettingsMemoryProjects = MSettingsMemoryProjects()
@@ -104,14 +117,10 @@ extension MSettingsMemory
     
     func load()
     {
-        let projects:MSettingsMemoryProjects = factoryProjects()
-        system = MSettingsMemorySystem.factorySystem(columbusSize:projects.size)
-        
-        factoryItems(projects:projects)
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.garbage = projects
-            self?.view?.reload()
+            self?.asyncLoad()
         }
     }
 }

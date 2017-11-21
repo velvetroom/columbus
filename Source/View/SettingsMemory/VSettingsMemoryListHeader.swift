@@ -3,6 +3,7 @@ import UIKit
 final class VSettingsMemoryListHeader:UICollectionReusableView
 {
     weak var viewBar:VSettingsMemoryListHeaderBar?
+    weak var viewList:VSettingsMemoryListHeaderList?
     weak var labelUsage:UILabel!
     
     override init(frame:CGRect)
@@ -48,15 +49,6 @@ final class VSettingsMemoryListHeader:UICollectionReusableView
     
     func config(controller:CSettingsMemory)
     {
-        guard
-        
-            viewBar == nil
-        
-        else
-        {
-            return
-        }
-        
         factoryBar(controller:controller)
         updateUsage(model:controller.model)
     }

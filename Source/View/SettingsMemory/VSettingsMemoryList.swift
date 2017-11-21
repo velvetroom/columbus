@@ -40,21 +40,6 @@ final class VSettingsMemoryList:VCollection<
         return cellSize
     }
     
-    override func numberOfSections(
-        in collectionView:UICollectionView) -> Int
-    {
-        guard
-        
-            controller.model.system == nil
-        
-        else
-        {
-            return 1
-        }
-        
-        return 0
-    }
-    
     override func collectionView(
         _ collectionView:UICollectionView,
         numberOfItemsInSection section:Int) -> Int

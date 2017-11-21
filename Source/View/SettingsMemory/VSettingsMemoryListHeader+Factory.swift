@@ -77,10 +77,14 @@ extension VSettingsMemoryListHeader
     
     func factoryBar(controller:CSettingsMemory)
     {
+        self.viewBar?.removeFromSuperview()
+        self.viewList?.removeFromSuperview()
+        
         let viewBar:VSettingsMemoryListHeaderBar = VSettingsMemoryListHeaderBar(controller:controller)
         self.viewBar = viewBar
         
         let viewList:VSettingsMemoryListHeaderList = VSettingsMemoryListHeaderList(controller:controller)
+        self.viewList = viewList
         
         addSubview(viewList)
         addSubview(viewBar)

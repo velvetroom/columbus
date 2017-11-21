@@ -8,7 +8,7 @@ extension MSettingsMemory
     {
         guard
         
-            let identifiers:[String] = self.garbage?.identifiers
+            let identifiers:[String] = garbage?.identifiers
         
         else
         {
@@ -20,7 +20,7 @@ extension MSettingsMemory
             deleteDirectory(identifier:identifier)
         }
         
-        view?.reload()
+        load()
     }
     
     private func deleteDirectory(identifier:String)
@@ -52,7 +52,7 @@ extension MSettingsMemory
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
-            self?.cleanGarbage()
+            self?.asyncCleanGarbage()
         }
     }
 }
