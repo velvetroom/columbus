@@ -25,6 +25,7 @@
 		DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */; };
 		DA0A5E811F9925A6000240F2 /* MCreateMapMenuDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */; };
 		DA0A5E841F9928C4000240F2 /* Columbus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E821F9928C4000240F2 /* Columbus.xcdatamodeld */; };
+		DA0AFFEE1FC4816100499420 /* VSettingsMemoryListCell+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0AFFED1FC4816100499420 /* VSettingsMemoryListCell+Factory.swift */; };
 		DA12A7191FB2728B0069AA44 /* MHomePlan+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12A7181FB2728B0069AA44 /* MHomePlan+Navigation.swift */; };
 		DA13F6521F99C4C800DF92F5 /* DPlanStop+Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6511F99C4C800DF92F5 /* DPlanStop+Annotation.swift */; };
 		DA13F6581F9A064600DF92F5 /* ExtensionMKAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */; };
@@ -570,6 +571,7 @@
 		DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuStop.swift; sourceTree = "<group>"; };
 		DA0A5E801F9925A6000240F2 /* MCreateMapMenuDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuDone.swift; sourceTree = "<group>"; };
 		DA0A5E831F9928C4000240F2 /* Columbus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Columbus.xcdatamodel; sourceTree = "<group>"; };
+		DA0AFFED1FC4816100499420 /* VSettingsMemoryListCell+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsMemoryListCell+Factory.swift"; sourceTree = "<group>"; };
 		DA12A7181FB2728B0069AA44 /* MHomePlan+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MHomePlan+Navigation.swift"; sourceTree = "<group>"; };
 		DA13F6511F99C4C800DF92F5 /* DPlanStop+Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DPlanStop+Annotation.swift"; sourceTree = "<group>"; };
 		DA13F6571F9A064600DF92F5 /* ExtensionMKAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMKAnnotationView.swift; sourceTree = "<group>"; };
@@ -1258,6 +1260,7 @@
 				DA24A3721FC2698A003E5B86 /* VSettingsMemoryListFooter+Constants.swift */,
 				DA24A3761FC26ACB003E5B86 /* VSettingsMemoryListFooter+Factory.swift */,
 				DA5DA31A1FBD18540047FED4 /* VSettingsMemoryListCell.swift */,
+				DA0AFFED1FC4816100499420 /* VSettingsMemoryListCell+Factory.swift */,
 				DAB3857A1FC1724100ECCF76 /* VSettingsMemorySpinner.swift */,
 				DAB3857C1FC1733A00ECCF76 /* VSettingsMemorySpinner+Constants.swift */,
 			);
@@ -2527,6 +2530,7 @@
 				DA7D959F1FA76DCA00A620FB /* VMap.swift in Sources */,
 				DA6700DD1FAB910700B89997 /* VHomeStandbyCell.swift in Sources */,
 				DA65ED151F95E68700720673 /* VBorder.swift in Sources */,
+				DA0AFFEE1FC4816100499420 /* VSettingsMemoryListCell+Factory.swift in Sources */,
 				DA5647041FAFCEAC00D03976 /* MStorePerkProtocol+Status.swift in Sources */,
 				DA63C0EB1FB89A3D007D01A7 /* VCreateSearchBaseList+Config.swift in Sources */,
 				DA1906BC1FAFBCA7008147EA /* MStore+Load.swift in Sources */,
