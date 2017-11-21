@@ -26,7 +26,7 @@ final class VSettingsMemoryListFooter:UICollectionReusableView
     @objc
     func selectorClean(sender button:UIButton)
     {
-        controller.model.cleanGarbage()
+        controller?.model.cleanGarbage()
     }
     
     //MARK: private
