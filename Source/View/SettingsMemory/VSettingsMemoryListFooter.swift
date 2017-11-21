@@ -2,6 +2,10 @@ import UIKit
 
 final class VSettingsMemoryListFooter:UICollectionReusableView
 {
+    weak var labelSize:UILabel!
+    weak var buttonClean:UIButton!
+    weak var labelEmpty:UILabel!
+    
     override init(frame:CGRect)
     {
         super.init(frame:frame)

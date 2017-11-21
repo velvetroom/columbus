@@ -11,5 +11,6 @@ extension VSettingsMemoryListFooter
         static let descrTop:CGFloat = 10
         static let descrFontSize:CGFloat = 12
         static let descrHeight:CGFloat = 20
+        static let cleanWidth:CGFloat = 60
     }
 }
