@@ -7,6 +7,8 @@ final class VSettingsMemoryConfirmBase:View<ArchSettingsMemoryConfirm>
         super.init(controller:controller)
         backgroundColor = UIColor.white
         layer.cornerRadius = VSettingsMemoryConfirmBase.Constants.cornerRadius
+        
+        factoryViews()
     }
     
     required init?(coder:NSCoder)
