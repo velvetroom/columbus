@@ -4,6 +4,6 @@ extension VStoreStatusReadyBarRestore
 {
     struct Constants
     {
-        static let fontSize:CGFloat = 13
+        static let fontSize:CGFloat = 14
     }
 }

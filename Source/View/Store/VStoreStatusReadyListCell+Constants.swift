@@ -5,11 +5,11 @@ extension VStoreStatusReadyListCell
     struct Constants
     {
         static let imageHeight:CGFloat = 260
-        static let titleHeight:CGFloat = 90
+        static let titleHeight:CGFloat = 50
         static let titleFontSize:CGFloat = 18
-        static let descrMarginHorizontal:CGFloat = 20
-        static let descrTop:CGFloat = 10
+        static let descrMarginHorizontal:CGFloat = 12
+        static let descrTop:CGFloat = 12
         static let descrMaxHeight:CGFloat = 300
-        static let descrFontSize:CGFloat = 14
+        static let descrFontSize:CGFloat = 13
     }
 }

@@ -15,6 +15,7 @@ final class VStoreStatusReadyBar:View<ArchStore>
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.font = UIFont.medium(size:VStoreStatusReadyBar.Constants.fontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
+        labelTitle.textAlignment = NSTextAlignment.center
         labelTitle.text = String.localizedView(key:"VStoreStatusReadyBar_labelTitle")
         
         let viewRestore:VStoreStatusReadyBarRestore = VStoreStatusReadyBarRestore(controller:controller)
@@ -40,13 +41,9 @@ final class VStoreStatusReadyBar:View<ArchStore>
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)
-        NSLayoutConstraint.leftToLeft(
+        NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
-            toView:self,
-            constant:VStoreStatusReadyBar.Constants.titleLeft)
-        NSLayoutConstraint.width(
-            view:labelTitle,
-            constant:VStoreStatusReadyBar.Constants.titleWidth)
+            toView:self)
         
         NSLayoutConstraint.topToTop(
             view:viewRestore,

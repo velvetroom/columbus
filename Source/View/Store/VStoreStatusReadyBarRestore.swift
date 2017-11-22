@@ -9,12 +9,12 @@ final class VStoreStatusReadyBarRestore:View<ArchStore>
         let button:UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(
-            UIColor.colourBackgroundDark,
+            UIColor.colourSuccess,
             for:UIControlState.normal)
         button.setTitleColor(
             UIColor.colourBackgroundGray,
             for:UIControlState.highlighted)
-        button.titleLabel!.font = UIFont.bold(
+        button.titleLabel!.font = UIFont.medium(
             size:VStoreStatusReadyBarRestore.Constants.fontSize)
         button.setTitle(
             String.localizedView(key:"VStoreStatusReadyBarRestore_button"),

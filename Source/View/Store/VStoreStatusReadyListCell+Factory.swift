@@ -8,7 +8,7 @@ extension VStoreStatusReadyListCell
     {
         let attributes:[NSAttributedStringKey:Any] = [
             NSAttributedStringKey.font : UIFont.regular(size:fontSize),
-            NSAttributedStringKey.foregroundColor : UIColor(white:0, alpha:0.5)]
+            NSAttributedStringKey.foregroundColor : UIColor(white:0, alpha:0.6)]
         
         return attributes
     }

@@ -4,6 +4,6 @@ extension VStoreStatusReadyList
 {
     struct Constants
     {
-        static let cellHeight:CGFloat = 520
+        static let cellHeight:CGFloat = 430
     }
 }

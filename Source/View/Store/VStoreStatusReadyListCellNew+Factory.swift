@@ -42,22 +42,8 @@ extension VStoreStatusReadyListCellNew
             action:#selector(selectorRestore(sender:)),
             for:UIControlEvents.touchUpInside)
         
-        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
-        
-        addSubview(border)
         addSubview(buttonPurchase)
         addSubview(buttonRestore)
-        
-        NSLayoutConstraint.bottomToBottom(
-            view:border,
-            toView:self,
-            constant:-VStoreStatusReadyListCellNew.Constants.buttonHeight)
-        NSLayoutConstraint.height(
-            view:border,
-            constant:ViewMain.Constants.borderWidth)
-        NSLayoutConstraint.equalsHorizontal(
-            view:border,
-            toView:self)
         
         NSLayoutConstraint.bottomToBottom(
             view:buttonRestore,
