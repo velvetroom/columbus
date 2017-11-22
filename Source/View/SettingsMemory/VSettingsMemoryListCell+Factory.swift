@@ -45,6 +45,10 @@ extension VSettingsMemoryListCell
             String.localizedView(key:"VSettingsMemoryListCell_buttonDelete"),
             for:UIControlState.normal)
         buttonDelete.titleLabel!.font = UIFont.medium(size:VSettingsMemoryListCell.Constants.fontSize)
+        buttonDelete.addTarget(
+            self,
+            action:#selector(selectorDelete(sender:)),
+            for:UIControlEvents.touchUpInside)
         
         let icon:UIImageView = UIImageView()
         icon.isUserInteractionEnabled = false

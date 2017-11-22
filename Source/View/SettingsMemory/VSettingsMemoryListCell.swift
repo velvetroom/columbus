@@ -22,6 +22,24 @@ final class VSettingsMemoryListCell:UICollectionViewCell
         return nil
     }
     
+    //MARK: selectors
+    
+    @objc
+    func selectorDelete(sender button:UIButton)
+    {
+        guard
+        
+            let controller:CSettingsMemory = self.controller,
+            let model:MSettingsMemoryItem = self.model
+        
+        else
+        {
+            return
+        }
+        
+        controller.delete(item:model)
+    }
+    
     //MARK: internal
     
     func config(

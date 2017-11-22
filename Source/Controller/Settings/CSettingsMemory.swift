@@ -29,4 +29,10 @@ final class CSettingsMemory:Controller<ArchSettingsMemory>
     {
         parentController?.pop(horizontal:ControllerTransition.Horizontal.right)
     }
+    
+    func delete(item:MSettingsMemoryItem)
+    {
+        let controller:CSettingsMemoryConfirm = CSettingsMemoryConfirm(item:item)
+        parentController?.animateOver(controller:controller)
+    }
 }
