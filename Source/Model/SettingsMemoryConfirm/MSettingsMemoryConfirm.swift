@@ -1,6 +1,6 @@
 import Foundation
 
-final class MSettingsMemoryConfirm:Model<ArchSettingsMemory>
+final class MSettingsMemoryConfirm:Model<ArchSettingsMemoryConfirm>
 {
     
 }

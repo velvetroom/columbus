@@ -1,4 +1,4 @@
-struct ArchSettingsMemory:Arch
+struct ArchSettingsMemoryConfirm:Arch
 {
     typealias V = VSettingsMemoryConfirm
     typealias M = MSettingsMemoryConfirm
