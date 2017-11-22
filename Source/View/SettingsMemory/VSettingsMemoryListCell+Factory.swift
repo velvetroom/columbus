@@ -12,7 +12,7 @@ extension VSettingsMemoryListCell
         labelOrigin.translatesAutoresizingMaskIntoConstraints = false
         labelOrigin.backgroundColor = UIColor.clear
         labelOrigin.isUserInteractionEnabled = false
-        labelOrigin.font = UIFont.regular(size:VSettingsMemoryListCell.Constants.fontSize)
+        labelOrigin.font = UIFont.regular(size:VSettingsMemoryListCell.Constants.locationsFontSize)
         labelOrigin.textColor = locationsColour
         self.labelOrigin = labelOrigin
         
@@ -20,7 +20,7 @@ extension VSettingsMemoryListCell
         labelDestination.translatesAutoresizingMaskIntoConstraints = false
         labelDestination.backgroundColor = UIColor.clear
         labelDestination.isUserInteractionEnabled = false
-        labelDestination.font = UIFont.regular(size:VSettingsMemoryListCell.Constants.fontSize)
+        labelDestination.font = UIFont.regular(size:VSettingsMemoryListCell.Constants.locationsFontSize)
         labelDestination.textColor = locationsColour
         self.labelDestination = labelDestination
         
@@ -42,9 +42,9 @@ extension VSettingsMemoryListCell
             UIColor.colourBackgroundGray,
             for:UIControlState.highlighted)
         buttonDelete.setTitle(
-            String.localizedView(key:"VSettingsMemoryListCell_buttonRemove"),
+            String.localizedView(key:"VSettingsMemoryListCell_buttonDelete"),
             for:UIControlState.normal)
-        buttonDelete.titleLabel!.font = UIFont.bold(size:VSettingsMemoryListCell.Constants.fontSize)
+        buttonDelete.titleLabel!.font = UIFont.medium(size:VSettingsMemoryListCell.Constants.fontSize)
         
         let icon:UIImageView = UIImageView()
         icon.isUserInteractionEnabled = false
@@ -87,13 +87,13 @@ extension VSettingsMemoryListCell
             view:labelDestination,
             toView:self)
         NSLayoutConstraint.height(
-            view:labelOrigin,
+            view:labelDestination,
             constant:VSettingsMemoryListCell.Constants.locationsHeight)
         NSLayoutConstraint.leftToRight(
-            view:labelOrigin,
+            view:labelDestination,
             toView:icon)
         NSLayoutConstraint.rightToLeft(
-            view:labelOrigin,
+            view:labelDestination,
             toView:labelSize,
             constant:VSettingsMemoryListCell.Constants.sizeLeft)
         

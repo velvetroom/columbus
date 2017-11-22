@@ -82,7 +82,12 @@ final class VSettingsMemoryList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
+        let item:MSettingsMemoryItem = modelAtIndex(index:indexPath)
         let cell:VSettingsMemoryListCell = cellAtIndex(indexPath:indexPath)
+        
+        cell.config(
+            controller:controller,
+            model:item)
         
         return cell
     }

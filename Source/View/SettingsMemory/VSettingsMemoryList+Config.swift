@@ -13,8 +13,8 @@ extension VSettingsMemoryList
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
-            flow.minimumLineSpacing = ViewMain.Constants.interCellSpace
-            flow.minimumInteritemSpacing = ViewMain.Constants.interCellSpace
+            flow.minimumLineSpacing = VSettingsMemoryList.Constants.interItem
+            flow.minimumInteritemSpacing = VSettingsMemoryList.Constants.interItem
             flow.headerReferenceSize = CGSize(
                 width:0,
                 height:VSettingsMemoryList.Constants.headerHeight)
@@ -22,9 +22,9 @@ extension VSettingsMemoryList
                 width:0,
                 height:VSettingsMemoryList.Constants.footerHeight)
             flow.sectionInset = UIEdgeInsets(
-                top:ViewMain.Constants.interCellSpace,
+                top:VSettingsMemoryList.Constants.interItem,
                 left:0,
-                bottom:ViewMain.Constants.interCellSpace,
+                bottom:VSettingsMemoryList.Constants.interItem,
                 right:0)
         }
     }

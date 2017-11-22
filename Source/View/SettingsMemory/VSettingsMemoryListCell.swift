@@ -5,6 +5,8 @@ final class VSettingsMemoryListCell:UICollectionViewCell
     weak var labelOrigin:UILabel!
     weak var labelDestination:UILabel!
     weak var labelSize:UILabel!
+    private weak var controller:CSettingsMemory?
+    private var model:MSettingsMemoryItem?
     
     override init(frame:CGRect)
     {
@@ -18,5 +20,27 @@ final class VSettingsMemoryListCell:UICollectionViewCell
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: internal
+    
+    func config(
+        controller:CSettingsMemory,
+        model:MSettingsMemoryItem)
+    {
+        guard
+        
+            let size:String = controller.model.bytesAsMB(bytes:model.size)
+        
+        else
+        {
+            return
+        }
+        
+        labelSize.text = size
+        labelOrigin.text = model.plan.origin?.name
+        labelDestination.text = model.plan.destination?.name
+        self.controller = controller
+        self.model = model
     }
 }
