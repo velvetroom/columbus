@@ -25,4 +25,14 @@ final class VSettingsMemoryConfirm:ViewMain
     {
         return nil
     }
+    
+    override func layoutSubviews()
+    {
+        let height:CGFloat = bounds.height
+        let remainHeight:CGFloat = height - VSettingsMemoryConfirm.Constants.baseHeight
+        let marginTop:CGFloat = remainHeight / 2.0
+        layoutBaseTop.constant = marginTop
+        
+        super.layoutSubviews()
+    }
 }
