@@ -109,6 +109,12 @@ extension MSettingsMemory
             items.append(item)
         }
         
+        items.sort
+        { (itemA:MSettingsMemoryItem, itemB:MSettingsMemoryItem) -> Bool in
+            
+            return itemA.size > itemB.size
+        }
+        
         self.items = items
         completion()
     }
