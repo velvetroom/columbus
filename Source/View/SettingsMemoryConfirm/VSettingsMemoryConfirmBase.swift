@@ -13,4 +13,18 @@ final class VSettingsMemoryConfirmBase:View<ArchSettingsMemoryConfirm>
     {
         return nil
     }
+    
+    //MARK: selectors
+    
+    @objc
+    func selectorDelete(sender button:UIButton)
+    {
+        controller.delete()
+    }
+    
+    @objc
+    func selectorCancel(sender button:UIButton)
+    {
+        controller.cancel()
+    }
 }

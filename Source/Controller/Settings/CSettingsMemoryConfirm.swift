@@ -13,4 +13,16 @@ final class CSettingsMemoryConfirm:Controller<ArchSettingsMemoryConfirm>
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func cancel()
+    {
+        parentController?.dismissAnimateOver(completion:nil)
+    }
+    
+    func delete()
+    {
+        parentController?.dismissAnimateOver(completion:nil)
+    }
 }

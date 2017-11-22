@@ -35,6 +35,7 @@ VSettingsMemoryListFooter_labelDescr="Some Map data gets stored when there is a 
 VSettingsMemoryListFooter_labelEmpty="Empty";
 VSettingsMemoryListFooter_buttonClean="Delete";
 VSettingsMemoryListCell_buttonDelete="Delete";
+VSettingsMemoryConfirmBase_buttonDelete="Delete";
 VPlansBar_labelTitle="Plans";
 VPlansListHeader_labelText="Once you create Navigation Plans\nthey will appear here";
 VStoreStatusLoading_labelTitle="Loading";
