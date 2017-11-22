@@ -6,6 +6,8 @@ extension VSettingsMemoryConfirmBase
     
     func factoryViews()
     {
+        let viewInfo:VSettingsMemoryConfirmBaseInfo = VSettingsMemoryConfirmBaseInfo(controller:controller)
+        
         let buttonDelete:UIButton = UIButton()
         buttonDelete.translatesAutoresizingMaskIntoConstraints = false
         buttonDelete.backgroundColor = UIColor.colourFail
@@ -43,8 +45,13 @@ extension VSettingsMemoryConfirmBase
             action:#selector(selectorCancel(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        addSubview(viewInfo)
         addSubview(buttonDelete)
         addSubview(buttonCancel)
+        
+        NSLayoutConstraint.equals(
+            view:viewInfo,
+            toView:self)
         
         NSLayoutConstraint.bottomToBottom(
             view:buttonDelete,
