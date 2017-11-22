@@ -2,7 +2,7 @@ import UIKit
 
 final class VSettingsMemoryConfirmBase:View<ArchSettingsMemoryConfirm>
 {
-    required init(controller: A.C)
+    required init(controller:CSettingsMemoryConfirm)
     {
         super.init(controller:controller)
         backgroundColor = UIColor.white
