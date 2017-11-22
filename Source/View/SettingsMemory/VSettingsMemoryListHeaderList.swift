@@ -25,7 +25,7 @@ final class VSettingsMemoryListHeaderList:View<ArchSettingsMemory>
         
         let badgeOther:VSettingsMemoryListHeaderListBadge = VSettingsMemoryListHeaderListBadge(
             controller:controller)
-        badgeOther.backgroundColor = UIColor(white:0.8, alpha:1)
+        badgeOther.backgroundColor = UIColor(white:0.86, alpha:1)
         
         let labelColumbus:UILabel = UILabel()
         labelColumbus.isUserInteractionEnabled = false

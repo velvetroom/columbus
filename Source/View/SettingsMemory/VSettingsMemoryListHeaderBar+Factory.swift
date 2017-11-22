@@ -12,7 +12,7 @@ extension VSettingsMemoryListHeaderBar
         
         let lineOther:VSettingsMemoryListHeaderBarLine = VSettingsMemoryListHeaderBarLine(
             controller:controller)
-        lineOther.backgroundColor = UIColor(white:0.8, alpha:1)
+        lineOther.backgroundColor = UIColor(white:0.86, alpha:1)
         
         addSubview(lineColumbus)
         addSubview(lineOther)
