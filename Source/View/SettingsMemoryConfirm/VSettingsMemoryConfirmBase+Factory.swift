@@ -25,7 +25,26 @@ extension VSettingsMemoryConfirmBase
             action:#selector(selectorDelete(sender:)),
             for:UIControlEvents.touchUpInside)
         
+        let buttonCancel:UIButton = UIButton()
+        buttonCancel.translatesAutoresizingMaskIntoConstraints = false
+        buttonCancel.setTitleColor(
+            UIColor(white:0, alpha:0.5),
+            for:UIControlState.normal)
+        buttonCancel.setTitleColor(
+            UIColor(white:0, alpha:0.2),
+            for:UIControlState.highlighted)
+        buttonCancel.titleLabel!.font = UIFont.regular(
+            size:VSettingsMemoryConfirmBase.Constants.buttonFontSize)
+        buttonCancel.setTitle(
+            String.localizedView(key:"VSettingsMemoryConfirmBase_buttonCancel"),
+            for:UIControlState.normal)
+        buttonCancel.addTarget(
+            self,
+            action:#selector(selectorCancel(sender:)),
+            for:UIControlEvents.touchUpInside)
+        
         addSubview(buttonDelete)
+        addSubview(buttonCancel)
         
         NSLayoutConstraint.bottomToBottom(
             view:buttonDelete,
@@ -35,6 +54,16 @@ extension VSettingsMemoryConfirmBase
             constant:VSettingsMemoryConfirmBase.Constants.buttonHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:buttonDelete,
+            toView:self)
+        
+        NSLayoutConstraint.bottomToTop(
+            view:buttonCancel,
+            toView:buttonDelete)
+        NSLayoutConstraint.height(
+            view:buttonCancel,
+            constant:VSettingsMemoryConfirmBase.Constants.buttonHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:buttonCancel,
             toView:self)
     }
 }
