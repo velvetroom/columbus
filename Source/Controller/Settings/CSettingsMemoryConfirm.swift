@@ -1,6 +1,6 @@
 import Foundation
 
-final class CSettingsMemoryConfirm:Controller<ArcgSettingsMemoryConfirm>
+final class CSettingsMemoryConfirm:Controller<ArchSettingsMemoryConfirm>
 {
     
 }
