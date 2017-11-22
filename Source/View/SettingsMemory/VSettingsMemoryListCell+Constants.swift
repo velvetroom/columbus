@@ -9,5 +9,6 @@ extension VSettingsMemoryListCell
         static let removeWidth:CGFloat = 100
         static let sizeLeft:CGFloat = -30
         static let sizeRight:CGFloat = 10
+        static let iconWidth:CGFloat = 48
     }
 }
