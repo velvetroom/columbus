@@ -6,7 +6,7 @@ extension VSettingsMemoryListCell
     
     func factoryViews()
     {
-        let locationsColour:UIColor = UIColor(white:0, alpha:0.6)
+        let locationsColour:UIColor = UIColor(white:0, alpha:0.5)
         
         let labelOrigin:UILabel = UILabel()
         labelOrigin.translatesAutoresizingMaskIntoConstraints = false
@@ -105,7 +105,8 @@ extension VSettingsMemoryListCell
             toView:buttonDelete,
             constant:VSettingsMemoryListCell.Constants.sizeRight)
         NSLayoutConstraint.widthGreaterOrEqual(
-            view:labelSize)
+            view:labelSize,
+            constant:VSettingsMemoryListCell.Constants.sizeMinWidth)
         
         NSLayoutConstraint.equalsVertical(
             view:buttonDelete,
