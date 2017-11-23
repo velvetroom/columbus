@@ -31,7 +31,7 @@ extension VSettingsMemoryConfirmBaseInfo
     private func factoryAttributesTitle() -> [NSAttributedStringKey:Any]
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:UIFont.regular(size:VSettingsMemoryConfirmBaseInfo.Constants.fontSize),
+            NSAttributedStringKey.font:UIFont.medium(size:VSettingsMemoryConfirmBaseInfo.Constants.fontSize),
             NSAttributedStringKey.foregroundColor:UIColor.colourBackgroundDark]
         
         return attributes
@@ -50,14 +50,58 @@ extension VSettingsMemoryConfirmBaseInfo
         attributesTitle:[NSAttributedStringKey:Any],
         attributesText:[NSAttributedStringKey:Any]) -> NSAttributedString?
     {
+        guard
         
+            let origin:String = controller.model.item?.plan.origin?.name
+        
+        else
+        {
+            return nil
+        }
+        
+        let title:String = String.localizedView(key:"VSettingsMemoryConfirmBaseInfo_originTitle")
+        let titleString:NSAttributedString = NSAttributedString(
+            string:title,
+            attributes:attributesTitle)
+        
+        let textString:NSAttributedString = NSAttributedString(
+            string:origin,
+            attributes:attributesText)
+        
+        let mutableString:NSMutableAttributedString = NSMutableAttributedString()
+        mutableString.append(titleString)
+        mutableString.append(textString)
+        
+        return mutableString
     }
     
     private func factoryDestination(
         attributesTitle:[NSAttributedStringKey:Any],
         attributesText:[NSAttributedStringKey:Any]) -> NSAttributedString?
     {
+        guard
+            
+            let destination:String = controller.model.item?.plan.destination?.name
+            
+        else
+        {
+            return nil
+        }
         
+        let title:String = String.localizedView(key:"VSettingsMemoryConfirmBaseInfo_destinationTitle")
+        let titleString:NSAttributedString = NSAttributedString(
+            string:title,
+            attributes:attributesTitle)
+        
+        let textString:NSAttributedString = NSAttributedString(
+            string:destination,
+            attributes:attributesText)
+        
+        let mutableString:NSMutableAttributedString = NSMutableAttributedString()
+        mutableString.append(titleString)
+        mutableString.append(textString)
+        
+        return mutableString
     }
     
     //MARK: internal
@@ -75,14 +119,14 @@ extension VSettingsMemoryConfirmBaseInfo
         
         addSubview(label)
         
-        NSLayoutConstraint.topToBottom(
+        NSLayoutConstraint.topToTop(
             view:label,
             toView:self,
-            constant:VSettingsMemoryConfirmBaseInfo.Constants.marginTop)
+            constant:VSettingsMemoryConfirmBaseInfo.Constants.margin)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self,
-            margin:VSettingsMemoryConfirmBaseInfo.Constants.marginHorizontal)
+            margin:VSettingsMemoryConfirmBaseInfo.Constants.margin)
         NSLayoutConstraint.heightGreaterOrEqual(
             view:label)
     }

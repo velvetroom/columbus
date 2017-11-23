@@ -6,7 +6,7 @@ extension VSettingsMemoryConfirm
     {
         static let baseMarginHorizontal:CGFloat = 20
         static let baseWidth:CGFloat = 280
-        static let baseHeight:CGFloat = 400
+        static let baseHeight:CGFloat = 250
         static let blurAlpha:CGFloat = 0.95
     }
 }
