@@ -4,7 +4,7 @@ extension VCreateSearchBase
 {
     struct Constants
     {
-        static let height:CGFloat = 350
+        static let height:CGFloat = 280
         static let barHeight:CGFloat = 78
     }
 }
