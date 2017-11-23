@@ -23,6 +23,21 @@ extension MSettingsMemory
         load()
     }
     
+    private func asyncDelete(item:MSettingsMemoryItem)
+    {
+        guard
+            
+            let identifier:String = item.plan.identifier
+        
+        else
+        {
+            return
+        }
+        
+        deleteDirectory(identifier:identifier)
+        load()
+    }
+    
     private func deleteDirectory(identifier:String)
     {
         guard
@@ -53,6 +68,17 @@ extension MSettingsMemory
         { [weak self] in
             
             self?.asyncCleanGarbage()
+        }
+    }
+    
+    func delete(item:MSettingsMemoryItem)
+    {
+        view?.startLoading()
+        
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        { [weak self] in
+            
+            self?.asyncDelete(item:item)
         }
     }
 }

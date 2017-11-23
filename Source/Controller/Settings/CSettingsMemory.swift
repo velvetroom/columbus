@@ -32,7 +32,15 @@ final class CSettingsMemory:Controller<ArchSettingsMemory>
     
     func delete(item:MSettingsMemoryItem)
     {
-        let controller:CSettingsMemoryConfirm = CSettingsMemoryConfirm(item:item)
+        let controller:CSettingsMemoryConfirm = CSettingsMemoryConfirm(
+            controller:self,
+            item:item)
+        
         parentController?.animateOver(controller:controller)
+    }
+    
+    func confirmDelete(item:MSettingsMemoryItem)
+    {
+        model.delete(item:item)
     }
 }
