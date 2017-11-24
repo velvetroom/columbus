@@ -35,7 +35,21 @@ extension MSettingsMemory
         }
         
         deleteDirectory(identifier:identifier)
-        load()
+        
+        database?.delete(data:item.plan)
+        { [weak self] in
+        
+            self?.itemDeleted()
+        }
+    }
+    
+    private func itemDeleted()
+    {
+        database?.save
+        { [weak self] in
+            
+            self?.load()
+        }
     }
     
     private func deleteDirectory(identifier:String)
