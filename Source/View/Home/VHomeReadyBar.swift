@@ -5,7 +5,9 @@ final class VHomeReadyBar:View<ArchHome>
     required init(controller:CHome)
     {
         super.init(controller:controller)
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor.colourBackgroundGray
+        
+        factoryViews()
     }
     
     required init?(coder:NSCoder)

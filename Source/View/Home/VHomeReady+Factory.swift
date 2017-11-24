@@ -25,14 +25,13 @@ extension VHomeReady
             toView:self)
         
         NSLayoutConstraint.height(
-            view:viewMap,
+            view:viewBar,
             constant:VHomeReady.Constants.barHeight)
         layoutBarBottom = NSLayoutConstraint.bottomToBottom(
-            view:viewMap,
-            toView:self,
-            constant:-VHomeReady.Constants.barHeight)
+            view:viewBar,
+            toView:self)
         NSLayoutConstraint.equalsHorizontal(
-            view:viewMap,
+            view:viewBar,
             toView:self)
     }
 }
