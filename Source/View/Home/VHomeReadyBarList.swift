@@ -1,6 +1,8 @@
 import UIKit
 
-final class VHomeReadyBarList:VCollection
+final class VHomeReadyBarList:VCollection<
+    ArchHome,
+    UICollectionViewCell>
 {
     
 }
