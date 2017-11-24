@@ -13,20 +13,21 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
     
     override init(frame:CGRect)
     {
-        let colourLabel:UIColor = UIColor(white:0, alpha:0.6)
+        let colourLabelTitle:UIColor = UIColor(white:0, alpha:0.6)
+        let colourLabelSubtitle:UIColor = UIColor(white:0, alpha:0.4)
         let colourLabelHighlighted:UIColor = UIColor.colourBackgroundDark
         
         attributesTitle = [
             NSAttributedStringKey.font : UIFont.regular(size:VCreateSearchBaseListCell.Constants.titleFontSize),
-            NSAttributedStringKey.foregroundColor : colourLabel]
+            NSAttributedStringKey.foregroundColor : colourLabelTitle]
         
         attributesTitleHighlighted = [
-            NSAttributedStringKey.font : UIFont.medium(size:VCreateSearchBaseListCell.Constants.titleFontSize),
+            NSAttributedStringKey.font : UIFont.bold(size:VCreateSearchBaseListCell.Constants.titleFontSize),
             NSAttributedStringKey.foregroundColor : colourLabelHighlighted]
         
         attributesSubtitle = [
             NSAttributedStringKey.font : UIFont.regular(size:VCreateSearchBaseListCell.Constants.subtitleFontSize),
-            NSAttributedStringKey.foregroundColor : colourLabel]
+            NSAttributedStringKey.foregroundColor : colourLabelSubtitle]
         
         attributesSubtitleHighlighted = [
             NSAttributedStringKey.font : UIFont.medium(size:VCreateSearchBaseListCell.Constants.subtitleFontSize),

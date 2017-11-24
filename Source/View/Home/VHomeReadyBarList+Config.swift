@@ -7,6 +7,7 @@ extension VHomeReadyBarList
     func config()
     {
         backgroundColor = UIColor.colourBackgroundGray
+        collectionView.alwaysBounceVertical = true
         
         registerHeader(header:VHomeReadyBarListHeader.self)
         
