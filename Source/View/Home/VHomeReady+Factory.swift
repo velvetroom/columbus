@@ -10,6 +10,7 @@ extension VHomeReady
         self.viewMap = viewMap
         
         let viewBar:VHomeReadyBar = VHomeReadyBar(controller:controller)
+        self.viewBar = viewBar
         
         addSubview(viewMap)
         addSubview(viewBar)
@@ -29,7 +30,8 @@ extension VHomeReady
             constant:VHomeReady.Constants.barHeight)
         layoutBarBottom = NSLayoutConstraint.bottomToBottom(
             view:viewBar,
-            toView:self)
+            toView:self,
+            constant:-ViewMain.Constants.menuHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
             toView:self)

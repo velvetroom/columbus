@@ -4,6 +4,6 @@ extension VHomeReady
 {
     struct Constants
     {
-        static let barHeight:CGFloat = 250
+        static let barHeight:CGFloat = 220
     }
 }
