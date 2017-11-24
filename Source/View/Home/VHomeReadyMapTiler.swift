@@ -27,7 +27,7 @@ final class VHomeReadyMapTiler:MKTileOverlay
     
     private func asyncLoadTile(
         tilePath:MKTileOverlayPath,
-        completion:@escaping(Data?, Error?) -> ())
+        completion:(Data?, Error?) -> ())
     {
         let path:URL = url(forTilePath:tilePath)
         
@@ -37,7 +37,7 @@ final class VHomeReadyMapTiler:MKTileOverlay
             
         else
         {
-            completion(nil, nil)
+            fallbackTile(completion:completion)
             
             return
         }
@@ -49,7 +49,7 @@ final class VHomeReadyMapTiler:MKTileOverlay
     
     private func loadTile(
         path:URL,
-        completion:@escaping(Data?, Error?) -> ())
+        completion:(Data?, Error?) -> ())
     {
         let data:Data
         
@@ -58,6 +58,22 @@ final class VHomeReadyMapTiler:MKTileOverlay
             try data = Data(contentsOf:path)
         }
         catch
+        {
+            completion(nil, nil)
+            
+            return
+        }
+        
+        completion(data, nil)
+    }
+    
+    private func fallbackTile(completion:(Data?, Error?) -> ())
+    {
+        guard
+            
+            let data:Data = UIImagePNGRepresentation(#imageLiteral(resourceName: "assetGenericTile"))
+        
+        else
         {
             completion(nil, nil)
             
