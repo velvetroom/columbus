@@ -3,7 +3,6 @@ import MapKit
 final class VCreateSearchBaseListCell:UICollectionViewCell
 {
     private weak var label:UILabel!
-    private weak var layoutLabelHeight:NSLayoutConstraint!
     let attributesTitle:[NSAttributedStringKey:Any]
     let attributesTitleHighlighted:[NSAttributedStringKey:Any]
     let attributesSubtitle:[NSAttributedStringKey:Any]
@@ -13,7 +12,7 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
     
     override init(frame:CGRect)
     {
-        let colourLabelTitle:UIColor = UIColor(white:0, alpha:0.6)
+        let colourLabelTitle:UIColor = UIColor(white:0, alpha:0.7)
         let colourLabelSubtitle:UIColor = UIColor(white:0, alpha:0.4)
         let colourLabelHighlighted:UIColor = UIColor.colourBackgroundDark
         
@@ -50,13 +49,13 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         NSLayoutConstraint.topToTop(
             view:label,
             toView:self,
-            constant:VCreateSearchBaseListCell.Constants.margin)
-        layoutLabelHeight = NSLayoutConstraint.height(
+            constant:VCreateSearchBaseListCell.Constants.marginTop)
+        NSLayoutConstraint.heightGreaterOrEqual(
             view:label)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self,
-            margin:VCreateSearchBaseListCell.Constants.margin)
+            margin:VCreateSearchBaseListCell.Constants.marginHorizontal)
     }
     
     required init?(coder:NSCoder)
@@ -96,39 +95,11 @@ final class VCreateSearchBaseListCell:UICollectionViewCell
         }
     }
     
-    private func updateHeight()
-    {
-        guard
-            
-            let text:NSAttributedString = self.text
-        
-        else
-        {
-            return
-        }
-        
-        let size:CGSize = CGSize(
-            width:label.bounds.width,
-            height:VCreateSearchBaseListCell.Constants.textMaxHeight)
-        
-        let rect:CGRect = text.boundingRect(
-            with:size,
-            options:NSStringDrawingOptions([
-                NSStringDrawingOptions.usesLineFragmentOrigin,
-                NSStringDrawingOptions.usesFontLeading]),
-            context:nil)
-        
-        let height:CGFloat = ceil(rect.height)
-        
-        layoutLabelHeight.constant = height
-    }
-    
     //MARK: internal
     
     func config(model:MKLocalSearchCompletion)
     {
         text = factoryText(model:model)
-        updateHeight()
         hover()
     }
 }

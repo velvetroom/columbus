@@ -6,7 +6,7 @@ extension VCreateSearchBaseListCell
     {
         static let titleFontSize:CGFloat = 14
         static let subtitleFontSize:CGFloat = 11
-        static let margin:CGFloat = 10
-        static let textMaxHeight:CGFloat = 1000
+        static let marginHorizontal:CGFloat = 20
+        static let marginTop:CGFloat = 15
     }
 }

@@ -14,7 +14,7 @@ extension VCreateSearchBaseList
             flow.minimumLineSpacing = VCreateSearchBaseList.Constants.interItem
             flow.minimumInteritemSpacing = VCreateSearchBaseList.Constants.interItem
             flow.sectionInset = UIEdgeInsets(
-                top:VCreateSearchBaseList.Constants.collectionTop,
+                top:VCreateSearchBaseList.Constants.collectionTop + VCreateSearchBaseList.Constants.interItem,
                 left:0,
                 bottom:VCreateSearchBaseList.Constants.interItem,
                 right:0)
