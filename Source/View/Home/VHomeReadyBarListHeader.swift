@@ -2,6 +2,9 @@ import UIKit
 
 final class VHomeReadyBarListHeader:UICollectionReusableView
 {
+    weak var labelDistance:UILabel!
+    weak var labelDuration:UILabel!
+    
     override init(frame:CGRect)
     {
         super.init(frame:frame)
@@ -15,5 +18,16 @@ final class VHomeReadyBarListHeader:UICollectionReusableView
     required init?(coder:NSCoder)
     {
         return nil
+    }
+    
+    //MARK: private
+    
+    
+    
+    //MARK: internal
+    
+    func config(controller:CHome)
+    {
+        
     }
 }
