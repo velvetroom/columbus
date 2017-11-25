@@ -13,13 +13,13 @@ extension VCreateStatusReadyBarStopsFooter
         iconDistance.isUserInteractionEnabled = false
         iconDistance.image = #imageLiteral(resourceName: "assetMapDistance")
         
-        let labelDistanceValue:UILabel = UILabel()
-        labelDistanceValue.isUserInteractionEnabled = false
-        labelDistanceValue.translatesAutoresizingMaskIntoConstraints = false
-        labelDistanceValue.backgroundColor = UIColor.clear
-        labelDistanceValue.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
-        labelDistanceValue.textColor = UIColor.white
-        self.labelDistanceValue = labelDistanceValue
+        let labelDistance:UILabel = UILabel()
+        labelDistance.isUserInteractionEnabled = false
+        labelDistance.translatesAutoresizingMaskIntoConstraints = false
+        labelDistance.backgroundColor = UIColor.clear
+        labelDistance.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
+        labelDistance.textColor = UIColor.white
+        self.labelDistance = labelDistance
         
         let iconDuration:UIImageView = UIImageView()
         iconDuration.translatesAutoresizingMaskIntoConstraints = false
@@ -28,19 +28,19 @@ extension VCreateStatusReadyBarStopsFooter
         iconDuration.isUserInteractionEnabled = false
         iconDuration.image = #imageLiteral(resourceName: "assetMapDuration")
         
-        let labelDurationValue:UILabel = UILabel()
-        labelDurationValue.isUserInteractionEnabled = false
-        labelDurationValue.translatesAutoresizingMaskIntoConstraints = false
-        labelDurationValue.backgroundColor = UIColor.clear
-        labelDurationValue.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
-        labelDurationValue.textColor = UIColor.white
-        labelDurationValue.textAlignment = NSTextAlignment.right
-        self.labelDurationValue = labelDurationValue
+        let labelDuration:UILabel = UILabel()
+        labelDuration.isUserInteractionEnabled = false
+        labelDuration.translatesAutoresizingMaskIntoConstraints = false
+        labelDuration.backgroundColor = UIColor.clear
+        labelDuration.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
+        labelDuration.textColor = UIColor.white
+        labelDuration.textAlignment = NSTextAlignment.right
+        self.labelDuration = labelDuration
         
         addSubview(iconDistance)
         addSubview(iconDuration)
-        addSubview(labelDistanceValue)
-        addSubview(labelDurationValue)
+        addSubview(labelDistance)
+        addSubview(labelDuration)
         
         NSLayoutConstraint.topToTop(
             view:iconDistance,
@@ -58,17 +58,17 @@ extension VCreateStatusReadyBarStopsFooter
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconWidth)
         
         NSLayoutConstraint.topToTop(
-            view:labelDistanceValue,
+            view:labelDistance,
             toView:self,
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
         NSLayoutConstraint.height(
-            view:labelDistanceValue,
+            view:labelDistance,
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
         NSLayoutConstraint.leftToRight(
-            view:labelDistanceValue,
+            view:labelDistance,
             toView:iconDistance)
         NSLayoutConstraint.width(
-            view:labelDistanceValue,
+            view:labelDistance,
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.valueWidth)
         
         NSLayoutConstraint.topToTop(
@@ -87,17 +87,17 @@ extension VCreateStatusReadyBarStopsFooter
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconWidth)
         
         NSLayoutConstraint.topToTop(
-            view:labelDurationValue,
+            view:labelDuration,
             toView:self,
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
         NSLayoutConstraint.height(
-            view:labelDurationValue,
+            view:labelDuration,
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
         NSLayoutConstraint.rightToLeft(
-            view:labelDurationValue,
+            view:labelDuration,
             toView:iconDuration)
         NSLayoutConstraint.width(
-            view:labelDurationValue,
+            view:labelDuration,
             constant:VCreateStatusReadyBarStopsFooter.Constants.UI.valueWidth)
     }
 }

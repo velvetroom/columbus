@@ -20,14 +20,27 @@ final class VHomeReadyBarListHeader:UICollectionReusableView
         return nil
     }
     
-    //MARK: private
-    
-    
-    
     //MARK: internal
     
     func config(controller:CHome)
     {
+        guard
+            
+            let travels:[DPlanTravel] = controller.model.plan?.plan.travels?.array as? [DPlanTravel],
+            let settings:DSettings = controller.model.settings
         
+        else
+        {
+            return
+        }
+        
+        let distance:String? = VCreateStatusReadyBarStopsFooter.factoryDistance(
+            model:travels,
+            distanceSettings:settings.distance)
+        
+        let duration:String? = VCreateStatusReadyBarStopsFooter.factoryDuration(model:travels)
+        
+        labelDistance.text = distance
+        labelDuration.text = duration
     }
 }

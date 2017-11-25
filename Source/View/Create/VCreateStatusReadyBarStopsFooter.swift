@@ -2,8 +2,8 @@ import UIKit
 
 final class VCreateStatusReadyBarStopsFooter:UICollectionReusableView
 {
-    weak var labelDistanceValue:UILabel!
-    weak var labelDurationValue:UILabel!
+    weak var labelDistance:UILabel!
+    weak var labelDuration:UILabel!
     
     override init(frame:CGRect)
     {
@@ -31,7 +31,7 @@ final class VCreateStatusReadyBarStopsFooter:UICollectionReusableView
         
         let duration:String? = VCreateStatusReadyBarStopsFooter.factoryDuration(model:model)
         
-        labelDistanceValue.text = distance
-        labelDurationValue.text = duration
+        labelDistance.text = distance
+        labelDuration.text = duration
     }
 }
