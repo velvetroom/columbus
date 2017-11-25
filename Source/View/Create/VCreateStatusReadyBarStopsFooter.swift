@@ -4,16 +4,9 @@ final class VCreateStatusReadyBarStopsFooter:UICollectionReusableView
 {
     weak var labelDistanceValue:UILabel!
     weak var labelDurationValue:UILabel!
-    let distanceSuffixMap:[DSettingsDistance:String]
-    let durationSuffixMap:[DPlanTravelDurationType:String]
-    let numberFormatter:NumberFormatter
     
     override init(frame:CGRect)
     {
-        distanceSuffixMap = VCreateStatusReadyBarStopsFooter.factoryDistanceSuffixMap()
-        durationSuffixMap = VCreateStatusReadyBarStopsFooter.factoryDurationSuffixMap()
-        numberFormatter = VCreateStatusReadyBarStopsFooter.factoryNumberFormatter()
-        
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
@@ -32,11 +25,11 @@ final class VCreateStatusReadyBarStopsFooter:UICollectionReusableView
         model:[DPlanTravel],
         distanceSettings:DSettingsDistance)
     {
-        let distance:String? = factoryDistance(
+        let distance:String? = VCreateStatusReadyBarStopsFooter.factoryDistance(
             model:model,
             distanceSettings:distanceSettings)
         
-        let duration:String? = factoryDuration(model:model)
+        let duration:String? = VCreateStatusReadyBarStopsFooter.factoryDuration(model:model)
         
         labelDistanceValue.text = distance
         labelDurationValue.text = duration

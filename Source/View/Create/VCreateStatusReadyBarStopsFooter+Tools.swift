@@ -4,67 +4,119 @@ extension VCreateStatusReadyBarStopsFooter
 {
     //MARK: private
     
-    private func updateDistanceSuffix(distanceSettings:DSettingsDistance)
+    private class func factoryNumberFormatter() -> NumberFormatter
     {
+        let numberFormatter:NumberFormatter = NumberFormatter()
+        numberFormatter.minimumIntegerDigits = VCreateStatusReadyBarStopsFooter.Constants.Formatter.minIntegers
+        numberFormatter.maximumFractionDigits = VCreateStatusReadyBarStopsFooter.Constants.Formatter.maxDecimals
+        
+        return numberFormatter
+    }
+    
+    private class func factoryDistanceSuffixMap() -> [DSettingsDistance:String]
+    {
+        let suffixMap:[DSettingsDistance:String] = [
+            DSettingsDistance.kilometres : String.localizedView(
+                key:"VCreateStatusReadyBarStopsFooter_kilometres"),
+            DSettingsDistance.miles : String.localizedView(
+                key:"VCreateStatusReadyBarStopsFooter_miles")]
+        
+        return suffixMap
+    }
+    
+    private class func factoryDurationSuffixMap() -> [DPlanTravelDurationType:String]
+    {
+        let suffixMap:[DPlanTravelDurationType:String] = [
+            DPlanTravelDurationType.days : String.localizedView(
+                key:"VCreateStatusReadyBarStopsFooter_durationDays"),
+            DPlanTravelDurationType.hours : String.localizedView(
+                key:"VCreateStatusReadyBarStopsFooter_durationHours"),
+            DPlanTravelDurationType.minutes : String.localizedView(
+                key:"VCreateStatusReadyBarStopsFooter_durationMinutes"),
+            DPlanTravelDurationType.seconds : String.localizedView(
+                key:"VCreateStatusReadyBarStopsFooter_durationSeconds")]
+        
+        return suffixMap
+    }
+    
+    private class func factoryDistanceFormatter(distanceSettings:DSettingsDistance) -> NumberFormatter?
+    {
+        let suffixes:[DSettingsDistance:String] = factoryDistanceSuffixMap()
+        
         guard
             
-            let suffix:String = distanceSuffixMap[distanceSettings]
+            let suffix:String = suffixes[distanceSettings]
             
         else
         {
-            return
+            return nil
         }
         
-        numberFormatter.positiveSuffix = suffix
+        let formatter:NumberFormatter = factoryNumberFormatter()
+        formatter.positiveSuffix = suffix
+        
+        return formatter
     }
     
-    private func updateDurationSuffix(durationType:DPlanTravelDurationType)
+    private class func factoryDurationFormatter(durationType:DPlanTravelDurationType) -> NumberFormatter?
     {
+        let suffixes:[DPlanTravelDurationType:String] = factoryDurationSuffixMap()
+        
         guard
             
-            let suffix:String = durationSuffixMap[durationType]
+            let suffix:String = suffixes[durationType]
             
         else
         {
-            return
+            return nil
         }
         
-        numberFormatter.positiveSuffix = suffix
-    }
-    
-    private func factoryDuration(duration:DPlanTravelDuration) -> String?
-    {
-        updateDurationSuffix(durationType:duration.type)
+        let formatter:NumberFormatter = factoryNumberFormatter()
+        formatter.positiveSuffix = suffix
         
-        let number:NSNumber = NSNumber(value:duration.amount)
-        let string:String? = numberFormatter.string(from:number)
-        
-        return string
+        return formatter
     }
     
     //MARK: internal
     
-    func factoryDistance(
+    class func factoryDistance(
         model:[DPlanTravel],
         distanceSettings:DSettingsDistance) -> String?
     {
-        updateDistanceSuffix(distanceSettings:distanceSettings)
-        
         let distance:Float = DPlanTravel.factoryDistance(
             travels:model,
             distanceSettings:distanceSettings)
         
         let distanceNumber:NSNumber = NSNumber(value:distance)
-        let distanceString:String? = numberFormatter.string(from:distanceNumber)
         
-        return distanceString
+        guard
+            
+            let formatter:NumberFormatter = factoryDistanceFormatter(distanceSettings:distanceSettings),
+            let string:String = formatter.string(from:distanceNumber)
+        
+        else
+        {
+            return nil
+        }
+        
+        return string
     }
     
-    func factoryDuration(model:[DPlanTravel]) -> String?
+    class func factoryDuration(model:[DPlanTravel]) -> String?
     {
         let duration:DPlanTravelDuration = DPlanTravelDuration.factoryDuration(travels:model)
-        let durationString:String? = factoryDuration(duration:duration)
+        let number:NSNumber = NSNumber(value:duration.amount)
         
-        return durationString
+        guard
+            
+            let formatter:NumberFormatter = factoryDurationFormatter(durationType:duration.type),
+            let string:String = formatter.string(from:number)
+            
+        else
+        {
+            return nil
+        }
+        
+        return string
     }
 }

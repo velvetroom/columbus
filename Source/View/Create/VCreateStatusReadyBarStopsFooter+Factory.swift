@@ -4,42 +4,6 @@ extension VCreateStatusReadyBarStopsFooter
 {
     //MARK: internal
     
-    class func factoryNumberFormatter() -> NumberFormatter
-    {
-        let numberFormatter:NumberFormatter = NumberFormatter()
-        numberFormatter.minimumIntegerDigits = VCreateStatusReadyBarStopsFooter.Constants.Formatter.minIntegers
-        numberFormatter.maximumFractionDigits = VCreateStatusReadyBarStopsFooter.Constants.Formatter.maxDecimals
-
-        return numberFormatter
-    }
-    
-    class func factoryDistanceSuffixMap() -> [DSettingsDistance:String]
-    {
-        let suffixMap:[DSettingsDistance:String] = [
-            DSettingsDistance.kilometres : String.localizedView(
-                    key:"VCreateStatusReadyBarStopsFooter_kilometres"),
-            DSettingsDistance.miles : String.localizedView(
-                    key:"VCreateStatusReadyBarStopsFooter_miles")]
-        
-        return suffixMap
-    }
-    
-    class func factoryDurationSuffixMap() -> [
-        DPlanTravelDurationType:String]
-    {
-        let suffixMap:[DPlanTravelDurationType:String] = [
-            DPlanTravelDurationType.days : String.localizedView(
-                    key:"VCreateStatusReadyBarStopsFooter_durationDays"),
-            DPlanTravelDurationType.hours : String.localizedView(
-                    key:"VCreateStatusReadyBarStopsFooter_durationHours"),
-            DPlanTravelDurationType.minutes : String.localizedView(
-                    key:"VCreateStatusReadyBarStopsFooter_durationMinutes"),
-            DPlanTravelDurationType.seconds : String.localizedView(
-                    key:"VCreateStatusReadyBarStopsFooter_durationSeconds")]
-        
-        return suffixMap
-    }
-    
     func factoryViews()
     {
         let iconDistance:UIImageView = UIImageView()
