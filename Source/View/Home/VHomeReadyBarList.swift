@@ -24,6 +24,8 @@ final class VHomeReadyBarList:VCollection<
             kind:kind,
             indexPath:indexPath)
         
+        header.config(controller:controller)
+        
         return header
     }
 }

@@ -4,7 +4,7 @@ extension VHomeReadyBarListHeader
 {
     struct Constants
     {
-        static let iconWidth:CGFloat = 60
-        static let fontSize:CGFloat = 14
+        static let iconWidth:CGFloat = 48
+        static let fontSize:CGFloat = 12
     }
 }
