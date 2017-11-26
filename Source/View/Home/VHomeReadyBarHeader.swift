@@ -69,10 +69,10 @@ final class VHomeReadyBarHeader:View<ArchHome>
         distance:String,
         duration:String)
     {
-        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
-        
         let colourText:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.45)
-        let colourIcons:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.3)
+        let colourIcons:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.2)
+        
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
         
         let iconDistance:UIImageView = UIImageView()
         iconDistance.translatesAutoresizingMaskIntoConstraints = false
