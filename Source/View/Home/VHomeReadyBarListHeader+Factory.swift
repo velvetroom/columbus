@@ -8,7 +8,8 @@ extension VHomeReadyBarListHeader
     {
         let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
       
-        let colour:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.45)
+        let colourText:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.45)
+        let colourIcons:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.3)
         
         let iconDistance:UIImageView = UIImageView()
         iconDistance.translatesAutoresizingMaskIntoConstraints = false
@@ -16,7 +17,7 @@ extension VHomeReadyBarListHeader
         iconDistance.contentMode = UIViewContentMode.center
         iconDistance.isUserInteractionEnabled = false
         iconDistance.image = #imageLiteral(resourceName: "assetMapDistance").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-        iconDistance.tintColor = colour
+        iconDistance.tintColor = colourIcons
         
         let iconDuration:UIImageView = UIImageView()
         iconDuration.translatesAutoresizingMaskIntoConstraints = false
@@ -24,13 +25,13 @@ extension VHomeReadyBarListHeader
         iconDuration.isUserInteractionEnabled = false
         iconDuration.contentMode = UIViewContentMode.center
         iconDuration.image = #imageLiteral(resourceName: "assetMapDuration").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-        iconDuration.tintColor = colour
+        iconDuration.tintColor = colourIcons
         
         let labelDistance:UILabel = UILabel()
         labelDistance.isUserInteractionEnabled = false
         labelDistance.backgroundColor = UIColor.clear
         labelDistance.translatesAutoresizingMaskIntoConstraints = false
-        labelDistance.textColor = colour
+        labelDistance.textColor = colourText
         labelDistance.font = UIFont.regular(size:VHomeReadyBarListHeader.Constants.fontSize)
         self.labelDistance = labelDistance
         
@@ -38,7 +39,7 @@ extension VHomeReadyBarListHeader
         labelDuration.backgroundColor = UIColor.clear
         labelDuration.isUserInteractionEnabled = false
         labelDuration.translatesAutoresizingMaskIntoConstraints = false
-        labelDuration.textColor = colour
+        labelDuration.textColor = colourText
         labelDuration.font = UIFont.regular(size:VHomeReadyBarListHeader.Constants.fontSize)
         self.labelDuration = labelDuration
         
