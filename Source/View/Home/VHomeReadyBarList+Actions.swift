@@ -10,4 +10,18 @@ extension VHomeReadyBarList
         
         return item
     }
+    
+    func selectInMap(item:DPlanStop)
+    {
+        guard
+        
+            let view:VHomeReady = controller.model.view?.view as? VHomeReady
+        
+        else
+        {
+            return
+        }
+        
+        view.viewMap.centreAndSelect(stop:item)
+    }
 }

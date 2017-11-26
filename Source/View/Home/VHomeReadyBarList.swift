@@ -76,4 +76,12 @@ final class VHomeReadyBarList:VCollection<
         
         return cell
     }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
+        didSelectItemAt indexPath:IndexPath)
+    {
+        let item:DPlanStop = modelAtIndex(index:indexPath)
+        selectInMap(item:item)
+    }
 }
