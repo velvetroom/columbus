@@ -1,6 +1,3 @@
 import Foundation
 
-struct VFormat
-{
-    
-}
+struct VFormat { }
