@@ -7,14 +7,10 @@ final class MHome:Model<ArchHome>
     var plan:MHomePlan?
     let info:[MHomeInfoProtocol]
     private(set) var status:MHomeStatusProtocol?
-    private let numberFormatter:NumberFormatter
     
     required init()
     {
         info = MHome.factoryInfo()
-        numberFormatter = NumberFormatter()
-        numberFormatter.minimumIntegerDigits = MHome.Constants.Formatter.minIntegers
-        numberFormatter.maximumFractionDigits = MHome.Constants.Formatter.maxDecimals
         
         super.init()
     }

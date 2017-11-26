@@ -80,6 +80,23 @@ extension VCreateStatusReadyBarStopsFooter
     //MARK: internal
     
     class func factoryDistance(
+        distance:NSNumber,
+        distanceSettings:DSettingsDistance) -> String?
+    {
+        guard
+            
+            let formatter:NumberFormatter = factoryDistanceFormatter(distanceSettings:distanceSettings),
+            let string:String = formatter.string(from:distance)
+            
+        else
+        {
+            return nil
+        }
+        
+        return string
+    }
+    
+    class func factoryDistance(
         model:[DPlanTravel],
         distanceSettings:DSettingsDistance) -> String?
     {
@@ -89,17 +106,11 @@ extension VCreateStatusReadyBarStopsFooter
         
         let distanceNumber:NSNumber = NSNumber(value:distance)
         
-        guard
-            
-            let formatter:NumberFormatter = factoryDistanceFormatter(distanceSettings:distanceSettings),
-            let string:String = formatter.string(from:distanceNumber)
+        let string:String? = factoryDistance(
+            distance:distanceNumber,
+            distanceSettings:distanceSettings)
         
-        else
-        {
-            return nil
-        }
-        
-        return string
+        return String
     }
     
     class func factoryDuration(model:[DPlanTravel]) -> String?
