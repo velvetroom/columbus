@@ -70,4 +70,12 @@ extension VHomeReadyBarList
             break
         }
     }
+    
+    func deselectAll()
+    {
+        collectionView.selectItem(
+            at:nil,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition())
+    }
 }

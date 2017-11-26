@@ -32,6 +32,13 @@ final class VHomeReadyMap:VMap<ArchHome>
         selectInList(item:item)
     }
     
+    override func mapView(
+        _ mapView:MKMapView,
+        didDeselect view:MKAnnotationView)
+    {
+        deselectInList()
+    }
+    
     //MARK: private
     
     private func addTiler()

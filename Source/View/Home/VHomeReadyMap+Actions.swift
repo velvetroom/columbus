@@ -17,4 +17,18 @@ extension VHomeReadyMap
         
         view.viewBar.viewList.selectItem(item:item)
     }
+    
+    func deselectInList()
+    {
+        guard
+            
+            let view:VHomeReady = controller.model.view?.view as? VHomeReady
+            
+        else
+        {
+            return
+        }
+        
+        view.viewBar.viewList.deselectAll()
+    }
 }
