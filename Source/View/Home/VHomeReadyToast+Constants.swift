@@ -4,7 +4,7 @@ extension VHomeReadyToast
 {
     struct Constants
     {
-        static let paddingHorizontal:CGFloat = 10
-        static let paddingVertical:CGFloat = 20
+        static let height:CGFloat = 50
+        static let fontSize:CGFloat = 16
     }
 }
