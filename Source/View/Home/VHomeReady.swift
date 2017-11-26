@@ -17,4 +17,11 @@ final class VHomeReady:View<ArchHome>
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func toast(message:String)
+    {
+        
+    }
 }

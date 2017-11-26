@@ -31,7 +31,9 @@ extension MCreatePlan
             return
         }
         
-        let location:CLLocation = MCreatePlan.factoryLocation(coordinate:coordinate)
+        let location:CLLocation = CLLocation(
+            latitude:coordinate.latitude,
+            longitude:coordinate.longitude)
         
         geocodeLocation(location:location)
         { [weak self] (name:String?) in
