@@ -22,7 +22,7 @@ extension VHomeReady
         
         guard
         
-            let distanceString:String = VCreateStatusReadyBarStopsFooter.factoryDistance(
+            let distanceString:String = VFormat.factoryDistance(
                 distance:distanceNumber,
                 distanceSettings:distanceSettings)
         

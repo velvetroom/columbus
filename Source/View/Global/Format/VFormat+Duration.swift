@@ -4,7 +4,7 @@ extension VFormat
 {
     //MARK: private
     
-    private static func factoryDurationSuffixMap() -> [DPlanTravelDurationType:String]
+    private static func factorySuffixMap() -> [DPlanTravelDurationType:String]
     {
         let suffixMap:[DPlanTravelDurationType:String] = [
             DPlanTravelDurationType.days : String.localizedView(key:"VFormat_durationDays"),
@@ -15,9 +15,9 @@ extension VFormat
         return suffixMap
     }
     
-    private static func factoryDurationFormatter(durationType:DPlanTravelDurationType) -> NumberFormatter?
+    private static func factoryFormatter(durationType:DPlanTravelDurationType) -> NumberFormatter?
     {
-        let suffixes:[DPlanTravelDurationType:String] = factoryDurationSuffixMap()
+        let suffixes:[DPlanTravelDurationType:String] = factorySuffixMap()
         
         guard
             
@@ -43,7 +43,7 @@ extension VFormat
         
         guard
             
-            let formatter:NumberFormatter = factoryDurationFormatter(durationType:duration.type),
+            let formatter:NumberFormatter = factoryFormatter(durationType:duration.type),
             let string:String = formatter.string(from:number)
             
         else

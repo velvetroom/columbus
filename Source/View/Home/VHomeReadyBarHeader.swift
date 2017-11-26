@@ -42,8 +42,8 @@ final class VHomeReadyBarHeader:View<ArchHome>
             return nil
         }
         
-        let distance:String? = VCreateStatusReadyBarStopsFooter.factoryDistance(
-            model:travels,
+        let distance:String? = VFormat.factoryDistance(
+            travels:travels,
             distanceSettings:settings.distance)
         
         return distance
@@ -60,7 +60,7 @@ final class VHomeReadyBarHeader:View<ArchHome>
             return nil
         }
         
-        let duration:String? = VCreateStatusReadyBarStopsFooter.factoryDuration(model:travels)
+        let duration:String? = VFormat.factoryDuration(travels:travels)
         
         return duration
     }

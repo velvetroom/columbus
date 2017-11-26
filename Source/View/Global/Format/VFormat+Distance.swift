@@ -1,10 +1,10 @@
 import Foundation
 
-struct VFormat
+extension VFormat
 {
     //MARK: private
     
-    private static func factoryDistanceSuffixMap() -> [DSettingsDistance:String]
+    private static func factorySuffixMap() -> [DSettingsDistance:String]
     {
         let suffixMap:[DSettingsDistance:String] = [
             DSettingsDistance.kilometres : String.localizedView(key:"VFormat_distanceKilometres"),
@@ -13,9 +13,9 @@ struct VFormat
         return suffixMap
     }
     
-    private static func factoryDistanceFormatter(distanceSettings:DSettingsDistance) -> NumberFormatter?
+    private static func factoryFormatter(distanceSettings:DSettingsDistance) -> NumberFormatter?
     {
-        let suffixes:[DSettingsDistance:String] = factoryDistanceSuffixMap()
+        let suffixes:[DSettingsDistance:String] = factorySuffixMap()
         
         guard
             
@@ -40,7 +40,7 @@ struct VFormat
     {
         guard
             
-            let formatter:NumberFormatter = factoryDistanceFormatter(distanceSettings:distanceSettings),
+            let formatter:NumberFormatter = factoryFormatter(distanceSettings:distanceSettings),
             let string:String = formatter.string(from:distance)
             
         else

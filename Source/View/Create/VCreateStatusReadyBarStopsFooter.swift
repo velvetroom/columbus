@@ -25,11 +25,11 @@ final class VCreateStatusReadyBarStopsFooter:UICollectionReusableView
         model:[DPlanTravel],
         distanceSettings:DSettingsDistance)
     {
-        let distance:String? = VCreateStatusReadyBarStopsFooter.factoryDistance(
-            model:model,
+        let distance:String? = VFormat.factoryDistance(
+            travels:model,
             distanceSettings:distanceSettings)
         
-        let duration:String? = VCreateStatusReadyBarStopsFooter.factoryDuration(model:model)
+        let duration:String? = VFormat.factoryDuration(travels:model)
         
         labelDistance.text = distance
         labelDuration.text = duration

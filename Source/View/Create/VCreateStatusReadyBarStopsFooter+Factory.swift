@@ -17,7 +17,7 @@ extension VCreateStatusReadyBarStopsFooter
         labelDistance.isUserInteractionEnabled = false
         labelDistance.translatesAutoresizingMaskIntoConstraints = false
         labelDistance.backgroundColor = UIColor.clear
-        labelDistance.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
+        labelDistance.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.valueFontSize)
         labelDistance.textColor = UIColor.white
         self.labelDistance = labelDistance
         
@@ -32,7 +32,7 @@ extension VCreateStatusReadyBarStopsFooter
         labelDuration.isUserInteractionEnabled = false
         labelDuration.translatesAutoresizingMaskIntoConstraints = false
         labelDuration.backgroundColor = UIColor.clear
-        labelDuration.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.UI.valueFontSize)
+        labelDuration.font = UIFont.medium(size:VCreateStatusReadyBarStopsFooter.Constants.valueFontSize)
         labelDuration.textColor = UIColor.white
         labelDuration.textAlignment = NSTextAlignment.right
         self.labelDuration = labelDuration
@@ -45,59 +45,59 @@ extension VCreateStatusReadyBarStopsFooter
         NSLayoutConstraint.topToTop(
             view:iconDistance,
             toView:self,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.contentTop)
         NSLayoutConstraint.height(
             view:iconDistance,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.labelHeight)
         NSLayoutConstraint.leftToLeft(
             view:iconDistance,
             toView:self,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconMarginHorizontal)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.iconMarginHorizontal)
         NSLayoutConstraint.width(
             view:iconDistance,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.iconWidth)
         
         NSLayoutConstraint.topToTop(
             view:labelDistance,
             toView:self,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.contentTop)
         NSLayoutConstraint.height(
             view:labelDistance,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.labelHeight)
         NSLayoutConstraint.leftToRight(
             view:labelDistance,
             toView:iconDistance)
         NSLayoutConstraint.width(
             view:labelDistance,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.valueWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.valueWidth)
         
         NSLayoutConstraint.topToTop(
             view:iconDuration,
             toView:self,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.contentTop)
         NSLayoutConstraint.height(
             view:iconDuration,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.labelHeight)
         NSLayoutConstraint.rightToRight(
             view:iconDuration,
             toView:self,
-            constant:-VCreateStatusReadyBarStopsFooter.Constants.UI.iconMarginHorizontal)
+            constant:-VCreateStatusReadyBarStopsFooter.Constants.iconMarginHorizontal)
         NSLayoutConstraint.width(
             view:iconDuration,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.iconWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.iconWidth)
         
         NSLayoutConstraint.topToTop(
             view:labelDuration,
             toView:self,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.contentTop)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.contentTop)
         NSLayoutConstraint.height(
             view:labelDuration,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.labelHeight)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.labelHeight)
         NSLayoutConstraint.rightToLeft(
             view:labelDuration,
             toView:iconDuration)
         NSLayoutConstraint.width(
             view:labelDuration,
-            constant:VCreateStatusReadyBarStopsFooter.Constants.UI.valueWidth)
+            constant:VCreateStatusReadyBarStopsFooter.Constants.valueWidth)
     }
 }
