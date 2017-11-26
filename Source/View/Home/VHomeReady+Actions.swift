@@ -9,7 +9,8 @@ extension VHomeReady
     {
         guard
             
-            let userLocation:CLLocation = viewMap.userLocation.location
+            let userLocation:CLLocation = viewMap.userLocation.location,
+            let distanceSettings:DSettingsDistance = controller.model.settings?.distance
         
         else
         {
@@ -17,6 +18,24 @@ extension VHomeReady
         }
         
         let distance:CLLocationDistance = userLocation.distance(from:item.location)
+        let distanceNumber:NSNumber = NSNumber(value:distance)
+        
+        guard
+        
+            let distanceString:String = VCreateStatusReadyBarStopsFooter.factoryDistance(
+                distance:distanceNumber,
+                distanceSettings:distanceSettings)
+        
+        else
+        {
+            return
+        }
+        
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.toast(message:distanceString)
+        }
     }
     
     //MARK: internal

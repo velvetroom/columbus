@@ -110,7 +110,7 @@ extension VCreateStatusReadyBarStopsFooter
             distance:distanceNumber,
             distanceSettings:distanceSettings)
         
-        return String
+        return string
     }
     
     class func factoryDuration(model:[DPlanTravel]) -> String?
