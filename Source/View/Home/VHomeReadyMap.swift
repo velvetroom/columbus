@@ -15,10 +15,22 @@ final class VHomeReadyMap:VMap<ArchHome>
     {
         return nil
     }
-//
-//    override func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-//
-//    }
+
+    override func mapView(
+        _ mapView:MKMapView,
+        didSelect view:MKAnnotationView)
+    {
+        guard
+        
+            let item:DPlanStop = view.annotation as? DPlanStop
+        
+        else
+        {
+            return
+        }
+        
+        selectInList(item:item)
+    }
     
     //MARK: private
     

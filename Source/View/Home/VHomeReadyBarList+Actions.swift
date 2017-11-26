@@ -1,7 +1,21 @@
-import Foundation
+import UIKit
 
 extension VHomeReadyBarList
 {
+    //MARK: private
+    
+    private func selectItem(index:Int)
+    {
+        let indexPath:IndexPath = IndexPath(
+            item:index,
+            section:0)
+        
+        collectionView.selectItem(
+            at:indexPath,
+            animated:true,
+            scrollPosition:UICollectionViewScrollPosition.centeredVertically)
+    }
+    
     //MARK: internal
     
     func modelAtIndex(index:IndexPath) -> DPlanStop
@@ -23,5 +37,37 @@ extension VHomeReadyBarList
         }
         
         view.viewMap.centreAndSelect(stop:item)
+    }
+    
+    func selectItem(item:DPlanStop)
+    {
+        guard
+        
+            let model:[DPlanStop] = self.model
+        
+        else
+        {
+            return
+        }
+        
+        let countItems:Int = model.count
+        
+        for index:Int in 0 ..< countItems
+        {
+            let indexedItem:DPlanStop = model[index]
+            
+            guard
+            
+                indexedItem === item
+            
+            else
+            {
+                continue
+            }
+         
+            selectItem(index:index)
+            
+            break
+        }
     }
 }
