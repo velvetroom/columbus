@@ -20,4 +20,22 @@ extension DPlanStop:MKAnnotation
             longitude = newValue.longitude
         }
     }
+    
+    public var location:CLLocation
+    {
+        get
+        {
+            let location:CLLocation = CLLocation(
+                latitude:latitude,
+                longitude:longitude)
+            
+            return location
+        }
+        
+        set(newValue)
+        {
+            latitude = newValue.coordinate.latitude
+            longitude = newValue.coordinate.longitude
+        }
+    }
 }
