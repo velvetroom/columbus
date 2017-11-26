@@ -8,7 +8,7 @@ extension VHomeReadyBarListHeader
     {
         let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
       
-        let colour:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.5)
+        let colour:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.45)
         
         let iconDistance:UIImageView = UIImageView()
         iconDistance.translatesAutoresizingMaskIntoConstraints = false
