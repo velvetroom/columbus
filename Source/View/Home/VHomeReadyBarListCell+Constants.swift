@@ -4,8 +4,8 @@ extension VHomeReadyBarListCell
 {
     struct Constants
     {
-        static let fontSize:CGFloat = 14
+        static let fontSize:CGFloat = 12
         static let titleRight:CGFloat = -20
-        static let iconWidth:CGFloat = 40
+        static let iconWidth:CGFloat = 50
     }
 }

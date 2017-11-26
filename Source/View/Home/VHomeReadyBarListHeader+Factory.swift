@@ -6,9 +6,9 @@ extension VHomeReadyBarListHeader
     
     func factoryViews()
     {
-        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.2))
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
       
-        let colour:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.6)
+        let colour:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.5)
         
         let iconDistance:UIImageView = UIImageView()
         iconDistance.translatesAutoresizingMaskIntoConstraints = false

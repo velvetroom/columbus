@@ -2,7 +2,7 @@ import UIKit
 
 final class VHomeReadyBarList:VCollection<
     ArchHome,
-    UICollectionViewCell>
+    VHomeReadyBarListCell>
 {
     private var cellSize:CGSize?
     
