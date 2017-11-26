@@ -11,6 +11,7 @@ extension VHomeReadyBarListCell
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.font = UIFont.regular(size:VHomeReadyBarListCell.Constants.fontSize)
+        labelTitle.numberOfLines = 0
         self.labelTitle = labelTitle
         
         let icon:UIImageView = UIImageView()
