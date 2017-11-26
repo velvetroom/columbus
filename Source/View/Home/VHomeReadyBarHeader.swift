@@ -1,13 +1,76 @@
 import UIKit
 
-extension VHomeReadyBarListHeader
+final class VHomeReadyBarHeader:View<ArchHome>
 {
-    //MARK: internal
+    required init(controller:CHome)
+    {
+        super.init(controller:controller)
+        isUserInteractionEnabled = false
+        backgroundColor = UIColor.white
+        
+        guard
+            
+            let distance:String = factoryDistance(),
+            let duration:String = factoryDuration()
+            
+        else
+        {
+            return
+        }
+        
+        factoryViews(
+            distance:distance,
+            duration:duration)
+    }
     
-    func factoryViews()
+    required init?(coder:NSCoder)
+    {
+        return nil
+    }
+    
+    //MARK: private
+    
+    private func factoryDistance() -> String?
+    {
+        guard
+            
+            let travels:[DPlanTravel] = controller.model.plan?.plan.travels?.array as? [DPlanTravel],
+            let settings:DSettings = controller.model.settings
+            
+        else
+        {
+            return nil
+        }
+        
+        let distance:String? = VCreateStatusReadyBarStopsFooter.factoryDistance(
+            model:travels,
+            distanceSettings:settings.distance)
+        
+        return distance
+    }
+    
+    private func factoryDuration() -> String?
+    {
+        guard
+            
+            let travels:[DPlanTravel] = controller.model.plan?.plan.travels?.array as? [DPlanTravel]
+            
+        else
+        {
+            return nil
+        }
+        
+        let duration:String? = VCreateStatusReadyBarStopsFooter.factoryDuration(model:travels)
+        
+        return duration
+    }
+    
+    private func factoryViews(
+        distance:String,
+        duration:String)
     {
         let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
-      
+        
         let colourText:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.45)
         let colourIcons:UIColor = UIColor.colourBackgroundDark.withAlphaComponent(0.3)
         
@@ -32,16 +95,16 @@ extension VHomeReadyBarListHeader
         labelDistance.backgroundColor = UIColor.clear
         labelDistance.translatesAutoresizingMaskIntoConstraints = false
         labelDistance.textColor = colourText
-        labelDistance.font = UIFont.regular(size:VHomeReadyBarListHeader.Constants.fontSize)
-        self.labelDistance = labelDistance
+        labelDistance.font = UIFont.regular(size:VHomeReadyBarListCell.Constants.fontSize)
+        labelDistance.text = distance
         
         let labelDuration:UILabel = UILabel()
         labelDuration.backgroundColor = UIColor.clear
         labelDuration.isUserInteractionEnabled = false
         labelDuration.translatesAutoresizingMaskIntoConstraints = false
         labelDuration.textColor = colourText
-        labelDuration.font = UIFont.regular(size:VHomeReadyBarListHeader.Constants.fontSize)
-        self.labelDuration = labelDuration
+        labelDuration.font = UIFont.regular(size:VHomeReadyBarListCell.Constants.fontSize)
+        labelDuration.text = duration
         
         addSubview(border)
         addSubview(labelDuration)
@@ -67,7 +130,7 @@ extension VHomeReadyBarListHeader
             toView:self)
         NSLayoutConstraint.width(
             view:iconDistance,
-            constant:VHomeReadyBarListHeader.Constants.iconWidth)
+            constant:VHomeReadyBarListCell.Constants.iconWidth)
         
         NSLayoutConstraint.equalsVertical(
             view:iconDuration,
@@ -77,7 +140,7 @@ extension VHomeReadyBarListHeader
             toView:self)
         NSLayoutConstraint.width(
             view:iconDuration,
-            constant:VHomeReadyBarListHeader.Constants.iconWidth)
+            constant:VHomeReadyBarListCell.Constants.iconWidth)
         
         NSLayoutConstraint.equalsVertical(
             view:labelDistance,

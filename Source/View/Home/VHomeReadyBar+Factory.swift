@@ -11,7 +11,10 @@ extension VHomeReadyBar
         let viewList:VHomeReadyBarList = VHomeReadyBarList(controller:controller)
         self.viewList = viewList
         
+        let viewHeader:VHomeReadyBarHeader = VHomeReadyBarHeader(controller:controller)
+        
         addSubview(viewList)
+        addSubview(viewHeader)
         addSubview(border)
         
         NSLayoutConstraint.topToTop(
@@ -26,6 +29,16 @@ extension VHomeReadyBar
         
         NSLayoutConstraint.equals(
             view:viewList,
+            toView:self)
+        
+        NSLayoutConstraint.topToTop(
+            view:viewHeader,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:viewHeader,
+            constant:VHomeReadyBar.Constants.headerHeight)
+        NSLayoutConstraint.equalsHorizontal(
+            view:viewHeader,
             toView:self)
     }
 }
