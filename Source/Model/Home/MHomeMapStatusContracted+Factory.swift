@@ -10,7 +10,7 @@ extension MHomeMapStatusContracted
         let itemExpand:MHomeMapMenuExpand = MHomeMapMenuExpand()
         
         let items:[MHomeMapMenuProtocol] = [
-            itemUser
+            itemUser,
             itemExpand]
         
         return items

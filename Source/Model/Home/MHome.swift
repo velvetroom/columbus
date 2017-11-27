@@ -7,6 +7,7 @@ final class MHome:Model<ArchHome>
     var plan:MHomePlan?
     let info:[MHomeInfoProtocol]
     private(set) var status:MHomeStatusProtocol?
+    private(set) var mapStatus:MCreateMapStatusProtocol?
     
     required init()
     {
@@ -23,5 +24,14 @@ final class MHome:Model<ArchHome>
         self.status = status
         
         view?.updateStatus()
+    }
+    
+    func changeMapStatus(statusType:MCreateMapStatusProtocol.Type)
+    {
+        let mapStatus:MCreateMapStatusProtocol = statusType.init()
+        self.mapStatus = mapStatus
+        
+        view?.updateMapMenu(
+            barTop:mapStatus.barTop)
     }
 }

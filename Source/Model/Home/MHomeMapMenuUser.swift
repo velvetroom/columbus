@@ -12,7 +12,7 @@ final class MHomeMapMenuUser:MHomeMapMenuProtocol
     {
         guard
             
-            let view:VHomeStatusReady = controller.model.view?.view as? VHomeStatusReady
+            let view:VHomeReady = controller.model.view?.view as? VHomeReady
             
         else
         {

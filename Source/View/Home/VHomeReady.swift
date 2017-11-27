@@ -4,6 +4,7 @@ final class VHomeReady:View<ArchHome>
 {
     weak var viewMap:VHomeReadyMap!
     weak var viewBar:VHomeReadyBar!
+    weak var viewMenu:VHomeReadyMenu!
     weak var layoutBarBottom:NSLayoutConstraint!
     
     required init(controller:CHome)

@@ -6,5 +6,5 @@ protocol MHomeMapMenuProtocol
     var icon:UIImage { get }
     var iconSelected:UIImage { get }
     
-    func selected(controller:CCreate)
+    func selected(controller:CHome)
 }
