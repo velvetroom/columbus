@@ -163,6 +163,7 @@
 		DA40AC8C1FCCCE3A00A64035 /* MHomeMapStatusExpanded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40AC8B1FCCCE3A00A64035 /* MHomeMapStatusExpanded.swift */; };
 		DA40AC8E1FCCD03300A64035 /* MHomeMapStatusContracted.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40AC8D1FCCD03300A64035 /* MHomeMapStatusContracted.swift */; };
 		DA40AC901FCCD18B00A64035 /* MHomeMapStatusContracted+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40AC8F1FCCD18B00A64035 /* MHomeMapStatusContracted+Factory.swift */; };
+		DA40AC921FCCD21200A64035 /* MHomeMapStatusExpanded+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40AC911FCCD21200A64035 /* MHomeMapStatusExpanded+Factory.swift */; };
 		DA46FBEA1FC032CA00069346 /* ExtensionString+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46FBE91FC032CA00069346 /* ExtensionString+Constants.swift */; };
 		DA471A111F9B7668009B71FF /* VCreateStatusReadyBarLoader+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA471A101F9B7668009B71FF /* VCreateStatusReadyBarLoader+Factory.swift */; };
 		DA471A171F9B7795009B71FF /* VCreateStatusReadyBarLoader+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA471A161F9B7795009B71FF /* VCreateStatusReadyBarLoader+Animations.swift */; };
@@ -754,6 +755,7 @@
 		DA40AC8B1FCCCE3A00A64035 /* MHomeMapStatusExpanded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeMapStatusExpanded.swift; sourceTree = "<group>"; };
 		DA40AC8D1FCCD03300A64035 /* MHomeMapStatusContracted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeMapStatusContracted.swift; sourceTree = "<group>"; };
 		DA40AC8F1FCCD18B00A64035 /* MHomeMapStatusContracted+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MHomeMapStatusContracted+Factory.swift"; sourceTree = "<group>"; };
+		DA40AC911FCCD21200A64035 /* MHomeMapStatusExpanded+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MHomeMapStatusExpanded+Factory.swift"; sourceTree = "<group>"; };
 		DA46FBE91FC032CA00069346 /* ExtensionString+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionString+Constants.swift"; sourceTree = "<group>"; };
 		DA471A101F9B7668009B71FF /* VCreateStatusReadyBarLoader+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarLoader+Factory.swift"; sourceTree = "<group>"; };
 		DA471A161F9B7795009B71FF /* VCreateStatusReadyBarLoader+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarLoader+Animations.swift"; sourceTree = "<group>"; };
@@ -1647,6 +1649,7 @@
 				DA9C04681FABE9E3006F57E1 /* MHomeInfoPlans.swift */,
 				DA40AC7F1FCCC7B200A64035 /* MHomeMapStatusProtocol.swift */,
 				DA40AC8B1FCCCE3A00A64035 /* MHomeMapStatusExpanded.swift */,
+				DA40AC911FCCD21200A64035 /* MHomeMapStatusExpanded+Factory.swift */,
 				DA40AC8D1FCCD03300A64035 /* MHomeMapStatusContracted.swift */,
 				DA40AC8F1FCCD18B00A64035 /* MHomeMapStatusContracted+Factory.swift */,
 				DA40AC811FCCC8EF00A64035 /* MHomeMapMenuProtocol.swift */,
@@ -2529,6 +2532,7 @@
 				DA6BE2F11FBFE4A300D621F0 /* VStoreStatusReadyListCellMessage.swift in Sources */,
 				DA90B8FE1FA0D25900272ECA /* MCreate+Factory.swift in Sources */,
 				DA65ECE91F95E68700720673 /* ExtensionURL.swift in Sources */,
+				DA40AC921FCCD21200A64035 /* MHomeMapStatusExpanded+Factory.swift in Sources */,
 				DAB2F8FA1F9669B800C1EF4A /* MSettings.swift in Sources */,
 				DAB831441FB2190B00E22942 /* MCreateStatusErrorAvailability.swift in Sources */,
 				DAE6998E1FA287CA00FFE6E3 /* VCreateStatusReadyBarTravel+Config.swift in Sources */,
