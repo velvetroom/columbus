@@ -37,6 +37,7 @@ extension VHomeReadyBarList
         }
         
         view.viewMap.centreAndSelect(stop:item)
+        view.displayDistance(item:item)
     }
     
     func selectItem(item:DPlanStop)

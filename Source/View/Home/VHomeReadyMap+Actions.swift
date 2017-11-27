@@ -16,6 +16,7 @@ extension VHomeReadyMap
         }
         
         view.viewBar.viewList.selectItem(item:item)
+        view.displayDistance(item:item)
     }
     
     func deselectInList()
