@@ -11,7 +11,7 @@ final class VHomeReadyToast:UIView
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
-        backgroundColor = UIColor(white:0, alpha:0.9)
+        backgroundColor = UIColor(white:0, alpha:0.3)
         
         factoryMessage(message:message)
         animateShow()
@@ -46,7 +46,7 @@ final class VHomeReadyToast:UIView
         label.backgroundColor = UIColor.clear
         label.textAlignment = NSTextAlignment.center
         label.textColor = UIColor.white
-        label.font = UIFont.regular(size:VHomeReadyToast.Constants.fontSize)
+        label.font = UIFont.medium(size:VHomeReadyToast.Constants.fontSize)
         label.text = message
         
         addSubview(label)

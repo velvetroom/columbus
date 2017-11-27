@@ -18,12 +18,11 @@ extension VHomeReady
         }
         
         let distance:CLLocationDistance = userLocation.distance(from:item.location)
-        let distanceNumber:NSNumber = NSNumber(value:distance)
         
         guard
         
             let distanceString:String = VFormat.factoryDistance(
-                distance:distanceNumber,
+                distance:distance,
                 distanceSettings:distanceSettings)
         
         else

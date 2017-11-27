@@ -34,14 +34,51 @@ extension VFormat
     
     //MARK: internal
     
-    static func factoryDistance(
-        distance:NSNumber,
-        distanceSettings:DSettingsDistance) -> String?
+    static func distanceConvert(
+        metres:Float,
+        distanceSettings:DSettingsDistance) -> Float
     {
         guard
             
+            let divisor:Float = VFormat.Constants.distanceConversion[distanceSettings]
+            
+        else
+        {
+            return metres
+        }
+        
+        let converted:Float = metres / divisor
+        
+        return converted
+    }
+    
+    static func factoryDistance(
+        distance:Double,
+        distanceSettings:DSettingsDistance) -> String?
+    {
+        let distanceFloat:Float = Float(distance)
+        
+        let distanceString:String? = factoryDistance(
+            distance:distance,
+            distanceSettings:distanceSettings)
+        
+        return distanceString
+    }
+    
+    static func factoryDistance(
+        distance:Float,
+        distanceSettings:DSettingsDistance) -> String?
+    {
+        let distance:Float = distanceConvert(
+            metres:distance,
+            distanceSettings:distanceSettings)
+        
+        let distanceNumber:NSNumber = NSNumber(value:distance)
+        
+        guard
+            
             let formatter:NumberFormatter = factoryFormatter(distanceSettings:distanceSettings),
-            let string:String = formatter.string(from:distance)
+            let string:String = formatter.string(from:distanceNumber)
             
         else
         {
@@ -55,14 +92,14 @@ extension VFormat
         travels:[DPlanTravel],
         distanceSettings:DSettingsDistance) -> String?
     {
-        let distance:Float = DPlanTravel.factoryDistance(
-            travels:travels,
+        let distanceMetres:Float = DPlanTravel.factoryDistance(
+            travels:travels)
+        let distance:Float = distanceConvert(
+            metres:distanceMetres,
             distanceSettings:distanceSettings)
         
-        let distanceNumber:NSNumber = NSNumber(value:distance)
-        
         let string:String? = factoryDistance(
-            distance:distanceNumber,
+            distance:distance,
             distanceSettings:distanceSettings)
         
         return string

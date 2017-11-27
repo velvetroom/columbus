@@ -22,7 +22,7 @@ final class VHomeReady:View<ArchHome>
     
     func toast(message:String)
     {
-        let height:CGFloat = bounds.height
+        let height:CGFloat = viewMap.bounds.height
         let remainHeight:CGFloat = height - VHomeReady.Constants.toastHeight
         let marginTop:CGFloat = remainHeight / 2.0
         
@@ -32,7 +32,7 @@ final class VHomeReady:View<ArchHome>
         
         NSLayoutConstraint.topToTop(
             view:viewToast,
-            toView:self,
+            toView:viewMap,
             constant:marginTop)
         NSLayoutConstraint.height(
             view:viewToast,
