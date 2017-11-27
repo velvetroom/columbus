@@ -1,6 +1,8 @@
 import UIKit
 
-final class VHomeReadyMenu:View<ArchHome>
+final class VHomeReadyMenu:VCollection<
+    ArchHome,
+    VHomeReadyMenuCell>
 {
     
 }
