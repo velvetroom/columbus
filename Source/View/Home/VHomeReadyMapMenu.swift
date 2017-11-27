@@ -1,8 +1,8 @@
 import UIKit
 
-final class VHomeReadyMenu:VCollection<
+final class VHomeReadyMapMenu:VCollection<
     ArchHome,
-    VHomeReadyMenuCell>
+    VHomeReadyMapMenuCell>
 {
     weak var layoutHeight:NSLayoutConstraint!
     private var cellSize:CGSize?
@@ -33,7 +33,7 @@ final class VHomeReadyMenu:VCollection<
             
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:VHomeReadyMenu.Constants.cellHeight)
+                height:VHomeReadyMapMenu.Constants.cellHeight)
             
             self.cellSize = cellSize
             
@@ -56,7 +56,7 @@ final class VHomeReadyMenu:VCollection<
             return 0
         }
         
-        let cellsHeight:CGFloat = CGFloat(count) * VHomeReadyMenu.Constants.cellHeight
+        let cellsHeight:CGFloat = CGFloat(count) * VHomeReadyMapMenu.Constants.cellHeight
         layoutHeight.constant = cellsHeight
         
         return count
@@ -66,8 +66,8 @@ final class VHomeReadyMenu:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MCreateMapMenuProtocol = modelAtIndex(index:indexPath)
-        let cell:VCreateStatusReadyMapMenuCell = cellAtIndex(indexPath:indexPath)
+        let item:MHomeMapMenuProtocol = modelAtIndex(index:indexPath)
+        let cell:VHomeReadyMapMenuCell = cellAtIndex(indexPath:indexPath)
         cell.config(model:item)
         
         return cell
@@ -81,7 +81,7 @@ final class VHomeReadyMenu:VCollection<
             collectionView,
             didSelectItemAt:indexPath)
         
-        let item:MCreateMapMenuProtocol = modelAtIndex(index:indexPath)
+        let item:MHomeMapMenuProtocol = modelAtIndex(index:indexPath)
         controller.menuItemSelected(item:item)
     }
 }

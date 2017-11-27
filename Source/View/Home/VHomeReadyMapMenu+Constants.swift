@@ -1,6 +1,6 @@
 import UIKit
 
-extension VHomeReadyMenu
+extension VHomeReadyMapMenu
 {
     struct Constants
     {

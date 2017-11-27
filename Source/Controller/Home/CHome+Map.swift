@@ -1,15 +1,15 @@
 import Foundation
 
-extension CCreate
+extension CHome
 {
     //MARK: private
     
-    private func changeMapStatus(item:MCreateMapMenuProtocol)
+    private func changeMapStatus(item:MHomeMapMenuProtocol)
     {
         guard
             
-            let statusType:MCreateMapStatusProtocol.Type = item.statusType
-        
+            let statusType:MHomeMapStatusProtocol.Type = item.statusType
+            
         else
         {
             return
@@ -20,7 +20,7 @@ extension CCreate
     
     //MARK: internal
     
-    func menuItemSelected(item:MCreateMapMenuProtocol)
+    func menuItemSelected(item:MHomeMapMenuProtocol)
     {
         item.selected(controller:self)
         changeMapStatus(item:item)

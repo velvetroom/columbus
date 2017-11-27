@@ -12,12 +12,12 @@ extension VHomeReady
         let viewBar:VHomeReadyBar = VHomeReadyBar(controller:controller)
         self.viewBar = viewBar
         
-        let viewMenu:VHomeReadyMenu = VHomeReadyMenu(controller:controller)
-        self.viewMenu = viewMenu
+        let viewMapMenu:VHomeReadyMapMenu = VHomeReadyMapMenu(controller:controller)
+        self.viewMapMenu = viewMapMenu
         
         addSubview(viewMap)
         addSubview(viewBar)
-        addSubview(viewMenu)
+        addSubview(viewMapMenu)
         
         NSLayoutConstraint.topToTop(
             view:viewMap,
@@ -32,7 +32,7 @@ extension VHomeReady
         NSLayoutConstraint.height(
             view:viewBar,
             constant:VHomeReady.Constants.barHeight)
-        layoutBarBottom = NSLayoutConstraint.bottomToBottom(
+        viewBar.layoutBottom = NSLayoutConstraint.bottomToBottom(
             view:viewBar,
             toView:self,
             constant:-ViewMain.Constants.menuHeight)
@@ -41,15 +41,15 @@ extension VHomeReady
             toView:self)
         
         NSLayoutConstraint.bottomToBottom(
-            view:viewMenu,
+            view:viewMapMenu,
             toView:viewMap)
         NSLayoutConstraint.rightToRight(
-            view:viewMenu,
+            view:viewMapMenu,
             toView:self)
         NSLayoutConstraint.width(
-            view:viewMenu,
+            view:viewMapMenu,
             constant:VHomeReady.Constants.menuWidth)
-        viewMenu.layoutHeight = NSLayoutConstraint.height(
-            view:viewMenu)
+        viewMapMenu.layoutHeight = NSLayoutConstraint.height(
+            view:viewMapMenu)
     }
 }

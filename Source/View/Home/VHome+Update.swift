@@ -4,7 +4,7 @@ extension VHome
 {
     //MARK: private
     
-    private func asyncUpdateMapMenu()
+    private func asyncUpdateMenu(barBottom:CGFloat)
     {
         guard
             
@@ -15,17 +15,21 @@ extension VHome
             return
         }
         
-        view?.viewMapMenu.collectionView.reloadData()
+        view.viewBar.animate(bottom:barBottom)
+        { [weak view] in
+            
+            view?.viewMapMenu.collectionView.reloadData()
+        }
     }
     
     //MARK: internal
     
-    func updateMapMenu()
+    func updateMenu(barBottom:CGFloat)
     {
         DispatchQueue.main.async
         { [weak self] in
             
-            self?.asyncUpdateMapMenu()
+            self?.asyncUpdateMenu(barBottom:barBottom)
         }
     }
 }

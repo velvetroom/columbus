@@ -72,8 +72,7 @@ final class CCreate:Controller<ArchCreate>
         parentController?.animateOver(controller:controller)
     }
     
-    func travelEdited(
-        travel:DPlanTravel)
+    func travelEdited(travel:DPlanTravel)
     {
         DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
@@ -89,8 +88,7 @@ final class CCreate:Controller<ArchCreate>
         parentController?.animateOver(controller:controller)
     }
     
-    func addStop(
-        coordinate:CLLocationCoordinate2D)
+    func addStop(coordinate:CLLocationCoordinate2D)
     {
         model.plan?.addStop(coordinate:coordinate)
     }

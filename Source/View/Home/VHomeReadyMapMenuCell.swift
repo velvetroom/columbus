@@ -1,6 +1,6 @@
 import UIKit
 
-final class VCreateStatusReadyMapMenuCell:UICollectionViewCell
+final class VHomeReadyMapMenuCell:UICollectionViewCell
 {
     private weak var icon:UIImageView!
     private weak var image:UIImage?
@@ -63,7 +63,7 @@ final class VCreateStatusReadyMapMenuCell:UICollectionViewCell
     
     //MARK: internal
     
-    func config(model:MCreateMapMenuProtocol)
+    func config(model:MHomeMapMenuProtocol)
     {
         image = model.icon
         imageSelected = model.iconSelected

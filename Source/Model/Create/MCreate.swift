@@ -39,8 +39,7 @@ final class MCreate:Model<ArchCreate>
         let mapStatus:MCreateMapStatusProtocol = statusType.init()
         self.mapStatus = mapStatus
         
-        view?.updateMapMenu(
-            barTop:mapStatus.barTop)
+        view?.updateMapMenu(barTop:mapStatus.barTop)
     }
     
     func changeLocationStrategy(locationStrategyType:MCreateLocationStrategyProtocol.Type)

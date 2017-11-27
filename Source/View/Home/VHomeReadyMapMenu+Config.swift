@@ -1,6 +1,6 @@
 import UIKit
 
-extension VHomeReadyMenu
+extension VHomeReadyMapMenu
 {
     //MARK: internal
     
