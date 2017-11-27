@@ -155,6 +155,7 @@
 		DA3C02501FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C024F1FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift */; };
 		DA3C02521FB6C4880051D7C5 /* UTMCreateMapStatusExpandedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C02511FB6C4880051D7C5 /* UTMCreateMapStatusExpandedFactory.swift */; };
 		DA40AC801FCCC7B200A64035 /* MHomeMapStatusProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40AC7F1FCCC7B200A64035 /* MHomeMapStatusProtocol.swift */; };
+		DA40AC821FCCC8EF00A64035 /* MHomeMapMenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA40AC811FCCC8EF00A64035 /* MHomeMapMenuProtocol.swift */; };
 		DA46FBEA1FC032CA00069346 /* ExtensionString+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA46FBE91FC032CA00069346 /* ExtensionString+Constants.swift */; };
 		DA471A111F9B7668009B71FF /* VCreateStatusReadyBarLoader+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA471A101F9B7668009B71FF /* VCreateStatusReadyBarLoader+Factory.swift */; };
 		DA471A171F9B7795009B71FF /* VCreateStatusReadyBarLoader+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA471A161F9B7795009B71FF /* VCreateStatusReadyBarLoader+Animations.swift */; };
@@ -738,6 +739,7 @@
 		DA3C024F1FB6C2880051D7C5 /* UTMCreateMapStatusContractedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateMapStatusContractedFactory.swift; sourceTree = "<group>"; };
 		DA3C02511FB6C4880051D7C5 /* UTMCreateMapStatusExpandedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UTMCreateMapStatusExpandedFactory.swift; sourceTree = "<group>"; };
 		DA40AC7F1FCCC7B200A64035 /* MHomeMapStatusProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeMapStatusProtocol.swift; sourceTree = "<group>"; };
+		DA40AC811FCCC8EF00A64035 /* MHomeMapMenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHomeMapMenuProtocol.swift; sourceTree = "<group>"; };
 		DA46FBE91FC032CA00069346 /* ExtensionString+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionString+Constants.swift"; sourceTree = "<group>"; };
 		DA471A101F9B7668009B71FF /* VCreateStatusReadyBarLoader+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarLoader+Factory.swift"; sourceTree = "<group>"; };
 		DA471A161F9B7795009B71FF /* VCreateStatusReadyBarLoader+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarLoader+Animations.swift"; sourceTree = "<group>"; };
@@ -1630,6 +1632,7 @@
 				DA9C04661FABE7C8006F57E1 /* MHomeInfoCreate.swift */,
 				DA9C04681FABE9E3006F57E1 /* MHomeInfoPlans.swift */,
 				DA40AC7F1FCCC7B200A64035 /* MHomeMapStatusProtocol.swift */,
+				DA40AC811FCCC8EF00A64035 /* MHomeMapMenuProtocol.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2827,6 +2830,7 @@
 				DA18A96D1FAD597900F6BDF8 /* CStore.swift in Sources */,
 				DA65ECFD1F95E68700720673 /* ViewParent+Gesture.swift in Sources */,
 				DA5877AC1FBCFA8B00EF9493 /* MSettingsMemory.swift in Sources */,
+				DA40AC821FCCC8EF00A64035 /* MHomeMapMenuProtocol.swift in Sources */,
 				DA97DC781FA4100A005A137F /* MCreateSaveZoomProtocol+Factory.swift in Sources */,
 				DAB2F8EF1F9668C300C1EF4A /* CPlans.swift in Sources */,
 				DAD888F61F9D1D1B000EC7FD /* VCreateStatusReadyMap+Dragging.swift in Sources */,
