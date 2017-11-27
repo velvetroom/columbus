@@ -4,6 +4,24 @@ extension VFormat
 {
     //MARK: private
     
+    private static func distanceConvert(
+        metres:Float,
+        distanceSettings:DSettingsDistance) -> Float
+    {
+        guard
+            
+            let divisor:Float = VFormat.Constants.distanceConversion[distanceSettings]
+            
+        else
+        {
+            return metres
+        }
+        
+        let converted:Float = metres / divisor
+        
+        return converted
+    }
+    
     private static func factorySuffixMap() -> [DSettingsDistance:String]
     {
         let suffixMap:[DSettingsDistance:String] = [
@@ -34,24 +52,6 @@ extension VFormat
     
     //MARK: internal
     
-    static func distanceConvert(
-        metres:Float,
-        distanceSettings:DSettingsDistance) -> Float
-    {
-        guard
-            
-            let divisor:Float = VFormat.Constants.distanceConversion[distanceSettings]
-            
-        else
-        {
-            return metres
-        }
-        
-        let converted:Float = metres / divisor
-        
-        return converted
-    }
-    
     static func factoryDistance(
         distance:Double,
         distanceSettings:DSettingsDistance) -> String?
@@ -59,7 +59,7 @@ extension VFormat
         let distanceFloat:Float = Float(distance)
         
         let distanceString:String? = factoryDistance(
-            distance:distance,
+            distance:distanceFloat,
             distanceSettings:distanceSettings)
         
         return distanceString

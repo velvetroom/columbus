@@ -11,7 +11,7 @@ final class VHomeReadyToast:UIView
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
-        backgroundColor = UIColor(white:0, alpha:0.3)
+        backgroundColor = UIColor(white:0, alpha:0.6)
         
         factoryMessage(message:message)
         animateShow()
