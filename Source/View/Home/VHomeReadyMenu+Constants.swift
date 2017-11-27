@@ -1,9 +1,9 @@
 import UIKit
 
-final class VHomeReadyMenu
+extension VHomeReadyMenu
 {
     struct Constants
     {
-        
+        static let cellHeight:CGFloat = 58
     }
 }
