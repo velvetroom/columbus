@@ -49,6 +49,7 @@ extension MHome
         self.plan = plan
         
         let statusType:MHomeStatusReady.Type = MHomeStatusReady.self
+        changeMapStatus(statusType:MHomeMapStatusContracted.self)
         changeStatus(statusType:statusType)
         
         let deadline:DispatchTime = DispatchTime.now() + MHome.Constants.TimeIntervals.waitAddNavigation

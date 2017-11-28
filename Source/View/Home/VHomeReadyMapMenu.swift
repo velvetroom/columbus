@@ -57,7 +57,8 @@ final class VHomeReadyMapMenu:VCollection<
         }
         
         let cellsHeight:CGFloat = CGFloat(count) * VHomeReadyMapMenu.Constants.cellHeight
-        layoutHeight.constant = cellsHeight
+        let totalHeight:CGFloat = cellsHeight + VHomeReadyMapMenu.Constants.collectionBottom
+        layoutHeight.constant = totalHeight
         
         return count
     }
