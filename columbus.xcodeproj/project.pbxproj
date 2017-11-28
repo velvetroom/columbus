@@ -474,6 +474,7 @@
 		DABED9B41F9E99B000635E82 /* VSettingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABED9B31F9E99B000635E82 /* VSettingsList.swift */; };
 		DABEEEBE1FCD148600D9F032 /* CPlansDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEEEBD1FCD148600D9F032 /* CPlansDetail.swift */; };
 		DABEEEC01FCD149700D9F032 /* ArchPlansDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEEEBF1FCD149700D9F032 /* ArchPlansDetail.swift */; };
+		DABEEEC31FCD153C00D9F032 /* MPlansDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABEEEC21FCD153C00D9F032 /* MPlansDetail.swift */; };
 		DABF39241FAE7D7E0072B240 /* VCreateTravelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39231FAE7D7E0072B240 /* VCreateTravelList.swift */; };
 		DABF39261FAE7F3E0072B240 /* VCreateTravelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39251FAE7F3E0072B240 /* VCreateTravelListCell.swift */; };
 		DABF39281FAE821C0072B240 /* MCreateTravelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */; };
@@ -1075,6 +1076,7 @@
 		DABED9B31F9E99B000635E82 /* VSettingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsList.swift; sourceTree = "<group>"; };
 		DABEEEBD1FCD148600D9F032 /* CPlansDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPlansDetail.swift; sourceTree = "<group>"; };
 		DABEEEBF1FCD149700D9F032 /* ArchPlansDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchPlansDetail.swift; sourceTree = "<group>"; };
+		DABEEEC21FCD153C00D9F032 /* MPlansDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlansDetail.swift; sourceTree = "<group>"; };
 		DABF39231FAE7D7E0072B240 /* VCreateTravelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelList.swift; sourceTree = "<group>"; };
 		DABF39251FAE7F3E0072B240 /* VCreateTravelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateTravelListCell.swift; sourceTree = "<group>"; };
 		DABF39271FAE821C0072B240 /* MCreateTravelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateTravelProtocol.swift; sourceTree = "<group>"; };
@@ -1615,6 +1617,7 @@
 		DA65EC821F95E68600720673 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DABEEEC11FCD153300D9F032 /* PlansDetail */,
 				DA7987501FC618EC00EE16EF /* SettingsMemoryConfirm */,
 				DA5877AA1FBCFA7100EF9493 /* SettingsMemory */,
 				DA18A96E1FAD599A00F6BDF8 /* Store */,
@@ -2213,6 +2216,14 @@
 			path = Create;
 			sourceTree = "<group>";
 		};
+		DABEEEC11FCD153300D9F032 /* PlansDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DABEEEC21FCD153C00D9F032 /* MPlansDetail.swift */,
+			);
+			path = PlansDetail;
+			sourceTree = "<group>";
+		};
 		DACA5C9E1FA4396900B7BBC7 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -2384,6 +2395,7 @@
 				DA18A9701FAD59A400F6BDF8 /* MStore.swift in Sources */,
 				DABE09AD1FAFE56A00FE08E4 /* VStoreStatusReadyList+Config.swift in Sources */,
 				DAD387281FA3ECE00031B9F8 /* MCreateSave+Snapshot.swift in Sources */,
+				DABEEEC31FCD153C00D9F032 /* MPlansDetail.swift in Sources */,
 				DA65ECF21F95E68700720673 /* ArchHome.swift in Sources */,
 				DA750CB01FA78D4E00459985 /* VHomeReady+Factory.swift in Sources */,
 				DAAFA9941F9B53A40097E0E0 /* MCreatePlan+Geocode.swift in Sources */,
