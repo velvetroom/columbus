@@ -19,8 +19,24 @@ extension MPlans
     {
         guard
         
-            let database:Database = Database(bundle:nil)
+            let settings:DSettings = self.settings
         
+        else
+        {
+            loadSettings()
+            
+            return
+        }
+        
+        settingsLoaded(settings:settings)
+    }
+    
+    private func loadSettings()
+    {
+        guard
+            
+            let database:Database = Database(bundle:nil)
+            
         else
         {
             return
@@ -30,11 +46,11 @@ extension MPlans
         
         database.fetch
         { [weak self] (settings:[DSettings]) in
-            
+                
             guard
-            
+                
                 let settings:DSettings = settings.first
-            
+                
             else
             {
                 return

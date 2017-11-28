@@ -112,15 +112,9 @@ final class VPlansList:VCollection<
     
     override func collectionView(
         _ collectionView:UICollectionView,
-        shouldSelectItemAt indexPath:IndexPath) -> Bool
+        didSelectItemAt indexPath:IndexPath)
     {
-        return false
-    }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        shouldHighlightItemAt indexPath:IndexPath) -> Bool
-    {
-        return false
+        let item:DPlan = modelAtIndex(index:indexPath)
+        controller.showDetail(plan:item)
     }
 }

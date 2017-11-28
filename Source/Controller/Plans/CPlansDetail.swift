@@ -5,13 +5,13 @@ final class CPlansDetail:Controller<ArchPlansDetail>
     init(
         database:Database,
         settings:DSettings,
-        plans:[DPlan])
+        plan:DPlan)
     {
         super.init()
         
         model.database = database
         model.settings = settings
-        model.plans = plans
+        model.plan = plan
     }
     
     required init?(coder:NSCoder)
