@@ -18,4 +18,11 @@ final class CPlansDetail:Controller<ArchPlansDetail>
     {
         return nil
     }
+    
+    //MARK: internal
+    
+    func back()
+    {
+        parentController?.pop(horizontal:ControllerTransition.Horizontal.right)
+    }
 }

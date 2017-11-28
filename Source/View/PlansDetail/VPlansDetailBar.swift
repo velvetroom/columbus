@@ -12,4 +12,12 @@ final class VPlansDetailBar:View<ArchPlansDetail>
     {
         return nil
     }
+    
+    //MARK: selectors
+    
+    @objc
+    func selectorBack(sender button:UIButton)
+    {
+        controller.back()
+    }
 }

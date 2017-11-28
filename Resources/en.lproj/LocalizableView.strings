@@ -35,6 +35,7 @@ VSettingsMemoryConfirmBaseInfo_originTitle="Origin\n";
 VSettingsMemoryConfirmBaseInfo_destinationTitle="\n\nDestination\n";
 VPlansBar_labelTitle="Plans";
 VPlansListHeader_labelText="Once you create Navigation Plans\nthey will appear here";
+VPlansDetailBar_labelTitle="Plan";
 VFormat_distanceKilometres=" kilometres";
 VFormat_distanceMiles=" miles";
 VFormat_durationDays=" days";
