@@ -6,6 +6,8 @@ final class VPlansDetailBar:View<ArchPlansDetail>
     {
         super.init(controller:controller)
         backgroundColor = UIColor.white
+        
+        factoryViews()
     }
     
     required init?(coder:NSCoder)
