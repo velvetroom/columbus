@@ -66,6 +66,20 @@ extension VFormat
     }
     
     static func factoryDistance(
+        travels:[DPlanTravel],
+        distanceSettings:DSettingsDistance) -> String?
+    {
+        let distance:Float = DPlanTravel.factoryDistance(
+            travels:travels)
+        
+        let string:String? = factoryDistance(
+            distance:distance,
+            distanceSettings:distanceSettings)
+        
+        return string
+    }
+    
+    static func factoryDistance(
         distance:Float,
         distanceSettings:DSettingsDistance) -> String?
     {
@@ -84,23 +98,6 @@ extension VFormat
         {
             return nil
         }
-        
-        return string
-    }
-    
-    static func factoryDistance(
-        travels:[DPlanTravel],
-        distanceSettings:DSettingsDistance) -> String?
-    {
-        let distanceMetres:Float = DPlanTravel.factoryDistance(
-            travels:travels)
-        let distance:Float = distanceConvert(
-            metres:distanceMetres,
-            distanceSettings:distanceSettings)
-        
-        let string:String? = factoryDistance(
-            distance:distance,
-            distanceSettings:distanceSettings)
         
         return string
     }
