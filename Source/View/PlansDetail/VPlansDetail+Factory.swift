@@ -8,6 +8,9 @@ extension VPlansDetail
     {
         let viewBar:VPlansDetailBar = VPlansDetailBar(controller:controller)
         
+        let viewList:VPlansDetailList = VPlansDetailList(controller:controller)
+        
+        addSubview(viewList)
         addSubview(viewBar)
         
         NSLayoutConstraint.topToTop(
@@ -18,6 +21,10 @@ extension VPlansDetail
             constant:ViewMain.Constants.barHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewBar,
+            toView:self)
+        
+        NSLayoutConstraint.equals(
+            view:viewList,
             toView:self)
     }
 }
