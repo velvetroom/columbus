@@ -2,6 +2,7 @@ import UIKit
 
 final class VPlansDetailListCell:UICollectionViewCell
 {
+    weak var icon:UIImageView!
     weak var labelTitle:UILabel!
     
     override init(frame:CGRect)
@@ -24,5 +25,6 @@ final class VPlansDetailListCell:UICollectionViewCell
     func config(model:DPlanStop)
     {
         labelTitle.text = model.name
+        icon.image = VPlanStop.factoryIcon(stop:model)
     }
 }
