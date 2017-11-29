@@ -1,6 +1,6 @@
 import UIKit
 
-struct VStop
+struct VPlanStop
 {
     //MARK: private
     
