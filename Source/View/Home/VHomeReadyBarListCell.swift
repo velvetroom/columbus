@@ -1,6 +1,6 @@
 import UIKit
 
-final class VHomeReadyBarListCell:UICollectionViewCell
+class VHomeReadyBarListCell:UICollectionViewCell
 {
     weak var labelTitle:UILabel!
     weak var icon:UIImageView!
