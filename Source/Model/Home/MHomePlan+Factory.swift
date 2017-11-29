@@ -63,15 +63,15 @@ extension MHomePlan
         var items:[MHomePlanItemProtocol] = []
         
         for stop:DPlanStop in stops
-        {   
-            if let itemStop:MHomePlanItemStop = factoryStopItem(stop:stop)
-            {
-                items.append(itemStop)
-            }
-            
+        {
             if let itemTravel:MHomePlanItemTravel = factoryTravelItem(stop:stop)
             {
                 items.append(itemTravel)
+            }
+            
+            if let itemStop:MHomePlanItemStop = factoryStopItem(stop:stop)
+            {
+                items.append(itemStop)
             }
         }
         

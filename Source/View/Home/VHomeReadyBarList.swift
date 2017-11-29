@@ -4,8 +4,6 @@ final class VHomeReadyBarList:VCollection<
     ArchHome,
     VHomeReadyBarListCell>
 {
-    private var cellSize:CGSize?
-    
     required init(controller:CHome)
     {
         super.init(controller:controller)
@@ -22,22 +20,12 @@ final class VHomeReadyBarList:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        guard
+        let item:MHomePlanItemProtocol = modelAtIndex(index:indexPath)
+        let width:CGFloat = collectionView.bounds.width
         
-            let cellSize:CGSize = self.cellSize
-        
-        else
-        {
-            let width:CGFloat = collectionView.bounds.width
-            
-            let cellSize:CGSize = CGSize(
-                width:width,
-                height:VHomeReadyBarList.Constants.cellHeight)
-            
-            self.cellSize = cellSize
-            
-            return cellSize
-        }
+        let cellSize:CGSize = CGSize(
+            width:width,
+            height:item.cellHeight)
         
         return cellSize
     }

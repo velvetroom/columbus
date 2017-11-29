@@ -9,8 +9,9 @@ final class VHomeReadyBarListCellTravel:VHomeReadyBarListCell
         
         factoryViews()
         
-        labelTitle.textColor = UIColor(white:0, alpha:0.4)
-        icon.image = #imageLiteral(resourceName: "assetGenericStopDuration")
+        labelTitle.textColor = UIColor(white:0, alpha:0.5)
+        icon.image = #imageLiteral(resourceName: "assetGenericStopDuration").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        icon.tintColor = UIColor(white:0, alpha:0.2)
     }
     
     required init?(coder:NSCoder)
