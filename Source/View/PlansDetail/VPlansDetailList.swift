@@ -70,6 +70,20 @@ final class VPlansDetailList:VCollection<
     
     override func collectionView(
         _ collectionView:UICollectionView,
+        viewForSupplementaryElementOfKind kind:String,
+        at indexPath:IndexPath) -> UICollectionReusableView
+    {
+        let header:VPlansDetailListHeader = reusableAtIndex(
+            kind:kind,
+            indexPath:indexPath)
+        
+        header.config(controller:controller)
+        
+        return header
+    }
+    
+    override func collectionView(
+        _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
         let item:DPlanStop = modelAtIndex(index:indexPath)

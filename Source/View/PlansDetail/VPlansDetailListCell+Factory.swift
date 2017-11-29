@@ -20,8 +20,10 @@ extension VPlansDetailListCell
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.font = UIFont.regular(size:VPlansDetailListCell.Constants.fontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
+        labelTitle.numberOfLines = 0
         self.labelTitle = labelTitle
         
+        addSubview(icon)
         addSubview(labelTitle)
         
         NSLayoutConstraint.leftToRight(
@@ -30,8 +32,10 @@ extension VPlansDetailListCell
         NSLayoutConstraint.equalsVertical(
             view:labelTitle,
             toView:self)
-        NSLayoutConstraint.widthGreaterOrEqual(
-            view:labelTitle)
+        NSLayoutConstraint.rightToRight(
+            view:labelTitle,
+            toView:self,
+            constant:VPlansDetailListCell.Constants.titleRight)
         
         NSLayoutConstraint.equalsVertical(
             view:icon,
