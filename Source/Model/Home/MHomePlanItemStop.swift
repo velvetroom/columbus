@@ -1,6 +1,6 @@
 import UIKit
 
-struct MHomeBarItemStop
+struct MHomePlanItemStop
 {
     let reusableIdentifier:String = VHomeReadyBarListCellStop.reusableIdentifier
     let title:String
