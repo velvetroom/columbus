@@ -32,7 +32,7 @@ final class VCreateTravel:ViewMain
         let width:CGFloat = bounds.width
         let height:CGFloat = bounds.height
         let remainWidth:CGFloat = width - VCreateTravel.Constants.listWidth
-        let remainHeight:CGFloat = height - VCreate.Constants.barHeight
+        let remainHeight:CGFloat = height - VCreateTravel.Constants.listHeight
         let marginLeft:CGFloat = remainWidth / 2.0
         let marginTop:CGFloat = remainHeight / 2.0
         layoutListLeft.constant = marginLeft
