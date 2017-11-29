@@ -11,8 +11,7 @@ extension VPlansDetailListCell
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.clipsToBounds = true
         icon.contentMode = UIViewContentMode.center
-        icon.image = #imageLiteral(resourceName: "assetGenericStop").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
-        icon.tintColor = UIColor.colourBackgroundDark
+        icon.image = #imageLiteral(resourceName: "assetGenericStopDriving")
         
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
