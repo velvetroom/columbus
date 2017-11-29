@@ -18,9 +18,9 @@ extension VHomeReadyBarList
     
     //MARK: internal
     
-    func modelAtIndex(index:IndexPath) -> DPlanStop
+    func modelAtIndex(index:IndexPath) -> MHomePlanItemProtocol
     {
-        let item:DPlanStop = model![index.item]
+        let item:MHomePlanItemProtocol = controller.model.plan!.items[index.item]
         
         return item
     }
@@ -44,7 +44,7 @@ extension VHomeReadyBarList
     {
         guard
         
-            let model:[DPlanStop] = self.model
+            let model:[MHomePlanItemProtocol] = controller.model.plan?.items
         
         else
         {
@@ -55,11 +55,12 @@ extension VHomeReadyBarList
         
         for index:Int in 0 ..< countItems
         {
-            let indexedItem:DPlanStop = model[index]
+            let indexedItem:MHomePlanItemProtocol = model[index]
             
             guard
             
-                indexedItem === item
+                let itemStop:MHomePlanItemStop = indexedItem as? MHomePlanItemStop,
+                itemStop.stop === item
             
             else
             {

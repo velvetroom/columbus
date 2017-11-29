@@ -6,14 +6,6 @@ final class VHomeReadyBarList:VCollection<
 {
     private var cellSize:CGSize?
     
-    var model:[DPlanStop]?
-    {
-        get
-        {
-            return controller.model.plan?.plan.stops?.array as? [DPlanStop]
-        }
-    }
-    
     required init(controller:CHome)
     {
         super.init(controller:controller)
@@ -56,7 +48,7 @@ final class VHomeReadyBarList:VCollection<
     {
         guard
         
-            let count:Int = model?.count
+            let count:Int = controller.model.plan?.items.count
         
         else
         {
@@ -70,8 +62,12 @@ final class VHomeReadyBarList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:DPlanStop = modelAtIndex(index:indexPath)
-        let cell:VHomeReadyBarListCell = cellAtIndex(indexPath:indexPath)
+        let item:MHomePlanItemProtocol = modelAtIndex(index:indexPath)
+        
+        let cell:VHomeReadyBarListCell = cellAtIndex(
+            indexPath:indexPath,
+            reusableIdentifier:item.reusableIdentifier)
+        
         cell.config(model:item)
         
         return cell
@@ -81,7 +77,17 @@ final class VHomeReadyBarList:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        let item:DPlanStop = modelAtIndex(index:indexPath)
-        selectInMap(item:item)
+        let item:MHomePlanItemProtocol = modelAtIndex(index:indexPath)
+        
+        guard
+            
+            let itemStop:MHomePlanItemStop = item as? MHomePlanItemStop
+        
+        else
+        {
+            return
+        }
+        
+        selectInMap(item:itemStop.stop)
     }
 }

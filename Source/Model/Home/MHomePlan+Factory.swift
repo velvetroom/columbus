@@ -31,8 +31,9 @@ extension MHomePlan
         }
         
         let item:MHomePlanItemStop = MHomePlanItemStop(
-            title:title,
-            icon:icon)
+            stop:stop,
+            icon:icon,
+            title:title)
         
         return item
     }

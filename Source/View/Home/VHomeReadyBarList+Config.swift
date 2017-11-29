@@ -8,6 +8,9 @@ extension VHomeReadyBarList
     {
         collectionView.alwaysBounceVertical = true
         
+        registerCell(cell:VHomeReadyBarListCellStop.self)
+        registerCell(cell:VHomeReadyBarListCellTravel.self)
+        
         if let flow:VCollectionFlow = self.collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.sectionInset = UIEdgeInsets(
