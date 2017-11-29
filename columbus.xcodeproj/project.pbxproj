@@ -376,7 +376,6 @@
 		DA8A96151FC015D7000C8E91 /* VCreateStatusReadyBarStopsCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96141FC015D7000C8E91 /* VCreateStatusReadyBarStopsCell+Constants.swift */; };
 		DA8A96171FC01670000C8E91 /* VCreateStatusReadyBarStopsCellField+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96161FC01670000C8E91 /* VCreateStatusReadyBarStopsCellField+Constants.swift */; };
 		DA8A96191FC016EC000C8E91 /* VCreateStatusReadyBarTravel+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96181FC016EC000C8E91 /* VCreateStatusReadyBarTravel+Constants.swift */; };
-		DA8A961B1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A961A1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift */; };
 		DA8A961D1FC01839000C8E91 /* VCreateStatusReadyBarLoader+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A961C1FC01839000C8E91 /* VCreateStatusReadyBarLoader+Constants.swift */; };
 		DA8A961F1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A961E1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift */; };
 		DA8A96211FC019EA000C8E91 /* VCreateSaveStatusBusyProgress+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96201FC019EA000C8E91 /* VCreateSaveStatusBusyProgress+Constants.swift */; };
@@ -990,7 +989,6 @@
 		DA8A96141FC015D7000C8E91 /* VCreateStatusReadyBarStopsCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarStopsCell+Constants.swift"; sourceTree = "<group>"; };
 		DA8A96161FC01670000C8E91 /* VCreateStatusReadyBarStopsCellField+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarStopsCellField+Constants.swift"; sourceTree = "<group>"; };
 		DA8A96181FC016EC000C8E91 /* VCreateStatusReadyBarTravel+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarTravel+Constants.swift"; sourceTree = "<group>"; };
-		DA8A961A1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarTravelCell+Constants.swift"; sourceTree = "<group>"; };
 		DA8A961C1FC01839000C8E91 /* VCreateStatusReadyBarLoader+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateStatusReadyBarLoader+Constants.swift"; sourceTree = "<group>"; };
 		DA8A961E1FC01912000C8E91 /* VCreateSaveStatusBusy+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSaveStatusBusy+Constants.swift"; sourceTree = "<group>"; };
 		DA8A96201FC019EA000C8E91 /* VCreateSaveStatusBusyProgress+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSaveStatusBusyProgress+Constants.swift"; sourceTree = "<group>"; };
@@ -2202,7 +2200,6 @@
 				DAE699911FA2892200FFE6E3 /* VCreateStatusReadyBarTravel+Actions.swift */,
 				DAE699951FA295C400FFE6E3 /* VCreateStatusReadyBarTravelHeader.swift */,
 				DA3495F81F9ABF5100D75252 /* VCreateStatusReadyBarTravelCell.swift */,
-				DA8A961A1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift */,
 				DAE699931FA28AB800FFE6E3 /* VCreateStatusReadyBarTravelCell+Factory.swift */,
 				DAAFA9951F9B61870097E0E0 /* VCreateStatusReadyBarLoader.swift */,
 				DA8A961C1FC01839000C8E91 /* VCreateStatusReadyBarLoader+Constants.swift */,
@@ -2753,7 +2750,6 @@
 				DA26F1821FB7BD23007F171D /* CCreateSearch.swift in Sources */,
 				DADA42001F967A0800DD1FC4 /* VCreateStatusNeedsPermission.swift in Sources */,
 				DA5573C61FBA372400F15606 /* VCreateSaveStatusBusy.swift in Sources */,
-				DA8A961B1FC017C3000C8E91 /* VCreateStatusReadyBarTravelCell+Constants.swift in Sources */,
 				DA7950681FAEF1E00057F6EE /* MHomeInfoStore.swift in Sources */,
 				DA26F18C1FB7C0AB007F171D /* VCreateSearch+Animations.swift in Sources */,
 				DADBD1DD1FC2093D0002FE05 /* VSettingsMemoryListHeader+Factory.swift in Sources */,
