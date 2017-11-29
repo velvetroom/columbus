@@ -48,7 +48,7 @@ final class VHomeReadyBarListCell:UICollectionViewCell
         {
             backgroundColor = UIColor.white
             labelTitle.textColor = UIColor.colourBackgroundDark
-            icon.tintColor = UIColor.colourBackgroundGray
+            icon.tintColor = UIColor(white:0, alpha:0.2)
         }
     }
     
@@ -56,7 +56,11 @@ final class VHomeReadyBarListCell:UICollectionViewCell
     
     func config(model:DPlanStop)
     {
+        let iconImage:UIImage? = VPlanStop.factoryIcon(stop:model)
+        
         labelTitle.text = model.name
+        icon.image = iconImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        
         hover()
     }
 }

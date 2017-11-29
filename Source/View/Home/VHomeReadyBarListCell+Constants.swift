@@ -6,6 +6,6 @@ extension VHomeReadyBarListCell
     {
         static let fontSize:CGFloat = 12
         static let titleRight:CGFloat = -20
-        static let iconWidth:CGFloat = 50
+        static let iconWidth:CGFloat = 56
     }
 }

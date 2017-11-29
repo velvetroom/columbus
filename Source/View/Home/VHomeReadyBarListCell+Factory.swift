@@ -19,7 +19,6 @@ extension VHomeReadyBarListCell
         icon.translatesAutoresizingMaskIntoConstraints = false
         icon.clipsToBounds = true
         icon.contentMode = UIViewContentMode.center
-        icon.image = #imageLiteral(resourceName: "assetGenericStop").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         self.icon = icon
         
         addSubview(labelTitle)
