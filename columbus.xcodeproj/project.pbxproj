@@ -392,6 +392,7 @@
 		DA90B8FE1FA0D25900272ECA /* MCreate+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90B8FD1FA0D25900272ECA /* MCreate+Factory.swift */; };
 		DA9256F81FCF8DF70088E5C0 /* MPlansDetailItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9256F71FCF8DF70088E5C0 /* MPlansDetailItemProtocol.swift */; };
 		DA9256FA1FCF8E1A0088E5C0 /* MPlansDetailItemStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9256F91FCF8E1A0088E5C0 /* MPlansDetailItemStop.swift */; };
+		DA9256FC1FCF8E350088E5C0 /* MPlansDetailItemDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9256FB1FCF8E350088E5C0 /* MPlansDetailItemDistance.swift */; };
 		DA954E431FB8CE0F00CA60BE /* VCreateSearchBaseList+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseList+Actions.swift */; };
 		DA954E451FB8D1AA00CA60BE /* VCreateSearchBaseListCell+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA954E441FB8D1AA00CA60BE /* VCreateSearchBaseListCell+Factory.swift */; };
 		DA95AB281FA5450200ACA0C3 /* MCreateSaveTileRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */; };
@@ -1014,6 +1015,7 @@
 		DA90B8FD1FA0D25900272ECA /* MCreate+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreate+Factory.swift"; sourceTree = "<group>"; };
 		DA9256F71FCF8DF70088E5C0 /* MPlansDetailItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlansDetailItemProtocol.swift; sourceTree = "<group>"; };
 		DA9256F91FCF8E1A0088E5C0 /* MPlansDetailItemStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlansDetailItemStop.swift; sourceTree = "<group>"; };
+		DA9256FB1FCF8E350088E5C0 /* MPlansDetailItemDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlansDetailItemDistance.swift; sourceTree = "<group>"; };
 		DA954E421FB8CE0F00CA60BE /* VCreateSearchBaseList+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSearchBaseList+Actions.swift"; sourceTree = "<group>"; };
 		DA954E441FB8D1AA00CA60BE /* VCreateSearchBaseListCell+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSearchBaseListCell+Factory.swift"; sourceTree = "<group>"; };
 		DA95AB271FA5450200ACA0C3 /* MCreateSaveTileRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateSaveTileRange.swift; sourceTree = "<group>"; };
@@ -2274,6 +2276,7 @@
 				DABEEEC21FCD153C00D9F032 /* MPlansDetail.swift */,
 				DA9256F71FCF8DF70088E5C0 /* MPlansDetailItemProtocol.swift */,
 				DA9256F91FCF8E1A0088E5C0 /* MPlansDetailItemStop.swift */,
+				DA9256FB1FCF8E350088E5C0 /* MPlansDetailItemDistance.swift */,
 			);
 			path = PlansDetail;
 			sourceTree = "<group>";
@@ -2878,6 +2881,7 @@
 				DAEF388D1F97AC99002AF8BE /* VCreateStatusReady+Factory.swift in Sources */,
 				DA6A10D11FA1CD7C008CE254 /* ExtensionMKPolyline.swift in Sources */,
 				DA40AC961FCCD9AE00A64035 /* VHomeReadyBar+Animations.swift in Sources */,
+				DA9256FC1FCF8E350088E5C0 /* MPlansDetailItemDistance.swift in Sources */,
 				DA40AC801FCCC7B200A64035 /* MHomeMapStatusProtocol.swift in Sources */,
 				DA40AC881FCCCB0A00A64035 /* MHomeMapMenuContract.swift in Sources */,
 				DA18A9681FAD47CA00F6BDF8 /* VPlansListCellButton.swift in Sources */,
