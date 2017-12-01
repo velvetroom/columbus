@@ -9,9 +9,10 @@ final class CPlansDetail:Controller<ArchPlansDetail>
     {
         super.init()
         
-        model.database = database
-        model.settings = settings
-        model.plan = plan
+        model.config(
+            database:database,
+            plan:plan,
+            settings:settings)
     }
     
     required init?(coder:NSCoder)
