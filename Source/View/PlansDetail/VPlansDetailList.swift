@@ -4,18 +4,6 @@ final class VPlansDetailList:VCollection<
     ArchPlansDetail,
     VPlansDetailListCell>
 {
-    private var cellSize:CGSize?
-    
-    var model:[DPlanStop]?
-    {
-        get
-        {
-            let model:[DPlanStop]? = controller.model.plan?.stops?.array as? [DPlanStop]
-            
-            return model
-        }
-    }
-    
     required init(controller:CPlansDetail)
     {
         super.init(controller:controller)
@@ -32,22 +20,12 @@ final class VPlansDetailList:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        guard
+        let item:MPlansDetailItemProtocol = modelAtIndex(index:indexPath)
+        let width:CGFloat = collectionView.bounds.width
         
-            let cellSize:CGSize = self.cellSize
-        
-        else
-        {
-            let width:CGFloat = collectionView.bounds.width
-            
-            let cellSize:CGSize = CGSize(
-                width:width,
-                height:VPlansDetailList.Constants.cellHeight)
-            
-            self.cellSize = cellSize
-            
-            return cellSize
-        }
+        let cellSize:CGSize = CGSize(
+            width:width,
+            height:item.cellHeight)
         
         return cellSize
     }
@@ -56,14 +34,7 @@ final class VPlansDetailList:VCollection<
         _ collectionView:UICollectionView,
         numberOfItemsInSection section:Int) -> Int
     {
-        guard
-        
-            let count:Int = model?.count
-        
-        else
-        {
-            return 0
-        }
+        let count:Int = controller.model.items.count
         
         return count
     }
@@ -86,8 +57,12 @@ final class VPlansDetailList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:DPlanStop = modelAtIndex(index:indexPath)
-        let cell:VPlansDetailListCell = cellAtIndex(indexPath:indexPath)
+        let item:MPlansDetailItemProtocol = modelAtIndex(index:indexPath)
+        
+        let cell:VPlansDetailListCell = cellAtIndex(
+            indexPath:indexPath,
+            reusableIdentifier:item.reusableIdentifier)
+        
         cell.config(model:item)
         
         return cell

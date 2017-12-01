@@ -8,6 +8,8 @@ extension VPlansDetailList
     {
         collectionView.alwaysBounceVertical = true
         
+        registerCell(cell:VPlansDetailListCellStop.self)
+        registerCell(cell:VPlansDetailListCellTravel.self)
         registerHeader(header:VPlansDetailListHeader.self)
         
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow

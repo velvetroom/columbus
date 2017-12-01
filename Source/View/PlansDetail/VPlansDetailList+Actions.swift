@@ -4,9 +4,9 @@ extension VPlansDetailList
 {
     //MARK: internal
     
-    func modelAtIndex(index:IndexPath) -> DPlanStop
+    func modelAtIndex(index:IndexPath) -> MPlansDetailItemProtocol
     {
-        let item:DPlanStop = model![index.item]
+        let item:MPlansDetailItemProtocol = controller.model.items[index.item]
         
         return item
     }

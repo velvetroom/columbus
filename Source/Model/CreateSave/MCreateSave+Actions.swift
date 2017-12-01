@@ -8,7 +8,7 @@ extension MCreateSave
     {
         guard
         
-            let stops:[DPlanStop] = plan?.stops?.array as? [DPlanStop],
+            let stops:[DPlanStop] = plan?.stopsList,
             let mapRange:MCreateSaveMapRange = MCreateSave.factoryMapRange(stops:stops)
         
         else

@@ -381,6 +381,8 @@
 		DA8A96211FC019EA000C8E91 /* VCreateSaveStatusBusyProgress+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96201FC019EA000C8E91 /* VCreateSaveStatusBusyProgress+Constants.swift */; };
 		DA8A96231FC01A57000C8E91 /* VCreateSaveStatusError+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96221FC01A57000C8E91 /* VCreateSaveStatusError+Constants.swift */; };
 		DA8A96251FC01B6B000C8E91 /* VCreateSearchBase+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8A96241FC01B6B000C8E91 /* VCreateSearchBase+Constants.swift */; };
+		DA8D09DA1FD0E7B7002C70BB /* VPlansDetailListCellStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D09D91FD0E7B7002C70BB /* VPlansDetailListCellStop.swift */; };
+		DA8D09DC1FD0E7C0002C70BB /* VPlansDetailListCellTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D09DB1FD0E7C0002C70BB /* VPlansDetailListCellTravel.swift */; };
 		DA8DF8CF1FA94CD200276867 /* VPlansList+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8CE1FA94CD200276867 /* VPlansList+Actions.swift */; };
 		DA8DF8D11FA955EB00276867 /* VPlansListCell+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8DF8D01FA955EB00276867 /* VPlansListCell+Factory.swift */; };
 		DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8DF8D21FA9579E00276867 /* plans.xcassets */; };
@@ -1006,6 +1008,8 @@
 		DA8A96201FC019EA000C8E91 /* VCreateSaveStatusBusyProgress+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSaveStatusBusyProgress+Constants.swift"; sourceTree = "<group>"; };
 		DA8A96221FC01A57000C8E91 /* VCreateSaveStatusError+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSaveStatusError+Constants.swift"; sourceTree = "<group>"; };
 		DA8A96241FC01B6B000C8E91 /* VCreateSearchBase+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VCreateSearchBase+Constants.swift"; sourceTree = "<group>"; };
+		DA8D09D91FD0E7B7002C70BB /* VPlansDetailListCellStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansDetailListCellStop.swift; sourceTree = "<group>"; };
+		DA8D09DB1FD0E7C0002C70BB /* VPlansDetailListCellTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlansDetailListCellTravel.swift; sourceTree = "<group>"; };
 		DA8DF8CE1FA94CD200276867 /* VPlansList+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansList+Actions.swift"; sourceTree = "<group>"; };
 		DA8DF8D01FA955EB00276867 /* VPlansListCell+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VPlansListCell+Factory.swift"; sourceTree = "<group>"; };
 		DA8DF8D21FA9579E00276867 /* plans.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = plans.xcassets; sourceTree = "<group>"; };
@@ -2303,6 +2307,8 @@
 				DABEEED11FCD257300D9F032 /* VPlansDetailListCell.swift */,
 				DAC978141FCE2C210077416B /* VPlansDetailListCell+Constants.swift */,
 				DAC978121FCE2B680077416B /* VPlansDetailListCell+Factory.swift */,
+				DA8D09D91FD0E7B7002C70BB /* VPlansDetailListCellStop.swift */,
+				DA8D09DB1FD0E7C0002C70BB /* VPlansDetailListCellTravel.swift */,
 			);
 			path = PlansDetail;
 			sourceTree = "<group>";
@@ -2542,6 +2548,7 @@
 				DABEEED01FCD256100D9F032 /* VPlansDetailList.swift in Sources */,
 				DA2EE5731F98B46C00488A07 /* VCreate+Update.swift in Sources */,
 				DABC26951FA39FA400746CDD /* MCreateSave+Actions.swift in Sources */,
+				DA8D09DC1FD0E7C0002C70BB /* VPlansDetailListCellTravel.swift in Sources */,
 				DA78BB301F97190F00A7C280 /* MCreateLocationStrategyProtocol.swift in Sources */,
 				DA3495F31F9ABC3200D75252 /* VCreateStatusReadyBarStops.swift in Sources */,
 				DADBD1DB1FC207F60002FE05 /* VSettingsMemoryListHeader+Constants.swift in Sources */,
@@ -2774,6 +2781,7 @@
 				DABCCB121FBFEF3600F05BC3 /* VCreateTravel+Constants.swift in Sources */,
 				DA1906D81FAFCB0B008147EA /* MStorePerkStatusPurchasing.swift in Sources */,
 				DAD9624D1FCA6E600013AAD1 /* VHomeReadyToast.swift in Sources */,
+				DA8D09DA1FD0E7B7002C70BB /* VPlansDetailListCellStop.swift in Sources */,
 				DAA9255C1FA5426E00B72DB2 /* MCreateSavePixelRange.swift in Sources */,
 				DA65ECE21F95E68700720673 /* ExtensionURLResponse.swift in Sources */,
 				DA40AC8E1FCCD03300A64035 /* MHomeMapStatusContracted.swift in Sources */,
