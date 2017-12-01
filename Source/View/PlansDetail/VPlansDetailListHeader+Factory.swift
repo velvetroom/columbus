@@ -16,6 +16,14 @@ extension VPlansDetailListHeader
         iconDistance.tintColor = UIColor.colourBackgroundDark
         iconDistance.image = #imageLiteral(resourceName: "assetMapDistance").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         
+        let labelDistance:UILabel = UILabel()
+        labelDistance.translatesAutoresizingMaskIntoConstraints = false
+        labelDistance.backgroundColor = UIColor.clear
+        labelDistance.isUserInteractionEnabled = false
+        labelDistance.font = UIFont.regular(size:VPlansDetailListHeader.Constants.fontSize)
+        labelDistance.textColor = UIColor.colourBackgroundDark
+        self.labelDistance = labelDistance
+        
         let iconDuration:UIImageView = UIImageView()
         iconDuration.isUserInteractionEnabled = false
         iconDuration.translatesAutoresizingMaskIntoConstraints = false
@@ -24,9 +32,20 @@ extension VPlansDetailListHeader
         iconDuration.tintColor = UIColor.colourBackgroundDark
         iconDuration.image = #imageLiteral(resourceName: "assetMapDuration").withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         
+        let labelDuration:UILabel = UILabel()
+        labelDuration.translatesAutoresizingMaskIntoConstraints = false
+        labelDuration.backgroundColor = UIColor.clear
+        labelDuration.isUserInteractionEnabled = false
+        labelDuration.font = UIFont.regular(size:VPlansDetailListHeader.Constants.fontSize)
+        labelDuration.textColor = UIColor.colourBackgroundDark
+        labelDuration.textAlignment = NSTextAlignment.right
+        self.labelDuration = labelDuration
+        
         addSubview(border)
         addSubview(iconDuration)
         addSubview(iconDistance)
+        addSubview(labelDistance)
+        addSubview(labelDuration)
         
         NSLayoutConstraint.bottomToBottom(
             view:border,
@@ -52,6 +71,19 @@ extension VPlansDetailListHeader
             constant:VPlansDetailListHeader.Constants.iconWidth)
         
         NSLayoutConstraint.bottomToBottom(
+            view:labelDistance,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:labelDistance,
+            constant:VPlansDetailListHeader.Constants.contentHeight)
+        NSLayoutConstraint.leftToRight(
+            view:labelDistance,
+            toView:iconDistance,
+            constant:-VPlansDetailListHeader.Constants.iconPadding)
+        NSLayoutConstraint.widthGreaterOrEqual(
+            view:labelDistance)
+        
+        NSLayoutConstraint.bottomToBottom(
             view:iconDuration,
             toView:self)
         NSLayoutConstraint.height(
@@ -63,5 +95,18 @@ extension VPlansDetailListHeader
         NSLayoutConstraint.width(
             view:iconDuration,
             constant:VPlansDetailListHeader.Constants.iconWidth)
+        
+        NSLayoutConstraint.bottomToBottom(
+            view:labelDuration,
+            toView:self)
+        NSLayoutConstraint.height(
+            view:labelDuration,
+            constant:VPlansDetailListHeader.Constants.contentHeight)
+        NSLayoutConstraint.rightToLeft(
+            view:labelDuration,
+            toView:iconDuration,
+            constant:VPlansDetailListHeader.Constants.iconPadding)
+        NSLayoutConstraint.widthGreaterOrEqual(
+            view:labelDuration)
     }
 }

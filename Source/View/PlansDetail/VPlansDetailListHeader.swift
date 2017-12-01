@@ -24,6 +24,23 @@ final class VPlansDetailListHeader:UICollectionReusableView
     
     func config(controller:CPlansDetail)
     {
+        guard
+            
+            let travels:[DPlanTravel] = controller.model.plan?.travelsList,
+            let distanceSettings:DSettingsDistance = controller.model.settings?.distance
         
+        else
+        {
+            return
+        }
+        
+        let distance:String? = VFormat.factoryDistance(
+            travels:travels,
+            distanceSettings:distanceSettings)
+        
+        let duration:String? = VFormat.factoryDuration(travels:travels)
+        
+        labelDistance.text = distance
+        labelDuration.text = duration
     }
 }
