@@ -68,34 +68,4 @@ extension MCreateSave
         
         return url
     }
-    
-    class func factoryDirectory(plan:DPlan) -> URL?
-    {
-        guard
-            
-            let projects:URL = MGlobalPlan.projectsDirectory,
-            let name:String = plan.identifier
-        
-        else
-        {
-            return nil
-        }
-        
-        var directory:URL = projects.appendingPathComponent(name)
-        directory.excludeFromBackup()
-        
-        do
-        {
-            try FileManager.default.createDirectory(
-                at:directory,
-                withIntermediateDirectories:true,
-                attributes:nil)
-        }
-        catch
-        {
-            return nil
-        }
-        
-        return directory
-    }
 }

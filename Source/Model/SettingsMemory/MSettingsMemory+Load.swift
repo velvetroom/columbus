@@ -23,7 +23,7 @@ extension MSettingsMemory
         
         guard
             
-            let projectsDirectory:URL = MCreateSave.projectsDirectory()
+            let projectsDirectory:URL = MGlobalPlan.projectsDirectory
         
         else
         {

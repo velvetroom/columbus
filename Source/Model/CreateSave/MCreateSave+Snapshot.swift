@@ -64,8 +64,7 @@ extension MCreateSave
             
             let plan:DPlan = self.plan,
             let settings:DSettings = self.settings,
-            let directory:URL = MCreateSave.factoryDirectory(
-                plan:plan)
+            let directory:URL = MGlobalPlan.factoryDirectory(plan:plan)
         
         else
         {

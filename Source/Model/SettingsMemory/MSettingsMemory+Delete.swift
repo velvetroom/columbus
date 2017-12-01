@@ -17,59 +17,10 @@ extension MSettingsMemory
         
         for identifier:String in identifiers
         {
-            deleteDirectory(identifier:identifier)
+            MGlobalPlan.deleteDirectory(identifier:identifier)
         }
         
         load()
-    }
-    
-    private func asyncDelete(item:MSettingsMemoryItem)
-    {
-        guard
-            
-            let identifier:String = item.plan.identifier
-        
-        else
-        {
-            return
-        }
-        
-        deleteDirectory(identifier:identifier)
-        
-        database?.delete(data:item.plan)
-        { [weak self] in
-        
-            self?.itemDeleted()
-        }
-    }
-    
-    private func itemDeleted()
-    {
-        database?.save
-        { [weak self] in
-            
-            self?.load()
-        }
-    }
-    
-    private func deleteDirectory(identifier:String)
-    {
-        guard
-            
-            let projectsPath:URL = MCreateSave.projectsDirectory()
-        
-        else
-        {
-            return
-        }
-        
-        let project:URL = projectsPath.appendingPathComponent(identifier)
-        
-        do
-        {
-            try FileManager.default.removeItem(at:project)
-        }
-        catch { }
     }
     
     //MARK: internal
@@ -89,10 +40,21 @@ extension MSettingsMemory
     {
         view?.startLoading()
         
-        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
+        guard
+            
+            let database:Database = self.database
+        
+        else
+        {
+            return
+        }
+        
+        MGlobalPlan.delete(
+            database:database,
+            plan:item.plan)
         { [weak self] in
             
-            self?.asyncDelete(item:item)
+            self?.load()
         }
     }
 }

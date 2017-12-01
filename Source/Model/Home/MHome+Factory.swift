@@ -9,7 +9,7 @@ extension MHome
         guard
             
             let name:String = plan.identifier,
-            let projects:URL = MCreateSave.projectsDirectory()
+            let projects:URL = MGlobalPlan.projectsDirectory
             
         else
         {
