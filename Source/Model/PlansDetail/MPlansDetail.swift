@@ -29,4 +29,9 @@ final class MPlansDetail:Model<ArchPlansDetail>
             plan:plan,
             settings:settings)
     }
+    
+    func delete()
+    {
+        
+    }
 }

@@ -22,11 +22,6 @@ extension MCreateSave
             static let sizeMultiplier:Double = 1000000
         }
         
-        struct File
-        {
-            static let projectsDirectory:String = "projects"
-        }
-        
         struct Slice
         {
             static let maxSize:Double = 10

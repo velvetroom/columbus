@@ -48,27 +48,6 @@ extension MCreateSave
     
     //MARK: internal
     
-    class func projectsDirectory() -> URL?
-    {
-        var directory:URL = FileManager.default.appDirectory.appendingPathComponent(
-            MCreateSave.Constants.File.projectsDirectory)
-        directory.excludeFromBackup()
-        
-        do
-        {
-            try FileManager.default.createDirectory(
-                at:directory,
-                withIntermediateDirectories:true,
-                attributes:nil)
-        }
-        catch
-        {
-            return nil
-        }
-        
-        return directory
-    }
-    
     class func savePicture(
         directory:URL,
         picture:MCreateSavePicture) -> URL?
@@ -94,7 +73,7 @@ extension MCreateSave
     {
         guard
             
-            let projects:URL = projectsDirectory(),
+            let projects:URL = MGlobalPlan.projectsDirectory,
             let name:String = plan.identifier
         
         else
