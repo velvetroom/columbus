@@ -14,6 +14,31 @@ final class MPlansDetail:Model<ArchPlansDetail>
         super.init()
     }
     
+    //MARK: private
+    
+    private func deleteCompleted()
+    {
+        DispatchQueue.main.async
+        { [weak self] in
+            
+            self?.controllerBack()
+        }
+    }
+    
+    private func controllerBack()
+    {
+        guard
+        
+            let controller:CPlansDetail = view?.controller as? CPlansDetail
+        
+        else
+        {
+            return
+        }
+        
+        controller.back()
+    }
+    
     //MARK: internal
     
     func config(
@@ -32,6 +57,22 @@ final class MPlansDetail:Model<ArchPlansDetail>
     
     func delete()
     {
+        guard
         
+            let database:Database = self.database,
+            let plan:DPlan = self.plan
+        
+        else
+        {
+            return
+        }
+        
+        MGlobalPlan.delete(
+            database:database,
+            plan:plan)
+        { [weak self] in
+            
+            self?.deleteCompleted()
+        }
     }
 }

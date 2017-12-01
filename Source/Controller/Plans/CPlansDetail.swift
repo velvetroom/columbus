@@ -24,7 +24,8 @@ final class CPlansDetail:Controller<ArchPlansDetail>
     
     private func deleteConfirmed()
     {
-        
+        view.isUserInteractionEnabled = false
+        model.delete()
     }
     
     //MARK: internal
