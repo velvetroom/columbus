@@ -22,4 +22,10 @@ final class VPlansDetailBar:View<ArchPlansDetail>
     {
         controller.back()
     }
+    
+    @objc
+    func selectorDelete(sender button:UIButton)
+    {
+        
+    }
 }
