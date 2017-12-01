@@ -45,7 +45,7 @@ extension MHomePlan
     
     class func factoryItems(plan:DPlan) -> [MHomePlanItemProtocol]
     {
-        let stops:[DPlanStop] = plan.stopsArray
+        let stops:[DPlanStop] = plan.stopsList
         var items:[MHomePlanItemProtocol] = []
         
         for stop:DPlanStop in stops

@@ -22,7 +22,7 @@ extension DPlan
         }
     }
     
-    var stopsArray:[DPlanStop]
+    var stopsList:[DPlanStop]
     {
         get
         {
@@ -36,6 +36,23 @@ extension DPlan
             }
             
             return stops
+        }
+    }
+    
+    var travelsList:[DPlanTravel]
+    {
+        get
+        {
+            guard
+                
+                let travels:[DPlanTravel] = self.travels?.array as? [DPlanTravel]
+                
+            else
+            {
+                return []
+            }
+            
+            return travels
         }
     }
 }

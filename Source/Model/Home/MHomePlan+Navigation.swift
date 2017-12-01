@@ -18,7 +18,7 @@ extension MHomePlan
     
     func addMapNavigation(view:VHomeReady)
     {
-        addStops(stops:plan.stopsArray, view:view)
+        addStops(stops:plan.stopsList, view:view)
         view.viewMap.centreUser()
     }
 }

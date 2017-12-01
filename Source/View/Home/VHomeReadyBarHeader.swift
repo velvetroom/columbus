@@ -34,7 +34,7 @@ final class VHomeReadyBarHeader:View<ArchHome>
     {
         guard
             
-            let travels:[DPlanTravel] = controller.model.plan?.plan.travels?.array as? [DPlanTravel],
+            let travels:[DPlanTravel] = controller.model.plan?.plan.travelsList,
             let settings:DSettings = controller.model.settings
             
         else
@@ -53,7 +53,7 @@ final class VHomeReadyBarHeader:View<ArchHome>
     {
         guard
             
-            let travels:[DPlanTravel] = controller.model.plan?.plan.travels?.array as? [DPlanTravel]
+            let travels:[DPlanTravel] = controller.model.plan?.plan.travelsList
             
         else
         {

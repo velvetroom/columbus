@@ -11,7 +11,7 @@ final class VCreateStatusReadyBarTravel:VCollection<
     {
         get
         {
-            return controller.model.plan?.plan.travels?.array as? [DPlanTravel]
+            return controller.model.plan?.plan.travelsList
         }
     }
     
