@@ -79,7 +79,7 @@ extension VPlansDetailListHeader
         NSLayoutConstraint.leftToRight(
             view:labelDistance,
             toView:iconDistance,
-            constant:-VPlansDetailListHeader.Constants.iconPadding)
+            constant:VPlansDetailListHeader.Constants.distancePadding)
         NSLayoutConstraint.widthGreaterOrEqual(
             view:labelDistance)
         
@@ -105,7 +105,7 @@ extension VPlansDetailListHeader
         NSLayoutConstraint.rightToLeft(
             view:labelDuration,
             toView:iconDuration,
-            constant:VPlansDetailListHeader.Constants.iconPadding)
+            constant:VPlansDetailListHeader.Constants.durationPadding)
         NSLayoutConstraint.widthGreaterOrEqual(
             view:labelDuration)
     }
