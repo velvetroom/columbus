@@ -10,7 +10,6 @@ extension VPlansDetailListCell
         labelTitle.isUserInteractionEnabled = false
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelTitle.font = UIFont.regular(size:VPlansDetailListCell.Constants.fontSize)
         labelTitle.numberOfLines = 0
         self.labelTitle = labelTitle
         

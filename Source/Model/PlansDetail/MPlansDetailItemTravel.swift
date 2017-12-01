@@ -1,8 +1,8 @@
 import UIKit
 
-struct MPlansDetailItemDuration:MPlansDetailItemProtocol
+struct MPlansDetailItemTravel:MPlansDetailItemProtocol
 {
     let reusableIdentifier:String = VPlansDetailListCellTravel.reusableIdentifier
-    let cellHeight:CGFloat = 25
+    let cellHeight:CGFloat = 20
     let title:String
 }

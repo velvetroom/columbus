@@ -25,7 +25,7 @@ extension MPlansDetail
     
     private class func factoryDistanceItem(
         stop:DPlanStop,
-        distanceSettings:DSettingsDistance) -> MPlansDetailItemDistance?
+        distanceSettings:DSettingsDistance) -> MPlansDetailItemTravel?
     {
         guard
             
@@ -39,12 +39,12 @@ extension MPlansDetail
             return nil
         }
         
-        let item:MPlansDetailItemDistance = MPlansDetailItemDistance(title:distance)
+        let item:MPlansDetailItemTravel = MPlansDetailItemTravel(title:distance)
         
         return item
     }
     
-    private class func factoryDurationItem(stop:DPlanStop) -> MPlansDetailItemDuration?
+    private class func factoryDurationItem(stop:DPlanStop) -> MPlansDetailItemTravel?
     {
         guard
             
@@ -56,7 +56,7 @@ extension MPlansDetail
             return nil
         }
         
-        let item:MPlansDetailItemDuration = MPlansDetailItemDuration(title:duration)
+        let item:MPlansDetailItemTravel = MPlansDetailItemTravel(title:duration)
         
         return item
     }
@@ -72,14 +72,14 @@ extension MPlansDetail
         
         for stop:DPlanStop in stops
         {
-            if let itemDistance:MPlansDetailItemDistance = factoryDistanceItem(
+            if let itemDistance:MPlansDetailItemTravel = factoryDistanceItem(
                 stop:stop,
                 distanceSettings:settings.distance)
             {
                 items.append(itemDistance)
             }
             
-            if let itemDuration:MPlansDetailItemDuration = factoryDurationItem(stop:stop)
+            if let itemDuration:MPlansDetailItemTravel = factoryDurationItem(stop:stop)
             {
                 items.append(itemDuration)
             }

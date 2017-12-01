@@ -10,6 +10,7 @@ final class VPlansDetailListCellStop:VPlansDetailListCell
         
         labelTitle.textColor = UIColor.colourBackgroundDark
         icon.tintColor = UIColor.colourBackgroundDark
+        labelTitle.font = UIFont.regular(size:VPlansDetailListCell.Constants.fontSizeTitle)
     }
     
     required init?(coder:NSCoder)
