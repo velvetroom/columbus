@@ -26,6 +26,6 @@ final class VPlansDetailBar:View<ArchPlansDetail>
     @objc
     func selectorDelete(sender button:UIButton)
     {
-        
+        controller.confirmDelete()
     }
 }

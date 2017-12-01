@@ -101,6 +101,6 @@ extension VPlansDetailBar
             toView:self)
         NSLayoutConstraint.width(
             view:deleteButton,
-            constant:VPlansDetailBar.Constants.backWidth)
+            constant:VPlansDetailBar.Constants.deleteWidth)
     }
 }

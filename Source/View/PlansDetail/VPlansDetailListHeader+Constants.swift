@@ -9,6 +9,5 @@ extension VPlansDetailListHeader
         static let distancePadding:CGFloat = -5
         static let contentHeight:CGFloat = 86
         static let fontSize:CGFloat = 12
-
     }
 }
