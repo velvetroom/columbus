@@ -1,18 +1,16 @@
 import UIKit
 
-final class VPlansDetailListCell:UICollectionViewCell
+class VPlansDetailListCell:UICollectionViewCell
 {
-    weak var icon:UIImageView!
     weak var labelTitle:UILabel!
+    weak var icon:UIImageView!
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clear
         isUserInteractionEnabled = false
-        
-        factoryViews()
+        backgroundColor = UIColor.clear
     }
     
     required init?(coder:NSCoder)
@@ -22,9 +20,8 @@ final class VPlansDetailListCell:UICollectionViewCell
     
     //MARK: internal
     
-    func config(model:DPlanStop)
+    func config(model:MPlansDetailItemProtocol)
     {
-        labelTitle.text = model.name
-        icon.image = VPlanStop.factoryIcon(stop:model)
+        labelTitle.text = model.title
     }
 }

@@ -6,6 +6,14 @@ extension VPlansDetailListCell
     
     func factoryViews()
     {
+        let labelTitle:UILabel = UILabel()
+        labelTitle.isUserInteractionEnabled = false
+        labelTitle.backgroundColor = UIColor.clear
+        labelTitle.translatesAutoresizingMaskIntoConstraints = false
+        labelTitle.font = UIFont.regular(size:VPlansDetailListCell.Constants.fontSize)
+        labelTitle.numberOfLines = 0
+        self.labelTitle = labelTitle
+        
         let icon:UIImageView = UIImageView()
         icon.isUserInteractionEnabled = false
         icon.translatesAutoresizingMaskIntoConstraints = false
@@ -13,28 +21,8 @@ extension VPlansDetailListCell
         icon.contentMode = UIViewContentMode.center
         self.icon = icon
         
-        let labelTitle:UILabel = UILabel()
-        labelTitle.isUserInteractionEnabled = false
-        labelTitle.backgroundColor = UIColor.clear
-        labelTitle.translatesAutoresizingMaskIntoConstraints = false
-        labelTitle.font = UIFont.regular(size:VPlansDetailListCell.Constants.fontSize)
-        labelTitle.textColor = UIColor.colourBackgroundDark
-        labelTitle.numberOfLines = 0
-        self.labelTitle = labelTitle
-        
-        addSubview(icon)
         addSubview(labelTitle)
-        
-        NSLayoutConstraint.leftToRight(
-            view:labelTitle,
-            toView:icon)
-        NSLayoutConstraint.equalsVertical(
-            view:labelTitle,
-            toView:self)
-        NSLayoutConstraint.rightToRight(
-            view:labelTitle,
-            toView:self,
-            constant:VPlansDetailListCell.Constants.titleRight)
+        addSubview(icon)
         
         NSLayoutConstraint.equalsVertical(
             view:icon,
@@ -45,5 +33,16 @@ extension VPlansDetailListCell
         NSLayoutConstraint.width(
             view:icon,
             constant:VPlansDetailListCell.Constants.iconWidth)
+        
+        NSLayoutConstraint.equalsVertical(
+            view:labelTitle,
+            toView:self)
+        NSLayoutConstraint.leftToRight(
+            view:labelTitle,
+            toView:icon)
+        NSLayoutConstraint.rightToRight(
+            view:labelTitle,
+            toView:self,
+            constant:VPlansDetailListCell.Constants.titleRight)
     }
 }
