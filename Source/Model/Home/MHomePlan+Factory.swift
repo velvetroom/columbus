@@ -4,20 +4,6 @@ extension MHomePlan
 {
     //MARK: private
     
-    private class func factoryStops(plan:DPlan) -> [DPlanStop]
-    {
-        guard
-        
-            let stops:[DPlanStop] = plan.stops?.array as? [DPlanStop]
-        
-        else
-        {
-            return []
-        }
-        
-        return stops
-    }
-    
     private class func factoryStopItem(stop:DPlanStop) -> MHomePlanItemStop?
     {
         guard
@@ -59,7 +45,7 @@ extension MHomePlan
     
     class func factoryItems(plan:DPlan) -> [MHomePlanItemProtocol]
     {
-        let stops:[DPlanStop] = factoryStops(plan:plan)
+        let stops:[DPlanStop] = plan.stopsArray
         var items:[MHomePlanItemProtocol] = []
         
         for stop:DPlanStop in stops

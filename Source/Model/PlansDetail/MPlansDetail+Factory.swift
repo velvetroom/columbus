@@ -4,7 +4,7 @@ extension MPlansDetail
 {
     //MARK: internal
     
-    class func factoryItems() -> [MPlansDetailItemProtocol]
+    class func factoryItems(plan:DPlan) -> [MPlansDetailItemProtocol]
     {
         
     }

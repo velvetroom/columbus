@@ -21,4 +21,21 @@ extension DPlan
             return stop
         }
     }
+    
+    var stopsArray:[DPlanStop]
+    {
+        get
+        {
+            guard
+            
+                let stops:[DPlanStop] = self.stops?.array as? [DPlanStop]
+            
+            else
+            {
+                return []
+            }
+            
+            return stops
+        }
+    }
 }

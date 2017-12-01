@@ -6,7 +6,7 @@ extension VCreateStatusReadyBarStops
     {
         get
         {
-            return controller.model.plan?.plan.stops?.array as? [DPlanStop]
+            return controller.model.plan?.plan.stopsArray
         }
     }
     
