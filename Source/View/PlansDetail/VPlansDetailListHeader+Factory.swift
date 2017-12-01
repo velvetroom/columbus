@@ -38,24 +38,30 @@ extension VPlansDetailListHeader
             view:border,
             toView:self)
         
-        NSLayoutConstraint.equalsVertical(
-            view:iconDuration,
+        NSLayoutConstraint.bottomToBottom(
+            view:iconDistance,
             toView:self)
+        NSLayoutConstraint.height(
+            view:iconDistance,
+            constant:VPlansDetailListHeader.Constants.contentHeight)
         NSLayoutConstraint.leftToLeft(
-            view:iconDuration,
+            view:iconDistance,
             toView:self)
         NSLayoutConstraint.width(
-            view:iconDuration,
+            view:iconDistance,
             constant:VPlansDetailListHeader.Constants.iconWidth)
         
-        NSLayoutConstraint.equalsVertical(
-            view:iconDistance,
+        NSLayoutConstraint.bottomToBottom(
+            view:iconDuration,
             toView:self)
+        NSLayoutConstraint.height(
+            view:iconDuration,
+            constant:VPlansDetailListHeader.Constants.contentHeight)
         NSLayoutConstraint.rightToRight(
-            view:iconDistance,
+            view:iconDuration,
             toView:self)
         NSLayoutConstraint.width(
-            view:iconDistance,
+            view:iconDuration,
             constant:VPlansDetailListHeader.Constants.iconWidth)
     }
 }

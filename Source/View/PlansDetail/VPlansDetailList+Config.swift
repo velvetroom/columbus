@@ -16,7 +16,7 @@ extension VPlansDetailList
         {
             flow.headerReferenceSize = CGSize(width:0, height:VPlansDetailList.Constants.headerHeight)
             flow.sectionInset = UIEdgeInsets(
-                top:0,
+                top:VPlansDetailList.Constants.collectionTop,
                 left:0,
                 bottom:VPlansDetailList.Constants.collectionBottom,
                 right:0)
