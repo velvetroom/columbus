@@ -465,6 +465,7 @@
 		DAB4691E1FC2035200B334C7 /* VSettingsMemoryListHeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4691D1FC2035200B334C7 /* VSettingsMemoryListHeaderBar.swift */; };
 		DAB4FEE61FD273FF008CF3C7 /* VMapTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4FEE51FD273FF008CF3C7 /* VMapTools.swift */; };
 		DAB4FEE81FD2741D008CF3C7 /* VMapTools+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4FEE71FD2741D008CF3C7 /* VMapTools+Constants.swift */; };
+		DAB4FEEA1FD27DED008CF3C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB4FEE91FD27DED008CF3C7 /* GoogleService-Info.plist */; };
 		DAB542BD1FCCDD340099FA40 /* CHome+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB542BC1FCCDD340099FA40 /* CHome+Map.swift */; };
 		DAB7609A1F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift */; };
 		DAB831441FB2190B00E22942 /* MCreateStatusErrorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */; };
@@ -1099,6 +1100,7 @@
 		DAB4691D1FC2035200B334C7 /* VSettingsMemoryListHeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSettingsMemoryListHeaderBar.swift; sourceTree = "<group>"; };
 		DAB4FEE51FD273FF008CF3C7 /* VMapTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMapTools.swift; sourceTree = "<group>"; };
 		DAB4FEE71FD2741D008CF3C7 /* VMapTools+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VMapTools+Constants.swift"; sourceTree = "<group>"; };
+		DAB4FEE91FD27DED008CF3C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAB542BC1FCCDD340099FA40 /* CHome+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CHome+Map.swift"; sourceTree = "<group>"; };
 		DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VSettingsListCellTravelModeList+Config.swift"; sourceTree = "<group>"; };
 		DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateStatusErrorAvailability.swift; sourceTree = "<group>"; };
@@ -1564,6 +1566,7 @@
 				DA65EC8D1F95E68700720673 /* View */,
 				DA65EC611F95E68600720673 /* CoreData */,
 				DA65EC671F95E68600720673 /* GenericExtensions */,
+				DAB4FEE91FD27DED008CF3C7 /* GoogleService-Info.plist */,
 				DA65ECD21F95E68700720673 /* Info.plist */,
 			);
 			path = Source;
@@ -2456,6 +2459,7 @@
 				DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */,
 				DA1FD2951FAF13350098C80C /* store.xcassets in Resources */,
 				DA65ED361F95E68700720673 /* LICENSE in Resources */,
+				DAB4FEEA1FD27DED008CF3C7 /* GoogleService-Info.plist in Resources */,
 				DA65ED3A1F95EFF000720673 /* Design in Resources */,
 				DAB385771FC1659000ECCF76 /* meassuring.xcassets in Resources */,
 				DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */,
