@@ -20,7 +20,6 @@
 		DA0679A01FA0E11E00F511F7 /* MCreatePlan+DirectionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06799F1FA0E11E00F511F7 /* MCreatePlan+DirectionsFactory.swift */; };
 		DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0679A11FA1004E00F511F7 /* DPlanTravelStatus.swift */; };
 		DA0679A41FA1015000F511F7 /* DPlanTravel+Computed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0679A31FA1015000F511F7 /* DPlanTravel+Computed.swift */; };
-		DA07792E1FD2803D00474D06 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = DA07792D1FD2803C00474D06 /* podfile */; };
 		DA0A3C911FAFD38E00F70A2B /* MStore+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A3C901FAFD38E00F70A2B /* MStore+Products.swift */; };
 		DA0A3C931FAFD39C00F70A2B /* MStore+Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A3C921FAFD39C00F70A2B /* MStore+Transactions.swift */; };
 		DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */; };
@@ -234,7 +233,6 @@
 		DA63C0EB1FB89A3D007D01A7 /* VCreateSearchBaseList+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63C0EA1FB89A3D007D01A7 /* VCreateSearchBaseList+Config.swift */; };
 		DA641D721FBC95A3001FC05B /* MSettingsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA641D711FBC95A3001FC05B /* MSettingsStorage.swift */; };
 		DA641D741FBC9637001FC05B /* VSettingsListCellStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA641D731FBC9637001FC05B /* VSettingsListCellStorage.swift */; };
-		DA65ECD41F95E68700720673 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC531F95E68600720673 /* README.md */; };
 		DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC551F95E68600720673 /* LaunchScreen.storyboard */; };
 		DA65ECD61F95E68700720673 /* spinner.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC561F95E68600720673 /* spinner.xcassets */; };
 		DA65ECD71F95E68700720673 /* LocalizableModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA65EC581F95E68600720673 /* LocalizableModel.strings */; };
@@ -291,7 +289,6 @@
 		DA65ED1D1F95E68700720673 /* VPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB71F95E68700720673 /* VPushBackground.swift */; };
 		DA65ED1E1F95E68700720673 /* VCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB81F95E68700720673 /* VCollection.swift */; };
 		DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB91F95E68700720673 /* VAlert.swift */; };
-		DA65ED361F95E68700720673 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DA65ECD31F95E68700720673 /* LICENSE */; };
 		DA65ED3A1F95EFF000720673 /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED391F95EFEF00720673 /* Design */; };
 		DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED3B1F95F74500720673 /* brand.xcassets */; };
 		DA6700D31FAB7DC700B89997 /* VPlansListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6700D21FAB7DC700B89997 /* VPlansListHeader.swift */; };
@@ -467,7 +464,6 @@
 		DAB4691E1FC2035200B334C7 /* VSettingsMemoryListHeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4691D1FC2035200B334C7 /* VSettingsMemoryListHeaderBar.swift */; };
 		DAB4FEE61FD273FF008CF3C7 /* VMapTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4FEE51FD273FF008CF3C7 /* VMapTools.swift */; };
 		DAB4FEE81FD2741D008CF3C7 /* VMapTools+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB4FEE71FD2741D008CF3C7 /* VMapTools+Constants.swift */; };
-		DAB4FEEA1FD27DED008CF3C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB4FEE91FD27DED008CF3C7 /* GoogleService-Info.plist */; };
 		DAB542BD1FCCDD340099FA40 /* CHome+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB542BC1FCCDD340099FA40 /* CHome+Map.swift */; };
 		DAB7609A1F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB760991F9F7A3B00D53F59 /* VSettingsListCellTravelModeList+Config.swift */; };
 		DAB831441FB2190B00E22942 /* MCreateStatusErrorAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB831431FB2190B00E22942 /* MCreateStatusErrorAvailability.swift */; };
@@ -2481,16 +2477,12 @@
 				DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */,
 				DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */,
 				DA0447FB1F973D3D00BA2D45 /* InfoPlist.strings in Resources */,
-				DA65ECD41F95E68700720673 /* README.md in Resources */,
 				DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */,
 				DA65ECD61F95E68700720673 /* spinner.xcassets in Resources */,
 				DA65ECDA1F95E68700720673 /* LocalizableController.strings in Resources */,
 				DA65ECD91F95E68700720673 /* LocalizableView.strings in Resources */,
 				DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */,
 				DA1FD2951FAF13350098C80C /* store.xcassets in Resources */,
-				DA65ED361F95E68700720673 /* LICENSE in Resources */,
-				DA07792E1FD2803D00474D06 /* podfile in Resources */,
-				DAB4FEEA1FD27DED008CF3C7 /* GoogleService-Info.plist in Resources */,
 				DA65ED3A1F95EFF000720673 /* Design in Resources */,
 				DAB385771FC1659000ECCF76 /* meassuring.xcassets in Resources */,
 				DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */,
