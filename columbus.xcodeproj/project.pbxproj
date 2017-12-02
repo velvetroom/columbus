@@ -20,6 +20,7 @@
 		DA0679A01FA0E11E00F511F7 /* MCreatePlan+DirectionsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06799F1FA0E11E00F511F7 /* MCreatePlan+DirectionsFactory.swift */; };
 		DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0679A11FA1004E00F511F7 /* DPlanTravelStatus.swift */; };
 		DA0679A41FA1015000F511F7 /* DPlanTravel+Computed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0679A31FA1015000F511F7 /* DPlanTravel+Computed.swift */; };
+		DA07792E1FD2803D00474D06 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = DA07792D1FD2803C00474D06 /* podfile */; };
 		DA0A3C911FAFD38E00F70A2B /* MStore+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A3C901FAFD38E00F70A2B /* MStore+Products.swift */; };
 		DA0A3C931FAFD39C00F70A2B /* MStore+Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A3C921FAFD39C00F70A2B /* MStore+Transactions.swift */; };
 		DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */; };
@@ -310,6 +311,7 @@
 		DA6BE2F91FBFE83400D621F0 /* VStoreStatusReadyListCellNew+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6BE2F81FBFE83400D621F0 /* VStoreStatusReadyListCellNew+Constants.swift */; };
 		DA7064041FBFE2CB0075092A /* VStoreStatusReadyListCellUnavailable+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7064031FBFE2CB0075092A /* VStoreStatusReadyListCellUnavailable+Constants.swift */; };
 		DA7064061FBFE3240075092A /* VStoreStatusReadyListCellAvailable+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7064051FBFE3240075092A /* VStoreStatusReadyListCellAvailable+Constants.swift */; };
+		DA714E0EE39AAB71BA5AA652 /* Pods_columbus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02D31F6FEB4F2607C7ADFF4 /* Pods_columbus.framework */; };
 		DA740F911F9EAC6C00C8B116 /* MSettingsTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA740F901F9EAC6C00C8B116 /* MSettingsTravelMode.swift */; };
 		DA740F931F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA740F921F9EAE4E00C8B116 /* VSettingsListCellTravelMode.swift */; };
 		DA750CA61FA786E400459985 /* VHomeReadyMapTiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA750CA51FA786E400459985 /* VHomeReadyMapTiler.swift */; };
@@ -638,6 +640,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A02D31F6FEB4F2607C7ADFF4 /* Pods_columbus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_columbus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A359F9B5484BF7D2BE0649A1 /* Pods-columbus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-columbus.release.xcconfig"; path = "Pods/Target Support Files/Pods-columbus/Pods-columbus.release.xcconfig"; sourceTree = "<group>"; };
+		B60E21E9BE6B811804F44899 /* Pods-columbus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-columbus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-columbus/Pods-columbus.debug.xcconfig"; sourceTree = "<group>"; };
 		DA000A521FC3D85D00E4A795 /* MSettingsMemory+Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSettingsMemory+Delete.swift"; sourceTree = "<group>"; };
 		DA0447FA1F973D3D00BA2D45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA0447FC1F9747B800BA2D45 /* VCreateStatusDenied.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCreateStatusDenied.swift; sourceTree = "<group>"; };
@@ -651,6 +656,7 @@
 		DA06799F1FA0E11E00F511F7 /* MCreatePlan+DirectionsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCreatePlan+DirectionsFactory.swift"; sourceTree = "<group>"; };
 		DA0679A11FA1004E00F511F7 /* DPlanTravelStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPlanTravelStatus.swift; sourceTree = "<group>"; };
 		DA0679A31FA1015000F511F7 /* DPlanTravel+Computed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DPlanTravel+Computed.swift"; sourceTree = "<group>"; };
+		DA07792D1FD2803C00474D06 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DA0A3C901FAFD38E00F70A2B /* MStore+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MStore+Products.swift"; sourceTree = "<group>"; };
 		DA0A3C921FAFD39C00F70A2B /* MStore+Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MStore+Transactions.swift"; sourceTree = "<group>"; };
 		DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCreateMapMenuStop.swift; sourceTree = "<group>"; };
@@ -1267,6 +1273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA714E0EE39AAB71BA5AA652 /* Pods_columbus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1280,6 +1287,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53240F6505A73769024B3228 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B60E21E9BE6B811804F44899 /* Pods-columbus.debug.xcconfig */,
+				A359F9B5484BF7D2BE0649A1 /* Pods-columbus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B92E833BAE46C8D9E84D699 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A02D31F6FEB4F2607C7ADFF4 /* Pods_columbus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA18A96B1FAD596C00F6BDF8 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -1510,6 +1534,7 @@
 		DA65EC341F95DFD700720673 = {
 			isa = PBXGroup;
 			children = (
+				DA07792D1FD2803C00474D06 /* podfile */,
 				DA65ECD31F95E68700720673 /* LICENSE */,
 				DA65EC531F95E68600720673 /* README.md */,
 				DA65EC601F95E68600720673 /* Source */,
@@ -1518,6 +1543,8 @@
 				DAB31D0B1FB3D8D800C1BF7F /* UnitTests */,
 				DA65ED391F95EFEF00720673 /* Design */,
 				DA65EC3E1F95DFD700720673 /* Products */,
+				53240F6505A73769024B3228 /* Pods */,
+				9B92E833BAE46C8D9E84D699 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2371,9 +2398,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA65EC4F1F95DFD700720673 /* Build configuration list for PBXNativeTarget "columbus" */;
 			buildPhases = (
+				306EA909D31FC32DBC1D2F72 /* [CP] Check Pods Manifest.lock */,
 				DA65EC391F95DFD700720673 /* Sources */,
 				DA65EC3A1F95DFD700720673 /* Frameworks */,
 				DA65EC3B1F95DFD700720673 /* Resources */,
+				47C3B0855935C9B49A19357F /* [CP] Embed Pods Frameworks */,
+				5D2BBD620C03253E590053FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2459,6 +2489,7 @@
 				DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */,
 				DA1FD2951FAF13350098C80C /* store.xcassets in Resources */,
 				DA65ED361F95E68700720673 /* LICENSE in Resources */,
+				DA07792E1FD2803D00474D06 /* podfile in Resources */,
 				DAB4FEEA1FD27DED008CF3C7 /* GoogleService-Info.plist in Resources */,
 				DA65ED3A1F95EFF000720673 /* Design in Resources */,
 				DAB385771FC1659000ECCF76 /* meassuring.xcassets in Resources */,
@@ -2475,6 +2506,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		306EA909D31FC32DBC1D2F72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-columbus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47C3B0855935C9B49A19357F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-columbus/Pods-columbus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-columbus/Pods-columbus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D2BBD620C03253E590053FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-columbus/Pods-columbus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA65EC391F95DFD700720673 /* Sources */ = {
@@ -3251,6 +3338,7 @@
 		};
 		DA65EC501F95DFD700720673 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B60E21E9BE6B811804F44899 /* Pods-columbus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -3266,6 +3354,7 @@
 		};
 		DA65EC511F95DFD700720673 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A359F9B5484BF7D2BE0649A1 /* Pods-columbus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
