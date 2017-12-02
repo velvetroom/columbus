@@ -13,7 +13,7 @@ class VMap<A>:
     init(controller:A.C)
     {
         shouldUpdate = true
-        rendererStrokeColour = UIColor.colourBackgroundDark.withAlphaComponent(0.6)
+        rendererStrokeColour = UIColor.colourBackgroundDark.withAlphaComponent(0.4)
         
         span = MKCoordinateSpan(
             latitudeDelta:VMapTools.Constants.spanSize,
