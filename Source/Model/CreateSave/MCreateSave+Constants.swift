@@ -6,7 +6,7 @@ extension MCreateSave
     {
         struct Tile
         {
-            static let padding:Double = 1
+            static let padding:Double = 5
             static let size:Double = 256
             static let scale:Double = 2
         }
