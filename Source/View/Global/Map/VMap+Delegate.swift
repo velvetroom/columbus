@@ -9,7 +9,7 @@ extension VMap
         guard
             
             let location:CLLocation = userLocation.location,
-            location.horizontalAccuracy < VMap.Constants.distanceAccuracy,
+            location.horizontalAccuracy < VMapTools.Constants.distanceAccuracy,
             shouldUpdate
             
         else

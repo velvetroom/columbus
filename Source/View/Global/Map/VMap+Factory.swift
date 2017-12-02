@@ -8,9 +8,9 @@ extension VMap
     {
         let renderer:MKPolylineRenderer = MKPolylineRenderer(
             polyline:polyline)
-        renderer.lineWidth = VMap.Constants.rendererWidth
+        renderer.lineWidth = VMapTools.Constants.rendererWidth
         renderer.strokeColor = rendererStrokeColour
-        renderer.lineDashPattern = VMap.Constants.rendererLineDash
+        renderer.lineDashPattern = VMapTools.Constants.rendererLineDash
         
         return renderer
     }

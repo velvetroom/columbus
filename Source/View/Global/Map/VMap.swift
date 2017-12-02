@@ -16,8 +16,8 @@ class VMap<A>:
         rendererStrokeColour = UIColor.colourBackgroundDark.withAlphaComponent(0.6)
         
         span = MKCoordinateSpan(
-            latitudeDelta:VMap.Constants.spanSize,
-            longitudeDelta:VMap.Constants.spanSize)
+            latitudeDelta:VMapTools.Constants.spanSize,
+            longitudeDelta:VMapTools.Constants.spanSize)
         
         super.init(frame:CGRect.zero)
         self.controller = controller
