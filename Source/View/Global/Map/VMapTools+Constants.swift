@@ -1,11 +1,11 @@
-import UIKit
+import Foundation
 import CoreLocation
 
-extension VMap
+extension VMapTools
 {
     struct Constants
     {
-        static let rendererLineDash:[NSNumber] = [1, 10]
+        static let rendererLineDash:[NSNumber] = [1]
         static let rendererWidth:CGFloat = 6
         static let distanceAccuracy:CLLocationDistance = 100
         static let spanSize:CLLocationDegrees = 0.003
