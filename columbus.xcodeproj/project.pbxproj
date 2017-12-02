@@ -21,6 +21,7 @@
 		DA0679A21FA1004E00F511F7 /* DPlanTravelStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0679A11FA1004E00F511F7 /* DPlanTravelStatus.swift */; };
 		DA0679A41FA1015000F511F7 /* DPlanTravel+Computed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0679A31FA1015000F511F7 /* DPlanTravel+Computed.swift */; };
 		DA0779311FD282E000474D06 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0779301FD282E000474D06 /* Analytics.swift */; };
+		DA0779321FD283B200474D06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAB4FEE91FD27DED008CF3C7 /* GoogleService-Info.plist */; };
 		DA0A3C911FAFD38E00F70A2B /* MStore+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A3C901FAFD38E00F70A2B /* MStore+Products.swift */; };
 		DA0A3C931FAFD39C00F70A2B /* MStore+Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A3C921FAFD39C00F70A2B /* MStore+Transactions.swift */; };
 		DA0A5E7F1F991FAF000240F2 /* MCreateMapMenuStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A5E7E1F991FAF000240F2 /* MCreateMapMenuStop.swift */; };
@@ -2486,6 +2487,7 @@
 			files = (
 				DA8DF8D31FA9579E00276867 /* plans.xcassets in Resources */,
 				DA4F09C61F965B8B00AAE279 /* menu.xcassets in Resources */,
+				DA0779321FD283B200474D06 /* GoogleService-Info.plist in Resources */,
 				DA4E5AFD1F97C6FB00B7BE3E /* map.xcassets in Resources */,
 				DA0447FB1F973D3D00BA2D45 /* InfoPlist.strings in Resources */,
 				DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */,
