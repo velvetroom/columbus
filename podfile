@@ -3,6 +3,8 @@ use_frameworks!
 
 def podlist
   pod 'Firebase/Core'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 
 target 'columbus' do
