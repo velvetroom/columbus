@@ -2,8 +2,6 @@ import UIKit
 
 final class VSliderBar:UIView
 {
-    private let kBorderWidth:CGFloat = 1
-    
     init()
     {
         super.init(frame:CGRect.zero)
@@ -41,7 +39,7 @@ final class VSliderBar:UIView
             toView:self)
         NSLayoutConstraint.width(
             view:border,
-            constant:kBorderWidth)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.rightToRight(
             view:border,
             toView:self)

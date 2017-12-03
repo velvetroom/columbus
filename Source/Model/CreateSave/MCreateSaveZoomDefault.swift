@@ -2,6 +2,5 @@ import Foundation
 
 struct MCreateSaveZoomDefault:MCreateSaveZoomProtocol
 {
-    let zoom:[Double] = [
-        16]
+    let zoom:[Double] = [17]
 }

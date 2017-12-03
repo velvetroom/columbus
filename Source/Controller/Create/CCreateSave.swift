@@ -47,21 +47,18 @@ final class CCreateSave:Controller<ArchCreateSave>
             return
         }
         
-        let order:MMenuOrder = MMenuOrder.plans
+        let order:MMenu.Order = MMenu.Order.plans
         
-        parentController?.pop(
-            vertical:ControllerParent.Vertical.bottom)
+        parentController?.pop(vertical:ControllerTransition.Vertical.bottom)
         {
-            viewParent.viewMenu.synthSelect(
-                order:order)
+            viewParent.viewMenu.synthSelect(order:order)
         }
     }
     
     func cancel()
     {
-        model.timer?.invalidate()
+        model.cancel()
         
-        parentController?.pop(
-            vertical:ControllerParent.Vertical.bottom)
+        parentController?.pop(vertical:ControllerTransition.Vertical.bottom)
     }
 }

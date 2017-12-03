@@ -27,8 +27,7 @@ final class MSettingsDetailLevel:MSettingsProtocol
         self.database = database
         
         items = MSettingsDetailLevel.factoryItems()
-        indexMap = MSettingsDetailLevel.factoryIndexMap(
-            items:items)
+        indexMap = MSettingsDetailLevel.factoryIndexMap(items:items)
     }
     
     //MARK: internal

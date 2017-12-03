@@ -16,6 +16,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.top,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -35,6 +36,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.bottom,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -54,6 +56,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.bottom,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -73,6 +76,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.top,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -92,6 +96,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.left,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -111,6 +116,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.right,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -130,6 +136,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.right,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -149,6 +156,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.left,
             multiplier:multiplier,
             constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -167,6 +175,26 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.notAnAttribute,
             multiplier:multiplier,
             constant:constant)
+        
+        constraint.isActive = true
+        
+        return constraint
+    }
+    
+    @discardableResult class func widthGreaterOrEqual(
+        view:UIView,
+        constant:CGFloat = 0,
+        multiplier:CGFloat = 1) -> NSLayoutConstraint
+    {
+        let constraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:view,
+            attribute:NSLayoutAttribute.width,
+            relatedBy:NSLayoutRelation.greaterThanOrEqual,
+            toItem:nil,
+            attribute:NSLayoutAttribute.notAnAttribute,
+            multiplier:multiplier,
+            constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -185,6 +213,26 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.notAnAttribute,
             multiplier:multiplier,
             constant:constant)
+        
+        constraint.isActive = true
+        
+        return constraint
+    }
+    
+    @discardableResult class func heightGreaterOrEqual(
+        view:UIView,
+        constant:CGFloat = 0,
+        multiplier:CGFloat = 1) -> NSLayoutConstraint
+    {
+        let constraint:NSLayoutConstraint = NSLayoutConstraint(
+            item:view,
+            attribute:NSLayoutAttribute.height,
+            relatedBy:NSLayoutRelation.greaterThanOrEqual,
+            toItem:nil,
+            attribute:NSLayoutAttribute.notAnAttribute,
+            multiplier:multiplier,
+            constant:constant)
+        
         constraint.isActive = true
         
         return constraint
@@ -199,6 +247,7 @@ extension NSLayoutConstraint
             view:view,
             constant:constant,
             multiplier:multiplier)
+        
         NSLayoutConstraint.height(
             view:view,
             constant:constant,
@@ -218,6 +267,7 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.width,
             multiplier:multiplier,
             constant:0)
+        
         constraint.isActive = true
         
         return constraint
@@ -236,12 +286,16 @@ extension NSLayoutConstraint
             attribute:NSLayoutAttribute.height,
             multiplier:multiplier,
             constant:0)
+        
         constraint.isActive = true
         
         return constraint
     }
     
-    class func equals(view:UIView, toView:UIView, margin:CGFloat = 0)
+    class func equals(
+        view:UIView,
+        toView:UIView,
+        margin:CGFloat = 0)
     {
         NSLayoutConstraint.topToTop(
             view:view,
@@ -261,7 +315,10 @@ extension NSLayoutConstraint
             constant:-margin)
     }
     
-    class func equalsHorizontal(view:UIView, toView:UIView, margin:CGFloat = 0)
+    class func equalsHorizontal(
+        view:UIView,
+        toView:UIView,
+        margin:CGFloat = 0)
     {
         NSLayoutConstraint.leftToLeft(
             view:view,
@@ -272,7 +329,10 @@ extension NSLayoutConstraint
             toView:toView,
             constant:-margin)
     }
-    class func equalsVertical(view:UIView, toView:UIView, margin:CGFloat = 0)
+    class func equalsVertical(
+        view:UIView,
+        toView:UIView,
+        margin:CGFloat = 0)
     {
         NSLayoutConstraint.topToTop(
             view:view,

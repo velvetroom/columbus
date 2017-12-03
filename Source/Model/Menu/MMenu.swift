@@ -2,28 +2,24 @@ import Foundation
 
 final class MMenu
 {
-    var selected:MMenuOrder
+    var selected:MMenu.Order
     let items:[MMenuItemProtocol]
-    private let kInitialSelected:MMenuOrder = MMenuOrder.home
+    private let itemsMap:[MMenu.Order:MMenuItemProtocol]
+    
+    var selectedItem:MMenuItemProtocol?
+    {
+        get
+        {
+            let selected:MMenuItemProtocol? = itemsMap[self.selected]
+            
+            return selected
+        }
+    }
     
     init()
     {
-        selected = kInitialSelected
+        selected = MMenu.Constants.initialSelected
         items = MMenu.factoryItems()
-    }
-    
-    //MARK: internal
-    
-    func selectedItem() -> MMenuItemProtocol?
-    {
-        for item:MMenuItemProtocol in items
-        {
-            if item.order == selected
-            {
-                return item
-            }
-        }
-        
-        return nil
+        itemsMap = MMenu.factoryItemsMap(items:items)
     }
 }

@@ -2,12 +2,6 @@ import UIKit
 
 final class VCreateStatusDenied:View<ArchCreate>
 {
-    private let kImageTop:CGFloat = 210
-    private let kImageHeight:CGFloat = 50
-    private let kLabelHeight:CGFloat = 150
-    private let kFontSizeTitle:CGFloat = 18
-    private let kFontSizeDescr:CGFloat = 15
-    
     required init(controller:CCreate)
     {
         super.init(controller:controller)
@@ -47,10 +41,10 @@ final class VCreateStatusDenied:View<ArchCreate>
         NSLayoutConstraint.topToTop(
             view:imageView,
             toView:self,
-            constant:kImageTop)
+            constant:VCreateStatusDenied.Constants.imageTop)
         NSLayoutConstraint.height(
             view:imageView,
-            constant:kImageHeight)
+            constant:VCreateStatusDenied.Constants.imageHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:imageView,
             toView:self)
@@ -60,7 +54,7 @@ final class VCreateStatusDenied:View<ArchCreate>
             toView:imageView)
         NSLayoutConstraint.height(
             view:label,
-            constant:kLabelHeight)
+            constant:VCreateStatusDenied.Constants.labelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)
@@ -81,12 +75,10 @@ final class VCreateStatusDenied:View<ArchCreate>
     private func factoryMessageTitle() -> NSAttributedString
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.regular(size:kFontSizeTitle),
-            NSAttributedStringKey.foregroundColor:
-                UIColor.colourBackgroundDark]
-        let string:String = String.localizedView(
-            key:"VCreateStatusDenied_title")
+            NSAttributedStringKey.font : UIFont.regular(size:VCreateStatusDenied.Constants.fontSizeTitle),
+            NSAttributedStringKey.foregroundColor : UIColor.colourBackgroundDark]
+        let string:String = String.localizedView(key:"VCreateStatusDenied_title")
+        
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)
@@ -97,12 +89,10 @@ final class VCreateStatusDenied:View<ArchCreate>
     private func factoryMessageDescr() -> NSAttributedString
     {
         let attributes:[NSAttributedStringKey:Any] = [
-            NSAttributedStringKey.font:
-                UIFont.light(size:kFontSizeDescr),
-            NSAttributedStringKey.foregroundColor:
-                UIColor.colourBackgroundDark]
-        let string:String = String.localizedView(
-            key:"VCreateStatusDenied_descr")
+            NSAttributedStringKey.font : UIFont.light(size:VCreateStatusDenied.Constants.fontSizeDescr),
+            NSAttributedStringKey.foregroundColor : UIColor.colourBackgroundDark]
+        let string:String = String.localizedView(key:"VCreateStatusDenied_descr")
+        
         let attributedString:NSAttributedString = NSAttributedString(
             string:string,
             attributes:attributes)

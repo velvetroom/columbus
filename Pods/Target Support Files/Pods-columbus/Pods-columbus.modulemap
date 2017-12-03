@@ -1,0 +1,6 @@
+framework module Pods_columbus {
+  umbrella header "Pods-columbus-umbrella.h"
+
+  export *
+  module * { export * }
+}

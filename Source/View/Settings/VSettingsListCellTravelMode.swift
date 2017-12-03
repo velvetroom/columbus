@@ -3,11 +3,6 @@ import UIKit
 final class VSettingsListCellTravelMode:VSettingsListCell
 {
     weak var viewList:VSettingsListCellTravelModeList?
-    let kCaptionHeight:CGFloat = 90
-    let kCaptionLeft:CGFloat = 20
-    let kTitleFontSize:CGFloat = 16
-    let kDescrFontSize:CGFloat = 14
-    let kListBottom:CGFloat = -15
     private weak var model:MSettingsTravelMode?
     
     override init(frame:CGRect)

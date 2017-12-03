@@ -4,9 +4,6 @@ final class VMapPin:MKAnnotationView
 {
     private let centerImage:CGPoint
     private let centerImageDragging:CGPoint
-    private let kImageOffsetY:CGFloat = -17
-    private let kImageDragginOffsetY:CGFloat = 24
-    private let kAnimationDuration:TimeInterval = 0.3
     
     init(stop:DPlanStop)
     {
@@ -14,10 +11,11 @@ final class VMapPin:MKAnnotationView
         
         centerImage = CGPoint(
             x:0,
-            y:kImageOffsetY)
+            y:VMapPin.Constants.imageOffsetY)
+        
         centerImageDragging = CGPoint(
             x:0,
-            y:kImageDragginOffsetY)
+            y:VMapPin.Constants.imageDragginOffsetY)
         
         super.init(
             annotation:stop,
@@ -59,8 +57,7 @@ final class VMapPin:MKAnnotationView
         _ newDragState:MKAnnotationViewDragState,
         animated:Bool)
     {
-        let dragState:MKAnnotationViewDragState = VMapPin.factoryDragState(
-            state:newDragState)
+        let dragState:MKAnnotationViewDragState = VMapPin.factoryDragState(state:newDragState)
         self.dragState = dragState
         
         guard
@@ -79,7 +76,7 @@ final class VMapPin:MKAnnotationView
     
     private func animateHover()
     {
-        UIView.animate(withDuration:kAnimationDuration)
+        UIView.animate(withDuration:VMapPin.Constants.animationDuration)
         { [weak self] in
             
             self?.hover()

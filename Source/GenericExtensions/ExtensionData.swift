@@ -2,8 +2,6 @@ import Foundation
 
 extension Data
 {
-    private static let kDot:String = "."
-    
     //MARK: internal
     
     func writeToTemporal(withExtension:String?) -> URL?
@@ -12,7 +10,7 @@ extension Data
         
         if let withExtension:String = withExtension
         {
-            randomName.append(Data.kDot)
+            randomName.append(".")
             randomName.append(withExtension)
         }
         
@@ -36,6 +34,7 @@ extension Data
     mutating func append<T>(value:T)
     {
         var value:T = value
+        
         let buffer:UnsafeBufferPointer = UnsafeBufferPointer(
             start:&value,
             count:1)
@@ -63,6 +62,7 @@ extension Data
             let bufferPointer:UnsafeBufferPointer = UnsafeBufferPointer(
                 start:pointer,
                 count:elements)
+            
             let array:[T] = Array(bufferPointer)
             
             return array
@@ -90,8 +90,7 @@ extension Data
         start:Int,
         endNotIncluding:Int) -> Data
     {
-        let range:Range<Data.Index> = Range<Data.Index>(
-            start ..< endNotIncluding)
+        let range:Range<Data.Index> = Range<Data.Index>(start ..< endNotIncluding)
         let sliced:Data = subdata(in:range)
         
         return sliced

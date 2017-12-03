@@ -4,12 +4,7 @@ final class VPlansList:VCollection<
     ArchPlans,
     VPlansListCell>
 {
-    let kInterItem:CGFloat = 1
-    let kInsetsTop:CGFloat = 64
-    let kCollectionBottom:CGFloat = 50
     private var cellSize:CGSize?
-    private let kCellHeight:CGFloat = 95
-    private let kHeaderHeight:CGFloat = 300
     
     required init(controller:CPlans)
     {
@@ -44,8 +39,7 @@ final class VPlansList:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         referenceSizeForHeaderInSection section:Int) -> CGSize
     {
-        let count:Int = collectionView.numberOfItems(
-            inSection:section)
+        let count:Int = collectionView.numberOfItems(inSection:section)
         
         guard
         
@@ -55,7 +49,7 @@ final class VPlansList:VCollection<
         {
             let size:CGSize = CGSize(
                 width:0,
-                height:kHeaderHeight)
+                height:VPlansList.Constants.headerHeight)
             
             return size
         }
@@ -75,9 +69,11 @@ final class VPlansList:VCollection<
         else
         {
             let width:CGFloat = collectionView.bounds.width
+            
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:kCellHeight)
+                height:VPlansList.Constants.cellHeight)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -102,13 +98,9 @@ final class VPlansList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:DPlan = modelAtIndex(
-            index:indexPath)
-        let active:Bool = modelIsActive(
-            model:item)
-        
-        let cell:VPlansListCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:DPlan = modelAtIndex(index:indexPath)
+        let active:Bool = modelIsActive(model:item)
+        let cell:VPlansListCell = cellAtIndex(indexPath:indexPath)
         
         cell.config(
             controller:controller,
@@ -120,15 +112,9 @@ final class VPlansList:VCollection<
     
     override func collectionView(
         _ collectionView:UICollectionView,
-        shouldSelectItemAt indexPath:IndexPath) -> Bool
+        didSelectItemAt indexPath:IndexPath)
     {
-        return false
-    }
-    
-    override func collectionView(
-        _ collectionView:UICollectionView,
-        shouldHighlightItemAt indexPath:IndexPath) -> Bool
-    {
-        return false
+        let item:DPlan = modelAtIndex(index:indexPath)
+        controller.showDetail(plan:item)
     }
 }

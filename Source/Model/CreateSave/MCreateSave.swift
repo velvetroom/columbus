@@ -1,65 +1,50 @@
-import Foundation
+import MapKit
 
 final class MCreateSave:Model<ArchCreateSave>
 {
-    static let kPaddingTile:Double = 1
-    static let kTileSize:Double = 256
-    static let kTileScale:Double = 2
-    static let kAppleToGoogleMaps:Double = 1048575
-    
     weak var database:Database?
     weak var plan:DPlan?
     weak var settings:DSettings?
-    weak var timer:Timer?
-    var dispatchGroup:DispatchGroup?
-    var urls:[URL]
-    private let kTimeout:TimeInterval = 180
-    
-    required init()
-    {
-        dispatchGroup = MCreateSave.factoryDispatchGroup()
-        urls = []
-        
-        super.init()
-    }
+    weak var snapshotter:MKMapSnapshotter?
+    var builder:MCreateSaveBuilder?
+    private(set) var status:MCreateSaveStatusProtocol?
     
     deinit
     {
-        timer?.invalidate()
-    }
-    
-    //MARK: selectors
-    
-    @objc
-    private func selectorTimeout(sender timer:Timer)
-    {
-        timer.invalidate()
-        dispatchGroup = nil
-        savedSnapshots()
-    }
-    
-    //MARK: private
-    
-    private func asyncStartTimer()
-    {
-        let timer:Timer = Timer.scheduledTimer(
-            timeInterval:kTimeout,
-            target:self,
-            selector:#selector(selectorTimeout(sender:)),
-            userInfo:nil,
-            repeats:false)
-        
-        self.timer = timer
+        builder?.timer?.invalidate()
     }
     
     //MARK: internal
     
-    func startTimer()
+    func changeStatus(statusType:MCreateSaveStatusProtocol.Type)
     {
-        DispatchQueue.main.async
+        let status:MCreateSaveStatusProtocol = statusType.init()
+        self.status = status
+        
+        view?.updateStatus()
+    }
+    
+    func cancel()
+    {
+        builder?.timer?.invalidate()
+        snapshotter?.cancel()
+    }
+    
+    func buildingError()
+    {
+        cancel()
+        changeStatus(statusType:MCreateSaveStatusError.self)
+    }
+    
+    func retryBuilding()
+    {
+        changeStatus(statusType:MCreateSaveStatusBusy.self)
+        
+        let deadline:DispatchTime = DispatchTime.now() + MCreateSave.Constants.TimeIntervals.snapshotWait
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).asyncAfter(deadline:deadline)
         { [weak self] in
             
-            self?.asyncStartTimer()
+            self?.pullSnapshot()
         }
     }
 }

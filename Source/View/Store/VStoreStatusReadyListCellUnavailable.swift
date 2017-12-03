@@ -2,9 +2,6 @@ import UIKit
 
 final class VStoreStatusReadyListCellUnavailable:VStoreStatusReadyListCell
 {
-    private let kLabelFontSize:CGFloat = 16
-    private let kLabelHeight:CGFloat = 80
-    
     override init(frame:CGRect)
     {
         super.init(frame:frame)
@@ -15,10 +12,9 @@ final class VStoreStatusReadyListCellUnavailable:VStoreStatusReadyListCell
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.center
         label.backgroundColor = UIColor.clear
-        label.font = UIFont.regular(size:kLabelFontSize)
+        label.font = UIFont.regular(size:VStoreStatusReadyListCellUnavailable.Constants.labelFontSize)
         label.textColor = UIColor(white:0, alpha:0.6)
-        label.text = String.localizedView(
-            key:"VStoreStatusReadyListCellUnavailable_label")
+        label.text = String.localizedView(key:"VStoreStatusReadyListCellUnavailable_label")
         
         addSubview(label)
         
@@ -27,7 +23,7 @@ final class VStoreStatusReadyListCellUnavailable:VStoreStatusReadyListCell
             toView:self)
         NSLayoutConstraint.height(
             view:label,
-            constant:kLabelHeight)
+            constant:VStoreStatusReadyListCellUnavailable.Constants.labelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)

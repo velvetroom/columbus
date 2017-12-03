@@ -2,8 +2,6 @@ import UIKit
 
 final class VStoreStatusReadyBarRestore:View<ArchStore>
 {
-    private let kFontSize:CGFloat = 13
-    
     required init(controller:CStore)
     {
         super.init(controller:controller)
@@ -11,16 +9,15 @@ final class VStoreStatusReadyBarRestore:View<ArchStore>
         let button:UIButton = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(
-            UIColor.colourBackgroundDark,
+            UIColor.colourSuccess,
             for:UIControlState.normal)
         button.setTitleColor(
             UIColor.colourBackgroundGray,
             for:UIControlState.highlighted)
-        button.titleLabel!.font = UIFont.bold(
-            size:kFontSize)
+        button.titleLabel!.font = UIFont.medium(
+            size:VStoreStatusReadyBarRestore.Constants.fontSize)
         button.setTitle(
-            String.localizedView(key:
-                "VStoreStatusReadyBarRestore_button"),
+            String.localizedView(key:"VStoreStatusReadyBarRestore_button"),
             for:UIControlState.normal)
         button.addTarget(
             self,

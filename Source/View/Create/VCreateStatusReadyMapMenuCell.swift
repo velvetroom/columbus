@@ -1,7 +1,6 @@
 import UIKit
 
-final class VCreateStatusReadyMapMenuCell:
-    UICollectionViewCell
+final class VCreateStatusReadyMapMenuCell:UICollectionViewCell
 {
     private weak var icon:UIImageView!
     private weak var image:UIImage?

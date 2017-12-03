@@ -5,8 +5,6 @@ final class VMenu:UIView
     weak var collectionView:UICollectionView!
     private(set) weak var controller:ControllerParent!
     var cellSize:CGSize?
-    let kDeselectTime:TimeInterval = 0.3
-    private let kBorderHeight:CGFloat = 1
     
     init(controller:ControllerParent)
     {
@@ -16,8 +14,7 @@ final class VMenu:UIView
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
-        let border:VBorder = VBorder(
-            colour:UIColor.colourBackgroundDark.withAlphaComponent(0.4))
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundDark.withAlphaComponent(0.4))
         
         addSubview(border)
         
@@ -26,7 +23,7 @@ final class VMenu:UIView
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)

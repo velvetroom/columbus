@@ -4,10 +4,6 @@ final class VSettingsList:VCollection<
     ArchSettings,
     VSettingsListCell>
 {
-    let kInterItem:CGFloat = 2
-    let kInsetsTop:CGFloat = 64
-    let kCollectionBottom:CGFloat = 50
-    
     required init(controller:CSettings)
     {
         super.init(controller:controller)
@@ -24,9 +20,10 @@ final class VSettingsList:VCollection<
         layout collectionViewLayout:UICollectionViewLayout,
         sizeForItemAt indexPath:IndexPath) -> CGSize
     {
-        let item:MSettingsProtocol = modelAtIndex(
-            index:indexPath)
+        let item:MSettingsProtocol = modelAtIndex(index:indexPath)
+        
         let width:CGFloat = collectionView.bounds.width
+        
         let size:CGSize = CGSize(
             width:width,
             height:item.cellHeight)
@@ -47,8 +44,8 @@ final class VSettingsList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MSettingsProtocol = modelAtIndex(
-            index:indexPath)
+        let item:MSettingsProtocol = modelAtIndex(index:indexPath)
+        
         let cell:VSettingsListCell = cellAtIndex(
             indexPath:indexPath,
             reusableIdentifier:item.reusableIdentifier)

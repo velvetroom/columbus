@@ -45,18 +45,17 @@ final class VPlansListCellButton:View<ArchPlans>
             return
         }
         
-        controller.model.activate(
-            plan:model)
+        controller.model.activate(plan:model)
     }
     
     //MARK: private
     
-    private func updateImage(
-        image:UIImage)
+    private func updateImage(image:UIImage)
     {
         button.setImage(
             image,
             for:UIControlState.normal)
+        
         button.setImage(
             image,
             for:UIControlState.highlighted)
@@ -64,15 +63,13 @@ final class VPlansListCellButton:View<ArchPlans>
     
     //MARK: internal
     
-    func active(
-        model:DPlan)
+    func active(model:DPlan)
     {
         self.model = model
         updateImage(image:#imageLiteral(resourceName: "assetPlansActive"))
     }
     
-    func unactive(
-        model:DPlan)
+    func unactive(model:DPlan)
     {
         self.model = model
         updateImage(image:#imageLiteral(resourceName: "assetPlansUnactive"))

@@ -2,15 +2,14 @@ import UIKit
 
 final class ViewParent:UIView
 {
+    typealias Router = (
+        (ViewParent) ->
+        (CGPoint, CGFloat) -> ())
+    
     weak var panRecognizer:UIPanGestureRecognizer!
-    var panningX:CGFloat?
-    let kMaxXPanning:CGFloat = 60
-    let kMaxXDelta:CGFloat = 210
-    let kMinXDelta:CGFloat = 30
-    let kAnimationDuration:TimeInterval = 0.3
     private(set) weak var controller:ControllerParent!
     private(set) weak var viewMenu:VMenu!
-    private let kMenuHeight:CGFloat = 50
+    var panningX:CGFloat?
     
     init(controller:ControllerParent)
     {
@@ -29,7 +28,7 @@ final class ViewParent:UIView
             toView:self)
         NSLayoutConstraint.height(
             view:viewMenu,
-            constant:kMenuHeight)
+            constant:ViewMain.Constants.menuHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:viewMenu,
             toView:self)

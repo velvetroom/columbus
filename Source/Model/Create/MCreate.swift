@@ -3,9 +3,9 @@ import Foundation
 final class MCreate:Model<ArchCreate>
 {
     var plan:MCreatePlan?
+    var database:Database?
+    var settings:DSettings?
     let locationDelegate:MCreateLocationDelegate
-    private(set) var database:Database?
-    private(set) var settings:DSettings?
     private(set) var status:MCreateStatusProtocol?
     private(set) var mapStatus:MCreateMapStatusProtocol?
     private(set) var locationStrategy:MCreateLocationStrategyProtocol?
@@ -17,13 +17,6 @@ final class MCreate:Model<ArchCreate>
         super.init()
         
         locationDelegate.model = self
-        
-        MCreate.factorySettings(bundle:nil)
-        { [weak self] (database:Database, settings:DSettings) in
-            
-            self?.database = database
-            self?.settings = settings
-        }
     }
     
     deinit
@@ -33,8 +26,7 @@ final class MCreate:Model<ArchCreate>
     
     //MARK: internal
     
-    func changeStatus(
-        statusType:MCreateStatusProtocol.Type)
+    func changeStatus(statusType:MCreateStatusProtocol.Type)
     {
         let status:MCreateStatusProtocol = statusType.init()
         self.status = status
@@ -42,18 +34,15 @@ final class MCreate:Model<ArchCreate>
         view?.updateStatus()
     }
     
-    func changeMapStatus(
-        statusType:MCreateMapStatusProtocol.Type)
+    func changeMapStatus(statusType:MCreateMapStatusProtocol.Type)
     {
         let mapStatus:MCreateMapStatusProtocol = statusType.init()
         self.mapStatus = mapStatus
         
-        view?.updateMapMenu(
-            barTop:mapStatus.barTop)
+        view?.updateMapMenu(barTop:mapStatus.barTop)
     }
     
-    func changeLocationStrategy(
-        locationStrategyType:MCreateLocationStrategyProtocol.Type)
+    func changeLocationStrategy(locationStrategyType:MCreateLocationStrategyProtocol.Type)
     {
         let locationStrategy:MCreateLocationStrategyProtocol = locationStrategyType.init()
         self.locationStrategy = locationStrategy

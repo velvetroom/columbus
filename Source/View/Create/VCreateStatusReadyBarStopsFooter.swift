@@ -1,30 +1,12 @@
 import UIKit
 
-final class VCreateStatusReadyBarStopsFooter:
-    UICollectionReusableView
+final class VCreateStatusReadyBarStopsFooter:UICollectionReusableView
 {
-    weak var labelDistanceValue:UILabel!
-    weak var labelDurationValue:UILabel!
-    let distanceSuffixMap:[DSettingsDistance:String]
-    let durationSuffixMap:[DPlanTravelDurationType:String]
-    let numberFormatter:NumberFormatter
-    let kValueFontSize:CGFloat = 13
-    let kIconLeft:CGFloat = 4
-    let kIconWidth:CGFloat = 44
-    let kValueWidth:CGFloat = 250
-    let kDistanceTop:CGFloat = 15
-    let kLabelHeight:CGFloat = 40
-    private let kMinIntegers:Int = 1
-    private let kMaxDecimals:Int = 1
+    weak var labelDistance:UILabel!
+    weak var labelDuration:UILabel!
     
     override init(frame:CGRect)
     {
-        distanceSuffixMap = VCreateStatusReadyBarStopsFooter.factoryDistanceSuffixMap()
-        durationSuffixMap = VCreateStatusReadyBarStopsFooter.factoryDurationSuffixMap()
-        numberFormatter = VCreateStatusReadyBarStopsFooter.factoryNumberFormatter(
-            minIntegers:kMinIntegers,
-            maxDecimals:kMaxDecimals)
-        
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clear
@@ -43,13 +25,13 @@ final class VCreateStatusReadyBarStopsFooter:
         model:[DPlanTravel],
         distanceSettings:DSettingsDistance)
     {
-        let distance:String? = factoryDistance(
-            model:model,
+        let distance:String? = VFormat.factoryDistance(
+            travels:model,
             distanceSettings:distanceSettings)
-        let duration:String? = factoryDuration(
-            model:model)
         
-        labelDistanceValue.text = distance
-        labelDurationValue.text = duration
+        let duration:String? = VFormat.factoryDuration(travels:model)
+        
+        labelDistance.text = distance
+        labelDuration.text = duration
     }
 }

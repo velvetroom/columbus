@@ -2,12 +2,10 @@ import UIKit
 
 final class VCreateTravelBackground:View<ArchCreateTravel>
 {
-    private let kAlpha:CGFloat = 0.98
-    
     required init(controller:CCreateTravel)
     {
         super.init(controller:controller)
-        alpha = kAlpha
+        alpha = VCreateTravelBackground.Constants.alpha
         
         let blur:VBlur = VBlur.light()
         

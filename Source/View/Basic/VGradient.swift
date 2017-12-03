@@ -2,9 +2,6 @@ import UIKit
 
 final class VGradient:UIView
 {
-    private static let kLocationStart:NSNumber = 0
-    private static let kLocationEnd:NSNumber = 1
-    
     class func diagonal(
         colourLeftBottom:UIColor,
         colourTopRight:UIColor) -> VGradient
@@ -12,9 +9,11 @@ final class VGradient:UIView
         let colours:[CGColor] = [
             colourLeftBottom.cgColor,
             colourTopRight.cgColor]
+        
         let locations:[NSNumber] = [
-            kLocationStart,
-            kLocationEnd]
+            VGradient.Constants.locationStart,
+            VGradient.Constants.locationEnd]
+        
         let startPoint:CGPoint = CGPoint(x:0, y:1)
         let endPoint:CGPoint = CGPoint(x:1, y:0)
         
@@ -34,9 +33,11 @@ final class VGradient:UIView
         let colours:[CGColor] = [
             colourLeft.cgColor,
             colourRight.cgColor]
+        
         let locations:[NSNumber] = [
-            kLocationStart,
-            kLocationEnd]
+            VGradient.Constants.locationStart,
+            VGradient.Constants.locationEnd]
+        
         let startPoint:CGPoint = CGPoint(x:0, y:0.5)
         let endPoint:CGPoint = CGPoint(x:1, y:0.5)
         
@@ -56,9 +57,11 @@ final class VGradient:UIView
         let colours:[CGColor] = [
             colourTop.cgColor,
             colourBottom.cgColor]
+        
         let locations:[NSNumber] = [
-            kLocationStart,
-            kLocationEnd]
+            VGradient.Constants.locationStart,
+            VGradient.Constants.locationEnd]
+        
         let startPoint:CGPoint = CGPoint(x:0.5, y:0)
         let endPoint:CGPoint = CGPoint(x:0.5, y:1)
         

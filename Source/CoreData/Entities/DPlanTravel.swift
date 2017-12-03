@@ -30,8 +30,7 @@ extension DPlanTravel
             return
         }
         
-        let polyline:MKPolyline = MKPolyline(
-            locations:rawLocations)
+        let polyline:MKPolyline = MKPolyline(locations:rawLocations)
         transientPolyline = polyline
     }
     

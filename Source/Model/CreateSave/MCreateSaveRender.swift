@@ -1,7 +1,15 @@
 import Foundation
 
-struct MCreateSaveRender
+final class MCreateSaveRender
 {
     let zoom:Double
-    let slices:[MCreateSaveRenderSlice]
+    var slices:[MCreateSaveRenderSlice]
+    
+    init(
+        zoom:Double,
+        slices:[MCreateSaveRenderSlice])
+    {
+        self.zoom = zoom
+        self.slices = slices
+    }
 }

@@ -27,8 +27,7 @@ final class MSettingsDistance:MSettingsProtocol
         self.database = database
         
         items = MSettingsDistance.factoryItems()
-        indexMap = MSettingsDistance.factoryIndexMap(
-            items:items)
+        indexMap = MSettingsDistance.factoryIndexMap(items:items)
     }
     
     //MARK: internal
@@ -45,8 +44,7 @@ final class MSettingsDistance:MSettingsProtocol
         
         for item:MSettingsDistanceProtocol in items
         {
-            titles.append(
-                item.title)
+            titles.append(item.title)
         }
         
         return titles

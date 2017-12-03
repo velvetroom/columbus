@@ -2,8 +2,9 @@ import Foundation
 
 final class MHomePlan
 {
-    private(set) weak var plan:DPlan!
+    let items:[MHomePlanItemProtocol]
     let tileTemplate:String
+    private(set) weak var plan:DPlan!
     
     init(
         plan:DPlan,
@@ -11,5 +12,6 @@ final class MHomePlan
     {
         self.plan = plan
         self.tileTemplate = tileTemplate
+        items = MHomePlan.factoryItems(plan:plan)
     }
 }

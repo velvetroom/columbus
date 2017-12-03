@@ -8,17 +8,6 @@ final class VPlansListCell:UICollectionViewCell
     weak var imageRoute:UIImageView!
     weak var viewButton:VPlansListCellButton?
     let dateFormatter:DateFormatter
-    let kRouteWidth:CGFloat = 48
-    let kRouteHeight:CGFloat = 66
-    let kLabelOriginTop:CGFloat = 12
-    let kLabelDestinationTop:CGFloat = 5
-    let kLabelRouteHeight:CGFloat = 20
-    let kRouteFontSize:CGFloat = 12
-    let kCreatedHeight:CGFloat = 42
-    let kCreatedWidth:CGFloat = 200
-    let kCreatedFontSize:CGFloat = 12
-    let kButtonMarginVertical:CGFloat = 20
-    let kButtonWidth:CGFloat = 70
     
     override init(frame:CGRect)
     {

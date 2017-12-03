@@ -8,8 +8,7 @@ final class CHome:Controller<ArchHome>
         
         parentController?.view.isUserInteractionEnabled = false
         
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.model.loadSettings()

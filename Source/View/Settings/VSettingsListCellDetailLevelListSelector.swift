@@ -1,10 +1,7 @@
 import UIKit
 
-final class VSettingsListCellDetailLevelListSelector:
-    UIView
+final class VSettingsListCellDetailLevelListSelector:UIView
 {
-    private let kCornerRadius:CGFloat = 6
-    
     init()
     {
         super.init(frame:CGRect.zero)
@@ -12,7 +9,7 @@ final class VSettingsListCellDetailLevelListSelector:
         isUserInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.colourBackgroundDark
-        layer.cornerRadius = kCornerRadius
+        layer.cornerRadius = VSettingsListCellDetailLevelListSelector.Constants.cornerRadius
     }
     
     required init?(coder:NSCoder)

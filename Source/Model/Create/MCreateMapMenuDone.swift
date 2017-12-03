@@ -15,8 +15,7 @@ final class MCreateMapMenuDone:MCreateMapMenuProtocol
     
     private func errorNotStops()
     {
-        let message:String = String.localizedModel(
-            key:"MCreateMapMenuDone_noStops")
+        let message:String = String.localizedModel(key:"MCreateMapMenuDone_noStops")
         
         VAlert.messageFail(message:message)
     }
@@ -27,8 +26,7 @@ final class MCreateMapMenuDone:MCreateMapMenuProtocol
     {
         guard
         
-            let count:Int = controller.model.plan?.plan.stops?.count,
-            count > 0
+            isDoneable(plan:controller.model.plan?.plan)
         
         else
         {
@@ -38,5 +36,20 @@ final class MCreateMapMenuDone:MCreateMapMenuProtocol
         }
         
         confirmDone(controller:controller)
+    }
+    
+    func isDoneable(plan:DPlan?) -> Bool
+    {
+        guard
+        
+            let count:Int = plan?.stops?.count,
+            count > 0
+        
+        else
+        {
+            return false
+        }
+        
+        return true
     }
 }

@@ -1,7 +1,6 @@
 import UIKit
 
-final class VSettingsListCellTravelModeList:
-    VCollection<
+final class VSettingsListCellTravelModeList:VCollection<
     ArchSettings,
     VSettingsListCellTravelModeListCell>
 {
@@ -10,14 +9,11 @@ final class VSettingsListCellTravelModeList:
     weak var layoutSelectorLeft:NSLayoutConstraint!
     weak var layoutSelectorTop:NSLayoutConstraint!
     let selectorSize_2:CGFloat
-    let kSelectorSize:CGFloat = 50
-    let kAnimationDuration:TimeInterval = 0.2
-    let kWaitToSelect:TimeInterval = 0.1
     private var cellSize:CGSize?
     
     required init(controller:CSettings)
     {
-        selectorSize_2 = kSelectorSize / 2.0
+        selectorSize_2 = VSettingsListCellTravelModeList.Constants.selectorSize / 2.0
         
         super.init(controller:controller)
         config()
@@ -45,9 +41,11 @@ final class VSettingsListCellTravelModeList:
             let items:Int = collectionView.numberOfItems(inSection:0)
             let itemsFloat:CGFloat = CGFloat(items)
             let widthPerItem:CGFloat = width / itemsFloat
+            
             let cellSize:CGSize = CGSize(
                 width:widthPerItem,
                 height:height)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -76,10 +74,8 @@ final class VSettingsListCellTravelModeList:
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MSettingsTravelModeProtocol = modelAtIndex(
-            index:indexPath)
-        let cell:VSettingsListCellTravelModeListCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:MSettingsTravelModeProtocol = modelAtIndex(index:indexPath)
+        let cell:VSettingsListCellTravelModeListCell = cellAtIndex(indexPath:indexPath)
         cell.config(model:item)
         
         return cell
@@ -118,6 +114,6 @@ final class VSettingsListCellTravelModeList:
         didSelectItemAt indexPath:IndexPath)
     {
         model?.selected(index:indexPath.item)
-        updateSelector()
+        updateSelector(animationDuration:VSettingsListCellTravelModeList.Constants.animationDuration)
     }
 }

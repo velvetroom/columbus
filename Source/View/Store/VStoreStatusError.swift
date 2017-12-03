@@ -2,9 +2,6 @@ import UIKit
 
 final class VStoreStatusError:View<ArchStore>
 {
-    private let kFontSize:CGFloat = 18
-    private let kLabelMargin:CGFloat = 20
-    
     required init(controller:CStore)
     {
         super.init(controller:controller)
@@ -37,7 +34,7 @@ final class VStoreStatusError:View<ArchStore>
         label.backgroundColor = UIColor.clear
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.center
-        label.font = UIFont.regular(size:kFontSize)
+        label.font = UIFont.regular(size:VStoreStatusError.Constants.fontSize)
         label.textColor = UIColor(white:0, alpha:0.5)
         label.text = statusError.error
         
@@ -46,6 +43,6 @@ final class VStoreStatusError:View<ArchStore>
         NSLayoutConstraint.equals(
             view:label,
             toView:self,
-            margin:kLabelMargin)
+            margin:VStoreStatusError.Constants.labelMargin)
     }
 }

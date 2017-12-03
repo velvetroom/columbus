@@ -14,8 +14,7 @@ extension MKPolyline
     
     convenience init(locations:[CLLocation])
     {
-        let coordinates:[CLLocationCoordinate2D] = MKPolyline.factoryCoordinates(
-            locations:locations)
+        let coordinates:[CLLocationCoordinate2D] = MKPolyline.factoryCoordinates(locations:locations)
         let count:Int = coordinates.count
             
         self.init(
@@ -25,8 +24,7 @@ extension MKPolyline
     
     //MARK: private
     
-    private class func factoryCoordinates(
-        locations:[CLLocation]) -> [CLLocationCoordinate2D]
+    private class func factoryCoordinates(locations:[CLLocation]) -> [CLLocationCoordinate2D]
     {
         var coordinates:[CLLocationCoordinate2D] = []
         
@@ -51,6 +49,7 @@ extension MKPolyline
         for index:Int in 0 ..< pointCount
         {
             let coordinate:CLLocationCoordinate2D = pointer[index]
+            
             let location:CLLocation = CLLocation(
                 latitude:coordinate.latitude,
                 longitude:coordinate.longitude)

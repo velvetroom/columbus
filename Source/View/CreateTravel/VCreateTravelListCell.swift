@@ -63,8 +63,7 @@ final class VCreateTravelListCell:UICollectionViewCell
     
     func config(model:MCreateTravelProtocol)
     {
-        imageView.image = model.icon.withRenderingMode(
-            UIImageRenderingMode.alwaysTemplate)
+        imageView.image = model.icon.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         hover()
     }
 }

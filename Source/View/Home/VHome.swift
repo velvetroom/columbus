@@ -20,8 +20,7 @@ final class VHome:ViewMain
             return
         }
         
-        let view:View<ArchHome> = status.viewType.init(
-            controller:controller)
+        let view:View<ArchHome> = status.viewType.init(controller:controller)
         self.view = view
         
         addSubview(view)

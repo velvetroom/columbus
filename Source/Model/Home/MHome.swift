@@ -6,8 +6,8 @@ final class MHome:Model<ArchHome>
     var settings:DSettings?
     var plan:MHomePlan?
     let info:[MHomeInfoProtocol]
-    let kWaitAddNavigation:TimeInterval = 1
     private(set) var status:MHomeStatusProtocol?
+    private(set) var mapStatus:MHomeMapStatusProtocol?
     
     required init()
     {
@@ -18,12 +18,19 @@ final class MHome:Model<ArchHome>
     
     //MARK: internal
     
-    func changeStatus(
-        statusType:MHomeStatusProtocol.Type)
+    func changeStatus(statusType:MHomeStatusProtocol.Type)
     {
         let status:MHomeStatusProtocol = statusType.init()
         self.status = status
         
         view?.updateStatus()
+    }
+    
+    func changeMapStatus(statusType:MHomeMapStatusProtocol.Type)
+    {
+        let mapStatus:MHomeMapStatusProtocol = statusType.init()
+        self.mapStatus = mapStatus
+        
+        view?.updateMenu(barBottom:mapStatus.barBottom)
     }
 }

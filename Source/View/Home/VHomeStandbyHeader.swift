@@ -3,12 +3,6 @@ import UIKit
 final class VHomeStandbyHeader:View<ArchHome>
 {
     private weak var layoutHeaderTop:NSLayoutConstraint!
-    private let kFontSize:CGFloat = 14
-    private let kIconTopRatio:CGFloat = 0.4
-    private let kIconHeight:CGFloat = 80
-    private let kTitleTop:CGFloat = -10
-    private let kTitleHeight:CGFloat = 20
-    private let kBorderHeight:CGFloat = 1
     
     required init(controller:CHome)
     {
@@ -29,13 +23,11 @@ final class VHomeStandbyHeader:View<ArchHome>
         labelTitle.backgroundColor = UIColor.clear
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.textAlignment = NSTextAlignment.center
-        labelTitle.font = UIFont.bold(size:kFontSize)
+        labelTitle.font = UIFont.bold(size:VHomeStandbyHeader.Constants.fontSize)
         labelTitle.textColor = UIColor.colourSuccess
-        labelTitle.text = String.localizedView(
-            key:"VHomeStandbyHeader_labelTitle")
+        labelTitle.text = String.localizedView(key:"VHomeStandbyHeader_labelTitle")
         
-        let border:VBorder = VBorder(
-            colour:UIColor.colourBackgroundGray)
+        let border:VBorder = VBorder(colour:UIColor.colourBackgroundGray)
         
         addSubview(icon)
         addSubview(labelTitle)
@@ -46,7 +38,7 @@ final class VHomeStandbyHeader:View<ArchHome>
             toView:self)
         NSLayoutConstraint.height(
             view:icon,
-            constant:kIconHeight)
+            constant:VHomeStandbyHeader.Constants.iconHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:icon,
             toView:self)
@@ -54,10 +46,10 @@ final class VHomeStandbyHeader:View<ArchHome>
         NSLayoutConstraint.topToBottom(
             view:labelTitle,
             toView:icon,
-            constant:kTitleTop)
+            constant:VHomeStandbyHeader.Constants.titleTop)
         NSLayoutConstraint.height(
             view:labelTitle,
-            constant:kTitleHeight)
+            constant:VHomeStandbyHeader.Constants.titleHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
             toView:self)
@@ -67,7 +59,7 @@ final class VHomeStandbyHeader:View<ArchHome>
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
@@ -81,7 +73,7 @@ final class VHomeStandbyHeader:View<ArchHome>
     override func layoutSubviews()
     {
         let height:CGFloat = bounds.height
-        let iconTop:CGFloat = height * kIconTopRatio
+        let iconTop:CGFloat = height * VHomeStandbyHeader.Constants.iconTopRatio
         layoutHeaderTop.constant = iconTop
         
         super.layoutSubviews()

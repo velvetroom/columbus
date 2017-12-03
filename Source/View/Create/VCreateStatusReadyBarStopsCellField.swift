@@ -1,13 +1,8 @@
 import UIKit
 
-final class VCreateStatusReadyBarStopsCellField:
-    UIView
+final class VCreateStatusReadyBarStopsCellField:UIView
 {
     private weak var label:UILabel!
-    private let kCornerRadius:CGFloat = 4
-    private let kFontSize:CGFloat = 12
-    private let kLabelLeft:CGFloat = 12
-    private let kLabelRight:CGFloat = -9
     
     init()
     {
@@ -15,14 +10,13 @@ final class VCreateStatusReadyBarStopsCellField:
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         isUserInteractionEnabled = false
-        layer.cornerRadius = kCornerRadius
+        layer.cornerRadius = VCreateStatusReadyBarStopsCellField.Constants.cornerRadius
         
         let label:UILabel = UILabel()
         label.isUserInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clear
-        label.font = UIFont.medium(size:kFontSize)
-        label.numberOfLines = 1
+        label.font = UIFont.medium(size:VCreateStatusReadyBarStopsCellField.Constants.fontSize)
         self.label = label
         
         addSubview(label)
@@ -33,11 +27,11 @@ final class VCreateStatusReadyBarStopsCellField:
         NSLayoutConstraint.leftToLeft(
             view:label,
             toView:self,
-            constant:kLabelLeft)
+            constant:VCreateStatusReadyBarStopsCellField.Constants.labelLeft)
         NSLayoutConstraint.rightToRight(
             view:label,
             toView:self,
-            constant:kLabelRight)
+            constant:VCreateStatusReadyBarStopsCellField.Constants.labelRight)
     }
     
     required init?(coder:NSCoder)

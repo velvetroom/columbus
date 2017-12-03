@@ -5,10 +5,7 @@ final class VCreateStatusReadyMapMenu:VCollection<
     VCreateStatusReadyMapMenuCell>
 {
     weak var layoutHeight:NSLayoutConstraint!
-    let kAnimationDuration:TimeInterval = 0.3
     private var cellSize:CGSize?
-    private let kCollectionTop:CGFloat = 6
-    private let kCellHeight:CGFloat = 58
     
     required init(controller:CCreate)
     {
@@ -20,7 +17,7 @@ final class VCreateStatusReadyMapMenu:VCollection<
         if let flow:VCollectionFlow = collectionView.collectionViewLayout as? VCollectionFlow
         {
             flow.sectionInset = UIEdgeInsets(
-                top:kCollectionTop,
+                top:VCreateStatusReadyMapMenu.Constants.collectionTop,
                 left:0,
                 bottom:0,
                 right:0)
@@ -44,9 +41,11 @@ final class VCreateStatusReadyMapMenu:VCollection<
         else
         {
             let width:CGFloat = collectionView.bounds.width
+            
             let cellSize:CGSize = CGSize(
                 width:width,
-                height:kCellHeight)
+                height:VCreateStatusReadyMapMenu.Constants.cellHeight)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -68,8 +67,8 @@ final class VCreateStatusReadyMapMenu:VCollection<
             return 0
         }
         
-        let cellsHeight:CGFloat = CGFloat(count) * kCellHeight
-        let totalHeight:CGFloat = cellsHeight + kCollectionTop
+        let cellsHeight:CGFloat = CGFloat(count) * VCreateStatusReadyMapMenu.Constants.cellHeight
+        let totalHeight:CGFloat = cellsHeight + VCreateStatusReadyMapMenu.Constants.collectionTop
         layoutHeight.constant = totalHeight
         
         return count
@@ -79,10 +78,8 @@ final class VCreateStatusReadyMapMenu:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MCreateMapMenuProtocol = modelAtIndex(
-            index:indexPath)
-        let cell:VCreateStatusReadyMapMenuCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:MCreateMapMenuProtocol = modelAtIndex(index:indexPath)
+        let cell:VCreateStatusReadyMapMenuCell = cellAtIndex(indexPath:indexPath)
         cell.config(model:item)
         
         return cell
@@ -96,8 +93,7 @@ final class VCreateStatusReadyMapMenu:VCollection<
             collectionView,
             didSelectItemAt:indexPath)
         
-        let item:MCreateMapMenuProtocol = modelAtIndex(
-            index:indexPath)
+        let item:MCreateMapMenuProtocol = modelAtIndex(index:indexPath)
         controller.menuItemSelected(item:item)
     }
 }

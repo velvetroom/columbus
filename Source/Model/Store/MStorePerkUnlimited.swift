@@ -13,9 +13,7 @@ final class MStorePerkUnlimited:MStorePerkProtocol
     init()
     {
         icon = #imageLiteral(resourceName: "assetStoreUnlimited")
-        title = String.localizedModel(
-            key:"MStorePerkUnlimited_title")
-        descr = String.localizedModel(
-            key:"MStorePerkUnlimited_descr")
+        title = String.localizedModel(key:"MStorePerkUnlimited_title")
+        descr = String.localizedModel(key:"MStorePerkUnlimited_descr")
     }
 }

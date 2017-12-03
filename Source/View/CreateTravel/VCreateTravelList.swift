@@ -8,15 +8,11 @@ final class VCreateTravelList:VCollection<
     weak var layoutSelectorLeft:NSLayoutConstraint!
     weak var layoutSelectorTop:NSLayoutConstraint!
     let selectorSize_2:CGFloat
-    let kSelectorSize:CGFloat = 50
-    let kAnimationDuration:TimeInterval = 0.2
-    let kWaitToSelect:TimeInterval = 0.1
-    let kWaitToUpdate:TimeInterval = 0.4
     private var cellSize:CGSize?
     
     required init(controller:CCreateTravel)
     {
-        selectorSize_2 = kSelectorSize / 2.0
+        selectorSize_2 = VCreateTravelList.Constants.selectorSize / 2.0
         
         super.init(controller:controller)
         collectionView.isScrollEnabled = false
@@ -44,13 +40,14 @@ final class VCreateTravelList:VCollection<
         {
             let width:CGFloat = collectionView.bounds.width
             let height:CGFloat = collectionView.bounds.height
-            let cellsInt:Int = collectionView.numberOfItems(
-                inSection:0)
+            let cellsInt:Int = collectionView.numberOfItems(inSection:0)
             let cells:CGFloat = CGFloat(cellsInt)
             let heightPerCell:CGFloat = height / cells
+            
             let cellSize:CGSize = CGSize(
                 width:width,
                 height:heightPerCell)
+            
             self.cellSize = cellSize
             
             return cellSize
@@ -72,10 +69,8 @@ final class VCreateTravelList:VCollection<
         _ collectionView:UICollectionView,
         cellForItemAt indexPath:IndexPath) -> UICollectionViewCell
     {
-        let item:MCreateTravelProtocol = modelAtIndex(
-            index:indexPath)
-        let cell:VCreateTravelListCell = cellAtIndex(
-            indexPath:indexPath)
+        let item:MCreateTravelProtocol = modelAtIndex(index:indexPath)
+        let cell:VCreateTravelListCell = cellAtIndex(indexPath:indexPath)
         cell.config(model:item)
         
         return cell
@@ -85,8 +80,7 @@ final class VCreateTravelList:VCollection<
         _ collectionView:UICollectionView,
         didSelectItemAt indexPath:IndexPath)
     {
-        let item:MCreateTravelProtocol = modelAtIndex(
-            index:indexPath)
+        let item:MCreateTravelProtocol = modelAtIndex(index:indexPath)
         controller.model.select(item:item)
         
         superview?.isUserInteractionEnabled = false

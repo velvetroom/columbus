@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 final class CCreate:Controller<ArchCreate>
 {
@@ -28,7 +29,7 @@ final class CCreate:Controller<ArchCreate>
     {
         super.viewDidLoad()
         
-        model.checkAuthorization()
+        model.load()
     }
     
     //MARK: internal
@@ -56,13 +57,13 @@ final class CCreate:Controller<ArchCreate>
             database:database,
             plan:plan,
             settings:settings)
+        
         parentController?.push(
             controller:controller,
-            vertical:ControllerParent.Vertical.bottom)
+            vertical:ControllerTransition.Vertical.bottom)
     }
     
-    func editTravel(
-        travel:DPlanTravel)
+    func editTravel(travel:DPlanTravel)
     {
         let controller:CCreateTravel = CCreateTravel(
             controller:self,
@@ -71,14 +72,24 @@ final class CCreate:Controller<ArchCreate>
         parentController?.animateOver(controller:controller)
     }
     
-    func travelEdited(
-        travel:DPlanTravel)
+    func travelEdited(travel:DPlanTravel)
     {
-        DispatchQueue.global(
-            qos:DispatchQoS.QoSClass.background).async
+        DispatchQueue.global(qos:DispatchQoS.QoSClass.background).async
         { [weak self] in
             
             self?.model.plan?.update(travel:travel)
         }
+    }
+    
+    func showSearch()
+    {
+        let controller:CCreateSearch = CCreateSearch(controller:self)
+        
+        parentController?.animateOver(controller:controller)
+    }
+    
+    func addStop(coordinate:CLLocationCoordinate2D)
+    {
+        model.plan?.addStop(coordinate:coordinate)
     }
 }

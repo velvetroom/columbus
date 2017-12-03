@@ -1,13 +1,7 @@
 import UIKit
 
-final class VCreateStatusReadyBarStopsHeader:
-    UICollectionReusableView
+final class VCreateStatusReadyBarStopsHeader:UICollectionReusableView
 {
-    private let kIconTop:CGFloat = 90
-    private let kIconHeight:CGFloat = 60
-    private let kLabelHeight:CGFloat = 60
-    private let kFontSize:CGFloat = 15
-    
     override init(frame:CGRect)
     {
         super.init(frame:frame)
@@ -29,9 +23,8 @@ final class VCreateStatusReadyBarStopsHeader:
         label.textAlignment = NSTextAlignment.center
         label.numberOfLines = 0
         label.textColor = UIColor.white
-        label.font = UIFont.regular(size:kFontSize)
-        label.text = String.localizedView(
-            key:"VCreateStatusReadyBarStopsHeader_label")
+        label.font = UIFont.regular(size:VCreateStatusReadyBarStopsHeader.Constants.fontSize)
+        label.text = String.localizedView(key:"VCreateStatusReadyBarStopsHeader_label")
         
         addSubview(icon)
         addSubview(label)
@@ -39,10 +32,10 @@ final class VCreateStatusReadyBarStopsHeader:
         NSLayoutConstraint.topToTop(
             view:icon,
             toView:self,
-            constant:kIconTop)
+            constant:VCreateStatusReadyBarStopsHeader.Constants.iconTop)
         NSLayoutConstraint.height(
             view:icon,
-            constant:kIconHeight)
+            constant:VCreateStatusReadyBarStopsHeader.Constants.iconHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:icon,
             toView:self)
@@ -52,7 +45,7 @@ final class VCreateStatusReadyBarStopsHeader:
             toView:icon)
         NSLayoutConstraint.height(
             view:label,
-            constant:kLabelHeight)
+            constant:VCreateStatusReadyBarStopsHeader.Constants.labelHeight)
         NSLayoutConstraint.equalsHorizontal(
             view:label,
             toView:self)

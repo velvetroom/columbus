@@ -1,14 +1,10 @@
 import UIKit
 
-final class VCreateStatusReadyBarStopsCell:
-    UICollectionViewCell
+final class VCreateStatusReadyBarStopsCell:UICollectionViewCell
 {
     weak var viewField:VCreateStatusReadyBarStopsCellField!
     private(set) weak var controller:CCreate?
     private(set) weak var model:DPlanStop?
-    let kFieldLeft:CGFloat = 60
-    let kRemoveWidth:CGFloat = 50
-    let kFieldMarginVertical:CGFloat = 2
     
     override init(frame:CGRect)
     {

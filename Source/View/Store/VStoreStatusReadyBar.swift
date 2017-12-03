@@ -2,32 +2,23 @@ import UIKit
 
 final class VStoreStatusReadyBar:View<ArchStore>
 {
-    private let kContentTop:CGFloat = 20
-    private let kTitleLeft:CGFloat = 20
-    private let kTitleWidth:CGFloat = 150
-    private let kBorderHeight:CGFloat = 1
-    private let kFontSize:CGFloat = 14
-    private let kRestoreWidth:CGFloat = 156
-    
     required init(controller:CStore)
     {
         super.init(controller:controller)
         backgroundColor = UIColor.white
         
-        let border:VBorder = VBorder(
-            colour:UIColor(white:0, alpha:0.2))
+        let border:VBorder = VBorder(colour:UIColor(white:0, alpha:0.2))
         
         let labelTitle:UILabel = UILabel()
         labelTitle.isUserInteractionEnabled = false
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         labelTitle.backgroundColor = UIColor.clear
-        labelTitle.font = UIFont.medium(size:kFontSize)
+        labelTitle.font = UIFont.medium(size:VStoreStatusReadyBar.Constants.fontSize)
         labelTitle.textColor = UIColor.colourBackgroundDark
-        labelTitle.text = String.localizedView(
-            key:"VStoreStatusReadyBar_labelTitle")
+        labelTitle.textAlignment = NSTextAlignment.center
+        labelTitle.text = String.localizedView(key:"VStoreStatusReadyBar_labelTitle")
         
-        let viewRestore:VStoreStatusReadyBarRestore = VStoreStatusReadyBarRestore(
-            controller:controller)
+        let viewRestore:VStoreStatusReadyBarRestore = VStoreStatusReadyBarRestore(controller:controller)
         
         addSubview(border)
         addSubview(labelTitle)
@@ -38,7 +29,7 @@ final class VStoreStatusReadyBar:View<ArchStore>
             toView:self)
         NSLayoutConstraint.height(
             view:border,
-            constant:kBorderHeight)
+            constant:ViewMain.Constants.borderWidth)
         NSLayoutConstraint.equalsHorizontal(
             view:border,
             toView:self)
@@ -46,22 +37,18 @@ final class VStoreStatusReadyBar:View<ArchStore>
         NSLayoutConstraint.topToTop(
             view:labelTitle,
             toView:self,
-            constant:kContentTop)
+            constant:ViewMain.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:labelTitle,
             toView:self)
-        NSLayoutConstraint.leftToLeft(
+        NSLayoutConstraint.equalsHorizontal(
             view:labelTitle,
-            toView:self,
-            constant:kTitleLeft)
-        NSLayoutConstraint.width(
-            view:labelTitle,
-            constant:kTitleWidth)
+            toView:self)
         
         NSLayoutConstraint.topToTop(
             view:viewRestore,
             toView:self,
-            constant:kContentTop)
+            constant:ViewMain.Constants.contentTop)
         NSLayoutConstraint.bottomToBottom(
             view:viewRestore,
             toView:self)
@@ -70,7 +57,7 @@ final class VStoreStatusReadyBar:View<ArchStore>
             toView:self)
         NSLayoutConstraint.width(
             view:viewRestore,
-            constant:kRestoreWidth)
+            constant:VStoreStatusReadyBar.Constants.restoreWidth)
     }
     
     required init?(coder:NSCoder)
