@@ -1,8 +1,8 @@
-[brand1]:Design/brand1.png "Navigation without Internet"
-[brand2]:Design/brand2.png "Even in Airplane mode"
-[brand3]:Design/brand3.png "Create your Navigation Plans"
-[brand4]:Design/brand4.png "Multiple stops"
-[brand5]:Design/brand5.png "Combine transportation modes"
+[brand1]:Design/brand1.png "Greatest Navigator Ever"
+[brand2]:Design/brand2.png "Even without Internet"
+[brand3]:Design/brand3.png "Create your plan in advance"
+[brand4]:Design/brand4.png "Combine transportation modes"
+[brand5]:Design/brand5.png "Advanced tools"
 
 # Columbus
 
