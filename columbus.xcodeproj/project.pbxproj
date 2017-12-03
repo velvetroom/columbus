@@ -292,7 +292,6 @@
 		DA65ED1D1F95E68700720673 /* VPushBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB71F95E68700720673 /* VPushBackground.swift */; };
 		DA65ED1E1F95E68700720673 /* VCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB81F95E68700720673 /* VCollection.swift */; };
 		DA65ED1F1F95E68700720673 /* VAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65ECB91F95E68700720673 /* VAlert.swift */; };
-		DA65ED3A1F95EFF000720673 /* Design in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED391F95EFEF00720673 /* Design */; };
 		DA65ED3C1F95F74500720673 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA65ED3B1F95F74500720673 /* brand.xcassets */; };
 		DA6700D31FAB7DC700B89997 /* VPlansListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6700D21FAB7DC700B89997 /* VPlansListHeader.swift */; };
 		DA6700DB1FAB90EB00B89997 /* VHomeStandbyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6700DA1FAB90EB00B89997 /* VHomeStandbyHeader.swift */; };
@@ -2507,7 +2506,6 @@
 				DA65ECD91F95E68700720673 /* LocalizableView.strings in Resources */,
 				DA65ECD51F95E68700720673 /* LaunchScreen.storyboard in Resources */,
 				DA1FD2951FAF13350098C80C /* store.xcassets in Resources */,
-				DA65ED3A1F95EFF000720673 /* Design in Resources */,
 				DAB385771FC1659000ECCF76 /* meassuring.xcassets in Resources */,
 				DADA42021F967CAB00DD1FC4 /* generic.xcassets in Resources */,
 				DA65ECD71F95E68700720673 /* LocalizableModel.strings in Resources */,
