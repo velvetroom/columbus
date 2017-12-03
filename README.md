@@ -13,7 +13,7 @@
 
 [<img src="Design/appStore.png" height="32" alt="AppStore"/>](https://itunes.apple.com/us/app/columbus/id1297187806)
 
-### The best navigator ever.
+### The Greatest Navigator
 
 Create Navigation Plans and have them ready even if you loose Internet connection.
 
