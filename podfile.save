@@ -11,6 +11,4 @@ target 'columbus' do
   podlist
 end
 
-target 'UnitTests' do
-    podlist
-end
+target ''
