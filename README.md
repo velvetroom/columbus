@@ -11,6 +11,8 @@
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)
 [![Build Status](https://www.bitrise.io/app/f0caf7fd5ac7e3c2/status.svg?token=me8VN4JZnnsm4b3VUljk4Q&branch=master)](https://www.bitrise.io/app/f0caf7fd5ac7e3c2)
 
+[<img src="Desing/appStore.png" height="32" alt="AppStore"/>](https://itunes.apple.com/us/app/columbus/id1297187806)
+
 ###The best navigator ever.
 Create Navigation Plans and have them ready even if you loose Internet connection.
 There are many options available for when creating these plans, like getting directions for walking or public transportation.
