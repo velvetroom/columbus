@@ -60,8 +60,12 @@ final class CPlansDetail:Controller<ArchPlansDetail>
         if let popover:UIPopoverPresentationController = alert.popoverPresentationController
         {
             popover.sourceView = view
-            popover.sourceRect = CGRect.zero
             popover.permittedArrowDirections = UIPopoverArrowDirection.up
+            popover.sourceRect = CGRect(
+                x:view.center.x,
+                y:0,
+                width:1,
+                height:1)
         }
         
         present(alert, animated:true, completion:nil)
