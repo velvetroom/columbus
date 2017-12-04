@@ -4,6 +4,6 @@ extension VCreateTravelBackground
 {
     struct Constants
     {
-        static let alpha:CGFloat = 0.98
+        static let alpha:CGFloat = 0.999
     }
 }
