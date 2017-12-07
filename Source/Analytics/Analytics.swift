@@ -7,7 +7,7 @@ final class Analytics
     
     class func start()
     {
-        FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.max)
+        FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.min)
         FirebaseApp.configure()
     }
     
