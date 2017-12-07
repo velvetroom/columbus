@@ -20,7 +20,7 @@ extension ControllerParent
         
         currentController.removeFromParentViewController()
         
-        self.addChildViewController(controller)
+        addChildViewController(controller)
         controller.beginAppearanceTransition(true, animated:true)
         currentController.beginAppearanceTransition(false, animated:true)
         
@@ -50,7 +50,7 @@ extension ControllerParent
     
     func mainController(controller:UIViewController)
     {
-        self.addChildViewController(controller)
+        addChildViewController(controller)
         
         guard
             
@@ -88,7 +88,7 @@ extension ControllerParent
         let left:CGFloat = width * horizontal.rawValue
         let top:CGFloat = height * vertical.rawValue
         
-        self.addChildViewController(controller)
+        addChildViewController(controller)
         
         controller.beginAppearanceTransition(
             true,
@@ -123,7 +123,7 @@ extension ControllerParent
             return
         }
         
-        self.addChildViewController(controller)
+        addChildViewController(controller)
         
         controller.beginAppearanceTransition(
             true,
@@ -153,7 +153,7 @@ extension ControllerParent
             return
         }
         
-        self.addChildViewController(controller)
+        addChildViewController(controller)
         
         controller.beginAppearanceTransition(
             true,
