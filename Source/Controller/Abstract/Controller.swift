@@ -64,13 +64,6 @@ class Controller<A>:UIViewController where A.M:Model<A>
         self.view = view
     }
     
-    override func viewWillAppear(_ animated:Bool)
-    {
-        super.viewWillAppear(animated)
-        
-        parent?.setNeedsStatusBarAppearanceUpdate()
-    }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -85,5 +78,19 @@ class Controller<A>:UIViewController where A.M:Model<A>
         {
             automaticallyAdjustsScrollViewInsets = false
         }
+    }
+    
+    override func viewWillAppear(_ animated:Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        parent?.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override func viewDidAppear(_ animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        Analytics.setScreenView(controller:self)
     }
 }
