@@ -9,8 +9,10 @@ end
 
 target 'columbus' do
   podlist
-end
+  
+  target 'UnitTests' do
+      inherit! :search_paths
+      pod 'Firebase'
+  end
 
-target 'UnitTests' do
-    podlist
 end
